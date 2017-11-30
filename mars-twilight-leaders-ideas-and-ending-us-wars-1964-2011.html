@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# " class="no-js">
+<head>
+  <meta charset="utf-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<script>window.google_analytics_uacct = "UA-2507446-1";(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-2507446-1", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("set", "page", location.pathname + location.search + location.hash);ga("send", "pageview");</script>
+<meta name="title" content="Mars at Twilight: Leaders, Ideas, and Ending U.S. Wars, 1964 – 2011 | Belfer Center for Science and International Affairs" />
+<meta name="description" content="Speaker:  A. Bradley Potter, Research Fellow, International Security Program
+
+This seminar will examine the United States&#039; experience ending wars from Vietnam to Iraq. In particular, it will consider the role senior political and military leaders played in crafting American approaches to bringing wars to a close. The importance of historically informed ideas about the utility of force and the nature of war termination feature prominently in exploring just how leaders might matter in ending wars.
+
+Please join us! Coffee and tea provided. Everyone is welcome, but admittance will be on a first come–first served basis." />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="/sites/default/files/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="canonical" href="/event/mars-twilight-leaders-ideas-and-ending-us-wars-1964-2011" />
+<link rel="shortlink" href="/node/100676" />
+<link rel="revision" href="/event/mars-twilight-leaders-ideas-and-ending-us-wars-1964-2011" />
+
+    <title>Mars at Twilight: Leaders, Ideas, and Ending U.S. Wars, 1964 – 2011 | Belfer Center for Science and International Affairs</title>
+    <link href="//cloud.typenetwork.com/projects/206/fontface.css/" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://plus.google.com/+BelfercenterOrg' rel='publisher'>
+    <link href='https://www.belfercenter.org/privacy-policy' rel='copyright'>
+    <link rel="stylesheet" href="/sites/default/files/css/css_P9Hio_jky9gZXE8uBeqzi_dtI5dkqI30oqVc63kMpbE.css?p01rmf" media="all" />
+<link rel="stylesheet" href="/sites/default/files/css/css_7PZ246BVWv5HS_po4QQ_bcELLZ_t5jp2r33R67iByIU.css?p01rmf" media="all" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+</head>
+<body class="one-sidebar sidebar-first page-node-100676 no-search-terms not-front path-node page-node-type-event path-event-mars-twilight-leaders-ideas-and-ending-us-wars-1964-2011">
+      
+  
+      <div role="document" class="page">
+  <div class="page-inner">
+    
+          <div id="utility" class="utility">
+          
+  <div class="region-utility">
+    <nav role="navigation" aria-labelledby="-menu" class="block block-menu navigation menu--utility-menu">
+            
+  <h2 class="visually-hidden" id="-menu">Utility Menu</h2>
+  
+
+        
+              <ul class="menu">
+                    <li class="menu-li for-the-press">
+        <a href="/index.php/press/experts" target="" data-drupal-link-system-path="press/experts">For the Press</a>
+              </li>
+                <li class="menu-li about">
+        <a href="/index.php/about" target="" data-drupal-link-system-path="node/50166">About</a>
+              </li>
+                <li class="menu-li subscribe">
+        <a href="/index.php/subscribe" target="" data-drupal-link-system-path="node/50156">Subscribe</a>
+              </li>
+                <li class="menu-li contact-us">
+        <a href="/index.php/contact" target="" data-drupal-link-system-path="node/50856">Contact Us</a>
+              </li>
+                <li class="menu-li directory">
+        <a href="/index.php/directory" target="" data-drupal-link-system-path="node/36241">Directory</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+  </div>
+
+      </div>
+    
+    <header id="mobile-header" class="mobile-header">
+      <div class="header-inner">
+        
+<a class="mobile-btn" id="mobile-btn" href="#mobile-menu">
+	<div>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+	menu
+</a>
+
+<a href="/" class="mobile-logo"><img alt="Harvard Kennedy School Belfer Center for Science and International Affairs" src="/themes/belfer/images/logo-m.svg"></a>
+
+<a href="/" class="mobile-logo-tablet"><img alt="Harvard Kennedy School Belfer Center for Science and International Affairs" src="/themes/belfer/images/logo.svg"></a>
+
+<a id="mobile-search" class="mobile-search" href="/search/all"><i class="icon-search"></i></a>
+      </div>
+    </header>
+
+    <header id="site-header" class="header">
+      
+      <div class="header-inner">
+        <div class="logo-block">
+      
+    <p><a href="/"><img alt="Harvard Kennedy School Belfer Center for Science and International Affairs" src="/themes/belfer/images/logo.svg"></a></p>      
+      
+</div>
+            	<div class="region-main-nav">
+  		<div class="shape"></div>
+		<nav role="navigation" aria-labelledby="-menu" class="block block-menu navigation menu--main">
+            
+  <h2 class="visually-hidden" id="-menu">Main navigation (extended config)</h2>
+  
+
+        
+              <ul class="menu">
+    
+                
+      <li class="menu-li research">
+        
+        <a href="/research" target="" data-drupal-link-system-path="node/36226">Research</a>
+        
+      </li>
+                
+      <li class="menu-li experts">
+        
+        <a href="/experts" target="" data-drupal-link-system-path="node/36236">Experts</a>
+        
+      </li>
+                
+      <li class="menu-li programs--projects">
+        
+        <a href="/programs" target="" data-drupal-link-system-path="node/36246">Programs &amp; Projects</a>
+        
+      </li>
+                
+      <li class="menu-li fellowships">
+        
+        <a href="/fellowships" target="" data-drupal-link-system-path="node/36286">Fellowships</a>
+        
+      </li>
+                
+      <li class="menu-li events">
+        
+        <a href="/events" target="" data-drupal-link-system-path="node/50801">Events</a>
+        
+      </li>
+    
+          <li class="menu-li last search"><a href="/search"><i class="icon-search"></i></a></li>
+        </ul>
+  
+
+
+  </nav>
+
+  	</div>
+    
+      </div>
+    
+      <div class="search-wrapper">
+        <div class="inner">
+          <div id="search-block">
+            <form class="belfer-custom-search-block" role="search" action="/search/all" method="get" accept-charset="UTF-8">
+ 	
+ 	<div class="form-elements">
+		<input title="Enter search text" class="form-search" type="search" name="q" value="" size="15" maxlength="128" placeholder="Search">
+		<div class="form-select">
+			<select name="f[0]" id="search-dd" class="search-dd">
+				<option value="t:All" selected>All</option>
+			  	<option value="t:Research">Research</option>
+			  	<option value="t:Experts">Experts</option>
+			  	<option value="t:Programs & Projects">Programs &amp; Projects</option>
+			  	<option value="t:Fellowships">Fellowships</option>
+			  	<option value="t:Events">Events</option>
+			</select>
+			<i class="icon-down-arrow"></i>
+		</div>
+	</div>
+
+	<input type="submit" value="Search" class="form-submit">
+
+</form>
+          </div>
+        </div>
+      </div>
+
+    </header>
+
+     
+  
+              <div id="research-dropdown" class="main-menu-dropdown">
+          <div class="container">
+              	<div class="region-main-nav-research-dropdown region-dropdown">
+		
+
+<div class="block block-views block-views-blockresearch-page-search-links-block-1 -block">
+  
+      <h2 >Publications</h2>
+    
+      <div class="views-element-container"><div class="research-page-list view view-research-page-search-links view-id-research_page_search_links view-display-id-block_1 js-view-dom-id-b0a569fa32b2aaf5574a9a3b6000519efa3efb4ef716be6e2499f21aeb240e2e">
+  
+    
+      
+      <div class="view-content">
+      <div>
+  
+  <ul class="research-links">
+
+          <li class="research-link"><a href="/publication-type/analysis-opinions" hreflang="en">Analysis &amp; Opinions</a></li>
+          <li class="research-link"><a href="/publication-type/articles" hreflang="en">Articles</a></li>
+          <li class="research-link"><a href="/publication-type/blogs" hreflang="en">Blogs</a></li>
+          <li class="research-link"><a href="/publication-type/books" hreflang="en">Books</a></li>
+          <li class="research-link"><a href="/publication-type/news-announcements" hreflang="en">News &amp; Announcements</a></li>
+          <li class="research-link"><a href="/publication-type/newsletters" hreflang="en">Newsletters</a></li>
+          <li class="research-link"><a href="/publication-type/policy-briefs-testimonies" hreflang="en">Policy Briefs &amp; Testimonies</a></li>
+          <li class="research-link"><a href="/publication-type/presentations" hreflang="en">Presentations</a></li>
+          <li class="research-link"><a href="/publication-type/reports-papers" hreflang="en">Reports &amp; Papers</a></li>
+          <li class="research-link"><a href="/index.php/publication-type/round-ups" hreflang="en">Round-Ups</a></li>
+    
+  </ul>
+
+</div>
+
+    </div>
+  
+            <div class="view-footer">
+      <ul class="research-links"><li><a href="/journal-international-security/overview">Quarterly Journal: <em>International Security</em></a></li></ul>
+    </div>
+    </div>
+</div>
+
+  </div>
+
+<div class="block block-views block-views-blockresearch-page-search-links-block-2 -block">
+  
+      <h2 >Topics</h2>
+    
+      <div class="views-element-container"><div class="research-page-list view view-research-page-search-links view-id-research_page_search_links view-display-id-block_2 js-view-dom-id-751a2b7d47bd8dca503e278a825b8577b10c8841a841b0764d94733cccdaf116">
+  
+    
+      
+      <div class="view-content">
+      <div>
+  
+  <ul class="research-links">
+
+          <li class="research-link"><a href="/topic/conflict-conflict-resolution" hreflang="en">Conflict &amp; Conflict Resolution</a></li>
+          <li class="research-link"><a href="/index.php/topic/economics-global-affairs" hreflang="en">Economics &amp; Global Affairs</a></li>
+          <li class="research-link"><a href="/topic/energy" hreflang="en">Energy</a></li>
+          <li class="research-link"><a href="/topic/environment-climate-change" hreflang="en">Environment &amp; Climate Change</a></li>
+          <li class="research-link"><a href="/index.php/topic/governance" hreflang="en">Governance</a></li>
+          <li class="research-link"><a href="/topic/international-relations" hreflang="en">International Relations</a></li>
+          <li class="research-link"><a href="/index.php/topic/international-security-defense" hreflang="en">International Security &amp; Defense</a></li>
+          <li class="research-link"><a href="/index.php/topic/nuclear-issues" hreflang="en">Nuclear Issues</a></li>
+          <li class="research-link"><a href="/topic/science-technology" hreflang="en">Science &amp; Technology</a></li>
+    
+  </ul>
+
+</div>
+
+    </div>
+  
+          </div>
+</div>
+
+  </div>
+
+<div class="block block-views block-views-blockresearch-page-search-links-block-3 -block">
+  
+      <h2 >Regions</h2>
+    
+      <div class="views-element-container"><div class="research-page-list view view-research-page-search-links view-id-research_page_search_links view-display-id-block_3 js-view-dom-id-5497e47bdc51bf87e8a8608c18ebda7b66b106ca80d4782749df8044909b05c9">
+  
+    
+      
+      <div class="view-content">
+      <div>
+  
+  <ul class="research-links">
+
+          <li class="research-link"><a href="/index.php/region/africa" hreflang="en">Africa</a></li>
+          <li class="research-link"><a href="/index.php/region/asia-pacific" hreflang="en">Asia &amp; the Pacific</a></li>
+          <li class="research-link"><a href="/index.php/region/europe" hreflang="en">Europe</a></li>
+          <li class="research-link"><a href="/region/middle-east-north-africa" hreflang="en">Middle East &amp; North Africa</a></li>
+          <li class="research-link"><a href="/region/north-america" hreflang="en">North America</a></li>
+          <li class="research-link"><a href="/region/russia" hreflang="en">Russia</a></li>
+          <li class="research-link"><a href="/region/south-america" hreflang="en">South America</a></li>
+          <li class="research-link"><a href="/region/south-asia" hreflang="en">South Asia</a></li>
+    
+  </ul>
+
+</div>
+
+    </div>
+  
+          </div>
+</div>
+
+  </div>
+
+<div class="block block-views block-views-blockresearch-page-search-links-block-4 -block">
+  
+      <h2 >Multimedia</h2>
+    
+      <div class="views-element-container"><div class="research-page-list view view-research-page-search-links view-id-research_page_search_links view-display-id-block_4 js-view-dom-id-2b2ea2179952dd972c8976c25631ace15dd46dff9854f14665ec937e047efc80">
+  
+    
+      
+      <div class="view-content">
+      <div>
+  
+  <ul class="research-links">
+
+          <li class="research-link"><a href="/index.php/multimedia/audio" hreflang="en">Audio</a></li>
+          <li class="research-link"><a href="/multimedia/infographics-charts" hreflang="en">Infographics &amp; Charts</a></li>
+          <li class="research-link"><a href="/multimedia/maps" hreflang="en">Maps</a></li>
+          <li class="research-link"><a href="/index.php/multimedia/photo" hreflang="en">Photo</a></li>
+          <li class="research-link"><a href="/multimedia/video" hreflang="en">Video</a></li>
+    
+  </ul>
+
+</div>
+
+    </div>
+  
+          </div>
+</div>
+
+  </div>
+  	</div>
+
+              	<div class="region-main-nav-research-dropdown-teaser region-dropdown-teaser">
+		
+
+<div class="block block-views block-views-blockmegamenu-teaser-block-1 -block">
+  
+    
+      <div class="views-element-container"><div class="view view-megamenu-teaser view-id-megamenu_teaser view-display-id-block_1 js-view-dom-id-f30942fea2832973604280a7e590ac33ffe23a22ab1942cdb2738fd7f8748452">
+  
+    
+      
+      <div class="view-content">
+          <div class="dd-teaser">
+    <article id="node-97586" class="publication-simple-teaser-alt " data-history-node-id="97586" role="article" about="/publication/nobody-us">
+
+            <div class="teaser-image">
+              <p class="image">  <a href="/publication/nobody-us"><img src="/sites/default/files/styles/big_thumbnail/public/images/publication/feature/Enigma_rotors_with_alphabet_rings.jpg?itok=uC7pqWun" width="670" height="405" alt="Engima machine" typeof="foaf:Image" class="image-style-big-thumbnail" />
+
+</a>
+</p>
+
+            <div class="field field--name-field-feature-image-credit field--type-string field--label-hidden field__item">Wikimedia</div>
+        </div>
+    
+    
+        <div class="multiline-header"><h3 class="title"><span><span><a href="/publication/nobody-us" rel="bookmark"><span class="field field--name-title field--type-string field--label-hidden">Nobody But Us</span></a></span></span></h3></div>
+    
+
+    <div class="body">
+
+        <div class="clearfix text-formatted field field--name-field-summary field--type-text-long field--label-hidden field__item"><p>In the modern era, there is great convergence in the technologies used by friendly nations and by hostile ones. Signals intelligence agencies find themselves penetrating the technologies that they also at times must protect. To ease this tension, the United States and its partners have relied on an approach sometimes called Nobody But Us, or NOBUS: target communications mechanisms using unique methods accessible only to the United States. This paper examines how the NOBUS approach works, its limits, and the challenging matter of what comes next.</p></div>
+
+    </div>
+
+</article>
+
+  </div>
+
+    </div>
+  
+          </div>
+</div>
+
+  </div>
+
+<div class="block block-views block-views-blockmegamenu-teaser-block-2 -block">
+  
+    
+      <div class="views-element-container"><div class="view view-megamenu-teaser view-id-megamenu_teaser view-display-id-block_2 js-view-dom-id-e0ffb9a0efa03d5e3afe43f7bed8692955023e01daabb47e63bf4cd9f6791a7b">
+  
+    
+      
+      <div class="view-content">
+          <div class="dd-teaser">
+    <article id="node-93181" class="publication-simple-teaser-alt " data-history-node-id="93181" role="article" about="/publication/new-russia-matters-website-highlights-facts-dispels-myths">
+
+            <div class="teaser-image">
+              <p class="image">  <a href="/publication/new-russia-matters-website-highlights-facts-dispels-myths"><img src="/sites/default/files/styles/big_thumbnail/public/images/publication/feature/P.%209%20Kevin%20Rudd%20with%20Simon%20and%20Natasha.jpg?itok=vgMVcSP0" width="670" height="405" alt="Simon Saradzhyan and Natasha Yefimova-Trilling interview former Australian Prime Minister Kevin Rudd about Russia and its relationship with Australia. (Benn Craig)" typeof="foaf:Image" class="image-style-big-thumbnail" />
+
+</a>
+</p>
+
+            <div class="field field--name-field-feature-image-credit field--type-string field--label-hidden field__item">Benn Craig</div>
+        </div>
+    
+    
+        <div class="multiline-header"><h3 class="title"><span><span><a href="/publication/new-russia-matters-website-highlights-facts-dispels-myths" rel="bookmark"><span class="field field--name-title field--type-string field--label-hidden">New Russia Matters Website Highlights Facts, Dispels Myths </span></a></span></span></h3></div>
+    
+
+    <div class="body">
+
+        <div class="clearfix text-formatted field field--name-field-summary field--type-text-long field--label-hidden field__item"><p>Russia once again dominates headlines, but U.S. expertise on the country is in demonstrable decline. With the launch of its new website, <strong>Russia Matters </strong>hopes to bring clarity to U.S. citizens following Russia-related news.</p></div>
+
+    </div>
+
+</article>
+
+  </div>
+
+    </div>
+  
+          </div>
+</div>
+
+  </div>
+
+<div class="block block-views block-views-blockmegamenu-teaser-block-3 -block">
+  
+    
+      <div class="views-element-container"><div class="view view-megamenu-teaser view-id-megamenu_teaser view-display-id-block_3 js-view-dom-id-4e278bb8ee5fe94aaa60da5faa08b3dfe26affb4e728463d530ddd4de11d8f93">
+  
+    
+      
+      <div class="view-content">
+          <div class="dd-teaser">
+    <article id="node-97856" class="publication-simple-teaser-alt " data-history-node-id="97856" role="article" about="/publication/economic-integration-wont-shield-asia-war-truly-pan-asian-security-grouping-might">
+
+            <div class="teaser-image">
+              <p class="image">  <a href="/publication/economic-integration-wont-shield-asia-war-truly-pan-asian-security-grouping-might"><img src="/sites/default/files/styles/big_thumbnail/public/images/publication/feature/AP_17219255774472.jpg?itok=xZschvRN" width="670" height="405" alt="Foreign Ministers, from nearly a dozen nations applaud after a group photo at the start of the 7th East Asia Summit Foreign Ministers&#039; Meeting, as part of the 50th ASEAN Ministerial Meetings in Manila, Philippines on Aug. 7, 2017. (AP Photo/Aaron Favila, Pool)" typeof="foaf:Image" class="image-style-big-thumbnail" />
+
+</a>
+</p>
+
+            <div class="field field--name-field-feature-image-credit field--type-string field--label-hidden field__item">AP Photo/Aaron Favila, Pool</div>
+        </div>
+    
+    
+        <div class="multiline-header"><h3 class="title"><span><span><a href="/publication/economic-integration-wont-shield-asia-war-truly-pan-asian-security-grouping-might" rel="bookmark"><span class="field field--name-title field--type-string field--label-hidden">Economic Integration Won&#039;t Shield Asia From War, But A Truly Pan-Asian Security Grouping Might</span></a></span></span></h3></div>
+    
+
+    <div class="body">
+
+        <div class="clearfix text-formatted field field--name-field-summary field--type-text-long field--label-hidden field__item"><p>Given <a href="http://www.scmp.com/topics/north-korea">North Korea</a>, how can we save Asia’s “long peace”? Right now, the world is legitimately focused on the emerging <a href="http://www.scmp.com/northkoreanuclear">North Korean nuclear crisis</a>. This has been a crisis long in the making, beginning with the Soviet training of North Korean nuclear scientists and engineers after the second world war, the North’s expulsion of inspectors from the International Atomic Energy Agency in 2002, and the subsequent series of ballistic missile and nuclear weapons tests.</p></div>
+
+    </div>
+
+</article>
+
+  </div>
+
+    </div>
+  
+          </div>
+</div>
+
+  </div>
+
+<div class="block block-views block-views-blockmegamenu-teaser-block-4 -block">
+  
+    
+      <div class="views-element-container"><div class="view view-megamenu-teaser view-id-megamenu_teaser view-display-id-block_4 js-view-dom-id-7670cdcf010f57feb603fc1a5cd198505c02cba411a252bb5d26d8a01949ebce">
+  
+    
+      
+      <div class="view-content">
+          <div class="dd-teaser">
+    <article id="node-98011" class="publication-simple-teaser-alt " data-history-node-id="98011" role="article" about="/publication/windfall-how-new-energy-abundance-upends-global-politics-and-strengthens-americas-power">
+
+            <div class="teaser-image">
+              <p class="image">  <a href="/publication/windfall-how-new-energy-abundance-upends-global-politics-and-strengthens-americas-power"><img src="/sites/default/files/styles/big_thumbnail/public/images/publication/thumbnail/Windfall%20Book%20Cover%20Front.jpg?itok=DKcG5d5O" width="670" height="405" alt="Windfall: How the New Energy Abundance Upends Global Politics and Strengthens America&#039;s Power, by Meghan O&#039;Sullivan. Published by Simon &amp; Schuster on September 12, 2017." typeof="foaf:Image" class="image-style-big-thumbnail" />
+
+</a>
+</p>
+
+            <div class="field field--name-field-image-credit field--type-string field--label-hidden field__item">Simon &amp; Schuster</div>
+        </div>
+    
+    
+        <div class="multiline-header"><h3 class="title"><span><span><a href="/publication/windfall-how-new-energy-abundance-upends-global-politics-and-strengthens-americas-power" rel="bookmark"><span class="field field--name-title field--type-string field--label-hidden">Windfall: How the New Energy Abundance Upends Global Politics and Strengthens America&#039;s Power</span></a></span></span></h3></div>
+    
+
+    <div class="body">
+
+        <div class="clearfix text-formatted field field--name-field-summary field--type-text-long field--label-hidden field__item"><p><i>Windfall</i> is the boldest profile of the world’s energy resources since Daniel Yergin’s <i>The Quest</i>. Harvard professor and former Washington policymaker Meghan L. O’Sullivan reveals how fears of energy scarcity have given way to the reality of energy abundance. This abundance is transforming the geo-political order and boosting American power.</p></div>
+
+    </div>
+
+</article>
+
+  </div>
+
+    </div>
+  
+          </div>
+</div>
+
+  </div>
+  	</div>
+
+          </div>
+        </div>
+      
+              <div id="programs-dropdown" class="main-menu-dropdown">
+          <div class="container">
+              	<div class="region-main-nav-programs-dropdown region-dropdown">
+		
+
+<div class="block block-views block-views-blockprograms-and-projects-dropdown-menu-tabs-block-1 -block">
+  
+      <h2 >Programs</h2>
+    
+      <div class="views-element-container"><div class="view view-programs-and-projects-dropdown-menu-tabs view-id-programs_and_projects_dropdown_menu_tabs view-display-id-block_1 js-view-dom-id-c6558ab4838c8e46746bc5a9c6b45e0d7b9a29db6fa8aabb354a0dc4c3c43c94">
+  
+    
+      
+      <div class="view-content">
+      <div>
+  
+  <ul class="link-items">
+
+          <li class="link-item"><a href="/program/diplomacy-and-international-politics" hreflang="en">Diplomacy and International Politics</a></li>
+          <li class="link-item"><a href="/program/environment-and-natural-resources" hreflang="en">Environment and Natural Resources</a></li>
+          <li class="link-item"><a href="/program/international-security" hreflang="en">International Security</a></li>
+          <li class="link-item"><a href="/program/science-technology-and-public-policy" hreflang="en">Science, Technology, and Public Policy</a></li>
+    
+  </ul>
+
+</div>
+
+    </div>
+  
+          </div>
+</div>
+
+  </div>
+
+<div class="block block-views block-views-blockprograms-and-projects-dropdown-menu-tabs-block-2 -block">
+  
+      <h2 >Projects</h2>
+    
+      <div class="views-element-container"><div class="view view-programs-and-projects-dropdown-menu-tabs view-id-programs_and_projects_dropdown_menu_tabs view-display-id-block_2 js-view-dom-id-d5f76d3ce3c034a99049ec76f27cd117d36475ac431ee3251ac9ed6a5c513f05">
+  
+    
+      
+      <div class="view-content">
+      <div>
+  
+  <ul class="link-items">
+
+          <li class="link-item"><a href="/project/agricultural-innovation-africa" hreflang="en">Agricultural Innovation in Africa</a></li>
+          <li class="link-item"><a href="/project/applied-history-project" hreflang="en">Applied History Project</a></li>
+          <li class="link-item"><a href="/project/cyber-security-project" hreflang="en">Cyber Security Project</a></li>
+          <li class="link-item"><a href="/project/defending-digital-democracy" hreflang="en">Defending Digital Democracy</a></li>
+          <li class="link-item"><a href="/project/defense-project" hreflang="en">Defense Project</a></li>
+          <li class="link-item"><a href="/project/future-diplomacy-project" hreflang="en">Future of Diplomacy Project</a></li>
+          <li class="link-item"><a href="/project/geopolitics-energy-project" hreflang="en">Geopolitics of Energy Project</a></li>
+          <li class="link-item"><a href="/project/harvard-project-climate-agreements" hreflang="en">Harvard Project on Climate Agreements</a></li>
+          <li class="link-item"><a href="/project/homeland-security-project" hreflang="en">Homeland Security Project</a></li>
+          <li class="link-item"><a href="/project/india-and-south-asia-project" hreflang="en">India and South Asia Project</a></li>
+          <li class="link-item"><a href="/project/intelligence-project" hreflang="en">Intelligence Project</a></li>
+          <li class="link-item"><a href="/project/iran-project" hreflang="en">Iran Project</a></li>
+          <li class="link-item"><a href="/project/managing-atom" hreflang="en">Managing the Atom</a></li>
+          <li class="link-item"><a href="/project/managing-microbe" hreflang="en">Managing the Microbe</a></li>
+          <li class="link-item"><a href="/project/middle-east-initiative" hreflang="en">Middle East Initiative</a></li>
+          <li class="link-item"><a href="/project/saudi-and-gulf-cooperation-council-security" hreflang="en">Saudi and Gulf Cooperation Council Security </a></li>
+          <li class="link-item"><a href="/project/science-technology-and-globalization" hreflang="en">Science, Technology, and Globalization</a></li>
+          <li class="link-item"><a href="/project/us-russia-initiative-prevent-nuclear-terrorism" hreflang="en">US-Russia Initiative to Prevent Nuclear Terrorism</a></li>
+    
+  </ul>
+
+</div>
+
+    </div>
+  
+          </div>
+</div>
+
+  </div>
+
+<div class="block block-views block-views-blockprograms-and-projects-dropdown-menu-tabs-block-3 -block">
+  
+      <h2 >Special Initiatives</h2>
+    
+      <div class="views-element-container"><div class="view view-programs-and-projects-dropdown-menu-tabs view-id-programs_and_projects_dropdown_menu_tabs view-display-id-block_3 js-view-dom-id-02f8dd413ffccb6c8adf6565a59f6996a55ecddf729d7b7778186d5bd8d4fbf7">
+  
+    
+      
+      <div class="view-content">
+      <div>
+  
+  <ul class="link-items">
+
+          <li class="link-item"><a href="/american-secretaries-state" hreflang="en">American Secretaries of State </a></li>
+          <li class="link-item"><a href="/economic-view-environment" hreflang="en">An Economic View of the Environment</a><span class="icon-external-link">&nbsp;</span></li>
+          <li class="link-item"><a href="/arctic-initiative" hreflang="en">Arctic Initiative</a></li>
+          <li class="link-item"><a href="/cuban-missile-crisis" hreflang="en">Cuban Missile Crisis</a><span class="icon-external-link">&nbsp;</span></li>
+          <li class="link-item"><a href="/david-petraeus-strategic-leadership" hreflang="en">David Petraeus on Strategic Leadership </a><span class="icon-external-link">&nbsp;</span></li>
+          <li class="link-item"><a href="/elbe-group" hreflang="en">Elbe Group</a></li>
+          <li class="link-item"><a href="/harvard-belfer-syria" hreflang="en">Harvard–Belfer on Syria</a></li>
+          <li class="link-item"><a href="/iran-matters" hreflang="en">Iran Matters</a></li>
+          <li class="link-item"><a href="/lee-kuan-yew-grand-master" hreflang="en">Lee Kuan Yew: The Grand Master</a><span class="icon-external-link">&nbsp;</span></li>
+          <li class="link-item"><a href="/nuclear-security-matters" hreflang="en">Nuclear Security Matters</a></li>
+          <li class="link-item"><a href="/nuclear-terrorism-ultimate-preventable-catastrophe" hreflang="en">Nuclear Terrorism: The Ultimate Preventable Catastrophe</a><span class="icon-external-link">&nbsp;</span></li>
+          <li class="link-item"><a href="/russia-matters" hreflang="en">Russia Matters</a></li>
+          <li class="link-item"><a href="/thucydides-trap" hreflang="en">Thucydides&#039;s Trap</a></li>
+    
+  </ul>
+
+</div>
+
+    </div>
+  
+          </div>
+</div>
+
+  </div>
+  	</div>
+
+            
+          </div>
+        </div>
+      
+    
+    
+          <section id="featured" class="featured">
+        
+  <div class="region-featured">
+    
+
+<div class="block block-ctools block-entity-viewnode entity-view-content-block">
+  
+    
+      <script>(function () {
+    if (window.addtocalendar)if(typeof window.addtocalendar.start == "function")return;
+    if (window.ifaddtocalendar == undefined) { window.ifaddtocalendar = 1;
+        var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+        s.type = 'text/javascript';s.charset = 'UTF-8';s.async = true;
+        s.src = ('https:' == window.location.protocol ? 'https' : 'http')+'://addtocalendar.com/atc/1.5/atc.min.js';
+        var h = d[g]('body')[0];h.appendChild(s); }})();
+</script>
+
+<article id="node-100676" class="event-detail " data-history-node-id="100676" role="article" about="/event/mars-twilight-leaders-ideas-and-ending-us-wars-1964-2011">
+  
+  
+    
+                                    
+                                                            
+        
+      <p class="back-link-wrap"><a href="/events" class="back-link"><i class="icon-left-arrow"></i> All Upcoming Events</a></p>
+        
+  
+  <div class="event-detail-left">
+          <p class="event-type-and-policy">
+        
+                  <span data-history-node-id="100676" role="article" about="/event/mars-twilight-leaders-ideas-and-ending-us-wars-1964-2011" class="event-type seminar">	Seminar
+</span>
+        
+                              - <span class="admission-policy">  Open to the Public
+</span>
+                        </p>
+    
+    
+    <h1 class="page-title"><span class="field field--name-title field--type-string field--label-hidden">Mars at Twilight: Leaders, Ideas, and Ending U.S. Wars, 1964 – 2011</span></h1>
+    
+
+    
+
+    
+      
+       
+        <p class="event-date">
+            <span class="start-date">
+              
+              Thu., Nov. 30, 2017
+
+                                <span class="divider"> | </span> 12:15pm
+              
+                                - 2:00pm
+              
+            </span>  
+        </p>
+        
+
+    
+          <p class="event-location">
+                  <a href="https://goo.gl/maps/FoV23Mo9tgT2">1 Brattle Square - Room 350</a>
+              </p>
+    
+    <div class="field field--name-field-event-series field--type-entity-reference field--label-inline"><div class="field__label">Series</div><div class="field__item"><a href="/event-series/international-security-brown-bag-seminar" hreflang="en">International Security Brown Bag Seminar</a></div></div>
+    <div class="clearfix text-formatted field field--name-field-summary field--type-text-long field--label-hidden field__item"><p>Speaker:  <a href="https://www.belfercenter.org/person/bradley-potter">A. Bradley Potter</a>, Research Fellow, <a href="https://www.belfercenter.org/program/international-security">International Security Program</a></p><p>This seminar will examine the United States' experience ending wars from Vietnam to Iraq. In particular, it will consider the role senior political and military leaders played in crafting American approaches to bringing wars to a close. The importance of historically informed ideas about the utility of force and the nature of war termination feature prominently in exploring just how leaders might matter in ending wars.</p><p>Please join us! Coffee and tea provided. Everyone is welcome, but <strong>admittance will be on a first come–first served basis.</strong></p></div>
+
+          
+      <ul class="event-ctas">
+        
+        
+        <li>
+          <span class="addtocalendar atc-style-red" data-calendars="iCalendar, Google Calendar, Outlook, Outlook Online">
+            <var class="atc_event">
+              <var class="atc_date_start">2017-11-30 12:15:00</var>
+              <var class="atc_date_end">2017-11-30 14:00:00</var>
+              <var class="atc_timezone">America/New_York</var>
+              <var class="atc_title">Mars at Twilight: Leaders, Ideas, and Ending U.S. Wars, 1964 – 2011</var>
+              <var class="atc_description"></var>
+              <var class="atc_location">1 Brattle Square - Room 350</var>
+              <var class="atc_organizer">Belfer</var>
+              <var class="atc_organizer_email">sarah_donahue@hks.harvard.edu</var>
+            </var>
+          </span>
+        </li>
+
+        
+      </ul>
+
+    
+  </div>
+  <div class="event-detail-right">
+
+     
+      <ul class="event-share">
+        <li class="social-sharing">
+          <span class="share-button"><i class="icon-plus"></i> Share</span>
+          <ul class="sharing-links a2a_kit  ">
+            <li><a class="a2a_button_facebook"><i class="icon-fb"></i> Facebook</a></li>
+            <li><a class="a2a_button_twitter"><i class="icon-twitter"></i> Twitter</a></li>
+            <li><a class="a2a_button_pinterest"><i class="icon-pinterest"></i> Pinterest</a></li>
+            <li><a class="a2a_button_linkedin"><i class="icon-linkedin"></i> LinkedIn</a></li>
+            <li><a class="a2a_button_google_plus"><i class="icon-google"></i> Google+</a></li>
+            <script async src="https://static.addtoany.com/menu/page.js"></script>
+          </ul>
+        </li>
+        <li class="share-email"><a href="mailto:?subject=Mars at Twilight: Leaders, Ideas, and Ending U.S. Wars, 1964 – 2011&Body=https://www.belfercenter.org/event/mars-twilight-leaders-ideas-and-ending-us-wars-1964-2011"><i class="icon-email"></i></a></li>
+        <li class="share-print"><a onclick="window.print(); return false;"><i class="icon-print"></i></a></li>
+        <li class="share-rss"><a href="/rss-events"><i class="icon-rss"></i></a></li>
+      </ul>
+    
+          <div class="image">
+          <p class="image">  <img src="/sites/default/files/styles/medium_380_230_/public/images/event/evacuees_offloaded_onto_the_uss_midway.jpg?itok=E57hS4Wk" width="380" height="230" alt="Evacuees from the DAO Compound are offloaded onto the U.S. Navy aircraft carrier USS Midway (CVA-41) during the evacuation of South Vietnam (&quot;Operation Frequent Wind&quot;), April 29, 1975" typeof="foaf:Image" class="image-style-medium-380-230-" />
+
+
+</p>
+
+        <div class="field field--name-field-image-credit field--type-string field--label-hidden field__item">Public Domain</div>
+      </div>
+              <div class="caption">Evacuees from the DAO Compound are offloaded onto the U.S. Navy aircraft carrier USS Midway (CVA-41) during the evacuation of South Vietnam (&quot;Operation Frequent Wind&quot;), April 29, 1975</div>
+              
+        <div class="mobile-event-share">
+       
+      <ul class="event-share">
+        <li class="social-sharing">
+          <span class="share-button"><i class="icon-plus"></i> Share</span>
+          <ul class="sharing-links a2a_kit  ">
+            <li><a class="a2a_button_facebook"><i class="icon-fb"></i> Facebook</a></li>
+            <li><a class="a2a_button_twitter"><i class="icon-twitter"></i> Twitter</a></li>
+            <li><a class="a2a_button_pinterest"><i class="icon-pinterest"></i> Pinterest</a></li>
+            <li><a class="a2a_button_linkedin"><i class="icon-linkedin"></i> LinkedIn</a></li>
+            <li><a class="a2a_button_google_plus"><i class="icon-google"></i> Google+</a></li>
+            <script async src="https://static.addtoany.com/menu/page.js"></script>
+          </ul>
+        </li>
+        <li class="share-email"><a href="mailto:?subject=Mars at Twilight: Leaders, Ideas, and Ending U.S. Wars, 1964 – 2011&Body=https://www.belfercenter.org/event/mars-twilight-leaders-ideas-and-ending-us-wars-1964-2011"><i class="icon-email"></i></a></li>
+        <li class="share-print"><a onclick="window.print(); return false;"><i class="icon-print"></i></a></li>
+        <li class="share-rss"><a href="/rss-events"><i class="icon-rss"></i></a></li>
+      </ul>
+    
+    </div>
+
+  </div>
+</article>
+
+  </div>
+  </div>
+
+        
+      </section>
+    
+    
+    
+    
+    <main role="main" class="main">
+      <div class="main-inner">
+      
+                  <aside id="sidebar-first" role="complementary" class="sidebar">
+            
+  <div class="region-sidebar-first">
+    
+
+<div class="block block-views block-views-blockoverview-tabs-block-4 -block">
+  
+    
+      <div class="views-element-container"><div class="vertical-tab-tabs view view-overview-tabs view-id-overview_tabs view-display-id-block_4 js-view-dom-id-6fb8d4fdaffd28a1dacfa3a0a70daa0d5868a6916799479d9420ebb82bfdc817">
+  
+    
+      
+      <div class="view-content">
+          <div class="tab-296feb80-76d3-4fc0-9b02-94bc0128970d views-row">
+    <div class="views-field views-field-field-title"><div class="field-content"><a href="#!about" data-tab="296feb80-76d3-4fc0-9b02-94bc0128970d" data-tab-url="about">About</a></div></div>
+  </div>
+    <div class="tab-638f85f6-d5ce-48d7-a07b-d1900eb12a11 views-row">
+    <div class="views-field views-field-field-title"><div class="field-content"><a href="#!contact" data-tab="638f85f6-d5ce-48d7-a07b-d1900eb12a11" data-tab-url="contact">Contact</a></div></div>
+  </div>
+
+    </div>
+  
+          </div>
+</div>
+
+  </div>
+  </div>
+
+          </aside>
+        
+        <section id="content" class="content">
+          
+          
+
+          
+          
+  	<div class="region-content">
+		<div class="content-inner">
+			
+
+<div class="block block-system block-system-main-block main-page-content-block">
+  
+    
+      <article id="node-100676" class="" data-history-node-id="100676" role="article" about="/event/mars-twilight-leaders-ideas-and-ending-us-wars-1964-2011">
+  
+    
+
+  
+  
+
+  
+  
+  
+
+</article>
+
+  </div>
+
+<div class="block block-views block-views-blockoverview-tabs-block-5 -block">
+  
+    
+      <div class="views-element-container"><div class="vertical-tab-body view view-overview-tabs view-id-overview_tabs view-display-id-block_5 js-view-dom-id-e0fb9ab1a15e1f52999d7d3e7a08f87dc4b39faf21d888e92b87b30df212a592">
+  
+    
+      
+      <div class="view-content">
+          <div class="tab-296feb80-76d3-4fc0-9b02-94bc0128970d views-row">
+    <div class="views-field views-field-field-body-paragraphs"><div class="field-content"><div class="paragraph paragraph--type--full-text paragraph--view-mode--default">
+    <div class="clearfix text-formatted field field--name-field-text field--type-text-long field--label-hidden field__item"><p>Speaker:  <a href="https://www.belfercenter.org/person/bradley-potter">A. Bradley Potter</a>, Research Fellow, <a href="https://www.belfercenter.org/program/international-security">International Security Program</a></p><p>This seminar will examine the United States' experience ending wars from Vietnam to Iraq. In particular, it will consider the role senior political and military leaders played in crafting American approaches to bringing wars to a close. The importance of historically informed ideas about the utility of force and the nature of war termination feature prominently in exploring just how leaders might matter in ending wars.</p><p>Please join us! Coffee and tea provided. Everyone is welcome, but <strong>admittance will be on a first come–first served basis.</strong></p></div>
+</div></div></div>
+  </div>
+    <div class="tab-638f85f6-d5ce-48d7-a07b-d1900eb12a11 views-row">
+    <div class="views-field views-field-field-body-paragraphs"><div class="field-content"><div class="paragraph paragraph--type--full-text paragraph--view-mode--default">
+    <div class="clearfix text-formatted field field--name-field-text field--type-text-long field--label-hidden field__item"><p>For more information, email the International Security Program Assistant at <a href="mailto:susan_lynch@harvard.edu">susan_lynch@harvard.edu</a>.</p></div>
+</div></div></div>
+  </div>
+
+    </div>
+  
+          </div>
+</div>
+
+  </div>	
+		</div>
+	</div>
+
+          
+        </section>
+
+        
+      </div>
+    </main>
+    
+    
+          <section class="social-bar">
+        
+  <div class="region-social-bar">
+    <div class="inner">
+    
+      <div class="email-form-block">
+        <h2 class="block-title">Belfer Center Email Updates</h2>
+        <form method="post" action="https://www.pages05.net/hks-belfercenter/forms/SingleSubscribe" pageId="12855331" siteId="194392" parentPageId="12855329" >
+          <input type="text" id="control_EMAIL" class="form-text" placeholder="Email" name="Email">
+          <input type="submit" class="form-submit" value="Subscribe">
+          <input type="hidden" name="formSourceName" value="StandardForm">
+          <!-- DO NOT REMOVE HIDDEN FIELD sp_exp -->
+          <input type="hidden" name="sp_exp" value="yes">
+        </form>
+
+      </div>
+    
+      <nav role="navigation" aria-labelledby="-menu" class="block block-menu navigation menu--social-media">
+            
+  <h2 class="visually-hidden" id="-menu">Social Media</h2>
+  
+
+        
+              <ul class="menu">
+                    <li class="menu-li facebook">
+        <a href="https://www.facebook.com/belfercenter/ " class="icon-fb" target="">Facebook</a>
+              </li>
+                <li class="menu-li twitter">
+        <a href="https://twitter.com/BelferCenter/ " class="icon-twitter" target="">Twitter</a>
+              </li>
+                <li class="menu-li youtube">
+        <a href="https://www.youtube.com/user/BelferCenter " class="icon-youtube" target="">YouTube</a>
+              </li>
+                <li class="menu-li linkedin">
+        <a href="https://www.linkedin.com/company/belfercenter " class="icon-linkedin" target="">LinkedIn</a>
+              </li>
+                <li class="menu-li google">
+        <a href="https://plus.google.com/+BelfercenterOrg/posts " class="icon-google" target="">Google+</a>
+              </li>
+                <li class="menu-li soundcloud">
+        <a href="https://soundcloud.com/belfercenter " class="icon-soundcloud" target="">Soundcloud</a>
+              </li>
+                <li class="menu-li rss">
+        <a href="/rss-research" class="icon-rss" target="" data-drupal-link-system-path="node/74162">RSS</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+  
+      
+    </div>
+  </div>
+
+      </section> 
+    
+          <footer id="site-footer" role="contentinfo" class="footer">
+                  <section class="footer-top">
+            
+  <div class="region-footer-top">
+  	<div class="logo-block">
+      
+    <p><a href="/"><img alt="Harvard Kennedy School Belfer Center for Science and International Affairs" src="/themes/belfer/images/logo.svg"></a></p>      
+      
+</div>
+      
+
+<div class="block block-block-content block-block-content164a6a1c-33de-43b9-b657-5f6d937fc673 footer---slogan-block">
+  
+    
+      <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Research, ideas, and leadership for a more secure, peaceful world.</p></div>
+  </div>
+  </div>
+
+          </section>
+                          <section class="footer-bottom">
+            
+  <div class="region-footer-bottom">
+    
+
+<div class="block block-block-content block-block-content8984a752-c50d-4df1-b4ba-f1c67e78a85b footer---contact-info-block">
+  
+    
+      <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>79 John F. Kennedy Street, <span>Cambridge, MA 02138</span><br /><a href="/contact">Locations &amp; Directions</a></p></div>
+  </div><nav role="navigation" aria-labelledby="-menu" class="block block-menu navigation menu--footer---external-links">
+            
+  <h2 class="visually-hidden" id="-menu">Footer - external links</h2>
+  
+
+        
+              <ul class="menu">
+                    <li class="menu-li harvard-kennedy-school-of-government">
+        <a href="https://www.hks.harvard.edu/" target="_blank">Harvard Kennedy School of Government</a>
+              </li>
+                <li class="menu-li harvard-university">
+        <a href="http://www.harvard.edu/" target="_blank">Harvard University</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+
+<div class="block block-block-content block-block-content3e9731f3-aac2-47d5-9ca9-a4cf6aba223b footer---copyright-block">
+  
+    
+      <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><ul><li><a href="/privacy-policy">Privacy Policy</a></li><li>Copyright © 2017 The President and Fellows of Harvard College</li></ul></div>
+  </div>
+  </div>
+
+          </section>
+              </footer>
+    
+  </div>
+</div>
+
+  <nav id="mobile-menu" class="mobile-menu">
+    <div>
+
+      <div class="close-menu-wrap">
+        <a id="close-mmenu" class="close-mmenu"><i class="icon-cancel"></i></a>
+      </div>
+
+      <div class="mobile-menu-wrap">
+        
+  <div class="region-mobile-menu">
+    <nav role="navigation" aria-labelledby="-menu" class="block block-menu navigation menu--main">
+            
+  <h2 class="visually-hidden" id="-menu">Main navigation (extended config)</h2>
+  
+
+        
+              <ul class="menu">
+    
+                
+      <li class="menu-li research">
+        
+        <a href="/research" target="" data-drupal-link-system-path="node/36226">Research</a>
+        
+      </li>
+                
+      <li class="menu-li experts">
+        
+        <a href="/experts" target="" data-drupal-link-system-path="node/36236">Experts</a>
+        
+      </li>
+                
+      <li class="menu-li programs--projects">
+        
+        <a href="/programs" target="" data-drupal-link-system-path="node/36246">Programs &amp; Projects</a>
+        
+      </li>
+                
+      <li class="menu-li fellowships">
+        
+        <a href="/fellowships" target="" data-drupal-link-system-path="node/36286">Fellowships</a>
+        
+      </li>
+                
+      <li class="menu-li events">
+        
+        <a href="/events" target="" data-drupal-link-system-path="node/50801">Events</a>
+        
+      </li>
+    
+          <li class="menu-li last search"><a href="/search"><i class="icon-search"></i></a></li>
+        </ul>
+  
+
+
+  </nav>
+
+  </div>
+
+      </div>
+      
+              <div class="mobile-utility-wrap">
+            
+  <div class="region-utility">
+    <nav role="navigation" aria-labelledby="-menu" class="block block-menu navigation menu--utility-menu">
+            
+  <h2 class="visually-hidden" id="-menu">Utility Menu</h2>
+  
+
+        
+              <ul class="menu">
+                    <li class="menu-li for-the-press">
+        <a href="/index.php/press/experts" target="" data-drupal-link-system-path="press/experts">For the Press</a>
+              </li>
+                <li class="menu-li about">
+        <a href="/index.php/about" target="" data-drupal-link-system-path="node/50166">About</a>
+              </li>
+                <li class="menu-li subscribe">
+        <a href="/index.php/subscribe" target="" data-drupal-link-system-path="node/50156">Subscribe</a>
+              </li>
+                <li class="menu-li contact-us">
+        <a href="/index.php/contact" target="" data-drupal-link-system-path="node/50856">Contact Us</a>
+              </li>
+                <li class="menu-li directory">
+        <a href="/index.php/directory" target="" data-drupal-link-system-path="node/36241">Directory</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+  </div>
+
+        </div>
+      
+              <div class="social-bar-mmenu">
+            
+  <div class="region-social-bar">
+    <div class="inner">
+    
+      <div class="email-form-block">
+        <h2 class="block-title">Belfer Center Email Updates</h2>
+        <form method="post" action="https://www.pages05.net/hks-belfercenter/forms/SingleSubscribe" pageId="12855331" siteId="194392" parentPageId="12855329" >
+          <input type="text" id="control_EMAIL" class="form-text" placeholder="Email" name="Email">
+          <input type="submit" class="form-submit" value="Subscribe">
+          <input type="hidden" name="formSourceName" value="StandardForm">
+          <!-- DO NOT REMOVE HIDDEN FIELD sp_exp -->
+          <input type="hidden" name="sp_exp" value="yes">
+        </form>
+
+      </div>
+    
+      <nav role="navigation" aria-labelledby="-menu" class="block block-menu navigation menu--social-media">
+            
+  <h2 class="visually-hidden" id="-menu">Social Media</h2>
+  
+
+        
+              <ul class="menu">
+                    <li class="menu-li facebook">
+        <a href="https://www.facebook.com/belfercenter/ " class="icon-fb" target="">Facebook</a>
+              </li>
+                <li class="menu-li twitter">
+        <a href="https://twitter.com/BelferCenter/ " class="icon-twitter" target="">Twitter</a>
+              </li>
+                <li class="menu-li youtube">
+        <a href="https://www.youtube.com/user/BelferCenter " class="icon-youtube" target="">YouTube</a>
+              </li>
+                <li class="menu-li linkedin">
+        <a href="https://www.linkedin.com/company/belfercenter " class="icon-linkedin" target="">LinkedIn</a>
+              </li>
+                <li class="menu-li google">
+        <a href="https://plus.google.com/+BelfercenterOrg/posts " class="icon-google" target="">Google+</a>
+              </li>
+                <li class="menu-li soundcloud">
+        <a href="https://soundcloud.com/belfercenter " class="icon-soundcloud" target="">Soundcloud</a>
+              </li>
+                <li class="menu-li rss">
+        <a href="/rss-research" class="icon-rss" target="" data-drupal-link-system-path="node/74162">RSS</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+  
+      
+    </div>
+  </div>
+
+        </div>
+      
+              <div class="mobile-info-wrap">
+          
+  <div class="region-mobile-menu-info">
+    <nav role="navigation" aria-labelledby="-menu" class="block block-menu navigation menu--mobile-menu---info-links">
+            
+  <h2 class="visually-hidden" id="-menu">Mobile Menu - info links</h2>
+  
+
+        
+              <ul class="menu">
+                    <li class="menu-li privacy-policy">
+        <a href="/privacy-policy" target="" data-drupal-link-system-path="node/50841">Privacy Policy</a>
+              </li>
+                <li class="menu-li kennedy-school-of-government">
+        <a href="https://www.hks.harvard.edu/" target="">Kennedy School of Government</a>
+              </li>
+                <li class="menu-li harvard-university">
+        <a href="http://www.harvard.edu/" target="">Harvard University</a>
+              </li>
+                <li class="menu-li location--directions">
+        <a href="/contact" target="" data-drupal-link-system-path="node/50856">Location &amp; Directions</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+  </div>
+
+          
+          <div class="mm-info-body">
+            <h4>Belfer Center of Science and International Affairs</h4>
+            <p>79 John F. Kennedy Street,<br>
+            Cambridge, MA 02138<br>
+            <a>(617) 495-1400</a></p>
+          </div>
+
+        </div>
+      
+    </div>  
+  </nav>
+
+  
+  
+  <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/100676","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","ajaxPageState":{"libraries":"belfer\/global-scripts,belfer\/global-styling,classy\/base,core\/drupal.autocomplete,core\/html5shiv,core\/normalize,disqus\/disqus,fitvids\/fitvids,fitvids\/init,google_analytics\/google_analytics,search_autocomplete\/theme.basic-blue.css,statistics\/drupal.statistics,system\/base,views\/views.module","theme":"belfer","theme_token":null},"ajaxTrustedUrl":[],"fitvids":{"selectors":".page","custom_vendors":"","ignore_selectors":"object[data*=soundcloud]\r,object[data*=flickrit]"},"google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip","trackUrlFragments":true},"search_autocomplete":{"last_name":{"source":"https:\/\/www.belfercenter.org\/autocomplete\/lastname","selector":"#belfer_author_search_name","minChars":3,"maxSuggestions":10,"autoSubmit":false,"autoRedirect":false,"theme":"basic-blue","filters":["filter"],"noResult":{"group":{"group_id":"no_results"},"label":"","value":""},"moreResults":{"group":{"group_id":"more_results"},"label":"","value":""}}},"statistics":{"data":{"nid":"100676"},"url":"\/core\/modules\/statistics\/statistics.php"},"user":{"uid":0,"permissionsHash":"83ade7275c786d111572abb52a18f987fbc60e67f757deb03b19a0f032c81f2e"}}</script>
+<script src="/sites/default/files/js/js_bMY-B-MVWSGyMLo_kAWbYipY-JWtY32yNFEDhM3nKJk.js"></script>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"4bc1518bdc","applicationID":"65781389","transactionName":"MlNSYRNZV0NWUkwMVwsZcVYVUVZeGEFZAl06VVFWCV0=","queueTime":0,"applicationTime":31,"atts":"HhRRF1tDRE0=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

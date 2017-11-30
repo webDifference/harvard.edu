@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+  <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7599756/7295372/css/fonts.css" />
+    <meta charset="utf-8" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width" />
+<meta content="ie=edge, chrome=1" http-equiv="x-ua-compatible" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<meta http-equiv="ImageToolbar" content="false" />
+<link rel="shortcut icon" href="/core/misc/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="canonical" href="/home-page" />
+<link rel="shortlink" href="/node/150486" />
+<link rel="revision" href="/home-page" />
+<script src="/sites/default/files/google_tag/google_tag.script.js?p06zfp"></script>
+
+    <title>Harvard Kennedy School | Harvard Kennedy School</title>
+    <link rel="stylesheet" href="/sites/default/files/css/css_6lcN0KPAuvaj2v0LpWWEXjTeoRwpYt9otIfU7JtCEBY.css?p06zfp" media="all" />
+<link rel="stylesheet" href="/sites/default/files/css/css_oXVojTp_CYU_6cCXoeLFfMiQ2PFUuL7JVHsAcZNV0a4.css?p06zfp" media="all" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="shortcut icon" sizes="48x48" href="/favicon.ico">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="manifest" href="/manifest.json">
+          <meta name=“google-site-verification” content="H-fdz1H59lstWjCRm_GRQ1l-eRZsKLl5tfqPkvsNVOg" />
+              <script type="text/javascript" src="/modules/contrib/seckit/js/seckit.document_write.js"></script>
+        <link type="text/css" rel="stylesheet" id="seckit-clickjacking-no-body" media="all" href="/modules/contrib/seckit/css/seckit.no_body.css" />
+        <!-- stop SecKit protection -->
+        <noscript>
+        <link type="text/css" rel="stylesheet" id="seckit-clickjacking-noscript-tag" media="all" href="/modules/contrib/seckit/css/seckit.noscript_tag.css" />
+        <div id="seckit-noscript-tag">
+          Sorry, you need to enable JavaScript to visit this website.
+        </div>
+        </noscript></head>
+  <body class="lang-en no_sidebars path-frontpage node--type-homepage">
+  <a href="#main-content" class="visually-hidden focusable skip-link">
+    Skip to main content
+  </a>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRBVPKQ" height="0" width="0"></iframe></noscript>
+  <div class="off-canvas-wrapper">
+  <div class="inner-wrap off-canvas-wrapper-inner" id="inner-wrap" data-off-canvas-wrapper>
+
+    <!-- off-canvas title bar for 'small' screen -->
+    <div class="title-bar" data-responsive-toggle="widemenu" data-hide-for="large">
+      <div class="title-bar-left">
+        <a href="/" title="Harvard Kennedy School"><img src="/themes/harvardkennedy/images/logo.svg" alt="Harvard Kennedy School" class="logo"></a>
+      </div>
+      <div class="title-bar-right">
+        <button class="menu-icon" type="button" data-open="offCanvasRight"></button>
+      </div>
+    </div>
+
+    <!-- off-canvas right menu -->
+    <div class="off-canvas position-right" id="offCanvasRight" data-off-canvas data-position="right">
+       <div class="screen__small">  <div>
+    <section id="block-mainsitelogo" class="columns large-3 xlarge-4 block-mainsitelogo">
+  
+  
+    
+
+  <div >
+          <a href="/">    <div class="field-wrapper field field--name-field-logo-svg field--type-file field--label-hidden field__items">
+                <div class="field__item">
+                 
+      <img src="/sites/default/files/logos/logo_0.svg" alt="Harvard Kennedy School" class="logo">
+            </div>
+          </div>
+</a>
+      </div>
+
+  </section>
+<nav role="navigation" aria-labelledby="block-harvardkennedy-main-menu-menu" id="block-harvardkennedy-main-menu" class="columns large-9 xlarge-8 block-harvardkennedy-main-menu">
+            
+  <h2 class="block-title visually-hidden" id="block-harvardkennedy-main-menu-menu">Main navigation</h2>
+  
+
+        
+
+  
+     
+              <!-- main menu -->
+        <ul class="dropdown menu horizontal main--menu" data-dropdown-menu="data-responsive-menu">
+       
+                        <li class="menu-item menu-item--expanded is-dropdown-submenu-parent">
+              <a href="/educational-programs" target="" data-drupal-link-system-path="node/104091">Educational Programs</a>
+                      
+     
+              <ul class="menu is-dropdown-submenu">
+       
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/masters-programs" data-drupal-link-system-path="node/102565">Master&#039;s Programs</a>
+              </li>
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/executive-education" data-drupal-link-system-path="node/102567">Executive Education</a>
+              </li>
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/doctoral-programs" data-drupal-link-system-path="node/155736">Doctoral Programs</a>
+              </li>
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/courses" data-drupal-link-system-path="courses">Courses</a>
+              </li>
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/educational-programs/academic-calendars-policies" data-drupal-link-system-path="node/151596">Academic Calendars &amp; Policies</a>
+              </li>
+        </ul>
+
+  
+              </li>
+                        <li class="menu-item menu-item--expanded is-dropdown-submenu-parent">
+              <a href="/admissions-financial-aid" target="" data-drupal-link-system-path="node/150506">Admissions &amp; Aid</a>
+                      
+     
+              <ul class="menu is-dropdown-submenu">
+       
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/admissions-aid/masters-program-admissions" target="" data-drupal-link-system-path="node/159656">Master&#039;s Program Admissions</a>
+              </li>
+                        <li class="menu-item">
+              <a href="https://www.hks.harvard.edu/educational-programs/executive-education/admissions-fees" target="">Executive Education Admissions</a>
+              </li>
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/admissions-aid/doctoral-program-admissions" data-drupal-link-system-path="node/159716">Doctoral Program Admissions</a>
+              </li>
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/admissions-aid/funding-your-education" data-drupal-link-system-path="node/159436">Funding Your Education</a>
+              </li>
+        </ul>
+
+  
+              </li>
+                        <li class="menu-item menu-item--expanded is-dropdown-submenu-parent">
+              <a href="/research-insights" data-drupal-link-system-path="node/104161">Research &amp; Insights</a>
+                      
+     
+              <ul class="menu is-dropdown-submenu">
+       
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/research-insights/research-publications" target="" title="Publications at HKS" data-drupal-link-system-path="node/217966">Publications</a>
+              </li>
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/research-insights/policy-topics" data-drupal-link-system-path="node/151091">Policy Topics</a>
+              </li>
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/research-insights/library-knowledge-services" data-drupal-link-system-path="node/151071">Library &amp; Knowledge Services</a>
+              </li>
+        </ul>
+
+  
+              </li>
+                        <li class="menu-item menu-item--expanded is-dropdown-submenu-parent">
+              <a href="/centers-initiatives" target="" data-drupal-link-system-path="node/150511">Centers &amp; Initiatives</a>
+                      
+     
+              <ul class="menu is-dropdown-submenu">
+       
+                        <li class="menu-item">
+              <a href="http://ash.harvard.edu/" target="_blank" title="Ash Center for Democratic Governance and Innovation">Ash Center for Democratic Governance and Innovation</a>
+              </li>
+                        <li class="menu-item">
+              <a href="http://www.belfercenter.org/" target="_blank" title="Belfer Center for Science and International Affairs">Belfer Center for Science and International Affairs</a>
+              </li>
+                        <li class="menu-item">
+              <a href="http://carrcenter.hks.harvard.edu/" target="_self" title="Carr Center for Human Rights Policy">Carr Center for Human Rights Policy</a>
+              </li>
+                        <li class="menu-item">
+              <a href="/centers/cid" target="" title="Center for International Development" data-drupal-link-system-path="node/154611">Center for International Development</a>
+              </li>
+                        <li class="menu-item">
+              <a href="http://cpl.hks.harvard.edu" target="" title="Center for Public Leadership">Center for Public Leadership</a>
+              </li>
+                        <li class="menu-item">
+              <a href="http://iop.harvard.edu/" target="_blank" title="Institute of Politics">Institute of Politics</a>
+              </li>
+                        <li class="menu-item">
+              <a href="/centers/wiener" target="" title="Malcolm Wiener Center for Social Policy" data-drupal-link-system-path="node/151141">Malcolm Wiener Center for Social Policy</a>
+              </li>
+                        <li class="menu-item">
+              <a href="/centers/mrcbg" target="" data-drupal-link-system-path="node/151716">Mossavar-Rahmani Center for Business &amp; Government</a>
+              </li>
+                        <li class="menu-item">
+              <a href="https://shorensteincenter.org/" target="_blank" title="Shorenstein Center on Media, Politics and Public Policy">Shorenstein Center on Media, Politics and Public Policy</a>
+              </li>
+                        <li class="menu-item">
+              <a href="/centers/taubman" target="" title="Taubman Center for State and Local Government" data-drupal-link-system-path="node/155806">Taubman Center for State and Local Government</a>
+              </li>
+                        <li class="menu-item">
+              <a href="https://wappp.hks.harvard.edu/" target="">The Women and Public Policy Program</a>
+              </li>
+                        <li class="menu-item">
+              <a href="/centers-initiatives#initiatives" target="" data-drupal-link-system-path="node/150511">All Initiatives</a>
+              </li>
+        </ul>
+
+  
+              </li>
+                        <li class="menu-item menu-item--expanded is-dropdown-submenu-parent">
+              <span class="nolink hamburguer is-active" target="" data-drupal-link-system-path="&lt;front&gt;">More</span>
+                      
+     
+              <ul class="menu is-dropdown-submenu">
+       
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/more/about-us" data-drupal-link-system-path="node/151061">About Us</a>
+              </li>
+                        <li class="menu-item">
+              <a href="/news-announcements" target="" title="News &amp; Announcements from HKS" data-drupal-link-system-path="news-announcements">News &amp; Announcements</a>
+              </li>
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/events/week" data-drupal-link-system-path="events/week">Events</a>
+              </li>
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/more/student-life" data-drupal-link-system-path="node/159321">Student Life</a>
+              </li>
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/more/alumni" data-drupal-link-system-path="node/156001">Alumni</a>
+              </li>
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/faculty-directory" target="" data-drupal-link-system-path="faculty-directory">Faculty</a>
+              </li>
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/more/employers" data-drupal-link-system-path="node/151766">Employers</a>
+              </li>
+                        <li class="menu-item">
+              <a href="http://campaign.hks.harvard.edu" target="">Campaign for HKS</a>
+              </li>
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/more/giving" data-drupal-link-system-path="node/213131">Giving</a>
+              </li>
+                        <li class="menu-item">
+              <a href="/contact-us" target="" data-drupal-link-system-path="node/151611">Contact Us</a>
+              </li>
+        </ul>
+
+  
+              </li>
+        </ul>
+
+  
+
+
+  </nav>
+<section class="views-exposed-form search--bar--expand block-exposedformacquia-searchpage-2" data-drupal-selector="views-exposed-form-acquia-search-page" id="block-exposedformacquia-searchpage-2">
+  
+  
+    
+
+  
+          <form action="/search" method="get" id="views-exposed-form-acquia-search-page" accept-charset="UTF-8">
+  <div class="js-form-item form-item js-form-type-textfield form-item-search js-form-item-search">
+      <label for="edit-search">Search</label>
+        <input data-drupal-selector="edit-search" type="text" id="edit-search" name="search" value="" size="30" maxlength="128" class="form-text" />
+
+        </div>
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions"><input class="success button radius js-form-submit form-submit" data-drupal-selector="edit-submit-acquia-search" type="submit" id="edit-submit-acquia-search" value="Search" />
+</div>
+
+
+</form>
+
+    
+    
+  </section>
+
+  </div>
+</div>
+    </div>
+    <!-- end off-canvas right menu -->
+    <!-- main menu large screen -->
+    <!-- standard alert -->
+        <div class="alert--wrapper">
+          <div>
+    <section class="views-element-container block-views-block-news-listing-block-2" id="block-views-block-news-listing-block-2">
+  
+  
+    
+
+  
+          <div><div class="js-view-dom-id-51ae24d2a24eff886ef724501588a6d17581201c4270069b12170fe29221ac2a">
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+    
+    
+  </section>
+<section class="views-element-container block-views-block-news-listing-block-1" id="block-views-block-news-listing-block-1">
+  
+  
+    
+
+  
+          <div><div class="js-view-dom-id-4821ff1a55328a5f51e2291610dbf7e6817aca9c6b1ecb4fc7ded2e9fba804d1">
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+    
+    
+  </section>
+
+  </div>
+
+    </div>
+            <!-- headers -->
+        <div class="header-banner__large" style="background-image:url('/sites/default/files/large-hero-images/Halla%20Logadottir%20at%20Harvard%20Kennedy%20School.jpg');">
+        <div class="media--container">
+     <div data-sticky-container>
+         <div id="widemenu" class="title-bar sticky" data-sticky data-top-anchor="stickystart:top" data-btm-anchor="endsticky:bottom" data-options="marginTop:0;" style="width:100%">
+          <div class="row">
+           <div>
+              <div>
+    <section id="block-mainsitelogo" class="columns large-3 xlarge-4 block-mainsitelogo">
+  
+  
+    
+
+  <div >
+          <a href="/">    <div class="field-wrapper field field--name-field-logo-svg field--type-file field--label-hidden field__items">
+                <div class="field__item">
+                 
+      <img src="/sites/default/files/logos/logo_0.svg" alt="Harvard Kennedy School" class="logo">
+            </div>
+          </div>
+</a>
+      </div>
+
+  </section>
+<nav role="navigation" aria-labelledby="block-harvardkennedy-main-menu-menu" id="block-harvardkennedy-main-menu" class="columns large-9 xlarge-8 block-harvardkennedy-main-menu">
+            
+  <h2 class="block-title visually-hidden" id="block-harvardkennedy-main-menu-menu">Main navigation</h2>
+  
+
+        
+
+  
+     
+              <!-- main menu -->
+        <ul class="dropdown menu horizontal main--menu" data-dropdown-menu="data-responsive-menu">
+       
+                        <li class="menu-item menu-item--expanded is-dropdown-submenu-parent">
+              <a href="/educational-programs" target="" data-drupal-link-system-path="node/104091">Educational Programs</a>
+                      
+     
+              <ul class="menu is-dropdown-submenu">
+       
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/masters-programs" data-drupal-link-system-path="node/102565">Master&#039;s Programs</a>
+              </li>
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/executive-education" data-drupal-link-system-path="node/102567">Executive Education</a>
+              </li>
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/doctoral-programs" data-drupal-link-system-path="node/155736">Doctoral Programs</a>
+              </li>
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/courses" data-drupal-link-system-path="courses">Courses</a>
+              </li>
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/educational-programs/academic-calendars-policies" data-drupal-link-system-path="node/151596">Academic Calendars &amp; Policies</a>
+              </li>
+        </ul>
+
+  
+              </li>
+                        <li class="menu-item menu-item--expanded is-dropdown-submenu-parent">
+              <a href="/admissions-financial-aid" target="" data-drupal-link-system-path="node/150506">Admissions &amp; Aid</a>
+                      
+     
+              <ul class="menu is-dropdown-submenu">
+       
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/admissions-aid/masters-program-admissions" target="" data-drupal-link-system-path="node/159656">Master&#039;s Program Admissions</a>
+              </li>
+                        <li class="menu-item">
+              <a href="https://www.hks.harvard.edu/educational-programs/executive-education/admissions-fees" target="">Executive Education Admissions</a>
+              </li>
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/admissions-aid/doctoral-program-admissions" data-drupal-link-system-path="node/159716">Doctoral Program Admissions</a>
+              </li>
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/admissions-aid/funding-your-education" data-drupal-link-system-path="node/159436">Funding Your Education</a>
+              </li>
+        </ul>
+
+  
+              </li>
+                        <li class="menu-item menu-item--expanded is-dropdown-submenu-parent">
+              <a href="/research-insights" data-drupal-link-system-path="node/104161">Research &amp; Insights</a>
+                      
+     
+              <ul class="menu is-dropdown-submenu">
+       
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/research-insights/research-publications" target="" title="Publications at HKS" data-drupal-link-system-path="node/217966">Publications</a>
+              </li>
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/research-insights/policy-topics" data-drupal-link-system-path="node/151091">Policy Topics</a>
+              </li>
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/research-insights/library-knowledge-services" data-drupal-link-system-path="node/151071">Library &amp; Knowledge Services</a>
+              </li>
+        </ul>
+
+  
+              </li>
+                        <li class="menu-item menu-item--expanded is-dropdown-submenu-parent">
+              <a href="/centers-initiatives" target="" data-drupal-link-system-path="node/150511">Centers &amp; Initiatives</a>
+                      
+     
+              <ul class="menu is-dropdown-submenu">
+       
+                        <li class="menu-item">
+              <a href="http://ash.harvard.edu/" target="_blank" title="Ash Center for Democratic Governance and Innovation">Ash Center for Democratic Governance and Innovation</a>
+              </li>
+                        <li class="menu-item">
+              <a href="http://www.belfercenter.org/" target="_blank" title="Belfer Center for Science and International Affairs">Belfer Center for Science and International Affairs</a>
+              </li>
+                        <li class="menu-item">
+              <a href="http://carrcenter.hks.harvard.edu/" target="_self" title="Carr Center for Human Rights Policy">Carr Center for Human Rights Policy</a>
+              </li>
+                        <li class="menu-item">
+              <a href="/centers/cid" target="" title="Center for International Development" data-drupal-link-system-path="node/154611">Center for International Development</a>
+              </li>
+                        <li class="menu-item">
+              <a href="http://cpl.hks.harvard.edu" target="" title="Center for Public Leadership">Center for Public Leadership</a>
+              </li>
+                        <li class="menu-item">
+              <a href="http://iop.harvard.edu/" target="_blank" title="Institute of Politics">Institute of Politics</a>
+              </li>
+                        <li class="menu-item">
+              <a href="/centers/wiener" target="" title="Malcolm Wiener Center for Social Policy" data-drupal-link-system-path="node/151141">Malcolm Wiener Center for Social Policy</a>
+              </li>
+                        <li class="menu-item">
+              <a href="/centers/mrcbg" target="" data-drupal-link-system-path="node/151716">Mossavar-Rahmani Center for Business &amp; Government</a>
+              </li>
+                        <li class="menu-item">
+              <a href="https://shorensteincenter.org/" target="_blank" title="Shorenstein Center on Media, Politics and Public Policy">Shorenstein Center on Media, Politics and Public Policy</a>
+              </li>
+                        <li class="menu-item">
+              <a href="/centers/taubman" target="" title="Taubman Center for State and Local Government" data-drupal-link-system-path="node/155806">Taubman Center for State and Local Government</a>
+              </li>
+                        <li class="menu-item">
+              <a href="https://wappp.hks.harvard.edu/" target="">The Women and Public Policy Program</a>
+              </li>
+                        <li class="menu-item">
+              <a href="/centers-initiatives#initiatives" target="" data-drupal-link-system-path="node/150511">All Initiatives</a>
+              </li>
+        </ul>
+
+  
+              </li>
+                        <li class="menu-item menu-item--expanded is-dropdown-submenu-parent">
+              <span class="nolink hamburguer is-active" target="" data-drupal-link-system-path="&lt;front&gt;">More</span>
+                      
+     
+              <ul class="menu is-dropdown-submenu">
+       
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/more/about-us" data-drupal-link-system-path="node/151061">About Us</a>
+              </li>
+                        <li class="menu-item">
+              <a href="/news-announcements" target="" title="News &amp; Announcements from HKS" data-drupal-link-system-path="news-announcements">News &amp; Announcements</a>
+              </li>
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/events/week" data-drupal-link-system-path="events/week">Events</a>
+              </li>
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/more/student-life" data-drupal-link-system-path="node/159321">Student Life</a>
+              </li>
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/more/alumni" data-drupal-link-system-path="node/156001">Alumni</a>
+              </li>
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/faculty-directory" target="" data-drupal-link-system-path="faculty-directory">Faculty</a>
+              </li>
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/more/employers" data-drupal-link-system-path="node/151766">Employers</a>
+              </li>
+                        <li class="menu-item">
+              <a href="http://campaign.hks.harvard.edu" target="">Campaign for HKS</a>
+              </li>
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/more/giving" data-drupal-link-system-path="node/213131">Giving</a>
+              </li>
+                        <li class="menu-item">
+              <a href="/contact-us" target="" data-drupal-link-system-path="node/151611">Contact Us</a>
+              </li>
+        </ul>
+
+  
+              </li>
+        </ul>
+
+  
+
+
+  </nav>
+<section class="views-exposed-form search--bar--expand block-exposedformacquia-searchpage-2" data-drupal-selector="views-exposed-form-acquia-search-page" id="block-exposedformacquia-searchpage-2">
+  
+  
+    
+
+  
+          <form action="/search" method="get" id="views-exposed-form-acquia-search-page" accept-charset="UTF-8">
+  <div class="js-form-item form-item js-form-type-textfield form-item-search js-form-item-search">
+      <label for="edit-search">Search</label>
+        <input data-drupal-selector="edit-search" type="text" id="edit-search" name="search" value="" size="30" maxlength="128" class="form-text" />
+
+        </div>
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions"><input class="success button radius js-form-submit form-submit" data-drupal-selector="edit-submit-acquia-search" type="submit" id="edit-submit-acquia-search" value="Search" />
+</div>
+
+
+</form>
+
+    
+    
+  </section>
+
+  </div>
+
+          </div>
+         </div>
+        </div>
+      </div><!-- /.sticky-container -->
+      <div class="row">
+        <div class="border--lines__large"></div>
+        <div class="header--content header--content__alt">
+          <div class="columns large-8">
+            <h1 class="page-title">Harvard Kennedy School</h1>
+            <h1>fuels real-world impact</h1>
+                          <div class="cta_button">
+                <a class="button primary" href="https://www.hks.harvard.edu/more/student-life/student-stories/arctic-innovator">Read more</a>
+              </div>
+                       </div>
+           <div class="columns large-4">
+             <h5>Our innovative research and forward-looking policy solutions address real challenges in real time.</h5>
+                              <a href="/">ASK WHAT YOU CAN DO</a>
+                        </div>
+           <div class="arrow__bottom"><a href="#"><span class="icon-icons_arrow-down"></span></a></div>
+        </div>
+      </div>
+   </div>
+
+ </div><!-- end header banner -->
+    <!-- end headers -->
+    <div class="off-canvas-content" data-off-canvas-content>
+
+      <div class="row">
+                              </div>
+
+      
+      
+
+        <main id="main" role="main">
+                      <div class="region-highlighted panel callout"></div>                    <a id="main-content"></a>
+          <section>
+            <div id="stickystart">  <div>
+    <section id="block-harvardkennedy-content" class="block-harvardkennedy-content">
+  
+  
+    
+
+  
+          <article id="node-150486"  data-history-node-id="150486" role="article" about="/home-page">
+
+  
+    
+
+  
+    <div class="view-mode-full">
+        <div class="item--slider field-wrapper field field--name-field-related-topics field--type-entity-reference field--label-hidden field__items">
+                <div class="field__item">
+        <div class="columns">
+  <a href="/node/231591" rel="bookmark">
+    <article id="node-231591"  data-history-node-id="231591" role="article" about="/node/231591">
+          <div class="featured--bgimage" style="background-image:url('/sites/default/files/2017-11/Making%20democracy%20work%20banner%20final%20R1.png');">
+            <div class="footer">
+          
+                                    <h2 class="featured-title">
+                <span class="field-wrapper">Making Democracy Work</span>
+
+              </h2>
+              <p class="featured-subtitle">            Diagnosing the challenge and prescribing ways to address it.
+      </p>
+                                
+          
+        </div>
+      </div>
+    </article>
+  </a>
+</div>
+
+            </div>
+                  <div class="field__item">
+        <div class="columns">
+  <a href="/node/150476" rel="bookmark">
+    <article id="node-150476"  data-history-node-id="150476" role="article" about="/node/150476">
+          <div class="featured--bgimage" style="background-image:url('/sites/default/files/2017-05/1%20banner%20TOPIC%20Buiness%20and%20Regulation.jpg');">
+            <div class="footer">
+          
+                                    <h2 class="featured-title">
+                <span class="field-wrapper">Business &amp; Regulation</span>
+
+              </h2>
+              <p class="featured-subtitle">            Jason Furman says GOP tax plan makes wild claims.
+      </p>
+                                
+          
+        </div>
+      </div>
+    </article>
+  </a>
+</div>
+
+            </div>
+                  <div class="field__item">
+        <div class="columns">
+  <a href="/node/214136" rel="bookmark">
+    <article id="node-214136"  data-history-node-id="214136" role="article" about="/node/214136">
+          <div class="featured--bgimage" style="background-image:url('/sites/default/files/Topic%20Pages/Advocacy%20Social%20Movements/1_advocacy_header_iStock458065927.jpg');">
+            <div class="footer">
+          
+                                    <h2 class="featured-title">
+                <span class="field-wrapper">Advocacy &amp; Social Movements</span>
+
+              </h2>
+              <p class="featured-subtitle">            Tim McCarthy on the fight against modern slavery.
+      </p>
+                                
+          
+        </div>
+      </div>
+    </article>
+  </a>
+</div>
+
+            </div>
+                  <div class="field__item">
+        <div class="columns">
+  <a href="/node/150471" rel="bookmark">
+    <article id="node-150471"  data-history-node-id="150471" role="article" about="/node/150471">
+          <div class="featured--bgimage" style="background-image:url('/sites/default/files/2017-11/cohen_war_gender_110917_1024.jpg');">
+            <div class="footer">
+          
+                                    <h2 class="featured-title">
+                <span class="field-wrapper">Gender, Race &amp; Identity</span>
+
+              </h2>
+              <p class="featured-subtitle">            Asking better questions about sex and violence.
+      </p>
+                                
+          
+        </div>
+      </div>
+    </article>
+  </a>
+</div>
+
+            </div>
+                  <div class="field__item">
+        <div class="columns">
+  <a href="/node/214171" rel="bookmark">
+    <article id="node-214171"  data-history-node-id="214171" role="article" about="/node/214171">
+          <div class="featured--bgimage" style="background-image:url('/sites/default/files/Topic%20Pages/Poverty%2C%20Inequality/1_poverty_hands_istock614211908.jpg');">
+            <div class="footer">
+          
+                                    <h2 class="featured-title">
+                <span class="field-wrapper">Poverty, Inequality &amp; Opportunity</span>
+
+              </h2>
+              <p class="featured-subtitle">            HKS celebrates Mary Jo Bane&#039;s career fighting inequality.
+      </p>
+                                
+          
+        </div>
+      </div>
+    </article>
+  </a>
+</div>
+
+            </div>
+                  <div class="field__item">
+        <div class="columns">
+  <a href="/node/214186" rel="bookmark">
+    <article id="node-214186"  data-history-node-id="214186" role="article" about="/node/214186">
+          <div class="featured--bgimage" style="background-image:url('/sites/default/files/2017-08/1%20Lead_Science-Technology-Data2.jpg');">
+            <div class="footer">
+          
+                                    <h2 class="featured-title">
+                <span class="field-wrapper">Science, Technology &amp; Data</span>
+
+              </h2>
+              <p class="featured-subtitle">            How public policy schools can lead in the digital age.
+      </p>
+                                
+          
+        </div>
+      </div>
+    </article>
+  </a>
+</div>
+
+            </div>
+          </div>
+    <div class="more-link field-wrapper field field--name-field-view-more-policy-topics- field--type-link field--label-hidden field__items">
+                <div class="field__item">
+        <a href="/research-insights/policy-topics">View More Policy Topics</a>
+            </div>
+          </div>
+    <h5 class="row field-wrapper field field--name-field-ask-now-section-title field--type-string field--label-hidden field__items">
+                <div class="columns small-12 strong border field__item">
+        Discover Programs that fit your career goals
+            </div>
+          </h5>
+    <div class="row row__center navigation--card--wrapper field-wrapper field field--name-field-ask-now-content-references field--type-entity-reference field--label-hidden field__items">
+                <div class="columns medium-4 navigation--card__alt field__item">
+        <article id="node-102565"  data-history-node-id="102565" role="article" about="/node/102565">
+  
+      <h2 class="node-title">
+              <a href="/node/102565" rel="bookmark"><span class="field-wrapper">Master&#039;s Programs</span>
+</a>
+          </h2>
+    
+
+  
+    <div class="view-mode-education_card">
+        <div class="body field field--name-body field--type-text-with-summary field--label-hidden field__items">
+                <div class="field__item">
+        Rigorous one- and two-year programs lead to master's degrees in public policy or public administration.
+            </div>
+          </div>
+
+    <div class="button__bottom">
+              <a href="/node/102565" class="button primary"><span class="field-wrapper">Master&#039;s Programs</span>
+</a>
+          </div>
+  </div>
+
+  
+  
+  
+</article>
+
+            </div>
+                  <div class="columns medium-4 navigation--card__alt field__item">
+        <article id="node-102567"  data-history-node-id="102567" role="article" about="/node/102567">
+  
+      <h2 class="node-title">
+              <a href="/node/102567" rel="bookmark"><span class="field-wrapper">Executive Education</span>
+</a>
+          </h2>
+    
+
+  
+    <div class="view-mode-education_card">
+        <div class="body field field--name-body field--type-text-with-summary field--label-hidden field__items">
+                <div class="field__item">
+        Open enrollment and custom programs help senior leaders expand their global perspectives and leadership strategies in their role.
+            </div>
+          </div>
+
+    <div class="button__bottom">
+              <a href="/node/102567" class="button primary"><span class="field-wrapper">Executive Education</span>
+</a>
+          </div>
+  </div>
+
+  
+  
+  
+</article>
+
+            </div>
+                  <div class="columns medium-4 navigation--card__alt field__item">
+        <article id="node-155736"  data-history-node-id="155736" role="article" about="/node/155736">
+  
+      <h2 class="node-title">
+              <a href="/node/155736" rel="bookmark"><span class="field-wrapper">Doctoral Programs</span>
+</a>
+          </h2>
+    
+
+  
+    <div class="view-mode-education_card">
+        <div class="body field field--name-body field--type-text-with-summary field--label-hidden field__items">
+                <div class="field__item">
+        Full-time programs are available for candidates pursuing PhDs in public, social, and health policy, and political economy and government.
+            </div>
+          </div>
+
+    <div class="button__bottom">
+              <a href="/node/155736" class="button primary"><span class="field-wrapper">Doctoral Programs</span>
+</a>
+          </div>
+  </div>
+
+  
+  
+  
+</article>
+
+            </div>
+          </div>
+
+<div  class="row">
+      
+<div  class="columns small-12 medium-8">
+          <h5 class="field-wrapper field field--name-field-ask-when-title field--type-string field--label-hidden field__items">
+                <div class="border strong field__item">
+        Events
+            </div>
+          </h5>
+
+<div  class="row">
+      
+<div  class="columns small-12 medium-6">
+                  <article id="node-231871" class="featured">
+      <div class="view-mode-featured">
+    <a href="/node/231871" rel="bookmark">    <div class="field-wrapper field field--name-field-teaser-image field--type-image field--label-hidden field__items">
+                <div class="field__item">
+          <img src="/sites/default/files/2017-11/Making%20democracy%20work%20event%20orange%20640x360.png" width="640" height="360" alt="Making Democracy Work" typeof="foaf:Image" />
+
+
+            </div>
+          </div>
+</a>
+  </div>
+  
+      <h2 class="node-title">
+      <a href="/node/231871" rel="bookmark"><span class="field-wrapper">Larry Diamond: Is There an Emerging Crisis of Liberal Democracy?</span>
+</a>
+    </h2>
+    
+  
+  
+  
+</article>
+
+      
+  </div>
+<div  class="columns small-12 medium-6">
+          <div class="field-wrapper field field--name-field-latest-events field--type-viewsreference field--label-hidden field__items">
+                <div class="field__item">
+        <div class="views-element-container"><div class="js-view-dom-id-b16df4468e8cb37c2874b2ec08acac5bb8f01d9d067e92dab68ba079824e2aee">
+  
+  
+  
+
+  
+  
+  
+
+      <div class="events--listing">
+    <div class="views-field views-field-field-event-date"><div class="field-content">Thursday, November 30, 2017 | 08:00AM</div></div><div class="views-field views-field-title"><span class="field-content"><a href="/events/race-gender-and-mayoral-leadership" hreflang="en">Race, Gender, and Mayoral Leadership</a></span></div>
+  </div>
+    <div class="events--listing">
+    <div class="views-field views-field-field-event-date"><div class="field-content">Thursday, November 30, 2017 | 11:40AM</div></div><div class="views-field views-field-title"><span class="field-content"><a href="/events/equal-inequitable-who-benefits-gender-neutral-tenure-clock-stopping-policies" hreflang="en">Equal but Inequitable: Who Benefits from Gender-Neutral Tenure Clock Stopping Policies?</a></span></div>
+  </div>
+    <div class="events--listing">
+    <div class="views-field views-field-field-event-date"><div class="field-content">Thursday, November 30, 2017 | 11:45AM</div></div><div class="views-field views-field-title"><span class="field-content"><a href="/events/reflections-us-regulatory-policy" hreflang="en">Reflections on U.S. Regulatory Policy</a></span></div>
+  </div>
+    <div class="events--listing">
+    <div class="views-field views-field-field-event-date"><div class="field-content">Thursday, November 30, 2017 | 12:00PM</div></div><div class="views-field views-field-title"><span class="field-content"><a href="/events/study-group-privacy" hreflang="en">Study Group: Privacy</a></span></div>
+  </div>
+
+  
+  
+
+  
+  <div class="more-link"><a href="/events/week">View All</a></div>
+
+
+  
+  
+</div>
+</div>
+
+            </div>
+          </div>
+
+  </div>
+  </div>
+  </div>
+<div  class="columns small-12 medium-4">
+          <h5 class="field-wrapper field field--name-field-ask-who-title field--type-string field--label-hidden field__items">
+                <div class="strong border field__item">
+        Featured News
+            </div>
+          </h5>
+    <div class="field-wrapper field field--name-field-content-reference field--type-entity-reference field--label-hidden field__items">
+            <a href="/node/231926" rel="bookmark">
+	<article id="node-231926"  data-history-node-id="231926" role="article" about="/node/231926" class="callout__alt">
+	        <div class="callout--bgimage" style="background-image:url('/sites/default/files/medium-hero-images/Homepage_Broadmoor.jpg');"></div>
+     	    <h6 class="h6__alt"></h6>
+	    <h3 class="node-title">
+	      <span class="field-wrapper">New Orleans mayor-elect LaToya Cantrell played leading role in Broadmoor Project</span>
+
+	    </h3>
+	</article>
+</a>
+
+
+
+          </div>
+
+  </div>
+  </div>
+  </div>
+
+  
+  
+  
+</article>
+
+    
+    
+  </section>
+
+  </div>
+</div>
+          </section>
+        </main>
+                             <div class="footer--wrapper">
+        <footer class="row">
+                      <div id="footer-first" class="small-12 large-5 columns">
+              <a href="/" title="Harvard Kennedy School"><img src="/themes/harvardkennedy/images/logo-black.svg" alt="Harvard Kennedy School" class="logo__footer"></a>
+                <div>
+    <section id="block-footercontent" class="block-footercontent">
+  
+  
+    
+
+  
+              <div class="body field field--name-body field--type-text-with-summary field--label-hidden field__items">
+                <div class="field__item">
+        <p>79 John F. Kennedy Street<br />
+Cambridge, MA 02138<br />
+617-495-1100</p>
+
+            </div>
+          </div>
+
+    
+    
+  </section>
+
+  </div>
+
+            </div>
+                                <div id="footer-middle" class="small-12 large-4 columns">
+                <div>
+    <nav role="navigation" aria-labelledby="block-harvardkennedy-footer-menu" id="block-harvardkennedy-footer" class="block-harvardkennedy-footer">
+            
+  <h2 class="block-title visually-hidden" id="block-harvardkennedy-footer-menu">Footer menu</h2>
+  
+
+        
+              <div class="split__horizontal">
+        <ul class="footer">
+              <li>
+        <a href="/masters-programs" target="" data-drupal-link-system-path="node/102565">Master&#039;s Programs</a>
+              </li>
+          <li>
+        <a href="/executive-education" data-drupal-link-system-path="node/102567">Executive Education</a>
+              </li>
+          <li>
+        <a href="/doctoral-programs" target="" data-drupal-link-system-path="node/155736">Doctoral Programs</a>
+              </li>
+          <li>
+        <a href="/admissions-aid/masters-program-admissions/admissions-events" target="" data-drupal-link-system-path="node/159441">Admissions Events</a>
+              </li>
+          <li>
+        <a href="https://community.alumni.harvard.edu/give/16039598" target="_blank">Give Now</a>
+              </li>
+          <li>
+        <a href="/alumni" target="">Alumni</a>
+              </li>
+          <li>
+        <a href="http://www.harvard.edu/staff" target="_blank">Harvard Directory</a>
+              </li>
+          <li>
+        <a href="/contact-us" target="" title="Contact Us" data-drupal-link-system-path="node/151611">Contact Us</a>
+              </li>
+        </ul>
+    </div>
+  
+
+
+  </nav>
+
+  </div>
+
+            </div>
+                                <div id="footer-last" class="small-12 large-3 columns">
+                <div>
+    <section id="block-socialicons" class="block-socialicons">
+  
+  
+    
+
+  
+              <div class="body field field--name-body field--type-text-with-summary field--label-hidden field__items">
+                <div class="field__item">
+        <ul class="menu social--icons"><li class="facebook"><a href="https://www.facebook.com/harvardkennedyschool/" target="_blank">Facebook</a></li>
+	<li class="twitter"><a href="https://twitter.com/kennedy_school" target="_blank">Twitter</a></li>
+	<li class="linkedin"><a href="https://www.linkedin.com/school/441164" target="_blank">LinkedIn</a></li>
+	<li class="youtube"><a href="https://www.youtube.com/user/HarvardKennedySchool" target="_blank">Youtube</a></li>
+</ul><ul class="footer"><li><a href="/more/about-us/policies/privacy-statement">Privacy</a></li>
+</ul>
+            </div>
+          </div>
+
+    
+    
+  </section>
+
+  </div>
+
+            </div>
+                  </footer>
+       </div>
+            <div class="bottom-bar panel" id="endsticky">
+        <div class="row">
+          <div class="large-12 columns copyright">
+          Copyright &copy; 2017 The President and Fellows of <a href="http://www.harvard.edu/" target="_blank">Harvard College</a>.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+  <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/150486","currentPathIsAdmin":false,"isFront":true,"currentLanguage":"en"},"pluralDelimiter":"\u0003","field_group":{"html_element":{"mode":"default","context":"view","settings":{"id":"","classes":"columns small-12 medium-6","element":"div","show_label":false,"label_element":"h3","attributes":"","effect":"none","speed":"fast","label":"Column1"}}},"ajaxTrustedUrl":{"\/search":true},"user":{"uid":0,"permissionsHash":"f804d68eaa9d50546e5c33fc64ab8270307ecfa6added14a69115c191585e345"}}</script>
+<script src="/sites/default/files/js/js_EtA_Of8UG3gnrOh08Ed8Iunc3H2lHQ5iLoqlDhBG5GE.js"></script>
+
+  <script>
+    (function ($) {
+      $(document).foundation();
+    })(jQuery);
+  </script>
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"4bc1518bdc","applicationID":"65819292","transactionName":"MlNSYRNZV0NWUkwMVwsZcVYVUVZeGEFZAl06VVFWCV0=","queueTime":0,"applicationTime":23,"atts":"HhRRF1tDRE0=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

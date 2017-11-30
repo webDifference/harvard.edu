@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html  lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ og: http://ogp.me/ns# rdfs: http://www.w3.org/2000/01/rdf-schema# sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema#">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+  <meta charset="utf-8" />
+<link rel="shortcut icon" href="http://www.dce.harvard.edu/sites/dce.harvard.edu/files/dce_favicon_0.ico" type="image/vnd.microsoft.icon" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+  <title>Harvard Division of Continuing Education</title>
+
+      <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="cleartype" content="on">
+
+  <style>
+@import url("http://www.dce.harvard.edu/modules/system/system.base.css?oz3ugj");
+</style>
+<style>
+@import url("http://www.dce.harvard.edu/modules/comment/comment.css?oz3ugj");
+@import url("http://www.dce.harvard.edu/modules/field/theme/field.css?oz3ugj");
+@import url("http://www.dce.harvard.edu/modules/node/node.css?oz3ugj");
+@import url("http://www.dce.harvard.edu/modules/search/search.css?oz3ugj");
+@import url("http://www.dce.harvard.edu/modules/user/user.css?oz3ugj");
+@import url("http://www.dce.harvard.edu/sites/all/modules/contrib/views/css/views.css?oz3ugj");
+@import url("http://www.dce.harvard.edu/sites/all/modules/contrib/ckeditor/css/ckeditor.css?oz3ugj");
+</style>
+<style>
+@import url("http://www.dce.harvard.edu/sites/all/modules/contrib/ctools/css/ctools.css?oz3ugj");
+@import url("http://www.dce.harvard.edu/sites/all/modules/contrib/panels/css/panels.css?oz3ugj");
+</style>
+<style>
+@import url("http://www.dce.harvard.edu/sites/dce.harvard.edu/themes/dce/css/styles.css?oz3ugj");
+</style>
+
+
+  <script>
+    (function(d) {
+      var config = {
+        kitId: 'dqe6fre',
+        scriptTimeout: 3000
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+  </script>
+  <script>
+      /*! grunt-grunticon Stylesheet Loader - v2.1.6 | https://github.com/filamentgroup/grunticon | (c) 2015 Scott Jehl, Filament Group, Inc. | MIT license. */
+      (function(e){function n(n,t,o,a){"use strict";var i=e.document.createElement("link"),r=t||e.document.getElementsByTagName("script")[0],d=e.document.styleSheets;return i.rel="stylesheet",i.href=n,i.media="only x",a&&(i.onload=a),r.parentNode.insertBefore(i,r),i.onloadcssdefined=function(e){for(var t,o=0;d.length>o;o++)d[o].href&&d[o].href.indexOf(n)>-1&&(t=!0);t?e():setTimeout(function(){i.onloadcssdefined(e)})},i.onloadcssdefined(function(){i.media=o||"all"}),i}function t(e,n){e.onload=function(){e.onload=null,n&&n.call(e)},"isApplicationInstalled"in navigator&&"onloadcssdefined"in e&&e.onloadcssdefined(n)}var o=function(a,i){"use strict";if(a&&3===a.length){var r=e.Image,d=!(!document.createElementNS||!document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||e.opera&&-1===navigator.userAgent.indexOf("Chrome")||-1!==navigator.userAgent.indexOf("Series40")),c=new r;c.onerror=function(){o.method="png",o.href=a[2],n(a[2])},c.onload=function(){var e=1===c.width&&1===c.height,r=a[e&&d?0:e?1:2];o.method=e&&d?"svg":e?"datapng":"png",o.href=r,t(n(r),i)},c.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==",document.documentElement.className+=" grunticon"}};o.loadCSS=n,o.onloadCSS=t,e.grunticon=o})(this);(function(e,n){"use strict";var t=n.document,o="grunticon:",r=function(e){if(t.attachEvent?"complete"===t.readyState:"loading"!==t.readyState)e();else{var n=!1;t.addEventListener("readystatechange",function(){n||(n=!0,e())},!1)}},a=function(e){return n.document.querySelector('link[href$="'+e+'"]')},i=function(e){var n,t,r,a,i,c,s={};if(n=e.sheet,!n)return s;t=n.cssRules?n.cssRules:n.rules;for(var d=0;t.length>d;d++)r=t[d].cssText,a=o+t[d].selectorText,i=r.split(");")[0].match(/US\-ASCII\,([^"']+)/),i&&i[1]&&(c=decodeURIComponent(i[1]),s[a]=c);return s},c=function(e){var n,r,a,i;a="data-grunticon-embed";for(var c in e){i=c.slice(o.length);try{n=t.querySelectorAll(i)}catch(s){continue}r=[];for(var d=0;n.length>d;d++)null!==n[d].getAttribute(a)&&r.push(n[d]);if(r.length)for(d=0;r.length>d;d++)r[d].innerHTML=e[c],r[d].style.backgroundImage="none",r[d].removeAttribute(a)}return r},s=function(n){"svg"===e.method&&r(function(){c(i(a(e.href))),"function"==typeof n&&n()})};e.embedIcons=c,e.getCSS=a,e.getIcons=i,e.ready=r,e.svgLoadedCallback=s,e.embedSVG=s})(grunticon,this);
+      grunticon(["/sites/all/themes/harvard/a/images/svg/icons.data.svg.css", "/sites/all/themes/harvard/a/images/svg/icons.data.png.css", "/sites/all/themes/harvard/a/images/svg/icons.fallback.css"], grunticon.svgLoadedCallback );
+  </script>
+
+  <script src="http://www.dce.harvard.edu/misc/jquery.js?v=1.4.4"></script>
+<script src="http://www.dce.harvard.edu/misc/jquery.once.js?v=1.2"></script>
+<script src="http://www.dce.harvard.edu/misc/drupal.js?oz3ugj"></script>
+<script src="http://www.dce.harvard.edu/sites/all/themes/harvard/a/scripts/libraries/matchMedia.addListener.js?oz3ugj"></script>
+<script src="http://www.dce.harvard.edu/sites/all/themes/harvard/a/scripts/libraries/matchMedia.polyfill.js?oz3ugj"></script>
+<script src="http://www.dce.harvard.edu/sites/all/themes/harvard/a/scripts/libraries/base64.js?oz3ugj"></script>
+<script src="http://www.dce.harvard.edu/sites/all/themes/harvard/a/scripts/libraries/unserialize.js?oz3ugj"></script>
+<script src="http://www.dce.harvard.edu/sites/all/themes/harvard/a/scripts/plugins/selectivizr.js?oz3ugj"></script>
+<script src="http://www.dce.harvard.edu/sites/all/themes/harvard/a/scripts/plugins/jquery.matchHeight.js?oz3ugj"></script>
+<script src="http://www.dce.harvard.edu/sites/all/themes/harvard/a/scripts/plugins/bigtext.js?oz3ugj"></script>
+<script src="http://www.dce.harvard.edu/sites/all/themes/harvard/a/scripts/plugins/enquire.js?oz3ugj"></script>
+<script src="http://www.dce.harvard.edu/sites/all/themes/harvard/a/scripts/plugins/owl.carousel.js?oz3ugj"></script>
+<script src="http://www.dce.harvard.edu/sites/all/themes/harvard/a/scripts/plugins/a11yclick.js?oz3ugj"></script>
+<script src="http://www.dce.harvard.edu/sites/all/themes/harvard/a/scripts/plugins/console.js?oz3ugj"></script>
+<script src="http://www.dce.harvard.edu/sites/all/themes/harvard/a/scripts/plugins/jBox.js?oz3ugj"></script>
+<script src="http://www.dce.harvard.edu/sites/all/themes/harvard/a/scripts/plugins/livereload.js?oz3ugj"></script>
+<script src="http://www.dce.harvard.edu/sites/all/themes/harvard/a/scripts/plugins/modernizr.js?oz3ugj"></script>
+<script src="http://www.dce.harvard.edu/sites/all/themes/harvard/a/scripts/plugins/parallax.min.js?oz3ugj"></script>
+<script src="http://www.dce.harvard.edu/sites/all/themes/harvard/a/scripts/plugins/jquery.tabslet.min.js?oz3ugj"></script>
+<script src="http://www.dce.harvard.edu/sites/all/themes/harvard/a/scripts/modules/backgroundSwap.js?oz3ugj"></script>
+<script src="http://www.dce.harvard.edu/sites/all/themes/harvard/a/scripts/modules/accordion.js?oz3ugj"></script>
+<script src="http://www.dce.harvard.edu/sites/all/themes/harvard/a/scripts/modules/asideMenu.js?oz3ugj"></script>
+<script src="http://www.dce.harvard.edu/sites/all/themes/harvard/a/scripts/modules/boxCard.js?oz3ugj"></script>
+<script src="http://www.dce.harvard.edu/sites/all/themes/harvard/a/scripts/modules/coursesToggle.js?oz3ugj"></script>
+<script src="http://www.dce.harvard.edu/sites/all/themes/harvard/a/scripts/modules/exploreToggle.js?oz3ugj"></script>
+<script src="http://www.dce.harvard.edu/sites/all/themes/harvard/a/scripts/modules/extensionFilter.js?oz3ugj"></script>
+<script src="http://www.dce.harvard.edu/sites/all/themes/harvard/a/scripts/modules/fieldsSort.js?oz3ugj"></script>
+<script src="http://www.dce.harvard.edu/sites/all/themes/harvard/a/scripts/modules/homeHero.js?oz3ugj"></script>
+<script src="http://www.dce.harvard.edu/sites/all/themes/harvard/a/scripts/modules/mainContentDetails.js?oz3ugj"></script>
+<script src="http://www.dce.harvard.edu/sites/all/themes/harvard/a/scripts/modules/mobileMenu.js?oz3ugj"></script>
+<script src="http://www.dce.harvard.edu/sites/all/themes/harvard/a/scripts/modules/searchToggle.js?oz3ugj"></script>
+<script src="http://www.dce.harvard.edu/sites/all/themes/harvard/a/scripts/modules/skipLink.js?oz3ugj"></script>
+<script src="http://www.dce.harvard.edu/sites/all/themes/harvard/a/scripts/modules/tabs.js?oz3ugj"></script>
+<script src="http://www.dce.harvard.edu/sites/all/themes/harvard/a/scripts/modules/toggle.js?oz3ugj"></script>
+<script src="http://www.dce.harvard.edu/sites/all/themes/harvard/a/scripts/script.js?oz3ugj"></script>
+<script src="http://www.dce.harvard.edu/sites/all/themes/harvard/../../libraries/jquery-cookie/src/jquery.cookie.js?oz3ugj"></script>
+<script src="http://www.dce.harvard.edu/sites/all/themes/harvard/js/prepopulate_ad_landing_rfi.js?oz3ugj"></script>
+<script src="http://www.dce.harvard.edu/sites/dce.harvard.edu/themes/dce/js/scripts.js?oz3ugj"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"dce","theme_token":"vBtPeqTMx2ZsnrTl5KObr95MAzGSLyUlQ561KU5yq2I","js":{"misc\/jquery.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/themes\/harvard\/a\/scripts\/libraries\/matchMedia.addListener.js":1,"sites\/all\/themes\/harvard\/a\/scripts\/libraries\/matchMedia.polyfill.js":1,"sites\/all\/themes\/harvard\/a\/scripts\/libraries\/base64.js":1,"sites\/all\/themes\/harvard\/a\/scripts\/libraries\/unserialize.js":1,"sites\/all\/themes\/harvard\/a\/scripts\/plugins\/selectivizr.js":1,"sites\/all\/themes\/harvard\/a\/scripts\/plugins\/jquery.matchHeight.js":1,"sites\/all\/themes\/harvard\/a\/scripts\/plugins\/bigtext.js":1,"sites\/all\/themes\/harvard\/a\/scripts\/plugins\/enquire.js":1,"sites\/all\/themes\/harvard\/a\/scripts\/plugins\/owl.carousel.js":1,"sites\/all\/themes\/harvard\/a\/scripts\/plugins\/a11yclick.js":1,"sites\/all\/themes\/harvard\/a\/scripts\/plugins\/console.js":1,"sites\/all\/themes\/harvard\/a\/scripts\/plugins\/jBox.js":1,"sites\/all\/themes\/harvard\/a\/scripts\/plugins\/livereload.js":1,"sites\/all\/themes\/harvard\/a\/scripts\/plugins\/modernizr.js":1,"sites\/all\/themes\/harvard\/a\/scripts\/plugins\/parallax.min.js":1,"sites\/all\/themes\/harvard\/a\/scripts\/plugins\/jquery.tabslet.min.js":1,"sites\/all\/themes\/harvard\/a\/scripts\/modules\/backgroundSwap.js":1,"sites\/all\/themes\/harvard\/a\/scripts\/modules\/accordion.js":1,"sites\/all\/themes\/harvard\/a\/scripts\/modules\/asideMenu.js":1,"sites\/all\/themes\/harvard\/a\/scripts\/modules\/boxCard.js":1,"sites\/all\/themes\/harvard\/a\/scripts\/modules\/coursesToggle.js":1,"sites\/all\/themes\/harvard\/a\/scripts\/modules\/exploreToggle.js":1,"sites\/all\/themes\/harvard\/a\/scripts\/modules\/extensionFilter.js":1,"sites\/all\/themes\/harvard\/a\/scripts\/modules\/fieldsSort.js":1,"sites\/all\/themes\/harvard\/a\/scripts\/modules\/homeHero.js":1,"sites\/all\/themes\/harvard\/a\/scripts\/modules\/mainContentDetails.js":1,"sites\/all\/themes\/harvard\/a\/scripts\/modules\/mobileMenu.js":1,"sites\/all\/themes\/harvard\/a\/scripts\/modules\/searchToggle.js":1,"sites\/all\/themes\/harvard\/a\/scripts\/modules\/skipLink.js":1,"sites\/all\/themes\/harvard\/a\/scripts\/modules\/tabs.js":1,"sites\/all\/themes\/harvard\/a\/scripts\/modules\/toggle.js":1,"sites\/all\/themes\/harvard\/a\/scripts\/script.js":1,"sites\/all\/themes\/harvard\/..\/..\/libraries\/jquery-cookie\/src\/jquery.cookie.js":1,"sites\/all\/themes\/harvard\/js\/prepopulate_ad_landing_rfi.js":1,"sites\/dce.harvard.edu\/themes\/dce\/js\/scripts.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/comment\/comment.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/panels\/css\/panels.css":1,"sites\/all\/themes\/harvard\/system.menus.css":1,"sites\/all\/themes\/harvard\/system.messages.css":1,"sites\/all\/themes\/harvard\/system.theme.css":1,"sites\/dce.harvard.edu\/themes\/dce\/css\/styles.css":1}}});</script>
+
+  <link rel="stylesheet" href="/sites/all/themes/harvard/a/styles/screen.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" type="text/css" href="/sites/all/themes/harvard/a/styles/fallback.css" />
+  <script src="/sites/all/themes/harvard/a/scripts/selectivizr.js"></script>
+  <![endif]-->
+
+  <!-- Optimizely code -->
+  <script src="https://cdn.optimizely.com/js/5613000999.js"></script>
+</head>
+<body class="dce-harvard html front not-logged-in one-sidebar sidebar-first page-home page-panels" >
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MZMKSV" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script type="text/javascript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0];var j=d.createElement(s);var dl=l!='dataLayer'?'&l='+l:'';j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;j.type='text/javascript';j.async=true;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MZMKSV');</script>
+<!-- End Google Tag Manager -->
+    <div class="page">
+  <div class="topbar">
+    <span class="topbar__logo i-harvard-logo ir">
+      Harvard University
+    </span>
+    <a class="topbar__link" href="http://www.harvard.edu">Harvard.edu</a>
+    <div class="site-dropdown">
+      <span>Continuing Education</span>
+      <ul>
+        <li class="extension"><a href="https://www.extension.harvard.edu">Harvard Extension School</a></li>
+        <li class="summer"><a href="http://summer.harvard.edu">Harvard Summer School</a></li>
+        <li class="professional-development"><a href="http://extension.harvard.edu/professional-development">Professional Development</a></li>
+        <li class="hilr"><a href="http://hilr.dce.harvard.edu/">Learning In Retirement</a></li>
+        <li class="alumni"><a href="http://alumni.extension.harvard.edu/">Extension Alumni Association</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <header class="header" id="header" role="banner">
+
+    <a class="header__mobile-menu ir i-hamburger" data-grunticon-embed href="">Menu</a>
+
+    <div class="layout-header">
+      <div class="column">
+                  <a href="/" title="Home" rel="home" class="header__logo i-hes-logo" id="logo">
+            <noscript><img src="http://www.dce.harvard.edu/sites/dce.harvard.edu/themes/dce/logo.png" alt="Home" class="header__logo-image"></noscript>
+          </a>
+        
+                  <div class="header__name-and-slogan visuallyhidden" id="name-and-slogan">
+                          <div class="header__site-name" id="site-name">
+                <a href="/" title="Home" class="header__site-link" rel="home"><span>Harvard Division of Continuing Education</span></a>
+              </div>
+            
+                      </div>
+              </div>
+      <div class="column">
+        <div class="navigation-wrap">
+          <div class="menu-slide">
+            
+            <hr>
+
+                      </div>
+        </div>
+      </div>
+    </div>
+
+    
+  </header>
+
+  <main role="main" id="main">
+    <a id="main-content"></a>
+                            
+
+
+
+<div class="panel-display panel-home clearfix home" >
+
+<div class="home-urgent-announcement">
+    <div class="layout-urgent-announcement">
+      <div class="urgent-announcement--main column reverse-type">
+              </div>
+    </div>
+</div>
+  
+  <div class="home-hero" style="background: url('sites/dce.harvard.edu/files/HES_110315_3176.jpg'); background-size: cover; background-position: center center;">
+    <div class="layout-home-hero">
+      <div class="home-hero--main column reverse-type">
+        <div class="panel-pane pane-custom pane-5"  >
+  
+      
+  
+  <div class="pane-content longform">
+    <h2 class="alpha">Extending Harvard's excellence to students at every stage of learning</h2>
+  </div>
+
+  
+  </div>
+<div class="panel-pane pane-custom pane-6"  >
+  
+      
+  
+  <div class="pane-content longform">
+    <p><a class="button" href="https://www.extension.harvard.edu/request-information">Get More Information</a></p>
+  </div>
+
+  
+  </div>
+      </div>
+      <div class="home-hero--secondary column">
+        <div class="hero-tab-box">
+                  </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="field-home-seperator">
+    <div class="layout-full">
+      <div class="column panel-panel panel-header">
+        <div class="panel-pane pane-custom pane-1"  >
+  
+      
+  
+  <div class="pane-content longform">
+    <h3>Study online or on campus, flexible credit or noncredit courses</h3>
+<p>The Harvard Division of Continuing Education offers <strong>open-enrollment courses</strong>, <strong>degrees and certificates, and professional development programs</strong>. Choose from an array of subject areas, including leadership and management, liberal arts, information technology, and environmental management.</p>
+  </div>
+
+  
+  </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta">
+    <div class="layout-split-3">
+      <div class="column panel-panel">
+          <div class="panel-pane pane-custom pane-2 cta"  >
+  
+      
+  
+  <div class="pane-content longform">
+    <p><img alt="" src="http://www.dce.harvard.edu/sites/dce.harvard.edu/files/images/dce-homepage/memorial-hall.jpg" /></p>
+<h3>Harvard Extension School</h3>
+<ul><li><a href="http://www.extension.harvard.edu/courses">Online and on-campus courses</a></li>
+<li><a href="http://www.extension.harvard.edu/academics/undergraduate-degrees">Undergraduate degrees</a></li>
+<li><a href="http://www.extension.harvard.edu/academics/graduate-degrees">Graduate degrees</a></li>
+<li><a href="http://www.extension.harvard.edu/academics/professional-graduate-certificates">Graduate certificates</a></li>
+</ul><p><a href="http://www.extension.harvard.edu">Visit the Extension School website</a></p>
+  </div>
+
+  
+  </div>
+      </div>
+      <div class="column panel-panel">
+          <div class="panel-pane pane-custom pane-3 cta"  >
+  
+      
+  
+  <div class="pane-content longform">
+    <p><img alt="" src="http://www.dce.harvard.edu/sites/dce.harvard.edu/files/images/dce-homepage/hss-students.jpg" /></p>
+<h3>Harvard Summer School</h3>
+<p>Summer courses, programs for high school students, and study abroad programs. Visit the <a href="http://www.summer.harvard.edu">Summer School website &gt;</a></p>
+<h3>Learning in retirement</h3>
+<p>Peer-led study through the selective <a href="http://hilr.dce.harvard.edu">Harvard Institute for Learning in Retirement</a>.</p>
+  </div>
+
+  
+  </div>
+      </div>
+      <div class="column panel-panel">
+          <div class="panel-pane pane-custom pane-4 cta"  >
+  
+      
+  
+  <div class="pane-content longform">
+    <p><img alt="" src="http://www.dce.harvard.edu/sites/dce.harvard.edu/files/images/dce-homepage/weeks-bridge.jpg" /></p>
+<h3><a href="http://www.extension.harvard.edu/professional-development">Professional development</a></h3>
+<p>Intensive noncredit leadership and management programs designed to build career skills.</p>
+<p><a href="http://www.extension.harvard.edu/professional-development">See the Professional Development Programs &gt;</a></p>
+<h3><a href="http://www.dce.harvard.edu/harvard-executive-education">Harvard executive education</a></h3>
+<p>Leadership and management options around the University.</p>
+<p><a href="http://www.dce.harvard.edu/harvard-executive-education">Visit Harvard executive education &gt;</a></p>
+  </div>
+
+  
+  </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</div><!-- /.home -->     
+  </main>
+
+  
+</div>
+
+  
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"26d881d220","applicationID":"56926852","transactionName":"NFBTMkNRWUZYAhcKVg0acAVFWVhbFhECBFw8WFAIUFdSR2YRAgRcPFBJA1JFQ1A=","queueTime":0,"applicationTime":90,"atts":"GBdQRAtLSkg=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
