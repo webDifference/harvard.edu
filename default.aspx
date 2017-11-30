@@ -38,7 +38,7 @@
 	    
               <meta name="HBSSearchUrl" content="/Pages/search.aspx">
 	       
-	    <meta name="PageBuildDateTime" content="2017-11-30 08:52:37Z on 192.168.3.173">
+	    <meta name="PageBuildDateTime" content="2017-11-30 14:32:22Z on 192.168.3.171">
 	  		
     
 </head>
@@ -58,7 +58,7 @@
 <input type="hidden" name="MSOTlPn_Button" id="MSOTlPn_Button" value="none" />
 <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
 <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0xF71F40D1F9A03A321A20C6EA57D4A6C2D586E3320ACAF09DC5EF548983A90FE3200770D0A4E33C07F66383D837952728240272D59AFC5545F59B2D168A32CFE6,30 Nov 2017 13:52:37 -0000" />
+<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0x312F96850061158ED4A97952558C8773421787155FE0B0E7EDE887FEFC12BB14935035322CEF30923B8522817F94C354399D031DE0055A0D0EAA197F9C08E3FC,30 Nov 2017 19:32:22 -0000" />
 <input type="hidden" name="MSOSPWebPartManager_DisplayModeName" id="MSOSPWebPartManager_DisplayModeName" value="Browse" />
 <input type="hidden" name="MSOSPWebPartManager_ExitingDesignMode" id="MSOSPWebPartManager_ExitingDesignMode" value="false" />
 <input type="hidden" name="MSOWebPartPage_Shared" id="MSOWebPartPage_Shared" value="" />
@@ -664,14 +664,12 @@ var __wpmExportWarning='This Web Part Page has been personalized. As a result, o
     </div>
     <div class="shim25 desktop-visible tablet-visible"></div>
     <div class="shim15 mobile-visible"></div>
-    <div class="desktop-visible tablet-visible"><img id="alumni" src="https://www.alumni.hbs.edu/PublishingImages/stories/herothumb/6439_Justin_Dawe_1280x720.jpg" class="stroke3-white"></div>
-    <div class="mobile-visible"><img src="https://www.alumni.hbs.edu/PublishingImages/stories/herothumb/6439_Justin_Dawe_1280x720.jpg" class="stroke3-white fluid"></div>
+    <div class="desktop-visible tablet-visible"><img id="alumni" src="https://www.alumni.hbs.edu/PublishingImages/stories/bulletin/2017/december/p54_Chris_Kempczinski_1280x720.jpg" class="stroke3-white"></div>
+    <div class="mobile-visible"><img src="https://www.alumni.hbs.edu/PublishingImages/stories/bulletin/2017/december/p54_Chris_Kempczinski_1280x720.jpg" class="stroke3-white fluid"></div>
     <div class="shim11"></div>
-    <div class="mu-uc">21 Nov 2017<span class="ash"></span></div>
+    <div class="mu-uc">30 Nov 2017<span class="ash"></span></div>
     <div class="shim7"></div>
-    <h3 class="epsilon"><a href="http://www.alumni.hbs.edu/stories/Pages/story-bulletin.aspx?num=6439" id="homepage-alumni-articletitle">Alumni Peer into the Future of Energy</a></h3>
-    <div class="shim9"></div>
-    <div class="nu">By: Margie Kelley</div>
+    <h3 class="epsilon"><a href="https://www.alumni.hbs.edu/stories/Pages/story-impact.aspx?num=6457" id="homepage-alumni-articletitle">Happy Meals (Are Here Again)</a></h3>
     <div class="shim17"></div>
     <p class="more"><span class="txt-arrow">→ </span><a href="https://www.alumni.hbs.edu/stories/Pages/default.aspx" id="homepage-alumni-more">More Alumni Stories</a></p>
     <div class="shim25 desktop-visible tablet-visible"></div>
