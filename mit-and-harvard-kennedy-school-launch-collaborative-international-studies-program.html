@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+  <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7599756/7295372/css/fonts.css" />
+    <meta charset="utf-8" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width" />
+<meta content="ie=edge, chrome=1" http-equiv="x-ua-compatible" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<meta http-equiv="ImageToolbar" content="false" />
+<link rel="shortcut icon" href="/core/misc/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="canonical" href="/announcements/mit-and-harvard-kennedy-school-launch-collaborative-international-studies-program" />
+<link rel="shortlink" href="/node/231761" />
+<link rel="revision" href="/announcements/mit-and-harvard-kennedy-school-launch-collaborative-international-studies-program" />
+<script src="/sites/default/files/google_tag/google_tag.script.js?p0f7bt"></script>
+
+    <title>MIT and Harvard Kennedy School Launch Collaborative International Studies Program | Harvard Kennedy School</title>
+    <link rel="stylesheet" href="/sites/default/files/css/css_6lcN0KPAuvaj2v0LpWWEXjTeoRwpYt9otIfU7JtCEBY.css?p0f7bt" media="all" />
+<link rel="stylesheet" href="/sites/default/files/css/css_oXVojTp_CYU_6cCXoeLFfMiQ2PFUuL7JVHsAcZNV0a4.css?p0f7bt" media="all" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="shortcut icon" sizes="48x48" href="/favicon.ico">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="manifest" href="/manifest.json">
+              <script type="text/javascript" src="/modules/contrib/seckit/js/seckit.document_write.js"></script>
+        <link type="text/css" rel="stylesheet" id="seckit-clickjacking-no-body" media="all" href="/modules/contrib/seckit/css/seckit.no_body.css" />
+        <!-- stop SecKit protection -->
+        <noscript>
+        <link type="text/css" rel="stylesheet" id="seckit-clickjacking-noscript-tag" media="all" href="/modules/contrib/seckit/css/seckit.noscript_tag.css" />
+        <div id="seckit-noscript-tag">
+          Sorry, you need to enable JavaScript to visit this website.
+        </div>
+        </noscript></head>
+  <body class="lang-en section-announcements one_sidebar sidebar_first path-node node--type-news">
+  <a href="#main-content" class="visually-hidden focusable skip-link">
+    Skip to main content
+  </a>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRBVPKQ" height="0" width="0"></iframe></noscript>
+  <div class="off-canvas-wrapper">
+  <div class="inner-wrap off-canvas-wrapper-inner" id="inner-wrap" data-off-canvas-wrapper>
+
+    <!-- off-canvas title bar for 'small' screen -->
+    <div class="title-bar" data-responsive-toggle="widemenu" data-hide-for="large">
+      <div class="title-bar-left">
+                  <section id="block-mainsitelogo" class="columns large-3 xlarge-4 block-mainsitelogo">
+  
+  
+    
+
+  <div >
+          <a href="/">    <div class="field-wrapper field field--name-field-logo-svg field--type-file field--label-hidden field__items">
+                <div class="field__item">
+                 
+      <img src="/sites/default/files/logos/logo_0.svg" alt="Harvard Kennedy School" class="logo">
+            </div>
+          </div>
+</a>
+      </div>
+
+  </section>
+
+                
+      </div>
+      <div class="title-bar-right">
+        <button class="menu-icon" type="button" data-open="offCanvasRight"></button>
+      </div>
+    </div>
+
+    <!-- off-canvas right menu -->
+    <div class="off-canvas position-right" id="offCanvasRight" data-off-canvas data-position="right">
+       <div class="screen__small">  <div>
+    <section id="block-mainsitelogo" class="columns large-3 xlarge-4 block-mainsitelogo">
+  
+  
+    
+
+  <div >
+          <a href="/">    <div class="field-wrapper field field--name-field-logo-svg field--type-file field--label-hidden field__items">
+                <div class="field__item">
+                 
+      <img src="/sites/default/files/logos/logo_0.svg" alt="Harvard Kennedy School" class="logo">
+            </div>
+          </div>
+</a>
+      </div>
+
+  </section>
+<nav role="navigation" aria-labelledby="block-harvardkennedy-main-menu-menu" id="block-harvardkennedy-main-menu" class="columns large-9 xlarge-8 block-harvardkennedy-main-menu">
+            
+  <h2 class="block-title visually-hidden" id="block-harvardkennedy-main-menu-menu">Main navigation</h2>
+  
+
+        
+
+  
+     
+              <!-- main menu -->
+        <ul class="dropdown menu horizontal main--menu" data-dropdown-menu="data-responsive-menu">
+       
+                        <li class="menu-item menu-item--expanded is-dropdown-submenu-parent">
+              <a href="/educational-programs" target="" data-drupal-link-system-path="node/104091">Educational Programs</a>
+                      
+     
+              <ul class="menu is-dropdown-submenu">
+       
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/masters-programs" data-drupal-link-system-path="node/102565">Master&#039;s Programs</a>
+              </li>
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/executive-education" data-drupal-link-system-path="node/102567">Executive Education</a>
+              </li>
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/doctoral-programs" data-drupal-link-system-path="node/155736">Doctoral Programs</a>
+              </li>
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/courses" data-drupal-link-system-path="courses">Courses</a>
+              </li>
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/educational-programs/academic-calendars-policies" data-drupal-link-system-path="node/151596">Academic Calendars &amp; Policies</a>
+              </li>
+        </ul>
+
+  
+              </li>
+                        <li class="menu-item menu-item--expanded is-dropdown-submenu-parent">
+              <a href="/admissions-financial-aid" target="" data-drupal-link-system-path="node/150506">Admissions &amp; Aid</a>
+                      
+     
+              <ul class="menu is-dropdown-submenu">
+       
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/admissions-aid/masters-program-admissions" target="" data-drupal-link-system-path="node/159656">Master&#039;s Program Admissions</a>
+              </li>
+                        <li class="menu-item">
+              <a href="https://www.hks.harvard.edu/educational-programs/executive-education/admissions-fees" target="">Executive Education Admissions</a>
+              </li>
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/admissions-aid/doctoral-program-admissions" data-drupal-link-system-path="node/159716">Doctoral Program Admissions</a>
+              </li>
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/admissions-aid/funding-your-education" data-drupal-link-system-path="node/159436">Funding Your Education</a>
+              </li>
+        </ul>
+
+  
+              </li>
+                        <li class="menu-item menu-item--expanded is-dropdown-submenu-parent">
+              <a href="/research-insights" data-drupal-link-system-path="node/104161">Research &amp; Insights</a>
+                      
+     
+              <ul class="menu is-dropdown-submenu">
+       
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/research-insights/research-publications" target="" title="Publications at HKS" data-drupal-link-system-path="node/217966">Publications</a>
+              </li>
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/research-insights/policy-topics" data-drupal-link-system-path="node/151091">Policy Topics</a>
+              </li>
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/research-insights/library-knowledge-services" data-drupal-link-system-path="node/151071">Library &amp; Knowledge Services</a>
+              </li>
+        </ul>
+
+  
+              </li>
+                        <li class="menu-item menu-item--expanded is-dropdown-submenu-parent">
+              <a href="/centers-initiatives" target="" data-drupal-link-system-path="node/150511">Centers &amp; Initiatives</a>
+                      
+     
+              <ul class="menu is-dropdown-submenu">
+       
+                        <li class="menu-item">
+              <a href="http://ash.harvard.edu/" target="_blank" title="Ash Center for Democratic Governance and Innovation">Ash Center for Democratic Governance and Innovation</a>
+              </li>
+                        <li class="menu-item">
+              <a href="http://www.belfercenter.org/" target="_blank" title="Belfer Center for Science and International Affairs">Belfer Center for Science and International Affairs</a>
+              </li>
+                        <li class="menu-item">
+              <a href="http://carrcenter.hks.harvard.edu/" target="_self" title="Carr Center for Human Rights Policy">Carr Center for Human Rights Policy</a>
+              </li>
+                        <li class="menu-item">
+              <a href="/centers/cid" target="" title="Center for International Development" data-drupal-link-system-path="node/154611">Center for International Development</a>
+              </li>
+                        <li class="menu-item">
+              <a href="http://cpl.hks.harvard.edu" target="" title="Center for Public Leadership">Center for Public Leadership</a>
+              </li>
+                        <li class="menu-item">
+              <a href="http://iop.harvard.edu/" target="_blank" title="Institute of Politics">Institute of Politics</a>
+              </li>
+                        <li class="menu-item">
+              <a href="/centers/wiener" target="" title="Malcolm Wiener Center for Social Policy" data-drupal-link-system-path="node/151141">Malcolm Wiener Center for Social Policy</a>
+              </li>
+                        <li class="menu-item">
+              <a href="/centers/mrcbg" target="" data-drupal-link-system-path="node/151716">Mossavar-Rahmani Center for Business &amp; Government</a>
+              </li>
+                        <li class="menu-item">
+              <a href="https://shorensteincenter.org/" target="_blank" title="Shorenstein Center on Media, Politics and Public Policy">Shorenstein Center on Media, Politics and Public Policy</a>
+              </li>
+                        <li class="menu-item">
+              <a href="/centers/taubman" target="" title="Taubman Center for State and Local Government" data-drupal-link-system-path="node/155806">Taubman Center for State and Local Government</a>
+              </li>
+                        <li class="menu-item">
+              <a href="https://wappp.hks.harvard.edu/" target="">The Women and Public Policy Program</a>
+              </li>
+                        <li class="menu-item">
+              <a href="/centers-initiatives#initiatives" target="" data-drupal-link-system-path="node/150511">All Initiatives</a>
+              </li>
+        </ul>
+
+  
+              </li>
+                        <li class="menu-item menu-item--expanded is-dropdown-submenu-parent">
+              <span class="nolink hamburguer" target="" data-drupal-link-system-path="&lt;front&gt;">More</span>
+                      
+     
+              <ul class="menu is-dropdown-submenu">
+       
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/more/about-us" data-drupal-link-system-path="node/151061">About Us</a>
+              </li>
+                        <li class="menu-item">
+              <a href="/news-announcements" target="" title="News &amp; Announcements from HKS" data-drupal-link-system-path="news-announcements">News &amp; Announcements</a>
+              </li>
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/events/week" data-drupal-link-system-path="events/week">Events</a>
+              </li>
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/more/student-life" data-drupal-link-system-path="node/159321">Student Life</a>
+              </li>
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/more/alumni" data-drupal-link-system-path="node/156001">Alumni</a>
+              </li>
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/faculty-directory" target="" data-drupal-link-system-path="faculty-directory">Faculty</a>
+              </li>
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/more/employers" data-drupal-link-system-path="node/151766">Employers</a>
+              </li>
+                        <li class="menu-item">
+              <a href="http://campaign.hks.harvard.edu" target="">Campaign for HKS</a>
+              </li>
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/more/giving" data-drupal-link-system-path="node/213131">Giving</a>
+              </li>
+                        <li class="menu-item">
+              <a href="/contact-us" target="" data-drupal-link-system-path="node/151611">Contact Us</a>
+              </li>
+        </ul>
+
+  
+              </li>
+        </ul>
+
+  
+
+
+  </nav>
+<section class="views-exposed-form search--bar--expand block-exposedformacquia-searchpage-2" data-drupal-selector="views-exposed-form-acquia-search-page" id="block-exposedformacquia-searchpage-2">
+  
+  
+    
+
+  
+          <form action="/search" method="get" id="views-exposed-form-acquia-search-page" accept-charset="UTF-8">
+  <div class="js-form-item form-item js-form-type-textfield form-item-search js-form-item-search">
+      <label for="edit-search">Search</label>
+        <input data-drupal-selector="edit-search" type="text" id="edit-search" name="search" value="" size="30" maxlength="128" class="form-text" />
+
+        </div>
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions"><input class="success button radius js-form-submit form-submit" data-drupal-selector="edit-submit-acquia-search" type="submit" id="edit-submit-acquia-search" value="Search" />
+</div>
+
+
+</form>
+
+    
+    
+  </section>
+
+  </div>
+</div>
+    </div>
+    <!-- end off-canvas right menu -->
+
+    <!-- main menu large screen -->
+
+    <!-- standard alert -->
+        <div class="alert--wrapper">
+          <div>
+    <section class="views-element-container block-views-block-news-listing-block-2" id="block-views-block-news-listing-block-2">
+  
+  
+    
+
+  
+          <div><div class="js-view-dom-id-cd41e7e15398e1f80af621b6419a6ef4ce405f279a641d406455426494a12199">
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+    
+    
+  </section>
+<section class="views-element-container block-views-block-news-listing-block-1" id="block-views-block-news-listing-block-1">
+  
+  
+    
+
+  
+          <div><div class="js-view-dom-id-a2fab7afbfa1dcea661ec77b9ccd0f463c70de67ce87439d000faf10ca1e5f42">
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+    
+    
+  </section>
+
+  </div>
+
+    </div>
+            <!-- headers -->
+     
+        <div class="header-banner__primary">
+     <div data-sticky-container>
+         <div id="widemenu" class="title-bar sticky" data-sticky data-top-anchor="stickystart:top" data-btm-anchor="endsticky:bottom" data-options="marginTop:0;" style="width:100%">
+          <div class="row">
+              <div>
+    <section id="block-mainsitelogo" class="columns large-3 xlarge-4 block-mainsitelogo">
+  
+  
+    
+
+  <div >
+          <a href="/">    <div class="field-wrapper field field--name-field-logo-svg field--type-file field--label-hidden field__items">
+                <div class="field__item">
+                 
+      <img src="/sites/default/files/logos/logo_0.svg" alt="Harvard Kennedy School" class="logo">
+            </div>
+          </div>
+</a>
+      </div>
+
+  </section>
+<nav role="navigation" aria-labelledby="block-harvardkennedy-main-menu-menu" id="block-harvardkennedy-main-menu" class="columns large-9 xlarge-8 block-harvardkennedy-main-menu">
+            
+  <h2 class="block-title visually-hidden" id="block-harvardkennedy-main-menu-menu">Main navigation</h2>
+  
+
+        
+
+  
+     
+              <!-- main menu -->
+        <ul class="dropdown menu horizontal main--menu" data-dropdown-menu="data-responsive-menu">
+       
+                        <li class="menu-item menu-item--expanded is-dropdown-submenu-parent">
+              <a href="/educational-programs" target="" data-drupal-link-system-path="node/104091">Educational Programs</a>
+                      
+     
+              <ul class="menu is-dropdown-submenu">
+       
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/masters-programs" data-drupal-link-system-path="node/102565">Master&#039;s Programs</a>
+              </li>
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/executive-education" data-drupal-link-system-path="node/102567">Executive Education</a>
+              </li>
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/doctoral-programs" data-drupal-link-system-path="node/155736">Doctoral Programs</a>
+              </li>
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/courses" data-drupal-link-system-path="courses">Courses</a>
+              </li>
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/educational-programs/academic-calendars-policies" data-drupal-link-system-path="node/151596">Academic Calendars &amp; Policies</a>
+              </li>
+        </ul>
+
+  
+              </li>
+                        <li class="menu-item menu-item--expanded is-dropdown-submenu-parent">
+              <a href="/admissions-financial-aid" target="" data-drupal-link-system-path="node/150506">Admissions &amp; Aid</a>
+                      
+     
+              <ul class="menu is-dropdown-submenu">
+       
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/admissions-aid/masters-program-admissions" target="" data-drupal-link-system-path="node/159656">Master&#039;s Program Admissions</a>
+              </li>
+                        <li class="menu-item">
+              <a href="https://www.hks.harvard.edu/educational-programs/executive-education/admissions-fees" target="">Executive Education Admissions</a>
+              </li>
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/admissions-aid/doctoral-program-admissions" data-drupal-link-system-path="node/159716">Doctoral Program Admissions</a>
+              </li>
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/admissions-aid/funding-your-education" data-drupal-link-system-path="node/159436">Funding Your Education</a>
+              </li>
+        </ul>
+
+  
+              </li>
+                        <li class="menu-item menu-item--expanded is-dropdown-submenu-parent">
+              <a href="/research-insights" data-drupal-link-system-path="node/104161">Research &amp; Insights</a>
+                      
+     
+              <ul class="menu is-dropdown-submenu">
+       
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/research-insights/research-publications" target="" title="Publications at HKS" data-drupal-link-system-path="node/217966">Publications</a>
+              </li>
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/research-insights/policy-topics" data-drupal-link-system-path="node/151091">Policy Topics</a>
+              </li>
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/research-insights/library-knowledge-services" data-drupal-link-system-path="node/151071">Library &amp; Knowledge Services</a>
+              </li>
+        </ul>
+
+  
+              </li>
+                        <li class="menu-item menu-item--expanded is-dropdown-submenu-parent">
+              <a href="/centers-initiatives" target="" data-drupal-link-system-path="node/150511">Centers &amp; Initiatives</a>
+                      
+     
+              <ul class="menu is-dropdown-submenu">
+       
+                        <li class="menu-item">
+              <a href="http://ash.harvard.edu/" target="_blank" title="Ash Center for Democratic Governance and Innovation">Ash Center for Democratic Governance and Innovation</a>
+              </li>
+                        <li class="menu-item">
+              <a href="http://www.belfercenter.org/" target="_blank" title="Belfer Center for Science and International Affairs">Belfer Center for Science and International Affairs</a>
+              </li>
+                        <li class="menu-item">
+              <a href="http://carrcenter.hks.harvard.edu/" target="_self" title="Carr Center for Human Rights Policy">Carr Center for Human Rights Policy</a>
+              </li>
+                        <li class="menu-item">
+              <a href="/centers/cid" target="" title="Center for International Development" data-drupal-link-system-path="node/154611">Center for International Development</a>
+              </li>
+                        <li class="menu-item">
+              <a href="http://cpl.hks.harvard.edu" target="" title="Center for Public Leadership">Center for Public Leadership</a>
+              </li>
+                        <li class="menu-item">
+              <a href="http://iop.harvard.edu/" target="_blank" title="Institute of Politics">Institute of Politics</a>
+              </li>
+                        <li class="menu-item">
+              <a href="/centers/wiener" target="" title="Malcolm Wiener Center for Social Policy" data-drupal-link-system-path="node/151141">Malcolm Wiener Center for Social Policy</a>
+              </li>
+                        <li class="menu-item">
+              <a href="/centers/mrcbg" target="" data-drupal-link-system-path="node/151716">Mossavar-Rahmani Center for Business &amp; Government</a>
+              </li>
+                        <li class="menu-item">
+              <a href="https://shorensteincenter.org/" target="_blank" title="Shorenstein Center on Media, Politics and Public Policy">Shorenstein Center on Media, Politics and Public Policy</a>
+              </li>
+                        <li class="menu-item">
+              <a href="/centers/taubman" target="" title="Taubman Center for State and Local Government" data-drupal-link-system-path="node/155806">Taubman Center for State and Local Government</a>
+              </li>
+                        <li class="menu-item">
+              <a href="https://wappp.hks.harvard.edu/" target="">The Women and Public Policy Program</a>
+              </li>
+                        <li class="menu-item">
+              <a href="/centers-initiatives#initiatives" target="" data-drupal-link-system-path="node/150511">All Initiatives</a>
+              </li>
+        </ul>
+
+  
+              </li>
+                        <li class="menu-item menu-item--expanded is-dropdown-submenu-parent">
+              <span class="nolink hamburguer" target="" data-drupal-link-system-path="&lt;front&gt;">More</span>
+                      
+     
+              <ul class="menu is-dropdown-submenu">
+       
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/more/about-us" data-drupal-link-system-path="node/151061">About Us</a>
+              </li>
+                        <li class="menu-item">
+              <a href="/news-announcements" target="" title="News &amp; Announcements from HKS" data-drupal-link-system-path="news-announcements">News &amp; Announcements</a>
+              </li>
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/events/week" data-drupal-link-system-path="events/week">Events</a>
+              </li>
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/more/student-life" data-drupal-link-system-path="node/159321">Student Life</a>
+              </li>
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/more/alumni" data-drupal-link-system-path="node/156001">Alumni</a>
+              </li>
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/faculty-directory" target="" data-drupal-link-system-path="faculty-directory">Faculty</a>
+              </li>
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/more/employers" data-drupal-link-system-path="node/151766">Employers</a>
+              </li>
+                        <li class="menu-item">
+              <a href="http://campaign.hks.harvard.edu" target="">Campaign for HKS</a>
+              </li>
+                        <li class="menu-item menu-item--collapsed">
+              <a href="/more/giving" data-drupal-link-system-path="node/213131">Giving</a>
+              </li>
+                        <li class="menu-item">
+              <a href="/contact-us" target="" data-drupal-link-system-path="node/151611">Contact Us</a>
+              </li>
+        </ul>
+
+  
+              </li>
+        </ul>
+
+  
+
+
+  </nav>
+<section class="views-exposed-form search--bar--expand block-exposedformacquia-searchpage-2" data-drupal-selector="views-exposed-form-acquia-search-page" id="block-exposedformacquia-searchpage-2">
+  
+  
+    
+
+  
+          <form action="/search" method="get" id="views-exposed-form-acquia-search-page" accept-charset="UTF-8">
+  <div class="js-form-item form-item js-form-type-textfield form-item-search js-form-item-search">
+      <label for="edit-search">Search</label>
+        <input data-drupal-selector="edit-search" type="text" id="edit-search" name="search" value="" size="30" maxlength="128" class="form-text" />
+
+        </div>
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions"><input class="success button radius js-form-submit form-submit" data-drupal-selector="edit-submit-acquia-search" type="submit" id="edit-submit-acquia-search" value="Search" />
+</div>
+
+
+</form>
+
+    
+    
+  </section>
+
+  </div>
+
+          </div>
+        </div>
+      </div><!-- /.sticky-container -->
+     <div class="row">
+      <div class="border--lines__small"></div>
+      <div class="header--content columns large-10 end">
+          
+          <h1 class="page-title">MIT and Harvard Kennedy School Launch Collaborative International Studies Program</h1>
+          
+                </div>
+    </div>
+ </div><!-- end header banner -->
+  
+          <!-- end headers -->
+    <div class="off-canvas-content" data-off-canvas-content>
+      <div class="row">
+                              </div>
+
+      
+      
+      <div class="row">
+                   <div id="sidebar-first" class="small-12 large-3 large-pull-9 columns sidebar ">
+              <div>
+    <section id="block-hksmainmenublock" class="left--navigation block-hksmainmenublock">
+  
+  
+      <h2  class="block-title">In This Section</h2>
+    
+
+  
+          
+    
+    
+  </section>
+
+  </div>
+
+          </div>
+                        
+         <main id="main" class="large-9 large-push-3 columns" role="main"> 
+                      <div class="region-highlighted panel callout"></div>                    <a id="main-content"></a>
+                    <section>
+            <div id="stickystart">  <div>
+    <section id="block-harvardkennedy-breadcrumbs" class="block-harvardkennedy-breadcrumbs">
+  
+  
+    
+
+  
+            <nav role="navigation" aria-labelledby="system-breadcrumb">
+    <h2 id="system-breadcrumb" class="visually-hidden">You are here</h2>
+    <ul class="breadcrumbs">
+          <li>
+                  <a href="/">Home</a>
+              </li>
+          <li>
+                  <a href="/news-announcements">News</a>
+              </li>
+          <li class="current"><a href="#">MIT and Harvard Kennedy School Launch Collaborative International Studies Program</a></li>
+    </ul>
+  </nav>
+
+    
+    
+  </section>
+<section id="block-harvardkennedy-content" class="block-harvardkennedy-content">
+  
+  
+    
+
+  
+          <article id="node-231761"  data-history-node-id="231761" role="article" about="/announcements/mit-and-harvard-kennedy-school-launch-collaborative-international-studies-program">
+
+  
+    
+
+  
+    <div class="view-mode-full">
+        <div class="field-wrapper field field--name-field-published-date field--type-datetime field--label-hidden field__items">
+                <div class="field__item">
+        <time datetime="2017-11-13T12:00:00Z">November 13, 2017</time>
+
+            </div>
+          </div>
+    <div class="body field field--name-body field--type-text-with-summary field--label-hidden field__items">
+                <div class="field__item">
+        <p><i>New initiative supported by $3.7 million in grants from Charles Koch Foundation</i></p>
+
+<p>MIT Security Studies Program at the Center for International Studies in the School of Humanities, Arts, and Social Sciences, and Harvard Kennedy School’s <a href="http://belfercenter.org" target="_blank">Belfer Center for Science and International Affairs</a> launched today a collaborative program to mentor the next generation of foreign policy scholars. The Project on Grand Strategy, Security, and Statecraft is made possible with support from the <a href="https://www.charleskochfoundation.org/">Charles Koch Foundation</a>: a $1,846,200 grant to MIT and one for $1,853,900 to Harvard Kennedy School (HKS).</p>
+
+<p>MIT Professor Barry R. Posen, the Ford International Professor of Political Science and director of the Security Studies Program, and HKS <a href="/faculty/stephen-walt">Professor Stephen Walt</a>, the Robert and Renée Belfer Professor of International Affairs, will jointly direct the program, which will provide pre- or postdoctoral fellowships to young scholars from a variety of disciplines working in the broad area of strategy and statecraft, with particular emphasis on the US and its role in the world.</p>
+
+<p>The Security Studies Program and the Belfer Center have a long-standing commitment to training security experts and publishing relevant research. Fellows in the Project on Grand Strategy, Security, and Statecraft will each spend one year at MIT and one year at Harvard—providing an introduction to the senior security scholars, visitors, and graduate students at both institutions. A joint speaker series will further cement the cooperation between the two programs. MIT will also host visiting scholars from the policy community to better connect scholarship to statecraft.</p>
+
+<p>“So long as there is no world government to protect states from each other,” explains Posen, “conflicts of interest will occur and governments will compete for power and influence. Military force is one tool of this competition. In this environment, the United States and other major powers must mobilize different capabilities and devise effective strategies to protect their home territory and other vital interests, but without jeopardizing their long-term prosperity or compromising core political values.</p>
+
+<p>“The fellows program will build a community of scholars dedicated to fundamental research on the most critical security problems of our time, and to bringing the fruits of that research to public policy," Posen continues. “We greatly appreciate the contribution of the Charles Koch Foundation to this important endeavor, and the foundation’s recognition of the enduring importance of security scholarship.”</p>
+
+<p>According to Walt, “States are more likely to make sound strategic choices and learn from past mistakes if there is a well-informed and wide-ranging debate on these issues. A healthy democracy therefore requires a diverse and well-trained community of independent experts who understand strategy, security, and statecraft and whose work can inform elites and public debates on foreign policy, and especially decisions to use force. Military force and other instruments of national power may be essential to preserving national security, but understanding the limits of armed force and the complex consequences that accompany its use is equally important.”</p>
+
+<p>“The country is in a critical period of self-reflection about its proper role in the world and how the U.S. can best meet its security needs going forward,” said Charles Koch Foundation Vice President William Ruger. “We are excited to support Harvard and MIT’s world-class vision for engaging the next generation of foreign policy scholars as they develop the research and ideas that will inform this discussion.”</p>
+
+<p>In addition, the Foundation grants will support the research of graduate students in security studies at both institutions. Taken together, these features of the Project on Grand Strategy, Security and Statecraft will significantly enhance the connection of the academy to foreign and security policy, and broaden the national security debate to include a more diverse set of views. The Charles Koch foundation has made similar grants or awards to schools including Notre Dame, Tufts, UC San Diego, Texas A&amp;M, and other prestigious institutions.</p>
+
+            </div>
+          </div>
+
+<div  class="news-bottom">
+      
+<div  class="columns medium-4">
+          <div class="field-wrapper field field--name-field-contact-name field--type-string field--label-above field__items">
+      <h3 class="field-label field__label">Contact</h3>
+                <div class="field__item">
+        Doug Gavel
+            </div>
+          </div>
+    <div class="field-wrapper field field--name-field-contact-email field--type-email field--label-visually_hidden field__items">
+      <div class="field-label field__label visually-hidden">Contact Email</div>
+                <div class="field__item">
+        doug_gavel@harvard.edu
+            </div>
+          </div>
+    <div class="field-wrapper field field--name-field-contact-phone-number field--type-telephone field--label-visually_hidden field__items">
+      <div class="field-label field__label visually-hidden">Contact Phone Number</div>
+                <div class="field__item">
+        <a href="tel:617-495-1115">617-495-1115</a>
+            </div>
+          </div>
+
+  </div>
+<div  class="columns medium-4">
+    <h3>Related Topics</h3>
+          <div class="field-wrapper field field--name-field-related-topics field--type-entity-reference field--label-hidden field__items">
+                <div class="field__item">
+        <a href="/research-insights/policy-topics/international-relations-security" hreflang="en">International Relations &amp; Security</a>
+            </div>
+          </div>
+
+  </div>
+  </div>
+  </div>
+
+  
+  
+  
+</article>
+
+    
+    
+  </section>
+
+  </div>
+</div>
+          </section>
+        </main>
+      </div>
+             <div class="footer--wrapper">
+        <footer class="row">
+                      <div id="footer-first" class="small-12 large-5 columns">
+              <a href="/" title="Harvard Kennedy School"><img src="/themes/harvardkennedy/images/logo-black.svg" alt="Harvard Kennedy School" class="logo__footer"></a>
+                <div>
+    <section id="block-footercontent" class="block-footercontent">
+  
+  
+    
+
+  
+              <div class="body field field--name-body field--type-text-with-summary field--label-hidden field__items">
+                <div class="field__item">
+        <p>79 John F. Kennedy Street<br />
+Cambridge, MA 02138<br />
+617-495-1100</p>
+
+            </div>
+          </div>
+
+    
+    
+  </section>
+
+  </div>
+
+            </div>
+                                <div id="footer-middle" class="small-12 large-4 columns">
+                <div>
+    <nav role="navigation" aria-labelledby="block-harvardkennedy-footer-menu" id="block-harvardkennedy-footer" class="block-harvardkennedy-footer">
+            
+  <h2 class="block-title visually-hidden" id="block-harvardkennedy-footer-menu">Footer menu</h2>
+  
+
+        
+              <div class="split__horizontal">
+        <ul class="footer">
+              <li>
+        <a href="/masters-programs" target="" data-drupal-link-system-path="node/102565">Master&#039;s Programs</a>
+              </li>
+          <li>
+        <a href="/executive-education" data-drupal-link-system-path="node/102567">Executive Education</a>
+              </li>
+          <li>
+        <a href="/doctoral-programs" target="" data-drupal-link-system-path="node/155736">Doctoral Programs</a>
+              </li>
+          <li>
+        <a href="/admissions-aid/masters-program-admissions/admissions-events" target="" data-drupal-link-system-path="node/159441">Admissions Events</a>
+              </li>
+          <li>
+        <a href="https://community.alumni.harvard.edu/give/16039598" target="_blank">Give Now</a>
+              </li>
+          <li>
+        <a href="/alumni" target="">Alumni</a>
+              </li>
+          <li>
+        <a href="http://www.harvard.edu/staff" target="_blank">Harvard Directory</a>
+              </li>
+          <li>
+        <a href="/contact-us" target="" title="Contact Us" data-drupal-link-system-path="node/151611">Contact Us</a>
+              </li>
+        </ul>
+    </div>
+  
+
+
+  </nav>
+
+  </div>
+
+            </div>
+                                <div id="footer-last" class="small-12 large-3 columns">
+                <div>
+    <section id="block-socialicons" class="block-socialicons">
+  
+  
+    
+
+  
+              <div class="body field field--name-body field--type-text-with-summary field--label-hidden field__items">
+                <div class="field__item">
+        <ul class="menu social--icons"><li class="facebook"><a href="https://www.facebook.com/harvardkennedyschool/" target="_blank">Facebook</a></li>
+	<li class="twitter"><a href="https://twitter.com/kennedy_school" target="_blank">Twitter</a></li>
+	<li class="linkedin"><a href="https://www.linkedin.com/school/441164" target="_blank">LinkedIn</a></li>
+	<li class="youtube"><a href="https://www.youtube.com/user/HarvardKennedySchool" target="_blank">Youtube</a></li>
+</ul><ul class="footer"><li><a href="/more/about-us/policies/privacy-statement">Privacy</a></li>
+</ul>
+            </div>
+          </div>
+
+    
+    
+  </section>
+
+  </div>
+
+            </div>
+                  </footer>
+      </div>
+            <div class="bottom-bar panel" id="endsticky">
+        <div class="row">
+          <div class="large-12 columns copyright">
+          Copyright &copy; 2017 The President and Fellows of <a href="http://www.harvard.edu/" target="_blank">Harvard College</a>.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+  <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/231761","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en","currentQuery":{"utm_campaign":"general","utm_medium":"social","utm_source":"twitter"}},"pluralDelimiter":"\u0003","field_group":{"html_element":{"mode":"default","context":"view","settings":{"label":"News Contact","element":"div","show_label":false,"label_element":"h3","attributes":"","effect":"none","speed":"fast","id":"","classes":"columns medium-4"}}},"ajaxTrustedUrl":{"\/search":true},"user":{"uid":0,"permissionsHash":"f804d68eaa9d50546e5c33fc64ab8270307ecfa6added14a69115c191585e345"}}</script>
+<script src="/sites/default/files/js/js_EtA_Of8UG3gnrOh08Ed8Iunc3H2lHQ5iLoqlDhBG5GE.js"></script>
+
+  <script>
+    (function ($) {
+      $(document).foundation();
+    })(jQuery);
+  </script>
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"4bc1518bdc","applicationID":"65819292","transactionName":"MlNSYRNZV0NWUkwMVwsZcVYVUVZeGHVKEEgEWmxbDlxcbHReVhFKClpcUBNkd19TVG4MXRJ1X1sVSlZcW1RKSAYTX1VC","queueTime":0,"applicationTime":435,"atts":"HhRRF1tDRE0=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

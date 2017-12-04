@@ -38,7 +38,7 @@
 	    
               <meta name="HBSSearchUrl" content="/Pages/search.aspx">
 	       
-	    <meta name="PageBuildDateTime" content="2017-11-30 14:32:22Z on 192.168.3.171">
+	    <meta name="PageBuildDateTime" content="2017-12-04 07:17:42Z on 192.168.3.172">
 	  		
     
 </head>
@@ -47,8 +47,7 @@
 
 
 <textarea style="display:none">
-<form name="aspnetForm" method="post" action="default.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
-<div>
+<form name="aspnetForm" method="post" action="default.aspx" id="aspnetForm">
 <input type="hidden" name="MSOWebPartPage_PostbackSource" id="MSOWebPartPage_PostbackSource" value="" />
 <input type="hidden" name="MSOTlPn_SelectedWpId" id="MSOTlPn_SelectedWpId" value="" />
 <input type="hidden" name="MSOTlPn_View" id="MSOTlPn_View" value="0" />
@@ -56,9 +55,7 @@
 <input type="hidden" name="MSOGallery_SelectedLibrary" id="MSOGallery_SelectedLibrary" value="" />
 <input type="hidden" name="MSOGallery_FilterString" id="MSOGallery_FilterString" value="" />
 <input type="hidden" name="MSOTlPn_Button" id="MSOTlPn_Button" value="none" />
-<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
-<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0x312F96850061158ED4A97952558C8773421787155FE0B0E7EDE887FEFC12BB14935035322CEF30923B8522817F94C354399D031DE0055A0D0EAA197F9C08E3FC,30 Nov 2017 19:32:22 -0000" />
+<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0x7A6D41BDA2E5FD0062BBAEF6BDE534D8A7DC8E10B1FB61ED75A9CE2BD98780880B29CE92342A923F366DA2B806BF2499B8E2A7EB29025B60D877F2337812FAF5,04 Dec 2017 12:17:43 -0000" />
 <input type="hidden" name="MSOSPWebPartManager_DisplayModeName" id="MSOSPWebPartManager_DisplayModeName" value="Browse" />
 <input type="hidden" name="MSOSPWebPartManager_ExitingDesignMode" id="MSOSPWebPartManager_ExitingDesignMode" value="false" />
 <input type="hidden" name="MSOWebPartPage_Shared" id="MSOWebPartPage_Shared" value="" />
@@ -68,24 +65,6 @@
 <input type="hidden" name="MSOSPWebPartManager_StartWebPartEditingName" id="MSOSPWebPartManager_StartWebPartEditingName" value="false" />
 <input type="hidden" name="MSOSPWebPartManager_EndWebPartEditing" id="MSOSPWebPartManager_EndWebPartEditing" value="false" />
 <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUBMA9kFgJmD2QWAgIBD2QWBgIBD2QWBAICD2QWAmYPFgIeBFRleHQFF0hhcnZhcmQgQnVzaW5lc3MgU2Nob29sZAIDDxYCHwAFPTxtZXRhIG5hbWU9ImRlc2NyaXB0aW9uIiBjb250ZW50PSJIYXJ2YXJkIEJ1c2luZXNzIFNjaG9vbCIgLz5kAhMPDxYCHgdWaXNpYmxlaGRkAhcPZBYCAgEPZBYCZg9kFgICAw9kFgICBQ8PFgQeBkhlaWdodBsAAAAAAAB5QAEAAAAeBF8hU0ICgAFkFgICAQ88KwAJAQAPFgQeDVBhdGhTZXBhcmF0b3IECB4NTmV2ZXJFeHBhbmRlZGdkZGTzNLcmTm+zYyDnoSmejkxDVyFTpA==" />
-</div>
-
-<script type="text/javascript">
-//<![CDATA[
-var theForm = document.forms['aspnetForm'];
-if (!theForm) {
-    theForm = document.aspnetForm;
-}
-function __doPostBack(eventTarget, eventArgument) {
-    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
-        theForm.__EVENTTARGET.value = eventTarget;
-        theForm.__EVENTARGUMENT.value = eventArgument;
-        theForm.submit();
-    }
-}
-//]]>
-</script>
-
 
 
 <script type="text/javascript">
@@ -107,29 +86,8 @@ function _spNavigateHierarchy(nodeDiv, dataSourceId, dataPath, url, listInContex
 
 }
 //]]>
-</script><script type="text/javascript">
-<!--
-var L_Menu_BaseUrl="";
-var L_Menu_LCID="1033";
-var L_Menu_SiteTheme="";
-//-->
-</script><script type="text/javascript" >
-<!--
-//-->
 </script>
-<script type="text/javascript">
-//<![CDATA[
-function WebForm_OnSubmit() {
-UpdateFormDigest('\u002f', 1440000);
-return true;
-}
-//]]>
-</script>
-
-<div>
-
-	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="7BAFC84E" />
-</div>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="7BAFC84E" />
 <script type="text/javascript">RegisterSod("sp.core.js", "\u002f_layouts\u002fsp.core.js?rev=7ByNlH\u00252BvcgRJg\u00252BRCctdC0w\u00253D\u00253D");</script><script type="text/javascript">RegisterSod("sp.res.resx", "\u002f_layouts\u002fScriptResx.ashx?culture=en\u00252Dus\u0026name=SP\u00252ERes\u0026rev=b6\u00252FcRx1a6orhAQ\u00252FcF\u00252B0ytQ\u00253D\u00253D");</script><script type="text/javascript">RegisterSod("sp.ui.dialog.js", "\u002f_layouts\u002fsp.ui.dialog.js?rev=Tpcmo1\u00252FSu6R0yewHowDl5g\u00253D\u00253D");RegisterSodDep("sp.ui.dialog.js", "sp.core.js");RegisterSodDep("sp.ui.dialog.js", "sp.res.resx");</script><script type="text/javascript">RegisterSod("core.js", "\u002f_layouts\u002f1033\u002fcore.js?rev=Emb5hNX1RZMNXk9oS82yvA\u00253D\u00253D");</script>
 <script type="text/javascript">
 //<![CDATA[
@@ -150,7 +108,7 @@ g_originalSPNavigateFunc = _spNavigateHierarchy;
 _spNavigateHierarchy = _spNavigateHierarchyEx;
 var _fV4UI = true;//]]>
 </script>
-<script type="text/javascript">RegisterSod("msstring.js", "\u002f_layouts\u002f1033\u002fmsstring.js?rev=QtiIcPH3HV7LgVSO7vONFg\u00253D\u00253D");</script><script type="text/javascript">RegisterSod("browserScript", "\u002f_layouts\u002f1033\u002fie55up.js?rev=UgTcwUTI6YcRzTMBxD93Xg\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("msstring.js", "\u002f_layouts\u002f1033\u002fmsstring.js?rev=QtiIcPH3HV7LgVSO7vONFg\u00253D\u00253D");</script><script type="text/javascript">RegisterSod("browserScript", "\u002f_layouts\u002f1033\u002fnon_ie.js?rev=EVTj1bu32\u00252FMla6SDN\u00252FsNTA\u00253D\u00253D");</script>
 <script type="text/javascript">
 //<![CDATA[
 var __wpmExportWarning='This Web Part Page has been personalized. As a result, one or more Web Part properties may contain confidential information. Make sure the properties contain information that is safe for others to read. After exporting this Web Part, view properties in the Web Part description file (.WebPart) by using a text editor such as Microsoft Notepad.';var __wpmCloseProviderWarning='You are about to close this Web Part.  It is currently providing data to other Web Parts, and these connections will be deleted if this Web Part is closed.  To close this Web Part, click OK.  To keep this Web Part, click Cancel.';var __wpmDeleteWarning='You are about to permanently delete this Web Part.  Are you sure you want to do this?  To delete this Web Part, click OK.  To keep this Web Part, click Cancel.';//]]>
@@ -382,7 +340,7 @@ var __wpmExportWarning='This Web Part Page has been personalized. As a result, o
             <div class="shim13"></div>
             <div class="nu">Re: Ryan Raffaelli</div>
             <div class="shim15"></div>
-            <p class="more"><span>→ </span><a href="https://hbswk.hbs.edu/item/why-independent-bookstores-haved-thrived-in-spite-of-amazon-com" id="homepage-news-more">Read More About Prof. Raffaelli's Research</a></p>
+            <p class="more"><span>→ </span><a href="https://www.hbs.edu/news/Pages/default.aspx?format=Video" id="homepage-news-more">More Videos</a></p>
           </div>
         </div>
       </div>
@@ -405,7 +363,7 @@ var __wpmExportWarning='This Web Part Page has been personalized. As a result, o
               <div class="span99"><span class="lambda-uc">Video</span> —
 													Professor Ryan Raffaelli teams up with Porter Square Books in Cambridge, MA – one of the hundreds of bookstores he’s studied – to explore industries facing shifts in their business models and how they adapt. Independent bookstores provide a story of hope by focusing on core values that include community, curation, and convening. 
 													<a href="/about/video.aspx?v=1_somkhcks" class="widget-video-popup hbsred" id="homepage-news-trailingmorelink">Watch video</a><div class="shim15"></div>
-                <p class="more"><span class="txt-arrow">→ </span><a href="https://hbswk.hbs.edu/item/why-independent-bookstores-haved-thrived-in-spite-of-amazon-com" id="homepage-news-more">Read More About Prof. Raffaelli's Research</a></p>
+                <p class="more"><span class="txt-arrow">→ </span><a href="https://www.hbs.edu/news/Pages/default.aspx?format=Video" id="homepage-news-more">More Videos</a></p>
               </div>
             </div>
           </div>
@@ -500,14 +458,14 @@ var __wpmExportWarning='This Web Part Page has been personalized. As a result, o
             <div class="shim14"></div>
             <div class="inherit-bg tile">
               <ImageHTML type="html" xmlns="http://www.hbs.edu/">
-                <div class="mobile-hidden" xmlns=""><a href="https://hbr.org/2017/07/ai-may-soon-replace-even-the-most-elite-consultants" class="tile"><div class="assetImage"><img src="https://www.exed.hbs.edu/SiteCollectionImages/assets-other/4202-ai-may-soon-replace-even-the-most-elite-consultants.jpg" alt="AI May Soon Replace Even the Most Elite Consultants" class="stroke3 fluid"></div></a></div>
-                <div class="mobile-visible" xmlns=""><a href="https://hbr.org/2017/07/ai-may-soon-replace-even-the-most-elite-consultants" class="tile"><div class="assetImage"><img src="https://www.exed.hbs.edu/SiteCollectionImages/assets-other/4202-ai-may-soon-replace-even-the-most-elite-consultants.jpg" alt="AI May Soon Replace Even the Most Elite Consultants" class="stroke3 fluid"></div></a></div>
+                <div class="mobile-hidden" xmlns=""><a href="https://hbr.org/2016/10/the-attributes-of-an-effective-global-leader" class="tile"><div class="assetImage"><img src="https://www.exed.hbs.edu/SiteCollectionImages/assets-other/3614-the-attributes-of-an-effective-global-leader.jpg" alt="The Attributes of an Effective Global Leader" class="stroke3 fluid"></div></a></div>
+                <div class="mobile-visible" xmlns=""><a href="https://hbr.org/2016/10/the-attributes-of-an-effective-global-leader" class="tile"><div class="assetImage"><img src="https://www.exed.hbs.edu/SiteCollectionImages/assets-other/3614-the-attributes-of-an-effective-global-leader.jpg" alt="The Attributes of an Effective Global Leader" class="stroke3 fluid"></div></a></div>
               </ImageHTML>
               <TextHTML type="html" xmlns="http://www.hbs.edu/">
                 <div class="shim8" xmlns=""></div>
-                <div class="kappa-uc" xmlns=""><a href="https://hbr.org/2017/07/ai-may-soon-replace-even-the-most-elite-consultants">AI May Soon Replace Even the Most Elite Consultants</a></div>
+                <div class="kappa-uc" xmlns=""><a href="https://hbr.org/2016/10/the-attributes-of-an-effective-global-leader">The Attributes of an Effective Global Leader</a></div>
                 <div class="shim2" xmlns=""></div>
-                <div class="assetBlurb paragraph" xmlns="">Why corporate leaders are on the cusp of a major disruption. <a href="https://hbr.org/2017/07/ai-may-soon-replace-even-the-most-elite-consultants">Read More.</a></div>
+                <div class="assetBlurb paragraph" xmlns="">As businesses become more global, execs must master certain competencies. <a href="https://hbr.org/2016/10/the-attributes-of-an-effective-global-leader">Read More.</a></div>
               </TextHTML>
             </div>
           </div>
@@ -523,14 +481,14 @@ var __wpmExportWarning='This Web Part Page has been personalized. As a result, o
           <div class="tablet-span4">
             <div class="inherit-bg tile">
               <ImageHTML type="html" xmlns="http://www.hbs.edu/">
-                <div class="mobile-hidden" xmlns=""><a href="https://hbr.org/2017/07/ai-may-soon-replace-even-the-most-elite-consultants" class="tile"><div class="assetImage"><img src="https://www.exed.hbs.edu/SiteCollectionImages/assets-other/4202-ai-may-soon-replace-even-the-most-elite-consultants.jpg" alt="AI May Soon Replace Even the Most Elite Consultants" class="stroke3 fluid"></div></a></div>
-                <div class="mobile-visible" xmlns=""><a href="https://hbr.org/2017/07/ai-may-soon-replace-even-the-most-elite-consultants" class="tile"><div class="assetImage"><img src="https://www.exed.hbs.edu/SiteCollectionImages/assets-other/4202-ai-may-soon-replace-even-the-most-elite-consultants.jpg" alt="AI May Soon Replace Even the Most Elite Consultants" class="stroke3 fluid"></div></a></div>
+                <div class="mobile-hidden" xmlns=""><a href="https://hbr.org/2016/10/the-attributes-of-an-effective-global-leader" class="tile"><div class="assetImage"><img src="https://www.exed.hbs.edu/SiteCollectionImages/assets-other/3614-the-attributes-of-an-effective-global-leader.jpg" alt="The Attributes of an Effective Global Leader" class="stroke3 fluid"></div></a></div>
+                <div class="mobile-visible" xmlns=""><a href="https://hbr.org/2016/10/the-attributes-of-an-effective-global-leader" class="tile"><div class="assetImage"><img src="https://www.exed.hbs.edu/SiteCollectionImages/assets-other/3614-the-attributes-of-an-effective-global-leader.jpg" alt="The Attributes of an Effective Global Leader" class="stroke3 fluid"></div></a></div>
               </ImageHTML>
               <TextHTML type="html" xmlns="http://www.hbs.edu/">
                 <div class="shim8" xmlns=""></div>
-                <div class="kappa-uc" xmlns=""><a href="https://hbr.org/2017/07/ai-may-soon-replace-even-the-most-elite-consultants">AI May Soon Replace Even the Most Elite Consultants</a></div>
+                <div class="kappa-uc" xmlns=""><a href="https://hbr.org/2016/10/the-attributes-of-an-effective-global-leader">The Attributes of an Effective Global Leader</a></div>
                 <div class="shim2" xmlns=""></div>
-                <div class="assetBlurb paragraph" xmlns="">Why corporate leaders are on the cusp of a major disruption. <a href="https://hbr.org/2017/07/ai-may-soon-replace-even-the-most-elite-consultants">Read More.</a></div>
+                <div class="assetBlurb paragraph" xmlns="">As businesses become more global, execs must master certain competencies. <a href="https://hbr.org/2016/10/the-attributes-of-an-effective-global-leader">Read More.</a></div>
               </TextHTML>
             </div>
           </div>
@@ -547,14 +505,14 @@ var __wpmExportWarning='This Web Part Page has been personalized. As a result, o
             <div class="shim30"></div>
             <div class="inherit-bg tile">
               <ImageHTML type="html" xmlns="http://www.hbs.edu/">
-                <div class="mobile-hidden" xmlns=""><a href="https://hbr.org/2017/07/ai-may-soon-replace-even-the-most-elite-consultants" class="tile"><div class="assetImage"><img src="https://www.exed.hbs.edu/SiteCollectionImages/assets-other/4202-ai-may-soon-replace-even-the-most-elite-consultants.jpg" alt="AI May Soon Replace Even the Most Elite Consultants" class="stroke3 fluid"></div></a></div>
-                <div class="mobile-visible" xmlns=""><a href="https://hbr.org/2017/07/ai-may-soon-replace-even-the-most-elite-consultants" class="tile"><div class="assetImage"><img src="https://www.exed.hbs.edu/SiteCollectionImages/assets-other/4202-ai-may-soon-replace-even-the-most-elite-consultants.jpg" alt="AI May Soon Replace Even the Most Elite Consultants" class="stroke3 fluid"></div></a></div>
+                <div class="mobile-hidden" xmlns=""><a href="https://hbr.org/2016/10/the-attributes-of-an-effective-global-leader" class="tile"><div class="assetImage"><img src="https://www.exed.hbs.edu/SiteCollectionImages/assets-other/3614-the-attributes-of-an-effective-global-leader.jpg" alt="The Attributes of an Effective Global Leader" class="stroke3 fluid"></div></a></div>
+                <div class="mobile-visible" xmlns=""><a href="https://hbr.org/2016/10/the-attributes-of-an-effective-global-leader" class="tile"><div class="assetImage"><img src="https://www.exed.hbs.edu/SiteCollectionImages/assets-other/3614-the-attributes-of-an-effective-global-leader.jpg" alt="The Attributes of an Effective Global Leader" class="stroke3 fluid"></div></a></div>
               </ImageHTML>
               <TextHTML type="html" xmlns="http://www.hbs.edu/">
                 <div class="shim8" xmlns=""></div>
-                <div class="kappa-uc" xmlns=""><a href="https://hbr.org/2017/07/ai-may-soon-replace-even-the-most-elite-consultants">AI May Soon Replace Even the Most Elite Consultants</a></div>
+                <div class="kappa-uc" xmlns=""><a href="https://hbr.org/2016/10/the-attributes-of-an-effective-global-leader">The Attributes of an Effective Global Leader</a></div>
                 <div class="shim2" xmlns=""></div>
-                <div class="assetBlurb paragraph" xmlns="">Why corporate leaders are on the cusp of a major disruption. <a href="https://hbr.org/2017/07/ai-may-soon-replace-even-the-most-elite-consultants">Read More.</a></div>
+                <div class="assetBlurb paragraph" xmlns="">As businesses become more global, execs must master certain competencies. <a href="https://hbr.org/2016/10/the-attributes-of-an-effective-global-leader">Read More.</a></div>
               </TextHTML>
             </div>
           </div>
@@ -577,15 +535,15 @@ var __wpmExportWarning='This Web Part Page has been personalized. As a result, o
       </div>
       <div class="row tablet-row">
         <div class="span4 tablet-span4">
-          <div class="inherit-bg"><a href="http://hbx.hbs.edu/courses/core/?utm_source=HBS&amp;utm_campaign=HBS_Homepage&amp;utm_medium=Affiliate" class="tile" id="homepage-hbx-video1"><span class="stroke3" style="display:block !important;"><div class="img-container-16x9"><img src="/PublishingImages/assets/CORe-Image.jpg" alt="" class="o fluid"></div></span><div class="shim9"></div>
+          <div class="inherit-bg"><a href="https://hbx.hbs.edu/courses/economics-for-managers/?utm_source=hbsS&amp;utm_campaign=hbs_homepage&amp;utm_medium=affiliate" class="tile" id="homepage-hbx-video1"><span class="stroke3" style="display:block !important;"><div class="img-container-16x9"><img src="/PublishingImages/assets/CORe-Image.jpg" alt="" class="o fluid"></div></span><div class="shim9"></div>
               <div class="black mu-uc">Online Course</div>
-              <div class="mu-uc u white"> CORE: CREDENTIAL OF BUSINESS READINESS</div></a></div>
+              <div class="mu-uc u white"> ECONOMICS FOR MANAGERS</div></a></div>
         </div>
         <div class="span4 tablet-span4">
           <div class="inherit-bg">
-            <div class="desktop-visible tablet-visible"><a href="http://hbx.hbs.edu/courses/entrepreneurship-essentials/?utm_source=hbs&amp;utm_campaign=hbs_homepage&amp;utm_medium=affiliate" class="tile" id="homepage-hbx-video2"><span class="stroke3" style="display:block !important;"><div class="img-container-16x9"><img src="/PublishingImages/assets/ent-16x9.png" alt="" class="o fluid"></div></span><div class="shim9"></div>
+            <div class="desktop-visible tablet-visible"><a href="https://hbx.hbs.edu/courses/financial-accounting/?utm_source=hbsS&amp;utm_campaign=hbs_homepage&amp;utm_medium=affiliate" class="tile" id="homepage-hbx-video2"><span class="stroke3" style="display:block !important;"><div class="img-container-16x9"><img src="/PublishingImages/assets/FA_Image.jpg" alt="" class="o fluid"></div></span><div class="shim9"></div>
                 <div class="black mu-uc">New Online Course</div>
-                <div class="mu-uc u white"> ENTREPRENEURSHIP ESSENTIALS</div></a></div>
+                <div class="mu-uc u white"> FINANCIAL ACCOUNTING</div></a></div>
           </div>
         </div>
         <div class="span4 tablet-span4">

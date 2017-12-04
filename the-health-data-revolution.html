@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<title>The Health Data Revolution | The Forum at Harvard T. H. Chan School of Public Health</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" type="image/x-icon" href="https://theforum.sph.harvard.edu/wp-content/themes/theme-forum/images/favicon.ico" />
+<meta name="msapplication-TileColor" content="#A51C30">
+<meta name="msapplication-TileImage" content="https://theforum.sph.harvard.edu/wp-content/themes/theme-forum/images/ms/ms-tile-icon.png">
+<link rel="apple-touch-icon" href="https://theforum.sph.harvard.edu/wp-content/themes/theme-forum/images/ios/touch-icon-iphone.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://theforum.sph.harvard.edu/wp-content/themes/theme-forum/images/ios/touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://theforum.sph.harvard.edu/wp-content/themes/theme-forum/images/ios/touch-icon-iphone-retina.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://theforum.sph.harvard.edu/wp-content/themes/theme-forum/images/ios/touch-icon-ipad-retina.png">
+<!--[if lt IE 9]>
+<script src="https://theforum.sph.harvard.edu/wp-content/themes/theme-forum/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="The Forum at Harvard T. H. Chan School of Public Health &raquo; Feed" href="https://theforum.sph.harvard.edu/feed/" />
+<link rel="alternate" type="application/rss+xml" title="The Forum at Harvard T. H. Chan School of Public Health &raquo; Comments Feed" href="https://theforum.sph.harvard.edu/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="The Forum at Harvard T. H. Chan School of Public Health &raquo; The Health Data Revolution Comments Feed" href="https://theforum.sph.harvard.edu/events/the-health-data-revolution/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/theforum.sph.harvard.edu\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.8.3"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,56826,8203,55356,56819),0,0),c=j.toDataURL(),b!==c&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55358,56794,8205,9794,65039),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55358,56794,8203,9794,65039),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='hsph-protected-file-front-style-css'  href='https://theforum.sph.harvard.edu/wp-content/plugins/plugin-pin-cas-ldap/assets/css/hsph-pin-file-protect.css?ver=4.8.3' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='https://theforum.sph.harvard.edu/wp-includes/css/dashicons.min.css?ver=4.8.3' type='text/css' media='all' />
+<link rel='stylesheet' id='hsph-ui-shortcodes-style-css'  href='https://theforum.sph.harvard.edu/wp-content/plugins/plugin-ui-shortcodes//assets/css/hsph-ui-shortcodes.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='theforum-style-css'  href='https://theforum.sph.harvard.edu/wp-content/themes/theme-forum/style.css?ver=4.8.3' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='theforum-ie-css'  href='https://theforum.sph.harvard.edu/wp-content/themes/theme-forum/css/ie.css?ver=20121010' type='text/css' media='all' />
+<![endif]-->
+<!-- `sharedaddy` is included in the concatenated jetpack.css -->
+<link rel='stylesheet' id='social-logos-css'  href='https://theforum.sph.harvard.edu/wp-content/plugins/jetpack/_inc/social-logos/social-logos.min.css?ver=1' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack_css-css'  href='https://theforum.sph.harvard.edu/wp-content/plugins/jetpack/css/jetpack.css?ver=5.4' type='text/css' media='all' />
+<script type='text/javascript' src='https://theforum.sph.harvard.edu/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='https://theforum.sph.harvard.edu/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='https://theforum.sph.harvard.edu/wp-content/plugins/pippity/js/pippity.js?ver=4.8.3'></script>
+<script type='text/javascript' src='https://theforum.sph.harvard.edu/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://theforum.sph.harvard.edu/wp-includes/js/jquery/ui/widget.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://theforum.sph.harvard.edu/wp-includes/js/jquery/ui/tabs.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://theforum.sph.harvard.edu/wp-includes/js/jquery/ui/accordion.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://theforum.sph.harvard.edu/wp-content/plugins/plugin-ui-shortcodes//assets/scripts/hsph-ui-shortcodes.js?ver=1.0.0'></script>
+<link rel='https://api.w.org/' href='https://theforum.sph.harvard.edu/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://theforum.sph.harvard.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://theforum.sph.harvard.edu/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='The Diabetes Epidemic' href='https://theforum.sph.harvard.edu/events/the-diabetes-epidemic/' />
+<meta name="generator" content="WordPress 4.8.3" />
+<link rel="canonical" href="https://theforum.sph.harvard.edu/events/the-health-data-revolution/" />
+<link rel='shortlink' href='https://theforum.sph.harvard.edu/?p=6326' />
+<link rel="alternate" type="application/json+oembed" href="https://theforum.sph.harvard.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ftheforum.sph.harvard.edu%2Fevents%2Fthe-health-data-revolution%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://theforum.sph.harvard.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ftheforum.sph.harvard.edu%2Fevents%2Fthe-health-data-revolution%2F&#038;format=xml" />
+		<script type="text/javascript">
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		
+			ga( 'create', 'UA-84089646-2', 'sph.harvard.edu', 'trackern1');
+			ga( 'trackern1.require', 'displayfeatures');
+			ga( 'trackern1.require', 'linkid');
+			ga( 'trackern1.set', 'dimension1', 'signed_out' );
+			ga( 'trackern1.set', 'dimension2', 'none' );
+			ga( 'trackern1.send', 'pageview');
+
+				
+			ga( 'create', 'UA-16396394-6', 'auto', 'trackers1');
+			ga( 'trackers1.require', 'displayfeatures');
+			ga( 'trackers1.set', 'dimension1', 'signed_out' );
+			ga( 'trackers1.set', 'dimension2', 'none' );
+			ga( 'trackers1.send', 'pageview');
+
+				
+			ga( 'create', ' UA-16396394-1', 'auto', 'trackers2');
+			ga( 'trackers2.require', 'displayfeatures');
+			ga( 'trackers2.set', 'dimension1', 'signed_out' );
+			ga( 'trackers2.set', 'dimension2', 'none' );
+			ga( 'trackers2.send', 'pageview');
+
+				
+	    jQuery(document).ready( function($) {
+	        var filetypes = /\.(zip|exe|pdf|doc*|xls*|ppt*|mp3)$/i;
+	        var baseHref = '';
+
+	        if ( $( 'base' ).attr('href') != undefined ) {
+	            baseHref = $( 'base' ).attr('href');
+	        }
+
+	        $( '#content a' ).each(function() {
+	            var href = $( this ).attr( 'href' );
+	            if ( href && (href.match(/^https?\:/i)) && (!href.match(document.domain)) && (!href.match('theforum.sph.harvard.edu'))) {
+	                $( this ).click(function() {
+	                    var clicklink = href.replace(/^https?\:\/\//i, '');
+	                    
+		                ga( 'trackers1.send', 'event', {
+							eventCategory: 'Outbound Link',
+							eventAction: 'click',
+							eventLabel: clicklink,
+							transport: 'beacon'
+						} );
+		                ga( 'trackers2.send', 'event', {
+							eventCategory: 'Outbound Link',
+							eventAction: 'click',
+							eventLabel: clicklink,
+							transport: 'beacon'
+						} );
+	                    if ( $(this).attr( 'target' ) != undefined && $( this ).attr( 'target' ).toLowerCase() != '_blank') {
+	                        setTimeout(function() { location.href = href; }, 200);
+	                        return false;
+	                    }
+	                });
+	            } else if (href && href.match(/^mailto\:/i)) {
+	                $(this).click(function() {
+	                    var mailLink = href.replace(/^mailto\:/i, '');
+	                    
+		                ga( 'trackers1.send', 'event', {
+							eventCategory: 'Email',
+							eventAction: 'click',
+							eventLabel: mailLink,
+							transport: 'beacon'
+						} );
+		                ga( 'trackers2.send', 'event', {
+							eventCategory: 'Email',
+							eventAction: 'click',
+							eventLabel: mailLink,
+							transport: 'beacon'
+						} );
+	                });
+	            } else if (href && href.match(filetypes)) {
+	                $(this).click(function() {
+	                    var extension = (/[.]/.exec(href)) ? /[^.]+$/.exec(href) : undefined;
+	                    var filePath = href;
+	                    
+		                ga( 'trackers1.send', 'event', {
+							eventCategory: 'Download',
+							eventAction: 'click-' + extension,
+							eventLabel: filePath,
+							transport: 'beacon'
+						} );
+		                ga( 'trackers2.send', 'event', {
+							eventCategory: 'Download',
+							eventAction: 'click-' + extension,
+							eventLabel: filePath,
+							transport: 'beacon'
+						} );
+	                    if ( $(this).attr('target') != undefined && $(this).attr('target').toLowerCase() != '_blank') {
+	                        setTimeout(function() { location.href = baseHref + href; }, 200);
+	                        return false;
+	                    }
+	                });
+	            }
+	        });
+	    });
+			</script>
+		<script type="text/javascript">
+				pippity_globals = function(jQuery){
+				window.$j = jQuery;
+				window.PTY_URL = "https://theforum.sph.harvard.edu/wp-content/plugins/pippity";
+				window.PTY_DOM = "https://theforum.sph.harvard.edu";
+				window.PTY_AJAX = "https://theforum.sph.harvard.edu/wp-admin/admin-ajax.php";
+				window.PTY_ADM = "https://theforum.sph.harvard.edu/wp-admin/admin.php?page=";
+				window.PTY_PAGE = "";
+				window.PTY_ISPOST = true;
+				window.PTY_KEY = "YmI5MGYyMGEyYzU1MmZiMmQ0NTM3ZWI4ZTQ5YjRmMmFmMjUzYzRhZg==";
+				window.PTY_AFFLINK = "";
+				window.PTY_AFFTEXT = "";
+				window.PTY_NEWPOPUP = "false";
+				
+				}(jQuery)
+			</script> 
+<link rel='dns-prefetch' href='//v0.wordpress.com'/>
+<style type='text/css'>img#wpstats{display:none}</style>	 <script type="text/javascript">
+	  (function() {
+		var config = {
+		  kitId: 'cki5mar',
+		  scriptTimeout: 3000
+		};
+		var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
+	  })();
+	</script>
+	
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="The Health Data Revolution" />
+<meta property="og:url" content="https://theforum.sph.harvard.edu/events/the-health-data-revolution/" />
+<meta property="og:description" content="THE DR. LAWRENCE H. AND ROBERTA COHN FORUMS THE HEALTH DATA REVOLUTION: Improving Outcomes, Protecting Privacy Presented jointly with HuffPost Tuesday, December 5, 2017 Special Time: 12:30-1:30pm E…" />
+<meta property="article:published_time" content="2017-11-20T20:22:28+00:00" />
+<meta property="article:modified_time" content="2017-11-20T20:22:28+00:00" />
+<meta property="og:site_name" content="The Forum at Harvard T. H. Chan School of Public Health" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:image" content="https://cdn2.sph.harvard.edu/wp-content/uploads/sites/120/2017/11/data-web.jpg" />
+<meta name="twitter:site" content="@ForumHSPH" />
+<meta name="twitter:card" content="summary" />
+</head>
+
+<body class="forum_event-template-default single single-forum_event postid-6326 single-author">
+<div id='outer-wrapper'>
+	<div id="page" class="hfeed site">
+		<header id="masthead" class="site-header" role="banner">
+			<div id="top-header-bar-outside">
+				<div id='top-header-bar'>
+					<div id="hsph-logo">
+						<a href='http://www.hsph.harvard.edu/'>Harvard School of Public Health</a>
+					</div>
+					<nav id="afmenu">
+						<ul>
+							<li><a href="#"><span id="afbarquicktitle">Quicklinks </span><div class="dashicons dashicons-arrow-down"></div></a>
+								<ul>
+									<li><a href="http://hsph.harvard.edu/about">About HSPH</a></li>
+									<li><a href="http://hsph.harvard.edu/academics">Academics</a></li>
+									<li><a href="http://hsph.harvard.edu/admissions">Admissions</a></li>
+									<li><a href="http://hsph.harvard.edu/research">Research</a></li>
+									<li><a href="http://hsph.harvard.edu/faculty">Faculty</a></li>
+									<li><a href="http://hsph.harvard.edu/student-life">Student Life</a></li>
+									<li><a href="http://hsph.harvard.edu/news">News</a></li>
+									<li><a href="http://hsph.harvard.edu/alumni">Alumni</a></li>
+									<li><a href="http://www.hsph.harvard.edu/campaign/giving/how-to-make-a-gift/">Make A Gift</a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			
+			<div id="main-header-outside">
+				<a href="#main-nav-menu" class='opencanvas' id='opencanvas'><div class="dashicons dashicons-menu"></div><div id='opencanvas-inner'>Forum Menu</div></a>
+				<a href="#" id='opensearch'><div id='opensearch-inner'></div><div class="dashicons dashicons-search"></div></a>
+			
+				<div id='logo-search'>
+					<div id='tag-search'>
+						<div class='search-bar-social'>
+							<div class="search-bar"><form role="search" method="get" class="search-form" action="https://theforum.sph.harvard.edu/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" />
+				</label>
+				<input type="submit" class="search-submit" value="Search" />
+			</form></div>
+							<a href="https://www.facebook.com/Forumhsph" target="_blank"><div class="dashicons dashicons-facebook-alt"></div></a>
+							<a href="https://twitter.com/ForumHSPH" target="_blank"><div class="dashicons dashicons-twitter"></div></a>
+						</div>
+						<div class="site-description">Bridging science and policy decision-making.</div>
+					</div>
+					<div id='main-logo'>
+						<a class='logo-forum-main' href="https://theforum.sph.harvard.edu/" title="The Forum at Harvard T. H. Chan School of Public Health" rel="home">
+							The Forum at Harvard T. H. Chan School of Public Health						</a>
+					</div>
+				</div><!-- #logo-search -->
+
+				<div id='main-nav-menu'>
+					<div class='block'>
+						<nav id="site-navigation" class="main-navigation" role="navigation">
+							<a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
+							<div class="menu-main-menu-container"><ul id="menu-main-menu" class="nav-menu"><li id="menu-item-4217" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4217"><a href="http://www.hsph.harvard.edu/leadership-studio/">A Leadership Studio series</a></li>
+<li id="menu-item-2118" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2118"><a>Videos</a>
+<ul  class="sub-menu">
+	<li id="menu-item-5201" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5201"><a href="http://theforum.sph.harvard.edu/events/">The Forum</a></li>
+	<li id="menu-item-3505" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3505"><a href="https://theforum.sph.harvard.edu/health-watch-and-health-reform-watch/health-watch/">Health Watch</a></li>
+	<li id="menu-item-2845" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2845"><a href="https://theforum.sph.harvard.edu/health-watch-and-health-reform-watch/aca-this-week/">Health Reform Watch</a></li>
+</ul>
+</li>
+<li id="menu-item-3861" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3861"><a href="https://theforum.sph.harvard.edu/collaborators-and-partners/">Collaborators and partners</a></li>
+<li id="menu-item-2128" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2128"><a href="https://theforum.sph.harvard.edu/about/">About</a></li>
+<li id="menu-item-2145" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2145"><a href="http://theforum.sph.harvard.edu/expert-participants/">Participants</a></li>
+<li id="menu-item-5216" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5216"><a href="https://theforum.sph.harvard.edu/event-briefings/">Event Briefings</a></li>
+</ul></div>						</nav><!-- #site-navigation -->
+					</div>
+				</div>
+			</div>
+		</header><!-- #masthead -->
+
+		<div id="main" class="wrapper">
+	<div id="primary" class="site-content">
+		<div id="content" role="main">
+
+			
+			<article id="post-6326" class="post-6326 forum_event type-forum_event status-publish hentry event_series-the-dr-lawrence-h-and-roberta-cohn-forums event_topic-global-health event_topic-health-policy event_tag-big-data event_tag-data event_tag-deven-mcgraw event_tag-john-halamka event_tag-jonathan-cohn event_tag-lipika-samal event_tag-thomas-lee">
+				<header class="entry-header">
+					<h1 class="entry-title">The Health Data Revolution<br><span class="theforum-subtitle">Improving Outcomes, Protecting Privacy</span></h1>
+				</header><!-- .entry-header -->
+
+				<div class="event-video">
+					<img src='https://cdn2.sph.harvard.edu/wp-content/uploads/sites/120/2017/11/data-web-636x358.jpg' alt='The Health Data Revolution: Presented jointly with HuffPost' />			
+				</div>
+				
+								
+				<div class="entry-content">
+					<h2>Summary</h2><p><strong>THE DR. LAWRENCE H. </strong><strong>AND ROBERTA COHN FORUMS</strong></p>
+<p><strong>THE HEALTH DATA REVOLUTION: Improving Outcomes, Protecting Privacy</strong><br />
+<em>Presented jointly with HuffPost</em></p>
+<p><strong>Tuesday, December 5, 2017</strong><br />
+<strong>Special Time: 12:30-1:30pm ET</strong><br />
+<strong>ForumHSPH.org</strong></p>
+<p>Will the next great medical insight come from a clinical trial, a laboratory study — or a database search? Today, health systems and insurers have access to a mountain of data about millions of Americans: what medications they take, their health history, even, in some cases, their genetics—plus an emerging body of mobile health data. Using “big data” techniques, doctors and researchers are already mining this data to deliver better care and to gain insights into the kind of hyper-specific questions that clinical trials and observational studies struggle to answer. The approach promises major, rapid-fire, highly-personalized discoveries. At the same time, with the specter of cyberattacks and hacks looming, the need for rugged privacy protection has never been greater. In this Forum, experts in healthcare data and privacy will discuss the potential for future discovery, practical steps to enable progress, and how information can be kept secure.</p>
+<p>&nbsp;</p>
+<span id="pty_trigger"></span><p>Part of: <a href="https://theforum.sph.harvard.edu/series/the-dr-lawrence-h-and-roberta-cohn-forums/" rel="tag">The Dr. Lawrence H. and Roberta Cohn Forums</a>.</p><p>Presented jointly with HuffPost</p>
+<p><em>Image Credit: iStock: shulz</em></p>
+<div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-official sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-facebook"><div class="fb-share-button" data-href="https://theforum.sph.harvard.edu/events/the-health-data-revolution/" data-layout="button_count"></div></li><li class="share-twitter"><a href="https://twitter.com/share" class="twitter-share-button" data-url="https://theforum.sph.harvard.edu/events/the-health-data-revolution/" data-text="The Health Data Revolution" data-via="ForumHSPH" >Tweet</a></li><li class="share-reddit"><div class="reddit_button"><iframe src="https://www.reddit.com/static/button/button1.html?newwindow=true&width=120&amp;url=https%3A%2F%2Ftheforum.sph.harvard.edu%2Fevents%2Fthe-health-data-revolution%2F&amp;title=The%20Health%20Data%20Revolution" height="22" width="120" scrolling="no" frameborder="0"></iframe></div></li><li><a href="#" class="sharing-anchor sd-button share-more"><span>More</span></a></li><li class="share-end"></li></ul><div class="sharing-hidden"><div class="inner" style="display: none;"><ul><li class="share-google-plus-1"><div class="googleplus1_button"><div class="g-plus" data-action="share" data-annotation="bubble" data-href="https://theforum.sph.harvard.edu/events/the-health-data-revolution/"></div></div></li><li class="share-linkedin"><div class="linkedin_button"><script type="in/share" data-url="https://theforum.sph.harvard.edu/events/the-health-data-revolution/" data-counter="right"></script></div></li><li class="share-end"></li><li class="share-email"><a rel="nofollow" data-shared="" class="share-email sd-button" href="https://theforum.sph.harvard.edu/events/the-health-data-revolution/?share=email" target="_blank" title="Click to email this to a friend"><span>Email</span></a></li><li class="share-print"><a rel="nofollow" data-shared="" class="share-print sd-button" href="https://theforum.sph.harvard.edu/events/the-health-data-revolution/#print" target="_blank" title="Click to print"><span>Print</span></a></li><li class="share-end"></li><li class="share-end"></li></ul></div></div></div></div></div>				</div><!-- .entry-content -->
+		
+				<footer class="entry-meta">
+														</footer><!-- .entry-meta -->
+				
+			</article><!-- #post -->
+				<nav class="nav-single">
+					<h3 class="assistive-text">Post navigation</h3>
+					<span class="nav-previous"><a href="https://theforum.sph.harvard.edu/events/the-diabetes-epidemic/" rel="prev"><span class="meta-nav">&larr;</span> The Diabetes Epidemic</a></span>
+					<span class="nav-next"></span>
+				</nav><!-- .nav-single -->
+
+				
+<div id="disqus_thread">
+            <div id="dsq-content">
+
+
+            <ul id="dsq-comments">
+                    <li class="comment even thread-even depth-1" id="dsq-comment-2549">
+        <div id="dsq-comment-header-2549" class="dsq-comment-header">
+            <cite id="dsq-cite-2549">
+                <span id="dsq-author-user-2549">pharma afreen</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-2549" class="dsq-comment-body">
+            <div id="dsq-comment-message-2549" class="dsq-comment-message"><p>Pharmascience medicine Blood Control for Anti Piles Diseases<br />
+Anti Piles Medicines are made in our modern units in totally hygienic conditions, with the use of 100% Ayurvedic ingredients, to maintain their quality &amp; effectiveness. Our experienced pharmacists ensure that the medicines are well-tested for effectiveness and safe consumption., Our Product Blood Control can very effectively work on Anti Piles Medicines helps the user get sure shot relief from Piles.Our Product Blood Control can improves Piles Disease Easily.<br />
+For more visit<br />
+&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;..</p>
+<p>PHARMASCIENCE – THE INDIAN AYURVEDA</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+            </ul>
+
+
+        </div>
+
+    </div>
+
+
+			
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+<div id="secondary" class="widget-area" role="complementary">
+	
+		<aside id="forum-moderators" class="widget widget_moderators">
+			<h3 class="widget-title">Moderator</h3>
+			
+			<p>
+				<a href="https://theforum.sph.harvard.edu/expert-participants/jonathan-cohn/">Jonathan Cohn</a><br>Senior National Correspondent, HuffPost
+			</p>
+			
+		</aside>
+		
+		<aside id="forum-expert-participants" class="widget widget_expert">
+			<h3 class="widget-title">Expert Participants</h3>
+			
+			<p>
+				<a href="https://theforum.sph.harvard.edu/expert-participants/john-halamka/">John Halamka</a><br>Chief Information Officer, Beth Israel Deaconess Medical Center, and Chair, Healthcare Information Technology Standards Panel
+			</p>
+			
+			<p>
+				<a href="https://theforum.sph.harvard.edu/expert-participants/deven-mcgraw/">Deven McGraw</a><br>Former Deputy Director of Health Information Privacy, U.S. Department of Health and Human Services’ Office for Civil Rights; Former Acting Chief Privacy Officer, Office of the National Coordinator for Health IT
+			</p>
+			
+			<p>
+				<a href="https://theforum.sph.harvard.edu/expert-participants/lipika-samal/">Lipika Samal</a><br>Associate Physician, Brigham and Women's Hospital, and an Investigator in Health Information Technology
+			</p>
+			
+			<p>
+				<a href="https://theforum.sph.harvard.edu/expert-participants/thomas-lee/">Thomas Lee</a><br>Chief Medical Officer, Press Ganey, and Professor in the Department of Health Policy and Management, Harvard T.H. Chan School of Public Health
+			</p>
+			
+		</aside>
+		</div><!-- #secondary -->
+		</div><!-- #main .wrapper -->
+		<footer id="colophon" role="contentinfo">
+			<div class="site-info">
+				<div class="footer-logo-address">
+					<div class="footer-logo">
+						<a href="http://www.hsph.harvard.edu/" class='logo-hsph-footer'>Harvard School of Public Health</a>
+					</div>
+					<div class="vcard">
+						<a href="http://goo.gl/maps/BeScQ" target="_blank">
+							<div class="adr">
+								<div class="street-address">677 Huntington Avenue</div>
+								<span class="locality">Boston</span>,
+								<span class="region">MA</span>
+								<span class="postal-code">02115</span>
+							</div>
+						</a>
+						<div class="tel"><a href="tel:16174951000" class="tel">+1 (617) 495-1000</a></div>
+					</div>
+				</div>
+				<div id="footer-connect">
+					<div class="footer-social-icons">
+						<nav id="footer-icons-social" class="social-footer-navigation" role="navigation">
+													</nav><!-- #sub-footer-contact -->
+					</div>
+				</div>
+				<div id='footer-contact-menu'>
+					<nav id="sub-footer-contact" class="sub-footer-navigation" role="navigation">
+						<div class="menu-sub-footer-menu-container">
+							<ul id="menu-sub-footer-menu" class="sub-footer-menu">
+								<li id="menu-item-111354105449" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111354105449"><a href="http://www.hsph.harvard.edu/contact-us/">Contact Us</a></li>
+								<li id="menu-item-111354105212" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354105212"><a href="http://www.harvard.edu">Harvard Main Site</a></li>
+								<li id="menu-item-1019" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1019"><a href="http://www.hsph.harvard.edu/about">About</a></li>
+								<li id="menu-item-1020" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-359 current_page_item menu-item-1020"><a href="http://www.hsph.harvard.edu/">Home</a></li>
+								<li id="menu-item-1021" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1021"><a href="http://www.hsph.harvard.edu/campaign/giving/how-to-make-a-gift/">Make a Gift</a></li>
+								<li id="menu-item-111354108039" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111354108039"><a href="http://www.hsph.harvard.edu/privacy-policy/">Privacy Policy</a></li>
+								<li id="menu-item-111354105198" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354105198"><a href="http://dmca.harvard.edu/">Report Copyright Violation</a></li>
+							</ul>
+						</div>
+					</nav><!-- #sub-footer-contact -->
+				</div>
+				<div id="footer-copyright">
+					Copyright &copy; 2017 The President and Fellows of Harvard College					
+				</div>
+			</div><!-- .site-info -->
+		</footer><!-- #colophon -->
+	</div><!-- #page -->
+</div><!-- #outer-wrapper -->
+
+	<!-- Quantcast Tag -->
+	<script type="text/javascript">
+		var _qevents = _qevents || [];
+
+		(function() {
+		var elem = document.createElement('script');
+		elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+		elem.async = true;
+		elem.type = "text/javascript";
+		var scpt = document.getElementsByTagName('script')[0];
+		scpt.parentNode.insertBefore(elem, scpt);
+		})();
+
+		_qevents.push({
+		qacct:"p-6mmUHyTsrhtcG"
+		});
+	</script>
+
+	<noscript>
+	<div style="display:none;">
+	<img src="//pixel.quantserve.com/pixel/p-6mmUHyTsrhtcG.gif" border="0" height="1" width="1" alt="Quantcast"/>
+	</div>
+	</noscript>
+	<!-- End Quantcast tag -->
+	
+	<script type="text/javascript">
+		window.WPCOM_sharing_counts = {"https:\/\/theforum.sph.harvard.edu\/events\/the-health-data-revolution\/":6326};
+	</script>
+<div id="fb-root"></div>
+			<script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&appId=249643311490&version=v2.3'; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script>
+			<script>
+			jQuery( document.body ).on( 'post-load', function() {
+				if ( 'undefined' !== typeof FB ) {
+					FB.XFBML.parse();
+				}
+			} );
+			</script>
+						<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+						<script>
+			function renderGooglePlus1() {
+				if ( 'undefined' === typeof gapi ) {
+					return;
+				}
+
+				jQuery( '.g-plus' ).each(function() {
+					var $button = jQuery( this );
+
+					if ( ! $button.data( 'gplus-rendered' ) ) {
+						gapi.plusone.render( this, {
+							href: $button.attr( 'data-href' ),
+							size: $button.attr( 'data-size' ),
+							annotation: $button.attr( 'data-annotation' )
+						});
+
+						$button.data( 'gplus-rendered', true );
+					}
+				});
+			}
+
+			(function() {
+				var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+				po.src = 'https://apis.google.com/js/plusone.js';
+				po.innerHTML = '{"parsetags": "explicit"}';
+				po.onload = renderGooglePlus1;
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+			})();
+
+			jQuery( document.body ).on( 'post-load', renderGooglePlus1 );
+			</script>
+			<script type="text/javascript">
+			jQuery( document ).ready( function() {
+				jQuery.getScript( 'https://platform.linkedin.com/in.js?async=true', function success() {
+					IN.init();
+				});
+			});
+			jQuery( document.body ).on( 'post-load', function() {
+				if ( typeof IN != 'undefined' )
+					IN.parse();
+			});
+			</script>	<div id="sharing_email" style="display: none;">
+		<form action="/events/the-health-data-revolution/" method="post">
+			<label for="target_email">Send to Email Address</label>
+			<input type="email" name="target_email" id="target_email" value="" />
+
+			
+				<label for="source_name">Your Name</label>
+				<input type="text" name="source_name" id="source_name" value="" />
+
+				<label for="source_email">Your Email Address</label>
+				<input type="email" name="source_email" id="source_email" value="" />
+
+						<input type="text" id="jetpack-source_f_name" name="source_f_name" class="input" value="" size="25" autocomplete="off" title="This field is for validation and should not be changed" />
+			<script>jQuery( document ).ready( function(){ document.getElementById('jetpack-source_f_name').value = '' });</script>
+			
+			<img style="float: right; display: none" class="loading" src="https://theforum.sph.harvard.edu/wp-content/plugins/jetpack/modules/sharedaddy/images/loading.gif" alt="loading" width="16" height="16" />
+			<input type="submit" value="Send Email" class="sharing_send" />
+			<a rel="nofollow" href="#cancel" class="sharing_cancel">Cancel</a>
+
+			<div class="errors errors-1" style="display: none;">
+				Post was not sent - check your email addresses!			</div>
+
+			<div class="errors errors-2" style="display: none;">
+				Email check failed, please try again			</div>
+
+			<div class="errors errors-3" style="display: none;">
+				Sorry, your blog cannot share posts by email.			</div>
+		</form>
+	</div>
+<script type='text/javascript' src='https://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201749'></script>
+<script type='text/javascript' src='https://theforum.sph.harvard.edu/wp-includes/js/comment-reply.min.js?ver=4.8.3'></script>
+<script type='text/javascript' src='https://theforum.sph.harvard.edu/wp-content/themes/theme-forum/js/navigation.js?ver=20140318'></script>
+<script type='text/javascript' src='https://theforum.sph.harvard.edu/wp-content/plugins/jetpack/_inc/twitter-timeline.js?ver=4.0.0'></script>
+<script type='text/javascript' src='https://theforum.sph.harvard.edu/wp-includes/js/wp-embed.min.js?ver=4.8.3'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var embedVars = {"disqusConfig":{"platform":"wordpress@4.8.3","language":"","remote_auth_s3":"W10= f18b9ecb8c06af5d9f536a55f5e02a650a6a0379 1512390602","api_key":"CahnFqlmorPQh6LQYks03I5n0kC1EzXKYNGWkt7ealsGIB4DNmIoFuQlQ9mia6b6","sso":{"name":"The Forum at Harvard T. H. Chan School of Public Health","button":false,"url":"https:\/\/theforum.sph.harvard.edu\/wp-login.php","logout":"https:\/\/theforum.sph.harvard.edu\/wp-login.php?action=logout","width":"800","height":"700"}},"disqusIdentifier":"6326 https:\/\/theforum.sph.harvard.edu\/?post_type=forum_event&p=6326","disqusShortname":"theforumhsph","disqusTitle":"The Health Data Revolution","disqusUrl":"https:\/\/theforum.sph.harvard.edu\/events\/the-health-data-revolution\/","options":{"manualSync":false},"postId":"6326"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://theforum.sph.harvard.edu/wp-content/plugins/disqus-comment-system/media/js/disqus.js?ver=4.8.3'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var countVars = {"disqusShortname":"theforumhsph"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://theforum.sph.harvard.edu/wp-content/plugins/disqus-comment-system/media/js/count.js?ver=4.8.3'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var sharing_js_options = {"lang":"en","counts":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://theforum.sph.harvard.edu/wp-content/plugins/jetpack/modules/sharedaddy/sharing.js?ver=5.4'></script>
+<script type='text/javascript'>
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-facebook', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+</script>
+<script type='text/javascript' src='https://stats.wp.com/e-201749.js' async defer></script>
+<script type='text/javascript'>
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:5.4',blog:'132839363',post:'6326',tz:'-5',srv:'theforum.sph.harvard.edu'} ]);
+	_stq.push([ 'clickTrackerInit', '132839363', '6326' ]);
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"5855f939d3","applicationID":"11647346","transactionName":"ZwRRZUsCWxVYV0MPXl5OclJNCloIFkdeCFZcBB5XVhFAC2ZRQQNfRA==","queueTime":0,"applicationTime":945,"atts":"S0NSEwMYSBs=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
