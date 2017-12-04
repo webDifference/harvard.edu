@@ -1,247 +1,638 @@
 <!DOCTYPE html>
-<!--[if IEMobile 7]><html class="iem7"  lang="en" dir="ltr"><![endif]-->
-<!--[if lte IE 6]><html class="lt-ie9 lt-ie8 lt-ie7"  lang="en" dir="ltr"><![endif]-->
-<!--[if (IE 7)&(!IEMobile)]><html class="lt-ie9 lt-ie8"  lang="en" dir="ltr"><![endif]-->
-<!--[if IE 8]><html class="lt-ie9"  lang="en" dir="ltr"><![endif]-->
-<!--[if IE 9]><html class="ie9"  lang="en" dir="ltr"><![endif]-->
-<!--[if (gte IE 9)|(gt IEMobile 7)]><!--><html class="not-ie"  lang="en" dir="ltr"><!--<![endif]-->
-
+<!--[if lt IE 7]>     <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>        <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>        <html lang="en" class="no-js lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]>        <html lang="en" class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!--><html lang="en" class="no-js"><!--<![endif]-->
 <head profile="http://www.w3.org/1999/xhtml/vocab">
-  <meta charset="utf-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<link rel="shortcut icon" href="https://www.radcliffe.harvard.edu/sites/default/files/radicon.ico" type="image/vnd.microsoft.icon" />
-<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width" />
-<link rel="shortlink" href="/node/2407" />
-<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
-<link rel="canonical" href="/homepage-only/homepage" />
-  <title>Radcliffe Institute for Advanced Study at Harvard University | Home</title>
+  <meta charset="utf-8"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
 
-      <meta name="MobileOptimized" content="width">
-    <meta name="HandheldFriendly" content="true">
-    <meta name="viewport" content="width=device-width">
-    <meta http-equiv="cleartype" content="on">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="https://college.harvard.edu/sites/all/themes/harvard/css/images/favicon.ico" type="image/vnd.microsoft.icon" />
+<meta name="generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="canonical" href="https://college.harvard.edu/" />
+<link rel="shortlink" href="https://college.harvard.edu/" />
+<meta name="google-site-verification" content="y67J8Jo7YiMeew7p4lMBYchKQx8mzhts7HFDhSkhs24" />
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=156643444746123&ev=PageView&noscript=1"/></noscript>  <title>Harvard College |</title>
+  <link type="text/css" rel="stylesheet" href="https://college.harvard.edu/sites/default/files/css/css_kShW4RPmRstZ3SpIC-ZvVGNFVAi0WEMuCnI0ZkYIaFw.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://college.harvard.edu/sites/default/files/css/css_DnvLRZdhU1iBaJ_Zf_WwGCIDJmDG62GCal7Vnrj9Ckg.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://college.harvard.edu/sites/default/files/css/css_aRIhdfracbMpI2KB2IiQV-XNsCxn3umXECryLgdSdLA.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://college.harvard.edu/sites/default/files/css/css_qpHURMTtcGa8w9tkG0TIBf6gPihw4BtY77D2XojDszg.css" media="print" />
+<link type="text/css" rel="stylesheet" href="https://college.harvard.edu/sites/default/files/css/css_vHiICRG52n0rTw3QqUqnMI2zd3MUF96CyP7SDQ4f1Uw.css" media="all" />
 
-  <link type="text/css" rel="stylesheet" href="https://www.radcliffe.harvard.edu/sites/default/files/css/css_kShW4RPmRstZ3SpIC-ZvVGNFVAi0WEMuCnI0ZkYIaFw.css" media="all" />
-<link type="text/css" rel="stylesheet" href="https://www.radcliffe.harvard.edu/sites/default/files/css/css_DHcXHPYBSjIVaCQZEG4ZlpLkvslnFlBCnQUCzlbRBio.css" media="all" />
-<link type="text/css" rel="stylesheet" href="https://www.radcliffe.harvard.edu/sites/default/files/css/css_ulX9nyODogk17WsnSobj_a5quJVNSxYTe3CU0-5BMN0.css" media="all" />
-<link type="text/css" rel="stylesheet" href="https://www.radcliffe.harvard.edu/sites/default/files/css/css_j9uBe4YIH5Zth9fBdUwIIgCATkYCcqOWfPFEOLIOZGY.css" media="all" />
-<link type="text/css" rel="stylesheet" href="https://www.radcliffe.harvard.edu/sites/default/files/css/css_DRll2JjyG4aMDzgQRtPgGFhhkj3on68LfMwEdxO4eqs.css" media="all" />
-<link type="text/css" rel="stylesheet" href="https://www.radcliffe.harvard.edu/sites/default/files/css/css_vILHkGorFfVXPGbsp4ok52jRuPpd9Dq8Yeo4A1FCXq0.css" media="screen" />
-<link type="text/css" rel="stylesheet" href="https://www.radcliffe.harvard.edu/sites/default/files/css/css_h1vtl3W-DBxVcqQOh5hJkcZDeCAso9d50wyUuLTUEJw.css" media="screen and (max-width: 580px)" />
-<link type="text/css" rel="stylesheet" href="https://www.radcliffe.harvard.edu/sites/default/files/css/css_zYmEoFBqFe9YO3W_F4Ohbk2DfTai2maEJGR7fmRB2MM.css" media="screen and (min-width: 580px)" />
-<link type="text/css" rel="stylesheet" href="https://www.radcliffe.harvard.edu/sites/default/files/css/css_LbLTznlJ3xPDKKMEB0zKRuTACI3i9FUx57_qPiDNpsw.css" media="screen and (min-width: 580px) and (max-width: 1050px)" />
-<link type="text/css" rel="stylesheet" href="https://www.radcliffe.harvard.edu/sites/default/files/css/css_JNUtopLrnMmWullGpkkAqxFkKJ-5_mDkSkPf9qOvDgA.css" media="screen and (min-width: 1050px)" />
-<link type="text/css" rel="stylesheet" href="https://www.radcliffe.harvard.edu/sites/default/files/css/css_z7TevwWepeY4tj3_r21EIEyyGlFwcdXbZ0WjY_5SQns.css" media="print" />
-  <!--[if IE 8]>
-    <script src="/sites/all/themes/rias/bower_components/selectivizr/selectivizr.js"></script>
-    <script src="/sites/all/themes/rias/bower_components/html5shiv/dist/html5shiv.js"></script>
-    <script src="/sites/all/themes/rias/bower_components/respond/src/respond.js"></script>
-    <script src="/sites/all/themes/rias/bower_components/media-match/media.match.min.js"></script>
+<!--[if lt IE 9]>
+<link type="text/css" rel="stylesheet" href="https://college.harvard.edu/sites/default/files/css/css_5vwjkRw45NusIP78-M83achliNJznka1sNkxAz8Zvr0.css" media="all" />
+<![endif]-->
+
+<!--[if lt IE 8]>
+<link type="text/css" rel="stylesheet" href="https://college.harvard.edu/sites/default/files/css/css_Hj9fXY775g2eA7RUp7hysigbxUIt5lX4nXdeRHMLbrY.css" media="all" />
+<![endif]-->
+  <script type="text/javascript" src="https://college.harvard.edu/sites/default/files/js/js_WkOMkSyjg9rxsesVK2mUAVX_dhZTWbIE6jpIzuL-ygM.js"></script>
+<script type="text/javascript" src="https://college.harvard.edu/sites/default/files/js/js_BLxotNs2yt7YGlf9QRI9L9AMfdnkQfnN-_ADBTW3SiE.js"></script>
+<script type="text/javascript" src="https://college.harvard.edu/sites/default/files/js/js_CDGBrxcsUei5uGpIel7O_d4I9Vwm1GeWQO_r0AtTrBE.js"></script>
+<script type="text/javascript" src="https://college.harvard.edu/sites/default/files/js/js_s8DfVLKw2U-eMMeck_BixGeFZ-kLWDjAvU0ZHOrJb-Y.js"></script>
+<script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+<script type="text/javascript" src="https://college.harvard.edu/sites/default/files/js/js_gPqjYq7fqdMzw8-29XWQIVoDSWTmZCGy9OqaHppNxuQ.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create", "UA-42906607-5", {"cookieDomain":"auto"});ga("send", "pageview");
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://college.harvard.edu/sites/default/files/js/js_r9p12DhdkpD6Skcv5P884Yym85k42EITbZQyqMIN81c.js"></script>
+<script type="text/javascript" src="https://college.harvard.edu/sites/default/files/js/js_a-F2L5DD7B2BUQnm0d59zB6sGumcXIRL3EgHDfGlq-Q.js"></script>
+<script type="text/javascript" src="https://college.harvard.edu/sites/default/files/js/js_wsddnd40CcZNElnyzYtHzN70I34CUiw1SCs0IWoeFm4.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"harvard","theme_token":"NzC4KMA6p_tngwQGvhw7h7ulN6QDIv_e07CSWJt3LlM","jquery_version":"1.10","js":{"sites\/all\/modules\/contrib\/flexslider\/assets\/js\/flexslider.load.js":1,"sites\/all\/themes\/harvard\/js\/ga-snippet1.js":1,"sites\/all\/themes\/harvard\/js\/ga-snippet3.js":1,"sites\/all\/modules\/contrib\/addthis\/addthis.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery\/1.10\/jquery.min.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/external\/jquery.cookie.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/misc\/jquery.form.min.js":1,"misc\/ajax.js":1,"sites\/all\/modules\/contrib\/jquery_update\/js\/jquery_update.js":1,"sites\/all\/modules\/custom\/harvard_icons\/harvard_icons.js":1,"sites\/all\/modules\/contrib\/extlink\/extlink.js":1,"misc\/progress.js":1,"misc\/form.js":1,"misc\/collapse.js":1,"sites\/all\/modules\/contrib\/views\/js\/base.js":1,"sites\/all\/modules\/contrib\/views\/js\/ajax_view.js":1,"sites\/all\/modules\/contrib\/quicktabs\/js\/quicktabs.js":1,"sites\/all\/libraries\/flexslider\/jquery.flexslider-min.js":1,"\/\/platform.twitter.com\/widgets.js":1,"sites\/all\/modules\/contrib\/google_analytics\/googleanalytics.js":1,"0":1,"sites\/all\/modules\/contrib\/google_analytics_et\/js\/google_analytics_et.js":1,"sites\/all\/themes\/harvard\/js\/plugins\/chart.js":1,"sites\/all\/themes\/harvard\/js\/plugins\/detect.js":1,"sites\/all\/themes\/harvard\/js\/plugins\/matchMedia.js":1,"sites\/all\/themes\/harvard\/js\/plugins\/matchMedia.addListener.js":1,"sites\/all\/themes\/harvard\/js\/plugins\/enquire.min.js":1,"sites\/all\/themes\/harvard\/js\/plugins\/jquery.chosen.js":1,"sites\/all\/themes\/harvard\/js\/plugins\/jquery.datepicker.js":1,"sites\/all\/themes\/harvard\/js\/plugins\/jquery.equalheights.js":1,"sites\/all\/themes\/harvard\/js\/plugins\/jquery.masonry.js":1,"sites\/all\/themes\/harvard\/js\/plugins\/jquery.royalslider.min.js":1,"sites\/all\/themes\/harvard\/js\/plugins\/jquery.select.js":1,"sites\/all\/themes\/harvard\/js\/plugins\/jquery.waypoints.js":1,"sites\/all\/themes\/harvard\/js\/plugins\/jquery.sticky.js":1,"sites\/all\/themes\/harvard\/js\/plugins\/modernizr.js":1,"sites\/all\/themes\/harvard\/js\/dist\/all.js":1,"sites\/all\/themes\/harvard\/js\/script.js":1,"public:\/\/facebook_tracking_pixel\/fb_tkpx.156643444746123.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/modules\/contrib\/calendar\/css\/calendar_multiday.css":1,"modules\/comment\/comment.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"sites\/all\/modules\/contrib\/date\/date_repeat_field\/date_repeat_field.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/contrib\/field_collection_ajax\/css\/field-collection-ajax.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/contrib\/extlink\/extlink.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/flickr\/flickr.css":1,"sites\/all\/modules\/contrib\/flickr\/flickr_cc_icons_on_hover.css":1,"sites\/all\/modules\/contrib\/media\/modules\/media_wysiwyg\/css\/media_wysiwyg.base.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/panels\/css\/panels.css":1,"sites\/all\/modules\/contrib\/typogrify\/typogrify.css":1,"sites\/all\/themes\/harvard\/layouts\/harvard_threecol_33_34_33_stacked\/harvard_threecol_33_34_33_stacked.css":1,"sites\/all\/modules\/contrib\/quicktabs\/css\/quicktabs.css":1,"sites\/all\/modules\/contrib\/flexslider\/assets\/css\/flexslider_img.css":1,"sites\/all\/libraries\/flexslider\/flexslider.css":1,"sites\/all\/modules\/contrib\/twitter\/twitter.css":1,"sites\/all\/modules\/contrib\/panels\/plugins\/layouts\/twocol\/twocol.css":1,"sites\/all\/themes\/harvard\/css\/print.css":1,"sites\/all\/themes\/harvard\/css\/patchwork.css":1,"sites\/all\/themes\/harvard\/css\/screen.css":1,"sites\/all\/themes\/harvard\/css\/harvard.main.css":1,"sites\/all\/themes\/harvard\/css\/ie.css":1,"sites\/all\/themes\/harvard\/css\/ie--lt8.css":1}},"better_exposed_filters":{"views":{"news_improved":{"displays":{"panel_pane_1":{"filters":[]}}},"upcoming_events":{"displays":{"panel_pane_today":{"filters":[]},"panel_pane_tomorrow":{"filters":[]},"panel_pane_day_after_tomorrow":{"filters":[]}}},"harvard_recent_tweet":{"displays":{"block":{"filters":[]}}}}},"quicktabs":{"qt_upcoming_events":{"name":"upcoming_events","tabs":[{"vid":"upcoming_events","display":"panel_pane_today","args":"141","view_path":"node%2F127836","view_dom_id":1,"ajax_args":"141","actual_args":["141"]},{"vid":"upcoming_events","display":"panel_pane_tomorrow","args":"141","view_path":"node%2F127836","view_dom_id":2,"ajax_args":"141","actual_args":["141"]},{"vid":"upcoming_events","display":"panel_pane_day_after_tomorrow","args":"141","view_path":"node%2F127836","view_dom_id":3,"ajax_args":"141","actual_args":["141"]}],"ajaxPageState":{"jquery_version":"1.10"}}},"flexslider":{"optionsets":{"landing_page_carousel":{"namespace":"flex-","selector":".slides \u003E li","easing":"swing","direction":"horizontal","reverse":false,"smoothHeight":false,"startAt":0,"animationSpeed":600,"initDelay":0,"useCSS":true,"touch":true,"video":false,"keyboard":true,"multipleKeyboard":false,"mousewheel":0,"controlsContainer":".flex-control-nav-container","sync":"","asNavFor":"","itemWidth":0,"itemMargin":0,"minItems":0,"maxItems":0,"move":0,"animation":"fade","slideshow":true,"slideshowSpeed":"7000","directionNav":true,"controlNav":true,"prevText":"Previous","nextText":"Next","pausePlay":true,"pauseText":"Pause","playText":"Play","randomize":false,"thumbCaptions":false,"thumbCaptionsBoth":false,"animationLoop":true,"pauseOnAction":true,"pauseOnHover":false,"manualControls":""}},"instances":{"flexslider-1":"landing_page_carousel"}},"extlink":{"extTarget":"_blank","extClass":0,"extLabel":"(link is external)","extImgClass":0,"extIconPlacement":0,"extSubdomains":0,"extExclude":"(www\\.youvisit\\.com)","extInclude":"","extCssExclude":"","extCssExplicit":"","extAlert":0,"extAlertText":"This link will take you to an external web site.","mailtoClass":0,"mailtoLabel":"(link sends e-mail)"},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"googleAnalyticsETSettings":{"selectors":[{"event":"click","selector":".pane-fpid-606 form[action*=\u0022net-price-calculator\u0022] button[type=\u0022submit\u0022]","category":"NPC","action":"click","label":"module_large","value":0,"noninteraction":false},{"event":"mousedown","selector":".pane-fpid-636 a[href*=\u0022net-price\u0022]","category":"NPC","action":"click","label":"module_small","value":0,"noninteraction":false},{"event":"mousedown","selector":".pane-fpid-251 a[href*=\u0022application-tips\u0022]","category":"module","action":"click","label":"tips","value":0,"noninteraction":false},{"event":"mousedown","selector":".pane-fpid-246 a[href*=\u0022what-we-look\u0022]","category":"module","action":"click_look","label":"apply","value":0,"noninteraction":false},{"event":"mousedown","selector":".pane-fpid-246 a[href*=\u0022application-timeline\u0022]","category":"module","action":"click_when","label":"apply","value":0,"noninteraction":false},{"event":"mousedown","selector":".pane-fpid-246 a[href*=\u0022application-requirements\u0022]","category":"module","action":"click_submit","label":"apply","value":0,"noninteraction":false},{"event":"mousedown","selector":"#block-system-main.block .pane-fpid-866 a[href*=\u0022admissions\/apply\u0022]","category":"module","action":"click_apply","label":"belong","value":0,"noninteraction":false},{"event":"mousedown","selector":"#block-system-main.block .pane-fpid-866 a[href*=\u0022coming-home\u0022]","category":"module","action":"click_watchvideo","label":"belong","value":0,"noninteraction":false},{"event":"mousedown","selector":"#block-system-main.block .pane-fpid-866 a[href*=\u0022hear-students\/video\u0022]","category":"module","action":"click_allvideos","label":"belong","value":0,"noninteraction":false},{"event":"mousedown","selector":"#block-system-main.block .pane-fpid-71 a","category":"module","action":"click","label":"aid","value":0,"noninteraction":false},{"event":"mousedown","selector":"#block-system-main.block .content .page-content .container .carousel .carousel-viewport a","category":"carousel","action":"click","label":"!href","value":0,"noninteraction":false},{"event":"mousedown","selector":"#block-system-main.block .content .page-content .container .carousel .carousel-viewport a+a","category":"carousel","action":"click","label":"!href","value":0,"noninteraction":false},{"event":"mousedown","selector":"a[href^=\u0022https:\/\/itunes.apple.com\/us\/app\/\u0022]","category":"Appdownload","action":"offsiteclick","label":"iTunes","value":0,"noninteraction":false},{"event":"mousedown","selector":"a[href^=\u0022https:\/\/play.google.com\/store\/apps\/\u0022]","category":"Appdownload","action":"offsiteclick","label":"Googleplay","value":0,"noninteraction":false},{"event":"mousedown","selector":"a[href$=\u0022.pdf\u0022]","category":"download","action":"pdf","label":"!href","value":0,"noninteraction":false},{"event":"mousedown","selector":"a[href$=\u0022.doc\u0022]","category":"download","action":"doc","label":"!href","value":0,"noninteraction":false},{"event":"change","selector":"select[name=\u0022submitted[faq_topic]\u0022]","category":"Contactus","action":"submit","label":"!text","value":0,"noninteraction":false},{"event":"change","selector":"select[name=\u0022submitted[email_form][subject]\u0022]","category":"Contactus","action":"selectsubject","label":"!text","value":0,"noninteraction":false},{"event":"mousedown","selector":"#webform-client-form-846--2 input#edit-submit--2","category":"Contactus","action":"submit","label":"topic_subject","value":0,"noninteraction":false},{"event":"mousedown","selector":"form#webform-client-form-846--2.webform-client-form div fieldset#webform-component-email-form.webform-component-fieldset div.fieldset-wrapper div#webform-component-email-form--subject.form-item div#s2id_edit-submitted-email-form-subject--2.select2-container","category":"Contactus","action":"selectsubject","label":"!text","value":0,"noninteraction":false},{"event":"mousedown","selector":"a[href^=\u0022http\u0022]:not(a[href*=\u0022college.harvard.edu\u0022])","category":"offsitelink","action":"offsiteclick","label":"!href","value":0,"noninteraction":false},{"event":"mousedown","selector":"a[href*=\u0022user\/login\u0022]","category":"Login","action":"click","label":"!currentPage","value":0,"noninteraction":false},{"event":"mousedown","selector":"a[href*=\u0022\/about\/news-announcements\/\u0022]","category":"News","action":"click","label":"!currentPage","value":0,"noninteraction":false},{"event":"mousedown","selector":"a[href*=\u0022\/college-events\/\u0022]","category":"Events","action":"click","label":"!href","value":0,"noninteraction":false},{"event":"mousedown","selector":"#block-menu-menu-primary-menu li a","category":"nav_main","action":"click","label":"!text","value":0,"noninteraction":false},{"event":"mousedown","selector":"#block-harvard-site-harvard-audience-links ul li a","category":"nav_audience","action":"click","label":"!text","value":0,"noninteraction":false},{"event":"mousedown","selector":"ul.first-level.in li.last.expanded.active-trail.menu-level-2 ul.second-level li.leaf.menu-level-3","category":"Reply","action":"action","label":"label","value":0,"noninteraction":false},{"event":"mousedown","selector":"a[href^=\u0022http:\/\/news.harvard.edu\/gazette\u0022]","category":"Gazette","action":"offsiteclick","label":"!href","value":0,"noninteraction":false},{"event":"mousedown","selector":".pane-fpid-176 form[action*=\u0022net-price-calculator\u0022] button[type=\u0022submit\u0022]","category":"NPC","action":"click","label":"module_FAO","value":0,"noninteraction":false}],"settings":[]}});
+//--><!]]>
+</script>
+
+  
+  
+  
+  <!-- BEGIN inc/meta.php -->
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- END inc/meta.php -->
+
+  <!-- BEGIN inc/cssReference.php (conditional js only) -->
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="/sites/all/themes/harvard/js/plugins/html5shiv.js"></script>
+  <script type="text/javascript" src="/sites/all/themes/harvard/js/plugins/ie8.js"></script>
   <![endif]-->
-  <!--[if IE 9]>
-    <script src="/sites/all/themes/rias/bower_components/matchmedia/matchMedia.js"></script>
-    <script src="/sites/all/themes/rias/bower_components/matchmedia/matchMedia.addListener.js"></script>
-  <![endif]-->
-  <script src="https://www.radcliffe.harvard.edu/sites/default/files/js/js_LcFRnnSHVah-Aw_WQ8aVLXhp3HPJvrOe4h6YEXA5BT8.js"></script>
-<script src="https://www.radcliffe.harvard.edu/sites/default/files/js/js_THcwq4G882w3Eb1HklHrvzGAKa_-1g_0QbuBqjMhaV4.js"></script>
-<script src="https://www.radcliffe.harvard.edu/sites/default/files/js/js_3dDXiHrGRBsF7j6ur66cdsv1_aT_rByBWuXPdivPC3s.js"></script>
-<script src="https://www.radcliffe.harvard.edu/sites/default/files/js/js_GZAWuy1r78apWYfLg59_GvEIwMliFypYlquPLT6AaWE.js"></script>
-<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create", "UA-31414953-1", {"cookieDomain":"auto"});ga("send", "pageview");</script>
-<script src="https://www.radcliffe.harvard.edu/sites/default/files/js/js_LsOCEtwqk1hwRRFB3bMj1mfTy8kdFkIMa-olmd9b6eo.js"></script>
-<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"rias","theme_token":"OiEl2Wn2sP-oA9s7Le68xPTy7lPCzMBljw4uzJLQnPY","js":{"sites\/all\/modules\/contrib\/flexslider\/assets\/js\/flexslider.load.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery\/1.7\/jquery.min.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.core.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.widget.min.js":1,"sites\/all\/modules\/contrib\/entity_js\/entity.js":1,"sites\/all\/modules\/custom\/snowpants\/js\/xpandable.js":1,"sites\/all\/modules\/contrib\/extlink\/extlink.js":1,"sites\/all\/modules\/contrib\/nice_menus\/superfish\/js\/superfish.js":1,"sites\/all\/modules\/contrib\/nice_menus\/superfish\/js\/jquery.bgiframe.min.js":1,"sites\/all\/modules\/contrib\/nice_menus\/superfish\/js\/jquery.hoverIntent.minified.js":1,"sites\/all\/modules\/contrib\/nice_menus\/nice_menus.js":1,"sites\/all\/modules\/contrib\/compact_forms\/compact_forms.js":1,"sites\/all\/libraries\/flexslider\/jquery.flexslider.js":1,"sites\/all\/modules\/contrib\/google_analytics\/googleanalytics.js":1,"0":1,"sites\/all\/themes\/rias\/js\/modernizr.js":1,"sites\/all\/themes\/rias\/js\/throttle-debounce\/jquery.ba-throttle-debounce.min.js":1,"sites\/all\/themes\/rias\/bower_components\/enquire\/dist\/enquire.min.js":1,"sites\/all\/themes\/rias\/js\/dimension-utils.js":1,"sites\/all\/themes\/rias\/js\/script.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"misc\/ui\/jquery.ui.core.css":1,"misc\/ui\/jquery.ui.theme.css":1,"modules\/aggregator\/aggregator.css":1,"sites\/all\/modules\/contrib\/calendar\/css\/calendar_multiday.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/contrib\/mollom\/mollom.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/contrib\/extlink\/extlink.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/nice_menus\/nice_menus.css":1,"sites\/all\/modules\/contrib\/nice_menus\/nice_menus_default.css":1,"sites\/all\/modules\/contrib\/compact_forms\/compact_forms.css":1,"sites\/all\/libraries\/flexslider\/flexslider.css":1,"sites\/all\/modules\/contrib\/field_collection\/field_collection.theme.css":1,"sites\/all\/modules\/contrib\/ds\/layouts\/ds_2col\/ds_2col.css":1,"sites\/all\/themes\/rias\/bower_components\/fontawesome\/css\/font-awesome.min.css":1,"sites\/all\/themes\/rias\/system.menus.css":1,"sites\/all\/themes\/rias\/css\/shared.css":1,"sites\/all\/themes\/rias\/css\/nice_menus_default.css":1,"sites\/all\/themes\/rias\/css\/calendar_multiday.css":1,"sites\/all\/themes\/rias\/css\/flexslider.css":1,"sites\/all\/themes\/rias\/css\/all.css":1,"sites\/all\/themes\/rias\/css\/screen.css":1,"sites\/all\/themes\/rias\/css\/layouts\/phone.css":1,"sites\/all\/themes\/rias\/css\/layouts\/not-phone.css":1,"sites\/all\/themes\/rias\/css\/layouts\/tablet.css":1,"sites\/all\/themes\/rias\/css\/layouts\/desktop.css":1,"sites\/all\/themes\/rias\/css\/print.css":1}},"jcarousel":{"ajaxPath":"\/jcarousel\/ajax\/views"},"nice_menus_options":{"delay":"800","speed":"fast"},"better_exposed_filters":{"views":{"featured_events":{"displays":{"block_5":{"filters":[]}}},"highlights":{"displays":{"people":{"filters":[]},"programs":{"filters":[]},"collections":{"filters":[]}}},"nodequeue_2":{"displays":{"block_1":{"filters":[]}}},"featured_testimonials":{"displays":{"block_5":{"filters":[]}}}}},"compactForms":{"forms":["user-login-form","webform-client-form-9","search-block-form","webform-client-form-1312","webform-client-form-1292"],"stars":1},"rias":{"sliders":{".view-id-highlights.view-display-id-people":"[{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/katarina-burin_photo-by-kevin-grady-radcliffe-institute-380px.jpg\u0022,\u0022alt\u0022:\u0022Katarina Burin_photo by Kevin Grady\\\/Radcliffe Institute\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/katarina-burin\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/michelle-agnes-magalhaes_photo-by-tony-rinaldo_380px.jpg\u0022,\u0022alt\u0022:\u0022Michelle Agnes Magalhaes_photo by Tony Rinaldo\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/michelle-agnes-magalhaes\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/jodie-mack_photo-by-tony-rinaldo_380px.jpg\u0022,\u0022alt\u0022:\u0022Jodie Mack_photo by Tony Rinaldo\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/jodie-mack\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/jane-e.-g.-lipson_photo-by-tony-rinaldo_380px.jpg\u0022,\u0022alt\u0022:\u0022Jane E. G. Lipson_photo by Tony Rinaldo\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/jane-e-g-lipson\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/hala-aldosari_photo-by-tony-rinaldo_380px.jpg\u0022,\u0022alt\u0022:\u0022Hala Aldosari_photo by Tony Rinaldo\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/hala-aldosari\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/leah-whittington_photo-by-tony-rinaldo_380px.jpg\u0022,\u0022alt\u0022:\u0022Leah Whittington_photo by Tony Rinaldo\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/leah-whittington\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/julie-guthman_photo-by-tony-rinaldo_380px.jpg\u0022,\u0022alt\u0022:\u0022Julie Guthman_photo by Tony Rinaldo\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/julie-guthman\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/sophie-hochhausl_photo2-by-tony-rinaldo_380px.jpg\u0022,\u0022alt\u0022:\u0022Sophie Hochh\\u00e4usl_photo by Tony Rinaldo\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/sophie-hochhausl\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/clarissa-tossin_photo-by-kevin-grady_radcliffe-institute_380px.jpg\u0022,\u0022alt\u0022:\u0022Clarissa Tossin_photo by Kevin Grady\\\/Radcliffe Institute\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/clarissa-tossin\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/david-gruber_photo-by-tony-rinaldo_380px.jpg\u0022,\u0022alt\u0022:\u0022David Gruber_photo By Tony Rinaldo\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/david-gruber\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/francoise-n.hamlin_photo-by-tony-rinaldo_380px.jpg\u0022,\u0022alt\u0022:\u0022Fran\\u00e7oise N. Hamlin_photo by Tony Rinaldo\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/francoise-n-hamlin\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/shireen-hassim_photo-by-tony-rinaldo_380px.jpg\u0022,\u0022alt\u0022:\u0022Shireen Hassim_photo by Tony Rinaldo\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/shireen-hassim\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/lisa-haushofer_photo-by-tony-rinaldo_380px.jpg\u0022,\u0022alt\u0022:\u0022Lisa Haushofer_photo by Tony Rinaldo\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/lisa-haushofer\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/phillip-warnell_photo-by-tony-rinaldo_380px.jpg\u0022,\u0022alt\u0022:\u0022Phillip Warnell_photo by Topny Rinaldo\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/phillip-warnell\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/bouchra-khalili_photo-by-tony-rinaldo_380px.jpg\u0022,\u0022alt\u0022:\u0022Bouchra Khalili_photo by Tony Rinaldo\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/bouchra-khalili\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/samantha-power_photo-by-tony-rinaldo_380px.jpg\u0022,\u0022alt\u0022:\u0022Samantha Power_photo by Tony Rinaldo\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/samantha-power\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/kathryn-sikkink_photo-by-tony-rinaldo-380px.jpg\u0022,\u0022alt\u0022:\u0022Kathryn Sikkink_photo by Tony Rinaldo\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/kathryn-sikkink-radcliffe-professor\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/maurice-s.-lee_photo-by-tony-rinaldo_380px.jpg\u0022,\u0022alt\u0022:\u0022Maurice S. Lee_photo by Tony Rinaldo\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/maurice-s-lee\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/susan-a-murphy_courtesy-of-john-d-and-catherine-t-macarthur-foundation_380px.jpg\u0022,\u0022alt\u0022:\u0022Susan A. Murphy_courtesy of John D. \\u0026 Catherine T. MacArthur Foundation\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/susan-murphy-radcliffe-professor\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/nicola-l-b-pohl_photo-by-tony-rinaldo_380px.jpg\u0022,\u0022alt\u0022:\u0022Nicola L. B. Pohl_photo by Tony Rinaldo\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/nicola-l-b-pohl\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/amahl-a-bishara_photo-by-tony-rinaldo_380px.jpg\u0022,\u0022alt\u0022:\u0022Amahl A. Bishara_photo by Tony Rinaldo\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/amahl-a-bishara\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/zia-haider-rahman_photo-by-tony-rinaldo_380px.jpg\u0022,\u0022alt\u0022:\u0022Zia Haider Rahman_photo by Tony Rinaldo\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/zia-haider-rahman\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/adriaan-lanni_photo-by-tony-rinaldo_380px.jpg\u0022,\u0022alt\u0022:\u0022Adriaan Lanni_photo by Tony Rinaldo\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/adriaan-lanni\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/quito-swan_photo-by-tony-rinaldo_380px_0.jpg\u0022,\u0022alt\u0022:\u0022Quito Swan_photo by Tony Rinaldo\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/quito-swan\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/david-hibbett_photo-by-tony-rinaldo_380px.jpg\u0022,\u0022alt\u0022:\u0022David Hibbett_photo by Tony Rinaldo\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/david-hibbett\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/devah-pager_photo-by-tony-rinaldo_380px.jpg\u0022,\u0022alt\u0022:\u0022Devah Pager_photo by Tony Rinaldo\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/devah-pager-radcliffe-professor\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/thomas-lenormand_photo-by-tony-rinaldo_380px.jpg\u0022,\u0022alt\u0022:\u0022Thomas Lenormand_photo by Tony Rinaldo\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/thomas-lenormand\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/yun-ni_photo-by-tony-rinaldo_380px.jpg\u0022,\u0022alt\u0022:\u0022Yun Ni_photo by Tony Rinaldo\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/yun-ni\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/chad-l-williams_photo-by-tony-rinaldo_380px.jpg\u0022,\u0022alt\u0022:\u0022Chad L. Williams_photo by Tony Rinaldo\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/chad-l-williams\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/alyssa-a-goodman_photo-by-tony-rinaldo_380px.jpg\u0022,\u0022alt\u0022:\u0022Alyssa A. Goodman_photo by Tony Rinaldo\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/alyssa-a-goodman-faculty-director\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/jana-prikryl_photo-by-tony-rinaldo_380px.jpg\u0022,\u0022alt\u0022:\u0022Jana Prikryl_photo by Tony Rinaldo\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/jana-prikryl\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/alexandra-killewald_photo-by-tony-rinaldo_380px.jpg\u0022,\u0022alt\u0022:\u0022Alexandra Killewald_photo by Tony Rinaldo\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/steffani-jemison_photo-by-tony-rinaldo_380px.jpg\u0022,\u0022alt\u0022:\u0022Steffani Jemison_photo by Tony Rinaldo\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/steffani-jemison\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/hope-harvey_photo-by-tony-rinaldo_380px.jpg\u0022,\u0022alt\u0022:\u0022Hope Harvey_photo by Tony Rinaldo\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/hope-harvey\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/khalil-gibran-muhammad_photo-by-tony-rinaldo_380px.jpg\u0022,\u0022alt\u0022:\u0022Khalil Gibran Muhammad_photo by Tony Rinaldo\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/khalil-gibran-muhammad\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/morwaread-mary-farbood_photo-by-tony-rinaldo_380px.jpg\u0022,\u0022alt\u0022:\u0022Morwaread Mary Farbood_photo by Tony Rinaldo\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/morwaread-mary-farbood\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/shafi-goldwasser_photo-by-tony-rinaldo_380px.jpg\u0022,\u0022alt\u0022:\u0022Shafi Goldwasser_photo by Tony Rinaldo\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/shafi-goldwasser\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/rana-dajani_photo-by-tony-rinaldo_380px.jpg\u0022,\u0022alt\u0022:\u0022Rana Dajani_photo by Tony Rinaldo\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/rana-dajani\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/tamar-herzog_photo-by-kathleen-dooher_380px.jpg\u0022,\u0022alt\u0022:\u0022Tamar Herzog_photo by Kathleen Dooher\u0022,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/tamar-herzog-radcliffe-professor\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/erica-r.-edwards_photo-by-tony-rinaldo_380px.jpg\u0022,\u0022alt\u0022:\u0022Erica R. Edwards_photo by Tony Rinaldo\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/erica-r-edwards\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/janet_rich-edwards_photo_by_webb_chappell_380px_0.jpg\u0022,\u0022alt\u0022:\u0022Janet Rich-Edwards_photo by Webb Chappell\u0022,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/janet-rich-edwards?pager_tid=37\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/ifeoma-fafunwa_photo-by-tony-rinaldo_380px.jpg\u0022,\u0022alt\u0022:\u0022Ifeoma Fafunwa_photo by Tony Rinaldo\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/ifeoma-fafunwa\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/paul-j.-kosmin_photo-by-tony-rinaldo_380px.jpg\u0022,\u0022alt\u0022:\u0022Paul J. Kosmin_photo by Tony Rinaldo\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/paul-j-kosmin\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/martha-minow_photo-by-tony-rinaldo_380px.jpg\u0022,\u0022alt\u0022:\u0022Martha Minow_photo by Tony Rinaldo\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/martha-minow\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/doohwan-ahn_photo-by-tony-rinaldo_380px.jpg\u0022,\u0022alt\u0022:\u0022Doohwan Ahn_photo by Tony Rinaldo\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/doohwan-ahn\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/ziheng-yang_photo-by-tony-rinaldo_380px.jpg\u0022,\u0022alt\u0022:\u0022Ziheng Yang_photo by Tony Rinaldo\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/ziheng-yang\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/adela-pinch_photo-by-kevin-grady-radcliffe-institute_380px.jpg\u0022,\u0022alt\u0022:\u0022Adela Pinch_photo by Kevin Grady Radcliffe Institute\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/adela-pinch\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/patricia-j.-williams_photo-by-tony-rinaldo_380px.jpg\u0022,\u0022alt\u0022:\u0022Patricia J. Williams_photo by Tony Rinaldo\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/patricia-j-williams\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/michael-bronstein_photo-by-tony-rinaldo_380px.jpg\u0022,\u0022alt\u0022:\u0022Michael Bronstein_photo by Tony Rinaldo\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/michael-bronstein\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/sara-bleich_photo-by-tony-rinaldo_380px.jpg\u0022,\u0022alt\u0022:\u0022Sara Bleich_photo by Tony Rinaldo\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/sara-bleich-radcliffe-professor\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/teru-miyake_photo-by-tony-rinaldo_380px.jpg\u0022,\u0022alt\u0022:\u0022Teru Miyake_photo by Tony Rinaldo\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/teru-miyake\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/yukio_lippit_photo_by_webb_chappell_380px_0.jpg\u0022,\u0022alt\u0022:\u0022Yukio Lippit_photo by Webb Chappell\u0022,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/yukio-lippit?pager_tid=37\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/jonathan-guyer_photo-by-tony-rinaldo_380px.jpg\u0022,\u0022alt\u0022:\u0022Jonathan Guyer_photo by Tony Rinaldo\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/jonathan-guyer\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/cora-dvorkin_photo-by-kevin-grady-radcliffe-staff-photographer_380px.jpg\u0022,\u0022alt\u0022:\u0022Cora Dvorkin_photo by Kevin Grady, Radcliffe Staff Photographer\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/cora-dvorkin\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/robert-darnton_photo-by-tony-rinaldo_380px.jpg\u0022,\u0022alt\u0022:\u0022Robert Darnton_photo by Tony Rinaldo\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/robert-darnton\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/janina-wellmann_photo-by-tony-rinaldo_380px.jpg\u0022,\u0022alt\u0022:\u0022Janina Wellmann_photo by Tony Rinaldo\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/janina-wellmann\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/axel-meyer_photo-by-tony-rinaldo_380px.jpg\u0022,\u0022alt\u0022:\u0022Axel Meyer_photo by Tony Rinaldo\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/axel-meyer\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/daniel_carpenter_photo_by_webb_chappell_380px_0.jpg\u0022,\u0022alt\u0022:\u0022Daniel Carpenter_photo by Webb Chappell\u0022,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/daniel-carpenter-0?pager_tid=37\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/intisar-a-rabb_photo-by-tony-rinaldo_380px.jpg\u0022,\u0022alt\u0022:\u0022Intisar A. Rabb_photo by Tony Rinaldo\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/intisar-a-rabb-radcliffe-professor\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/camilo-mendez_photo-by-tony-rinaldo_380px.jpg\u0022,\u0022alt\u0022:\u0022Camilo Mendez_photo by Tony Rinaldo\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/camilo-mendez\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/malcolm-j.-perry-photo-by-tony-rinaldo_380px.jpg\u0022,\u0022alt\u0022:\u0022Malcolm J. Perry_photo by Tony Rinaldo\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/malcolm-j-perry\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/leah-wright-rigueur_photo-by-tony-rinaldo_380px.jpg\u0022,\u0022alt\u0022:\u0022Leah Wright Rigueur_photo by Tony Rinaldo\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/leah-wright-rigueur\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/sharon-marcus_photo-by-tony-rinaldo_380px.jpg\u0022,\u0022alt\u0022:\u0022Sharon Marcus_photo by Tony Rinaldo\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/people\\\/sharon-marcus\u0022,\u0022loaded\u0022:false}]",".view-id-highlights.view-display-id-programs":"[{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/altered_gazes_380px.jpg\u0022,\u0022alt\u0022:\u0022Altered Gazes\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/event\\\/2017-altered-gazes-exhibition\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/radcliffe-institute-fellowship-program_380px.jpg\u0022,\u0022alt\u0022:\u0022Radcliffe Institute Fellowship Program\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/fellowship-program\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/ripac_cycle_4_380px.jpg\u0022,\u0022alt\u0022:\u0022Radcliffe Institute Public Art Competition\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/publicart\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/schlesinger_library_film_series_380px.jpg\u0022,\u0022alt\u0022:\u0022Schlesinger Library Film Series\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/calendar\\\/list?keys=\\u0026type%5B%5D=13\\u0026date_filter%5Bvalue%5D%5Bdate%5D=2017-09-18\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/schlesinger-library_grants_380.jpg\u0022,\u0022alt\u0022:\u0022Schlesinger Library Grants\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/schlesinger-library\\\/grants\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/boston_seminar_380.jpg\u0022,\u0022alt\u0022:\u0022Boston Seminar Series on the History of Women, Gender, and Sexuality\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/calendar\\\/list?keys=\\u0026type%5B%5D=697\\u0026date_filter%5Bvalue%5D%5Bdate%5D=2017-06-09\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/radcliffe-fellows-presentation-series_380px.jpg\u0022,\u0022alt\u0022:\u0022Radcliffe Fellows\\u0027 Presentation Series\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/calendar\\\/list?keys=\\u0026type%5B%5D=5\\u0026date_filter%5Bvalue%5D%5Bdate%5D=2017-07-12\\u0026items_per_page=All\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/feminist_archeology_380px.jpg\u0022,\u0022alt\u0022:\u0022Feminist Archaeology: Exhibition by Jennifer Bornstein RI \\u002715\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/event\\\/2017-jennifer-bornstein-exhibition\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/epidemics_lecture_series_web_380px.jpg\u0022,\u0022alt\u0022:\u0022Epidemics Science Lecture Series\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/event\\\/2018-anne-louise-oaklander-lecture\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/in_any_direction_postcard_380.jpg\u0022,\u0022alt\u0022:\u0022In Any Direction: Artwork in Progress at the Radcliffe Institute\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/event\\\/2018-in-any-direction-exhibition\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/radcliffe_exploratory_seminars_and_workshops_380px.jpg\u0022,\u0022alt\u0022:\u0022Radcliffe Exploratory Seminars and Workshops\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/academic-ventures\\\/seminars-workshops\u0022,\u0022loaded\u0022:false}]",".view-id-highlights.view-display-id-collections":"[{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/betty-friedan-ca-1965_photo-courtesy-of-schlesinger-library_380px_0.jpg\u0022,\u0022alt\u0022:\u0022Betty Friedan, ca. 1965. Courtesy of Schlesinger Library\u0022,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/schlesinger-library\\\/collection\\\/betty-friedan\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/harriet-beecher-stowe_photo-courtesy-of-schlesinger-library_312px_0.jpg\u0022,\u0022alt\u0022:\u0022Harriet Beecher Stowe_photo courtesy of the Schlesinger Library\u0022,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/schlesinger-library\\\/collection\\\/beecher-stowe-family\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/pauli_murray_c_1949_courtesy_of_schlesinger_library_312px_0.jpg\u0022,\u0022alt\u0022:\u0022Pauli Murray_photo courtesy of Schlesinger Library\u0022,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/schlesinger-library\\\/pauli-murray-papers\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/florence_julie_lillibridge_1937_courtesy_of_schlesinger_library_312px__0.jpg\u0022,\u0022alt\u0022:\u0022Florence Julie Lillibridge, high-school graduation photograph, 1937, Vermillion, South Dakota. Lillibridge collection at the Schlesinger Library\u0022,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/news\\\/schlesinger-newsletter\\\/writing-in-code\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/jean-valentine_1967-1968_courtesy-of-jean-valentine-papers-schlesinger-library_380px_0.jpg\u0022,\u0022alt\u0022:\u0022Jean Valentine,1967\\u20131968. Courtesy of Jean Valentine Papers, Schlesinger Library\u0022,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/schlesinger-library\\\/collection\\\/jean-valentine\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/little_lulu_courtesy_of_schlesinger_library_380px.jpg\u0022,\u0022alt\u0022:\u0022Little Lulu_courtesy of Schlesinger Library\u0022,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/news\\\/in-news\\\/little-lulu-comes-harvard\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/maud-wood-park_photo-courtesy-of-schlesinger-library_312px_0.jpg\u0022,\u0022alt\u0022:\u0022Maud Wood Park_photo courtesy of Schlesinger Library\u0022,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/schlesinger-library\\\/collection\\\/papers-maud-wood-park-in-womans-rights-collection\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/judy_chicago_380px_0.jpg\u0022,\u0022alt\u0022:\u0022Judy Chicago\u0022,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/schlesinger-library\\\/collection\\\/judy-chicago\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/amelia-earhart_courtesy-of-schlesinger-library_312px_0.jpg\u0022,\u0022alt\u0022:\u0022Amelia Earhart, courtesy of Schlesinger Library\u0022,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/schlesinger-library\\\/amelia-earhart-papers\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/shirley-graham-du-bois-in-profile_ca-1945_photo-by-calhoun_courtesy-of-shirley-graham-du-bois-papers-schlesinger-library_380px.jpg\u0022,\u0022alt\u0022:\u0022Shirley Graham Du Bois\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/schlesinger-library\\\/collection\\\/shirley-graham-du-bois\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/great-brewster-island_illustration-by-stephanie-schorow_312px_0.jpg\u0022,\u0022alt\u0022:\u0022Great Brewster island_illustration by Stephanie Schorow\u0022,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/schlesinger-library\\\/collection\\\/helen-augusta-whittier-album\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/florence-edmonds-by-judith-sedwick-courtesy-of-schlesinger-library_380px.jpg\u0022,\u0022alt\u0022:\u0022Florence Edmonds. Photo by Judith Sedwick, courtesy of Schlesinger Library\u0022,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/schlesinger-library\\\/collection\\\/black-women-oral-history-project\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/florynce-kennedy-speaking-at-california-state-university_ca-1975-1980_courtesy-of-schlesinger-library_380px.jpg\u0022,\u0022alt\u0022:\u0022Collections: Florynce Kennedy\u0022,\u0022width\u0022:380,\u0022height\u0022:235,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/schlesinger-library\\\/collection\\\/florynce-kennedy\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/cordero-and-her-children_1958-1966_courtesy-of-schlesinger-library_380px.jpg\u0022,\u0022alt\u0022:\u0022Ana Livia Cordero with her children, 1958\\u20131966. Courtesy of Schlesinger Library\u0022,\u0022width\u0022:380,\u0022height\u0022:235,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/schlesinger-library\\\/collection\\\/ana-livia-cordero\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/radcliffe-students-at-ywca-conference-silver-bay-ny-1916_courtesy-schlesinger-library_380px.jpg\u0022,\u0022alt\u0022:\u0022Radcliffe students attending YWCA conference at Silver Bay, New York, 1916. Courtesy of Schlesinger Library\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/schlesinger-library\\\/collection\\\/radcliffe-college-archives\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/june-jordan_courtesy-of-schlesinger-library_312px_0.jpg\u0022,\u0022alt\u0022:\u0022June Jordan_courtesy of Schlesinger Library\u0022,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/schlesinger-library\\\/collection\\\/june-jordan-papers\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/gerda-lerner_photo_by_martha_nelson_courtesy-of-schlesinger-library_380px_0.jpg\u0022,\u0022alt\u0022:\u0022Gerda Lerner. Photo by Martha Nelson, courtesy of Schlesinger Library\u0022,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/schlesinger-library\\\/collection\\\/gerda-lerner\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/nancy_fisher_radcliffe_college_class_of_1954_courtesy_of_radcliffe_archives_schlesinger_library_312px_0.jpg\u0022,\u0022alt\u0022:\u0022It\\u0027s Complicated: 375 Years of Women at Harvard\u0022,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/schlesinger-library\\\/exhibit\\\/its-complicated-375-years-women-harvard\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/dorothy-west-by-judith-sedwick-courtesy-of-schlesinger-library_380px.jpg\u0022,\u0022alt\u0022:\u0022Dorothy West. Photo by Judith Sedwick, courtesy of Schlesinger Library\u0022,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/schlesinger-library\\\/collection\\\/dorothy-west\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/charlotte-hawkins-brown_photo-by-butler-studio-ny_courtesy-of-schlesinger-library_380px.jpg\u0022,\u0022alt\u0022:\u0022Charlotte Hawkins Brown, ca. 1913-1933. Photo by Butler Studios NY, courtesy of Schlesinger Library\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/news\\\/schlesinger-newsletter\\\/pforzheimer-fellow-digitizes-charlotte-hawkins-brown-papers\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/doris-zine-cover_courtesy-of-schlesinger-library_380px.jpg\u0022,\u0022alt\u0022:\u0022Doris zine cover_courtesy of Schlesinger Library\u0022,\u0022width\u0022:400,\u0022height\u0022:248,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/news\\\/schlesinger-newsletter\\\/finding-zines-in-archives-and-archives-in-zines\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/members-of-delta-sigma-theta_ca-1940_courtesy-of-schlesinger-library_380px.jpg\u0022,\u0022alt\u0022:\u0022Delta Sigma Theta Sorority, Boston Alumnae Chapter\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/schlesinger-library\\\/collection\\\/delta-sigma-theta-sorority-boston-alumnae-chapter\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/julia-child_courtesy-of-schlesinger-library_380px.jpg\u0022,\u0022alt\u0022:\u0022Julia Child_courtesy of Schlesinger Library\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/schlesinger-library\\\/collection\\\/julia-child\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/adrienne-c.-rich_photo-by-jon-chase-harvard-staff-photographer_312px_0.jpg\u0022,\u0022alt\u0022:\u0022Adrienne C. Rich_photo by Jon Chase Harvard Staff Photographer\u0022,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/schlesinger-library\\\/collection\\\/adrienne-rich\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/mildred-jefferson-ca-1947_courtesy-of-mildred-jefferson-papers-schlesinger-library_380px_0.jpg\u0022,\u0022alt\u0022:\u0022Portrait of Mildred Jefferson, ca. 1947. Courtesy of Mildred Jefferson Papers, Schlesinger Library\u0022,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/schlesinger-library\\\/collection\\\/mildred-jefferson\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/alice-paul_ca-1915-1925_photo-by-edmonston_courtesy-of-schlesinger-library_380px.jpg\u0022,\u0022alt\u0022:\u0022Collections: Alice Paul\u0022,\u0022width\u0022:386,\u0022height\u0022:240,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/schlesinger-library\\\/collection\\\/alice-paul\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/from-the-bill-baird-collection_courtesy-of-schlesinger-library_380px.jpg\u0022,\u0022alt\u0022:\u0022From the Bill Baird collection_courtesy of Schlesinger Library\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/news\\\/schlesinger-newsletter\\\/birth-collection\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/ellen_willis_courtesy_of_nona_willis_aronowitz_312px_0.jpg\u0022,\u0022alt\u0022:\u0022Ellen Willis_courtesy of Nona Willis Aronowitz\u0022,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/news\\\/schlesinger-newsletter\\\/papers-cultural-critic-ellen-willis-1941%E2%80%932006-now-schlesinger\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/courtesy-of-dorothy-kirchwey-brown-papers-schlesinger-library_380px.jpg\u0022,\u0022alt\u0022:\u0022Unidentified black American midwife cradling an infant, ca. 1927-1929. Dorothy Kirchwey Brown Papers, Schlesinger Library\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/news\\\/schlesinger-newsletter\\\/race-and-infant-mortality-slavery-great-migration\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/barbara-deming-1966_courtesy-of-schlesinger-library_380px.jpg\u0022,\u0022alt\u0022:\u0022Barbara Deming-1966_courtesy-of-Schlesinger-Library\u0022,\u0022width\u0022:487,\u0022height\u0022:303,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/schlesinger-library\\\/collection\\\/barbara-deming\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/now-national-conference_1974_photo-by-bettye-lane_380px_0.jpg\u0022,\u0022alt\u0022:\u0022NOW National Conference, 1974. Photo by Bettye Lane\u0022,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/schlesinger-library\\\/collection\\\/records-national-organization-women\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/phyllis-schlafly-selling-bread-for-stop-era-fund-springfield-illinois-capitol-building_1980_photo-by-dorothea-jacobson-wenzel_courtesy-of-schlesinger-library_380px.jpg\u0022,\u0022alt\u0022:\u0022\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/schlesinger-library\\\/blog\\\/phyllis-schlafly-conservative-voice-schlesinger-library\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/blackwell-family-members_december-1902_courtesy-of-blackwell-family-papers-schlesinger-library_380px.jpg\u0022,\u0022alt\u0022:\u0022Blackwell Family Collection at the Schlesinger Library\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/schlesinger-library\\\/collection\\\/blackwell-family\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/susan-b-anthony-collection_380px.jpg\u0022,\u0022alt\u0022:\u0022Susan B. Anthony collection\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/schlesinger-library\\\/collection\\\/susan-b-anthony\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/helen-keller-reading-a-braille-book_courtesy-of-schlesinger-library_380px.jpg\u0022,\u0022alt\u0022:\u0022Helen Keller_courtesy of Schlesinger Library\u0022,\u0022width\u0022:582,\u0022height\u0022:362,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/schlesinger-library\\\/helen-keller-papers\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/anna-chennault_photo-courtesy-of-schlesinger-library_312px_0.jpg\u0022,\u0022alt\u0022:\u0022Anna Chennault_photo courtesy of Schlesinger Library\u0022,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/schlesinger-library\\\/collection\\\/anna-chennault\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/votes-for-women-wanted-everywhere_courtesy-of-schlesinger-library-380px.jpg\u0022,\u0022alt\u0022:\u0022Grand Old Women\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/news\\\/schlesinger-newsletter\\\/grand-old-women\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/zarela-martinez_photo-by-laurie-smith-courtesy-of-schlesinger-library_380px_0.jpg\u0022,\u0022alt\u0022:\u0022Zarela Martinez. Photo by Laurie Smith, courtesy of Schlesinger Library\u0022,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/news\\\/schlesinger-newsletter\\\/zarela-pioneer-regional-mexican-cuisine\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/july-1972-inaugural-issue-of-ms-magazine_courtesy-of-schlesinger-library_380px.jpg\u0022,\u0022alt\u0022:\u0022Ms. Magazine inaugural issue_courtesy of Schlesinger Library\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/schlesinger-library\\\/collection\\\/magazines-and-zines\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/elizabeth-blackwell-stamp-issued-by-us-postal-service_1974_courtesy-of-schlesinger-library_312px_0.jpg\u0022,\u0022alt\u0022:\u0022[The stamp issued in 1974 by the United States Postal Service in honor of Elizabeth Blackwell. Courtesy of Schlesinger Library] \u0022,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/news\\\/schlesinger-newsletter\\\/elizabeth-blackwells-struggle-become-doctor\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/shere-hite-1976_courtesy-of-schlesinger-library_380px.jpg\u0022,\u0022alt\u0022:\u0022Shere-Hite-1976_courtesy-of-Schlesinger-Library\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/schlesinger-library\\\/collection\\\/shere-hite\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/charlotte-perkins-gilman_ca-1909-1915_lena-connell-london-england_charlotte-perkins-gilman-papers_schlesinger-library_380px_0.jpg\u0022,\u0022alt\u0022:\u0022Charlotte Perkins Gilman_ca 1909-1915_Lena Connell-London-England_Charlotte   Perkins Gilman Papers_Schlesinger Library\u0022,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/schlesinger-library\\\/collection\\\/charlotte-perkins-gilman\u0022,\u0022loaded\u0022:false},{\u0022src\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/sites\\\/default\\\/files\\\/field_homepage_carousel_image\\\/homepage_feature\\\/corita-on-cover-of-sisters-of-the-immaculate-heart-of-mary-brochure_courtesy-of-papers-of-corita-schlesinger-library_380px.jpg\u0022,\u0022alt\u0022:\u0022Corita Kent_courtesy of Schlesinger Library\u0022,\u0022width\u0022:380,\u0022height\u0022:236,\u0022href\u0022:\u0022https:\\\/\\\/www.radcliffe.harvard.edu\\\/schlesinger-library\\\/collection\\\/corita-kent\u0022,\u0022loaded\u0022:false}]"},"themePath":"\/sites\/all\/themes\/rias"},"flexslider":{"optionsets":{"featured_videos_carousel":{"namespace":"flex-","selector":".slides \u003E li","easing":"swing","direction":"horizontal","reverse":false,"smoothHeight":false,"startAt":0,"animationSpeed":600,"initDelay":0,"useCSS":false,"touch":true,"video":false,"keyboard":true,"multipleKeyboard":false,"mousewheel":0,"controlsContainer":".flex-control-nav-container","sync":"","asNavFor":"","itemWidth":33,"itemMargin":0,"minItems":0,"maxItems":3,"move":0,"animation":"slide","slideshow":false,"slideshowSpeed":"7000","directionNav":true,"controlNav":false,"prevText":"Previous","nextText":"Next","pausePlay":false,"pauseText":"Pause","playText":"Play","randomize":false,"animationLoop":false,"pauseOnAction":true,"pauseOnHover":false,"manualControls":""}},"instances":{"flexslider-1":"featured_videos_carousel"}},"extlink":{"extTarget":"_blank","extClass":0,"extLabel":"(link is external)","extImgClass":0,"extSubdomains":0,"extExclude":"","extInclude":"","extCssExclude":"","extCssExplicit":"","extAlert":0,"extAlertText":"This link will take you to an external web site. We are not responsible for their content.","mailtoClass":0,"mailtoLabel":"(link sends e-mail)"},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"urlIsAjaxTrusted":{"\/":true}});</script>
+  <!-- END inc/cssReference.php -->
+
+<script src="https://use.typekit.net/eqx7xwa.js"></script>
+<script>try{Typekit.load(
+{ async: true }
+);}catch(e){}</script>
+
+
 </head>
-<body class="html front not-logged-in no-sidebars page-node page-node- page-node-2407 node-type-homepage-only" >
-      <p id="skip-link">
-      <a href="#main-menu" class="element-invisible element-focusable">Jump to navigation</a>
-    </p>
-      <div id="page-wrapper" class="clearfix">
-  <div id="page" class="clearfix">
 
-    <header id="header" role="banner" class="clearfix">
+<body class="html front not-logged-in no-sidebars page-node page-node- page-node-127836 node-type-landing-page front " >
 
-              <a href="/" title="Home" rel="home" id="logo">
-          <img src="/sites/all/themes/rias/images/logo_xlarge.png" alt="Home" width="383" height="100" />
-        </a>
-      
-      
-      
-        <div class="header__region region region-header clearfix">
-    <div id="block-menu-block-6" class="block block-menu-block first odd clearfix block-menu_block-6" role="navigation">
+  
+  <!-- BEGIN inc/skip.php -->
+  <a class="anchor-link element-invisible element-focusable" href="#main-top">Skip to main content</a>
+  <!-- END inc/skip.php -->
 
-      
-	<div class="content">
-    <div class="menu-block-wrapper menu-block-6 menu-name-menu-global-nav parent-mlid-0 menu-level-1">
-  <ul class="inline global-nav menu"><li class="menu__item is-leaf first leaf menu-mlid-3180 node-1322"><a href="/campaign/ways-to-give" class="menu__link">Give</a></li><li class="menu__item is-parent is-leaf leaf has-children menu-mlid-2011 node-40"><a href="/campaign" class="menu__link">Campaign</a></li><li class="menu__item is-leaf last leaf menu-mlid-958 node-1312"><a href="/subscribe-news" class="menu__link">Subscribe</a></li></ul></div>
+  
+  <!-- BEGIN inc/page-header.php -->
+<header class="page-header" role="banner">
+
+  <div class="high-level">
+    <div class="wrap">
+      <strong class="title"><a href="http://www.harvard.edu" class="logo ir">Harvard University</a></strong>
+      <span class="url in"><a href="http://www.harvard.edu">harvard.edu</a></span>
+    </div>
+  </div>
+
+	<div class="top-level">
+    <div class="sticky-background"></div>
+		<div class="wrap">
+	  		<div class="title bk3-1of3">
+				<div class="in">
+		  			<strong><a href="/" class="logo ir ">Harvard College Admissions &amp; Financial Aid</a></strong>
+				</div>
+			</div>
+			<div class="header-toolbar right-align in bk4-2of3">
+	  			<ul class="header-toolbar-triggers row">
+					<li><a href="#search" data-target="search-global" class="search"><span class="icon-search"></span><span class="nodisplay">Search</span></a></li>
+					<li><a href="#global-menu" data-target="nav" class="menu"><span class="icon-menu"></span><span class="nodisplay">Menu</span></a></li>
+				</ul>
+	  			<div class="header-toolbar-window">
+		  			<div class="in">
+            			  <div class="region region-utility-links">
+    <nav id="block-menu-menu-utility-links" class="block block-menu" aria-labelledby="menu-utility-links" role="navigation">
+
+    <h2 class="element-invisible" id="menu-utility-links">Utility Links</h2>
+  
+  <div class="content">
+    <ul class="utility-links utility-links--primary"><li class="first leaf menu-level-1"><a href="http://my.harvard.edu" title="">my.harvard</a></li>
+<li class="leaf menu-level-1"><a href="/frequently-asked-questions" title="">FAQs</a></li>
+<li class="leaf menu-level-1"><a href="https://www.directory.harvard.edu/phonebook/" title="">Directory</a></li>
+<li class="last leaf menu-level-1"><a href="/college-events" title="">College Events</a></li>
+</ul><ul class="utility-links utility-links--secondary"><li class="utility-links__link--admitted-students"><a href="/admitted-students-login">Admitted Students</a></li></ul>  </div>
+</nav>
+  </div>
+            <div class="search-wrapper">
+              <form action="/search-results" method="get" id="search" class="search search-global">
+                <div class="search-wrap">
+                  <label for="searchtext">Search:</label>
+                  <div class="form-input-search">
+                    <input type="text" id="searchtext" name="searchtext" />
+                  </div>
+                  <div class="form-input-submit">
+                    <button type="submit" class="icon-search"><span class="element-invisible">Submit search</span></button>
+                  </div>
+                </div>
+              </form>
+            </div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 
+  <nav id="global-menu" class="global-nav nav" role="navigation" aria-labelledby="menu-primary-menu">
+    <div class="wrap">
+      <div class="in">
+          <div class="region region-header">
+    <div id="block-menu-menu-primary-menu" class="block block-menu" aria-labelledby="menu-primary-menu">
+
+    <h2 class="element-invisible" id="menu-primary-menu">Main menu</h2>
+  
+  <div class="content">
+    <ul class="menu"><li class="first leaf"><a href="/about" title="">About</a></li>
+<li class="leaf"><a href="/admissions" title="">Admissions</a></li>
+<li class="leaf"><a href="/financial-aid" title="">Financial Aid</a></li>
+<li class="leaf"><a href="/academics" title="">Academics</a></li>
+<li class="last leaf"><a href="/student-residentiallife" title="">Student &amp; Residential Life</a></li>
+</ul>  </div>
 </div>
-<div id="block-search-form" class="block block-search plain last even clearfix block-search-form" role="search">
-
-      
-	<div class="content">
-    <form action="/" method="post" id="search-block-form" accept-charset="UTF-8"><div><div class="container-inline">
-      <h2 class="element-invisible">Search form</h2>
-    <div class="form-item clearfix form-type-textfield form-item-search-block-form">
-  <label class="element-invisible" for="edit-search-block-form--2">Search </label>
- <input title="Enter the terms you wish to search for." type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128" class="form-text" />
-</div>
-<div class="form-actions form-wrapper" id="edit-actions"><input type="image" id="edit-submit" name="submit" value="Search" src="https://www.radcliffe.harvard.edu/sites/all/themes/rias/images/icons/search-button.png" class="form-image" /></div><input type="hidden" name="form_build_id" value="form-ibOS60XHfyqwQri_PikszPN6mRt9fm-Q7ZiRrcKKQbA" />
-<input type="hidden" name="form_id" value="search_block_form" />
-</div>
-</div></form>	</div>
-
-</div>
-  </div><!-- /.region -->
-                                                  
-
-    </header>
-
-    <div id="navigation">
-
-      
-      <div class="phone-only" hidden="true">
-      	<button id="toggle-menu">
-      		Menu      		<i class="fa fa-chevron-right"></i>
-      	</button>
+  </div>
       </div>
-        <div class="region region-navigation clearfix">
-    <div id="block-nice-menus-1" class="block block-nice-menus plain first last odd clearfix block-nice_menus-1">
-
-      
-	<div class="content">
-    <ul class="menu nice-menu nice-menu-down" id="nice-menu-1"><li class="menu-2356 menuparent menu-path-node-2 first  odd "><a href="/about-us" class="major">About Us</a><ul><li class="menu-3789 menu-path-about-us-our-history first  odd "><a href="/about-us/our-history">History</a></li><li class="menu-7154 menu-path-leadership-32 even "><a href="/about-us/leadership">Leadership</a></li><li class="menu-5764 menu-path-leadership-36 odd "><a href="/about-us/radcliffe-professors">Radcliffe Professors</a></li><li class="menu-7294 menu-path-about-us-faculty-directors even "><a href="/about-us/faculty-directors">Faculty Directors</a></li><li class="menu-4208 menu-path-node-1634 odd "><a href="/grants-funding">Grants &amp; Funding</a></li><li class="menu-4819 menu-path-node-2369 even "><a href="/publicart">Public Art</a></li><li class="menu-962 menu-path-node-50 odd "><a href="/about-us/employment">Employment</a></li><li class="menu-963 menu-path-node-51 even  last "><a href="/about-us/conference-rooms-housing">Rooms &amp; Housing</a></li></ul>
-</li><li class="menu-777 menuparent menu-path-node-12 even "><a href="/fellowship-program" class="major">Fellowship Program</a><ul><li class="menu-1445 menu-path-fellowship-program-fellows first  odd "><a href="/fellowship-program/fellows?year[0]=2017" title="">Fellows</a></li><li class="menu-3785 menu-path-node-55 even "><a href="/fellowship-program/how-apply">How to Apply</a></li><li class="menu-968 menu-path-node-56 odd "><a href="/fellowship-program/harvard-student-research-partnerships">Harvard Student Research Partnerships</a></li><li class="menu-3404 menu-path-node-57 even "><a href="/fellowship-program/graduate-student-fellows">Graduate Student Fellows</a></li><li class="menu-970 menu-path-node-58 odd  last "><a href="/fellowship-program/history-program">History of the Program</a></li></ul>
-</li><li class="menu-778 menuparent menu-path-node-13 odd "><a href="/academic-ventures" class="major">Academic Ventures</a><ul><li class="menu-3378 menu-path-node-59 first  odd "><a href="/academic-ventures/conferences-lectures">Conferences &amp; Lectures</a></li><li class="menu-7155 menu-path-leadership-37 even "><a href="/academic-ventures/faculty-directors">Faculty Directors</a></li><li class="menu-4820 menu-path-node-2376 odd "><a href="/academic-ventures/funding-opportunities-seminars-workshops">Funding Opportunities: Seminars &amp; Workshops</a></li><li class="menu-4933 menu-path-node-2410 even "><a href="/academic-ventures/research-initiatives">Research Initiatives</a></li><li class="menu-974 menu-path-node-62 odd  last "><a href="/academic-ventures/engagement-opportunities">Engagement Opportunities</a></li></ul>
-</li><li class="menu-781 menuparent menu-path-node-16 even "><a href="/schlesinger-library" class="major">Schlesinger Library</a><ul><li class="menu-976 menu-path-node-63 first  odd "><a href="/schlesinger-library/about-library">About the Library</a></li><li class="menu-3287 menu-path-node-95 even "><a href="/schlesinger-library/collections">Collections</a></li><li class="menu-7776 menu-path-schlesinger-library-exhibitions odd "><a href="/schlesinger-library/exhibitions">Exhibitions</a></li><li class="menu-4595 menu-path-node-68 even "><a href="/schlesinger-library/visit-library">Visit the Library</a></li><li class="menu-3288 menu-path-node-65 odd "><a href="/schlesinger-library/reference-research">Reference &amp; Research Services</a></li><li class="menu-1449 menu-path-node-1534 even "><a href="/schlesinger-library/grants">Grants</a></li><li class="menu-980 menu-path-news-schlesinger-newsletter-current-issue odd "><a href="/news/schlesinger-newsletter/current-issue?context=lib">Newsletter</a></li><li class="menu-1281 menu-path-schlesinger-library-blog even  last "><a href="/schlesinger-library/blog">Picks &amp; Finds</a></li></ul>
-</li><li class="menu-3064 menu-path-calendar-list odd "><a href="/calendar/list" class="minor">Events</a></li><li class="menu-953 menuparent menu-path-node-2076 even "><a href="/news" class="minor">News</a><ul><li class="menu-1252 menu-path-news-in-news first  odd "><a href="/news/in-news">In the News</a></li><li class="menu-1804 menu-path-news-radcliffe-magazine-current-issue even "><a href="/news/radcliffe-magazine/current-issue">Radcliffe Magazine</a></li><li class="menu-1805 menu-path-news-schlesinger-newsletter-current-issue odd "><a href="/news/schlesinger-newsletter/current-issue">Schlesinger Newsletter</a></li><li class="menu-1250 menu-path-news-press-releases even "><a href="/news/press-releases">Press Releases</a></li><li class="menu-3410 menu-path-node-1633 odd  last "><a href="/news/media">Media</a></li></ul>
-</li><li class="menu-3414 menu-path-node-17 odd "><a href="/alumnae" class="minor">Alumnae</a></li><li class="menu-3790 menu-path-node-9 even  last "><a href="/contact" class="minor">Contact Us</a></li></ul>
-	</div>
-
-</div>
-  </div><!-- /.region -->
-
-    </div><!-- /#navigation -->
-
-    <div id="main" class="clearfix">
-
-                  
-        <div class="region region-highlighted clearfix">
-    <div id="block-views-highlights-people" class="block block-views plain first odd clearfix block-views-highlights-people">
-
-      
-	<div class="content">
-    <div class="view view-highlights view-id-highlights view-display-id-people small flexslider view-dom-id-6466b49a6dc5ab7d7737e2632177a256">
-        
-  
-  
-      <div class="view-content">
-      <ul class="slides"></ul>    </div>
-  
-  
-  
-  
-      <div class="view-footer">
-      <h3>People</h3>
-      <ul><li><a href="/fellowship-program/fellows?year%5B0%5D=2017">Fellows</a></li><li><a href="/about-us/radcliffe-professors">Radcliffe Professors</a></li><li><a href="/academic-ventures/faculty-directors">Faculty&nbsp;Directors</a></li><li><a href="/about-us/leadership">Leadership</a></li></ul>
     </div>
-  
-  
-</div>	</div>
+  </nav>
 
-</div>
-<div id="block-views-highlights-programs" class="block block-views plain even clearfix block-views-highlights-programs">
+</header>
+<!-- END inc/page-header.php -->
 
-      
-	<div class="content">
-    <div class="view view-highlights view-id-highlights view-display-id-programs small flexslider view-dom-id-875192c8cd5749e437cdd0f268df7a67">
-        
-  
-  
-      <div class="view-content">
-      <ul class="slides"></ul>    </div>
-  
-  
-  
-  
-      <div class="view-footer">
-      <h3>Programs</h3>
-      <ul><li><a href="/calendar/list">Public Events</a></li><li><a href="/fellowship-program">Fellowship Program</a></li><li><a href="/academic-ventures/seminars-workshops">Seminars &amp; Workshops</a></li><li><a href="/fellowship-program/harvard-student-research-partnerships">Harvard Student Research</a></li><li><a href="/grants-funding">Grants &amp; Funding</a></li></ul>
-    </div>
-  
-  
-</div>	</div>
-
-</div>
-<div id="block-views-highlights-collections" class="block block-views plain last odd clearfix block-views-highlights-collections">
+  <div>
+    <div id="page-wrapper"><div id="page">
 
       
-	<div class="content">
-    <div class="view view-highlights view-id-highlights view-display-id-collections small flexslider view-dom-id-4d60e5ea5f737c90f887bf1ce8897faf">
-        
-  
-  
-      <div class="view-content">
-      <ul class="slides"></ul>    </div>
-  
-  
-  
-  
-      <div class="view-footer">
-      <h3>Collections</h3>
-      <ul><li><a href="/schlesinger-library">Schlesinger Library</a></li><li><a href="/schlesinger-library/reference-research">Research</a></li><li><a href="/schlesinger-library/collections">Featured Collections</a></li><li><a href="/schlesinger-library/exhibitions">Exhibitions</a></li></ul>
-    </div>
-  
-  
-</div>	</div>
-
-</div>
-  </div><!-- /.region -->
-
-      <div id="content" class="column" role="main">
-                                <a id="main-content"></a>
-                                          <div class="region region-content clearfix">
-    <div id="block-system-main" class="block block-system first odd clearfix block-system-main">
-
       
-	<div class="content">
-    <div  data-nid="2407" class="ds-2col node node-homepage-only page-content view-mode-full clearfix">
+      
+      <div id="main-wrapper"><div id="main" class="clearfix" role="main" tabindex="-1"><a name="main-top" id="main-top"><span class="element-invisible">Main content</span></a>
 
-  
-  <div class="group-left">
-    <div id="block-views-featured-events-block-5" class="block block-views block_grey  first odd clearfix block-views-featured_events-block_5">
+        <div id="content" class="column"><div class="section">
+                    <a id="main-content"><span class="element-invisible">Main content</span></a>
+                                                    <div class="region region-content">
+    <div id="block-system-main" class="block block-system">
 
-        <h2 class="block__title block-title"><a href="/calendar/list" class="block-title-link">Events</a></h2>
     
-	<div class="content">
-    <div class="view view-featured-events view-id-featured_events view-display-id-block_5 view-dom-id-eba6620f8c78122c0cac957ab0951c7d">
+  <div class="content">
+      <div class="panel-panel panel-col-alert">
+    <div class="inside"><div class="panel-pane pane-entity-field pane-node-field-landing-page-alert page-title"  >
+  
+      
+  
+  <div class="pane-content">
+    <div class="field field-name-field-landing-page-alert field-type-entityreference field-label-hidden">
+    <div class="field-items">
+          <div class="field-item harvard-box even"><h2></h2>
+</div>
+      </div>
+</div>
+  </div>
+
+  
+  </div>
+</div>
+  </div>
+<div class="panel-display panel-3col-33-stacked  clearfix" >
+      <div class="panel-panel panel-col-top">
+      <div class="inside"><div class="panel-pane pane-entity-field pane-node-field-carousel-items"  >
+  
+      
+  
+  <div class="pane-content">
+    <div class="field field-name-field-carousel-items field-type-field-collection field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even"><div  id="flexslider-1" class="flexslider optionset-landing-page-carousel">
+  <ul class="slides"><li><div class="entity entity-field-collection-item field-collection-item-field-carousel-items clearfix" about="/field-collection/field-carousel-items/541" typeof="">
+  <div class="content">
+    <div class="carousel-container">
+      <div class="carousel-image">
+        <a href="https://news.harvard.edu/gazette/story/2017/11/altered-states-takes-harvard-student-down-research-rabbit-hole/"><div class="field field-name-field-image field-type-image field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even"><img typeof="foaf:Image" src="https://college.harvard.edu/sites/default/files/_landing_carousel/altered_states_032.png" alt="Over winter break, Jensen Davis says, she will be back at Houghton to work on a paper she is writing about LSD’s therapeutic use in 1950s Hollywood. Jon Chase/Harvard Staff Photographer" /></div>
+      </div>
+</div>
+</a>              </div>
+      <div class="carousel-overlay">
+        <div class="carousel-fields">
+          <div class="slide-title">
+            <a href="https://news.harvard.edu/gazette/story/2017/11/altered-states-takes-harvard-student-down-research-rabbit-hole/"><div class="field field-name-field-title field-type-text field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even">Turn on, tune in, geek out </div>
+      </div>
+</div>
+</a>          </div>
+          <div class="slide-description">
+            <div class="field field-name-field-body-text field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even">‘Altered States’ collection takes student down research rabbit hole.</div>
+      </div>
+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</li>
+</ul></div>
+</div>
+      </div>
+</div>
+  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-node-links link-wrapper"  >
+  
+      
+  
+  <div class="pane-content">
+      </div>
+
+  
+  </div>
+</div>
+    </div>
+  
+  <div class="center-wrapper">
+    <div class="container">
+            <div class="row">
+      <div class="college-page-title">
+        <div class="inside"><div class="panel-pane pane-entity-field pane-node-field-on-page-title"  >
+  
+      
+  
+  <div class="pane-content">
+    <div class="field field-name-field-on-page-title field-type-text field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even">Home at Harvard</div>
+      </div>
+</div>
+  </div>
+
+  
+  </div>
+</div>
+      </div>
+    </div>
+      
+            <div class="row">
+      <div class="harvard-grid-wrapper clearfix">
+        <div class="inside"><div class="panel-pane pane-entity-field pane-node-field-grid-items"  >
+  
+      
+  
+  <div class="pane-content">
+    <div class="field field-name-field-grid-items field-type-entityreference field-label-hidden">
+    <div class="field-items">
+          <div class="field-item instagram-social-feed even"><div class="fieldable-panels-pane">
+    <div class="field field-name-field-isf-last-photo field-type-instagram-social-feed-last-pic field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even">
+<a href="https://www.instagram.com/deankhurana" target="_blank">
+  <div class="landing-page-recent-instagram">
+    <div class="field">
+      <div class="instagram-media ">
+        <img typeof="foaf:Image" class="instagram-photo" src="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/24175390_583419838663525_4202956847272951808_n.jpg" alt="Getting ready to be hypnotized at the CEB show at Science Center B, 7:00 pm on Saturday.">
+      </div>
+    </div>
+    <div class="field">
+      <div class="instagram-caption">
+        <div>Follow<br>@deankhurana<br> on Instagram</div>
+      </div>
+    </div>
+  </div>
+</a>
+</div>
+      </div>
+</div>
+</div>
+</div>
+          <div class="field-item landing-page-curated-text odd"><a href="https://registrar.fas.harvard.edu/faculty-staff/exams/schedule" class="grid-cover"><span class="element-invisible"><p>Harvard College<br />Final Exam Schedule</p>
+</span></a><div class="fieldable-panels-pane">
+    <div class="field field-name-field-body-text field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even"><p>Harvard College<br />Final Exam Schedule</p><br />
+</div>
+      </div>
+</div>
+</div>
+</div>
+          <div class="field-item landing-page-curated-photo even"><div class="fieldable-panels-pane">
+    <a href="https://news.harvard.edu/gazette/story/2017/11/harvard-science-labs-collaboration-safety-and-sustainability/"><div class="field field-name-field-image field-type-image field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even"><img typeof="foaf:Image" src="https://college.harvard.edu/sites/default/files/_landing_page_curated_photo/092917_betley_170_922.jpg" alt=" Alex Su ’18 works in the Betley Lab, which participates in an expanded lab recycling program while consistently meeting its monthly goal through the Shut the Sash Competition. In addition, lab members reduce waste by composting in their kitchen. " /></div>
+      </div>
+</div>
+<div class="field field-name-field-body-text field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even"><p>Inside Harvard’s green labs</p><br />
+</div>
+      </div>
+</div>
+</a></div>
+</div>
+          <div class="field-item landing-page-curated-text odd"><a href="http://college.harvard.edu/about/mission-and-vision" class="grid-cover"><span class="element-invisible"><p>Learn the Mission,<br />Vision, and History<br />of Harvard College</p>
+</span></a><div class="fieldable-panels-pane">
+    <div class="field field-name-field-body-text field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even"><p>Learn the Mission,<br />Vision, and History<br />of Harvard College</p><br />
+</div>
+      </div>
+</div>
+</div>
+</div>
+          <div class="field-item landing-page-curated-logo even"><a href="https://www.facebook.com/HarvardRecreation" class="grid-cover"><span class="element-invisible"><p>Learn the Mission,<br />Vision, and History<br />of Harvard College</p>
+</span></a><div class="fieldable-panels-pane">
+    <div class="field field-name-field-image field-type-image field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even"><img typeof="foaf:Image" src="https://college.harvard.edu/sites/default/files/_landing_page_curated_logo/facebook.png" alt="Facebook" /></div>
+      </div>
+</div>
+<h3></h3>
+<div class="field field-name-field-content field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even"><h3 class="gamma">Follow Harvard Recreation<br />on Facebook</h3><br />
+</div>
+      </div>
+</div>
+</div>
+</div>
+          <div class="field-item landing-page-curated-photo odd"><div class="fieldable-panels-pane">
+    <a href="https://news.harvard.edu/gazette/story/2017/11/4-harvard-undergrads-are-rhodes-scholars/"><div class="field field-name-field-image field-type-image field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even"><img typeof="foaf:Image" src="https://college.harvard.edu/sites/default/files/_landing_page_curated_photo/rhodes_building_fullsizeoutput_23d.png" alt="  Harvard students Xavier Gonzalez, Tania Fabo, Alan Yang, and Samarth Gupta have been named Rhodes Scholars and will attend the University of Oxford in October. Among the 28 colleges that comprise Oxford is Merton College (pictured)." /></div>
+      </div>
+</div>
+<div class="field field-name-field-body-text field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even"><p>Rhodes Scholars had<br />help along the way</p><br />
+</div>
+      </div>
+</div>
+</a></div>
+</div>
+          <div class="field-item landing-page-recent-feed even"><a href="/art-study-center-open-hours-4" class="grid-cover"><span class="element-invisible">Art Study Center Open Hours 32 Quincy Street Cambridge MA Mon., Dec. 4, 2017, 1 – 4 p.m. Through the...</span></a><div class="fieldable-panels-pane">
+    <div class="field field-name-field-feed-to-show field-type-last-feed field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even"><div id="node-229426" class="node node-college-events node-promoted clearfix" about="/art-study-center-open-hours-4" typeof="sioc:Item foaf:Document">
+
+  
+        <h2>Art Study Center Open Hours</h2>
+    <span property="dc:title" content="Art Study Center Open Hours" class="rdf-meta element-hidden"></span><span property="sioc:num_replies" content="0" datatype="xsd:integer" class="rdf-meta element-hidden"></span>
+      <div class="submitted">
+      <span property="dc:date dc:created" content="2017-11-11T12:20:01-05:00" datatype="xsd:dateTime" rel="sioc:has_creator">Submitted by <span class="username" xml:lang="" typeof="sioc:UserAccount" property="foaf:name" datatype="">Anonymous (not verified)</span> on Sat, 2017-11-11 12:20</span>    </div>
+  
+  <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even" property="content:encoded">32 Quincy Street Cambridge MA Mon., Dec. 4, 2017, 1 – 4 p.m. Through the...</div>
+      </div>
+</div>
+  </div>
+
+  
+  
+</div>
+</div>
+      </div>
+</div>
+<div class="field field-name-field-fpp-category field-type-text field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even">EVENT</div>
+      </div>
+</div>
+</div>
+</div>
+          <div class="field-item landing-page-curated-video odd"><div class="fieldable-panels-pane">
+    <div class="field field-name-field-video-url field-type-url field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even"><iframe class="youtube-player" type="text/html" width="640" height="360" src="//www.youtube.com/embed/V5iAgK4QPBo?wmode=transparent&rel=0" frameborder="0"></iframe></div>
+      </div>
+</div>
+<div class="field field-name-field-image field-type-image field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even"><img typeof="foaf:Image" src="https://college.harvard.edu/sites/default/files/styles/grid_video_thumb/public/_landing_page_curated_video/discover.jpg?itok=uYr-W5xM" alt="Join our students, faculty, and alumni on an intellectual and creative journey to discover the Humanities at Harvard. Through dancing, playwriting, hip-hop, and literature, these personal stories illuminate the power of the arts and humanities to ignite, inspire, and transform." /></div>
+      </div>
+</div>
+<div class="field field-name-field-body-text field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even"><p>Discover the Humanities</p><br />
+</div>
+      </div>
+</div>
+</div>
+</div>
+      </div>
+</div>
+  </div>
+
+  
+  </div>
+</div>
+      </div>
+      </div>
+              <div class="panel-panel panel-col-middle harvard-middle-wrapper clearfix">
+        <div class="inside"><div class="panel-pane pane-entity-field pane-node-field-virtual-tour-image-field"  >
+  
+      
+  
+  <div class="pane-content">
+    <div class="field field-name-field-virtual-tour-image-field field-type-image field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even"><a href="http://www.youvisit.com/tour/harvard"><img typeof="foaf:Image" src="https://college.harvard.edu/sites/default/files/default_images/gates_tour.png" alt="" /></a></div>
+      </div>
+</div>
+  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-entity-field pane-node-field-virtual-tour-image-text-fi"  >
+  
+      
+  
+  <div class="pane-content">
+    <div class="field field-name-field-virtual-tour-image-text-fi field-type-text field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even">Explore Harvard</div>
+      </div>
+</div>
+  </div>
+
+  
+  </div>
+</div>
+      </div>
+          <div class="panel-panel panel-col-first">
+        <div class="inside"><div class="panel-pane pane-entity-field pane-node-field-landing-page-callout-image"  >
+  
+      
+  
+  <div class="pane-content">
+    <div class="field field-name-field-landing-page-callout-image field-type-image field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even"><img typeof="foaf:Image" src="https://college.harvard.edu/sites/default/files/Messages_dean_homepage.jpg" alt="Dean Khurana" /></div>
+      </div>
+</div>
+  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-entity-field pane-node-field-landing-page-callout-title"  >
+  
+      
+  
+  <div class="pane-content">
+    <div class="field field-name-field-landing-page-callout-title field-type-text field-label-hidden">
+    <div class="field-items">
+          <h2 class="field-item even">Messages from Harvard College</h2>
+      </div>
+</div>
+  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-entity-field pane-node-field-landing-page-callout-body"  >
+  
+      
+  
+  <div class="pane-content">
+    <div class="field field-name-field-landing-page-callout-body field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even"><p>“We want to ensure we are providing students a deeply transformative experience – intellectually, socially and personally – that will prepare them for a life of service and leadership. Harvard College should and will set the standard for liberal arts and sciences education for the next hundred years. This is who we are. Our students leave here and exert ripples across the&nbsp;world.”</p>
+</div>
+      </div>
+</div>
+  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-entity-field pane-node-field-landing-page-callout-link iota"  >
+  
+      
+  
+  <div class="pane-content">
+    <div class="field field-name-field-landing-page-callout-link field-type-link-field field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even"><a href="https://college.harvard.edu/about/dean-harvard-college/messages-dean">See all messages</a></div>
+      </div>
+</div>
+  </div>
+
+  
+  </div>
+</div>
+      </div>
+
+      <div class="panel-panel panel-col">
+        <div class="inside"><div class="panel-pane pane-views-panes pane-news-improved-panel-pane-1 news-improved" >
+  
+        <h2 class="module-title zeta"><span class="pane-title">News &amp; Announcements</span></h2>
+    
+  
+  <div class="pane-content">
+    <div class="view view-news-improved view-id-news_improved view-display-id-panel_pane_1 view-dom-id-7cc54be768c96325bc0e8a762470a753">
         
   
   
       <div class="view-content">
         <div class="views-row views-row-1 views-row-odd views-row-first">
       
-  <div class="ribbon">        <time class="start" datetime="2017-12-06T16:00:00-05:00"><abbr title="December">Dec</abbr><i>6</i></time>  </div>  
-  <h6 class="views-field views-field-field-event-type">        Fellows&#039; Presentation  </h6>  
-  <h2 class="views-field views-field-field-special-text">        <a href="/event/2017-jodie-mack-fellow-presentation">Jodie Mack / The Grand Bizarre (The Pleasure of the Textile)</a>  </h2>  
-  <div class="views-field views-field-field-event-location">        <span class="date-display-single">4:00 PM</span>, Harvard Film Archive  </div>  </div>
+  <div class="views-field views-field-nid">        <span class="field-content"><article class="news-item-beta row">
+    <div class="field field-name-field-image field-type-image field-label-hidden thumbnail">
+        <div class="field-items">
+            <div class="field-item even">
+                <img typeof="foaf:Image" src="https://college.harvard.edu/sites/default/files/styles/60x60/public/news/foodtrays_1_140.jpg?itok=U0xkgVob" alt="" />
+            </div>
+        </div>
+    </div>
+    <div class="in">
+        <h1 class="lambda" datatype="" property="title"><a href="https://news.harvard.edu/gazette/story/2017/11/students-package-unused-food-for-distribution-to-those-in-need/">Students package unused food for distribution to those in need</a></h1>
+        <p class="created_date iota">November 21, 2017 </p>
+        <div class="content news-item-body theta">
+            <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+                <div class="field-items">
+                    <div property="encoded" class="field-item even"><p>
+
+
+Twice a week after dinner, a group of Harvard University student volunteers...</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article></span>  </div>  </div>
   <div class="views-row views-row-2 views-row-even">
       
-  <div class="ribbon">        <time class="start" datetime="2017-12-07T18:00:00-05:00"><abbr title="December">Dec</abbr><i>7</i></time>  </div>  
-  <h6 class="views-field views-field-field-event-type">        Movies  </h6>  
-  <h2 class="views-field views-field-field-special-text">        <a href="/event/2017-kumiko-the-treasure-hunter">Kumiko, The Treasure Hunter</a>  </h2>  
-  <div class="views-field views-field-field-event-location">        <span class="date-display-single">6:00 PM</span>, Radcliffe College Room, Schlesinger Library  </div>  </div>
+  <div class="views-field views-field-nid">        <span class="field-content"><article class="news-item-beta row">
+    <div class="field field-name-field-image field-type-image field-label-hidden thumbnail">
+        <div class="field-items">
+            <div class="field-item even">
+                <img typeof="foaf:Image" src="https://college.harvard.edu/sites/default/files/styles/60x60/public/news/pchan_2_171112_pc-franklinhill_bos_cw_140.jpg?itok=ciOwMh0F" alt="" />
+            </div>
+        </div>
+    </div>
+    <div class="in">
+        <h1 class="lambda" datatype="" property="title"><a href="https://news.harvard.edu/gazette/story/2017/11/chan-gift-story/">Chan Zuckerberg Initiative boosts efforts to develop public service leaders</a></h1>
+        <p class="created_date iota">November 13, 2017 </p>
+        <div class="content news-item-body theta">
+            <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+                <div class="field-items">
+                    <div property="encoded" class="field-item even"><p>
+Harvard College today announced a $12.1 million grant from the Chan Zuckerberg...</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article></span>  </div>  </div>
   <div class="views-row views-row-3 views-row-odd">
       
-  <div class="ribbon">        <time class="start" datetime="2017-12-19T17:30:00-05:00"><abbr title="December">Dec</abbr><i>19</i></time>  </div>  
-  <h6 class="views-field views-field-field-event-type">        Women&#039;s History Seminars  </h6>  
-  <h2 class="views-field views-field-field-special-text">        <a href="/event/2017-micki-mcelya-boston-seminar-series">Micki McElya / Miss America&#039;s Politics</a>  </h2>  
-  <div class="views-field views-field-field-event-location">        <span class="date-display-single">5:30 PM</span>, Massachusetts Historical Society, Seminar Room  </div>  </div>
+  <div class="views-field views-field-nid">        <span class="field-content"><article class="news-item-beta row">
+    <div class="field field-name-field-image field-type-image field-label-hidden thumbnail">
+        <div class="field-items">
+            <div class="field-item even">
+                <img typeof="foaf:Image" src="https://college.harvard.edu/sites/default/files/styles/60x60/public/news/elton140.jpg?itok=-_Kmpqa9" alt="" />
+            </div>
+        </div>
+    </div>
+    <div class="in">
+        <h1 class="lambda" datatype="" property="title"><a href="https://news.harvard.edu/gazette/story/2017/11/at-harvard-elton-john-receives-humanitarian-award/">At Harvard, Elton John receives Humanitarian Award</a></h1>
+        <p class="created_date iota">November 6, 2017 </p>
+        <div class="content news-item-body theta">
+            <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+                <div class="field-items">
+                    <div property="encoded" class="field-item even"><p>
+His musical genius has earned him millions of fans, five Grammy Awards, and an...</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article></span>  </div>  </div>
   <div class="views-row views-row-4 views-row-even views-row-last">
       
-  <div class="ribbon">        <time class="start" datetime="2018-01-23T17:30:00-05:00"><abbr title="January">Jan</abbr><i>23</i></time>  </div>  
-  <h6 class="views-field views-field-field-event-type">        Women&#039;s History Seminars  </h6>  
-  <h2 class="views-field views-field-field-special-text">        <a href="/event/2018-kara-w-swanson-boston-seminar-series">Kara W. Swanson / The &quot;Woman Inventor&quot; as a Political Tool of Female Suffragists</a>  </h2>  
-  <div class="views-field views-field-field-event-location">        <span class="date-display-single">5:30 PM</span>, Massachusetts Historical Society, Seminar Room  </div>  </div>
+  <div class="views-field views-field-nid">        <span class="field-content"><article class="news-item-beta row">
+    <div class="field field-name-field-image field-type-image field-label-hidden thumbnail">
+        <div class="field-items">
+            <div class="field-item even">
+                <img typeof="foaf:Image" src="https://college.harvard.edu/sites/default/files/styles/60x60/public/news/140_1434.jpg?itok=JO8ldARl" alt="" />
+            </div>
+        </div>
+    </div>
+    <div class="in">
+        <h1 class="lambda" datatype="" property="title"><a href="https://news.harvard.edu/gazette/story/2017/11/harvards-hidden-yard-randolph-courtyard-at-adams-house/">Harvard’s hidden yard: Randolph Courtyard at Adams House</a></h1>
+        <p class="created_date iota">November 6, 2017 </p>
+        <div class="content news-item-body theta">
+            <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+                <div class="field-items">
+                    <div property="encoded" class="field-item even"><p>
+Tucked behind Adams House, Randolph Courtyard offers students an escape from...</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article></span>  </div>  </div>
+
+    <a href="/about/news-announcements" class="kappa see-more is_front bk4-module-top icon-caret-right">See all</a>
     </div>
   
   
@@ -249,223 +640,257 @@
   
   
   
-</div>	</div>
+</div>  </div>
 
+  
+  </div>
 </div>
+      </div>
+
+      <div class="panel-panel panel-col-last">
+        <div class="inside"><div class="panel-pane pane-custom pane-1"  >
+  
+      
+  
+  <div class="pane-content">
+    <p><a class="kappa see-more bk4-module-top icon-caret-right" href="https://college.harvard.edu/college-events">See&nbsp;all</a></p>
   </div>
 
-  <div class="group-right">
-    <div class="field-collection-container clearfix"><article class="ds-1col entity entity-field-collection-item field-collection-item-field-middle-section view-mode-full clearfix ">
-
   
-  <h2><a href="https://www.radcliffe.harvard.edu/publicart" target="_top">Radcliffe Institute Public Art Competition</a></h2><figure><a href="https://www.radcliffe.harvard.edu/publicart" target="_top"><img src="https://www.radcliffe.harvard.edu/sites/default/files/imagefield_crop/field-middle-section/field-homepage-image/100-years-at-73-brattle_photo-by-kevin-grady_radcliffe-institute_330px.jpg" width="330" height="220" alt="" /></a></figure><p>The Institute's Public Art Competition gives Harvard students a unique opportunity to design and build a site-specific installation in Radcliffe Yard.</p><p><a href="/publicart">Register now to enter cycle 4 of the competition. </a></p>
-</article><article class="ds-1col entity entity-field-collection-item field-collection-item-field-middle-section view-mode-full clearfix ">
-
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-block pane-quicktabs-upcoming-events upcoming-events"  >
   
-  <h2><a href="https://www.radcliffe.harvard.edu/news/in-news/senior-looks-back-he-moves-forward" target="_top">Senior Looks Back as He Moves Forward</a></h2><figure><a href="https://www.radcliffe.harvard.edu/news/in-news/senior-looks-back-he-moves-forward" target="_top"><img src="https://www.radcliffe.harvard.edu/sites/default/files/imagefield_crop/field-middle-section/field-homepage-image/matthew-deshaw_photo-by-kris-snibbe_harvard-staff-photographer_330px.jpg" width="330" height="220" alt="" /></a></figure><p>"When I started this journey, I was living my dream, determined to take advantage of all Harvard had to offer. That feeling has never waned," says Radcliffe research partner Matthew DeShaw '18. <a href="/news/in-news/senior-looks-back-he-moves-forward">More</a></p>
-</article></div>  </div>
-
-</div>
-
-	</div>
-
-</div>
-<div class="region-bottom table"><div class="tr"><div id="block-views-nodequeue-2-block-1" class="block block-views block_grey  even clearfix block-views-nodequeue_2-block_1">
-
-        <h2 class="block__title block-title"><a href="/videos" class="block-title-link">Featured Videos</a></h2>
+        <h2 class="pane-title">
+      Upcoming Events    </h2>
     
-	<div class="content">
-    <div class="view view-nodequeue-2 view-id-nodequeue_2 view-display-id-block_1 view-dom-id-11deadaf4dd24e269b2c30297e29f8a5">
+  
+  <div class="pane-content">
+    <div  id="quicktabs-upcoming_events" class="quicktabs-wrapper quicktabs-style-nostyle"><div class="item-list"><ul class="quicktabs-tabs quicktabs-style-nostyle"><li class="active first"><a href="/home-harvard?qt-upcoming_events=0#qt-upcoming_events" id="quicktabs-tab-upcoming_events-0" class="quicktabs-tab quicktabs-tab-view quicktabs-tab-view-upcoming-events-panel-pane-today active">Today</a></li>
+<li><a href="/home-harvard?qt-upcoming_events=1#qt-upcoming_events" id="quicktabs-tab-upcoming_events-1" class="quicktabs-tab quicktabs-tab-view quicktabs-tab-view-upcoming-events-panel-pane-tomorrow active">Tomorrow</a></li>
+<li class="last"><a href="/home-harvard?qt-upcoming_events=2#qt-upcoming_events" id="quicktabs-tab-upcoming_events-2" class="quicktabs-tab quicktabs-tab-view quicktabs-tab-view-upcoming-events-panel-pane-day-after-tomorrow active">Wednesday</a></li>
+</ul></div><div id="quicktabs-container-upcoming_events" class="quicktabs_main quicktabs-style-nostyle"><div  id="quicktabs-tabpage-upcoming_events-0" class="quicktabs-tabpage ">
+<div class="view view-upcoming-events view-id-upcoming_events view-display-id-panel_pane_today view-dom-id-fce64640a13fca53d1f569f57bbacc4c">
         
   
   
       <div class="view-content">
-      <div  id="flexslider-1" class="flexslider optionset-featured-videos-carousel">
-  <ul class="slides"><li><div>  
-  <div class="views-field views-field-field-video-thumbnail ilink">        <a href="/video/should-law-foster-forgiveness-martha-minow"><img src="https://www.radcliffe.harvard.edu/sites/default/files/styles/video_featured/public/field-video-thumbnail/video/minow_thumbnail-2.jpg?itok=M0J4FoEf" width="160" height="108" alt="Should Law Foster Forgiveness? by Martha Minow " /></a>  </div>  
-  <div class="views-field views-field-field-special-text">        <a href="/video/should-law-foster-forgiveness-martha-minow">Should Law Foster Forgiveness? | Martha Minow </a>  </div></div></li>
-<li><div>  
-  <div class="views-field views-field-field-video-thumbnail ilink">        <a href="/video/does-left-have-future-michael-kazin"><img src="https://www.radcliffe.harvard.edu/sites/default/files/styles/video_featured/public/field-video-thumbnail/video/kazin_thumbnail.jpg?itok=b_yjcAmq" width="160" height="108" alt="Does the Left Have a Future? by Michael Kazin" /></a>  </div>  
-  <div class="views-field views-field-field-special-text">        <a href="/video/does-left-have-future-michael-kazin">Does the Left Have a Future? | Michael Kazin</a>  </div></div></li>
-<li><div>  
-  <div class="views-field views-field-field-video-thumbnail ilink">        <a href="/video/wounded-world-w-e-b-du-bois-and-history-wwi-chad-l-williams"><img src="https://www.radcliffe.harvard.edu/sites/default/files/styles/video_featured/public/field-video-thumbnail/video/chad-williams_thumbnail.jpg?itok=UEAlWQzx" width="160" height="108" alt="The Wounded World: W. E. B. Du Bois and the History of WWI by Chad L. Williams" /></a>  </div>  
-  <div class="views-field views-field-field-special-text">        <a href="/video/wounded-world-w-e-b-du-bois-and-history-wwi-chad-l-williams">The Wounded World: W. E. B. Du Bois and the History of WWI | Chad L. Williams</a>  </div></div></li>
-<li><div>  
-  <div class="views-field views-field-field-video-thumbnail ilink">        <a href="/video/social-justice-and-new-food-activism-julie-guthman"><img src="https://www.radcliffe.harvard.edu/sites/default/files/styles/video_featured/public/field-video-thumbnail/video/guthman_thumbnail.jpg?itok=ZJIAZq5d" width="160" height="108" alt="Social Justice and the New Food Activism, Julie Guthman " /></a>  </div>  
-  <div class="views-field views-field-field-special-text">        <a href="/video/social-justice-and-new-food-activism-julie-guthman">Social Justice and the New Food Activism | Julie Guthman </a>  </div></div></li>
-<li><div>  
-  <div class="views-field views-field-field-video-thumbnail ilink">        <a href="/video/100-years-73-brattle-john-wang-radcliffe-institute"><img src="https://www.radcliffe.harvard.edu/sites/default/files/styles/video_featured/public/field-video-thumbnail/video/john-wang_thumbnail.jpg?itok=UAAOwo8B" width="160" height="108" alt="100+ Years at 73 Brattle, John Wang" /></a>  </div>  
-  <div class="views-field views-field-field-special-text">        <a href="/video/100-years-73-brattle-john-wang-radcliffe-institute">100+ Years at 73 Brattle | John Wang || Radcliffe Institute</a>  </div></div></li>
-<li><div>  
-  <div class="views-field views-field-field-video-thumbnail ilink">        <a href="/video/struggling-toward-coeducation-nancy-weiss-malkiel"><img src="https://www.radcliffe.harvard.edu/sites/default/files/styles/video_featured/public/field-video-thumbnail/video/weiss-malkiel_thumbnail.jpg?itok=UcCmELgx" width="160" height="108" alt="Struggling toward Coeducation, Nancy Weiss Malkiel" /></a>  </div>  
-  <div class="views-field views-field-field-special-text">        <a href="/video/struggling-toward-coeducation-nancy-weiss-malkiel">Struggling toward Coeducation | Nancy Weiss Malkiel</a>  </div></div></li>
-<li><div>  
-  <div class="views-field views-field-field-video-thumbnail ilink">        <a href="/video/museum-city-and-university"><img src="https://www.radcliffe.harvard.edu/sites/default/files/styles/video_featured/public/field-video-thumbnail/video/boston_museums_screensaver.jpg?itok=tOzvDdSJ" width="160" height="108" alt="" /></a>  </div>  
-  <div class="views-field views-field-field-special-text">        <a href="/video/museum-city-and-university">The Museum, the City, and the University</a>  </div></div></li>
-<li><div>  
-  <div class="views-field views-field-field-video-thumbnail ilink">        <a href="/video/it-depends-what-state-youre-in-policies-and-politics-us-health-care-system-part-1"><img src="https://www.radcliffe.harvard.edu/sites/default/files/styles/video_featured/public/field-video-thumbnail/video/healthcare_thumbnail.jpg?itok=oFzu_bCI" width="160" height="108" alt="It Depends What State You’re In, Policies and Politics of the US Health Care System, Part 1" /></a>  </div>  
-  <div class="views-field views-field-field-special-text">        <a href="/video/it-depends-what-state-youre-in-policies-and-politics-us-health-care-system-part-1">It Depends What State You’re In: Policies and Politics of the US Health Care System | Part 1</a>  </div></div></li>
-<li><div>  
-  <div class="views-field views-field-field-video-thumbnail ilink">        <a href="/video/connect-schlesinger-library"><img src="https://www.radcliffe.harvard.edu/sites/default/files/styles/video_featured/public/field-video-thumbnail/video/connect_thumbnail.jpg?itok=F8o9cGl9" width="160" height="108" alt="Connect, Schlesinger Library" /></a>  </div>  
-  <div class="views-field views-field-field-special-text">        <a href="/video/connect-schlesinger-library">Connect | Schlesinger Library</a>  </div></div></li>
-<li><div>  
-  <div class="views-field views-field-field-video-thumbnail ilink">        <a href="/video/contagion-1-5-infectious-disease"><img src="https://www.radcliffe.harvard.edu/sites/default/files/styles/video_featured/public/field-video-thumbnail/video/contagion_thumbnail.jpg?itok=gI_YXghc" width="160" height="108" alt="Contagion, 1 of 5, Infectious Disease" /></a>  </div>  
-  <div class="views-field views-field-field-special-text">        <a href="/video/contagion-1-5-infectious-disease">Contagion | 1 of 5 | Infectious Disease</a>  </div></div></li>
-<li><div>  
-  <div class="views-field views-field-field-video-thumbnail ilink">        <a href="/video/five-scarves-doing-impossible-rana-dajani"><img src="https://www.radcliffe.harvard.edu/sites/default/files/styles/video_featured/public/field-video-thumbnail/video/dajani_thumbnail.jpg?itok=F9AcaRyl" width="160" height="108" alt="Five Scarves: Doing the Impossible, Rana Dajani" /></a>  </div>  
-  <div class="views-field views-field-field-special-text">        <a href="/video/five-scarves-doing-impossible-rana-dajani">Five Scarves: Doing the Impossible | Rana Dajani</a>  </div></div></li>
-<li><div>  
-  <div class="views-field views-field-field-video-thumbnail ilink">        <a href="/video/obscure-achievements-katarina-burin"><img src="https://www.radcliffe.harvard.edu/sites/default/files/styles/video_featured/public/field-video-thumbnail/video/burin_thumbnail.jpg?itok=nE6VEnDp" width="160" height="108" alt="Obscure Achievements, Katarina Burin" /></a>  </div>  
-  <div class="views-field views-field-field-special-text">        <a href="/video/obscure-achievements-katarina-burin">Obscure Achievements | Katarina Burin</a>  </div></div></li>
-<li><div>  
-  <div class="views-field views-field-field-video-thumbnail ilink">        <a href="/video/evolution-speciation-and-adaptation-cichlid-fish-axel-meyer"><img src="https://www.radcliffe.harvard.edu/sites/default/files/styles/video_featured/public/field-video-thumbnail/video/meyer_thumbnail.jpg?itok=F7LJ13Xa" width="160" height="108" alt="Evolution, Speciation, and Adaptation of Cichlid Fish by Axel Meyer" /></a>  </div>  
-  <div class="views-field views-field-field-special-text">        <a href="/video/evolution-speciation-and-adaptation-cichlid-fish-axel-meyer">Evolution, Speciation, and Adaptation of Cichlid Fish | Axel Meyer</a>  </div></div></li>
-<li><div>  
-  <div class="views-field views-field-field-video-thumbnail ilink">        <a href="/video/sandro-galea-epidemiology-counts"><img src="https://www.radcliffe.harvard.edu/sites/default/files/styles/video_featured/public/field-video-thumbnail/video/epidemiology-counts_thumbnail.jpg?itok=3P5zhqqg" width="160" height="108" alt="Sandro Galea, Epidemiology Counts" /></a>  </div>  
-  <div class="views-field views-field-field-special-text">        <a href="/video/sandro-galea-epidemiology-counts">Sandro Galea | Epidemiology Counts</a>  </div></div></li>
-<li><div>  
-  <div class="views-field views-field-field-video-thumbnail ilink">        <a href="/video/mad-cartoonists-cairo-jonathan-guyer"><img src="https://www.radcliffe.harvard.edu/sites/default/files/styles/video_featured/public/field-video-thumbnail/video/jonathan-guyer_thumbnail.jpg?itok=b2mK3OLO" width="160" height="108" alt="The Mad Cartoonists of Cairo, Jonathan Guyer" /></a>  </div>  
-  <div class="views-field views-field-field-special-text">        <a href="/video/mad-cartoonists-cairo-jonathan-guyer">The Mad Cartoonists of Cairo | Jonathan Guyer</a>  </div></div></li>
-<li><div>  
-  <div class="views-field views-field-field-video-thumbnail ilink">        <a href="/video/geometric-deep-learning-michael-bronstein"><img src="https://www.radcliffe.harvard.edu/sites/default/files/styles/video_featured/public/field-video-thumbnail/video/bronstein_thumbnail.jpg?itok=w80u7rAS" width="160" height="108" alt="Geometric Deep Learning, Michael Bronstein" /></a>  </div>  
-  <div class="views-field views-field-field-special-text">        <a href="/video/geometric-deep-learning-michael-bronstein">Geometric Deep Learning | Michael Bronstein</a>  </div></div></li>
-<li><div>  
-  <div class="views-field views-field-field-video-thumbnail ilink">        <a href="/video/radcliffe-stories"><img src="https://www.radcliffe.harvard.edu/sites/default/files/styles/video_featured/public/field-video-thumbnail/video/radcliffe-stories_thumbnail.jpg?itok=jdVRsSDg" width="160" height="108" alt="Radcliffe Stories" /></a>  </div>  
-  <div class="views-field views-field-field-special-text">        <a href="/video/radcliffe-stories">Radcliffe Stories</a>  </div></div></li>
-<li><div>  
-  <div class="views-field views-field-field-video-thumbnail ilink">        <a href="/video/reveal-schlesinger-library"><img src="https://www.radcliffe.harvard.edu/sites/default/files/styles/video_featured/public/field-video-thumbnail/video/reveal_thumbnail.jpg?itok=v90No7-y" width="160" height="108" alt="Reveal, Schlesinger Library" /></a>  </div>  
-  <div class="views-field views-field-field-special-text">        <a href="/video/reveal-schlesinger-library">Reveal | Schlesinger Library</a>  </div></div></li>
-<li><div>  
-  <div class="views-field views-field-field-video-thumbnail ilink">        <a href="/video/universities-and-slavery-1-5-keynote"><img src="https://www.radcliffe.harvard.edu/sites/default/files/styles/video_featured/public/field-video-thumbnail/video/universities-and-slavery_bound-by-history_338px.jpg?itok=BHuQ-0ac" width="160" height="108" alt="Universities and Slavery: Bound by History" /></a>  </div>  
-  <div class="views-field views-field-field-special-text">        <a href="/video/universities-and-slavery-1-5-keynote">Universities and Slavery | 1 of 5 | Keynote</a>  </div></div></li>
-<li><div>  
-  <div class="views-field views-field-field-video-thumbnail ilink">        <a href="/video/sea-changing-sea-role-oceans-in-climate"><img src="https://www.radcliffe.harvard.edu/sites/default/files/styles/video_featured/public/field-video-thumbnail/video/from-sea-to-changing-sea_thumbnail_0.jpeg?itok=wQ8MP9Ol" width="160" height="108" alt="From Sea to Changing Sea, The Role of Oceans in Climate" /></a>  </div>  
-  <div class="views-field views-field-field-special-text">        <a href="/video/sea-changing-sea-role-oceans-in-climate">From Sea to Changing Sea | The Role of Oceans in Climate</a>  </div></div></li>
-<li><div>  
-  <div class="views-field views-field-field-video-thumbnail ilink">        <a href="/video/radcliffe-day-2017-untruths-and-their-consequences"><img src="https://www.radcliffe.harvard.edu/sites/default/files/styles/video_featured/public/field-video-thumbnail/video/screen_shot_2017-06-02_at_1.24.08_pm.png?itok=ENauBpQs" width="160" height="108" alt="Radcliffe Day 2017, (Un)Truths and Their Consequences" /></a>  </div>  
-  <div class="views-field views-field-field-special-text">        <a href="/video/radcliffe-day-2017-untruths-and-their-consequences">Radcliffe Day 2017 | (Un)Truths and Their Consequences</a>  </div></div></li>
-<li><div>  
-  <div class="views-field views-field-field-video-thumbnail ilink">        <a href="/video/discover-schlesinger-library"><img src="https://www.radcliffe.harvard.edu/sites/default/files/styles/video_featured/public/field-video-thumbnail/video/discover_thumbnail.jpg?itok=SZ9GIlPJ" width="160" height="108" alt="Discover, Schlesinger Library" /></a>  </div>  
-  <div class="views-field views-field-field-special-text">        <a href="/video/discover-schlesinger-library">Discover | Schlesinger Library</a>  </div></div></li>
-<li><div>  
-  <div class="views-field views-field-field-video-thumbnail ilink">        <a href="/video/gidon-eshel-rethinking-american-diet"><img src="https://www.radcliffe.harvard.edu/sites/default/files/styles/video_featured/public/field-video-thumbnail/video/gidon-eshel_thumbnail.jpg?itok=3ayk8BcM" width="160" height="108" alt="Gidon Eshel, Rethinking the American Diet" /></a>  </div>  
-  <div class="views-field views-field-field-special-text">        <a href="/video/gidon-eshel-rethinking-american-diet">Gidon Eshel | Rethinking the American Diet</a>  </div></div></li>
-<li><div>  
-  <div class="views-field views-field-field-video-thumbnail ilink">        <a href="/video/fellowship-experience-radcliffe-institute"><img src="https://www.radcliffe.harvard.edu/sites/default/files/styles/video_featured/public/field-video-thumbnail/video/fellows_video_thumbnail.jpg?itok=dNBG_rmv" width="160" height="108" alt="The Fellowship Experience at the Radcliffe Institute" /></a>  </div>  
-  <div class="views-field views-field-field-special-text">        <a href="/video/fellowship-experience-radcliffe-institute">The Fellowship Experience at the Radcliffe Institute</a>  </div></div></li>
-<li><div>  
-  <div class="views-field views-field-field-video-thumbnail ilink">        <a href="/video/universities-and-slavery-2-5-slavery-and-universities-nationally"><img src="https://www.radcliffe.harvard.edu/sites/default/files/styles/video_featured/public/field-video-thumbnail/video/universities_and_slavery_bound_by_history_338x190.jpg?itok=LhUkTtmp" width="160" height="108" alt="Universities and Slavery: Bound by History" /></a>  </div>  
-  <div class="views-field views-field-field-special-text">        <a href="/video/universities-and-slavery-2-5-slavery-and-universities-nationally">Universities and Slavery | 2 of 5 | Slavery and Universities Nationally</a>  </div></div></li>
-<li><div>  
-  <div class="views-field views-field-field-video-thumbnail ilink">        <a href="/video/game-changers-1-4-who-gets-play"><img src="https://www.radcliffe.harvard.edu/sites/default/files/styles/video_featured/public/field-video-thumbnail/video/game-changers_1-4_thumbnail.jpg?itok=V2kSXVIE" width="160" height="108" alt="Game Changers | 1 of 4 | Who Gets to Play?" /></a>  </div>  
-  <div class="views-field views-field-field-special-text">        <a href="/video/game-changers-1-4-who-gets-play">Game Changers | 1 of 4 | Who Gets to Play?</a>  </div></div></li>
-<li><div>  
-  <div class="views-field views-field-field-video-thumbnail ilink">        <a href="/video/radcliffe-research-partnership"><img src="https://www.radcliffe.harvard.edu/sites/default/files/styles/video_featured/public/field-video-thumbnail/video/radcliffe-research-partnership_thumbnail.jpg?itok=hQwkkDeF" width="160" height="108" alt="Radcliffe Research Partnership" /></a>  </div>  
-  <div class="views-field views-field-field-special-text">        <a href="/video/radcliffe-research-partnership">Radcliffe Research Partnership</a>  </div></div></li>
-<li><div>  
-  <div class="views-field views-field-field-video-thumbnail ilink">        <a href="/video/next-in-science-epidemiology-part-1"><img src="https://www.radcliffe.harvard.edu/sites/default/files/styles/video_featured/public/field-video-thumbnail/video/next_in_science_epidemiology_thumbnail.jpg?itok=7E0nZyWY" width="160" height="108" alt="Next in Science: Epidemiology, Part 1" /></a>  </div>  
-  <div class="views-field views-field-field-special-text">        <a href="/video/next-in-science-epidemiology-part-1">Next in Science: Epidemiology | Part 1</a>  </div></div></li>
-<li><div>  
-  <div class="views-field views-field-field-video-thumbnail ilink">        <a href="/video/sea-changing-sea-early-life-in-oceans"><img src="https://www.radcliffe.harvard.edu/sites/default/files/styles/video_featured/public/field-video-thumbnail/video/from-sea-to-changing-sea_thumbnail.jpeg?itok=dhrUMgPi" width="160" height="108" alt="From Sea to Changing Sea, Early Life in the Oceans" /></a>  </div>  
-  <div class="views-field views-field-field-special-text">        <a href="/video/sea-changing-sea-early-life-in-oceans">From Sea to Changing Sea | Early Life in the Oceans</a>  </div></div></li>
-<li><div>  
-  <div class="views-field views-field-field-video-thumbnail ilink">        <a href="/video/invest-in-ideas"><img src="https://www.radcliffe.harvard.edu/sites/default/files/styles/video_featured/public/field-video-thumbnail/video/invest-in-ideas_thumbnail.jpg?itok=3dftUtSx" width="160" height="108" alt="Invest in Ideas" /></a>  </div>  
-  <div class="views-field views-field-field-special-text">        <a href="/video/invest-in-ideas">Invest In Ideas</a>  </div></div></li>
-<li><div>  
-  <div class="views-field views-field-field-video-thumbnail ilink">        <a href="/video/radcliffe-college-legacy"><img src="https://www.radcliffe.harvard.edu/sites/default/files/styles/video_featured/public/field-video-thumbnail/video/radcliffe-banner_350px.jpg?itok=TK0vf2CT" width="160" height="108" alt="Radcliffe banner" /></a>  </div>  
-  <div class="views-field views-field-field-special-text">        <a href="/video/radcliffe-college-legacy">The Radcliffe College Legacy</a>  </div></div></li>
-</ul></div>
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+    
+<article class="news-item-beta">
+	<h1 class="theta"><span class="field-content"><a href="/its-all-your-perspective-32">It&#039;s All in Your Perspective</a></span></h1>
+	<div class="iota"><div class="field-content">(All day)</div></div>
+</article>  </div>
+  <div class="views-row views-row-2 views-row-even">
+    
+<article class="news-item-beta">
+	<h1 class="theta"><span class="field-content"><a href="/jfks-harvardharvards-jfk-1">JFK&#039;s Harvard/Harvard&#039;s JFK</a></span></h1>
+	<div class="iota"><div class="field-content">(All day)</div></div>
+</article>  </div>
+  <div class="views-row views-row-3 views-row-odd">
+    
+<article class="news-item-beta">
+	<h1 class="theta"><span class="field-content"><a href="/morning-prayers-62">Morning Prayers</a></span></h1>
+	<div class="iota"><div class="field-content">8:45am</div></div>
+</article>  </div>
+  <div class="views-row views-row-4 views-row-even views-row-last">
+    
+<article class="news-item-beta">
+	<h1 class="theta"><span class="field-content"><a href="/altered-gazes-53">Altered Gazes</a></span></h1>
+	<div class="iota"><div class="field-content">9:00am</div></div>
+</article>  </div>
+    </div>
+  
+  
+  
+  
+      <div class="view-footer">
+      <div class="iota"><a href="https://college.harvard.edu/college-events">All events today</a></div>
+    </div>
+  
+  </div></div><div  id="quicktabs-tabpage-upcoming_events-1" class="quicktabs-tabpage quicktabs-hide">
+<div class="view view-upcoming-events view-id-upcoming_events view-display-id-panel_pane_tomorrow view-dom-id-dc2573793573be76a3a4838d13160f3f">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+    
+<article class="news-item-beta">
+	<h1 class="theta"><span class="field-content"><a href="/its-all-your-perspective-33">It&#039;s All in Your Perspective</a></span></h1>
+	<div class="iota"><div class="field-content"><span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2017-12-05T00:00:00-05:00">Tuesday, December 5, 2017 (All day)</span></div></div>
+</article>  </div>
+  <div class="views-row views-row-2 views-row-even">
+    
+<article class="news-item-beta">
+	<h1 class="theta"><span class="field-content"><a href="/jfks-harvardharvards-jfk-2">JFK&#039;s Harvard/Harvard&#039;s JFK</a></span></h1>
+	<div class="iota"><div class="field-content"><span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2017-12-05T00:00:00-05:00">Tuesday, December 5, 2017 (All day)</span></div></div>
+</article>  </div>
+  <div class="views-row views-row-3 views-row-odd">
+    
+<article class="news-item-beta">
+	<h1 class="theta"><span class="field-content"><a href="/score-boston-workshop-starting-specialty-food-business">SCORE Boston Workshop: Starting a Specialty Food Business</a></span></h1>
+	<div class="iota"><div class="field-content"><span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2017-12-05T08:30:00-05:00">Tuesday, December 5, 2017 - 8:30am</span></div></div>
+</article>  </div>
+  <div class="views-row views-row-4 views-row-even views-row-last">
+    
+<article class="news-item-beta">
+	<h1 class="theta"><span class="field-content"><a href="/morning-prayers-63">Morning Prayers</a></span></h1>
+	<div class="iota"><div class="field-content"><span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2017-12-05T08:45:00-05:00">Tuesday, December 5, 2017 - 8:45am</span></div></div>
+</article>  </div>
     </div>
   
   
   
   
   
+  </div></div><div  id="quicktabs-tabpage-upcoming_events-2" class="quicktabs-tabpage quicktabs-hide">
+<div class="view view-upcoming-events view-id-upcoming_events view-display-id-panel_pane_day_after_tomorrow view-dom-id-bc716107be20653d0238d416705c1599">
+        
   
-</div>	</div>
-
-</div>
-<div id="block-lunchbox-facebook" class="block block-lunchbox block_grey last odd clearfix block-lunchbox-facebook">
-
-        <h2 class="block__title block-title"><a href="http://www.facebook.com/RadcliffeInstitute" class="block-title-link">From Facebook</a></h2>
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
     
-	<div class="content">
-    <p class='facebook-time'>Thu, Nov 30, 2017 2:55 pm</p><h3 class='facebook-name'><a href='http://www.facebook.com/home.php?#!/profile.php?id=149672868418032'>Radcliffe Institute for Advanced Study<br />Harvard University</a></h3><p class='facebook-message'>Now in California and soon to travel elsewhere, a photographic exhibition of Julia and Paul Child's France years. (Many of the photos are housed in the Schlesinger Library |<span class='more'>...<a href='http://www.facebook.com/home.php?#!/profile.php?id=149672868418032'>More</a></span></p>	</div>
-
-</div>
-</div></div>  </div><!-- /.region -->
-              </div><!-- /#content -->
-
-      
-      
-      
-      
-    </div><!-- /#main -->
-
-  </div><!-- /#page -->
-
-</div><!-- /#page-wrapper -->
-
-  <footer id="footer" class="region region-footer clearfix">
-    <div id="block-block-35" class="block block-block plain  first odd clearfix block-block-35">
-
-      
-	<div class="content">
-    <p><a href="/">Home</a> / <a href="/about-us">About Us</a> / <a href="/fellowship-program">Fellowship Program</a> / <a href="/academic-ventures">Academic Ventures</a> / <a href="/schlesinger-library">Schlesinger Library</a>&nbsp;/&nbsp;<a href="/calendar/list">Events</a></p><p><a href="/video-and-audio">Video and Audio</a>&nbsp;<span>/</span>&nbsp;<a href="/news">News</a> / <a href="/alumnae">Alumnae</a> / <a href="/contact">Contact</a> / <a href="/campaign">Campaign</a> / <a href="/campaign/ways-to-give">Give</a> /&nbsp;<a href="/about-us/employment">Employment</a> / <a href="/sitemap">Sitemap</a></p>
-	</div>
-
-</div>
-<div id="block-block-34" class="block block-block plain  even clearfix block-block-34">
-
-        <h2 class="block__title block-title">We&#039;re Social</h2>
+<article class="news-item-beta">
+	<h1 class="theta"><span class="field-content"><a href="/its-all-your-perspective-34">It&#039;s All in Your Perspective</a></span></h1>
+	<div class="iota"><div class="field-content"><span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2017-12-06T00:00:00-05:00">Wednesday, December 6, 2017 (All day)</span></div></div>
+</article>  </div>
+  <div class="views-row views-row-2 views-row-even">
     
-	<div class="content">
-    <ul class="inline social icons"><li><a href="http://www.facebook.com/RadcliffeInstitute" title="Visit Radcliffe on Facebook"><span class="figure " style="max-width: 32px;"><img src="/sites/radcliffe.harvard.edu/files/facebook_footer.png" alt="" width="32" height="32" class="" style="float: none;"></span></a></li><li><a href="http://www.twitter.com/radinstitute" title="Follow Radcliffe on Twitter"><span class="figure " style="max-width: 32px;"><img src="/sites/radcliffe.harvard.edu/files/twitter_footer.png" alt="" width="32" height="32" class="" style="float: none;"></span></a></li><li><a href="https://plus.google.com/114137347356707090301/posts" title="Visit Radcliffe on Google+"><span class="figure " style="max-width: 32px;"><img src="/sites/radcliffe.harvard.edu/files/googleplus_footer.png" alt="" width="32" height="32" class="" style="float: none;"></span></a></li><li><a href="http://feeds.feedburner.com/radcliffe-institute" title="Subscribe to Radcliffe RSS"><span class="figure " style="max-width: 32px;"><img src="/sites/radcliffe.harvard.edu/files/rss_footer.png.png" alt="" width="32" height="32" class="" style="float: none;"></span></a></li><li><a href="http://www.linkedin.com/company/radcliffe-institute-for-advanced-study-at-harvard-university" title="Connect with Radcliffe on LinkedIn"><span class="figure " style="max-width: 32px;"><img src="/sites/radcliffe.harvard.edu/files/linkedin_footer.png" alt="" width="32" height="32" class="" style="float: none;"></span></a></li><li><a href="https://www.youtube.com/playlist?list=PL3DE21962E80B6A89" title="Radcliffe on YouTube"><span class="figure " style="max-width: 32px;"><img src="/sites/radcliffe.harvard.edu/files/youtube_footer.png" alt="" width="32" height="32" class="" style="float: none;"></span></a></li><li><a href="http://itunes.apple.com/itunes-u/radcliffe-institute-for-advanced/id432140237" title="Radcliffe on iTunes"><span class="figure " style="max-width: 32px;"><img src="/sites/radcliffe.harvard.edu/files/itunes_footer.png" alt="" width="32" height="32" class="" style="float: none;"></span></a></li><li><a href="/news/subscribe-to-news" title="Subscribe to News &amp; Events"><span class="figure " style="max-width: 32px;"><img src="/sites/radcliffe.harvard.edu/files/subscribe_footer.png" alt="" width="32" height="32" class="" style="float: none;"></span></a></li></ul>
-	</div>
+<article class="news-item-beta">
+	<h1 class="theta"><span class="field-content"><a href="/jfks-harvardharvards-jfk-3">JFK&#039;s Harvard/Harvard&#039;s JFK</a></span></h1>
+	<div class="iota"><div class="field-content"><span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2017-12-06T00:00:00-05:00">Wednesday, December 6, 2017 (All day)</span></div></div>
+</article>  </div>
+  <div class="views-row views-row-3 views-row-odd">
+    
+<article class="news-item-beta">
+	<h1 class="theta"><span class="field-content"><a href="/morning-prayers-64">Morning Prayers</a></span></h1>
+	<div class="iota"><div class="field-content"><span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2017-12-06T08:45:00-05:00">Wednesday, December 6, 2017 - 8:45am</span></div></div>
+</article>  </div>
+  <div class="views-row views-row-4 views-row-even views-row-last">
+    
+<article class="news-item-beta">
+	<h1 class="theta"><span class="field-content"><a href="/altered-gazes-55">Altered Gazes</a></span></h1>
+	<div class="iota"><div class="field-content"><span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2017-12-06T09:00:00-05:00">Wednesday, December 6, 2017 - 9:00am</span></div></div>
+</article>  </div>
+    </div>
+  
+  
+  
+  
+  
+  </div></div></div></div>  </div>
 
+  
+  </div>
 </div>
-<div id="block-menu-block-7" class="block block-menu-block odd clearfix block-menu_block-7" role="navigation">
+      </div>
+    </div>
+  </div>
 
+  </div>
+  </div>
+</div>
+  </div>
+                  </div></div> <!-- /.section, /#content -->
+
+        
+        
+      </div></div> <!-- /#main, /#main-wrapper -->
+
+    </div></div> <!-- /#page, /#page-wrapper -->
+
+      <div class="region region-footer">
+    <div id="block-panels-mini-footer-main" class="block block-panels-mini">
+
+    
+  <div class="content">
+    <div class="panel-display panel-2col clearfix" id="mini-panel-footer_main">
+  <div class="panel-panel panel-col-first">
+    <div class="inside"><nav class="panel-pane pane-block pane-menu-menu-quick-links"   aria-labelledby="menu-quick-links">
+  
+        <h2 class="pane-title" id="menu-quick-links">
+      College Quick Links    </h2>
+    
+  
+  <div class="pane-content">
+    <ul class="quick-links row"><li class="first leaf menu-level-1"><a href="https://apply.college.harvard.edu/status" title="">Applicant Login</a></li>
+<li class="leaf menu-level-1"><a href="/contact-us" title="">Contact Us</a></li>
+<li class="leaf menu-level-1"><a href="http://www.fas.harvard.edu/home/" title="">Faculty of Arts &amp; Sciences</a></li>
+<li class="leaf menu-level-1"><a href="http://www.harvard.edu" title="">Harvard.edu</a></li>
+<li class="leaf menu-level-1"><a href="http://map.harvard.edu/" title="">Maps &amp; Directions</a></li>
+<li class="last leaf menu-level-1"><a href="http://www.registrar.fas.harvard.edu/" title="">Registrar</a></li>
+</ul>  </div>
+
+  
+  </nav>
+</div>
+  </div>
+
+  <div class="panel-panel panel-col-last">
+    <div class="inside"><div class="panel-pane pane-harvard-icons"  >
+  
       
-	<div class="content">
-    <div class="menu-block-wrapper menu-block-7 menu-name-menu-global-nav parent-mlid-0 menu-level-1">
-  <ul class="inline global-nav menu"><li class="menu__item is-leaf first leaf menu-mlid-3180 node-1322"><a href="/campaign/ways-to-give" class="menu__link">Give</a></li><li class="menu__item is-collapsed collapsed menu-mlid-2011 node-40"><a href="/campaign" class="menu__link">Campaign</a></li><li class="menu__item is-leaf last leaf menu-mlid-958 node-1312"><a href="/subscribe-news" class="menu__link">Subscribe</a></li></ul></div>
+  
+  <div class="pane-content">
+    <div class="harvard_icons"><a href="https://twitter.com/Harvard" class="harvard-icons-twitter">twitter</a><a href="https://www.facebook.com/harvardadmissions" class="harvard-icons-facebook">facebook</a><a href="http://harvard.tumblr.com/" class="harvard-icons-tumblr">tumblr</a><a href="https://plus.google.com/+harvard" class="harvard-icons-googleplus">googleplus</a><a href="https://www.youtube.com/channel/UCo1uJtIiBzu2XuyWxy12wHw" class="harvard-icons-youtube">youtube</a><a href="/" class="harvard-icons-instagram">instagram</a></div>  </div>
+
+  
+  </div>
+</div>
+  </div>
+</div>
+  </div>
+</div>
+  </div>
+
+    <footer class="page-footer" role="contentinfo">
+      <div class="wrap">
+        <div class="in">
+          <p>Copyright © 2017 The President and Fellows of Harvard College | <a
+              href="http://www.harvard.edu/privacy-statement">Privacy</a> | <a
+              href="http://dmca.harvard.edu/pages/annual-copyright-disclosure">Copyright Disclosure</a> | <a
+              href="http://accessibility.harvard.edu/">Accessibility</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <nav id="people-menu" class="nav people-nav">
+      <h2 class="element-invisible">Audience</h2>
+      <div class="wrap">
+        <p class="zeta in">For <i class="icon-caret-right"></i></p>
+          <div class="region region-audience-links">
+    <div id="block-harvard-site-harvard-audience-links" class="block block-harvard-site" aria-labelledby="harvard_audience_links" role="navigation">
+
+    <h2 class="element-invisible" id="harvard_audience_links">Audience links</h2>
+  
+  <div class="content">
+    <ul class="row in"><div class="split-left"><li class="first leaf menu-level-1"><a href="/alumni" title="">Alumni</a></li>
+<li class="leaf menu-level-1"><a href="/current-students-0" title="">Current Students</a></li>
+<li class="leaf menu-level-1"><a href="/faculty" title="">Faculty</a></li>
+</div><div class="split-right"><li class="leaf menu-level-1"><a href="/parents" title="">Parents &amp; Families</a></li>
+<li class="leaf menu-level-1"><a href="/prospective-students" title="">Prospective Students</a></li>
+<li class="leaf menu-level-1"><a href="/school-counselors" title="">School Counselors</a></li>
+<li class="last leaf menu-level-1"><a href="/informacion-en-espanol" title="">Información en Español</a></li>
+</div></ul>  </div>
+</div>
+  </div>
+      </div>
+    </nav>
+
+  </div> <!-- /.page-content -->
+
 	</div>
 
-</div>
-<div id="block-block-6" class="block block-block plain  even clearfix block-block-6">
-
-      
-	<div class="content">
-    <p>Radcliffe Institute for Advanced Study<br> Harvard University<br> 10 Garden Street<br> Cambridge, MA 02138<br><a href="mailto:info@radcliffe.harvard.edu">info@radcliffe.harvard.edu</a><br><a href="/contact">Contact Us</a></p>
+	<div id="modal-container">
+		<div class="modal-window">
+			<a href="#" class="modal-close icon-remove"></a>
+			<div class="modal-target"></div>
+		</div>
 	</div>
 
-</div>
-<div id="block-block-32" class="block block-block plain  odd clearfix block-block-32">
+	<script type="text/javascript" src="https://college.harvard.edu/sites/default/files/js/js_GYBYl8AzLDmfe244spzJEp50vgqokgOqv-fUYUo426U.js"></script>
 
-      
-	<div class="content">
-    <table border="0"><tbody><tr><td><p><a href="http://maps.google.com/maps?rlz=1C1GGGE_enUS373US373&amp;ix=acb&amp;q=10+garden+street+cambridge,+ma+02138&amp;um=1&amp;ie=UTF-8&amp;hq=&amp;hnear=0x89e37769c04b2801:0xfe5aebc0f404f877,10+Garden+St,+Mid-Cambridge,+MA+02138&amp;gl=us&amp;ei=_3yRT9mXK6Wd6AHZuJ2FBA&amp;sa=X&amp;oi=geocode_result&amp;ct=image&amp;resnum=1&amp;ved=0CCsQ8gEwAA"><span class="figure " style="max-width: 90px;"><img src="/sites/radcliffe.harvard.edu/files/map_footer.png" alt="" width="90" height="90" class="" style="float: none;"></span></a></p></td><td><h3>Directions</h3><ul><li><a href="http://map.harvard.edu/?ctrx=758131&amp;ctry=2962235" target="_blank">Interactive Map</a></li><li><a href="http://maps.google.com/maps?rlz=1C1GGGE_enUS373US373&amp;ix=acb&amp;q=10+garden+street+cambridge,+ma+02138&amp;um=1&amp;ie=UTF-8&amp;hq=&amp;hnear=0x89e37769c04b2801:0xfe5aebc0f404f877,10+Garden+St,+Mid-Cambridge,+MA+02138&amp;gl=us&amp;ei=_3yRT9mXK6Wd6AHZuJ2FBA&amp;sa=X&amp;oi=geocode_result&amp;ct=image&amp;resnum=1&amp;ved=0CCsQ8gEwAA">Google Maps</a></li><li><a href="/directions-radcliffe-institute">By Public Transport or Car</a>&nbsp;</li><li><a href="/parking-radcliffe-institute">Parking<br></a></li></ul></td></tr></tbody></table>
-	</div>
-
-</div>
-<div id="block-block-33" class="block block-block plain  even clearfix block-block-33">
-
-      
-	<div class="content">
-    <ul><li><a href="http://www.harvard.edu/">Harvard University</a></li><li><a href="http://trademark.harvard.edu/pages/trademark-notice" target="_blank">Trademark Notice</a></li><li><a href="http://www.harvard.edu/reporting-copyright-infringements">Reporting Copyright Infringements</a></li><li><a href="/privacy-policy">Privacy Policy</a></li></ul>
-	</div>
-
-</div>
-<div id="block-block-7" class="block block-block last odd clearfix block-block-7">
-
-      
-	<div class="content">
-    <p>&copy;&nbsp;2017 President and Fellows of Harvard College</p>
-	</div>
-
-</div>
-  </footer>
-  <script src="https://www.radcliffe.harvard.edu/sites/default/files/js/js_uTpGZRbRZm_lrt5640lI88hN-6jGIe3E3hxZcagIuss.js"></script>
-<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"180c88c936","applicationID":"34590815","transactionName":"NVdWZBcADEQHBUwLXAwdYUIMTk1eCAJdGh0SWkQ=","queueTime":0,"applicationTime":13,"atts":"GRBVEl8aH0o=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+  
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"d5ee19a50a","applicationID":"56250227","transactionName":"YlwDMksDCEcAW0JeX1sWIAVNCwlaTkhXUFVqVAAIWAUDRj5WWVNVak8IA049FlUGXQ==","queueTime":0,"applicationTime":981,"atts":"ThsARAMZG0k=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
 </html>
