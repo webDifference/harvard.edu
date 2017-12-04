@@ -38,7 +38,7 @@
 	    
               <meta name="HBSSearchUrl" content="/Pages/search.aspx">
 	       
-	    <meta name="PageBuildDateTime" content="2017-12-04 07:17:42Z on 192.168.3.172">
+	    <meta name="PageBuildDateTime" content="2017-12-04 08:01:35Z on 192.168.3.173">
 	  		
     
 </head>
@@ -47,7 +47,8 @@
 
 
 <textarea style="display:none">
-<form name="aspnetForm" method="post" action="default.aspx" id="aspnetForm">
+<form name="aspnetForm" method="post" action="default.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
+<div>
 <input type="hidden" name="MSOWebPartPage_PostbackSource" id="MSOWebPartPage_PostbackSource" value="" />
 <input type="hidden" name="MSOTlPn_SelectedWpId" id="MSOTlPn_SelectedWpId" value="" />
 <input type="hidden" name="MSOTlPn_View" id="MSOTlPn_View" value="0" />
@@ -55,7 +56,9 @@
 <input type="hidden" name="MSOGallery_SelectedLibrary" id="MSOGallery_SelectedLibrary" value="" />
 <input type="hidden" name="MSOGallery_FilterString" id="MSOGallery_FilterString" value="" />
 <input type="hidden" name="MSOTlPn_Button" id="MSOTlPn_Button" value="none" />
-<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0x7A6D41BDA2E5FD0062BBAEF6BDE534D8A7DC8E10B1FB61ED75A9CE2BD98780880B29CE92342A923F366DA2B806BF2499B8E2A7EB29025B60D877F2337812FAF5,04 Dec 2017 12:17:43 -0000" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0xAFFB2D1C3211667882B425F960A1CD10EDDCB7A354FE56F55F441DED0D4A846C2EF3A65927D6A84A4EA5506CAA24EF07D4CE4E314E3F17FEF4C94750034E085C,04 Dec 2017 13:01:35 -0000" />
 <input type="hidden" name="MSOSPWebPartManager_DisplayModeName" id="MSOSPWebPartManager_DisplayModeName" value="Browse" />
 <input type="hidden" name="MSOSPWebPartManager_ExitingDesignMode" id="MSOSPWebPartManager_ExitingDesignMode" value="false" />
 <input type="hidden" name="MSOWebPartPage_Shared" id="MSOWebPartPage_Shared" value="" />
@@ -65,6 +68,24 @@
 <input type="hidden" name="MSOSPWebPartManager_StartWebPartEditingName" id="MSOSPWebPartManager_StartWebPartEditingName" value="false" />
 <input type="hidden" name="MSOSPWebPartManager_EndWebPartEditing" id="MSOSPWebPartManager_EndWebPartEditing" value="false" />
 <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUBMA9kFgJmD2QWAgIBD2QWBgIBD2QWBAICD2QWAmYPFgIeBFRleHQFF0hhcnZhcmQgQnVzaW5lc3MgU2Nob29sZAIDDxYCHwAFPTxtZXRhIG5hbWU9ImRlc2NyaXB0aW9uIiBjb250ZW50PSJIYXJ2YXJkIEJ1c2luZXNzIFNjaG9vbCIgLz5kAhMPDxYCHgdWaXNpYmxlaGRkAhcPZBYCAgEPZBYCZg9kFgICAw9kFgICBQ8PFgQeBkhlaWdodBsAAAAAAAB5QAEAAAAeBF8hU0ICgAFkFgICAQ88KwAJAQAPFgQeDVBhdGhTZXBhcmF0b3IECB4NTmV2ZXJFeHBhbmRlZGdkZGTzNLcmTm+zYyDnoSmejkxDVyFTpA==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
 
 
 <script type="text/javascript">
@@ -86,8 +107,29 @@ function _spNavigateHierarchy(nodeDiv, dataSourceId, dataPath, url, listInContex
 
 }
 //]]>
+</script><script type="text/javascript">
+<!--
+var L_Menu_BaseUrl="";
+var L_Menu_LCID="1033";
+var L_Menu_SiteTheme="";
+//-->
+</script><script type="text/javascript" >
+<!--
+//-->
 </script>
-<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="7BAFC84E" />
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+UpdateFormDigest('\u002f', 1440000);
+return true;
+}
+//]]>
+</script>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="7BAFC84E" />
+</div>
 <script type="text/javascript">RegisterSod("sp.core.js", "\u002f_layouts\u002fsp.core.js?rev=7ByNlH\u00252BvcgRJg\u00252BRCctdC0w\u00253D\u00253D");</script><script type="text/javascript">RegisterSod("sp.res.resx", "\u002f_layouts\u002fScriptResx.ashx?culture=en\u00252Dus\u0026name=SP\u00252ERes\u0026rev=b6\u00252FcRx1a6orhAQ\u00252FcF\u00252B0ytQ\u00253D\u00253D");</script><script type="text/javascript">RegisterSod("sp.ui.dialog.js", "\u002f_layouts\u002fsp.ui.dialog.js?rev=Tpcmo1\u00252FSu6R0yewHowDl5g\u00253D\u00253D");RegisterSodDep("sp.ui.dialog.js", "sp.core.js");RegisterSodDep("sp.ui.dialog.js", "sp.res.resx");</script><script type="text/javascript">RegisterSod("core.js", "\u002f_layouts\u002f1033\u002fcore.js?rev=Emb5hNX1RZMNXk9oS82yvA\u00253D\u00253D");</script>
 <script type="text/javascript">
 //<![CDATA[
@@ -108,7 +150,7 @@ g_originalSPNavigateFunc = _spNavigateHierarchy;
 _spNavigateHierarchy = _spNavigateHierarchyEx;
 var _fV4UI = true;//]]>
 </script>
-<script type="text/javascript">RegisterSod("msstring.js", "\u002f_layouts\u002f1033\u002fmsstring.js?rev=QtiIcPH3HV7LgVSO7vONFg\u00253D\u00253D");</script><script type="text/javascript">RegisterSod("browserScript", "\u002f_layouts\u002f1033\u002fnon_ie.js?rev=EVTj1bu32\u00252FMla6SDN\u00252FsNTA\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("msstring.js", "\u002f_layouts\u002f1033\u002fmsstring.js?rev=QtiIcPH3HV7LgVSO7vONFg\u00253D\u00253D");</script><script type="text/javascript">RegisterSod("browserScript", "\u002f_layouts\u002f1033\u002fie55up.js?rev=UgTcwUTI6YcRzTMBxD93Xg\u00253D\u00253D");</script>
 <script type="text/javascript">
 //<![CDATA[
 var __wpmExportWarning='This Web Part Page has been personalized. As a result, one or more Web Part properties may contain confidential information. Make sure the properties contain information that is safe for others to read. After exporting this Web Part, view properties in the Web Part description file (.WebPart) by using a text editor such as Microsoft Notepad.';var __wpmCloseProviderWarning='You are about to close this Web Part.  It is currently providing data to other Web Parts, and these connections will be deleted if this Web Part is closed.  To close this Web Part, click OK.  To keep this Web Part, click Cancel.';var __wpmDeleteWarning='You are about to permanently delete this Web Part.  Are you sure you want to do this?  To delete this Web Part, click OK.  To keep this Web Part, click Cancel.';//]]>
