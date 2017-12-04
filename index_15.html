@@ -1,1148 +1,738 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
-  "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr"
-  xmlns:content="http://purl.org/rss/1.0/modules/content/"
-  xmlns:dc="http://purl.org/dc/terms/"
-  xmlns:foaf="http://xmlns.com/foaf/0.1/"
-  xmlns:og="http://ogp.me/ns#"
-  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-  xmlns:sioc="http://rdfs.org/sioc/ns#"
-  xmlns:sioct="http://rdfs.org/sioc/types#"
-  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-  xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
-
-<head profile="http://www.w3.org/1999/xhtml/vocab">
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="shortcut icon" href="https://library.harvard.edu/sites/default/files/favicon_0.ico" type="image/vnd.microsoft.icon" />
-<link rel="alternate" type="application/rss+xml" title="Harvard Library RSS" href="https://library.harvard.edu/rss.xml" />
-  <title>Harvard Library</title>
-  <link type="text/css" rel="stylesheet" href="https://library.harvard.edu/sites/default/files/css/css_lQaZfjVpwP_oGNqdtWCSpJT1EMqXdMiU84ekLLxQnc4.css" media="all" />
-<link type="text/css" rel="stylesheet" href="https://library.harvard.edu/sites/default/files/css/css_YJo600u5DslEXHHEBzo7Whs7zYvH8oZK7MuO9r6-Ktg.css" media="screen" />
-<link type="text/css" rel="stylesheet" href="https://library.harvard.edu/sites/default/files/css/css_MVTXe3q3dEB7GlnMK9xkFRsZTbwKIvw_rvtz4hwibIE.css" media="all" />
-<link type="text/css" rel="stylesheet" href="https://library.harvard.edu/sites/default/files/css/css_uqr7kuPq_chIubbzmqez7kY2MGX2lA1OzNLMUgY4P5E.css" media="all" />
-<link type="text/css" rel="stylesheet" href="https://library.harvard.edu/sites/default/files/css/css_RniJDgl-vps8LOHNZO63na4FDdx-62EuL6dmKOgxlnI.css" media="screen, projection" />
-<link type="text/css" rel="stylesheet" href="https://library.harvard.edu/sites/default/files/css/css_7Sjzvf-3sUj6vQQA-E2fqvVhMxa3l6o30aFTkS63JC8.css" media="print" />
-
-<!--[if lte IE 7]>
-<link type="text/css" rel="stylesheet" href="https://library.harvard.edu/sites/all/themes/HarvardLibraryPortalTheme/css/ie7.css?p0f7bd" media="all" />
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+	<meta charset="UTF-8"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="shortcut icon" type="image/x-icon" href="https://www.hsph.harvard.edu/wp-content/themes/hsph/assets/images/favicon.ico" />
+	<meta name="msapplication-TileColor" content="#A51C30">
+	<meta name="msapplication-TileImage" content="https://www.hsph.harvard.edu/wp-content/themes/hsph/assets/images/ms/ms-tile-icon.png">
+	<link rel="apple-touch-icon" href="https://www.hsph.harvard.edu/wp-content/themes/hsph/assets/images/ios/touch-icon-iphone.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="https://www.hsph.harvard.edu/wp-content/themes/hsph/assets/images/ios/touch-icon-ipad.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="https://www.hsph.harvard.edu/wp-content/themes/hsph/assets/images/ios/touch-icon-iphone-retina.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="https://www.hsph.harvard.edu/wp-content/themes/hsph/assets/images/ios/touch-icon-ipad-retina.png">
+	<meta property="fb:app_id" content="1019010578192159" />
+	<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<title>Harvard T.H. Chan School of Public Health | Powerful ideas for a healthier world</title>
+<!-- Jetpack Site Verification Tags -->
+<meta name="google-site-verification" content="1_sb_hH0QEPEQlTwo3_koSmHz27DaM08aYufbfeqLHk" />
+<meta name="msvalidate.01" content="4D1883664D3F0A935C792AFD5483C7B5" />
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//cdnjs.cloudflare.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Harvard T.H. Chan School of Public Health &raquo; Feed" href="https://www.hsph.harvard.edu/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.hsph.harvard.edu\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.8.3"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,56826,8203,55356,56819),0,0),c=j.toDataURL(),b!==c&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55358,56794,8205,9794,65039),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55358,56794,8203,9794,65039),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='hsph-protected-file-front-style-css'  href='https://www.hsph.harvard.edu/wp-content/plugins/plugin-pin-cas-ldap/assets/css/hsph-pin-file-protect.css?ver=4.8.3' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='https://www.hsph.harvard.edu/wp-includes/css/dashicons.min.css?ver=4.8.3' type='text/css' media='all' />
+<link rel='stylesheet' id='hsph-ui-shortcodes-style-css'  href='https://www.hsph.harvard.edu/wp-content/plugins/plugin-ui-shortcodes//assets/css/hsph-ui-shortcodes.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='hsph-style-css'  href='https://www.hsph.harvard.edu/wp-content/themes/hsph/style.css?ver=4.8.3' type='text/css' media='all' />
+<link rel='stylesheet' id='hsph-home-style-css'  href='https://www.hsph.harvard.edu/wp-content/themes/hsph-home/style.css?ver=4.8.3' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='hsph-home-ie8-css'  href='https://www.hsph.harvard.edu/wp-content/themes/hsph-home/css/ie8.css?ver=20151230' type='text/css' media='all' />
 <![endif]-->
-
-<!--[if lte IE 8]>
-<link type="text/css" rel="stylesheet" href="https://library.harvard.edu/sites/all/themes/HarvardLibraryPortalTheme/css/ie8.css?p0f7bd" media="all" />
+<link rel='stylesheet' id='hsph-fonts-css'  href='https://fonts.googleapis.com/css?family=Merriweather%3A300%2C400%2C700%2C300italic%2C400italic%2C700italic%7CInconsolata%3A400&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='genericons-css'  href='https://www.hsph.harvard.edu/wp-content/plugins/jetpack/_inc/genericons/genericons/genericons.css?ver=3.1' type='text/css' media='all' />
+<!--[if lt IE 10]>
+<link rel='stylesheet' id='hsph-ie-css'  href='https://www.hsph.harvard.edu/wp-content/themes/hsph/assets/css/ie9.css?ver=20150930' type='text/css' media='all' />
 <![endif]-->
-  <script type="text/javascript" src="https://library.harvard.edu/sites/all/modules/jquery_update/replace/jquery/1.7/jquery.min.js?v=1.7.2"></script>
-<script type="text/javascript" src="https://library.harvard.edu/misc/jquery.once.js?v=1.2"></script>
-<script type="text/javascript" src="https://library.harvard.edu/misc/drupal.js?p0f7bd"></script>
-<script type="text/javascript" src="https://library.harvard.edu/sites/all/modules/tipsy/javascripts/jquery.tipsy.js?v=0.1.7"></script>
-<script type="text/javascript" src="https://library.harvard.edu/sites/all/modules/tipsy/javascripts/tipsy.js?v=0.1.7"></script>
-<script type="text/javascript" src="https://library.harvard.edu/sites/all/modules/google_cse/google_cse.js?p0f7bd"></script>
-<script type="text/javascript" src="https://library.harvard.edu/sites/all/modules/om_maximenu/js/om_maximenu.js?p0f7bd"></script>
-<script type="text/javascript" src="https://library.harvard.edu/sites/all/modules/megamenu/megamenu.js?p0f7bd"></script>
-<script type="text/javascript" src="https://library.harvard.edu/sites/all/modules/google_analytics/googleanalytics.js?p0f7bd"></script>
-<script type="text/javascript">
-<!--//--><![CDATA[//><!--
-(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create", "UA-1707005-4", {"cookieDomain":"auto"});ga("require", "linkid", "linkid.js");ga("require", "displayfeatures");ga("set", "page", location.pathname + location.search + location.hash);ga("send", "pageview");
-//--><!]]>
-</script>
-<script type="text/javascript">
-<!--//--><![CDATA[//><!--
-jQuery(document).ready(function(jQuery) {
-jQuery("#feat").carouFredSel({
-                circular: true,
-	        auto    :  false,               
-	        scroll         	: {
-		items	: "page"
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='hsph-ie8-css'  href='https://www.hsph.harvard.edu/wp-content/themes/hsph/assets/css/ie8.css?ver=20151230' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='sharedaddy-custom-css'  href='https://www.hsph.harvard.edu/wp-content/plugins/hsph-sharing-3/sharing.css?ver=5.5' type='text/css' media='all' />
+<link rel='stylesheet' id='social-logos-css'  href='https://www.hsph.harvard.edu/wp-content/plugins/jetpack/_inc/social-logos/social-logos.min.css?ver=1' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack_css-css'  href='https://www.hsph.harvard.edu/wp-content/plugins/jetpack/css/jetpack.css?ver=5.5' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.hsph.harvard.edu/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='https://www.hsph.harvard.edu/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='https://www.hsph.harvard.edu/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://www.hsph.harvard.edu/wp-includes/js/jquery/ui/widget.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://www.hsph.harvard.edu/wp-includes/js/jquery/ui/tabs.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://www.hsph.harvard.edu/wp-includes/js/jquery/ui/accordion.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://www.hsph.harvard.edu/wp-content/plugins/plugin-ui-shortcodes//assets/scripts/hsph-ui-shortcodes.js?ver=1.0.0'></script>
+<script type='text/javascript' src='https://www.hsph.harvard.edu/wp-content/themes/hsph/assets/js/typekit.js?ver=1.0'></script>
+<!--[if lt IE 9]>
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js?ver=3.7.3'></script>
+<![endif]-->
+<link rel='https://api.w.org/' href='https://www.hsph.harvard.edu/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.hsph.harvard.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.hsph.harvard.edu/wp-includes/wlwmanifest.xml" /> 
+<link rel="canonical" href="https://www.hsph.harvard.edu/" />
+<link rel='shortlink' href='https://www.hsph.harvard.edu/' />
+<link rel="alternate" type="application/json+oembed" href="https://www.hsph.harvard.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.hsph.harvard.edu%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.hsph.harvard.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.hsph.harvard.edu%2F&#038;format=xml" />
+		<script type="text/javascript">
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
 		
-	},
-                prev       : {            
-                                button  : "#feat_prev"
-                },
-                next       : { 
-                                button  : "#feat_next"
-                },
-                pagination           : "#feat_pag"
-});
-jQuery("#scrollalert").carouFredSel({
-              circular: false,
-	infinite: false,
-	auto 	: false,
-	scroll	: {
-		items	: "page"
-	},
-                prev       : {            
-                                button  : "#scrollalert_prev"
-                },
-                next       : { 
-                                button  : "#scrollalert_next"
-                },
-                pagination           : "#scrollalert_pag"
-});
-});
-//--><!]]>
-</script>
-<script type="text/javascript" src="https://library.harvard.edu/sites/all/themes/HarvardLibraryPortalTheme/js/utils.js?p0f7bd"></script>
-<script type="text/javascript" src="https://library.harvard.edu/sites/all/themes/HarvardLibraryPortalTheme/js/jcarouselcontent.js?p0f7bd"></script>
-<script type="text/javascript" src="https://library.harvard.edu/sites/all/themes/HarvardLibraryPortalTheme/js/jquery-ui-1.8.21.custom.min.js?p0f7bd"></script>
-<script type="text/javascript" src="https://library.harvard.edu/sites/all/themes/HarvardLibraryPortalTheme/js/jquery-ui-personalized-1.6rc6.js?p0f7bd"></script>
-<script type="text/javascript" src="https://library.harvard.edu/sites/all/themes/HarvardLibraryPortalTheme/js/jquery.mousewheel.js?p0f7bd"></script>
-<script type="text/javascript" src="https://library.harvard.edu/sites/all/themes/HarvardLibraryPortalTheme/js/jquery.vaccordion.js?p0f7bd"></script>
-<script type="text/javascript" src="https://library.harvard.edu/sites/all/themes/HarvardLibraryPortalTheme/js/jquery.easing.1.3.js?p0f7bd"></script>
-<script type="text/javascript" src="https://library.harvard.edu/sites/all/themes/HarvardLibraryPortalTheme/js/jquery.youtubeaccordion.js?p0f7bd"></script>
-<script type="text/javascript" src="https://library.harvard.edu/sites/all/themes/HarvardLibraryPortalTheme/js/youtubeplaylist.js?p0f7bd"></script>
-<script type="text/javascript" src="https://library.harvard.edu/sites/all/themes/HarvardLibraryPortalTheme/js/uservoice.js?p0f7bd"></script>
-<script type="text/javascript" src="https://library.harvard.edu/sites/all/themes/HarvardLibraryPortalTheme/js/alertsscroll.js?p0f7bd"></script>
-<script type="text/javascript" src="https://library.harvard.edu/sites/all/themes/HarvardLibraryPortalTheme/js/allutilmethods.js?p0f7bd"></script>
-<script type="text/javascript" src="https://library.harvard.edu/sites/all/themes/HarvardLibraryPortalTheme/js/expandcollapesUtility.js?p0f7bd"></script>
-<script type="text/javascript" src="https://library.harvard.edu/sites/all/themes/HarvardLibraryPortalTheme/js/faq-exp.js?p0f7bd"></script>
-<script type="text/javascript" src="https://library.harvard.edu/sites/all/themes/HarvardLibraryPortalTheme/js/fn-accordion.js?p0f7bd"></script>
-<script type="text/javascript" src="https://library.harvard.edu/sites/all/themes/HarvardLibraryPortalTheme/js/libraryutils.js?p0f7bd"></script>
-<script type="text/javascript" src="https://library.harvard.edu/sites/all/themes/HarvardLibraryPortalTheme/js/customnicemenus.js?p0f7bd"></script>
-<script type="text/javascript" src="https://library.harvard.edu/sites/all/themes/HarvardLibraryPortalTheme/js/customanchorscroll.js?p0f7bd"></script>
-<script type="text/javascript" src="https://library.harvard.edu/sites/all/themes/HarvardLibraryPortalTheme/js/customdirectory.js?p0f7bd"></script>
-<script type="text/javascript" src="https://library.harvard.edu/sites/all/themes/HarvardLibraryPortalTheme/js/customMegaMenu.js?p0f7bd"></script>
-<script type="text/javascript">
-<!--//--><![CDATA[//><!--
-jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"HarvardLibraryPortalTheme","theme_token":"JfeoM14NphQaR1pIA19Wsz9bOXdjs2PgRUjeobW_Tq0","js":{"sites\/all\/modules\/jquery_update\/replace\/jquery\/1.7\/jquery.min.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/tipsy\/javascripts\/jquery.tipsy.js":1,"sites\/all\/modules\/tipsy\/javascripts\/tipsy.js":1,"sites\/all\/modules\/google_cse\/google_cse.js":1,"sites\/all\/modules\/om_maximenu\/js\/om_maximenu.js":1,"sites\/all\/modules\/megamenu\/megamenu.js":1,"sites\/all\/modules\/google_analytics\/googleanalytics.js":1,"0":1,"1":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/js\/utils.js":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/js\/jcarouselcontent.js":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/js\/jquery-ui-1.8.21.custom.min.js":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/js\/jquery-ui-personalized-1.6rc6.js":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/js\/jquery.mousewheel.js":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/js\/jquery.vaccordion.js":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/js\/jquery.easing.1.3.js":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/js\/jquery.youtubeaccordion.js":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/js\/youtubeplaylist.js":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/js\/uservoice.js":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/js\/alertsscroll.js":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/js\/allutilmethods.js":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/js\/expandcollapesUtility.js":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/js\/faq-exp.js":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/js\/fn-accordion.js":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/js\/libraryutils.js":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/js\/customnicemenus.js":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/js\/customanchorscroll.js":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/js\/customdirectory.js":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/js\/customMegaMenu.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/modules\/tipsy\/stylesheets\/tipsy.css":1,"modules\/book\/book.css":1,"sites\/all\/modules\/calendar\/css\/calendar_multiday.css":1,"modules\/comment\/comment.css":1,"sites\/all\/modules\/date\/date_api\/date.css":1,"sites\/all\/modules\/date\/date_popup\/themes\/datepicker.1.7.css":1,"sites\/all\/modules\/date\/date_repeat_field\/date_repeat_field.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/google_cse\/google_cse.css":1,"modules\/node\/node.css":1,"sites\/all\/modules\/om_maximenu\/css\/om_maximenu.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/megamenu\/megamenu.css":1,"sites\/all\/modules\/megamenu\/megamenu-skins.css":1,"sites\/all\/modules\/panels\/css\/panels.css":1,"sites\/all\/modules\/tagclouds\/tagclouds.css":1,"sites\/all\/modules\/content_type_extras\/css\/content_type_extras.css":1,"public:\/\/ctools\/css\/1b2acf3f75e728af95ba6217d982b1b7.css":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/css\/reset.css":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/css\/style.css":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/css\/topnav.css":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/css\/ui-lightness\/jquery-ui-1.8.21.custom.css":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/system.menus.css":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/system.messages.css":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/system.theme.css":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/node.css":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/search.css":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/user.css":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/css\/print.css":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/css\/ie7.css":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/css\/ie8.css":1}},"googleCSE":{"cx":"002386710524587861402:bhhhefxf6ki","language":"","resultsWidth":600,"domain":"www.google.com"},"megamenu":{"timeout":"0","sizewait":"0","hoverwait":"0"},"tipsy":{"custom_selectors":[{"selector":".tipsy","options":{"fade":1,"gravity":"w","delayIn":0,"delayOut":0,"trigger":"hover","opacity":"0.8","offset":0,"html":0,"tooltip_content":{"source":"attribute","selector":"title"}}}]},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip","trackUrlFragments":1},"better_exposed_filters":{"views":{"featured_resource_home_page":{"displays":{"default":{"filters":[]}}},"research_links_view":{"displays":{"default":{"filters":[]}}},"feature_events_view":{"displays":{"default":{"filters":[]}}},"featured_content_view_slider":{"displays":{"default":{"filters":[]}}}}},"urlIsAjaxTrusted":{"\/search\/google":true}});
-//--><!]]>
-</script>
+			ga( 'create', 'UA-16396394-1', 'hsph.harvard.edu', 'trackern1');
+			ga( 'trackern1.require', 'displayfeatures');
+			ga( 'trackern1.require', 'linkid');
+			ga( 'trackern1.set', 'dimension1', 'signed_out' );
+			ga( 'trackern1.set', 'dimension2', 'none' );
+			ga( 'trackern1.send', 'pageview');
+
+				
+			ga( 'create', ' UA-44468534-1', 'hsph.harvard.edu', 'trackern2');
+			ga( 'trackern2.require', 'displayfeatures');
+			ga( 'trackern2.require', 'linkid');
+			ga( 'trackern2.set', 'dimension1', 'signed_out' );
+			ga( 'trackern2.set', 'dimension2', 'none' );
+			ga( 'trackern2.send', 'pageview');
+
+						</script>
+		
+		<meta http-equiv="content-language" content="en-us" />
+		<meta name="copyright" content="Copyright (c) 2017 The President and Fellows of Harvard College" /><meta name="description" content="Harvard School of Public Health brings together dedicated experts from many disciplines to educate new generations of global health leaders and produce powe" />
+<link rel='dns-prefetch' href='//v0.wordpress.com'/>
+
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Harvard T.H. Chan School of Public Health" />
+<meta property="og:description" content="Powerful ideas for a healthier world" />
+<meta property="og:url" content="https://www.hsph.harvard.edu/" />
+<meta property="og:site_name" content="Harvard T.H. Chan School of Public Health" />
+<meta property="og:image" content="https://cdn1.sph.harvard.edu/social-share.jpg" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:text:title" content="Home" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@harvardchansph" />
 </head>
-<body class="html front not-logged-in no-sidebars page-node" >
-  <div id="skip-link">
-    <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
-  </div>
-    <div class="layout-frontpage clearfix">
-  <div class="outerwrapper"> 
-	<div class="wrapper"> 
-	<div id="header-Box">
-    <div class="column column-main column-alpha myacctellusholder">
-    <div class="panel-pane pane-custom pane-10"  >
-  
-      
-  
-  <div class="pane-content">
-    <!--<a id="telluswhatyouthink" href="https://library.harvard.edu/user-feedback-and-known-issues" title="We welcome your feedback">We welcome your feedback on the BETA Harvard Library website.</a>-->
-<div class="myacctellusholdersub">
 
-		<ul id='hlp_links'>
-		
-	    	
-			<li id='hlp_hollis'><a href='http://nrs.harvard.edu/urn-3:hul.ois:bannerhollis+'  
-				alt='HOLLIS plus' title='Search books, articles and more' target="_self" onclick="ga('send', 'event', 'Omnibar', 'HOLLIS+');">
-				
-				HOLLIS+</a></li>
-	    	
-			<li id='hlp_classic'><a href='http://nrs.harvard.edu/urn-3:hul.ois:bannerhc'  
-				title='Library catalog' target="_self" onclick="ga('send', 'event', 'Omnibar', 'HOLLIS Classic');">
-				
-				HOLLIS Classic</a></li>
-	    	
-			<li id='hlp_jrnals'><a href='http://nrs.harvard.edu/urn-3:hul.ois:bannerjournals'  
-				title='Find articles and journals' target="_self" onclick="ga('send', 'event', 'Omnibar', 'Journals');">
-				
-				Journals</a></li>
-	    	
-			<li id='hlp_dbs'><a href='http://nrs.harvard.edu/urn-3:hul.ois:bannerdatabases'  
-				title='JSTOR, PubMed, PsycINFO, etc.' target="_self" onclick="ga('send', 'event', 'Omnibar', 'Databases');">
-				
-				Databases</a></li>
-	    	
-			<li id='hlp_libs'><a href='http://nrs.harvard.edu/urn-3:hul.ois:bannerfindlib'  
-				title='Libraries / Hours' target="_self" onclick="ga('send', 'event', 'Omnibar', 'Libraries Hours');">
-				
-				Libraries / Hours</a></li>
-	    	
-			<li id='hlp_myaccounts'><a href='http://nrs.harvard.edu/urn-3:hul.ois:banneraccounts'  
-				title='Renew books or check your library accounts' target="_self" onclick="ga('send', 'event', 'Omnibar', 'Accounts');">
-				
-				All My Accounts</a></li>
-	    	
-			<li id='hlp_askus'>
-<img src='/sites/all/themes/HarvardLibraryPortalTheme/images/qmark_fff.png' alt='' />
-<a href='http://nrs.harvard.edu/urn-3:hul.ois:dsref'  title='Fast answers from Harvard librarians' target="_self" onclick="ga('send', 'event', 'Omnibar', 'Ask Us');">Ask Us</a></li>
-		</ul>
+<body class="home page-template-default page page-id-359 full-width hsph-homepage no-sidebar">
+<script>
+  window.fbAsyncInit = function() {
+	FB.init({
+	  appId      : '1019010578192159',
+	  xfbml      : true,
+	  version    : 'v2.7'
+	});
+	FB.AppEvents.logPageView();
+  };
 
-
-    <!-- Ask Us Button Starts -->
-	<!-- <div class="askusbutton">
-		<a href="http://asklib.hcl.harvard.edu/" title="Ask Us?" target="_blank" onclick="ga('send', 'event', 'Banner button', 'Ask Us');"><img alt="Ask Us?" border="0" class="tellusbuttonstyle" height="22" src="https://library.harvard.edu/sites/default/files/images/ask-us.gif" title="Ask Us?" width="85" /> </a></div> -->
-	<!-- Ask Us Button Ends -->
-	
-    <!-- Divider Starts -->
-	<!-- <div class="myacctellusdivider">
-		&nbsp;</div> -->
-	<!--Divider Ends -->
-
-
-
-    <!-- Search Site Starts -->
-	<div class="searchsite">
-		<!-- <input class="searchsiteinput" type="text" name="Search this Site" value="Search this Site" /> --><form class="search-form" action="/search/google" method="post" id="search-form" accept-charset="UTF-8"><div><div class="container-inline form-wrapper" id="edit-basic"><div class="form-item form-type-textfield form-item-keys">
-  <label for="edit-keys">Enter your keywords </label>
- <input type="text" id="edit-keys" name="keys" value="" size="40" maxlength="255" class="form-text" />
-</div>
-<input type="submit" id="edit-submit" name="op" value="Search" class="form-submit" /></div><input type="hidden" name="form_build_id" value="form-ukYnvnmb0ycUhKetjfHaII8uEbRTI1ZsAC3qh9W3IxI" />
-<input type="hidden" name="form_id" value="search_form" />
-</div></form>	</div>
-	<!-- <div class="sitesearch">
-		Search this site
-	</div> -->
-	<!--Search Site Ends -->
-	<!-- Go Button Starts -->
-		<!--<div class="gobutton">
-		<input class="gobuttonstyle" title="Go" type="button" /></div> -->
-	<!-- Go Button Ends -->
-    
-
-
-</div>  </div>
-
-  
-  </div>
-  </div>
-  <div class="header">
-    <div class="column logo column-first column-alpha">
-    <div class="panel-pane pane-page-logo"  >
-  
-      
-  
-  <div class="pane-content">
-    <a href="/" rel="home" id="logo" title="Home"><img src="https://library.harvard.edu/sites/all/themes/HarvardLibraryPortalTheme/logo.png" alt="Home" /></a>  </div>
-
-  
-  </div>
-  </div>
-  
-    <div class="column topnav column-second column-alpha">
-  <div id="nav">
-  	<div id="menu">
- 
-    <div class="panel-pane pane-custom pane-5"  id="main-faux" >
-  
-      
-  
-  <div class="pane-content">
-    <nav class="hrmenu" id="hrmenu">
-    <ul>
-        <li aria-controls="sfdrop" aria-expanded="false">
-            <a href="#"><span>&nbsp;</span>Search &amp; Find</a>
-            <div id="sfdrop" class="hrsub" aria-hidden="true">
-                <div class="hrsub-inner">
-                    <div>
-                        <h2>Catalogs</h2>
-                        <ul>
-                            <li>
-                                <a href="http://hollis.harvard.edu" onclick="ga('send', 'event', 'MainMenu','Search &amp; Find menu', 'HOLLIS+');">
-                                    HOLLIS+</a>
-                            </li>
-                            <li>
-                                <a href="http://hollisclassic.harvard.edu/" onclick="ga('send', 'event', 'MainMenu', 'Search &amp; Find menu', 'HOLLIS Classic');">
-                                    HOLLIS Classic</a>
-                            </li>
-                            <li>
-                                <a href="http://nrs.harvard.edu/urn-3:hul.eresource:oasisxxx" onclick="ga('send', 'event', 'MainMenu', 'Search &amp; Find menu', 'OASIS');">
-                                    OASIS</a>
-                            </li>
-                            <li>
-                                <a href="http://nrs.harvard.edu/urn-3:hul.ois:images" onclick="ga('send', 'event', 'MainMenu', 'Search &amp; Find menu','VIA');">
-                                    HOLLIS Images</a>
-                            </li>
-                            <li>
-                                <a href="http://nrs.harvard.edu/urn-3:hul.eresource:hgeodesy" onclick="ga('send', 'event', 'MainMenu', 'Search &amp; Find menu', 'HGL');">
-                                    HGL (Geodata)</a>
-                            </li>
-                            <li>
-                                <a href="http://nrs.harvard.edu/urn-3:hul.eresource:dashrepo" onclick="ga('send', 'event', 'MainMenu', 'Search &amp; Find menu', 'DASH');">
-                                    DASH</a>
-                            </li>
-                            <li>
-                                <a href="http://www.worldcat.org/advancedsearch" onclick="ga('send', 'event', 'MainMenu', 'Search &amp; Find menu', 'WorldCat');">
-                                    WorldCat</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h2>Databases &amp;<br>
-                            E-Resources</h2>
-                        <ul>
-                            <li>
-                                <a href="/search-find" onclick="ga('send', 'event', 'MainMenu', 'Search &amp; Find menu', 'Search &amp; Find');">
-                                    Search &amp; Find (Major databases)</a>
-                            </li>
-                            <li>
-                                <a href="http://e-research.lib.harvard.edu/V?func=find-db-1" onclick="ga('send', 'event', 'MainMenu', 'Search &amp; Find menu', 'All Databases');">
-                                    All Databases</a>
-                            </li>
-                            <li>
-                                <a href="http://sfx.hul.harvard.edu/sfx_local/az/" onclick="ga('send', 'event', 'MainMenu', 'Search &amp; Find menu', 'E-Journals');">
-                                    E-Journals</a>
-                            </li>
-                            <li>
-                                <a href="http://nrs.harvard.edu/urn-3:hul.ois:articlestab" onclick="ga('send', 'event', 'MainMenu', 'Search &amp; Find menu', 'Articles in HOLLIS+');">
-                                    Articles in HOLLIS+</a>
-                            </li>
-                            <li>
-                                <a href="http://nrs.harvard.edu/urn-3:hul.eresource:ebscoasp" onclick="ga('send', 'event', 'MainMenu', 'Search &amp; Find menu', 'Academic Search Premier');">
-                                    Academic Search Premier</a>
-                            </li>
-                            <li>
-                                <a href="http://nrs.harvard.edu/urn-3:hul.eresource:jstorage" onclick="ga('send', 'event', 'MainMenu', 'Search &amp; Find menu', 'JSTOR');">
-                                    JSTOR</a>
-                            </li>
-                            <li>
-                                <a href="http://nrs.harvard.edu/urn-3:hul.eresource:pubmedxx" onclick="ga('send', 'event', 'MainMenu', 'Search &amp; Find menu', 'PubMed');">
-                                    PubMed</a>
-                            </li>
-                            <li>
-                                <a href="/image-repositories" onclick="ga('send', 'event', 'MainMenu', 'Search &amp; Find menu', 'Image Repositories');">
-                                    Image Repositories</a>
-                            </li>
-                            <li>
-                                <a href="http://nrs.harvard.edu/urn-3:hul.eresource:scicitin" onclick="ga('send', 'event', 'MainMenu', 'Search &amp; Find menu', 'Web of Science');">
-                                    Web of Science</a>
-                            </li>
-                            <li>
-                                <a href="http://nrs.harvard.edu/urn-3:hul.eresource:gscholar" onclick="ga('send', 'event', 'MainMenu', 'Search &amp; Find menu', 'Google Scholar');">
-                                    Google Scholar</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h2>Get It Services</h2>
-                        <ul>
-                            <li>
-                                <a href="http://nrs.harvard.edu/urn-3:hul.eother:BD" onclick="ga('send', 'event', 'MainMenu', 'Search &amp; Find menu', 'Borrow Direct');">
-                                    Borrow Direct</a>
-                            </li>
-                            <li>
-                                <a href="http://nrs.harvard.edu/urn-3:hul.eresource:illhulha" onclick="ga('send', 'event', 'MainMenu', 'Search &amp; Find menu', 'Scan &amp; Deliver');">
-                                    Scan &amp; Deliver</a>
-                            </li>
-                            <li>
-                                <a href="http://nrs.harvard.edu/urn-3:hul.eresource:illhulha" onclick="ga('send', 'event', 'MainMenu', 'Search &amp; Find menu', 'Interlibrary Loan');">
-                                    Interlibrary Loan</a>
-                            </li>
-                            <li>
-                                <a href="/get-it-services" onclick="ga('send', 'event', 'MainMenu', 'Search &amp; Find menu', 'About Get It Services');">
-                                    About Get It Services</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- /hrsub-inner -->
-            </div>
-            <!-- /hrsub -->
-        </li>
-        <li aria-controls="rsdrop" aria-expanded="false">
-            <a href="#"><span>&nbsp;</span>Research Support</a>
-            <div id="rsdrop" class="hrsub" aria-hidden="true">
-                <div class="hrsub-inner">
-                    <div>
-                        <h2>Research Tools</h2>
-                        <ul>
-                            <li>
-                                <a href="/endnote" onclick="ga('send', 'event', 'MainMenu', 'Research Support menu', 'EndNote');">
-                                    EndNote</a>
-                            </li>
-                            <li>
-                                <a href="http://guides.library.harvard.edu/cite/zotero" onclick="ga('send', 'event', 'MainMenu', 'Research Support menu', 'Zotero');">
-                                    Zotero</a>
-                            </li>
-                            <li>
-                                <a href="http://nrs.harvard.edu/urn-3:hul.eresource:refworks" onclick="ga('send', 'event', 'MainMenu', 'Research Support menu', 'RefWorks');">
-                                    RefWorks</a>
-                            </li>
-                            <li>
-                                <a href="/harvard-library-proxy-bookmarklet" onclick="ga('send', 'event', 'MainMenu', 'Research Support menu', Bookmarklet);">
-                                    Harvard Library Bookmarklet</a>
-                            </li>
-                            <li>
-                                <a href="/harvard-libx" onclick="ga('send', 'event', 'MainMenu', 'Research Support menu', 'LibX');">
-                                    Harvard LibX</a>
-                            </li>
-                            <li>
-                                <a href="http://nrs.harvard.edu/urn-3:hul.ois:journals" onclick="ga('send', 'event', 'MainMenu', 'Research Support menu', 'Journals Search');">
-                                    Journals Search</a>
-                            </li>
-                            <li>
-                                <a href="http://nrs.harvard.edu/urn-3:HUL.OIS:dmptool" onclick="ga('send', 'event', 'MainMenu', 'Research Support menu', 'DMPTool');" title="Data Management Tool">
-                                    DMPTool</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h2>Research Help</h2>
-                        <ul>
-                            <li>
-                                <a href="http://guides.library.harvard.edu/" onclick="ga('send', 'event', 'MainMenu', 'Research Support menu', 'Research Guides');">
-                                    Research Guides</a>
-                            </li>
-                            <li>
-                                <a href="http://learn.library.harvard.edu/");">
-                                    Digital Learning Launchpad</a>
-                            </li>
-                            <li>
-                                <a href="http://asklib.hcl.harvard.edu/" onclick="ga('send', 'event', 'MainMenu', 'Research Support menu', 'Ask a Librarian');">
-                                    Ask a Librarian</a>
-                            </li>
-                            <li>
-                                <a href="http://asklib.hcl.harvard.edu/HLRFAQ" onclick="ga('send', 'event', 'MainMenu', 'Research Support menu', 'Research FAQs');">
-                                    Research FAQs</a>
-                            </li>
-                            <li>
-                                <a href="/request-research-appointment" onclick="ga('send', 'event', 'MainMenu', 'Research Support menu', 'Request a Research Appointment');">
-                                    Request a Research Appointment</a>
-                            </li>
-                            <li>
-                                <a href="/staff-directory" onclick="ga('send', 'event', 'MainMenu', 'Research Support menu', 'Staff Directory');">
-                                    Staff Directory</a>
-                            </li>
-                            <li>
-                                <a href="http://guides.library.harvard.edu/dmp" onclick="ga('send', 'event', 'MainMenu', 'Research Support menu', 'Data Management');">
-                                    Data Management</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h2>Contribute Your Research</h2>
-                        <ul>
-                            <li>
-                                <a href="https://dash.harvard.edu/" onclick="ga('send', 'event', 'MainMenu', 'Research Support menu', 'DASH');">
-                                    DASH</a>
-                            </li>
-                            <li>
-                                <a href="http://nrs.harvard.edu/urn-3:hul.eresource:harvmitd" onclick="ga('send', 'event', 'MainMenu', 'Research Support menu', 'IQSS Dataverse');">
-                                    IQSS Dataverse</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- /hrsub-inner -->
-            </div>
-            <!-- /hrsub -->
-        </li>
-        <li aria-controls="ladrop" aria-expanded="false">
-            <a href="#"><span>&nbsp;</span>Libraries &amp; Archives</a>
-            <div id="ladrop" class="hrsub" aria-hidden="true">
-                <div class="hrsub-inner">
-                    <div>
-                        <h2>Locations &amp; Hours</h2>
-                        <ul>
-                            <li>
-                                <a href="/find-library" onclick="ga('send', 'event', 'MainMenu', 'Libraries &amp; Archives menu', 'Find a Library');">
-                                    Find a Library</a>
-                            </li>
-                            <li>
-                                <a href="/all-library-hours" onclick="ga('send', 'event', 'MainMenu', 'Libraries &amp; Archives menu', 'All Library Hours by Week');">
-                                    All Library Hours by Week</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h2>Archives &amp; Special Collections</h2>
-                        <ul>
-                            <li>
-                                <a href="/using-collections" onclick="ga('send', 'event', 'MainMenu', 'Libraries &amp; Archives menu', 'Using the Collections');">
-                                    Using the Collections</a>
-                            </li>
-                            <li>
-                                <a href="/digital-collections" onclick="ga('send', 'event', 'MainMenu', 'Libraries &amp; Archives menu', 'Digital Collections');">
-                                    Digital Collections</a>
-                            </li>
-                            <li>
-                                <a href="/online-exhibitions" onclick="ga('send', 'event', 'MainMenu', 'Libraries &amp; Archives menu', 'Online Exhibitions');">
-                                    Online Exhibitions</a>
-                            </li>
-                            <li>
-                                <a href="/university-records-management" onclick="ga('send', 'event', 'MainMenu', 'Libraries &amp; Archives menu', 'University Records Management');">
-                                    University Records Management</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- /hrsub-inner -->
-            </div>
-            <!-- /hrsub -->
-        </li>
-        <li aria-controls="audrop" aria-expanded="false">
-            <a href="#"><span>&nbsp;</span>About Us</a>
-            <div id="audrop" class="hrsub" aria-hidden="true">
-                <div class="hrsub-inner">
-                    <div>
-                        <h2>Mission &amp; Governance</h2>
-                        <ul>
-                            <li>
-                                <a href="/objectives-priorities" onclick="ga('send', 'event', 'MainMenu', 'About Us menu', 'Mission &amp; Objectives');">
-                                    Mission &amp; Objectives</a>
-                            </li>
-                            <li>
-                                <a href="/sarah-thomas" onclick="ga('send', 'event', 'MainMenu', 'About Us menu', 'Vice President Sarah Thomas');">
-                                    Vice President Sarah Thomas</a>
-                            </li>
-                            <li>
-                                <a href="/governance" onclick="ga('send', 'event', 'MainMenu', 'About Us menu', 'Governance');">
-                                    Governance</a>
-                            </li>
-                            <li>
-                                <a href="https://provost.harvard.edu/" onclick="ga('send', 'event', 'MainMenu', 'About Us menu', 'Provost');">
-                                    Office of the Provost</a>
-                            </li>
-                        </ul>
-                        <h2>News &amp; Events</h2>
-                        <ul>
-                            <li>
-                                <a href="/blog/harvard-library" onclick="ga('send', 'event', 'MainMenu', 'About Us menu', 'Blog');">
-                                    Blog</a>
-                            </li>
-                            <li>
-                                <a href="/library-calendar" onclick="ga('send', 'event', 'MainMenu', 'About Us menu', 'Calendar');">
-                                    Calendar</a>
-                            </li>
-                            <li>
-                                <a href="/exhibitions-and-events" onclick="ga('send', 'event', 'MainMenu', 'About Us menu', 'Exhibitions &amp; Events');">
-                                    Exhibitions &amp; Events</a>
-                            </li>
-                            <li>
-                                <a href="/social-media" onclick="ga('send', 'event', 'MainMenu', 'About Us menu', 'Social Media');">
-                                    Social Media</a>
-                            </li>
-                            <li>
-                                <a href="/submit-your-library-event" onclick="ga('send', 'event', 'MainMenu', 'About Us menu', 'Submit an Event');">
-                                    Submit an Event</a>
-                            </li>
-                            <li>
-                                <a href="/newsroom" onclick="ga('send', 'event', 'MainMenu', 'About Us menu', 'Newsroom');">
-                                    Newsroom</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h2>Staff &amp; Departments</h2>
-                        <ul>
-                            <li>
-                                <a href="/staff-directory" onclick="ga('send', 'event', 'MainMenu', 'About Us menu', 'Staff Directory');">
-                                    Staff Directory</a>
-                            </li>
-                            <li>
-                                <a href="/staff-section" onclick="ga('send', 'event', 'MainMenu', 'About Us menu', 'Resources for Staff');">
-                                    Resources for Staff</a>
-                            </li>
-                            <li>
-                                <a href="/access-services" onclick="ga('send', 'event', 'MainMenu', 'About Us menu', 'Access Services');">
-                                    Access Services</a>
-                            </li>
-                            <li>
-                                <a href="/service-directory" onclick="ga('send', 'event', 'MainMenu', 'About Us menu', 'Information &amp; Technical Services');">
-                                    Information &amp; Technical Services</a>
-                            </li>
-                            <li>
-                                <a href="/lts" onclick="ga('send', 'event', 'MainMenu', 'About Us menu', 'Library Technology Services');">
-                                    Library Technology Services</a>
-                            </li>
-                            <li>
-                                <a href="/preservation-services" onclick="ga('send', 'event', 'MainMenu', 'About Us menu', 'Preservation Services');">
-                                    Preservation Services</a>
-                            </li>
-                        </ul>
-                        <h2>Programs &amp; Initiatives</h2>
-                        <ul>
-                            <li>
-                                <a href="/osc" onclick="ga('send', 'event', 'MainMenu', 'About Us menu', 'Office for Scholarly Communication');">
-                                    Office for Scholarly Communication</a>
-                            </li>
-                            <li>
-                                <a href="http://projects.iq.harvard.edu/harvardlibraryux" onclick="ga('send', 'event', 'MainMenu', 'About Us menu', 'User Research Center');">
-                                    User Research Center</a>
-                            </li>
-                             <li>
-                                <a href="/techloan">
-                                    Technology Lending Program</a>
-                            </li>
-                            <li>
-                                <a href="/harvard-purdue-data" onclick="ga('send', 'event', 'MainMenu', 'About Us menu', 'Data Management Symposium');">
-                                    Data Management Symposium</a>
-                            </li>
-                            <li>
-                                <a href="/ivies_plus_RTL" onclick="ga('send', 'event', 'MainMenu', 'About Us menu', 'Ivy Plus');">
-                                    Ivy Plus</a>
-                            </li>
-                            <li>
-                                <a href="/pfellows" onclick="ga('send', 'event', 'MainMenu', 'About Us menu', 'Pforzheimer Fellows');">
-                                    Pforzheimer Fellows</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h2>Giving to the Library</h2>
-                        <ul>
-                            <li>
-                                <a href="/giving-library" onclick="ga('send', 'event', 'MainMenu', 'About Us menu', 'About [Giving to the Library]');">
-                                    About</a>
-                            </li>
-                            <li>
-                                <a href="http://alumni.harvard.edu/ways-to-give/planned-giving" onclick="ga('send', 'event', 'MainMenu', 'About Us menu', 'Planned Giving');">
-                                    Planned Giving</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- /hrsub-inner -->
-            </div>
-            <!-- /hrsub -->
-        </li>
-        <li aria-controls="hlpdrop" aria-expanded="false">
-            <a href="#"><span>&nbsp;</span>Help</a>
-            <div id="hlpdrop" class="hrsub" aria-hidden="true">
-                <div class="hrsub-inner">
-                    <div>
-                        <h2>Find Answers</h2>
-                        <ul>
-                            <li>
-                                <a href="/frequently-asked-questions" onclick="ga('send', 'event', 'MainMenu', 'Help menu', 'Frequently Asked Questions');">
-                                    Frequently Asked Questions</a>
-                            </li>
-                            <li>
-                                <a href="/support-users-disabilities" onclick="ga('send', 'event', 'MainMenu', 'Help menu', 'Support for Users with Disabilities');">
-                                    Support for Users with Disabilities</a>
-                            </li>
-                            <li>
-                                <a href="/e-resources-copyright-and-licensing-restrictions" onclick="ga('send', 'event', 'MainMenu', 'Help menu', 'E-Resources: Copyright &amp; Licensing Restrictions');">
-                                    E-Resources: Copyright &amp; Licensing
-                                    Restrictions</a>
-                            </li>
-                            <li>
-                                <a href="/e-advisories" onclick="ga('send', 'event', 'MainMenu', 'Help menu', 'System Advisories');">
-                                    System Advisories</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h2>Contact Us</h2>
-                        <ul>
-                            <li>
-                                <a href="http://nrs.harvard.edu/urn-3:hul.ois:dsref" onclick="ga('send', 'event', 'MainMenu', 'Help menu', 'Ask a Librarian');">
-                                    Ask a Librarian</a>
-                            </li>
-                            <li>
-                                <a href="/report-problem" onclick="ga('send', 'event', 'MainMenu', 'Help menu', 'Report a Problem or Provide Feedback');">
-                                    Report a Problem or Provide Feedback</a>
-                            </li>
-                            <li>
-                                <a href="/share-story" onclick="ga('send', 'event', 'MainMenu', 'Help menu', 'Share a Story');">
-                                    Share a Story</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- /hrsub-inner -->
-            </div>
-            <!-- /hrsub -->
-        </li>
-    </ul>
-</nav>  </div>
-
-  
-  </div>
-  </div>
-   </div>
-		</div>
-		 		 </div>
-						</div>
- <div class="divider"> &nbsp; </div> 
- <div class="homecontentarea" id="main-content">
-    <div class="column homeleftcol column-third column-alpha">
-    <div class="panel-pane pane-custom pane-8"  >
-  
-      
-  
-  <div class="pane-content">
-    <div class="harvardcatalogs">
-    <div class="harvardcatalogsInner">
-        <h1>HOLLIS+</h1>
-        <p>Search for books, articles, media, and more</p>
-        <div id="homePageSingleSearchBox">
-            <form id="simple" name="searchPrimoForm" aria-label="Search form" method="get" target="_self" action="http://hollis.harvard.edu/primo_library/libweb/action/dlSearch.do" enctype="application/x-www-form-urlencoded; charset=utf-8" onsubmit="singleSearchPrimo()">
-                <input type="hidden" name="institution" value="HVD">
-                <input type="hidden" name="vid" value="HVD">
-                <input type="hidden" name="tab" value="everything">
-                <input type="hidden" name="search_scope" value="everything">
-                <input type="hidden" name="mode" value="Basic">
-                <input type="hidden" name="onCampus" value="false">
-                <input type="hidden" name="displayMode" value="full">
-                <input type="hidden" name="highlight" value="true">
-                <input type="hidden" name="query" id="primoQuery">
-                <input type="search" id="primoQueryTemp" aria-label="Enter search terms">
-                <!-- Which PNX Display fields to highlight the results -->
-                <input type="hidden" name="displayField" value="all">
-                <input type="hidden" name="pcAvailabiltyMode" value="true">
-                <input type="hidden" name="bulkSize" value="30">
-                <!-- Search Button  -->
-                <input id="singleSearch" onclick="singleSearchPrimo()" type="button" value="Search" aria-label="Search">
-            </form>
-        </div>
-        <div id="homePageAdvSearch"><a href="http://hollis.harvard.edu/primo_library/libweb/action/search.do?mode=Advanced&ct=AdvancedSearch&dscnt=0&vid=HVD" onclick="ga('send', 'event', 'homePage', 'Advanced Search');">Advanced Search</a></div>
-        <div id="homePageUseSF">For a list of major databases, use <a href="search-find" onclick="ga('send', 'event', 'homePage', 'use Search & Find');">Search & Find</a></div>
-    </div>
-</div>  </div>
-
-  
-  </div>
-<div class="panel-separator"></div><div class="panel-pane pane-views pane-featured-content-view-slider"  >
-  
-      
-  
-  <div class="pane-content">
-    <div class="view view-featured-content-view-slider view-id-featured_content_view_slider view-display-id-default view-dom-id-611363d1b15bd8a77b221d2dd617e216">
-        
-  
-  
-      <div class="view-content">
-       <div class="homeleftcoldividerboldblack">&nbsp;</div>
-             <div class="univrightcol-featfull">
-                        <div class="headabt">
-						                             <div class="univrightcoldivider"> &nbsp; </div>
-                        </div>
-                        
-                       <div class="featpagination" id="feat_pag"></div>
-                      </div>
-                      <div class="featcarouselholder">
-                        <div class="featprevcr">
-                            <a class="prev" id="feat_prev" href="#"><span>prev</span></a>
-                        </div>
-                         <div class="featnextcr">
-                         <a class="next" id="feat_next" href="#"><span>next</span></a> 
-            			</div>
-                         <div class="image_carouselfeat">
-                            <div id="feat">                	
-          						  								  <div class="views-row views-row-1 views-row-odd views-row-first homefeatcarouselholdcontent">
-								      
-          <p><a href="https://news.harvard.edu/gazette/story/2017/10/lights-camera-cabot/ "><img typeof="foaf:Image" src="https://library.harvard.edu/sites/default/files/lightscameracabot_200x140.jpg" width="200" height="140" alt="" /></a></p>    
-          <h2>Lights, Camera, Cabot</h2>    
-          <p>At Cabot Library, multimedia studios provide students the opportunity to turn their ideas into everything from podcasts to films.</p>    
-          <p class="field-content"><a class="cardetails" href ="https://news.harvard.edu/gazette/story/2017/10/lights-camera-cabot/">Detail</a></p>  								  </div>
-																  <div class="views-row views-row-2 views-row-even homefeatcarouselholdcontent">
-								      
-          <p><a href="https://news.harvard.edu/gazette/story/2017/10/harvard-digitizes-450000-documents-from-its-colonial-north-american-project/ "><img typeof="foaf:Image" src="https://library.harvard.edu/sites/default/files/scrollthroughcna_200x140.jpg" width="200" height="140" alt="Lock of hair sent by Elizabeth Lincoln to Samuel Norton, ca. 1780" /></a></p>    
-          <h2>Scroll Through Colonial Life</h2>    
-          <p>The Library's vast collection from the Colonial era, from love letters to receipts, is being digitized for public view.</p>    
-          <p class="field-content"><a class="cardetails" href ="https://news.harvard.edu/gazette/story/2017/10/harvard-digitizes-450000-documents-from-its-colonial-north-american-project/">Detail</a></p>  								  </div>
-																  <div class="views-row views-row-3 views-row-odd homefeatcarouselholdcontent">
-								      
-          <p><a href="https://today.law.harvard.edu/santos-receives-2017-great-negotiator-award-hls/ "><img typeof="foaf:Image" src="https://library.harvard.edu/sites/default/files/santos_200x140.jpg" width="200" height="140" alt="At Widener Library, Juan Manuel Santos presented a copy of the Colombian peace resolution to Douglas W. Elmendorf and Sarah Thomas." /></a></p>    
-          <h2>Colombian President Gifts Copy of Peace Agreement to Harvard Library</h2>    
-          <p>President Juan Manuel Santos received the 2017 Great Negotiator Award at Harvard Law School. </p>    
-          <p class="field-content"><a class="cardetails" href ="https://today.law.harvard.edu/santos-receives-2017-great-negotiator-award-hls/">Detail</a></p>  								  </div>
-																  <div class="views-row views-row-4 views-row-even homefeatcarouselholdcontent">
-								      
-          <p><a href="https://www.pri.org/stories/2017-07-27/team-women-are-unearthing-forgotten-legacy-harvard-s-women-computers "><img typeof="foaf:Image" src="https://library.harvard.edu/sites/default/files/womencomputerspri3_200x140.jpg" width="200" height="140" alt="Wolbach staff" /></a></p>    
-          <h2>Unearthing a Forgotten Legacy</h2>    
-          <p>More than 40 years before women gained the right to vote, women labored in the Harvard College Observatory as “computers.”</p>    
-          <p class="field-content"><a class="cardetails" href ="https://www.pri.org/stories/2017-07-27/team-women-are-unearthing-forgotten-legacy-harvard-s-women-computers">Detail</a></p>  								  </div>
-																  <div class="views-row views-row-5 views-row-odd homefeatcarouselholdcontent">
-								      
-          <p><a href="http://news.harvard.edu/gazette/story/2017/07/harvard-class-reveals-hidden-wonders-of-feminism/ "><img typeof="foaf:Image" src="https://library.harvard.edu/sites/default/files/gloriasteinem.jpg" width="200" height="140" alt="Gloria Steinem at a microphone" /></a></p>    
-          <h2>Fresh Thinking on History of Feminism</h2>    
-          <p>Class, timeline explore lesser-known narratives in movement’s rise.</p>    
-          <p class="field-content"><a class="cardetails" href ="http://news.harvard.edu/gazette/story/2017/07/harvard-class-reveals-hidden-wonders-of-feminism/">Detail</a></p>  								  </div>
-																  <div class="views-row views-row-6 views-row-even views-row-last homefeatcarouselholdcontent">
-								      
-          <p><a href="https://www.nytimes.com/2017/05/11/us/harvard-kennedy-audio.html "><img typeof="foaf:Image" src="https://library.harvard.edu/sites/default/files/jfk_1939.png" width="200" height="140" alt="John F. Kennedy in his junior year at Harvard in 1939" /></a></p>    
-          <h2>1937 Recording of John F. Kennedy at Harvard Captures a Politician in the Making</h2>    
-          <p>The forceful voice of the 20-year-old Harvard student punches through the crackling audio.</p>    
-          <p class="field-content"><a class="cardetails" href ="https://www.nytimes.com/2017/05/11/us/harvard-kennedy-audio.html">Detail</a></p>  								  </div>
-								                                
-            				</div>
-                          </div>                       
-        		</div>    </div>
-  
-  
-  
-  
-  
-  
-</div>  </div>
-
-  
-  </div>
-  </div>
-  
-    <div class="column homerightcol column-fourth column-alpha">
-   
-    <div class="panel-pane pane-pane-messages"  >
-  
-      
-  
-  <div class="pane-content">
-      <div class="tabs"></div>
-  </div>
-
-  
-  </div>
-<div class="panel-separator"></div><div class="panel-pane pane-custom pane-3"  >
-  
-      
-  
-  <div class="pane-content">
-    <div class="homerightcolcontainer">
-	  <ul class="homeres">
-		<li>
-			<a href="find-library" onclick="ga('send', 'event', 'Resource_icons', 'Library Hours');">
-			<img width="45" height="52" border="0" alt="" src="/sites/all/themes/HarvardLibraryPortalTheme/images/clock.png">
-			Library Hours
-			</a>
-		</li>
-		<li>
-			<a href="harvard-library-proxy-bookmarklet" onclick="ga('send', 'event', 'Resource_icons', 'Bookmarklet');">
-			<img width="45" height="52" border="0" alt="" src="/sites/all/themes/HarvardLibraryPortalTheme/images/unlock-alt.png"> 
-			Library Bookmarklet
-			</a>
-		</li>
-		<li>
-			<a href="staff-directory" onclick="ga('send', 'event', 'Resource_icons', 'Staff Directory');">
-			<img width="53" height="52" border="0" alt="" src="/sites/all/themes/HarvardLibraryPortalTheme/images/fi-torsos-female-male.png">
-			Staff Directory
-			</a>
-		</li>
-		<li>
-			<a href="http://nrs.harvard.edu/urn-3:hul.ois:portal_resguides" onclick="ga('send', 'event', 'Resource_icons', 'Research Guides');"> 
-			<img width="43" height="52" border="0" alt="" src="/sites/all/themes/HarvardLibraryPortalTheme/images/compass.png">
-			Research Guides
-			</a>
-		</li>
-		<li>
-			<a href="alumni-resources" onclick="ga('send', 'event', 'Resource_icons', 'Alumni');">
-			<img width="53" height="52" border="0" alt="" src="/sites/all/themes/HarvardLibraryPortalTheme/images/grad_cap.png">
-			Resources for Alumni
-			</a>
-		</li>
-		<li>
-			<a href="library-calendar" onclick="ga('send', 'event', 'Resource_icons', 'Events');">
-			<img width="53" height="52" border="0" alt="" src="/sites/all/themes/HarvardLibraryPortalTheme/images/home-calendar.gif">
-			Events
-			</a>
-		</li>
-	  </ul>
-</div>  </div>
-
-  
-  </div>
-<div class="panel-separator"></div><div class="panel-pane pane-views pane-featured-resource-home-page"  id="homePageFeaturedResource" >
-  
-      
-  
-  <div class="pane-content">
-    <div class="view view-featured-resource-home-page view-id-featured_resource_home_page view-display-id-default view-dom-id-1b99707a8dae8c9374f503606def506a">
-            <div class="view-header">
-      <div class="homerightcolcontainer">
-	<div class="homerightcolblackdvd">&nbsp;</div>
-	<h2>Featured resource</h2>
-	<div class="homerightcoldot"> &nbsp; </div>    </div>
-  
-  
-  
-      <div class="view-content">
-        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
-      
-  <div class="views-field views-field-field-image">        <div class="field-content"><a href="http://nrs.harvard.edu/urn-3:hul.eresource:musicaltheatersongs"><img typeof="foaf:Image" src="https://library.harvard.edu/sites/default/files/featured_resource/MTS_Feature-Resource-Ad_R2.jpg" width="220" height="220" alt="" /></a></div>  </div>  
-  <div class="views-field views-field-body">        <div class="field-content"><p><a href="http://nrs.harvard.edu/urn-3:hul.eresource:musicaltheatersongs">Musical Theater Songs</a></p></div>  </div>  </div>
-    </div>
-  
-  
-  
-  
-      <div class="view-footer">
-      </div>    </div>
-  
-  
-</div>  </div>
-
-  
-  </div>
-<div class="panel-separator"></div><div class="panel-pane pane-views pane-research-links-view"  >
-  
-      
-  
-  <div class="pane-content">
-    <div class="view view-research-links-view view-id-research_links_view view-display-id-default sqbullet view-dom-id-6893598707f8b27fb6f1460bf4ae7ceb">
-        
-  
-  
-      <div class="view-content">
-      <div class="homerightcolcontainer">
-	<div class="homerightcolblackdvd">&nbsp;</div>
-	<h2>CONTACT US</h2>
-	<div class="homerightcoldot"> &nbsp; </div>
-		<ul class="sqbullet">
-		  
-	  <li>
-			  
-          <a class="https://library.harvard.edu/request-research-appointment" href="https://library.harvard.edu/request-research-appointment">Request a Research Appointment </a>    
-          <br>
-<span class="subtext">  	  </li>
-	 
-    	  
-	  <li>
-			  
-          <a class="https://library.harvard.edu/purchase-request-form" href="https://library.harvard.edu/purchase-request-form">Request a Purchase</a>    
-          <br>
-<span class="subtext">  	  </li>
-	 
-    	  
-	  <li>
-			  
-          <a class="https://library.harvard.edu/report-problem" href="https://library.harvard.edu/report-problem">Report a Problem</a>    
-          <br>
-<span class="subtext">  	  </li>
-	 
-    	  
-	  <li>
-			  
-          <a class="https://library.harvard.edu/share-story" href="https://library.harvard.edu/share-story">Share a Story</a>    
-          <br>
-<span class="subtext">  	  </li>
-	 
-    	</ul>
-  
-</div>
-    </div>
-  
-  
-  
-  
-  
-  
-</div>  </div>
-
-  
-  </div>
-<div class="panel-separator"></div><div class="panel-pane pane-views pane-feature-events-view"  >
-  
-      
-  
-  <div class="pane-content">
-    <div class="view view-feature-events-view view-id-feature_events_view view-display-id-default sqbullet view-dom-id-f99cd052e61832c6ab54a563b8a04569">
-        
-  
-  
-      <div class="view-empty">
-      <div class="homerightcoldotspc"> &nbsp;</div>
-<p class="home-seemore-calendar">
-    <a title="More Library Events and Exhibitions" href="/news-and-events">More Library Events and Exhibitions</a>
-</p>
-<p class="home-seemore-calendar">
-    <a title="Library Calendar" href="/library-calendar">Library Calendar</a></p>
-<p class="home-seemore-calendar">
-    <a title="Library Blog" href="/blog/harvard-library">Library Blog</a></p>
-<div class="homerightcoldotspc"> &nbsp;</div>    </div>
-  
-  
-  
-  
-  
-  
-</div>  </div>
-
-  
-  </div>
-  </div>
-  
-		 		 </div>
-<div id="footer-Box" class="footer">
-    <div class="column footcol column-first column-beta">
-    <div class="panel-pane pane-custom pane-1"  >
-  
-      
-  
-  <div class="pane-content">
-    <div class="footcol">
-	<dl>
-		<dt>
-			<a href="/feedback">Contact Us</a></dt>
-			<dd>617-495-3650 | General</dd>
-			<dd>617-495-4166 | Privileges</dd>
-			<dd>617-495-2461 | Archives</dd>
-		<dd>
-			<a href="/staff-directory">Staff Directory</a>
-		</dd>
-		<dd>
-			<a href="/feedback">Provide Feedback</a>
-		</dd>
-	</dl>
-	
-	<dl class="footicons">
-		<dd class="foottwitter">
-			<a href="https://twitter.com/HarvardLibrary"><img alt="Twitter" border="0" height="22" src="/sites/all/themes/HarvardLibraryPortalTheme/images/twitterbutton-footer.gif" width="24" /></a></dd>
-		<dd class="footyoutube">
-			<a href="https://www.youtube.com/channel/UCLv7Gzc3VTO6ggFlXY0sOyw"><img alt="Youtube" border="0" height="22" src="/sites/all/themes/HarvardLibraryPortalTheme/images/youtubebutton-footer.gif" width="24" /></a></dd>
-	</dl>
-</div>
-<p>&nbsp;</p>  </div>
-
-  
-  </div>
-  </div>
-  
-    <div class="column footcol column-second column-beta">
-    <div class="panel-pane pane-custom pane-6"  >
-  
-      
-  
-  <div class="pane-content">
-    <div class="footcol">
-	<dl>
-		<dt>
-			<a href="search-find">Search &amp; Find</a></dt>
-	</dl>
-</div>
-<p>&nbsp;</p>  </div>
-
-  
-  </div>
-  </div>
-  
-    <div class="column footcol column-third column-beta">
-    <div class="panel-pane pane-custom pane-9"  >
-  
-      
-  
-  <div class="pane-content">
-    <div class="footcol">
-	<dl>
-		<dt>Research Support</dt>
-		<dd><a href="http://guides.library.harvard.edu/">Research Guides</a></dd>
-                <dd><a href="http://nrs.harvard.edu/urn-3:hul.ois:dsref">Ask Us</a></dd>
-	</dl>
-</div>
-
-<p>&nbsp;</p>  </div>
-
-  
-  </div>
-  </div>
-  
-    <div class="column footcol column-four column-beta">
-    <div class="panel-pane pane-custom pane-4"  >
-  
-      
-  
-  <div class="pane-content">
-    <div class="footcol">
-	<dl>
-		<dt>Libraries &amp; Archives</dt>
-		<dd><a href="find-library">Find a Library</a></dd>
-	</dl>
-</div>
-
-<p>&nbsp;</p>  </div>
-
-  
-  </div>
-  </div>
-  
-    <div class="column footcol column-five column-beta">
-    <div class="panel-pane pane-custom pane-2"  >
-  
-      
-  
-  <div class="pane-content">
-    <div class="footcol">
-	<dl>
-		<dt>About Us</dt>
-		<dd><a href="objectives-priorities">Mission &amp; Objectives</a></dd>
-		<dd><a href="exhibitions-and-events">Exhibitions &amp; Events</a></dd>
-		<dd><a href="giving-library">Giving to the Library</a></dd>
-	</dl>
-</div>
-
-<p>&nbsp;</p>  </div>
-
-  
-  </div>
-  </div>
-  
-    <div class="column footcol column-six column-beta">
-    <div class="panel-pane pane-custom pane-7"  >
-  
-      
-  
-  <div class="pane-content">
-    <div class="footcol">
-	<dl><dt>Help</dt>
-		<dd><a href="http://nrs.harvard.edu/urn-3:hul.ois:dsref" target="_blank">Ask Us</a></dd>
-		<dd><a href="report-problem">Report a Problem</a></dd>
-		<dd><a href="frequently-asked-questions">Frequently Asked Questions</a></dd>
-		<!--<dd class="stafflog">
-			<a href="#" title=""><img alt="Staff Login" border="0" height="22" src="/sites/all/themes/HarvardLibraryPortalTheme/images/staff-login.gif" title="Staff 
-                        Login" width="90" /></a></dd>--></dl></div>
-
-<p> </p>  </div>
-
-  
-  </div>
-  </div>
-  		</div>
+  (function(d, s, id){
+	 var js, fjs = d.getElementsByTagName(s)[0];
+	 if (d.getElementById(id)) {return;}
+	 js = d.createElement(s); js.id = id;
+	 js.src = "//connect.facebook.net/en_US/sdk.js";
+	 fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+<div class="wrapper" id="wrapper">
+	<div id="navbar" class="navbar">
+		<div id="nav-utility-menu" class="nav-utility-menu"></div>
+		<div id="nav-primary-menu" class="nav-primary-menu"></div>
+		<div id="nav-audience-menu" class="nav-audience-menu"></div>
 	</div>
-<div id="lower-footer-Box">
-    <div class="column footeraddress column-main column-gamma1">
-	  <div class="footeraddress-box">
-    	<div class="panel-pane pane-custom pane-11"  >
-  
-      
-  
-  <div class="pane-content">
-    Logo Footer
-<div class="footerlogo">
-	<a href="/"><img alt="Harvard University" border="0" height="56" width="230" src="/sites/all/themes/HarvardLibraryPortalTheme/images/logo-footer.gif"  /> </a></div>
-<!-- Footer Logo Starts --><!-- Address Starts -->
-<div class="footaddress">
-	<p><a href="http://www.harvard.edu">Harvard University</a></p>
-	<p>Cambridge, MA 02138</p>
-	<p>617.495.1000 | <a href="https://library.harvard.edu/feedback">Feedback</a></p>
-</div>
-<div style="float:left; padding: 7px 0 0 50px">
-	<img alt="Member, ACRL Diversity Alliance" border="0" src="/sites/all/themes/HarvardLibraryPortalTheme/images/diversity-alliance.png" height="56" />
-</div>  </div>
+			<button id="main-menu-toggle" class="main-menu-toggle">Menu</button>
+		<button id="main-menu-caption" class="main-menu-caption"><span id="main-menu-caption-text" class="main-menu-caption-text">Close Menu</span></button>
+		<div id="page" class="site">
+		<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+		<header id="masthead" class="site-header" role="banner">
+			<div id="audience-bar">
+									<div id="site-audience-menu" class="site-audience-menu">
+						<span class="information-for">Information For:</span>
+						<nav id="audience-navigation" class="audience-navigation" role="navigation" aria-label="Audience Menu">
+							<div class="menu-audience-menu-2016-container"><ul id="menu-audience-menu-2016" class="hsph-audience-menu"><li id="menu-item-111354113411" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113411"><a href="/admissions">Prospective Students</a></li>
+<li id="menu-item-111354113412" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113412"><a href="/current-students/">Current Students</a></li>
+<li id="menu-item-111354113413" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113413"><a href="/alumni">Alumni</a></li>
+<li id="menu-item-111354113414" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113414"><a href="/faculty-staff">Faculty &#038; Staff</a></li>
+<li id="menu-item-111354113415" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113415"><a href="/campaign">Friends &#038; Supporters</a></li>
+</ul></div>						</nav><!-- .main-navigation -->
+					</div><!-- .site-header-menu -->
+								<div id="index-search">
+											<div id="site-atoz-menu" class="site-atoz-menu">
+							<nav id="atoz-navigation" class="atoz-navigation" role="navigation" aria-label="A to Z Menu">
+								<div class="menu-a-to-z-container"><ul id="menu-a-to-z" class="hsph-atoz-menu"><li id="menu-item-111354113481" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113481"><a href="https://www.hsph.harvard.edu/atoz/">A to Z index</a></li>
+</ul></div>							</nav><!-- .main-navigation -->
 
-  
-  </div>
-<div class="panel-separator"></div><div class="panel-pane pane-block pane-hp-connect-hp-connect-login"  >
-  
-      
-  
-  <div class="pane-content">
-    <a href="http://access.harvard.edu/access/servlet/access?__hulaccess_gateway=portal&amp;__hulaccess_url=https%3A%2F%2Flibrary.harvard.edu%2Fhp%2Fregister%2Fcreate%3Fdestination%3Dnode">Staff Login</a>  </div>
+						</div><!-- .site-header-menu -->
+										<div id="search">
+						<form role="search" method="get" class="search-form" action="/search">
+							<label>
+								<span class="screen-reader-text">Search for:</span>
+								<input type="search" class="search-field" placeholder="Search&hellip;" value="" name="q" id="q" title="Search for:" />
+							</label>
+							<button type="submit" value="Search" alt="Search" class="search-submit"> </button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="site-header-main">
+				<div class="site-branding">
+					<div class="site-title"><a href="https://www.hsph.harvard.edu/" rel="home">Harvard T.H. Chan School of Public Health</a></div>
+				</div><!-- .site-branding -->
+									<div id="site-utility-menu" class="site-utility-menu">
+						<nav id="utility-navigation" class="utility-navigation" role="navigation" aria-label="Utility Menu">
+							<div class="menu-quicklinks-menu-2016-container"><ul id="menu-quicklinks-menu-2016" class="hsph-utility-menu"><li id="menu-item-111354113419" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113419"><a href="/email/">Email</a></li>
+<li id="menu-item-111354113417" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113417"><a href="/people/">People</a></li>
+<li id="menu-item-111354113422" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113422"><a href="/academics/">Departments</a></li>
+<li id="menu-item-111354113416" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113416"><a href="http://ems.sph.harvard.edu/MasterCalendar/MasterCalendar.aspx">Calendar</a></li>
+<li id="menu-item-111354113418" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113418"><a href="/employment/">Careers</a></li>
+<li id="menu-item-111354113420" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113420"><a href="http://www.hsph.harvard.edu/campaign">Give</a></li>
+<li id="menu-item-111354113421" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113421"><a title="Manage Student Information" href="http://my.harvard.edu">my.harvard</a></li>
+</ul></div>						</nav><!-- .main-navigation -->
 
-  
-  </div>
-      </div>  
-  </div>
-  
-    <div class="column copyrightsline column-main column-gamma2">
-  	<div class="copyrightsline-box">
-	    <div class="panel-pane pane-custom pane-12"  >
-  
-      
-  
-  <div class="pane-content">
-    <div class="copyrightsline">
-    <ul class="clearfix">
-        <li class="first"><a class="first" href="http://www.trademark.harvard.edu/trademark_protection/notice.php" target="_blank">Trademark Notice</a></li>
-        <li><a href="http://www.harvard.edu/reporting-copyright-infringements" target="_blank">Report a Copyright Infringement</a></li>
-        <li><a href="privacy-statement">Privacy Statement</a></li>
-        <li><a href="/support-users-disabilities">Accessibility</a></li>
-        <li><a href="sitemap">Sitemap</a></li>
-        <li><a href="http://provost.harvard.edu/">Office of the Provost</a></li>
-        <li class="last"><a href="http://www.harvard.edu"><span class="last">Harvard University</span></a></li>
-    </ul>
-    <p>Copyright 2017&nbsp;The President and Fellows of Harvard College</p>
-</div>
-<p>&nbsp;</p>  </div>
+					</div><!-- .site-header-menu -->
+							</div><!-- .site-header-main -->
+							<div id="site-header-menu" class="site-header-menu">
+					<!-- Start Imodules Primary Nav Scrape -->
+					<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="Primary Menu">
+						<div class="menu-main-navigation-2016-container"><ul id="menu-main-navigation-2016" class="hsph-primary-menu"><li id="menu-item-111354113405" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113405"><a href="/about">About</a></li>
+<li id="menu-item-111354113406" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113406"><a href="/faculty-research">Faculty &#038; Research</a></li>
+<li id="menu-item-111354113407" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113407"><a href="/admissions">Admissions &#038; Aid</a></li>
+<li id="menu-item-111354113408" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113408"><a href="/departments">Academics</a></li>
+<li id="menu-item-111354113409" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113409"><a href="/ecpe/">Executive/Continuing Ed</a></li>
+<li id="menu-item-111354113410" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113410"><a href="/news">News</a></li>
+</ul></div>					</nav><!-- .main-navigation -->
+					<!-- End Imodules Primary Nav Scrape -->
+				</div><!-- .site-header-menu -->
+					</header><!-- .site-header -->
 
-  
-  </div>
-    </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </body>
+		<div id="content" class="site-content">
+		
+<div id="primary" class="content-area">
+	<main id="main" class="site-main" role="main">
+		
+		<section id="main-carousel">
+			<div id="main-carousel-inside" class="flexslider">
+			  <ul class="slides">
+				<li id="slide-1" data-background-color="#468d97">
+					<div class="main-carousel-slide home_carousel_small_left overlay">
+				
+							<div class="responsive-carousel-image">
+								<img src="https://cdn1.sph.harvard.edu/wp-content/uploads/2017/12/Max-Essex-12.17.-533.jpg" srcset="https://cdn1.sph.harvard.edu/wp-content/uploads/2017/12/Max-Essex-12.17.-750-300x160.jpg 300w, https://cdn1.sph.harvard.edu/wp-content/uploads/2017/12/Max-Essex-12.17.-750-150x80.jpg 150w, https://cdn1.sph.harvard.edu/wp-content/uploads/2017/12/Max-Essex-12.17.-750.jpg 750w" alt="The state of AIDS" height="533" width="400">
+							</div>
+					
+						<div class="main-carousel-image">
+							<img src="https://cdn1.sph.harvard.edu/wp-content/uploads/2017/12/Max-Essex-12.17.-533.jpg" srcset="https://cdn1.sph.harvard.edu/wp-content/uploads/2017/12/Max-Essex-12.17.-533-300x225.jpg 300w, https://cdn1.sph.harvard.edu/wp-content/uploads/2017/12/Max-Essex-12.17.-533-150x113.jpg 150w, https://cdn1.sph.harvard.edu/wp-content/uploads/2017/12/Max-Essex-12.17.-533-400x300.jpg 400w, https://cdn1.sph.harvard.edu/wp-content/uploads/2017/12/Max-Essex-12.17.-533.jpg 533w" alt="The state of AIDS" height="533" width="400">
+						</div>
+					
+						<div class="main-carousel-overlay"></div>
+						<div class="main-carousel-text">
+				
+							  <h2 class="main-carousel-title">The state of AIDS</h2>
+					
+							  <div class="main-carousel-desc">Max Essex, chair of the Harvard T.H. Chan School of Public Health AIDS Initiative, on the progress of UNAIDS’ 90-90-90 goals</div>
+					
+							  <a href="https://www.hsph.harvard.edu/news/features/aids-treatment-essex/" class="main-carousel-readmore">Read more</a>
+					
+						</div>
+					</div>
+				</li>
+				<li id="slide-2" data-background-color="#a59fa0">
+					<div class="main-carousel-slide home_carousel_small_left overlay">
+				
+							<div class="responsive-carousel-image">
+								<img src="https://cdn1.sph.harvard.edu/wp-content/uploads/2017/11/obesity_prediction_533x400.jpg" srcset="https://cdn1.sph.harvard.edu/wp-content/uploads/2017/11/obesity_prediction_7502-300x160.jpg 300w, https://cdn1.sph.harvard.edu/wp-content/uploads/2017/11/obesity_prediction_7502-150x80.jpg 150w, https://cdn1.sph.harvard.edu/wp-content/uploads/2017/11/obesity_prediction_7502.jpg 750w" alt="Off the charts" height="533" width="400">
+							</div>
+					
+						<div class="main-carousel-image">
+							<img src="https://cdn1.sph.harvard.edu/wp-content/uploads/2017/11/obesity_prediction_533x400.jpg" srcset="https://cdn1.sph.harvard.edu/wp-content/uploads/2017/11/obesity_prediction_533x400-300x225.jpg 300w, https://cdn1.sph.harvard.edu/wp-content/uploads/2017/11/obesity_prediction_533x400-150x113.jpg 150w, https://cdn1.sph.harvard.edu/wp-content/uploads/2017/11/obesity_prediction_533x400-400x300.jpg 400w, https://cdn1.sph.harvard.edu/wp-content/uploads/2017/11/obesity_prediction_533x400.jpg 533w" alt="Off the charts" height="533" width="400">
+						</div>
+					
+						<div class="main-carousel-overlay"></div>
+						<div class="main-carousel-text">
+				
+							  <h2 class="main-carousel-title">Off the charts</h2>
+					
+							  <div class="main-carousel-desc">If current trends in child obesity continue, more than half of today’s children in the U.S. will have obesity as adults; critical need for increased prevention efforts</div>
+					
+							  <a href="https://www.hsph.harvard.edu/news/press-releases/childhood-obesity-risk-as-adults/" class="main-carousel-readmore">Read more</a>
+					
+						</div>
+					</div>
+				</li>
+				<li id="slide-3" data-background-color="#72a592">
+					<div class="main-carousel-slide home_carousel_small_right overlay">
+				
+							<div class="responsive-carousel-image">
+								<img src="https://cdn1.sph.harvard.edu/wp-content/uploads/2017/11/Leaders-in-Health-capstone-533.jpg" srcset="https://cdn1.sph.harvard.edu/wp-content/uploads/2017/11/Leaders-in-Health-capstone-750-300x160.jpg 300w, https://cdn1.sph.harvard.edu/wp-content/uploads/2017/11/Leaders-in-Health-capstone-750-150x80.jpg 150w, https://cdn1.sph.harvard.edu/wp-content/uploads/2017/11/Leaders-in-Health-capstone-750.jpg 750w" alt="Bringing health to the community" height="533" width="400">
+							</div>
+					
+						<div class="main-carousel-image">
+							<img src="https://cdn1.sph.harvard.edu/wp-content/uploads/2017/11/Leaders-in-Health-capstone-533.jpg" srcset="https://cdn1.sph.harvard.edu/wp-content/uploads/2017/11/Leaders-in-Health-capstone-533-300x225.jpg 300w, https://cdn1.sph.harvard.edu/wp-content/uploads/2017/11/Leaders-in-Health-capstone-533-150x113.jpg 150w, https://cdn1.sph.harvard.edu/wp-content/uploads/2017/11/Leaders-in-Health-capstone-533-400x300.jpg 400w, https://cdn1.sph.harvard.edu/wp-content/uploads/2017/11/Leaders-in-Health-capstone-533.jpg 533w" alt="Bringing health to the community" height="533" width="400">
+						</div>
+					
+						<div class="main-carousel-overlay"></div>
+						<div class="main-carousel-text">
+				
+							  <h2 class="main-carousel-title">Bringing health to the community</h2>
+					
+							  <div class="main-carousel-desc">Ten local public health practitioners—graduates of the Schools Leaders in Health program—discussed their efforts to promote health and wellness in the Boston area at a recent capstone event </div>
+					
+							  <a href="https://www.hsph.harvard.edu/news/features/leaders-in-health-program/" class="main-carousel-readmore">Read more</a>
+					
+						</div>
+					</div>
+				</li>
+				<li id="slide-4" data-background-color="#7fafcd">
+					<div class="main-carousel-slide home_carousel_small_left overlay">
+				
+							<div class="responsive-carousel-image">
+								<img src="https://cdn1.sph.harvard.edu/wp-content/uploads/2017/11/Takemi-panel-2017-533.jpg" srcset="https://cdn1.sph.harvard.edu/wp-content/uploads/2017/11/Takemi-panel-2017-750-300x160.jpg 300w, https://cdn1.sph.harvard.edu/wp-content/uploads/2017/11/Takemi-panel-2017-750-150x80.jpg 150w, https://cdn1.sph.harvard.edu/wp-content/uploads/2017/11/Takemi-panel-2017-750.jpg 750w" alt="Lessons from the frontlines" height="533" width="400">
+							</div>
+					
+						<div class="main-carousel-image">
+							<img src="https://cdn1.sph.harvard.edu/wp-content/uploads/2017/11/Takemi-panel-2017-533.jpg" srcset="https://cdn1.sph.harvard.edu/wp-content/uploads/2017/11/Takemi-panel-2017-533-300x225.jpg 300w, https://cdn1.sph.harvard.edu/wp-content/uploads/2017/11/Takemi-panel-2017-533-150x113.jpg 150w, https://cdn1.sph.harvard.edu/wp-content/uploads/2017/11/Takemi-panel-2017-533-400x300.jpg 400w, https://cdn1.sph.harvard.edu/wp-content/uploads/2017/11/Takemi-panel-2017-533.jpg 533w" alt="Lessons from the frontlines" height="533" width="400">
+						</div>
+					
+						<div class="main-carousel-overlay"></div>
+						<div class="main-carousel-text">
+				
+							  <h2 class="main-carousel-title">Lessons from the frontlines</h2>
+					
+							  <div class="main-carousel-desc">Three health policy leaders described their experiences leading public health campaigns in Ethiopia, India, and the U.S.</div>
+					
+							  <a href="https://www.hsph.harvard.edu/news/features/public-health-leadership-takemi/" class="main-carousel-readmore">Read more</a>
+					
+						</div>
+					</div>
+				</li>
+			  </ul>
+			</div>
+			<div id="main-carousel-controls"></div>
+		</section>		<section id="featured-student">
+			<div id="featured-student-inside">
+				<h2 class="featured-student-title">News</h2>
+				<div class="tabs">
+					<ul>
+						<li id="tab-student"><a href="#content-student">Student<span> Stories</span></a></li>
+						<li id="tab-feature"><a href="#content-feature">Featured<span> Stories</span></a></li>
+					</ul>
+					<div id="content-feature">
+						
+	<div><img width="400" height="300" src="https://cdn1.sph.harvard.edu/wp-content/uploads/2016/04/This-Week-in-Health-400x300.jpg" srcset="https://cdn1.sph.harvard.edu/wp-content/uploads/2016/04/This-Week-in-Health-400x300-300x225.jpg 300w, https://cdn1.sph.harvard.edu/wp-content/uploads/2016/04/This-Week-in-Health-400x300-150x113.jpg 150w, https://cdn1.sph.harvard.edu/wp-content/uploads/2016/04/This-Week-in-Health-400x300.jpg 400w" class="wp-post-image" alt="November 30 podcast: Why the CDC should track eating disorders">
+		<p>
+		<a href="https://www.hsph.harvard.edu/news/multimedia-article/eating-disorders-cdc/">November 30 podcast: Why the CDC should track eating disorders</a>
+		
+		</p>
+	</div>
+	
+	<div><img width="400" height="300" src="https://cdn1.sph.harvard.edu/wp-content/uploads/2017/11/Planetary-health-workshop_400x300.png" srcset="https://cdn1.sph.harvard.edu/wp-content/uploads/2017/11/Planetary-health-workshop_400x300-300x225.png 300w, https://cdn1.sph.harvard.edu/wp-content/uploads/2017/11/Planetary-health-workshop_400x300-150x113.png 150w, https://cdn1.sph.harvard.edu/wp-content/uploads/2017/11/Planetary-health-workshop_400x300.png 400w" class="wp-post-image" alt="Harvard and Yale students unite for planetary health">
+		<p>
+		<a href="https://www.hsph.harvard.edu/news/features/harvard-yale-planetary-health/">Harvard and Yale students unite for planetary health</a>
+		
+		</p>
+	</div>
+	
+	<div><img width="400" height="300" src="https://cdn1.sph.harvard.edu/wp-content/uploads/2017/11/Danielle-Allen-400x300.jpg" srcset="https://cdn1.sph.harvard.edu/wp-content/uploads/2017/11/Danielle-Allen-400x300-300x225.jpg 300w, https://cdn1.sph.harvard.edu/wp-content/uploads/2017/11/Danielle-Allen-400x300-150x113.jpg 150w, https://cdn1.sph.harvard.edu/wp-content/uploads/2017/11/Danielle-Allen-400x300.jpg 400w" class="wp-post-image" alt="In pursuit of ‘inclusive excellence’ at Harvard">
+		<p>
+		<a href="https://www.hsph.harvard.edu/news/features/danielle-allen-inclusive-excellence-harvard/">In pursuit of ‘inclusive excellence’ at Harvard</a>
+		
+		</p>
+	</div>
+	
+	<div><img width="400" height="300" src="https://cdn1.sph.harvard.edu/wp-content/uploads/2017/02/Commencement-flags-400.jpg" srcset="https://cdn1.sph.harvard.edu/wp-content/uploads/2017/02/Commencement-flags-400-300x225.jpg 300w, https://cdn1.sph.harvard.edu/wp-content/uploads/2017/02/Commencement-flags-400-150x113.jpg 150w, https://cdn1.sph.harvard.edu/wp-content/uploads/2017/02/Commencement-flags-400.jpg 400w" class="wp-post-image" alt="Immigration and travel resources">
+		<p>
+		<a href="https://www.hsph.harvard.edu/resources/">Immigration and travel resources</a>
+		
+		</p>
+	</div>
+							<aside class='story-tab-footer'>
+							<span class='home-more-link'><a href="/news/features/" class="view-more-stories">View More Stories</a></span>
+						</aside>
+					</div>
+					<div id="content-student">
+						
+	<div><img width="400" height="300" src="https://cdn1.sph.harvard.edu/wp-content/uploads/2017/11/Plantetary-health-workshop.jpg" srcset="https://cdn1.sph.harvard.edu/wp-content/uploads/2017/11/Plantetary-health-workshop-300x225.jpg 300w, https://cdn1.sph.harvard.edu/wp-content/uploads/2017/11/Plantetary-health-workshop-150x113.jpg 150w, https://cdn1.sph.harvard.edu/wp-content/uploads/2017/11/Plantetary-health-workshop.jpg 400w" class="wp-post-image" alt="Harvard and Yale students unite for planetary health">
+		<p>
+		<a href="https://www.hsph.harvard.edu/news/features/harvard-yale-planetary-health/">Harvard and Yale students unite for planetary health</a>
+		
+		</p>
+	</div>
+	
+	<div><img width="400" height="300" src="https://cdn1.sph.harvard.edu/wp-content/uploads/2017/11/Kayla-Rosenberg-MPH-65-poster-session_470x313.jpg" srcset="https://cdn1.sph.harvard.edu/wp-content/uploads/2017/11/Kayla-Rosenberg-MPH-65-poster-session_470x313-300x225.jpg 300w, https://cdn1.sph.harvard.edu/wp-content/uploads/2017/11/Kayla-Rosenberg-MPH-65-poster-session_470x313-150x113.jpg 150w, https://cdn1.sph.harvard.edu/wp-content/uploads/2017/11/Kayla-Rosenberg-MPH-65-poster-session_470x313.jpg 400w" class="wp-post-image" alt="MPH students showcase summer practicum projects">
+		<p>
+		<a href="https://www.hsph.harvard.edu/news/features/mph-students-poster-night/">MPH students showcase summer practicum projects</a>
+		
+		</p>
+	</div>
+	
+	<div><img width="400" height="300" src="https://cdn1.sph.harvard.edu/wp-content/uploads/2017/11/SS-WHI_Posters-Onella-Dawkins.jpg" srcset="https://cdn1.sph.harvard.edu/wp-content/uploads/2017/11/SS-WHI_Posters-Onella-Dawkins-300x225.jpg 300w, https://cdn1.sph.harvard.edu/wp-content/uploads/2017/11/SS-WHI_Posters-Onella-Dawkins-150x113.jpg 150w, https://cdn1.sph.harvard.edu/wp-content/uploads/2017/11/SS-WHI_Posters-Onella-Dawkins.jpg 400w" class="wp-post-image" alt="Maternal health internships give students hands-on experience">
+		<p>
+		<a href="https://www.hsph.harvard.edu/news/features/maternal-health-internships/">Maternal health internships give students hands-on experience</a>
+		
+		</p>
+	</div>
+	
+	<div><img width="400" height="300" src="https://cdn1.sph.harvard.edu/wp-content/uploads/2017/08/Rachel-Bishop-400x300.jpg" srcset="https://cdn1.sph.harvard.edu/wp-content/uploads/2017/08/Rachel-Bishop-400x300-300x225.jpg 300w, https://cdn1.sph.harvard.edu/wp-content/uploads/2017/08/Rachel-Bishop-400x300-150x113.jpg 150w, https://cdn1.sph.harvard.edu/wp-content/uploads/2017/08/Rachel-Bishop-400x300.jpg 400w" class="wp-post-image" alt="Student Spotlight: Rachel Bishop">
+		<p>
+		<a href="https://www.hsph.harvard.edu/social-and-behavioral-sciences/student-spotlight-rachel-bishop-mph-hsb-65/">Student Spotlight: Rachel Bishop</a>
+		
+		</p>
+	</div>
+							<aside class='story-tab-footer'>
+							<span class='home-more-link'><a href="/news/topic/student-stories/" class="view-more-stories">View More Stories</a></span>
+						</aside>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id='banner-bar'>
+			<div id='banner-bar-inside'>
+									<a href="https://www.hsph.harvard.edu/admissions/admissions/">
+						<div class="banner-item">
+							<img class="banner-image" src="https://cdn1.sph.harvard.edu/wp-content/uploads/2016/04/widget1-background.jpg"  srcset="https://cdn1.sph.harvard.edu/wp-content/uploads/2016/04/widget1-background-300x200.jpg 300w, https://cdn1.sph.harvard.edu/wp-content/uploads/2016/04/widget1-background-150x100.jpg 150w, https://cdn1.sph.harvard.edu/wp-content/uploads/2016/04/widget1-background.jpg 480w" title="Apply" alt="Student Spotlight: Rachel Bishop" height="320" width="480">
+							<div class="banner-text">
+								<h3>Apply</h3>
+							</div>
+						</div>
+					</a>
+									<a href="https://www.hsph.harvard.edu/admissions/degree-programs/">
+						<div class="banner-item">
+							<img class="banner-image" src="https://cdn1.sph.harvard.edu/wp-content/uploads/2016/04/widget2-background.jpg"  srcset="https://cdn1.sph.harvard.edu/wp-content/uploads/2016/04/widget2-background-300x200.jpg 300w, https://cdn1.sph.harvard.edu/wp-content/uploads/2016/04/widget2-background-150x100.jpg 150w, https://cdn1.sph.harvard.edu/wp-content/uploads/2016/04/widget2-background.jpg 480w" title="Degree Programs" alt="Student Spotlight: Rachel Bishop" height="320" width="480">
+							<div class="banner-text">
+								<h3>Degree Programs</h3>
+							</div>
+						</div>
+					</a>
+									<a href="https://www.hsph.harvard.edu/diversity/">
+						<div class="banner-item">
+							<img class="banner-image" src="https://cdn1.sph.harvard.edu/wp-content/uploads/2017/07/cropped-water-balloons.jpg"  srcset="https://cdn1.sph.harvard.edu/wp-content/uploads/2017/07/cropped-water-balloons-300x200.jpg 300w, https://cdn1.sph.harvard.edu/wp-content/uploads/2017/07/cropped-water-balloons-150x100.jpg 150w, https://cdn1.sph.harvard.edu/wp-content/uploads/2017/07/cropped-water-balloons.jpg 480w" title="Diversity and Inclusion" alt="Student Spotlight: Rachel Bishop" height="320" width="480">
+							<div class="banner-text">
+								<h3>Diversity and Inclusion</h3>
+							</div>
+						</div>
+					</a>
+							</div><!-- #events-world-news-inside -->
+		</section><!-- #events-world-news -->
+		<section id='events-news'>
+			<div id='events-news-inside'>
+				<div class="events">
+											<aside id="hsph_home_events_widget-2" class="widget widget_hsph_home_events_widget"><h2>Events</h2>		<div class="events-container">
+								<div>
+						<p><a href="https://cdn1.sph.harvard.edu/wp-content/uploads/2017/11/Belfort_.12.4.17.png" target="_blank">Human milk for preterm infants: benefits, challenges, and a puzzling paradox</a></p>
+						<span class="post-date">Dec 04, 1:00 PM - 1:50 PM</span>
+					</div>
+										<div>
+						<p><a href="https://cdn1.sph.harvard.edu/wp-content/uploads/2017/11/ERC-12-4-17-Clifford-Poster.jpg" target="_blank">Genetics of Traumatic Hearing Loss and Tinnitus: A Work in Progress</a></p>
+						<span class="post-date">Dec 04, 1:10 PM - 1:50 PM</span>
+					</div>
+							</div>
+		<div class='home-more-link'><a href="http://ems.sph.harvard.edu/MasterCalendar/MasterCalendar.aspx" class="link">More Events</a></div>
+		</aside>									</div>
+				<div class="news">
+											<aside id="hsph_home_news_widget-2" class="widget widget_hsph_home_news_widget"><h2>In The News</h2>			<div class="events-container">
+			
+					<p>
+					<a href="https://www.hsph.harvard.edu/news/hsph-in-the-news/malaria-eradication-research-agenda/?preview_id=111354836586&preview_nonce=88bf6d58b2&_thumbnail_id=-1&preview=true">New drugs, tools, innovations needed to rid world of malaria</a>
+					
+					
+					</p>
+				
+					<p>
+					<a href="https://www.hsph.harvard.edu/news/hsph-in-the-news/dean-williams-op-ed-discrimination-america/">Dean Williams calls for focus on broad impacts of discrimination in America</a>
+					
+					
+					</p>
+				
+					<p>
+					<a href="https://www.hsph.harvard.edu/news/hsph-in-the-news/humans-activities-disrupting-planet-threatening-health/">Humans activities are disrupting the planet—and threatening our health</a>
+					
+					
+					</p>
+				
+					<p>
+					<a href="https://www.hsph.harvard.edu/news/hsph-in-the-news/reducing-child-stunting-india/">A road map for reducing child stunting in India</a>
+					
+					
+					</p>
+				
+					<p>
+					<a href="https://www.hsph.harvard.edu/news/?post_type=hsph-in-the-news&p=111354836217&preview=true">U.S. can learn from other nation’s health care systems</a>
+					
+					
+					</p>
+								<div class='home-more-link'><a href="https://www.hsph.harvard.edu/news/" class="link">More News</a></div>
+			</div>
+			</aside>									</div>
+			</div><!-- #events-world-news-inside -->
+		</section><!-- #events-world-news -->
+		<section id="sub-carousel-slides">
+			<div class="flexslider">
+				<ul class="slides">
+											<li>
+							<div class="spotlight-area">
+															<img src="https://cdn1.sph.harvard.edu/wp-content/uploads/2013/10/Children-eating-apples-subcarousel-230x153.jpg"  srcset="https://cdn1.sph.harvard.edu/wp-content/uploads/2013/10/Children-eating-apples-subcarousel.jpg 230w, https://cdn1.sph.harvard.edu/wp-content/uploads/2013/10/Children-eating-apples-subcarousel-150x99.jpg 150w, https://cdn1.sph.harvard.edu/wp-content/uploads/2013/10/Children-eating-apples-subcarousel-220x146.jpg 220w" title="The Nutrition Source" alt="The Nutrition Source" height="153" width="230">
+								<div class="secondary-spotlight-content">
+									<h3><a href="https://www.hsph.harvard.edu/nutritionsource/">The Nutrition Source</a></h3>
+								</div>
+							</div>
+						</li>
+											<li>
+							<div class="spotlight-area">
+															<img src="https://cdn1.sph.harvard.edu/wp-content/uploads/2013/11/Centennial_gala_Tony_225_homepage-subcarousel-230x153.jpg"  srcset="https://cdn1.sph.harvard.edu/wp-content/uploads/2013/11/Centennial_gala_Tony_225_homepage-subcarousel.jpg 230w, https://cdn1.sph.harvard.edu/wp-content/uploads/2013/11/Centennial_gala_Tony_225_homepage-subcarousel-150x99.jpg 150w, https://cdn1.sph.harvard.edu/wp-content/uploads/2013/11/Centennial_gala_Tony_225_homepage-subcarousel-220x146.jpg 220w" title="Campaign" alt="Campaign" height="153" width="230">
+								<div class="secondary-spotlight-content">
+									<h3><a href="https://www.hsph.harvard.edu/campaign/">Campaign</a></h3>
+								</div>
+							</div>
+						</li>
+											<li>
+							<div class="spotlight-area">
+															<img src="https://cdn1.sph.harvard.edu/wp-content/uploads/2017/07/Monica-Kriete-300.jpg"  srcset="https://cdn1.sph.harvard.edu/wp-content/uploads/2017/07/Monica-Kriete-300.jpg 300w, https://cdn1.sph.harvard.edu/wp-content/uploads/2017/07/Monica-Kriete-300-150x100.jpg 150w" title="Harvard Public Health Magazine" alt="Harvard Public Health Magazine" height="200" width="300">
+								<div class="secondary-spotlight-content">
+									<h3><a href="https://www.hsph.harvard.edu/magazine/">Harvard Public Health Magazine</a></h3>
+								</div>
+							</div>
+						</li>
+											<li>
+							<div class="spotlight-area">
+															<img src="https://cdn1.sph.harvard.edu/wp-content/uploads/2013/01/globe-worldmap-homepage-230x153.jpg"  srcset="https://cdn1.sph.harvard.edu/wp-content/uploads/2013/01/globe-worldmap-homepage.jpg 230w, https://cdn1.sph.harvard.edu/wp-content/uploads/2013/01/globe-worldmap-homepage-150x99.jpg 150w, https://cdn1.sph.harvard.edu/wp-content/uploads/2013/01/globe-worldmap-homepage-220x146.jpg 220w" title="Global research" alt="Global research" height="153" width="230">
+								<div class="secondary-spotlight-content">
+									<h3><a href="https://www.hsph.harvard.edu/world-map/">Global research</a></h3>
+								</div>
+							</div>
+						</li>
+											<li>
+							<div class="spotlight-area">
+															<img src="https://cdn1.sph.harvard.edu/wp-content/uploads/2015/02/forum-homepage-230x153-2-230x153.jpg"  srcset="https://cdn1.sph.harvard.edu/wp-content/uploads/2015/02/forum-homepage-230x153-2.jpg 230w, https://cdn1.sph.harvard.edu/wp-content/uploads/2015/02/forum-homepage-230x153-2-150x100.jpg 150w, https://cdn1.sph.harvard.edu/wp-content/uploads/2015/02/forum-homepage-230x153-2-220x146.jpg 220w" title="The Forum" alt="The Forum" height="153" width="230">
+								<div class="secondary-spotlight-content">
+									<h3><a href="http://theforum.sph.harvard.edu/">The Forum</a></h3>
+								</div>
+							</div>
+						</li>
+											<li>
+							<div class="spotlight-area">
+															<img src="https://cdn1.sph.harvard.edu/wp-content/uploads/2014/02/ECPE-image-for-sub-carousel-230x153.jpg"  srcset="https://cdn1.sph.harvard.edu/wp-content/uploads/2014/02/ECPE-image-for-sub-carousel-300x206.jpg 300w, https://cdn1.sph.harvard.edu/wp-content/uploads/2014/02/ECPE-image-for-sub-carousel-150x103.jpg 150w, https://cdn1.sph.harvard.edu/wp-content/uploads/2014/02/ECPE-image-for-sub-carousel-100x70.jpg 100w, https://cdn1.sph.harvard.edu/wp-content/uploads/2014/02/ECPE-image-for-sub-carousel-220x151.jpg 220w, https://cdn1.sph.harvard.edu/wp-content/uploads/2014/02/ECPE-image-for-sub-carousel.jpg 403w" title="Executive education" alt="Executive education" height="153" width="230">
+								<div class="secondary-spotlight-content">
+									<h3><a href="https://ecpe.sph.harvard.edu/">Executive education</a></h3>
+								</div>
+							</div>
+						</li>
+											<li>
+							<div class="spotlight-area">
+															<img src="https://cdn1.sph.harvard.edu/wp-content/uploads/2014/05/Anthony-Covarrubias-230x153.jpg"  srcset="https://cdn1.sph.harvard.edu/wp-content/uploads/2014/05/Anthony-Covarrubias-300x211.jpg 300w, https://cdn1.sph.harvard.edu/wp-content/uploads/2014/05/Anthony-Covarrubias-150x105.jpg 150w, https://cdn1.sph.harvard.edu/wp-content/uploads/2014/05/Anthony-Covarrubias.jpg 462w, https://cdn1.sph.harvard.edu/wp-content/uploads/2014/05/Anthony-Covarrubias-100x70.jpg 100w, https://cdn1.sph.harvard.edu/wp-content/uploads/2014/05/Anthony-Covarrubias-220x155.jpg 220w" title="Video series" alt="Video series" height="153" width="230">
+								<div class="secondary-spotlight-content">
+									<h3><a href="https://www.hsph.harvard.edu/news/why-public-health/">Video series</a></h3>
+								</div>
+							</div>
+						</li>
+									</ul>
+			</div>
+		</section>
+	</main><!-- .site-main -->
+</div><!-- .content-area -->
+
+
+		</div><!-- .site-content -->
+		<section id="twitter-footer" class="twitter-footer">
+		<h3 class="twitter-feed-title">
+			<a href="">Harvard Chan School on Twitter</a>			</h3>
+			<div id="twitter-carousel-container"><div class="flexslider">	<ul class="slides"><li>	<div class="twitter-slide">		<div class="twitter-slide-text clearfix">"We know climate change is linked to human activity. We know air and water pollution are harming people’s health—no… <a target="_blank" href="https://t.co/od0QKn72ZG">https://t.co/od0QKn72ZG</a>		</div>	</div></li><li>	<div class="twitter-slide">		<div class="twitter-slide-text clearfix">During a live <a target="_blank" href="http://www.twitter.com/VoicesHSPH">@VoicesHSPH</a> interview on Wednesday, 12/6, at Noon ET former defense secretary Ash Carter will discuss… <a target="_blank" href="https://t.co/ETi4exFymL">https://t.co/ETi4exFymL</a>		</div>	</div></li><li>	<div class="twitter-slide">		<div class="twitter-slide-text clearfix">During a live <a target="_blank" href="http://www.twitter.com/ForumHSPH">@ForumHSPH</a> webcast on Tuesday, 12/5, experts in health data and privacy will discuss the potential f… <a target="_blank" href="https://t.co/NBGoCpDDDw">https://t.co/NBGoCpDDDw</a>		</div>	</div></li><li>	<div class="twitter-slide">		<div class="twitter-slide-text clearfix">RT <a target="_blank" href="http://www.twitter.com/GreenHarvard">@GreenHarvard</a>: Weekend reading: <a target="_blank" href="http://www.twitter.com/HarvardMed">@HarvardMed</a>'s Fall Magazine explores how environmental health and human health are inseparable https://t…		</div>	</div></li><li>	<div class="twitter-slide">		<div class="twitter-slide-text clearfix"><a target="_blank" href="http://www.twitter.com/DonnaShalala">@DonnaShalala</a>'s advice for tackling big public health problems? Attack the issue from every direction… <a target="_blank" href="https://t.co/9em5RfqOKQ">https://t.co/9em5RfqOKQ</a>		</div>	</div></li><li>	<div class="twitter-slide">		<div class="twitter-slide-text clearfix">RT <a target="_blank" href="http://www.twitter.com/GreenHarvard">@GreenHarvard</a>: .@HarvardChanSPH researchers are preparing the world for a future where climate is the #1 threat to public health https:/…		</div>	</div></li>	</ul></div><div id="twitter-slide-controls"></div></div>		</section>
+			<footer id="colophon" class="site-footer" role="contentinfo">
+							<div id="footer-audience-menu" class="footer-audience-menu">
+					<span class="footer-information-for">Information For:</span>
+					<nav id="footer-audience-navigation" class="footer-audience-navigation" role="navigation" aria-label="Audience Menu">
+						<div class="menu-audience-menu-2016-container"><ul id="menu-audience-menu-2017" class="hsph-audience-menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113411"><a href="/admissions">Prospective Students</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113412"><a href="/current-students/">Current Students</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113413"><a href="/alumni">Alumni</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113414"><a href="/faculty-staff">Faculty &#038; Staff</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113415"><a href="/campaign">Friends &#038; Supporters</a></li>
+</ul></div>					</nav><!-- .footer-audience-navigation -->
+				</div><!-- .footer-audience-menu -->
+										<div id="footer-primary-menu" class="footer-primary-menu">
+					<nav id="footer-primary-navigation" class="footer-primary-navigation" role="navigation" aria-label="Primary Menu">
+						<div class="menu-footer-menu-container"><ul id="menu-footer-menu" class="hsph-footer-primary-menu"><li id="menu-item-111354113445" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-111354113445"><a href="https://www.hsph.harvard.edu/about/">About</a>
+<ul  class="sub-menu">
+	<li id="menu-item-111354113446" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113446"><a href="https://www.hsph.harvard.edu/about/key-facts/">Key Facts</a></li>
+	<li id="menu-item-111354113447" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113447"><a href="https://www.hsph.harvard.edu/harvard-chan-naming-gift/">Renaming the School</a></li>
+	<li id="menu-item-111354113448" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113448"><a href="https://www.hsph.harvard.edu/deans-office/">Office of the Dean</a></li>
+	<li id="menu-item-111354113449" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113449"><a href="https://www.hsph.harvard.edu/about/location-and-directions/">Location and Facilities</a></li>
+	<li id="menu-item-111354113450" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113450"><a href="https://www.hsph.harvard.edu/about/contact-us/administrative-offices/">Administrative Offices</a></li>
+	<li id="menu-item-111354113451" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113451"><a href="https://www.hsph.harvard.edu/about/contact-us/">Contact Us</a></li>
+</ul>
+</li>
+<li id="menu-item-111354113452" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-111354113452"><a href="https://www.hsph.harvard.edu/faculty-research/">Faculty and Research</a>
+<ul  class="sub-menu">
+	<li id="menu-item-111354113453" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113453"><a href="https://www.hsph.harvard.edu/faculty/">Faculty and Researcher Directory</a></li>
+	<li id="menu-item-111354113454" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113454"><a href="https://www.hsph.harvard.edu/departments/">Academic Departments, Divisions and Centers</a></li>
+	<li id="menu-item-111354113455" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113455"><a href="https://www.hsph.harvard.edu/world-map/">International Research</a></li>
+	<li id="menu-item-111354113456" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113456"><a href="https://www.hsph.harvard.edu/faculty-affairs/postdoctoral-research-fellows/">Postdoctoral Research Fellows</a></li>
+	<li id="menu-item-111354113457" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113457"><a href="https://www.hsph.harvard.edu/faculty-affairs/">Office of Faculty Affairs</a></li>
+	<li id="menu-item-111354113458" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113458"><a href="https://www.hsph.harvard.edu/searches/">Faculty Searches</a></li>
+	<li id="menu-item-111354113459" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113459"><a href="https://www.hsph.harvard.edu/diversity/">Office of Diversity and Inclusion</a></li>
+</ul>
+</li>
+<li id="menu-item-111354113460" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-111354113460"><a href="https://www.hsph.harvard.edu/admissions/">Admissions &#038; Aid</a>
+<ul  class="sub-menu">
+	<li id="menu-item-111354113461" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113461"><a href="https://www.hsph.harvard.edu/admissions/why-harvard-chan/">Why Harvard Chan</a></li>
+	<li id="menu-item-111354113462" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113462"><a href="https://www.hsph.harvard.edu/admissions/degree-programs/">Degree Programs</a></li>
+	<li id="menu-item-111354113463" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113463"><a href="https://www.hsph.harvard.edu/admissions/non-degree-programs/">Non-Degree Programs</a></li>
+	<li id="menu-item-111354113464" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113464"><a href="https://www.hsph.harvard.edu/admissions/financial-aid/">Financial Aid</a></li>
+	<li id="menu-item-111354113465" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113465"><a href="https://www.hsph.harvard.edu/admissions/student-experience/">Student Experience</a></li>
+	<li id="menu-item-111354113466" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113466"><a href="https://www.hsph.harvard.edu/admissions/careers/">Career Advancement</a></li>
+	<li id="menu-item-111354113467" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113467"><a href="https://www.hsph.harvard.edu/admissions/admissions/">Apply</a></li>
+</ul>
+</li>
+<li id="menu-item-111354113468" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-111354113468"><a href="https://www.hsph.harvard.edu/academics/">Academics</a>
+<ul  class="sub-menu">
+	<li id="menu-item-111354113469" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113469"><a href="https://www.hsph.harvard.edu/departments/#academicdepartments">Academic Departments</a></li>
+	<li id="menu-item-111354113482" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113482"><a href="https://www.hsph.harvard.edu/departments/#divisions">Divisions</a></li>
+	<li id="menu-item-111354113470" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113470"><a href="https://www.hsph.harvard.edu/departments/#researchcenters">Research Centers</a></li>
+	<li id="menu-item-111354113472" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113472"><a href="https://www.hsph.harvard.edu/departments/#flagshipinitiatives">Flagship Initiatives</a></li>
+	<li id="menu-item-111354113473" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113473"><a href="https://www.hsph.harvard.edu/departments/#internationalresearch">International Research</a></li>
+	<li id="menu-item-111354113475" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113475"><a href="https://www.hsph.harvard.edu/departments/#researchadministration">Research Administration and Support</a></li>
+	<li id="menu-item-111354113474" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113474"><a href="https://www.hsph.harvard.edu/departments/#degreeprograms">Degree Programs</a></li>
+	<li id="menu-item-111354113476" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113476"><a href="https://www.hsph.harvard.edu/departments/#fellowships">Fellowships and Residencies</a></li>
+	<li id="menu-item-111354113477" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113477"><a href="https://www.hsph.harvard.edu/departments/#summerprograms">Summer Programs</a></li>
+	<li id="menu-item-111354113478" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113478"><a href="https://ecpe.sph.harvard.edu/">Continuing Professional Education</a></li>
+	<li id="menu-item-111354113615" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113615"><a href="https://www.hsph.harvard.edu/admissions/degree-programs/interdisciplinary-concentrations/">Interdisciplinary Concentrations</a></li>
+	<li id="menu-item-111354113616" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113616"><a href="https://www.hsph.harvard.edu/registrar/academic-calendar/">Academic Calendar</a></li>
+	<li id="menu-item-111354113617" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113617"><a href="https://cdn1.sph.harvard.edu/wp-content/uploads/sites/1904/2015/12/Harvard-Chan-Viewbook-2015-162.pdf">Harvard Chan Viewbook</a></li>
+</ul>
+</li>
+<li id="menu-item-111354113479" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-111354113479"><a href="https://ecpe.sph.harvard.edu/">Executive/Continuing Ed</a>
+<ul  class="sub-menu">
+	<li id="menu-item-111354113483" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113483"><a href="https://ecpe.sph.harvard.edu/finder.cfm?loc=l">Program Offerings</a></li>
+	<li id="menu-item-111354113484" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113484"><a href="https://ecpe.sph.harvard.edu/programs.cfm?CSID=CP0000&#038;pg=cluster&#038;CLID=1&#038;loc=l&#038;loc=l">Custom Programs</a></li>
+	<li id="menu-item-111354113485" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113485"><a href="http://execed.sph.harvard.edu/executive-education-program-portfolio?loc=l">Request Information</a></li>
+	<li id="menu-item-111354113486" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113486"><a href="https://ecpe.sph.harvard.edu/news.cfm?loc=l">News and Resources</a></li>
+	<li id="menu-item-111354113487" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113487"><a href="https://ecpe.sph.harvard.edu/about.cfm">About ECPE</a></li>
+	<li id="menu-item-111354113488" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113488"><a href="https://ecpe.sph.harvard.edu/contact.cfm?loc=l">Contact</a></li>
+</ul>
+</li>
+<li id="menu-item-111354113480" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-111354113480"><a href="https://www.hsph.harvard.edu/news/">News</a>
+<ul  class="sub-menu">
+	<li id="menu-item-111354113493" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113493"><a href="https://www.hsph.harvard.edu/news/features/">Featured News</a></li>
+	<li id="menu-item-111354113494" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113494"><a href="https://www.hsph.harvard.edu/news/press-releases/">Press Releases</a></li>
+	<li id="menu-item-111354113495" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113495"><a href="https://www.hsph.harvard.edu/news/topic/student-stories/">Student Stories</a></li>
+	<li id="menu-item-111354113496" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113496"><a href="https://www.hsph.harvard.edu/news/hsph-in-the-news/">In the News</a></li>
+	<li id="menu-item-111354113497" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113497"><a href="https://www.hsph.harvard.edu/news/newsletters/">Newsletters</a></li>
+	<li id="menu-item-111354113498" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113498"><a href="https://www.hsph.harvard.edu/news/magazine/">HPH Magazine</a></li>
+	<li id="menu-item-111354113499" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113499"><a href="https://www.hsph.harvard.edu/news/magazine-digital-editions/">Digital Magazines</a></li>
+	<li id="menu-item-111354113500" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113500"><a href="https://www.hsph.harvard.edu/news/why-public-health/">Why Public Health?</a></li>
+</ul>
+</li>
+</ul></div>					</nav><!-- .footer-primary-menu -->
+				</div><!-- .footer-primary-navigation -->
+			
+			<div class="site-info">
+				<div class="site-footer-logo"><a href="https://www.hsph.harvard.edu/" rel="home">Harvard T.H. Chan School of Public Health</a></div>
+				<address class="vcard">
+					<div class="adr">
+						<span class="street-address">677 Huntington Avenue</span>
+						<span class="locality">Boston</span>,
+						<abbr class="region" title="Massachusetts">MA</abbr>
+						<span class="postal-code">02115</span>
+					</div>
+					<div class="tel">+1 (617) 495‑1000</div>
+				</address>
+			</div><!-- .site-info -->
+							<div id="footer-social-menu" class="footer-social-menu">
+					<nav id="footer-social-navigation" class="footer-social-navigation" role="navigation" aria-label="Primary Menu">
+						<div class="menu-footer-social-container"><ul id="menu-footer-social" class="social-navigation"><li id="menu-item-111354108407" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354108407"><a title="Twitter" target="_blank" href="http://twitter.com/HarvardChanSPH">Twitter</a></li>
+<li id="menu-item-111354108408" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354108408"><a title="Facebook" target="_blank" href="http://www.facebook.com/harvardpublichealth">Facebook</a></li>
+<li id="menu-item-111354108409" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354108409"><a title="YouTube" target="_blank" href="https://www.youtube.com/user/HarvardPublicHealth">YouTube</a></li>
+<li id="menu-item-111354108410" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354108410"><a title="Google Plus" target="_blank" href="https://plus.google.com/104489268760689389569/posts">GooglePlus</a></li>
+<li id="menu-item-111354108411" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354108411"><a title="LinkedIn" target="_blank" href="http://www.linkedin.com/edu/school?id=20305&#038;trk=tyah">LinkedIn</a></li>
+<li id="menu-item-111354113570" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113570"><a href="https://www.instagram.com/harvardchansph/">Instagram</a></li>
+<li id="menu-item-111354108412" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354108412"><a title="iTunes U" target="_blank" href="http://itunes.apple.com/us/itunes-u/conversations-on-public-health/id401003463">iTunes</a></li>
+<li id="menu-item-111354108415" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354108415"><a title="Apple App Store" target="_blank" href="http://itunes.apple.com/us/app/public-health-news/id382088723?mt=8">Appstore</a></li>
+<li id="menu-item-111354113573" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354113573"><a href="http://play.google.com/store/apps/details?id=com.mobileroadie.app_645">Google Play</a></li>
+</ul></div>					</nav><!-- .footer-social-navigation -->
+				</div><!-- .footer-social-menu -->
+										<div id="footer-footer-menu" class="footer-footer-menu">
+					<nav id="footer-navigation" class="footer-navigation" role="navigation" aria-label="Primary Menu">
+						<div class="menu-sub-footer-menu-container"><ul id="menu-sub-footer-menu" class="hsph-footer-menu"><li id="menu-item-1020" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-359 current_page_item menu-item-1020"><a href="https://www.hsph.harvard.edu/">Harvard Chan Home</a></li>
+<li id="menu-item-111354105449" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111354105449"><a href="https://www.hsph.harvard.edu/contact-us/">Contact Us</a></li>
+<li id="menu-item-111354105212" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354105212"><a href="http://www.harvard.edu">Harvard University Home</a></li>
+<li id="menu-item-1021" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1021"><a href="https://www.hsph.harvard.edu/campaign/giving/how-to-make-a-gift/">Make a Gift</a></li>
+<li id="menu-item-111354108039" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111354108039"><a href="https://www.hsph.harvard.edu/privacy-policy/">Privacy Policy</a></li>
+<li id="menu-item-111354105198" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-111354105198"><a href="http://www.harvard.edu/copyright-issue">Report Copyright Violation</a></li>
+</ul></div>					</nav><!-- .footer-navigation -->
+				</div><!-- .footer-footer-menu -->
+							<div id="copyright" class="copyright">
+					Copyright &copy; 2017 The President and Fellows of Harvard College				</div><!-- .footer-footer-menu -->
+		</footer><!-- .site-footer -->
+	</div><!-- .site -->
+</div><!-- .wrapper -->
+<div class="menu-mask"></div>
+
+
+		<script>
+			// Slide controls for the sub brand carousel template
+			jQuery(document).ready(function($) {
+				if ( $('#sidebar-carousel-widget .flexslider').length && $().flexslider ) {
+					$('#sidebar-carousel-widget .flexslider').flexslider({
+						animation: 'fade',
+						prevText: ' ',
+						nextText: ' ',
+						controlsContainer: '#hsph-carousel-widget-controls',
+					});
+				}
+			});
+		</script>
+		
+		<script>
+			// Slide controls for the sub brand carousel template
+			jQuery(document).ready(function($) {
+				if ( $('#news-sidebar-carousel-widget .flexslider').length && $().flexslider ) {
+					$('#news-sidebar-carousel-widget .flexslider').flexslider({
+						animation: 'fade',
+						prevText: ' ',
+						nextText: ' ',
+						controlsContainer: '#hsph-news-carousel-widget-controls',
+					});
+				}
+			});
+		</script>
+		<script type='text/javascript' src='https://www.hsph.harvard.edu/wp-content/plugins/hsph-tagging-related-topics/js/topics-scripts.js?ver=1.0.0'></script>
+<script type='text/javascript' src='https://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201749'></script>
+<script type='text/javascript' src='https://www.hsph.harvard.edu/wp-content/themes/hsph/assets/js/jquery.flexslider-min.js?ver=20151104'></script>
+<script type='text/javascript' src='https://www.hsph.harvard.edu/wp-content/themes/hsph-home/js/homepage.js?ver=1.0'></script>
+<script type='text/javascript' src='https://www.hsph.harvard.edu/wp-content/themes/hsph/assets/js/skip-link-focus-fix.js?ver=20151112'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var screenReaderText = {"expand":"<span class=\"screen-reader-text\">expand child menu<\/span>","collapse":"<span class=\"screen-reader-text\">collapse child menu<\/span>"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.hsph.harvard.edu/wp-content/themes/hsph/assets/js/functions-min.js?ver=20151204'></script>
+<script type='text/javascript' src='https://www.hsph.harvard.edu/wp-includes/js/wp-embed.min.js?ver=4.8.3'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var home_carousel = {"randomize":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.hsph.harvard.edu/wp-content/plugins/hsph-home-carousel/js/homepage-carousel.js?ver=2.0'></script>
+<script type='text/javascript' src='https://stats.wp.com/e-201749.js' async defer></script>
+<script type='text/javascript'>
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:5.5',blog:'42606333',post:'359',tz:'-5',srv:'www.hsph.harvard.edu'} ]);
+	_stq.push([ 'clickTrackerInit', '42606333', '359' ]);
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"5855f939d3","applicationID":"12659057","transactionName":"ZwRRZUsCWxVYV0MPXl5OZkNQTFwIXVFPSEFYEQ==","queueTime":0,"applicationTime":16,"atts":"S0NSEwMYSBs=","errorBeacon":"bam.nr-data.net","agent":""}</script><script type="text/javascript">
+//<![CDATA[
+(function() {
+var _analytics_scr = document.createElement('script');
+_analytics_scr.type = 'text/javascript'; _analytics_scr.async = true; _analytics_scr.src = '/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=2&cb=1786604462';
+var _analytics_elem = document.getElementsByTagName('script')[0]; _analytics_elem.parentNode.insertBefore(_analytics_scr, _analytics_elem);
+})();
+// ]]>
+</script></body>
 </html>
+<!--
+	generated 279 seconds ago
+	generated in 0.923 seconds
+	served from batcache in 0.011 seconds
+	expires in 21 seconds
+-->
