@@ -1,617 +1,905 @@
-<!DOCTYPE html>
-<!--[if IEMobile 7]><html class="iem7"  lang="en" dir="ltr"><![endif]-->
-<!--[if lte IE 6]><html class="lt-ie9 lt-ie8 lt-ie7"  lang="en" dir="ltr"><![endif]-->
-<!--[if (IE 7)&(!IEMobile)]><html class="lt-ie9 lt-ie8"  lang="en" dir="ltr"><![endif]-->
-<!--[if IE 8]><html class="lt-ie9"  lang="en" dir="ltr"><![endif]-->
-<!--[if (gte IE 9)|(gt IEMobile 7)]><!--><html  lang="en" dir="ltr"><!--<![endif]-->
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
 <head>
-  <!--[if IE]><![endif]-->
-<meta charset="utf-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
-<link rel="dns-prefetch" href="//www.google-analytics.com" />
-<link rel="dns-prefetch" href="//stats.g.doubleclick.net" />
-<link rel="preconnect" href="//stats.g.doubleclick.net" />
-<link rel="preconnect" href="//www.google-analytics.com" />
-<link rel="shortcut icon" href="https://gsas.harvard.edu/sites/all/themes/gsas/favicon.ico" type="image/vnd.microsoft.icon" />
+  <title>HMS</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="Drupal 7 (http://drupal.org)" />
-<link rel="canonical" href="https://gsas.harvard.edu/" />
-<link rel="shortlink" href="https://gsas.harvard.edu/" />
-  <title>Harvard University - The Graduate School of Arts and Sciences</title>
+<link rel="canonical" href="https://hms.harvard.edu/" />
+<link rel="shortlink" href="https://hms.harvard.edu/" />
+<meta property="fb:pages" content="112070142203026" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:url" content="https://hms.harvard.edu/" />
+<meta name="twitter:title" content="HMS" />
+  <link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon" />
+    <link type="text/css" rel="stylesheet" href="https://hms.harvard.edu/sites/default/files/css/css_xE-rWrJf-fncB6ztZfd2huxqgxu4WO-qwma6Xer30m4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://hms.harvard.edu/sites/default/files/css/css_DHcXHPYBSjIVaCQZEG4ZlpLkvslnFlBCnQUCzlbRBio.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://hms.harvard.edu/sites/default/files/css/css_IXtIVlAcLZJ40YTFZpID6rXpYTfSlABd8yRRwu3IVWY.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://hms.harvard.edu/sites/default/files/css/css_MfyAZ1anHmiOykUx9gzLv983xEN0x0g8tZ-5l67xM_8.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://hms.harvard.edu/sites/default/files/css/css_j67NqzsJa5eEYlnk_FLOMcy6c4BhfskYuYQQh4zAW6k.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://hms.harvard.edu/sites/default/files/css/css_G9mq16hN_tR2wJL-EmaD78HTRsFrf8zJQVBJW_63EG8.css" media="all" />
+  <link href="//cloud.webtype.com/css/77f80851-fb82-4f83-b9ca-c8c26bd2214c.css" rel="stylesheet" type="text/css" />
+  <link href="https://plus.google.com/115929009236785946604" rel="publisher"></a>
+  <!--<meta property="fb:pages" content="112070142203026" />-->
+  <!--[if IE 8]><link href="/sites/all/themes/hms/css/css-ie8.css" rel="stylesheet" media="screen, projection" type="text/css" /><![endif]-->
+  <!--[if lt IE 8]><link href="/sites/all/themes/hms/css/css-ie7.css" rel="stylesheet" media="screen, projection" type="text/css" /><![endif]-->
 
-      <meta name="MobileOptimized" content="width">
-    <meta name="HandheldFriendly" content="true">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <!-- <meta name="format-detection" content="telephone=no"> !-->
-    <meta http-equiv="cleartype" content="on">
-  <link type="text/css" rel="stylesheet" href="https://gsas.harvard.edu/sites/default/files/advagg_css/css__YZMmyCjxADNsxWJVyzxskiYBiPsGboww8DDJoAv1iVA__PqGVjSeXe3e-YM4xspxCavDlyydtEB28TRpZPTEwV5I__ifKp45LPqEhgGkikf2YJyv1UywiQbNx_j_-vYxA6ZUs.css" media="all" />
-<link type="text/css" rel="stylesheet" href="https://gsas.harvard.edu/sites/default/files/advagg_css/css__amIirjZUAFjwAOeWfbfud22qdGairypxNF2ev7JiwTE__9wkN_Hr9C-DkuNH6XZKKId5_B2Ji2bqC0hH59IVyuEY__ifKp45LPqEhgGkikf2YJyv1UywiQbNx_j_-vYxA6ZUs.css" media="all" />
-<link type="text/css" rel="stylesheet" href="https://gsas.harvard.edu/sites/default/files/advagg_css/css__UrpLwiv-VJLk_jClnjuT_az24bNZ8QDMEcnkw259I7w__BBsLS1irwGs2Omjo5xW42EkH9b_Zto6Lf2oC8x00Fto__ifKp45LPqEhgGkikf2YJyv1UywiQbNx_j_-vYxA6ZUs.css" media="all" />
-<link type="text/css" rel="stylesheet" href="https://gsas.harvard.edu/sites/default/files/advagg_css/css__jr1cxTiweEihJfzAung0LgCxVMNmqobKaTOVmeOw4kY__2_Q8Y9raXIoHt_62V2dkCnar4JtFfhjQ5ZJoQd7e-uA__ifKp45LPqEhgGkikf2YJyv1UywiQbNx_j_-vYxA6ZUs.css" media="all" />
-<link type="text/css" rel="stylesheet" href="https://gsas.harvard.edu/sites/default/files/advagg_css/css__83vOzBeO2Yfr4GSyhu6705-n_-L1Zd0EWy0LRu8Ygxo__q0DeN2kGhTD-qbCvyI4Fye5Odd8Aycqxysv7vB-Kbxo__ifKp45LPqEhgGkikf2YJyv1UywiQbNx_j_-vYxA6ZUs.css" media="all" />
-<link type="text/css" rel="stylesheet" href="https://gsas.harvard.edu/sites/default/files/advagg_css/css__jA249hWQd5FSz76IhlNyRl5Uh7aQkqscaHbaqxvigew__R9RDAsF6RVarTuTqIZoj7_aaKoYfVT0PRxeGqSyF79o__ifKp45LPqEhgGkikf2YJyv1UywiQbNx_j_-vYxA6ZUs.css" media="print" />
-  <![if gt IE 8]>
-  <link rel="stylesheet" type="text/css" href="/sites/all/themes/gsas/dist/css/print.css" />
-  <![endif]>
-  <script src="https://gsas.harvard.edu/sites/default/files/advagg_js/js__0Hzgl3oWjCFX332BGDII0ywgl1HaELsGWJm7cOienwo__zJp5szNMiUjnry5PfcwQqrLwL4zPqyZmpKvX95UxNZs__ifKp45LPqEhgGkikf2YJyv1UywiQbNx_j_-vYxA6ZUs.js"></script>
-<script src="https://gsas.harvard.edu/sites/default/files/advagg_js/js__MeIyryUyCmUbG095X1l5zVDWDbMA4WWFOawIJtR1cqI__3EwQE7T29n8R9mKfi57jfyYHTu7y0duyNrSlmH351nU__ifKp45LPqEhgGkikf2YJyv1UywiQbNx_j_-vYxA6ZUs.js"></script>
-<script src="https://gsas.harvard.edu/sites/default/files/advagg_js/js__fBP0XuuaSb6PNQi8KeXwvBTI8bpEvCoZ-MyLX-qkiL4__QcaGFEAbXG259ddjHyTzqHNhxb42SaQ5OBZBMr7_9BA__ifKp45LPqEhgGkikf2YJyv1UywiQbNx_j_-vYxA6ZUs.js"></script>
-<script src="https://gsas.harvard.edu/sites/default/files/advagg_js/js__lXfr5W4dNBFCXhts2scDQTu1Yan_8rlMNeUgrXRItcw__1OkSfYTWLGCRVhS3ea09eqMcphxU-TIoWQW8kYQHTqU__ifKp45LPqEhgGkikf2YJyv1UywiQbNx_j_-vYxA6ZUs.js"></script>
-<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create", "UA-9704293-1", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
-<script src="https://gsas.harvard.edu/sites/default/files/advagg_js/js__eCamf0Pk90dWD1_z4yesqfCGVbPhtNDjgoe4Mrw_O0M__znsz7fsgZe7-6A0Q8w7lilkr3g6S4XTjq3batR-65UQ__ifKp45LPqEhgGkikf2YJyv1UywiQbNx_j_-vYxA6ZUs.js"></script>
-<script src="https://gsas.harvard.edu/sites/default/files/advagg_js/js__EYsM05Z1H6M6qOuXCO1ItqLy1SZCP1kfzwLu8vKYLHE__g6n16phznzlbpmoEZjQiC48UibZEw2vlzAubUbaMJfk__ifKp45LPqEhgGkikf2YJyv1UywiQbNx_j_-vYxA6ZUs.js"></script>
-<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"gsas","theme_token":"WA673QwfA9OJK2CtUAIM4ONwPfPRA6h3Jd6925F_-Hs","jquery_version":"1.7","css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/themes\/base\/jquery.ui.core.css":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/themes\/base\/jquery.ui.theme.css":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/themes\/base\/jquery.ui.button.css":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/themes\/base\/jquery.ui.resizable.css":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/themes\/base\/jquery.ui.dialog.css":1,"sites\/all\/modules\/contrib\/ckeditor_tabber\/ckeditor_tabber.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/contrib\/scald\/modules\/fields\/mee\/css\/editor-global.css":1,"modules\/node\/node.css":1,"sites\/all\/modules\/contrib\/scald_file\/scald_file.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/typogrify\/typogrify.css":1,"sites\/all\/modules\/contrib\/forward\/forward.css":1,"sites\/all\/modules\/contrib\/ds\/layouts\/ds_2col_fluid\/ds_2col_fluid.css":1,"sites\/all\/modules\/contrib\/addressfield\/addressfield.css":1,"sites\/all\/libraries\/superfish\/css\/superfish.css":1,"sites\/all\/themes\/gsas\/system.menus.css":1,"sites\/all\/themes\/gsas\/dist\/css\/style.css":1,"sites\/all\/themes\/gsas\/dist\/css\/layout.css":1,"sites\/all\/themes\/gsas\/dist\/css\/component.css":1,"sites\/all\/themes\/gsas\/dist\/css\/skin.css":1,"sites\/all\/themes\/gsas\/dist\/css\/toolbox.css":1,"sites\/all\/themes\/gsas\/dist\/css\/print.css":1},"js":{"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery\/1.7\/jquery.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/jquery.ui.core.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/jquery.ui.widget.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/jquery.ui.button.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/jquery.ui.mouse.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/jquery.ui.draggable.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/jquery.ui.position.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/jquery.ui.resizable.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/jquery.ui.dialog.js":1,"misc\/ajax.js":1,"sites\/all\/modules\/contrib\/jquery_update\/js\/jquery_update.js":1,"sites\/all\/modules\/contrib\/ckeditor_tabber\/semantic-tabs.js":1,"sites\/all\/modules\/custom\/gsas_random_profile\/gsas_random_profile.js":1,"sites\/all\/modules\/custom\/responsive_video\/js\/responsive_video.js":1,"sites\/all\/modules\/contrib\/linkit\/js\/linkit.js":1,"sites\/all\/modules\/contrib\/scald_file\/scald_file.js":1,"sites\/all\/modules\/contrib\/scald\/modules\/providers\/scald_image\/scald_image.js":1,"sites\/all\/themes\/gsas\/js\/contrib-plugins\/jquery.selectBox\/jquery.selectBox.min.js":1,"sites\/all\/modules\/contrib\/field_group\/field_group.js":1,"sites\/all\/modules\/contrib\/google_analytics\/googleanalytics.js":1,"misc\/progress.js":1,"sites\/all\/modules\/contrib\/linkit\/editors\/ckeditor\/linkitDialog.js":1,"sites\/all\/modules\/contrib\/ctools\/js\/jump-menu.js":1,"sites\/all\/libraries\/superfish\/jquery.hoverIntent.minified.js":1,"sites\/all\/libraries\/superfish\/supposition.js":1,"sites\/all\/libraries\/superfish\/superfish.js":1,"sites\/all\/libraries\/superfish\/supersubs.js":1,"sites\/all\/modules\/contrib\/superfish\/superfish.js":1,"sites\/all\/themes\/gsas\/dist\/js\/theme.js":1}},"scaldFile":{"path":"sites\/all\/modules\/contrib\/scald_file\/scald_file.css"},"linkit":{"autocompletePath":"https:\/\/gsas.harvard.edu\/linkit\/autocomplete\/___profile___?s=","dashboardPath":"\/linkit\/dashboard\/","currentInstance":{}},"better_exposed_filters":{"views":{"programs_of_studay":{"displays":{"block_1":{"filters":[]},"block":{"filters":[]}}},"slideshows":{"displays":{"block":{"filters":[]}}},"news":{"displays":{"block_1":{"filters":[]}}},"events":{"displays":{"block_1":{"filters":{"tid":{"required":false}}}}},"profiles":{"displays":{"block":{"filters":[]}}}}},"urlIsAjaxTrusted":{"\/events\/coffee-hour-professor-karine-gibbs":true,"\/?option=com_content\u0026task=view\u0026id=279\u0026Itemid=288":true,"\/programs-study\/degree-programs":true},"field_group":{"div":"teaser"},"gsas":{"profile_content":["\u003Cdiv  class=\u0022ds-2col-fluid node node-profile view-mode-quote clearfix\u0022\u003E\n\n  \n      \u003Cdiv class=\u0022group-left\u0022\u003E\n      \u003Cdiv class=\u0022field field-name-field-banner-image\u0022\u003E\u003C!-- scald=13:profile_footer --\u003E\u003Cimg src=\u0022https:\/\/gsas.harvard.edu\/sites\/default\/files\/styles\/profile_footer\/public\/thumbnails\/image\/jim%20yong%20kim_FINE-edit_0.jpg?itok=sIYY_KgH\u0022 width=\u0022850\u0022 height=\u0022510\u0022 alt=\u0022Jim Yong Kim \u0022 title=\u0022Jim Yong Kim \u0022 \/\u003E\u003C!-- END scald=13 --\u003E\u003C\/div\u003E    \u003C\/div\u003E\n  \n      \u003Cdiv class=\u0022group-right\u0022\u003E\n      \u003Cdiv class=\u0022field field-name-field-teaser-quote\u0022\u003E\u003Cp\u003EStudying social theory exposed me to how people try to understand what is happening in the world. Ethnography and participant observation gave us a method by which to dig deeply into the worlds of...\u003C\/p\u003E\u003C\/div\u003E\u003Cdiv class=\u0022field field-name-title\u0022\u003E\u003Ch2\u003EJim Yong Kim\u003C\/h2\u003E\u003C\/div\u003E\u003Cdiv class=\u0022field field-name-field-professional-title\u0022\u003EPresident, World Bank Group\u003C\/div\u003E\u003Cdiv class=\u0022field field-name-field-degree\u0022\u003EMD \u201991, PhD \u201993\u003C\/div\u003E\u003Cdiv class=\u0022field field-name-node-link\u0022\u003E\u003Cp class=\u0022button-clear\u0022\u003E\u003Ca href=\u0022\/profiles\/jim-yong-kim\u0022 class=\u0022\u0022\u003EFull Profile\u003C\/a\u003E\u003C\/p\u003E\u003C\/div\u003E    \u003C\/div\u003E\n  \n\u003C\/div\u003E\n\n","\u003Cdiv  class=\u0022ds-2col-fluid node node-profile view-mode-quote clearfix\u0022\u003E\n\n  \n      \u003Cdiv class=\u0022group-left\u0022\u003E\n      \u003Cdiv class=\u0022field field-name-field-banner-image\u0022\u003E\u003C!-- scald=32:profile_footer --\u003E\u003Cimg src=\u0022https:\/\/gsas.harvard.edu\/sites\/default\/files\/styles\/profile_footer\/public\/thumbnails\/image\/Jun%20Song.jpg?itok=4hUsINlu\u0022 width=\u0022850\u0022 height=\u0022510\u0022 alt=\u0022Jun Song\u0022 title=\u0022Jun Song\u0022 \/\u003E\u003C!-- END scald=32 --\u003E\u003C\/div\u003E    \u003C\/div\u003E\n  \n      \u003Cdiv class=\u0022group-right\u0022\u003E\n      \u003Cdiv class=\u0022field field-name-field-teaser-quote\u0022\u003E\u003Cp\u003EHBX is indeed a great complement to my graduate study, because now I can combine the knowledge I gained with my analytical research skills to solve complex business problems.\u003C\/p\u003E\n\u003C\/div\u003E\u003Cdiv class=\u0022field field-name-title\u0022\u003E\u003Ch2\u003EJun Song\u003C\/h2\u003E\u003C\/div\u003E\u003Cdiv class=\u0022field field-name-field-professional-title\u0022\u003EPhD Candidate, Applied Physics; Participant, HBX CORe\u003C\/div\u003E\u003Cdiv class=\u0022field field-name-field-degree\u0022\u003EPhD\u003C\/div\u003E\u003Cdiv class=\u0022field field-name-node-link\u0022\u003E\u003Cp class=\u0022button-clear\u0022\u003E\u003Ca href=\u0022\/profiles\/jun-song\u0022 class=\u0022\u0022\u003EFull Profile\u003C\/a\u003E\u003C\/p\u003E\u003C\/div\u003E    \u003C\/div\u003E\n  \n\u003C\/div\u003E\n\n","\u003Cdiv  class=\u0022ds-2col-fluid node node-profile view-mode-quote clearfix\u0022\u003E\n\n  \n      \u003Cdiv class=\u0022group-left\u0022\u003E\n      \u003Cdiv class=\u0022field field-name-field-banner-image\u0022\u003E\u003C!-- scald=1890:profile_footer --\u003E\u003Cimg src=\u0022https:\/\/gsas.harvard.edu\/sites\/default\/files\/styles\/profile_footer\/public\/thumbnails\/image\/RebeccaPerry1.jpg?itok=ZFI1OA3f\u0022 width=\u0022850\u0022 height=\u0022510\u0022 alt=\u0022Rebecca Perry\u0022 title=\u0022Rebecca Perry\u0022 \/\u003E\u003C!-- END scald=1890 --\u003E\u003C\/div\u003E    \u003C\/div\u003E\n  \n      \u003Cdiv class=\u0022group-right\u0022\u003E\n      \u003Cdiv class=\u0022field field-name-field-teaser-quote\u0022\u003E\u003Cp\u003EMy PhD\u00a0research has helped me to not be afraid of taking on problems that no one knows how to solve yet....\u003C\/p\u003E\n\u003C\/div\u003E\u003Cdiv class=\u0022field field-name-title\u0022\u003E\u003Ch2\u003ERebecca Perry\u003C\/h2\u003E\u003C\/div\u003E\u003Cdiv class=\u0022field field-name-field-professional-title\u0022\u003ESoftware Engineer, Wayfair\u003C\/div\u003E\u003Cdiv class=\u0022field field-name-field-degree\u0022\u003ESM \u201912, PhD \u201915\u003C\/div\u003E\u003Cdiv class=\u0022field field-name-node-link\u0022\u003E\u003Cp class=\u0022button-clear\u0022\u003E\u003Ca href=\u0022\/profiles\/rebecca-perry\u0022 class=\u0022\u0022\u003EFull Profile\u003C\/a\u003E\u003C\/p\u003E\u003C\/div\u003E    \u003C\/div\u003E\n  \n\u003C\/div\u003E\n\n","\u003Cdiv  class=\u0022ds-2col-fluid node node-profile view-mode-quote clearfix\u0022\u003E\n\n  \n      \u003Cdiv class=\u0022group-left\u0022\u003E\n      \u003Cdiv class=\u0022field field-name-field-banner-image\u0022\u003E\u003C!-- scald=1937:profile_footer --\u003E\u003Cimg src=\u0022https:\/\/gsas.harvard.edu\/sites\/default\/files\/styles\/profile_footer\/public\/thumbnails\/image\/GSAS%20Senan%20Ebrahim_05.jpg?itok=QL700d3n\u0022 width=\u0022850\u0022 height=\u0022510\u0022 alt=\u0022Senan Ebrahim\u0022 title=\u0022Senan Ebrahim\u0022 \/\u003E\u003C!-- END scald=1937 --\u003E\u003C\/div\u003E    \u003C\/div\u003E\n  \n      \u003Cdiv class=\u0022group-right\u0022\u003E\n      \u003Cdiv class=\u0022field field-name-field-teaser-quote\u0022\u003E\u003Cp\u003EIt\u2019s great being a mentor and teaching undergraduates, but I\u2019ve also picked up a great deal of new knowledge from them along the way.\u003C\/p\u003E\n\u003C\/div\u003E\u003Cdiv class=\u0022field field-name-title\u0022\u003E\u003Ch2\u003ESenan Ebrahim\u003C\/h2\u003E\u003C\/div\u003E\u003Cdiv class=\u0022field field-name-field-professional-title\u0022\u003EMD\/PhD Student in Neuroscience\u003C\/div\u003E\u003Cdiv class=\u0022field field-name-node-link\u0022\u003E\u003Cp class=\u0022button-clear\u0022\u003E\u003Ca href=\u0022\/profiles\/senan-ebrahim\u0022 class=\u0022\u0022\u003EFull Profile\u003C\/a\u003E\u003C\/p\u003E\u003C\/div\u003E    \u003C\/div\u003E\n  \n\u003C\/div\u003E\n\n","\u003Cdiv  class=\u0022ds-2col-fluid node node-profile view-mode-quote clearfix\u0022\u003E\n\n  \n      \u003Cdiv class=\u0022group-left\u0022\u003E\n      \u003Cdiv class=\u0022field field-name-field-banner-image\u0022\u003E\u003C!-- scald=1939:profile_footer --\u003E\u003Cimg src=\u0022https:\/\/gsas.harvard.edu\/sites\/default\/files\/styles\/profile_footer\/public\/thumbnails\/image\/Andrea%20Tokranov.jpg?itok=WHrlW_y4\u0022 width=\u0022850\u0022 height=\u0022510\u0022 alt=\u0022Andrea Tokranov standing outdoors\u0022 title=\u0022Andrea Tokranov\u0022 \/\u003E\u003C!-- END scald=1939 --\u003E\u003C\/div\u003E    \u003C\/div\u003E\n  \n      \u003Cdiv class=\u0022group-right\u0022\u003E\n      \u003Cdiv class=\u0022field field-name-field-teaser-quote\u0022\u003E\u003Cp\u003EThe rewarding part of this work is being able to help communities.\u003C\/p\u003E\n\u003C\/div\u003E\u003Cdiv class=\u0022field field-name-title\u0022\u003E\u003Ch2\u003EAndrea Tokranov\u003C\/h2\u003E\u003C\/div\u003E\u003Cdiv class=\u0022field field-name-field-professional-title\u0022\u003EPhD Candidate\u003C\/div\u003E\u003Cdiv class=\u0022field field-name-node-link\u0022\u003E\u003Cp class=\u0022button-clear\u0022\u003E\u003Ca href=\u0022\/profiles\/andrea-tokranov\u0022 class=\u0022\u0022\u003EFull Profile\u003C\/a\u003E\u003C\/p\u003E\u003C\/div\u003E    \u003C\/div\u003E\n  \n\u003C\/div\u003E\n\n"]},"ckeditor_tabber":{"elements":"dl.ckeditor-tabber"},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"superfish":[{"id":"2","sf":{"delay":"400","animation":{"opacity":"show","height":"show"},"speed":"\u0027fast\u0027","autoArrows":false,"dropShadows":false,"disableHI":false},"plugins":{"supposition":true,"bgiframe":false,"supersubs":{"minWidth":"12","maxWidth":"27","extraWidth":1}}},{"id":"1","sf":{"delay":"400","animation":{"opacity":"show","height":"show"},"speed":"\u0027fast\u0027","autoArrows":false,"dropShadows":false,"disableHI":false},"plugins":{"supposition":true,"bgiframe":false,"supersubs":{"minWidth":"12","maxWidth":"27","extraWidth":1}}}]});</script>
-      <!--[if lt IE 9]>
-    <script src="/sites/all/themes/zen/js/html5-respond.js"></script>
-    <![endif]-->
-  </head>
-<body class="html front not-logged-in one-sidebar sidebar-second page-node page-node- page-node-1 node-type-page" >
-      <p id="skip-link">
-      <a href="#main-menu" class="element-invisible element-focusable">Jump to navigation</a>
-    </p>
-      <div id="page" class="clearfix">
-  <header id="header" role="banner">
-    <div class="wrapper">
-      <div id="header-content">
-                  <a href="/" title="Home" rel="home" id="logo"><img src="https://gsas.harvard.edu/sites/all/themes/gsas/logo.png" alt="Harvard University - The Graduate School of Arts and Sciences" id="bitmap-logo" /><img src="/sites/all/themes/gsas/logo.svg" id="svg-logo" alt="Harvard University - The Graduate School of Arts and Sciences" /></a>
-                          <hgroup id="name-and-slogan">
-                          <h1 id="site-name">
-                <a href="/" title="Home" rel="home"><span>Harvard University - The Graduate School of Arts and Sciences</span></a>
-              </h1>
-            
-                      </hgroup><!-- /#name-and-slogan -->
-                
-          <div class="header__region region region-header">
-    <div id="block-superfish-2" class="block block-superfish plain first odd">
-  <div class="block-inner">
-                <div class="content">
-      <ul id="superfish-2" class="menu sf-menu sf-menu-global-navigation sf-horizontal sf-style-none sf-total-items-5 sf-parent-items-1 sf-single-items-4 fouc"><li id="menu-1080-2" class="first odd sf-item-1 sf-depth-1 menu-item sf-no-children"><a href="/news" class="sf-depth-1">News</a></li><li id="menu-1081-2" class="middle even sf-item-2 sf-depth-1 menu-item sf-no-children"><a href="/events" class="sf-depth-1">Events</a></li><li id="menu-1082-2" class="middle odd sf-item-3 sf-depth-1 menu-item sf-total-children-4 sf-parent-children-0 sf-single-children-4 menuparent"><a href="/alumni-association" class="sf-depth-1 menuparent">Alumni Association</a><ul><li id="menu-1201-2" class="first odd sf-item-1 sf-depth-2 menu-item sf-no-children"><a href="/alumni-association/alumni-awards" class="sf-depth-2">Awards</a></li><li id="menu-1200-2" class="middle even sf-item-2 sf-depth-2 menu-item sf-no-children"><a href="/alumni-association/connect" class="sf-depth-2">Connect</a></li><li id="menu-1202-2" class="middle odd sf-item-3 sf-depth-2 menu-item sf-no-children"><a href="/alumni-association/alumni-council" class="sf-depth-2">Council</a></li><li id="menu-1989-2" class="last even sf-item-4 sf-depth-2 menu-item sf-no-children"><a href="/colloquy-magazine-archive" class="sf-depth-2">Magazine</a></li></ul></li><li id="menu-1083-2" class="middle even sf-item-4 sf-depth-1 menu-item sf-no-children"><a href="https://community.alumni.harvard.edu/give/16039782" class="sf-depth-1">Make a Gift</a></li><li id="menu-1391-2" class="last odd sf-item-5 sf-depth-1 menu-item sf-no-children"><a href="/about/contact" class="sf-depth-1">Contact</a></li></ul>    </div>
-  </div>
-</div><!-- /.block -->
-<div id="block-views-programs-of-studay-block-1" class="block block-views audience-jump-menu plain last even">
-  <div class="block-inner">
-              <h2 class="block__title block-title">Info for</h2>
-            <div class="content">
-      <div class="view view-programs-of-studay view-id-programs_of_studay view-display-id-block_1 view-dom-id-dae53f04e1b469b20a6e4180cdf4bbf5">
+    <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+
+    <script type="application/ld+json">
+    { "@context" : "http://schema.org",
+    "@type" : "Organization",
+    "name" : "Harvard Medical School",
+    "url" : "http://www.hms.harvard.edu",
+    "sameAs" : [ "https://www.facebook.com/HarvardMed",
+    "https://twitter.com/harvardmed",
+    "https://instagram.com/harvardmed",
+    "https://www.linkedin.com/edu/school?id=18482",
+    "https://www.youtube.com/user/harvardmedicalschool",
+    "https://plus.google.com/+harvardmedicalschool"]
+    }
+  </script>
+  <script type="text/javascript">
+   var _gaq = _gaq || [];
+   _gaq.push(['_setAccount', 'UA-29838753-1']);
+           _gaq.push(['_trackPageview']);
+   
+   (function() {
+     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+   })();
+  </script>
+
+  
+
+</head>
+<body class="html front not-logged-in no-sidebars page-node page-node- page-node-43 node-type-gateway page-home">
+  <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-M3BCQBN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>      <div id="spotlight-line"></div>
+    <div id="white-line"></div>
+
+      <div id="front-spotlight-line-top"></div>
+    <div id="front-spotlight-line"></div>
+  
+  <div id="site-header-band"></div>
+  <div id="site-header-wrap">
+    <div id="site-header" class="clear-block">
+      <div id="branding" class="grid-4 clear-block">
+        <span id="logo" class="grid-1 alpha"><a href="/" rel="home"><img src="/sites/all/themes/hms/logo.png" alt="Home" title="Home" width="204" height="51" /></a></span>
         
-  
-  
-      <div class="view-content">
-      <form action="/events/coffee-hour-professor-karine-gibbs" method="post" id="ctools-jump-menu" accept-charset="UTF-8"><div><div class="container-inline"><div class="form-item form-type-select form-item-jump">
- <select class="ctools-jump-menu-select ctools-jump-menu-change form-select" id="edit-jump" name="jump"><option value="" selected="selected">- Choose -</option><option value="656d405c884ed5d728042f32a83a92b3::/audiences/prospective-students">  
-          Prospective Students  </option><option value="add95b451e4d5d33853ef0147f3c7995::/audiences/students">  
-          Students  </option><option value="31d7280f57933ca2757fd65bf7375ade::/audiences/alumni">  
-          Alumni  </option><option value="52cedf09340f69ba73e470fd1aef6c21::/audiences/information-faculty">  
-          Faculty  </option></select>
-</div>
-<input class="ctools-jump-menu-button ctools-jump-menu-hide form-submit" type="submit" id="edit-go" name="op" value="Go" /></div><input type="hidden" name="form_build_id" value="form-NNGRQvSHIcibyP_T3RYwDYFFMN8yUbuPnnz7Cw6w61k" />
-<input type="hidden" name="form_id" value="ctools_jump_menu" />
-</div></form>    </div>
-  
-  
-  
-  
-  
-  
-</div>    </div>
-  </div>
-</div><!-- /.block -->
-  </div>
-      </div><!-- /#header-content -->
-    </div><!-- /.wrapper -->
-  </header>
-  <div id="navigation">
-    <div class="wrapper">
-      <div class="navigation-content">
-                  <div class="region region-navigation">
-    <div id="block-system-main-menu" class="block block-system plain block-menu first odd" role="navigation">
-  <div class="block-inner">
-                <div class="content">
-      <ul class="menu"><li class="menu__item is-expanded first expanded"><a href="/programs-study" class="menu__link">Programs of Study</a><ul class="menu"><li class="menu__item is-leaf first leaf"><a href="/programs-study/degree-programs" class="menu__link">Degree Programs</a></li>
-<li class="menu__item is-leaf leaf"><a href="/programs-study/non-degree-programs" class="menu__link">Non-Degree Programs</a></li>
-<li class="menu__item is-leaf leaf"><a href="/programs-study/secondary-fields" class="menu__link">Secondary Fields</a></li>
-<li class="menu__item is-leaf last leaf"><a href="/joint-degrees" class="menu__link">Combined Degrees</a></li>
-</ul></li>
-<li class="menu__item is-expanded expanded"><a href="/admissions" class="menu__link">Admissions</a><ul class="menu"><li class="menu__item is-leaf first leaf"><a href="/admissions/apply" class="menu__link">Apply</a></li>
-<li class="menu__item is-leaf leaf"><a href="/admissions/tuition-fees" class="menu__link">Tuition &amp; Fees</a></li>
-<li class="menu__item is-leaf leaf"><a href="/admissions/frequently-asked-questions-master%E2%80%99s-and-phd-applicants" class="menu__link">FAQs</a></li>
-<li class="menu__item is-leaf leaf"><a href="/admissions/request-information" class="menu__link">Express Interest</a></li>
-<li class="menu__item is-leaf last leaf"><a href="/admissions/why-gsas" class="menu__link">Why GSAS?</a></li>
-</ul></li>
-<li class="menu__item is-expanded expanded"><a href="/financial-support" class="menu__link">Financial Support</a><ul class="menu"><li class="menu__item is-collapsed first collapsed"><a href="/financial-support/funding-aid" class="menu__link">Funding and Aid</a></li>
-<li class="menu__item is-collapsed collapsed"><a href="/financial-support/fellowships" class="menu__link">Fellowships</a></li>
-<li class="menu__item is-leaf leaf"><a href="/financial-support/financial-aid-policies" class="menu__link">Financial Aid Policies</a></li>
-<li class="menu__item is-leaf last leaf"><a href="/financial-support/faqs" class="menu__link">FAQs</a></li>
-</ul></li>
-<li class="menu__item is-expanded expanded"><a href="/academics" class="menu__link">Academics</a><ul class="menu"><li class="menu__item is-leaf first leaf"><a href="/academics/dissertations" class="menu__link">Dissertations</a></li>
-<li class="menu__item is-leaf leaf"><a href="/academics/teaching" class="menu__link">Teaching</a></li>
-<li class="menu__item is-collapsed collapsed"><a href="/academics/professional-development" class="menu__link">Professional Development</a></li>
-<li class="menu__item is-leaf leaf"><a href="/academics/policies-and-handbook" class="menu__link">Student Handbook</a></li>
-<li class="menu__item is-leaf leaf"><a href="/academics/commencement" class="menu__link">Commencement</a></li>
-<li class="menu__item is-leaf last leaf"><a href="/programs-of-study/divisions/harvard-integrated-life-sciences" class="menu__link">Harvard Integrated Life Sciences</a></li>
-</ul></li>
-<li class="menu__item is-expanded expanded"><a href="/student-life" class="menu__link">Student Life</a><ul class="menu"><li class="menu__item is-leaf first leaf"><a href="/student-life/resources" class="menu__link">Resources</a></li>
-<li class="menu__item is-collapsed collapsed"><a href="/student-life/advice-new-students" class="menu__link">New Students</a></li>
-<li class="menu__item is-leaf leaf"><a href="/student-life/housing-dining" class="menu__link">Housing</a></li>
-<li class="menu__item is-leaf leaf"><a href="/student-life/harvard-resources/cambridge-and-boston" class="menu__link">Cambridge &amp; Boston</a></li>
-<li class="menu__item is-leaf leaf"><a href="/student-life/student-alumni-profiles" class="menu__link">Student &amp; Alumni Profiles</a></li>
-<li class="menu__item is-leaf leaf"><a href="/student-life/januarygsas" class="menu__link">January@GSAS</a></li>
-<li class="menu__item is-leaf leaf"><a href="/student-life/harvard-resources/dudley-house" class="menu__link">Student Center</a></li>
-<li class="menu__item is-leaf last leaf"><a href="/student-life/harvard-resources/student-groups" class="menu__link">Student Groups</a></li>
-</ul></li>
-<li class="menu__item is-expanded expanded"><a href="/diversity-gsas" class="menu__link">Diversity</a><ul class="menu"><li class="menu__item is-leaf first leaf"><a href="/diversity/recruitment" class="menu__link">Recruitment Events</a></li>
-<li class="menu__item is-leaf leaf"><a href="/diversity/student-groups" class="menu__link">Student Groups</a></li>
-<li class="menu__item is-collapsed collapsed"><a href="/diversity/outreach-programs" class="menu__link">Outreach Programs</a></li>
-<li class="menu__item is-leaf last leaf"><a href="/diversity/fellow" class="menu__link">Diversity and Inclusion Fellow</a></li>
-</ul></li>
-<li class="menu__item is-expanded last expanded"><a href="/about" class="menu__link">About</a><ul class="menu"><li class="menu__item is-leaf first leaf"><a href="/about/deans-welcome" class="menu__link">Dean’s Welcome</a></li>
-<li class="menu__item is-leaf leaf"><a href="/about/history" class="menu__link">History</a></li>
-<li class="menu__item is-leaf leaf"><a href="/about/gsas-glance" class="menu__link">GSAS at a Glance</a></li>
-<li class="menu__item is-leaf leaf"><a href="/about/staff" class="menu__link">Staff</a></li>
-<li class="menu__item is-leaf last leaf"><a href="/about/contact" class="menu__link">Contact</a></li>
-</ul></li>
-</ul>    </div>
-  </div>
-</div><!-- /.block -->
-<div id="block-superfish-1" class="block block-superfish plain even">
-  <div class="block-inner">
-                <div class="content">
-      <ul id="superfish-1" class="menu sf-menu sf-main-menu sf-horizontal sf-style-none sf-total-items-7 sf-parent-items-7 sf-single-items-0 fouc"><li id="menu-1074-1" class="first odd sf-item-1 sf-depth-1 sf-total-children-4 sf-parent-children-0 sf-single-children-4 menuparent"><a href="/programs-study" class="sf-depth-1 menuparent">Programs of Study</a><ul><li id="menu-1154-1" class="first odd sf-item-1 sf-depth-2 sf-no-children"><a href="/programs-study/degree-programs" class="sf-depth-2">Degree Programs</a></li><li id="menu-1153-1" class="middle even sf-item-2 sf-depth-2 sf-no-children"><a href="/programs-study/non-degree-programs" class="sf-depth-2">Non-Degree Programs</a></li><li id="menu-1156-1" class="middle odd sf-item-3 sf-depth-2 sf-no-children"><a href="/programs-study/secondary-fields" class="sf-depth-2">Secondary Fields</a></li><li id="menu-2128-1" class="last even sf-item-4 sf-depth-2 sf-no-children"><a href="/joint-degrees" class="sf-depth-2">Combined Degrees</a></li></ul></li><li id="menu-1075-1" class="middle even sf-item-2 sf-depth-1 sf-total-children-5 sf-parent-children-0 sf-single-children-5 menuparent"><a href="/admissions" class="sf-depth-1 menuparent">Admissions</a><ul><li id="menu-1161-1" class="first odd sf-item-1 sf-depth-2 sf-no-children"><a href="/admissions/apply" class="sf-depth-2">Apply</a></li><li id="menu-1163-1" class="middle even sf-item-2 sf-depth-2 sf-no-children"><a href="/admissions/tuition-fees" class="sf-depth-2">Tuition &amp; Fees</a></li><li id="menu-1164-1" class="middle odd sf-item-3 sf-depth-2 sf-no-children"><a href="/admissions/frequently-asked-questions-master%E2%80%99s-and-phd-applicants" class="sf-depth-2">FAQs</a></li><li id="menu-1165-1" class="middle even sf-item-4 sf-depth-2 sf-no-children"><a href="/admissions/request-information" class="sf-depth-2">Express Interest</a></li><li id="menu-1166-1" class="last odd sf-item-5 sf-depth-2 sf-no-children"><a href="/admissions/why-gsas" class="sf-depth-2">Why GSAS?</a></li></ul></li><li id="menu-1076-1" class="middle odd sf-item-3 sf-depth-1 sf-total-children-4 sf-parent-children-2 sf-single-children-2 menuparent"><a href="/financial-support" class="sf-depth-1 menuparent">Financial Support</a><ul><li id="menu-1167-1" class="first odd sf-item-1 sf-depth-2 sf-total-children-4 sf-parent-children-0 sf-single-children-4 menuparent"><a href="/financial-support/funding-aid" class="sf-depth-2 menuparent">Funding and Aid</a><ul><li id="menu-3840-1" class="first odd sf-item-1 sf-depth-3 sf-no-children"><a href="/financial-support/funding-and-aid/federal-student-aid" class="sf-depth-3">Federal Student Aid</a></li><li id="menu-3839-1" class="middle even sf-item-2 sf-depth-3 sf-no-children"><a href="/financial-support/funding-aid/consumer-information" class="sf-depth-3">Consumer Information</a></li><li id="menu-3841-1" class="middle odd sf-item-3 sf-depth-3 sf-no-children"><a href="/financial-support/funding-and-aid/other-sources-funding" class="sf-depth-3">Other Sources of Funding</a></li><li id="menu-3842-1" class="last even sf-item-4 sf-depth-3 sf-no-children"><a href="/financial-support/funding-and-aid/special-note-concerning-us-income-taxes" class="sf-depth-3">Special Note Concerning US Income Taxes</a></li></ul></li><li id="menu-1169-1" class="middle even sf-item-2 sf-depth-2 sf-total-children-3 sf-parent-children-0 sf-single-children-3 menuparent"><a href="/financial-support/fellowships" class="sf-depth-2 menuparent">Fellowships</a><ul><li id="menu-2081-1" class="first odd sf-item-1 sf-depth-3 sf-no-children"><a href="/financial-support/fellowships/dissertation-completion-fellowships" class="sf-depth-3">Dissertation Completion Fellowships</a></li><li id="menu-2080-1" class="middle even sf-item-2 sf-depth-3 sf-no-children"><a href="/financial-support/fellowships/fellowships-early-years" class="sf-depth-3">Fellowships for the Early Years</a></li><li id="menu-1168-1" class="last odd sf-item-3 sf-depth-3 sf-no-children"><a href="/financial-support/list-fellowships" class="sf-depth-3">Summer, Research, and Travel Fellowships</a></li></ul></li><li id="menu-3639-1" class="middle odd sf-item-3 sf-depth-2 sf-no-children"><a href="/financial-support/financial-aid-policies" class="sf-depth-2">Financial Aid Policies</a></li><li id="menu-2083-1" class="last even sf-item-4 sf-depth-2 sf-no-children"><a href="/financial-support/faqs" class="sf-depth-2">FAQs</a></li></ul></li><li id="menu-1077-1" class="middle even sf-item-4 sf-depth-1 sf-total-children-6 sf-parent-children-1 sf-single-children-5 menuparent"><a href="/academics" class="sf-depth-1 menuparent">Academics</a><ul><li id="menu-1174-1" class="first odd sf-item-1 sf-depth-2 sf-no-children"><a href="/academics/dissertations" class="sf-depth-2">Dissertations</a></li><li id="menu-1172-1" class="middle even sf-item-2 sf-depth-2 sf-no-children"><a href="/academics/teaching" class="sf-depth-2">Teaching</a></li><li id="menu-1176-1" class="middle odd sf-item-3 sf-depth-2 sf-total-children-5 sf-parent-children-0 sf-single-children-5 menuparent"><a href="/academics/professional-development" class="sf-depth-2 menuparent">Professional Development</a><ul><li id="menu-1921-1" class="first odd sf-item-1 sf-depth-3 sf-no-children"><a href="/academics/professional-development/harvard-horizons" class="sf-depth-3">Harvard Horizons</a></li><li id="menu-1171-1" class="middle even sf-item-2 sf-depth-3 sf-no-children"><a href="/academics/courses-registration" class="sf-depth-3">Graduate Seminars</a></li><li id="menu-1557-1" class="middle odd sf-item-3 sf-depth-3 sf-no-children"><a href="/academics/research/gsas-research-workshops" class="sf-depth-3">GSAS Research Workshops</a></li><li id="menu-1556-1" class="middle even sf-item-4 sf-depth-3 sf-no-children"><a href="/academics/research/graduate-consortia" class="sf-depth-3">Graduate Consortia</a></li><li id="menu-3544-1" class="last odd sf-item-5 sf-depth-3 sf-no-children"><a href="/center-writing-and-communicating-ideas" class="sf-depth-3">Center for Writing and Communicating Ideas</a></li></ul></li><li id="menu-1177-1" class="middle even sf-item-4 sf-depth-2 sf-no-children"><a href="/academics/policies-and-handbook" class="sf-depth-2">Student Handbook</a></li><li id="menu-1178-1" class="middle odd sf-item-5 sf-depth-2 sf-no-children"><a href="/academics/commencement" class="sf-depth-2">Commencement</a></li><li id="menu-1922-1" class="last even sf-item-6 sf-depth-2 sf-no-children"><a href="/programs-of-study/divisions/harvard-integrated-life-sciences" class="sf-depth-2">Harvard Integrated Life Sciences</a></li></ul></li><li id="menu-1078-1" class="middle odd sf-item-5 sf-depth-1 sf-total-children-8 sf-parent-children-1 sf-single-children-7 menuparent"><a href="/student-life" class="sf-depth-1 menuparent">Student Life</a><ul><li id="menu-1183-1" class="first odd sf-item-1 sf-depth-2 sf-no-children"><a href="/student-life/resources" class="sf-depth-2">Resources</a></li><li id="menu-1185-1" class="middle even sf-item-2 sf-depth-2 sf-total-children-2 sf-parent-children-0 sf-single-children-2 menuparent"><a href="/student-life/advice-new-students" class="sf-depth-2 menuparent">New Students</a><ul><li id="menu-2126-1" class="first odd sf-item-1 sf-depth-3 sf-no-children"><a href="/student-life/new-students/international-student-faq" class="sf-depth-3">International Student FAQ</a></li><li id="menu-2125-1" class="last even sf-item-2 sf-depth-3 sf-no-children"><a href="/student-life/new-students/faq-new-students" class="sf-depth-3">New Student FAQ</a></li></ul></li><li id="menu-1179-1" class="middle odd sf-item-3 sf-depth-2 sf-no-children"><a href="/student-life/housing-dining" class="sf-depth-2">Housing</a></li><li id="menu-1180-1" class="middle even sf-item-4 sf-depth-2 sf-no-children"><a href="/student-life/harvard-resources/cambridge-and-boston" class="sf-depth-2">Cambridge &amp; Boston</a></li><li id="menu-1184-1" class="middle odd sf-item-5 sf-depth-2 sf-no-children"><a href="/student-life/student-alumni-profiles" class="sf-depth-2">Student &amp; Alumni Profiles</a></li><li id="menu-1395-1" class="middle even sf-item-6 sf-depth-2 sf-no-children"><a href="/student-life/januarygsas" class="sf-depth-2">January@GSAS</a></li><li id="menu-2079-1" class="middle odd sf-item-7 sf-depth-2 sf-no-children"><a href="/student-life/harvard-resources/dudley-house" class="sf-depth-2">Student Center</a></li><li id="menu-2140-1" class="last even sf-item-8 sf-depth-2 sf-no-children"><a href="/student-life/harvard-resources/student-groups" class="sf-depth-2">Student Groups</a></li></ul></li><li id="menu-1079-1" class="middle even sf-item-6 sf-depth-1 sf-total-children-4 sf-parent-children-1 sf-single-children-3 menuparent"><a href="/diversity-gsas" class="sf-depth-1 menuparent">Diversity</a><ul><li id="menu-1192-1" class="first odd sf-item-1 sf-depth-2 sf-no-children"><a href="/diversity/recruitment" class="sf-depth-2">Recruitment Events</a></li><li id="menu-1976-1" class="middle even sf-item-2 sf-depth-2 sf-no-children"><a href="/diversity/student-groups" class="sf-depth-2">Student Groups</a></li><li id="menu-1975-1" class="middle odd sf-item-3 sf-depth-2 sf-total-children-2 sf-parent-children-0 sf-single-children-2 menuparent"><a href="/diversity/outreach-programs" class="sf-depth-2 menuparent">Outreach Programs</a><ul><li id="menu-1946-1" class="first odd sf-item-1 sf-depth-3 sf-no-children"><a href="/diversity/research-scholar-initiative" class="sf-depth-3">Research Scholar Initiative</a></li><li id="menu-1994-1" class="last even sf-item-2 sf-depth-3 sf-no-children"><a href="/diversity/outreach-programs/summer-research-opportunities-harvard" class="sf-depth-3">Summer Research Opportunities at Harvard</a></li></ul></li><li id="menu-3640-1" class="last even sf-item-4 sf-depth-2 sf-no-children"><a href="/diversity/fellow" class="sf-depth-2">Diversity and Inclusion Fellow</a></li></ul></li><li id="menu-241-1" class="last odd sf-item-7 sf-depth-1 sf-total-children-5 sf-parent-children-0 sf-single-children-5 menuparent"><a href="/about" class="sf-depth-1 menuparent">About</a><ul><li id="menu-1195-1" class="first odd sf-item-1 sf-depth-2 sf-no-children"><a href="/about/deans-welcome" class="sf-depth-2">Dean’s Welcome</a></li><li id="menu-1197-1" class="middle even sf-item-2 sf-depth-2 sf-no-children"><a href="/about/history" class="sf-depth-2">History</a></li><li id="menu-1196-1" class="middle odd sf-item-3 sf-depth-2 sf-no-children"><a href="/about/gsas-glance" class="sf-depth-2">GSAS at a Glance</a></li><li id="menu-1393-1" class="middle even sf-item-4 sf-depth-2 sf-no-children"><a href="/about/staff" class="sf-depth-2">Staff</a></li><li id="menu-1392-1" class="last odd sf-item-5 sf-depth-2 sf-no-children"><a href="/about/contact" class="sf-depth-2">Contact</a></li></ul></li></ul>    </div>
-  </div>
-</div><!-- /.block -->
-<div id="block-solr-search-block-solr-search-block" class="block block-solr-search-block last odd">
-  <div class="block-inner">
-                <div class="content">
-      <form action="/programs-study/degree-programs" method="post" id="search-block-form" accept-charset="UTF-8"><div><div class="container-inline form-wrapper" id="edit-inline"><div class="form-item form-type-textfield form-item-solr-keyword">
- <input type="text" id="edit-solr-keyword" name="solr_keyword" value="" size="60" maxlength="128" class="form-text" />
-</div>
-<div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="" value="Search" class="form-submit" /></div></div><input type="hidden" name="form_build_id" value="form-8EQDMgdTP_F0rtMwj-9lk9lbERkLPIm393yctjGxlzo" />
-<input type="hidden" name="form_id" value="solr_search_box_form" />
-</div></form>    </div>
-  </div>
-</div><!-- /.block -->
-  </div>
-      </div><!-- /#navigation-content -->
-    </div><!-- /.wrapper -->
-  </div><!-- /#navigation -->
-  <div id="main">
-    <div class="wrapper">
-      <div id="banner">
-          <div class="region region-highlighted">
-    <div id="block-views-slideshows-block" class="block block-views plain first odd">
-  <div class="block-inner">
-                <div class="content">
-      <div class="view view-slideshows view-id-slideshows view-display-id-block view-dom-id-2951987cb4b4af4c68208543283c03bd">
-        
-  
-  
-      <div class="view-content">
-          <ul class="slides">          <li class="views-row">  
-  <div class="views-field views-field-nothing">        <span class="field-content"><div class="slide-outer-wrapper">
-<div class="field field-name-field-image"><!-- scald=1958:large_banner --><img src="https://gsas.harvard.edu/sites/default/files/styles/large_banner/public/thumbnails/image/Becca%20Voelcker%2008.jpg?itok=I--nVPdr" width="1400" height="690" alt="Becca Voelcker standing outside Richards Hall" title="Becca Voelcker 08.jpg" /><!-- END scald=1958 --></div>
-<div class="slide-text-wrapper">
-     <div class="slide-text-gutter">
-          <div class="group-slide-text">
-               <div class="field field-name-field-link-type">FEATURE STORY</div>
-               <div class="field field-name-title"><h2>A Sense of Place</h2></div>
-               <div class="field field-name-field-caption"><p>How Becca Voelcker brings her love of cinema to her work as a GSAS resident advisor</p>
-
-<p><a class="button-clear" href="/news/stories/sense-place">Read More</a></p>
-</div>
-          </div>
-          <div class="slide-text-extension"></div>
-     </div>
-</div>
-</div></span>  </div></li>
-          <li class="views-row">  
-  <div class="views-field views-field-nothing">        <span class="field-content"><div class="slide-outer-wrapper">
-<div class="field field-name-field-image"><!-- scald=1946:large_banner --><img src="https://gsas.harvard.edu/sites/default/files/styles/large_banner/public/thumbnails/image/102417_Houghton_018_0.jpg?itok=yBLq7bD_" width="1400" height="690" alt="An open book with hand-drawn symbols and illustrations. The pages are folded like an accordion." title="Indonesian Book" /><!-- END scald=1946 --></div>
-<div class="slide-text-wrapper">
-     <div class="slide-text-gutter">
-          <div class="group-slide-text">
-               <div class="field field-name-field-link-type">FEATURE STORY</div>
-               <div class="field field-name-title"><h2>A Cabinet of Wonders</h2></div>
-               <div class="field field-name-field-caption"><p>As Houghton Library turns 75, former and current GSAS students look back at the objects that inspired their research</p>
-
-<p><a class="button-clear" href="/news/stories/cabinet-wonders">Read More</a></p>
-
-<p>&nbsp;</p>
-</div>
-          </div>
-          <div class="slide-text-extension"></div>
-     </div>
-</div>
-</div></span>  </div></li>
-          <li class="views-row">  
-  <div class="views-field views-field-nothing">        <span class="field-content"><div class="slide-outer-wrapper">
-<div class="field field-name-field-image"><!-- scald=1964:large_banner --><img src="https://gsas.harvard.edu/sites/default/files/styles/large_banner/public/thumbnails/image/IMG_7226.JPG?itok=n58jpQ_y" width="1400" height="690" alt="Woman giving a presentation at January@GSAS" title="JanuaryatGSAS.JPG" /><!-- END scald=1964 --></div>
-<div class="slide-text-wrapper">
-     <div class="slide-text-gutter">
-          <div class="group-slide-text">
-               <div class="field field-name-field-link-type">JANUARY@GSAS</div>
-               <div class="field field-name-title"><h2>Try Something New This January!</h2></div>
-               <div class="field field-name-field-caption"><p><a href="/student-life/januarygsas">January@GSAS</a> is an annual two-week program that takes place between the fall and spring terms at Harvard.&nbsp; This is your chance to explore cross-disciplinary opportunities, get to know alumni, and kickstart your career. January@GSAS takes place between January 8 and January 19, 2018</p>
-
-<p><a class="button-clear" href="/student-life/januarygsas">See all opportunities</a></p>
-
-<p><a class="button-clear" href="https://gsc.fas.harvard.edu/januarygsas">GSC Mini Courses</a></p>
-
-<p><a class="button-clear" href="/events/business-applications-workshops">Business Applications Workshops</a></p>
-</div>
-          </div>
-          <div class="slide-text-extension"></div>
-     </div>
-</div>
-</div></span>  </div></li>
-      </ul>    </div>
-  
-  
-  
-  
-  
-  
-</div>    </div>
-  </div>
-</div><!-- /.block -->
-<div id="block-ds-extras-page-banner" class="block block-ds-extras plain last even">
-  <div class="block-inner">
-                <div class="content">
-      <div class="field field-name-banner"><div class="gray-banner"><div class="position-wrapper"><div class="gutter-wrapper"><div class="banner-text banner-column"><div class="wrapper"><h1>Home</h1></div></div></div></div></div></div>    </div>
-  </div>
-</div><!-- /.block -->
-  </div>
+        <h1 id="site-name" class="grid-3 omega"><a href="/" rel="home">HMS</a></h1>
       </div>
-      <div id="main-content">
-        <div id="content" class="column" role="main">
-			<div class="wrapper">
-          <div class="utilities">
-      	          	              </div>
-          <a id="main-content"></a>
-                                <section class="region region-content">
-      <div id="block-block-19" class="block block-block plain first odd">
-  <div class="block-inner">
-                <div class="content">
-      <p>Brilliant?</p>
 
-<p>Passionate?</p>
+      <div id="search-box">
+        <form action="/search" accept-charset="UTF-8" method="get" id="search-theme-form">
+          <div id="search" class="container-inline">
+            <div class="form-item" id="edit-search-theme-form-1-wrapper">
+              <label for="edit-search-theme-form-1">Search this site: </label>
+              <input type="text" maxlength="128" name="search_theme_form" id="edit-search-theme-form-1" size="15" value="" title="Enter the terms you wish to search for." class="form-text" />
+            </div>
+            <input type="submit" name="op" id="edit-submit" value="Search" class="form-submit" />
+            <input type="hidden" name="form_id" id="edit-search-theme-form" value="search_theme_form" />
+          </div>
+        </form>
+      </div>
+      <div id="search-bottom">
+        <label class="search-label-1" for="search-entire">
+          <input name="search-type" checked="checked" id="search-entire" type="radio" value="gs" />
+          <span class="label-border"></span>
+          <span class="label-span">Entire site</span>
+        </label>
+        <label class="search-label-2" for="search-hms-people">
+          <input name="search-type" id="search-hms-people" type="radio" value="ps" />
+          <span class="label-border"></span>
+          <span class="label-span">HMS People</span>
+        </label>
+        <label class="search-label-3">
+          <a href="/faculty-search" class="search-advanced-people-link">Advanced People Search ></a>
+        </label>
+      </div>
+      <div id="site-subheader">
+        <div id="block-menu-menu-topmenu" class="block block-menu">  <div class="content">    <ul class="menu"><li class="first collapsed"><a href="/departments">Departments</a></li>
+<li class="leaf"><a href="/human-resources-0">Human Resources</a></li>
+<li class="leaf"><a href="http://hms.harvard.edu/humanresources/jobs@hms" title="">Jobs @ HMS</a></li>
+<li class="leaf"><a href="/calendar">Calendar</a></li>
+<li class="leaf"><a href="http://my.hms.harvard.edu/" title="">MyHMS</a></li>
+<li class="leaf"><a href="http://www.hsdm.harvard.edu/" title="">Dental Medicine</a></li>
+<li class="leaf"><a href="http://www.harvard.edu" title="">Harvard University</a></li>
+<li class="last collapsed"><a href="/contact-us">Contact us</a></li>
+</ul>  </div></div><div id="block-hms_menu-0" class="block block-hms_menu">  <div class="content">    <ul id="hms_menu-menu-mainmenu" class="hms_menu-menu horizontal hms_menu-skin-hms"><li id="hms_menu-mlid-368" class="hms_menu-parent hms_menu-parent-0 odd half-1 leaf-0 first first"><h2 class="hms_menu-parent-title"><a href="/about-hms">About HMS</a></h2><ul class="hms_menu-bin hms_menu-slots-columnar"><li id="hms_menu-mlid-3968" class="hms_menu-slot hms_menu-slot-0 odd half-1 leaf-0 first first"><h3 class="hms_menu-slot-title"><a href="/about-hms/facts-figures">Facts &amp; Figures</a></h3></li>
+<li id="hms_menu-mlid-4915" class="hms_menu-slot hms_menu-slot-1 even half-1 leaf-1"><h3 class="hms_menu-slot-title"><a href="/about-hms/deans-corner/deans-blog">Dean&#039;s Corner</a></h3></li>
+<li id="hms_menu-mlid-16646" class="hms_menu-slot hms_menu-slot-2 odd half-1 leaf-2"><h3 class="hms_menu-slot-title"><a href="/about-hms/leadership">Leadership</a></h3></li>
+<li id="hms_menu-mlid-16636" class="hms_menu-slot hms_menu-slot-3 even half-1 leaf-3"><h3 class="hms_menu-slot-title"><a href="/about-hms/campus-culture">Campus &amp; Culture</a></h3></li>
+<li id="hms_menu-mlid-18936" class="hms_menu-slot hms_menu-slot-4 odd half-1 leaf-4"><h3 class="hms_menu-slot-title"><a href="/about-hms/campus-culture/diversity-task-force/diversity-statement">Diversity Statement</a></h3></li>
+<li id="hms_menu-mlid-3867" class="hms_menu-slot hms_menu-slot-5 even half-2 leaf-5"><h3 class="hms_menu-slot-title"><a href="/about-hms/history-hms">History</a></h3></li>
+<li id="hms_menu-mlid-483" class="hms_menu-slot hms_menu-slot-6 odd half-2 leaf-6"><h3 class="hms_menu-slot-title"><a href="/about-hms/hms-affiliates">HMS Affiliates</a></h3></li>
+<li id="hms_menu-mlid-6028" class="hms_menu-slot hms_menu-slot-7 even half-2 leaf-7"><h3 class="hms_menu-slot-title"><a href="/about-hms/harvard-medical-alumni-association">Alumni</a></h3></li>
+<li id="hms_menu-mlid-3362" class="hms_menu-slot hms_menu-slot-8 odd half-2 leaf-8"><h3 class="hms_menu-slot-title"><a href="/about-hms/graduation">Graduation</a></h3></li>
+<li id="hms_menu-mlid-18566" class="hms_menu-slot hms_menu-slot-9 even half-2 leaf-9 last last"><h3 class="hms_menu-slot-title"><a href="/about-hms/lcme-accreditation">LCME Accreditation</a></h3></li>
+</ul></li>
+<li id="hms_menu-mlid-3612" class="hms_menu-parent hms_menu-parent-1 even half-1 leaf-1"><h2 class="hms_menu-parent-title"><a href="/education">Education</a></h2><ul class="hms_menu-bin hms_menu-slots-columnar"><li id="hms_menu-mlid-4119" class="hms_menu-slot hms_menu-slot-0 odd half-1 leaf-0 first first"><h3 class="hms_menu-slot-title"><a href="/departments/medical-education">Medical Education</a></h3></li>
+<li id="hms_menu-mlid-4122" class="hms_menu-slot hms_menu-slot-1 even half-1 leaf-1"><h3 class="hms_menu-slot-title"><a href="http://hms.harvard.edu/content/admissions">MD Admissions</a></h3></li>
+<li id="hms_menu-mlid-5418" class="hms_menu-slot hms_menu-slot-2 odd half-1 leaf-2"><h3 class="hms_menu-slot-title"><a href="http://gradeducation.hms.harvard.edu/">Graduate Education</a></h3></li>
+<li id="hms_menu-mlid-4141" class="hms_menu-slot hms_menu-slot-3 even half-1 leaf-3"><h3 class="hms_menu-slot-title"><a href="http://postdoc.hms.harvard.edu/">Postdoctoral Training</a></h3></li>
+<li id="hms_menu-mlid-17856" class="hms_menu-slot hms_menu-slot-4 odd half-1 leaf-4"><h3 class="hms_menu-slot-title"><a href="https://onlinelearning.hms.harvard.edu/hmx/">Online Learning (HMX)</a></h3></li>
+<li id="hms_menu-mlid-18261" class="hms_menu-slot hms_menu-slot-5 even half-2 leaf-5"><h3 class="hms_menu-slot-title"><a href="/departments/continuing-education">Continuing Education</a></h3></li>
+<li id="hms_menu-mlid-18241" class="hms_menu-slot hms_menu-slot-6 odd half-2 leaf-6"><h3 class="hms_menu-slot-title"><a href="/education/executive-education">Executive Education</a></h3></li>
+<li id="hms_menu-mlid-8111" class="hms_menu-slot hms_menu-slot-7 even half-2 leaf-7"><h3 class="hms_menu-slot-title"><a href="/education/global-education">Office of Global Education</a></h3></li>
+<li id="hms_menu-mlid-8786" class="hms_menu-slot hms_menu-slot-8 odd half-2 leaf-8 last last"><h3 class="hms_menu-slot-title"><a href="/departments/office-external-education">Office for External Education</a></h3></li>
+</ul></li>
+<li id="hms_menu-mlid-395" class="hms_menu-parent hms_menu-parent-2 odd half-1 leaf-2"><h2 class="hms_menu-parent-title"><a href="/research">Research</a></h2><ul class="hms_menu-bin hms_menu-slots-columnar"><li id="hms_menu-mlid-16696" class="hms_menu-slot hms_menu-slot-0 odd half-1 leaf-0 first first"><h3 class="hms_menu-slot-title"><a href="/research/research-departments-centers-initiatives-and-more">Research Departments, Centers, Initiatives and more</a></h3></li>
+<li id="hms_menu-mlid-5429" class="hms_menu-slot hms_menu-slot-1 even half-1 leaf-1"><h3 class="hms_menu-slot-title"><a href="/research/paper-chase">Paper Chase</a></h3></li>
+<li id="hms_menu-mlid-4145" class="hms_menu-slot hms_menu-slot-2 odd half-2 leaf-2"><h3 class="hms_menu-slot-title"><a href="https://www.countway.harvard.edu/">Countway Library of Medicine</a></h3></li>
+<li id="hms_menu-mlid-16691" class="hms_menu-slot hms_menu-slot-3 even half-2 leaf-3 last last"><h3 class="hms_menu-slot-title"><a href="/research/hms-researcher-resources">HMS Researcher Resources</a></h3></li>
+</ul></li>
+<li id="hms_menu-mlid-2142" class="hms_menu-parent hms_menu-parent-3 even half-1 leaf-3"><h2 class="hms_menu-parent-title"><a href="/all-news">News</a></h2><ul class="hms_menu-bin hms_menu-slots-columnar"><li id="hms_menu-mlid-518" class="hms_menu-slot hms_menu-slot-0 odd half-1 leaf-0 first first"><h3 class="hms_menu-slot-title"><a href="/harvard-medicine">Harvard Medicine magazine</a></h3></li>
+<li id="hms_menu-mlid-4351" class="hms_menu-slot hms_menu-slot-1 even half-1 leaf-1"><h3 class="hms_menu-slot-title"><a href="/news/longwood-seminars">Longwood Seminars</a></h3></li>
+<li id="hms_menu-mlid-4447" class="hms_menu-slot hms_menu-slot-2 odd half-1 leaf-2"><h3 class="hms_menu-slot-title"><a href="/news/publications-archive">Publications Archive</a></h3></li>
+<li id="hms_menu-mlid-3960" class="hms_menu-slot hms_menu-slot-3 even half-2 leaf-3"><h3 class="hms_menu-slot-title"><a href="/news/sign-email-communications">Sign Up for Email Communications</a></h3></li>
+<li id="hms_menu-mlid-3884" class="hms_menu-slot hms_menu-slot-4 odd half-2 leaf-4"><h3 class="hms_menu-slot-title"><a href="/news/media">For Media</a></h3></li>
+<li id="hms_menu-mlid-5605" class="hms_menu-slot hms_menu-slot-5 even half-2 leaf-5 last last"><h3 class="hms_menu-slot-title"><a href="/news/talks12">Talks@12</a></h3></li>
+</ul></li>
+<li id="hms_menu-mlid-3285" class="hms_menu-parent hms_menu-parent-4 odd half-1 leaf-4"><h2 class="hms_menu-parent-title"><a href="/giving">Giving</a></h2><ul class="hms_menu-bin hms_menu-slots-columnar"><li id="hms_menu-mlid-5232" class="hms_menu-slot hms_menu-slot-0 odd half-1 leaf-0 first first"><h3 class="hms_menu-slot-title"><a href="https://community.alumni.harvard.edu/give/12924909 ">Make a Gift Now </a></h3></li>
+<li id="hms_menu-mlid-8226" class="hms_menu-slot hms_menu-slot-1 even half-1 leaf-1"><h3 class="hms_menu-slot-title"><a href="/giving/campaign-resources">Campaign Resources</a></h3></li>
+<li id="hms_menu-mlid-5263" class="hms_menu-slot hms_menu-slot-2 odd half-1 leaf-2"><h3 class="hms_menu-slot-title"><a href="/giving/campaign-priorities">Campaign Priorities</a></h3></li>
+<li id="hms_menu-mlid-8236" class="hms_menu-slot hms_menu-slot-3 even half-1 leaf-3"><h3 class="hms_menu-slot-title"><a href="/giving/campaign-steering-committee">Campaign Steering Committee</a></h3></li>
+<li id="hms_menu-mlid-5248" class="hms_menu-slot hms_menu-slot-4 odd half-2 leaf-4"><h3 class="hms_menu-slot-title"><a href="/giving/types-gifts">Types of gifts</a></h3></li>
+<li id="hms_menu-mlid-5249" class="hms_menu-slot hms_menu-slot-5 even half-2 leaf-5"><h3 class="hms_menu-slot-title"><a href="/giving/how-make-gift">How to make a gift</a></h3></li>
+<li id="hms_menu-mlid-5292" class="hms_menu-slot hms_menu-slot-6 odd half-2 leaf-6"><h3 class="hms_menu-slot-title"><a href="/giving/hms-donors">HMS donors</a></h3></li>
+<li id="hms_menu-mlid-5314" class="hms_menu-slot hms_menu-slot-7 even half-2 leaf-7 last last"><h3 class="hms_menu-slot-title"><a href="/giving/contact-us">Contact us</a></h3></li>
+</ul></li>
+<li id="hms_menu-mlid-887" class="hms_menu-parent hms_menu-parent-5 even half-2 leaf-5"><h2 class="hms_menu-parent-title"><a href="/health-info">Health Info</a></h2></li>
+<li id="hms_menu-mlid-397" class="hms_menu-parent hms_menu-parent-6 odd half-2 leaf-6 last"><h2 class="hms_menu-parent-title"><a href="/multimedia">Multimedia</a></h2><ul class="hms_menu-bin hms_menu-slots-columnar"><li id="hms_menu-mlid-511" class="hms_menu-slot hms_menu-slot-0 odd half-1 leaf-0 first first"><h3 class="hms_menu-slot-title"><a href="/multimedia/blogs">Blogs</a></h3></li>
+<li id="hms_menu-mlid-15666" class="hms_menu-slot hms_menu-slot-1 even half-1 leaf-1"><h3 class="hms_menu-slot-title"><a href="/videos">Video Library</a></h3></li>
+<li id="hms_menu-mlid-513" class="hms_menu-slot hms_menu-slot-2 odd half-1 leaf-2"><h3 class="hms_menu-slot-title"><a href="/photo-galleries">Photo Galleries</a></h3></li>
+<li id="hms_menu-mlid-514" class="hms_menu-slot hms_menu-slot-3 even half-1 leaf-3"><h3 class="hms_menu-slot-title"><a href="/podcasts">Podcast Library</a></h3></li>
+<li id="hms_menu-mlid-516" class="hms_menu-slot hms_menu-slot-4 odd half-2 leaf-4"><h3 class="hms_menu-slot-title"><a href="/multimedia/social-media">Social Media</a></h3></li>
+<li id="hms_menu-mlid-5230" class="hms_menu-slot hms_menu-slot-5 even half-2 leaf-5"><h3 class="hms_menu-slot-title"><a href="/multimedia/desktop-wallpapers">Desktop Wallpapers</a></h3></li>
+<li id="hms_menu-mlid-17246" class="hms_menu-slot hms_menu-slot-6 odd half-2 leaf-6 last last"><h3 class="hms_menu-slot-title"><a href="/multimedia/hms-live">HMS Live</a></h3></li>
+</ul></li>
+</ul>  </div></div>      </div>
 
-<p>Dedicated?</p>
-
-<p>Join us.</p>
     </div>
-  </div>
-</div><!-- /.block -->
 
 
-<div  class="ds-1col node node-page view-mode-full clearfix">
-
-  
-  <div class="field field-name-body field-type-text-with-summary field-label-hidden" ><p>The Graduate School of Arts and Sciences (GSAS) at Harvard University&nbsp;is where scholarship and innovation meet, where ideas are challenged and theories developed, where new knowledge is created, and where scholars emerge.</p>
-
-<p>We actively recruit and cultivate a <a href="/diversity-gsas">diverse community of students</a> across <a href="/programs-study/degree-programs">56&nbsp;fields of study</a>. We also <a href="/financial-support">guarantee 5 years of funding</a> to all PhD candidates.</p>
-<!--<p>It uses a dictionary of over <strong>200 Latin words</strong>, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>-->
-</div></div>
-
-  </section>
-                            	</div>
-		</div><!-- /#content -->
-                                  <aside class="sidebars">
-                          <section class="region region-sidebar-second column sidebar">
-	<div class="region-wrapper">
-    <div id="block-views-programs-of-studay-block" class="block block-views degree-program-jump-menu plain first odd">
-  <div class="block-inner">
-              <h2 class="block__title block-title">Browse Degree Programs</h2>
-            <div class="content">
-      <div class="view view-programs-of-studay view-id-programs_of_studay view-display-id-block view-dom-id-05415fce1eabf2b8c46e0de572db16f7">
-        
-  
-  
-      <div class="view-content">
-      <form action="/?option=com_content&amp;task=view&amp;id=279&amp;Itemid=288" method="post" id="ctools-jump-menu" accept-charset="UTF-8"><div><div class="container-inline"><div class="form-item form-type-select form-item-jump">
- <select class="ctools-jump-menu-select ctools-jump-menu-change form-select" id="edit-jump" name="jump"><option value="" selected="selected">- Choose -</option><option value="be44ad02f14b417c9ac2f771e8794b2c::/programs-of-study/all/african-african-american-studies">  
-          African and African American Studies  </option><option value="bf7af9615468c353034f1957fa4cad83::/programs-of-study/all/american-studies">  
-          American Studies  </option><option value="404b3052dea5ce6e4fdeca016af80517::/programs-of-study/all/anthropology">  
-          Anthropology  </option><option value="cd5889f830bce39188d57d8f2473e839::/programs-of-study/all/applied-math">  
-          Applied Mathematics  </option><option value="92d03a1b37d6131e9c166f352a7d4130::/programs-of-study/all/applied-physics">  
-          Applied Physics  </option><option value="2fa16654e3a0eb2c2d2ad5a59a6bedf9::/programs-of-study/all/archaeology">  
-          Archaeology  </option><option value="a306a38589c898641989af1d9c69a97f::/programs-of-study/all/architecture-landscape-architecture-urban-planning">  
-          Architecture, Landscape Architecture, and Urban Planning  </option><option value="b86f5f0391e6a09ab6b2e3d027b96262::/programs-of-study/all/astronomy">  
-          Astronomy  </option><option value="cfeef7920205de3bfd5ae99c48bbf532::/programs-of-study/all/bioengineering">  
-          Bioengineering  </option><option value="b789e1e4e1ad77c370c6bf6c84e1d98c::/programs-of-study/all/bioinformatics-and-integrative-genomics">  
-          Bioinformatics and Integrative Genomics  </option><option value="98ecfed96f134253fc583467679cad63::/programs-of-study/all/biological-and-biomedical-sciences">  
-          Biological and Biomedical Sciences  </option><option value="8b1efcaee92e695ef409cc06745406bd::/programs-of-study/all/biological-sciences-dental-medicine">  
-          Biological Sciences in Dental Medicine  </option><option value="762be47243ffdcf137187982b5f812ae::/programs-of-study/all/biological-sciences-public-health">  
-          Biological Sciences in Public Health  </option><option value="6bfe4078d3bb064854b837d909ed2f43::/programs-of-study/all/biophysics">  
-          Biophysics  </option><option value="8963d1e0738bbee47a526f164bd88a8c::/programs-of-study/all/biostatistics">  
-          Biostatistics  </option><option value="568d3a2c1770117ee9df106686978301::/programs-of-study/all/business-economics">  
-          Business Economics  </option><option value="a230557216d79fde813718dd7127c953::/programs-of-study/all/celtic-languages-literature">  
-          Celtic Languages and Literatures  </option><option value="172857e690df5fffdacfea17e83fc0ae::/programs-of-study/all/chemical-biology">  
-          Chemical Biology  </option><option value="435b4952ef5aa1da6154ab32b1a69e64::/programs-of-study/all/chemical-physics">  
-          Chemical Physics  </option><option value="97d1273a7bffc48784fe336f081af160::/programs-of-study/all/chemistry-and-chemical-biology">  
-          Chemistry and Chemical Biology  </option><option value="0064d843d84411a5ce4717801bbc5f18::/programs-of-study/all/comparative-literature">  
-          Comparative Literature  </option><option value="d9cbefa2edfffed2d23ba22e2bab835a::/programs-of-study/all/computational-science-engineering">  
-          Computational Science and Engineering  </option><option value="398620bee82393f797e802247185d699::/programs-of-study/all/computer-science">  
-          Computer Science  </option><option value="357ece82d32e56520f1bd165be947d37::/programs-of-study/all/data-science">  
-          Data Science  </option><option value="17b46c1c291d00a44991f9b9d3c1e148::/programs-of-study/all/earth-planetary-sciences">  
-          Earth and Planetary Sciences  </option><option value="db19e66fb7f59a03a6dbe097420c372d::/programs-of-study/all/east-asian-languages-and-civilizations">  
-          East Asian Languages and Civilizations  </option><option value="8d4956a73c386601dee051f49661c9bf::/programs-of-study/all/economics">  
-          Economics  </option><option value="a0ec1f01ce049a70afeffc65e84c1f0f::/programs-of-study/all/education">  
-          Education  </option><option value="6c2160f68242c8fcd2fc056e34afa6d2::/programs-of-study/all/electrical-engineering">  
-          Electrical Engineering  </option><option value="75ec3db01615a3e841f9c1b3afd23a98::/programs-of-study/all/english">  
-          English  </option><option value="15de133298c616f1f588ba9d698ca0cb::/programs-of-study/all/environmental-science-engineering">  
-          Environmental Science and Engineering  </option><option value="1a0a67d7ddb24e44b651d1d48bc4c64f::/programs-of-study/all/film-visual-studies">  
-          Film and Visual Studies  </option><option value="705f38403fa3daae4479740811574ced::/programs-of-study/all/germanic-languages-literature">  
-          Germanic Languages and Literatures  </option><option value="e3dc441672ab3a8b4515fe83b1757cc7::/programs-of-study/all/government">  
-          Government  </option><option value="1d32400d074a13ae271fc5d10741fcc5::/programs-of-study/all/health-policy">  
-          Health Policy  </option><option value="f39c5cddb514007ac5eaaec5adbd6109::/programs-of-study/all/history">  
-          History  </option><option value="9a64aaf86091819a0082556d1d92fd50::/programs-of-study/all/history-art-architecture">  
-          History of Art and Architecture  </option><option value="9a492c9d8ea99852584d4472ce1d427f::/programs-of-study/all/history-science">  
-          History of Science  </option><option value="44d43da45dd1e07787e32e175c43a278::/programs-of-study/all/human-evolutionary-biology">  
-          Human Evolutionary Biology  </option><option value="857f34da072b47f60abda88e98d346c8::/programs-of-study/all/immunology">  
-          Immunology  </option><option value="1038e30c6c083f5285f277d185ee727a::/programs-of-study/all/inner-asian-altaic-studies">  
-          Inner Asian and Altaic Studies  </option><option value="1f7048b27a5fc24cd9b4bd628c8d4cb2::/programs-of-study/all/international-relations">  
-          International Relations  </option><option value="c8919a29f32e88d36e75d3b5284e0a59::/programs-of-study/all/linguistics">  
-          Linguistics  </option><option value="acb21494f4e340018a230244e9a320d3::/programs-of-study/all/materials-science-mechanical-engineering">  
-          Materials Science and Mechanical Engineering  </option><option value="0ca11ccacd7a1f89576959bf142aa820::/programs-of-study/all/mathematics">  
-          Mathematics  </option><option value="299fe4ed1fe2ba766c698ab90effdef5::/programs-of-study/all/middle-eastern-studies">  
-          Middle Eastern Studies  </option><option value="13d3e0cf8f7a2924cc67ce4296d0be46::/programs-of-study/all/molecular-and-cellular-biology">  
-          Molecular and Cellular Biology  </option><option value="f3825e66c98a8aeabb6a84549a6ae622::/programs-of-study/all/music">  
-          Music  </option><option value="7bdd57486690c7c124afc4cd667d9750::/programs-of-study/all/near-eastern-languages-and-civilizations">  
-          Near Eastern Languages and Civilizations  </option><option value="0513ae535616c218e5ca0f53235222da::/programs-of-study/all/neuroscience">  
-          Neuroscience  </option><option value="6d7cbc5673f12a920fa3ddca93ccbbf6::/programs-of-study/all/organismic-and-evolutionary-biology">  
-          Organismic and Evolutionary Biology  </option><option value="2586e0fdae31e0a385f48c56d6e62385::/programs-of-study/all/organizational-behavior">  
-          Organizational Behavior  </option><option value="200c4ebabec448a40dc3293a41a96329::/programs-of-study/all/philosophy">  
-          Philosophy  </option><option value="e234aab94ec9d39b11ac5d3250c892b4::/programs-of-study/all/physics">  
-          Physics  </option><option value="ec5803b6e27d451bc2c018f3f1513ff5::/programs-of-study/all/political-economy-government">  
-          Political Economy and Government  </option><option value="56631cd0d21245d79937a51490be137e::/programs-of-study/all/political-science">  
-          Political Science  </option><option value="53ce323b6a659b7e3c6d903b757f3667::/programs-of-study/all/population-health-sciences">  
-          Population Health Sciences  </option><option value="4148403930dc6b746acb06a6a033cc53::/programs-of-study/all/psychology">  
-          Psychology  </option><option value="eb4568964fd2c77774660872dd0b88be::/programs-of-study/all/public-policy">  
-          Public Policy  </option><option value="2746741aeb1abdfefd10879daf2d7e9c::/programs-of-study/all/regional-studies-east-asia">  
-          Regional Studies–East Asia  </option><option value="26bbb11a0702888d1fd9b8262e05272f::/programs-of-study/all/regional-studies-russia-eastern-europe-and-central-asia">  
-          Regional Studies–Russia, Eastern Europe, and Central Asia  </option><option value="8ca24067b899f9bd5e235624575be53a::/programs-of-study/all/religion">  
-          Religion  </option><option value="dd13ec49415a35179ab88605cd591482::/programs-of-study/all/romance-languages-and-literatures">  
-          Romance Languages and Literatures  </option><option value="9920865c5a1ebfd41ccdca4cdd6869e1::/programs-of-study/all/slavic-languages-and-literatures">  
-          Slavic Languages and Literatures  </option><option value="8e952301099b1d13d24c75b81e930102::/programs-of-study/all/social-policy">  
-          Social Policy  </option><option value="fa48f092dfc9bce63aa19011440bb953::/programs-of-study/all/sociology">  
-          Sociology  </option><option value="85bd4f1bfb60584decfdf242ef8bb2ad::/programs-of-study/all/south-asian-studies">  
-          South Asian Studies  </option><option value="b4c1047556f36380e3238cc5b0fb84eb::/programs-of-study/all/speech-and-hearing-bioscience-and-technology">  
-          Speech and Hearing Bioscience and Technology  </option><option value="3f4dc06509a4a5eb8aec8eb05e721e7a::/programs-of-study/all/statistics">  
-          Statistics  </option><option value="8fa63931d36494a0a66808c6a24b4da1::/programs-of-study/all/systems-biology">  
-          Systems Biology  </option><option value="c188f222d2b3bde7af84189178a345d9::/programs-of-study/all/classics">  
-          The Classics  </option><option value="92c6a8a098e676b2088ca49c95fd1b93::/programs-of-study/all/virology">  
-          Virology  </option></select>
-</div>
-<input class="ctools-jump-menu-button ctools-jump-menu-hide form-submit" type="submit" id="edit-go" name="op" value="Go" /></div><input type="hidden" name="form_build_id" value="form-LRB4CxGNp72GAX_fEyrchs2RQa32XVyHD10AAYn5rCU" />
-<input type="hidden" name="form_id" value="ctools_jump_menu" />
-</div></form>    </div>
-  
-  
-  
-  
-  
-  
-</div>    </div>
-  </div>
-</div><!-- /.block -->
-<div id="block-block-17" class="block block-block front-buttons plain last even">
-  <div class="block-inner">
-                <div class="content">
-      <p><a class="button-large" href="/admissions/why-gsas">Why GSAS?</a></p>
-
-<p><a class="button-large" href="/admissions/apply">Apply</a></p>
-    </div>
-  </div>
-</div><!-- /.block -->
-	</div>
-  </section>
-          </aside><!-- /.sidebars -->
-                
-          <div class="region region-full-width-content-bottom">
-    <div id="block-views-news-block-1" class="block block-views first odd">
-  <div class="block-inner">
-              <h2 class="block__title block-title"><a href="/news" class="block-title-link">News</a></h2>
-            <div class="content">
-      <div class="view view-news view-id-news view-display-id-block_1 view-dom-id-d0ec1b4e530f33bed5480e282a6b0f4a">
-        
-  
-  
-      <div class="view-content">
-        <div class="views-row views-row-1 views-row-odd views-row-first">
-    <div  class="ds-2col-fluid node node-story node-teaser view-mode-teaser group-one-column clearfix">
-
-  
-  
-      <div class="group-right">
-      <div class="group-story-header field-group-div"><div class="field field-name-field-date"><span class="date-display-single">November 21, 2017</span></div><div class="field field-name-field-story-tags">Professional Development</div></div><div class="field field-name-title"><a href="/news/stories/roadmap-professional-development-graduate-students">Roadmap to Professional Development for Graduate Students</a></div><div class="field field-name-body">by Cynthia Verba, Director of the Fellowships Office Professional development, broadly defined, refers to ways of enhancing career options. The process consists of two components, and both are important. One is to develop new skills that appear to... <a href="/news/stories/roadmap-professional-development-graduate-students" class="more-link">Read More</a></div>    </div>
-  
-</div>
 
   </div>
+
+
+  <div id="page-wrap">
+  <div id="page" class="container-16 clear-block">
+    <div id="main" class="column">
+
+      
+              <div class="tabs"></div>
+            
+
+      <div id="main-content" class="region clear-block">
+                  <div class="region region-content">
+    
+  <div id="content-top" class="content-top row nested">
+    <div id="block-views-block_spotlight-block_1" class="block block-views">  <div class="content">    <div class="view-spotlight-block view view-block-spotlight view-id-block_spotlight view-display-id-block_1">
+
+      <div class="view-content node-type-spotlight">
+        <div class="views-row views-row-1 views-row-first views-row-odd">
+      <div class="node-inner">
+    <div class="feature-image"><div class="field field-field-spotlight-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><img src="https://hms.harvard.edu/sites/default/files/styles/spotlight/public/Environment%20Carousel%20Image.jpg?itok=JlXZGQkX" width="950" height="343" alt="" /></div></div></div></div><div class="feature-title"><a href="https://magazine.hms.harvard.edu/"><i>Harvard Medicine</i>: The Environment</a></div><div class="feature-teaser"><p>The health hazards of climate disruption</p></div>  </div>  </div>
   <div class="views-row views-row-2 views-row-even">
-    <div  class="ds-2col-fluid node node-story node-teaser view-mode-teaser clearfix">
-
-  
-      <div class="group-left">
-      <div class="field field-name-field-main-image"><!-- scald=1961:teaser {"link":"node\/3017"} --><a href="/news/stories/investigate-how-planetary-life-begins"><img src="https://gsas.harvard.edu/sites/default/files/styles/teaser/public/thumbnails/image/Origins%20of%20Life%20Consortium%201%20for%20web.jpg?itok=1-GdvmXa" width="320" height="230" alt="Origins of Life Consortium students studying rocks" title="Origins of Life Consortium 1 for web.jpg" /></a><!-- END scald=1961 --></div>    </div>
-  
-      <div class="group-right">
-      <div class="group-story-header field-group-div"><div class="field field-name-field-date"><span class="date-display-single">November 21, 2017</span></div><div class="field field-name-field-story-tags">Science</div></div><div class="field field-name-title"><a href="/news/stories/investigate-how-planetary-life-begins">Investigate How Planetary Life Begins</a></div><div class="field field-name-body">Origins of Life Consortium looks to Earth and other planets The Origins of Life Consortium fosters an interdisciplinary approach across disciplines to answer questions related to the origin of life on Earth and the presence of life on other planets... <a href="/news/stories/investigate-how-planetary-life-begins" class="more-link">Read More</a></div>    </div>
-  
-</div>
-
-  </div>
+      <div class="node-inner">
+    <div class="feature-image"><div class="field field-field-spotlight-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><img src="https://hms.harvard.edu/sites/default/files/styles/spotlight/public/DR%20Carousel%20Image.jpg?itok=kdrDIcNC" width="950" height="343" alt="" /></div></div></div></div><div class="feature-title"><a href="https://issuu.com/harvardmed/docs/dr_2017-18?e=11041877/54869388">Dean's Report | 2017-2018</a></div><div class="feature-teaser"><p>Inspire: Read about transformative research, care and education at HMS</p></div>  </div>  </div>
   <div class="views-row views-row-3 views-row-odd views-row-last">
-    <div  class="ds-2col-fluid node node-story node-teaser view-mode-teaser clearfix">
+      <div class="node-inner">
+    <div class="feature-image"><div class="field field-field-spotlight-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><img src="https://hms.harvard.edu/sites/default/files/styles/spotlight/public/HMS_HMXBanner_Bike_950x343_v01.png?itok=CH4bWl2E" width="950" height="343" alt="" /></div></div></div></div><div class="feature-title"><a href="https://goo.gl/0gKFmk">Learn Online with HMS</a></div><div class="feature-teaser"><p>Apply now for HMX Fundamentals courses</p></div>  </div>  </div>
+    </div>
+  
+</div>   </div></div>  </div>
+
+
+<h1 class="title  content-top-title " id="page-title">Home</h1>
+
+<div id="breadcrumb" class=" content-top-exists ">
+  </div>
+
+  <div id="node-left" class="node-left row nested">
+    <div id="node-left-inner" class="node-left-inner inner">
+      <div id="block-hms_nodeblocks-33841" class="block block-hms_nodeblocks block-hms-nb-">  <div class="content">    
+  <div id="node-33841" class="clear-block">
+
+  <div class="content">
+    <h2>Call to Service</h2>
+<p><a href="https://hms.harvard.edu/news/call-service" target="_blank"><img alt="" src="/sites/default/files/assets/Call%20to%20Service%20-%20Website.jpg" style="width: 280px; height: 186px;" /></a></p>
+<p>Hundreds of HMS, Harvard alumni and friends "Meet the Dean" in Washington, D.C.</p>
+<p><a href="https://hms.harvard.edu/news/call-service" style="text-decoration-line: underline; font-size: 13.008px;" target="_blank">Read more »</a></p>
+
+  </div>
+
+</div>  </div></div><div id="block-hms_nodeblocks-29841" class="block block-hms_nodeblocks block-no-image-border  block-hms-nb-">  <div class="content">    
+  <div id="node-29841" class="clear-block">
+
+  <div class="content">
+    <p style="font-size: 15px;"><strong>OUR CORE COMMITMENTS</strong></p>
+<p><a href="https://hms.harvard.edu/about-hms/our-core-commitments#education"><img alt="Innovation in education" src="/sites/default/files/assets/About_Us/innovationineduc.png" style="width: 280px; height: 54px;" /></a><br /><a href="https://hms.harvard.edu/about-hms/our-core-commitments#discovery"><img alt="Scientific discovery and integrity" src="/sites/default/files/assets/About_Us/sciencediscovery.png" style="width: 280px; height: 54px;" /></a><br /><a href="https://hms.harvard.edu/about-hms/our-core-commitments#Diversity"><img alt="Diversity and professional growth" src="/sites/default/files/assets/About_Us/divandprog.png" style="width: 280px; height: 54px;" /></a><br /><a href="https://hms.harvard.edu/about-hms/our-core-commitments#Service"><img alt="Service to humanity" src="/sites/default/files/assets/About_Us/servicetohumanity.png" style="width: 280px; height: 54px;" /></a></p>
+
+  </div>
+
+</div>  </div></div><div id="block-hms_nodeblocks-27141" class="block block-hms_nodeblocks block-spotlight  block-hms-nb-">  <div class="content">    
+  <div id="node-27141" class="clear-block">
+
+  <div class="content">
+    <h4>Harvard Medical</h4>
+<h5>Labcast</h5>
+<p style="padding-top: 3px;"><a href="https://hms.harvard.edu/podcasts/chew"><img alt="Staci Gruber" src="/sites/default/files/assets/Multimedia/Podcasts/ChewOnThis.jpg" style="width: 280px; height: 172px;" /></a></p>
+<p><strong style="font-size: 13px;"><a href="https://hms.harvard.edu/podcasts/chew">Chew on This:</a> </strong>In this podcast Lisa Simon discusses the benefits and challenges of reintegrating dental and medical care.</p>
+<p> </p>
+<p><a href="https://hms.harvard.edu/podcasts">Browse podcast library »</a></p>
+
+  </div>
+
+</div>  </div></div><div id="block-hms_nodeblocks-27151" class="block block-hms_nodeblocks block-spotlight  block-hms-nb-">  <div class="content">    
+  <div id="node-27151" class="clear-block">
+
+  <div class="content">
+    <h4>Harvard Medicine</h4>
+<h5>Magazine</h5>
+<p><a href="http://magazine.hms.harvard.edu/" target="_blank"><img alt="Harvard Medicine Magazine" src="/sites/default/files/assets/EnvHomePgleft.jpg" style="width: 280px; height: 236px;" /></a></p>
+<p><strong><a href="http://magazine.hms.harvard.edu/" target="_blank">The Environment | Autumn 2017</a></strong></p>
+<p><a href="http://magazine.hms.harvard.edu/" target="_blank">Read the full issue</a></p>
+
+  </div>
+
+</div>  </div></div><div id="block-views-latest_affiliates-block_1" class="block block-views">  <h2>Affiliate Hospitals & Research Institutions</h2>  <div class="content">    
+<div class="view view-latest-affiliates view-id-latest_affiliates view-display-id-block_1">
 
   
-      <div class="group-left">
-      <div class="field field-name-field-main-image"><!-- scald=1958:teaser {"link":"node\/3013"} --><a href="/news/stories/sense-place"><img src="https://gsas.harvard.edu/sites/default/files/styles/teaser/public/thumbnails/image/Becca%20Voelcker%2008.jpg?itok=h23FLlFx" width="320" height="230" alt="Becca Voelcker standing outside Richards Hall" title="Becca Voelcker 08.jpg" /></a><!-- END scald=1958 --></div>    </div>
+      <div class="view-content">
+      <div class="views-row views-row-1 views-row-first views-row-odd">
+    
+  <div class="views-field-field-affiliate-image-fid">
+      <div class="field-content"><a href="http://hms.harvard.edu/content/va-boston-healthcare-system"><div class="field field-field-affiliate-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><img src="/sites/default/files/styles/home-affiliate/public/VAWRox_0.jpg?itok=Ns_w-gDT" width="120" height="120" alt="" /></div></div></div></a></div>
+  </div>
   
-      <div class="group-right">
-      <div class="group-story-header field-group-div"><div class="field field-name-field-date"><span class="date-display-single">November 20, 2017</span></div><div class="field field-name-field-story-tags">Profile, Student Life</div></div><div class="field field-name-title"><a href="/news/stories/sense-place">A Sense of Place</a></div><div class="field field-name-body">Growing up, Becca Voelcker would drive with her parents 20 miles to the local cinema, which showed a foreign film once every month. “This was long before I knew what the word ‘director’ meant or what it was to make a film,”... <a href="/news/stories/sense-place" class="more-link">Read More</a></div>    </div>
+      <div class="home-news-bottom-wrapper">
+    
+  <div class="views-field-title">
+      <div class="field-content">Veterans Affairs Boston Healthcare System</div>
+  </div>
+  
+    
+  <div class="views-field-field-affiliate-teaser-value">
+      <div class="field-content"></div>
+  </div>
+  
+    
+  <div class="views-field-field-affiliate-link-url">
+      <div class="field-content"><div class="aff-link" data-url="http://hms.harvard.edu/content/va-boston-healthcare-system"></div></div>
+  </div>
   
 </div>
 
+</div><div class="views-row views-row-2 views-row-even">
+    
+  <div class="views-field-field-affiliate-image-fid">
+      <div class="field-content"><a href="http://hms.harvard.edu/content/spaulding-rehabilitation-hospital-0"><div class="field field-field-affiliate-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><img src="/sites/default/files/styles/home-affiliate/public/spaulding.jpg?itok=tn0YJc_G" width="120" height="120" alt="" /></div></div></div></a></div>
   </div>
-    </div>
   
-  
-  
-  
-  
-  
-</div>    </div>
+      <div class="home-news-bottom-wrapper">
+    
+  <div class="views-field-title">
+      <div class="field-content">Spaulding Rehabilitation Hospital</div>
   </div>
-</div><!-- /.block -->
-<div id="block-views-events-block-1" class="block block-views last even">
-  <div class="block-inner">
-              <h2 class="block__title block-title"><a href="/events" class="block-title-link">Events</a></h2>
-            <div class="content">
-      <div class="view view-events view-id-events view-display-id-block_1 view-dom-id-f4511b171a8f72a4dcef8815c14369ac">
-        
   
-  
-      <div class="view-content">
-        <div class="node-event view-mode-teaser-2">
-      
-  <div class="group-left">        <div class="field-name-event-date-square"><span class="month">Dec</span><span class="date">4</span></div>  </div>  
-          <div class="group-right"><div class="field field-name-title"><a href="https://gsas.harvard.edu/events/reading-period-writing-oasis">Reading Period Writing Oasis</a></div>    
-          <div class="field field-name-address"></div></div>    </div>
-  <div class="node-event view-mode-teaser-2">
-      
-  <div class="group-left">        <div class="field-name-event-date-square"><span class="month">Dec</span><span class="date">4</span></div>  </div>  
-          <div class="group-right"><div class="field field-name-title"><a href="https://gsas.harvard.edu/events/i-have-no-idea-hands-workshop-jorge-cham-communicating-your-research">&quot;I Have No Idea&quot; - A Hands-on Workshop with Jorge Cham on Communicating Your Research</a></div>    
-          <div class="field field-name-event-date-teaser-short">2:00 PM</div>    
-          <div class="field field-name-address">Cambridge, MA </div></div>    </div>
-  <div class="node-event view-mode-teaser-2">
-      
-  <div class="group-left">        <div class="field-name-event-date-square"><span class="month">Dec</span><span class="date">4</span></div>  </div>  
-          <div class="group-right"><div class="field field-name-title"><a href="https://gsas.harvard.edu/events/i-have-no-idea-interactive-lecture-jorge-cham-discovery-communicating-your-research">&quot;I Have No Idea&quot; - An Interactive Lecture with Jorge Cham on Discovery &amp; Communicating Your Research</a></div>    
-          <div class="field field-name-event-date-teaser-short">4:00 PM</div>    
-          <div class="field field-name-address">Cambridge, MA </div></div>    </div>
-  <div class="node-event view-mode-teaser-2">
-      
-  <div class="group-left">        <div class="field-name-event-date-square"><span class="month">Dec</span><span class="date">5</span></div>  </div>  
-          <div class="group-right"><div class="field field-name-title"><a href="https://gsas.harvard.edu/events/reading-period-writing-oasis">Reading Period Writing Oasis</a></div>    
-          <div class="field field-name-address"></div></div>    </div>
-  <div class="node-event view-mode-teaser-2">
-      
-  <div class="group-left">        <div class="field-name-event-date-square"><span class="month">Dec</span><span class="date">6</span></div>  </div>  
-          <div class="group-right"><div class="field field-name-title"><a href="https://gsas.harvard.edu/events/reading-period-writing-oasis">Reading Period Writing Oasis</a></div>    
-          <div class="field field-name-address"></div></div>    </div>
-    </div>
-  
-  
-  
-  
-  
-  
-</div>    </div>
+    
+  <div class="views-field-field-affiliate-teaser-value">
+      <div class="field-content"></div>
   </div>
-</div><!-- /.block -->
+  
+    
+  <div class="views-field-field-affiliate-link-url">
+      <div class="field-content"><div class="aff-link" data-url="http://hms.harvard.edu/content/spaulding-rehabilitation-hospital-0"></div></div>
   </div>
-      </div><!-- /#main-content -->
-        <div class="region region-content-closure">
-    <div id="block-views-profiles-block" class="block block-views plain first last odd">
-  <div class="block-inner">
-                <div class="content">
-      <div class="view view-profiles view-id-profiles view-display-id-block view-dom-id-e23ecbdfe538b036d95261118c313925">
-        
-  
-  
-      <div class="view-content">
-        <div>
-    <div  class="ds-2col-fluid node node-profile node-teaser view-mode-teaser clearfix">
-
-  
-      <div class="group-left">
-      <div class="field field-name-field-main-image"><!-- scald=969:teaser {"link":"node\/236"} --><a href="/profiles/jim-yong-kim"><img src="https://gsas.harvard.edu/sites/default/files/styles/teaser/public/thumbnails/image/jim_yong_kim250.jpg?itok=sD8vAQOa" width="320" height="230" alt="Jim Yong Kim illustration" title="Jim Yong Kim illustration" /></a><!-- END scald=969 --></div>    </div>
-  
-      <div class="group-right">
-      <div class="group-profile-header field-group-div"><div class="field field-name-profile-tag"><span>Alumni Profile</span></div></div><div class="field field-name-title"><a href="/profiles/jim-yong-kim">Jim Yong Kim</a></div><div class="field field-name-body">Throughout his career, Jim Yong Kim, MD ’91, PhD ’93, has had one mission: to improve the experiences of populations throughout the world. Beginning as a graduate student, when he and fellow student Paul Famer, MD ’88, PhD ’...<a href="/profiles/jim-yong-kim" class="more-link">Read more</a></div>    </div>
   
 </div>
 
+</div><div class="views-row views-row-3 views-row-odd">
+    
+  <div class="views-field-field-affiliate-image-fid">
+      <div class="field-content"><a href="http://hms.harvard.edu/content/mount-auburn-hospital-0"><div class="field field-field-affiliate-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><img src="/sites/default/files/styles/home-affiliate/public/mtauburn.jpg?itok=0HdusbxE" width="120" height="120" alt="" /></div></div></div></a></div>
   </div>
-    </div>
   
+      <div class="home-news-bottom-wrapper">
+    
+  <div class="views-field-title">
+      <div class="field-content">Mount Auburn Hospital</div>
+  </div>
   
+    
+  <div class="views-field-field-affiliate-teaser-value">
+      <div class="field-content"></div>
+  </div>
   
+    
+  <div class="views-field-field-affiliate-link-url">
+      <div class="field-content"><div class="aff-link" data-url="http://hms.harvard.edu/content/mount-auburn-hospital-0"></div></div>
+  </div>
   
+</div>
+
+</div><div class="views-row views-row-4 views-row-even">
+    
+  <div class="views-field-field-affiliate-image-fid">
+      <div class="field-content"><a href="http://hms.harvard.edu/content/mclean-hospital"><div class="field field-field-affiliate-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><img src="/sites/default/files/styles/home-affiliate/public/mclean.jpg?itok=3pDmbhRJ" width="120" height="120" alt="" /></div></div></div></a></div>
+  </div>
   
+      <div class="home-news-bottom-wrapper">
+    
+  <div class="views-field-title">
+      <div class="field-content">McLean Hospital</div>
+  </div>
   
+    
+  <div class="views-field-field-affiliate-teaser-value">
+      <div class="field-content"></div>
+  </div>
+  
+    
+  <div class="views-field-field-affiliate-link-url">
+      <div class="field-content"><div class="aff-link" data-url="http://hms.harvard.edu/content/mclean-hospital"></div></div>
+  </div>
+  
+</div>
+
+</div><div class="views-row views-row-5 views-row-odd">
+    
+  <div class="views-field-field-affiliate-image-fid">
+      <div class="field-content"><a href="http://hms.harvard.edu/content/massachusetts-general-hospital-0"><div class="field field-field-affiliate-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><img src="/sites/default/files/styles/home-affiliate/public/mghth.jpg?itok=QnCI8Io2" width="120" height="120" alt="" /></div></div></div></a></div>
+  </div>
+  
+      <div class="home-news-bottom-wrapper">
+    
+  <div class="views-field-title">
+      <div class="field-content">Massachusetts General Hospital</div>
+  </div>
+  
+    
+  <div class="views-field-field-affiliate-teaser-value">
+      <div class="field-content"></div>
+  </div>
+  
+    
+  <div class="views-field-field-affiliate-link-url">
+      <div class="field-content"><div class="aff-link" data-url="http://hms.harvard.edu/content/massachusetts-general-hospital-0"></div></div>
+  </div>
+  
+</div>
+
+</div><div class="views-row views-row-6 views-row-even">
+    
+  <div class="views-field-field-affiliate-image-fid">
+      <div class="field-content"><a href="http://hms.harvard.edu/content/massachusetts-eye-and-ear"><div class="field field-field-affiliate-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><img src="/sites/default/files/styles/home-affiliate/public/meei.jpg?itok=CdBE4EAP" width="120" height="120" alt="" /></div></div></div></a></div>
+  </div>
+  
+      <div class="home-news-bottom-wrapper">
+    
+  <div class="views-field-title">
+      <div class="field-content">Mass. Eye and Ear</div>
+  </div>
+  
+    
+  <div class="views-field-field-affiliate-teaser-value">
+      <div class="field-content"></div>
+  </div>
+  
+    
+  <div class="views-field-field-affiliate-link-url">
+      <div class="field-content"><div class="aff-link" data-url="http://hms.harvard.edu/content/massachusetts-eye-and-ear"></div></div>
+  </div>
+  
+</div>
+
+</div><div class="views-row views-row-7 views-row-odd">
+    
+  <div class="views-field-field-affiliate-image-fid">
+      <div class="field-content"><a href="http://hms.harvard.edu/content/judge-bakers-childrens-center"><div class="field field-field-affiliate-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><img src="/sites/default/files/styles/home-affiliate/public/judgebaker.jpg?itok=uHmtKtQ3" width="120" height="120" alt="" /></div></div></div></a></div>
+  </div>
+  
+      <div class="home-news-bottom-wrapper">
+    
+  <div class="views-field-title">
+      <div class="field-content">Judge Baker Children's Center</div>
+  </div>
+  
+    
+  <div class="views-field-field-affiliate-teaser-value">
+      <div class="field-content"></div>
+  </div>
+  
+    
+  <div class="views-field-field-affiliate-link-url">
+      <div class="field-content"><div class="aff-link" data-url="http://hms.harvard.edu/content/judge-bakers-childrens-center"></div></div>
+  </div>
+  
+</div>
+
+</div><div class="views-row views-row-8 views-row-even">
+    
+  <div class="views-field-field-affiliate-image-fid">
+      <div class="field-content"><a href="http://hms.harvard.edu/content/joslin-diabetes-center-0"><div class="field field-field-affiliate-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><img src="/sites/default/files/styles/home-affiliate/public/joslin.jpg?itok=Uk1LXyOd" width="120" height="120" alt="" /></div></div></div></a></div>
+  </div>
+  
+      <div class="home-news-bottom-wrapper">
+    
+  <div class="views-field-title">
+      <div class="field-content">Joslin Diabetes Center</div>
+  </div>
+  
+    
+  <div class="views-field-field-affiliate-teaser-value">
+      <div class="field-content"></div>
+  </div>
+  
+    
+  <div class="views-field-field-affiliate-link-url">
+      <div class="field-content"><div class="aff-link" data-url="http://hms.harvard.edu/content/joslin-diabetes-center-0"></div></div>
+  </div>
+  
+</div>
+
+</div><div class="views-row views-row-9 views-row-odd">
+    
+  <div class="views-field-field-affiliate-image-fid">
+      <div class="field-content"><a href="http://hms.harvard.edu/content/hebrew-seniorlife-0"><div class="field field-field-affiliate-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><img src="/sites/default/files/styles/home-affiliate/public/hsl.jpg?itok=aYTRy_Oa" width="120" height="120" alt="" /></div></div></div></a></div>
+  </div>
+  
+      <div class="home-news-bottom-wrapper">
+    
+  <div class="views-field-title">
+      <div class="field-content">Hebrew SeniorLife</div>
+  </div>
+  
+    
+  <div class="views-field-field-affiliate-teaser-value">
+      <div class="field-content"></div>
+  </div>
+  
+    
+  <div class="views-field-field-affiliate-link-url">
+      <div class="field-content"><div class="aff-link" data-url="http://hms.harvard.edu/content/hebrew-seniorlife-0"></div></div>
+  </div>
+  
+</div>
+
+</div><div class="views-row views-row-10 views-row-even">
+    
+  <div class="views-field-field-affiliate-image-fid">
+      <div class="field-content"><a href="http://hms.harvard.edu/content/harvard-pilgrim-health-care-0"><div class="field field-field-affiliate-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><img src="/sites/default/files/styles/home-affiliate/public/griffin120x120.jpg?itok=9QAXYwsm" width="120" height="120" alt="" /></div></div></div></a></div>
+  </div>
+  
+      <div class="home-news-bottom-wrapper">
+    
+  <div class="views-field-title">
+      <div class="field-content">Harvard Pilgrim Health Care Institute</div>
+  </div>
+  
+    
+  <div class="views-field-field-affiliate-teaser-value">
+      <div class="field-content"></div>
+  </div>
+  
+    
+  <div class="views-field-field-affiliate-link-url">
+      <div class="field-content"><div class="aff-link" data-url="http://hms.harvard.edu/content/harvard-pilgrim-health-care-0"></div></div>
+  </div>
+  
+</div>
+
+</div><div class="views-row views-row-11 views-row-odd">
+    
+  <div class="views-field-field-affiliate-image-fid">
+      <div class="field-content"><a href="http://hms.harvard.edu/content/dana-farber-cancer-institute-0"><div class="field field-field-affiliate-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><img src="/sites/default/files/styles/home-affiliate/public/dana-farber-joyce-liu-thumb.jpg?itok=KiUv57LW" width="120" height="120" alt="" /></div></div></div></a></div>
+  </div>
+  
+      <div class="home-news-bottom-wrapper">
+    
+  <div class="views-field-title">
+      <div class="field-content">Dana-Farber Cancer Institute</div>
+  </div>
+  
+    
+  <div class="views-field-field-affiliate-teaser-value">
+      <div class="field-content"></div>
+  </div>
+  
+    
+  <div class="views-field-field-affiliate-link-url">
+      <div class="field-content"><div class="aff-link" data-url="http://hms.harvard.edu/content/dana-farber-cancer-institute-0"></div></div>
+  </div>
+  
+</div>
+
+</div><div class="views-row views-row-12 views-row-even">
+    
+  <div class="views-field-field-affiliate-image-fid">
+      <div class="field-content"><a href="http://hms.harvard.edu/content/childrens-hospital-boston-0"><div class="field field-field-affiliate-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><img src="/sites/default/files/styles/home-affiliate/public/childrens.jpg?itok=gJQZeJwS" width="120" height="120" alt="" /></div></div></div></a></div>
+  </div>
+  
+      <div class="home-news-bottom-wrapper">
+    
+  <div class="views-field-title">
+      <div class="field-content">Boston Children's Hospital </div>
+  </div>
+  
+    
+  <div class="views-field-field-affiliate-teaser-value">
+      <div class="field-content"></div>
+  </div>
+  
+    
+  <div class="views-field-field-affiliate-link-url">
+      <div class="field-content"><div class="aff-link" data-url="http://hms.harvard.edu/content/childrens-hospital-boston-0"></div></div>
+  </div>
+  
+</div>
+
+</div><div class="views-row views-row-13 views-row-odd">
+    
+  <div class="views-field-field-affiliate-image-fid">
+      <div class="field-content"><a href="http://hms.harvard.edu/content/cambridge-health-alliance-0"><div class="field field-field-affiliate-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><img src="/sites/default/files/styles/home-affiliate/public/CHA.jpg?itok=126XBvVF" width="120" height="120" alt="" /></div></div></div></a></div>
+  </div>
+  
+      <div class="home-news-bottom-wrapper">
+    
+  <div class="views-field-title">
+      <div class="field-content">Cambridge Health Alliance</div>
+  </div>
+  
+    
+  <div class="views-field-field-affiliate-teaser-value">
+      <div class="field-content">A leading academic and public hospital system.</div>
+  </div>
+  
+    
+  <div class="views-field-field-affiliate-link-url">
+      <div class="field-content"><div class="aff-link" data-url="http://hms.harvard.edu/content/cambridge-health-alliance-0"></div></div>
+  </div>
+  
+</div>
+
+</div><div class="views-row views-row-14 views-row-even">
+    
+  <div class="views-field-field-affiliate-image-fid">
+      <div class="field-content"><a href="http://hms.harvard.edu/content/brigham-and-womens-hospital-0"><div class="field field-field-affiliate-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><img src="/sites/default/files/styles/home-affiliate/public/bwh.jpg?itok=a2VOomQk" width="120" height="120" alt="" /></div></div></div></a></div>
+  </div>
+  
+      <div class="home-news-bottom-wrapper">
+    
+  <div class="views-field-title">
+      <div class="field-content">Brigham and Women's Hospital</div>
+  </div>
+  
+    
+  <div class="views-field-field-affiliate-teaser-value">
+      <div class="field-content"></div>
+  </div>
+  
+    
+  <div class="views-field-field-affiliate-link-url">
+      <div class="field-content"><div class="aff-link" data-url="http://hms.harvard.edu/content/brigham-and-womens-hospital-0"></div></div>
+  </div>
+  
+</div>
+
+</div><div class="views-row views-row-15 views-row-odd views-row-last">
+    
+  <div class="views-field-field-affiliate-image-fid">
+      <div class="field-content"><a href="http://hms.harvard.edu/content/beth-israel-deaconess-medical-center"><div class="field field-field-affiliate-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><img src="/sites/default/files/styles/home-affiliate/public/BIDMC_CC.jpg?itok=PcEkwwPV" width="120" height="120" alt="" /></div></div></div></a></div>
+  </div>
+  
+      <div class="home-news-bottom-wrapper">
+    
+  <div class="views-field-title">
+      <div class="field-content">Beth Israel Deaconess Medical Center</div>
+  </div>
+  
+    
+  <div class="views-field-field-affiliate-teaser-value">
+      <div class="field-content"></div>
+  </div>
+  
+    
+  <div class="views-field-field-affiliate-link-url">
+      <div class="field-content"><div class="aff-link" data-url="http://hms.harvard.edu/content/beth-israel-deaconess-medical-center"></div></div>
+  </div>
+  
+</div>
+
 </div>    </div>
-  </div>
-</div><!-- /.block -->
-  </div>
-    </div><!-- /.wrapper -->        
-  </div><!-- /#main -->
-</div><!-- /#page -->
-<footer id="footer">
-  <div class="back-top-button" title="Back to the top"><a href="#top">Top</a></div>
-  <div class="wrapper">
-        <div class="region region-footer-content">
-    <div id="block-lunchbox-combined-social" class="block block-lunchbox plain first odd">
-  <div class="block-inner">
-              <h2 class="block__title block-title">Follow Us</h2>
-            <div class="content">
-      <div id="block-views-tweets-block" class="block block-views first odd">
-  <div class="block-inner">
-                <div class="content">
-      <div class="view view-tweets view-id-tweets view-display-id-block view-dom-id-df1475c2dd8bd3d0416c276a6907af9a">
-        
   
+  
+  
+
+</div>   </div></div>    </div>
+  </div>
+  
+<div id="node-content" class="node has-both">
+  <div id="node-content-inner">
+    
+
+        <div id="node-top" class="node-top row nested">
+      <div id="node-top-inner" class="node-top-inner inner">
+        <div id="block-views-block_latest_news-block_1" class="block block-views">  <h2>Latest News</h2>  <div class="content">    
+<div class="view view-block-latest-news view-id-block_latest_news view-display-id-block_1">
+
+      <div class="view-header">
+      <a href="/rss/news?t=Home">Subscribe</a>    </div>
   
       <div class="view-content">
-      <div class="item-list social-box">    <ul>          <li class="views-row views-row-1 views-row-odd views-row-first views-row-last">  
-          <p class="twitter-message">Throwback to early fall *sigh*! Randolph Courtyard at Adams House <a href="https://t.co/mYXObsX9l3">https://t.co/mYXObsX9l3</a> <a href="https://t.co/KqEJeyby8y">https://t.co/KqEJeyby8y</a></p>    
-          <p class="post-date">Dec 3</p>  </li>
-      </ul></div>    </div>
+      <div class="views-row views-row-1 views-row-first views-row-odd">
+    
+  <div class="views-field-field-news-home-image-fid">
+      <div class="field-content"><a href="/news/pay-performance-fails-perform"><div class="field field-field-news-home-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><img src="/sites/default/files/styles/home-news/public/Pay4Performance172.jpg?itok=WLf-uvqR" width="120" height="120" alt="" /></div></div></div></a></div>
+  </div>
   
+      <div class="home-news-bottom-wrapper">
+    
+  <div class="views-field-title">
+      <div class="field-content"><a href="/news/pay-performance-fails-perform">Pay-for-Performance Fails to Perform </a></div>
+  </div>
   
-  
-      
-<div class="more-link">
-  <a href="/tweets-raw">
-    more  </a>
+    
+  <div class="views-field-field-news-home-teaser-value">
+      <div class="field-content"><p>No benefits from program that inadvertently shifted funds away from sicker patients </p>
 </div>
-  
-  
-  
-</div><p class="social-link"><a href="https://twitter.com/HarvardGSAS" class="secondary-button-link" target="_blank"><span class="twitter"></span>@HarvardGSAS</a></p>    </div>
   </div>
-</div><!-- /.block -->
-<div id="block-lunchbox-facebook" class="block block-lunchbox even">
-  <div class="block-inner">
-                <div class="content">
-      <div class="facebook-wrapper"><div class="facebook-content social-box"><p class="facebook-message">Many Harvard libraries have extended hours during reading week, including Lamont Library, which will be open 24 hours. But seriously, don&#039;t fall asleep in the stacks. <a ... <a href="https://www.facebook.com/HarvardGSAS" class="read-more">Read More</a></p><p class="post-date">Dec 3</p></div></div><p class="social-link"><a href="https://www.facebook.com/HarvardGSAS" class="secondary-button-link" target="_blank"><span class="facebook"></span>Harvard GSAS on Facebook</a></p>    </div>
+  
+</div>
+
+</div><div class="views-row views-row-2 views-row-even views-row-last">
+    
+  <div class="views-field-field-news-home-image-fid">
+      <div class="field-content"><a href="/news/kill-switches"><div class="field field-field-news-home-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><img src="/sites/default/files/styles/home-news/public/Switches-small.gif?itok=slDy3qxx" width="120" height="120" alt="" /></div></div></div></a></div>
   </div>
-</div><!-- /.block -->
+  
+      <div class="home-news-bottom-wrapper">
+    
+  <div class="views-field-title">
+      <div class="field-content"><a href="/news/kill-switches">Kill Switches</a></div>
+  </div>
+  
+    
+  <div class="views-field-field-news-home-teaser-value">
+      <div class="field-content"><p>Scientists have designed "suicide switches" to ensure that lab-made organisms don't go rogue </p>
+</div>
+  </div>
+  
+</div>
+
+</div>    </div>
+  
+  
+      <div class="view-footer">
+      <a href="/news" class="">view all news</a>    </div>
+  
+
+</div>   </div></div><div id="block-hms_nodeblocks-29336" class="block block-hms_nodeblocks block-spotlight  block-hms-nb-">  <div class="content">    
+  <div id="node-29336" class="clear-block">
+
+  <div class="content">
+    <div style="display: inline; margin: 0 0 15px; font-family: 'Benton Sans Medium',Arial,sans-serif;font-weight: normal; text-transform: uppercase; font-size: 20px; letter-spacing: 0.01em; line-height: 20px;">Upcoming</div>
+<h5>Events</h5>
+<script type="text/javascript" src="//www.trumba.com/scripts/spuds.js"></script><script type="text/javascript">
+<!--//--><![CDATA[// ><!--
+
+$Trumba.addSpud({
+webName: "harvardmedicalschool",
+spudType : "upcomingphoto" ,
+teaserBase : "http://hms.harvard.edu/calendar" });
+
+//--><!]]>
+</script><p></p><noscript>Your browser must support JavaScript to view this content.<br />
+Please enable JavaScript in your browser settings then try again.<br /><a href="http://www.trumba.com">Events calendar powered by Trumba</a></noscript>
+
+  </div>
+
+</div>  </div></div><div id="block-hms_nodeblocks-27146" class="block block-hms_nodeblocks block-spotlight  block-hms-nb-">  <div class="content">    
+  <div id="node-27146" class="clear-block">
+
+  <div class="content">
+    <div style="display: inline; margin: 0 0 15px; font-family: 'Benton Sans Medium',Arial,sans-serif;font-weight: normal; text-transform: uppercase; font-size: 20px; letter-spacing: 0.01em; line-height: 20px;">Video</div>
+<h5>Library</h5>
+<p style="padding-top: 4px; border-bottom: 1px solid #C0B3AA; border-top: 1px solid #C0B3AA;">
+<iframe allowfullscreen="" frameborder="0" mozallowfullscreen="" scrolling="no" src="https://player.vimeo.com/video/217069773" webkitallowfullscreen="" width="100%"></iframe></p>
+<p style="padding-top:6px"><strong><a href="https://hms.harvard.edu/videos/discovery-hms">Discovery at HMS</a>: </strong>A sampling of recent research</p>
+<p> </p>
+<p><a href="http://hms.harvard.edu/videos">Browse video library »</a></p>
+<p> </p>
+
+  </div>
+
+</div>  </div></div><div id="block-hms_nodeblocks-27691" class="block block-hms_nodeblocks block-spotlight  block-hms-nb-">  <div class="content">    
+  <div id="node-27691" class="clear-block">
+
+  <div class="content">
+    <div style="display: inline; margin: 0 0 15px; font-family: 'Benton Sans Medium',Arial,sans-serif;font-weight: normal; text-transform: uppercase; font-size: 20px; letter-spacing: 0.01em; line-height: 20px;">EDUCATION</div>
+<h5>MATTERS</h5>
+<div> </div>
+<p><a href="http://hms.harvard.edu/departments/medical-education/education-matters"><img alt="Education Matters video series" src="/sites/default/files/assets/Home/Education-Matters-Collage-3.jpg" style="width: 280px; height: 155px;" /></a></p>
+<h3>Faculty and Students Share Their Passion for Education</h3>
+<p>These <a href="http://hms.harvard.edu/departments/medical-education/education-matters">60-second videos</a> feature faculty members and students talking about what led them to medicine, why they teach and why it matters.</p>
+
+  </div>
+
+</div>  </div></div>      </div>
     </div>
+    
+
+
+    
   </div>
-</div><!-- /.block -->
-<div id="block-block-4" class="block block-block plain last even">
-  <div class="block-inner">
-              <h2 class="block__title block-title">Contact Us</h2>
-            <div class="content">
-      <h4>Harvard&nbsp;University</h4>
 
-<h3>Graduate School of Arts &amp; Sciences</h3>
+  </div>
 
-<p>Richard A. and Susan F. Smith Campus Center<br>
-1350 Massachusetts Avenue, Suite 350<br>
-Cambridge, MA 02138-3654</p>
 
-<p><a class="gmap-icon" href="https://www.google.com/maps/place/1350+Massachusetts+Ave,+Cambridge,+MA+02138/@42.3727139,-71.1210444,17z/data=!3m1!4b1!4m2!3m1!1s0x89e37742dc1c29a7:0xc3dbda7a42311d03" title="Harvard University - The Graduate School of Arts &amp; Sciences on Google Map">MAP IT</a></p>
+  <div id="node-right" class="node-right row nested">
+    <div id="right-line"></div>
+    <div id="node-right-inner" class="node-right-inner inner">
+      <div id="block-hms_block-2" class="block block-hms_block block-hms-hb-selectyourcommunity">  <h2>Select Your Community</h2>  <div class="content">    <ul class="menu"><li class="first last expanded"><a href="/" title="" class="active">I am a/an...</a><ul class="menu"><li class="first leaf"><a href="http://hms.harvard.edu/alumni" title="">Alumna/us</a></li>
+<li class="leaf"><a href="http://hms.harvard.edu/content/faculty-links" title="">Faculty member</a></li>
+<li class="leaf"><a href="http://hms.harvard.edu/content/general-public-links" title="">Member of the general public</a></li>
+<li class="leaf"><a href="http://hms.harvard.edu/content/staff-links" title="">Staff member</a></li>
+<li class="leaf"><a href="http://hms.harvard.edu/content/student-links" title="">Student (current, prospective, trainee)</a></li>
+<li class="last leaf"><a href="http://hms.harvard.edu/content/researcher-links" title="">Researcher</a></li>
+</ul></li>
+</ul>  </div></div><div id="block-hms_nodeblocks-12471" class="block block-hms_nodeblocks block-hms-nb-">  <div class="content">    
+  <div id="node-12471" class="clear-block">
 
-<p><span class="uppercase-label">TEL</span>617-495-5315<br><span class="uppercase-label">FAX</span>617-495-2928<br><span class="uppercase-label">EMAIL</span><a href="mailto:gsas@fas.harvard.edu">gsas@fas.harvard.edu</a></p>
+  <div class="content">
+    <h5>THE WORLD IS WAITING</h5>
+<h3>The Campaign for Harvard Medicine<br /> </h3>
+<div><a href="https://community.alumni.harvard.edu/give/12924909/M1664" target="_blank"><img alt="The World is Waiting" src="/sites/default/files/assets/CampaignProgress103117web.jpg" style="width: 280px; height: 160px;" /></a></div>
+<div> </div>
+<p>Join us as we work to solve the biggest health care challenges of our time.</p>
+<p><a href="https://community.alumni.harvard.edu/give/12924909/M1664">Make your gift today </a><a href="https://community.alumni.harvard.edu/give/12924909/M1664"><span style="font-family: 'Times New Roman', serif;">»</span></a><a href="https://community.alumni.harvard.edu/give/12924909/M1664"> </a></p>
+
+  </div>
+
+</div>  </div></div><div id="block-hms_nodeblocks-5855" class="block block-hms_nodeblocks block-spotlight  block-hms-nb-">  <div class="content">    
+  <div id="node-5855" class="clear-block">
+
+  <div class="content">
+    <form action="http://www.pages05.net/harvardmedicalschool/FollowHMSBlock/Follow_HMS_Block" method="post" pageid="12602885" parentpageid="12602883" siteid="597651">
+<h4>Follow</h4>
+<h5>HMS</h5>
+<p>Stay informed via email on the latest news, research, and media from Harvard Medical School.<br /><input name="formSourceName" type="hidden" value="StandardForm" /><input name="sp_exp" type="hidden" value="yes" /><br /></p><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td style="padding: 0px 0px 0px 0px;"><input class="textInput defaultText" label="First_Name" name="First_Name" placeholder="First Name" style="margin: 0 3px 5px 0px; height: 20px; width: 122px;" type="text" /><input class="textInput defaultText" label="Last_Name" name="Last_Name" placeholder="Last Name" style="margin: 0 3px 5px 0px; height: 20px; width: 124px;" type="text" /></td>
+</tr><tr><td style="padding: 0px 0px 0px 0px;"><input class="textInput defaultText" id="control_EMAIL" label="Email" name="Email" placeholder="Email*" style="margin: 0 3px 5px 0px; height: 20px; width: 256px;" type="text" /></td>
+</tr><tr><td class="formErrorMessages" id="errorMessageContainerId" style="display: none;"> </td>
+</tr><tr><td style="padding: 0px 0px 0px 0px;">
+<div style="position: relative; overflow: hidden; width:260px;">
+<table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td style="padding-right: 10px;"><input class="defaultText buttonStyle" type="submit" value="Submit" /></td>
+</tr></tbody></table></div>
+</td>
+</tr><tr><td><input id="control_COLUMN24" name="Email_SingUp_Form" type="hidden" /></td>
+<td><input id="control_COLUMN14" name="HMSNews_Test" type="hidden" value="Yes" /></td>
+<td><input id="control_COLUMN16" name="OnTheBrain_Test" type="hidden" value="Yes" /></td>
+</tr><!-- DO NOT REMOVE HIDDEN FIELD sp_exp --></tbody></table></form>
+
+  </div>
+
+</div>  </div></div><div id="block-hms_nodeblocks-27181" class="block block-hms_nodeblocks block-spotlight  block-hms-nb-">  <div class="content">    
+  <div id="node-27181" class="clear-block">
+
+  <div class="content">
+    <h4>External</h4>
+<h5>Education</h5>
+<p style="padding-top: 3px;">
+<iframe allowfullscreen="" frameborder="0" height="169" mozallowfullscreen="" src="//player.vimeo.com/video/105387044?title=0&amp;byline=0&amp;portrait=0&amp;color=456d86" webkitallowfullscreen="" width="275"></iframe></p>
+<p> </p>
+<p>Lifelong learning opportunities in health care, biomedicine, and research from Harvard Medical School, a respected leader in medical education.</p>
+<p> </p>
+<p><a href="http://externaled.hms.harvard.edu/">Advance your career&gt;&gt;</a></p>
+
+  </div>
+
+</div>  </div></div>    </div>
+  </div>
+  
+          </div>
+
+
+
+         <script type="text/javascript">
+          if(document.getElementById("content-top") !== null) {
+            document.getElementById('spotlight-line').className += ' content-top-exists';
+          } else {
+            document.getElementById('spotlight-line').className += ' no-content-top ';
+          }
+        </script>
+      </div>
+
+
+
     </div>
+
+
   </div>
-</div><!-- /.block -->
+
+    <div id="footer" class="clear-block">
+
+        <div id="footer-region">
+          <div id="block-menu-menu-footer" class="block block-menu">  <div class="content">    <ul class="menu"><li class="first collapsed"><a href="/about-hms" title="">About HMS</a></li>
+<li class="leaf"><a href="/education" title="">Education</a></li>
+<li class="leaf"><a href="/research" title="">Research</a></li>
+<li class="leaf"><a href="/giving" title="">Giving</a></li>
+<li class="leaf"><a href="/contact-us" title="">Contact Us</a></li>
+<li class="last leaf"><a href="/privacy-policy" title="">Privacy Policy</a></li>
+</ul>  </div></div><div id="block-block-1" class="block block-block">  <div class="content">    <a class="facebook-link" href="http://www.facebook.com/harvardmed ">Facebook</a><a class="twitter-link" href="https://twitter.com/harvardmed">Twitter</a><a class="youtube-link" href="http://www.youtube.com/harvardmedicalschool">Youtube</a><a class="instagram-link" href="http://www.instagram.com/harvardmed/">Instagram</a><a class="linkedin-link" href="http://www.linkedin.com/edu/school?id=18482">LinkedIn</a><div class="copy-message">&copy; 2017 by the President and Fellows of Harvard College</div>  </div></div>        </div>
+
+    </div>
+    <script type="text/javascript">
+      document.getElementById('footer').style.display = 'none';
+    </script>
+
   </div>
-    <div id="bottom-content">
-          </div><!-- /#bottom-content -->
-  </div><!-- /.wrapper -->
-</footer>
-  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"139497e614","applicationID":"99729287","transactionName":"ZVFaZRFYDEVZWhJfXFwbbUMKFk1fVl0DTh1CXEg=","queueTime":0,"applicationTime":95,"atts":"SRZZE1lCH0s=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+
+  <script type="text/javascript" src="https://hms.harvard.edu/sites/default/files/js/js_-JzuM4qkQX1G-zkOtoatL0DTehNiM4Xw3KBnXqDsQ1o.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+window.jQuery || document.write("<script src='/sites/all/modules/contrib/jquery_update/replace/jquery/2.1/jquery.min.js'>\x3C/script>")
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.migrateMute=true;jQuery.migrateTrace=false;
+//--><!]]>
+</script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+window.jQuery && window.jQuery.migrateWarnings || document.write("<script src='/sites/all/modules/contrib/jquery_update/replace/jquery-migrate/1.2.1/jquery-migrate.min.js'>\x3C/script>")
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://hms.harvard.edu/sites/default/files/js/js_V1ZuwJK9uzfm6fFffOcHHubfxnimoxnbgG58pvTQdpY.js"></script>
+<script type="text/javascript" src="//code.jquery.com/ui/1.10.2/jquery-ui.min.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+window.jQuery.ui || document.write("<script src='/sites/all/modules/contrib/jquery_update/replace/ui/ui/minified/jquery-ui.min.js'>\x3C/script>")
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://hms.harvard.edu/sites/default/files/js/js_BLxotNs2yt7YGlf9QRI9L9AMfdnkQfnN-_ADBTW3SiE.js"></script>
+<script type="text/javascript" src="https://hms.harvard.edu/sites/default/files/js/js_I3UeadCTD3-pqt1_I_QuxPqAg5ip54B45tOHbjPADEw.js"></script>
+<script type="text/javascript" src="//gsa.hms.harvard.edu/ss.js"></script>
+<script type="text/javascript" src="https://hms.harvard.edu/sites/default/files/js/js_ZDxWtaoxtY90yBm9HPRbyfRST1NjTkFfwt5a8HpWPA4.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"hms","theme_token":"IdAE11NHKU7n0TneYBhnOi0WVIwxnYQFbJiK4zCdqEA","jquery_version":"2.1","js":{"public:\/\/google_tag\/google_tag.script.js":1,"\/\/code.jquery.com\/jquery-2.1.4.min.js":1,"0":1,"1":1,"\/\/code.jquery.com\/jquery-migrate-1.2.1.min.js":1,"2":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"\/\/code.jquery.com\/ui\/1.10.2\/jquery-ui.min.js":1,"3":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/external\/jquery.cookie.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/misc\/jquery.form.min.js":1,"misc\/ajax.js":1,"sites\/all\/modules\/contrib\/jquery_update\/js\/jquery_update.js":1,"misc\/progress.js":1,"sites\/all\/modules\/contrib\/ctools\/js\/modal.js":1,"sites\/all\/modules\/contrib\/modal_forms\/js\/modal_forms_popup.js":1,"\/\/gsa.hms.harvard.edu\/ss.js":1,"sites\/all\/themes\/hms\/js\/hms-menu.js":1,"sites\/all\/themes\/hms\/js\/hms.js":1,"sites\/all\/themes\/hms\/js\/view-block-affiliates.js":1,"sites\/all\/themes\/hms\/js\/jquery.simplemodal.js":1,"sites\/all\/themes\/hms\/js\/jquery.select_skin.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"misc\/ui\/jquery.ui.core.css":1,"misc\/ui\/jquery.ui.theme.css":1,"modules\/aggregator\/aggregator.css":1,"modules\/comment\/comment.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/contrib\/mollom\/mollom.css":1,"modules\/node\/node.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/modal.css":1,"sites\/all\/modules\/contrib\/modal_forms\/css\/modal_forms_popup.css":1,"sites\/all\/themes\/hms\/css\/framework\/reset.css":1,"sites\/all\/themes\/hms\/css\/framework\/text.css":1,"sites\/all\/themes\/hms\/css\/framework\/960.css":1,"sites\/all\/themes\/hms\/css\/hms-menu.css":1,"sites\/all\/themes\/hms\/css\/hms.megamenu.css":1,"sites\/all\/themes\/hms\/css\/styles.css":1,"sites\/all\/themes\/hms\/fonts\/fonts.css":1,"sites\/all\/themes\/hms\/css\/css.css":1,"sites\/all\/themes\/hms\/css\/view-block-spotlight.css":1,"sites\/all\/themes\/hms\/css\/hms-home.css":1,"sites\/all\/themes\/hms\/css\/hms-gateway.css":1,"sites\/all\/themes\/hms\/css\/hms-si_page.css":1,"sites\/all\/themes\/hms\/css\/hms-news.css":1,"sites\/all\/themes\/hms\/css\/hms-podcast.css":1,"sites\/all\/themes\/hms\/css\/hms-news-portal.css":1,"sites\/all\/themes\/hms\/css\/hms-news-archive.css":1,"sites\/all\/themes\/hms\/css\/hms-news-archive-date-picker.css":1,"sites\/all\/themes\/hms\/css\/hms-people-search.css":1,"sites\/all\/themes\/hms\/css\/hms-gallery.css":1,"sites\/all\/themes\/hms\/css\/hms-podcasts.css":1,"sites\/all\/themes\/hms\/css\/hms-videos.css":1,"sites\/all\/themes\/hms\/css\/hms-idea-lab.css":1,"sites\/all\/themes\/hms\/css\/hms-publications.css":1,"sites\/all\/themes\/hms\/css\/hms-hm.css":1,"sites\/all\/themes\/hms\/css\/hms-blog.css":1,"sites\/all\/themes\/hms\/css\/hms-font-system.css":1,"sites\/all\/themes\/hms\/css\/widget015.top.svg.css":1,"sites\/all\/themes\/hms\/css\/mobile.css":1}},"CToolsModal":{"loadingText":"Loading...","closeText":"Close Window","closeImage":"\u003Cimg src=\u0022https:\/\/hms.harvard.edu\/sites\/all\/modules\/contrib\/ctools\/images\/icon-close-window.png\u0022 alt=\u0022Close window\u0022 title=\u0022Close window\u0022 \/\u003E","throbber":"\u003Cimg src=\u0022https:\/\/hms.harvard.edu\/sites\/all\/modules\/contrib\/ctools\/images\/throbber.gif\u0022 alt=\u0022Loading\u0022 title=\u0022Loading...\u0022 \/\u003E"},"modal-popup-small":{"modalSize":{"type":"fixed","width":300,"height":300},"modalOptions":{"opacity":0.55,"background":"#000"},"animation":"fadeIn","modalTheme":"ModalFormsPopup","throbber":"\u003Cimg src=\u0022https:\/\/hms.harvard.edu\/sites\/all\/modules\/contrib\/modal_forms\/images\/loading_animation.gif\u0022 alt=\u0022Loading...\u0022 title=\u0022Loading\u0022 \/\u003E","closeText":"Close"},"modal-popup-medium":{"modalSize":{"type":"fixed","width":620,"height":450},"modalOptions":{"opacity":0.55,"background":"#000"},"animation":"fadeIn","modalTheme":"ModalFormsPopup","throbber":"\u003Cimg src=\u0022https:\/\/hms.harvard.edu\/sites\/all\/modules\/contrib\/modal_forms\/images\/loading_animation.gif\u0022 alt=\u0022Loading...\u0022 title=\u0022Loading\u0022 \/\u003E","closeText":"Close"},"modal-popup-large":{"modalSize":{"type":"scale","width":0.8,"height":0.8},"modalOptions":{"opacity":0.55,"background":"#000"},"animation":"fadeIn","modalTheme":"ModalFormsPopup","throbber":"\u003Cimg src=\u0022https:\/\/hms.harvard.edu\/sites\/all\/modules\/contrib\/modal_forms\/images\/loading_animation.gif\u0022 alt=\u0022Loading...\u0022 title=\u0022Loading\u0022 \/\u003E","closeText":"Close"}});
+//--><!]]>
+</script>
+    
+  <script type="text/javascript">
+    var _sf_async_config = { uid: 62510, domain: 'hms.harvard.edu', useCanonical: true };
+    (function() {
+      function loadChartbeat() {
+        window._sf_endpt = (new Date()).getTime();
+        var e = document.createElement('script');
+        e.setAttribute('language', 'javascript');
+        e.setAttribute('type', 'text/javascript');
+        e.setAttribute('src','//static.chartbeat.com/js/chartbeat.js');
+        document.body.appendChild(e);
+      };
+      var oldonload = window.onload;
+      window.onload = (typeof window.onload != 'function') ?
+        loadChartbeat : function() { oldonload(); loadChartbeat(); };
+    })();
+  </script>
+
+  <script type="text/javascript">
+//<![CDATA[
+(function() {
+var _analytics_scr = document.createElement('script');
+_analytics_scr.type = 'text/javascript'; _analytics_scr.async = true; _analytics_scr.src = '/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=230073823';
+var _analytics_elem = document.getElementsByTagName('script')[0]; _analytics_elem.parentNode.insertBefore(_analytics_scr, _analytics_elem);
+})();
+// ]]>
+</script></body>
 </html>

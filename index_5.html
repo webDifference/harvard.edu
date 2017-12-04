@@ -1,896 +1,617 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>     <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>        <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>        <html lang="en" class="no-js lt-ie10 lt-ie9"> <![endif]-->
-<!--[if IE 9]>        <html lang="en" class="no-js lt-ie10"> <![endif]-->
-<!--[if gt IE 9]><!--><html lang="en" class="no-js"><!--<![endif]-->
-<head profile="http://www.w3.org/1999/xhtml/vocab">
-  <meta charset="utf-8"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<!--[if IEMobile 7]><html class="iem7"  lang="en" dir="ltr"><![endif]-->
+<!--[if lte IE 6]><html class="lt-ie9 lt-ie8 lt-ie7"  lang="en" dir="ltr"><![endif]-->
+<!--[if (IE 7)&(!IEMobile)]><html class="lt-ie9 lt-ie8"  lang="en" dir="ltr"><![endif]-->
+<!--[if IE 8]><html class="lt-ie9"  lang="en" dir="ltr"><![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)]><!--><html  lang="en" dir="ltr"><!--<![endif]-->
 
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="shortcut icon" href="https://college.harvard.edu/sites/all/themes/harvard/css/images/favicon.ico" type="image/vnd.microsoft.icon" />
+<head>
+  <!--[if IE]><![endif]-->
+<meta charset="utf-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<link rel="dns-prefetch" href="//www.google-analytics.com" />
+<link rel="dns-prefetch" href="//stats.g.doubleclick.net" />
+<link rel="preconnect" href="//stats.g.doubleclick.net" />
+<link rel="preconnect" href="//www.google-analytics.com" />
+<link rel="shortcut icon" href="https://gsas.harvard.edu/sites/all/themes/gsas/favicon.ico" type="image/vnd.microsoft.icon" />
 <meta name="generator" content="Drupal 7 (http://drupal.org)" />
-<link rel="canonical" href="https://college.harvard.edu/" />
-<link rel="shortlink" href="https://college.harvard.edu/" />
-<meta name="google-site-verification" content="y67J8Jo7YiMeew7p4lMBYchKQx8mzhts7HFDhSkhs24" />
-<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=156643444746123&ev=PageView&noscript=1"/></noscript>  <title>Harvard College |</title>
-  <link type="text/css" rel="stylesheet" href="https://college.harvard.edu/sites/default/files/css/css_kShW4RPmRstZ3SpIC-ZvVGNFVAi0WEMuCnI0ZkYIaFw.css" media="all" />
-<link type="text/css" rel="stylesheet" href="https://college.harvard.edu/sites/default/files/css/css_DnvLRZdhU1iBaJ_Zf_WwGCIDJmDG62GCal7Vnrj9Ckg.css" media="all" />
-<link type="text/css" rel="stylesheet" href="https://college.harvard.edu/sites/default/files/css/css_aRIhdfracbMpI2KB2IiQV-XNsCxn3umXECryLgdSdLA.css" media="all" />
-<link type="text/css" rel="stylesheet" href="https://college.harvard.edu/sites/default/files/css/css_qpHURMTtcGa8w9tkG0TIBf6gPihw4BtY77D2XojDszg.css" media="print" />
-<link type="text/css" rel="stylesheet" href="https://college.harvard.edu/sites/default/files/css/css_vHiICRG52n0rTw3QqUqnMI2zd3MUF96CyP7SDQ4f1Uw.css" media="all" />
+<link rel="canonical" href="https://gsas.harvard.edu/" />
+<link rel="shortlink" href="https://gsas.harvard.edu/" />
+  <title>Harvard University - The Graduate School of Arts and Sciences</title>
 
-<!--[if lt IE 9]>
-<link type="text/css" rel="stylesheet" href="https://college.harvard.edu/sites/default/files/css/css_5vwjkRw45NusIP78-M83achliNJznka1sNkxAz8Zvr0.css" media="all" />
-<![endif]-->
-
-<!--[if lt IE 8]>
-<link type="text/css" rel="stylesheet" href="https://college.harvard.edu/sites/default/files/css/css_Hj9fXY775g2eA7RUp7hysigbxUIt5lX4nXdeRHMLbrY.css" media="all" />
-<![endif]-->
-  <script type="text/javascript" src="https://college.harvard.edu/sites/default/files/js/js_WkOMkSyjg9rxsesVK2mUAVX_dhZTWbIE6jpIzuL-ygM.js"></script>
-<script type="text/javascript" src="https://college.harvard.edu/sites/default/files/js/js_BLxotNs2yt7YGlf9QRI9L9AMfdnkQfnN-_ADBTW3SiE.js"></script>
-<script type="text/javascript" src="https://college.harvard.edu/sites/default/files/js/js_CDGBrxcsUei5uGpIel7O_d4I9Vwm1GeWQO_r0AtTrBE.js"></script>
-<script type="text/javascript" src="https://college.harvard.edu/sites/default/files/js/js_s8DfVLKw2U-eMMeck_BixGeFZ-kLWDjAvU0ZHOrJb-Y.js"></script>
-<script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
-<script type="text/javascript" src="https://college.harvard.edu/sites/default/files/js/js_gPqjYq7fqdMzw8-29XWQIVoDSWTmZCGy9OqaHppNxuQ.js"></script>
-<script type="text/javascript">
-<!--//--><![CDATA[//><!--
-(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create", "UA-42906607-5", {"cookieDomain":"auto"});ga("send", "pageview");
-//--><!]]>
-</script>
-<script type="text/javascript" src="https://college.harvard.edu/sites/default/files/js/js_r9p12DhdkpD6Skcv5P884Yym85k42EITbZQyqMIN81c.js"></script>
-<script type="text/javascript" src="https://college.harvard.edu/sites/default/files/js/js_a-F2L5DD7B2BUQnm0d59zB6sGumcXIRL3EgHDfGlq-Q.js"></script>
-<script type="text/javascript" src="https://college.harvard.edu/sites/default/files/js/js_wsddnd40CcZNElnyzYtHzN70I34CUiw1SCs0IWoeFm4.js"></script>
-<script type="text/javascript">
-<!--//--><![CDATA[//><!--
-jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"harvard","theme_token":"NzC4KMA6p_tngwQGvhw7h7ulN6QDIv_e07CSWJt3LlM","jquery_version":"1.10","js":{"sites\/all\/modules\/contrib\/flexslider\/assets\/js\/flexslider.load.js":1,"sites\/all\/themes\/harvard\/js\/ga-snippet1.js":1,"sites\/all\/themes\/harvard\/js\/ga-snippet3.js":1,"sites\/all\/modules\/contrib\/addthis\/addthis.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery\/1.10\/jquery.min.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/external\/jquery.cookie.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/misc\/jquery.form.min.js":1,"misc\/ajax.js":1,"sites\/all\/modules\/contrib\/jquery_update\/js\/jquery_update.js":1,"sites\/all\/modules\/custom\/harvard_icons\/harvard_icons.js":1,"sites\/all\/modules\/contrib\/extlink\/extlink.js":1,"misc\/progress.js":1,"misc\/form.js":1,"misc\/collapse.js":1,"sites\/all\/modules\/contrib\/views\/js\/base.js":1,"sites\/all\/modules\/contrib\/views\/js\/ajax_view.js":1,"sites\/all\/modules\/contrib\/quicktabs\/js\/quicktabs.js":1,"sites\/all\/libraries\/flexslider\/jquery.flexslider-min.js":1,"\/\/platform.twitter.com\/widgets.js":1,"sites\/all\/modules\/contrib\/google_analytics\/googleanalytics.js":1,"0":1,"sites\/all\/modules\/contrib\/google_analytics_et\/js\/google_analytics_et.js":1,"sites\/all\/themes\/harvard\/js\/plugins\/chart.js":1,"sites\/all\/themes\/harvard\/js\/plugins\/detect.js":1,"sites\/all\/themes\/harvard\/js\/plugins\/matchMedia.js":1,"sites\/all\/themes\/harvard\/js\/plugins\/matchMedia.addListener.js":1,"sites\/all\/themes\/harvard\/js\/plugins\/enquire.min.js":1,"sites\/all\/themes\/harvard\/js\/plugins\/jquery.chosen.js":1,"sites\/all\/themes\/harvard\/js\/plugins\/jquery.datepicker.js":1,"sites\/all\/themes\/harvard\/js\/plugins\/jquery.equalheights.js":1,"sites\/all\/themes\/harvard\/js\/plugins\/jquery.masonry.js":1,"sites\/all\/themes\/harvard\/js\/plugins\/jquery.royalslider.min.js":1,"sites\/all\/themes\/harvard\/js\/plugins\/jquery.select.js":1,"sites\/all\/themes\/harvard\/js\/plugins\/jquery.waypoints.js":1,"sites\/all\/themes\/harvard\/js\/plugins\/jquery.sticky.js":1,"sites\/all\/themes\/harvard\/js\/plugins\/modernizr.js":1,"sites\/all\/themes\/harvard\/js\/dist\/all.js":1,"sites\/all\/themes\/harvard\/js\/script.js":1,"public:\/\/facebook_tracking_pixel\/fb_tkpx.156643444746123.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/modules\/contrib\/calendar\/css\/calendar_multiday.css":1,"modules\/comment\/comment.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"sites\/all\/modules\/contrib\/date\/date_repeat_field\/date_repeat_field.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/contrib\/field_collection_ajax\/css\/field-collection-ajax.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/contrib\/extlink\/extlink.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/flickr\/flickr.css":1,"sites\/all\/modules\/contrib\/flickr\/flickr_cc_icons_on_hover.css":1,"sites\/all\/modules\/contrib\/media\/modules\/media_wysiwyg\/css\/media_wysiwyg.base.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/panels\/css\/panels.css":1,"sites\/all\/modules\/contrib\/typogrify\/typogrify.css":1,"sites\/all\/themes\/harvard\/layouts\/harvard_threecol_33_34_33_stacked\/harvard_threecol_33_34_33_stacked.css":1,"sites\/all\/modules\/contrib\/quicktabs\/css\/quicktabs.css":1,"sites\/all\/modules\/contrib\/flexslider\/assets\/css\/flexslider_img.css":1,"sites\/all\/libraries\/flexslider\/flexslider.css":1,"sites\/all\/modules\/contrib\/twitter\/twitter.css":1,"sites\/all\/modules\/contrib\/panels\/plugins\/layouts\/twocol\/twocol.css":1,"sites\/all\/themes\/harvard\/css\/print.css":1,"sites\/all\/themes\/harvard\/css\/patchwork.css":1,"sites\/all\/themes\/harvard\/css\/screen.css":1,"sites\/all\/themes\/harvard\/css\/harvard.main.css":1,"sites\/all\/themes\/harvard\/css\/ie.css":1,"sites\/all\/themes\/harvard\/css\/ie--lt8.css":1}},"better_exposed_filters":{"views":{"news_improved":{"displays":{"panel_pane_1":{"filters":[]}}},"upcoming_events":{"displays":{"panel_pane_today":{"filters":[]},"panel_pane_tomorrow":{"filters":[]},"panel_pane_day_after_tomorrow":{"filters":[]}}},"harvard_recent_tweet":{"displays":{"block":{"filters":[]}}}}},"quicktabs":{"qt_upcoming_events":{"name":"upcoming_events","tabs":[{"vid":"upcoming_events","display":"panel_pane_today","args":"141","view_path":"node%2F127836","view_dom_id":1,"ajax_args":"141","actual_args":["141"]},{"vid":"upcoming_events","display":"panel_pane_tomorrow","args":"141","view_path":"node%2F127836","view_dom_id":2,"ajax_args":"141","actual_args":["141"]},{"vid":"upcoming_events","display":"panel_pane_day_after_tomorrow","args":"141","view_path":"node%2F127836","view_dom_id":3,"ajax_args":"141","actual_args":["141"]}],"ajaxPageState":{"jquery_version":"1.10"}}},"flexslider":{"optionsets":{"landing_page_carousel":{"namespace":"flex-","selector":".slides \u003E li","easing":"swing","direction":"horizontal","reverse":false,"smoothHeight":false,"startAt":0,"animationSpeed":600,"initDelay":0,"useCSS":true,"touch":true,"video":false,"keyboard":true,"multipleKeyboard":false,"mousewheel":0,"controlsContainer":".flex-control-nav-container","sync":"","asNavFor":"","itemWidth":0,"itemMargin":0,"minItems":0,"maxItems":0,"move":0,"animation":"fade","slideshow":true,"slideshowSpeed":"7000","directionNav":true,"controlNav":true,"prevText":"Previous","nextText":"Next","pausePlay":true,"pauseText":"Pause","playText":"Play","randomize":false,"thumbCaptions":false,"thumbCaptionsBoth":false,"animationLoop":true,"pauseOnAction":true,"pauseOnHover":false,"manualControls":""}},"instances":{"flexslider-1":"landing_page_carousel"}},"extlink":{"extTarget":"_blank","extClass":0,"extLabel":"(link is external)","extImgClass":0,"extIconPlacement":0,"extSubdomains":0,"extExclude":"(www\\.youvisit\\.com)","extInclude":"","extCssExclude":"","extCssExplicit":"","extAlert":0,"extAlertText":"This link will take you to an external web site.","mailtoClass":0,"mailtoLabel":"(link sends e-mail)"},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"googleAnalyticsETSettings":{"selectors":[{"event":"click","selector":".pane-fpid-606 form[action*=\u0022net-price-calculator\u0022] button[type=\u0022submit\u0022]","category":"NPC","action":"click","label":"module_large","value":0,"noninteraction":false},{"event":"mousedown","selector":".pane-fpid-636 a[href*=\u0022net-price\u0022]","category":"NPC","action":"click","label":"module_small","value":0,"noninteraction":false},{"event":"mousedown","selector":".pane-fpid-251 a[href*=\u0022application-tips\u0022]","category":"module","action":"click","label":"tips","value":0,"noninteraction":false},{"event":"mousedown","selector":".pane-fpid-246 a[href*=\u0022what-we-look\u0022]","category":"module","action":"click_look","label":"apply","value":0,"noninteraction":false},{"event":"mousedown","selector":".pane-fpid-246 a[href*=\u0022application-timeline\u0022]","category":"module","action":"click_when","label":"apply","value":0,"noninteraction":false},{"event":"mousedown","selector":".pane-fpid-246 a[href*=\u0022application-requirements\u0022]","category":"module","action":"click_submit","label":"apply","value":0,"noninteraction":false},{"event":"mousedown","selector":"#block-system-main.block .pane-fpid-866 a[href*=\u0022admissions\/apply\u0022]","category":"module","action":"click_apply","label":"belong","value":0,"noninteraction":false},{"event":"mousedown","selector":"#block-system-main.block .pane-fpid-866 a[href*=\u0022coming-home\u0022]","category":"module","action":"click_watchvideo","label":"belong","value":0,"noninteraction":false},{"event":"mousedown","selector":"#block-system-main.block .pane-fpid-866 a[href*=\u0022hear-students\/video\u0022]","category":"module","action":"click_allvideos","label":"belong","value":0,"noninteraction":false},{"event":"mousedown","selector":"#block-system-main.block .pane-fpid-71 a","category":"module","action":"click","label":"aid","value":0,"noninteraction":false},{"event":"mousedown","selector":"#block-system-main.block .content .page-content .container .carousel .carousel-viewport a","category":"carousel","action":"click","label":"!href","value":0,"noninteraction":false},{"event":"mousedown","selector":"#block-system-main.block .content .page-content .container .carousel .carousel-viewport a+a","category":"carousel","action":"click","label":"!href","value":0,"noninteraction":false},{"event":"mousedown","selector":"a[href^=\u0022https:\/\/itunes.apple.com\/us\/app\/\u0022]","category":"Appdownload","action":"offsiteclick","label":"iTunes","value":0,"noninteraction":false},{"event":"mousedown","selector":"a[href^=\u0022https:\/\/play.google.com\/store\/apps\/\u0022]","category":"Appdownload","action":"offsiteclick","label":"Googleplay","value":0,"noninteraction":false},{"event":"mousedown","selector":"a[href$=\u0022.pdf\u0022]","category":"download","action":"pdf","label":"!href","value":0,"noninteraction":false},{"event":"mousedown","selector":"a[href$=\u0022.doc\u0022]","category":"download","action":"doc","label":"!href","value":0,"noninteraction":false},{"event":"change","selector":"select[name=\u0022submitted[faq_topic]\u0022]","category":"Contactus","action":"submit","label":"!text","value":0,"noninteraction":false},{"event":"change","selector":"select[name=\u0022submitted[email_form][subject]\u0022]","category":"Contactus","action":"selectsubject","label":"!text","value":0,"noninteraction":false},{"event":"mousedown","selector":"#webform-client-form-846--2 input#edit-submit--2","category":"Contactus","action":"submit","label":"topic_subject","value":0,"noninteraction":false},{"event":"mousedown","selector":"form#webform-client-form-846--2.webform-client-form div fieldset#webform-component-email-form.webform-component-fieldset div.fieldset-wrapper div#webform-component-email-form--subject.form-item div#s2id_edit-submitted-email-form-subject--2.select2-container","category":"Contactus","action":"selectsubject","label":"!text","value":0,"noninteraction":false},{"event":"mousedown","selector":"a[href^=\u0022http\u0022]:not(a[href*=\u0022college.harvard.edu\u0022])","category":"offsitelink","action":"offsiteclick","label":"!href","value":0,"noninteraction":false},{"event":"mousedown","selector":"a[href*=\u0022user\/login\u0022]","category":"Login","action":"click","label":"!currentPage","value":0,"noninteraction":false},{"event":"mousedown","selector":"a[href*=\u0022\/about\/news-announcements\/\u0022]","category":"News","action":"click","label":"!currentPage","value":0,"noninteraction":false},{"event":"mousedown","selector":"a[href*=\u0022\/college-events\/\u0022]","category":"Events","action":"click","label":"!href","value":0,"noninteraction":false},{"event":"mousedown","selector":"#block-menu-menu-primary-menu li a","category":"nav_main","action":"click","label":"!text","value":0,"noninteraction":false},{"event":"mousedown","selector":"#block-harvard-site-harvard-audience-links ul li a","category":"nav_audience","action":"click","label":"!text","value":0,"noninteraction":false},{"event":"mousedown","selector":"ul.first-level.in li.last.expanded.active-trail.menu-level-2 ul.second-level li.leaf.menu-level-3","category":"Reply","action":"action","label":"label","value":0,"noninteraction":false},{"event":"mousedown","selector":"a[href^=\u0022http:\/\/news.harvard.edu\/gazette\u0022]","category":"Gazette","action":"offsiteclick","label":"!href","value":0,"noninteraction":false},{"event":"mousedown","selector":".pane-fpid-176 form[action*=\u0022net-price-calculator\u0022] button[type=\u0022submit\u0022]","category":"NPC","action":"click","label":"module_FAO","value":0,"noninteraction":false}],"settings":[]}});
-//--><!]]>
-</script>
-
-  
-  
-  
-  <!-- BEGIN inc/meta.php -->
-  <meta name="description" content="" />
-  <meta name="keywords" content="" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- END inc/meta.php -->
-
-  <!-- BEGIN inc/cssReference.php (conditional js only) -->
-  <!--[if lt IE 9]>
-  <script type="text/javascript" src="/sites/all/themes/harvard/js/plugins/html5shiv.js"></script>
-  <script type="text/javascript" src="/sites/all/themes/harvard/js/plugins/ie8.js"></script>
-  <![endif]-->
-  <!-- END inc/cssReference.php -->
-
-<script src="https://use.typekit.net/eqx7xwa.js"></script>
-<script>try{Typekit.load(
-{ async: true }
-);}catch(e){}</script>
-
-
-</head>
-
-<body class="html front not-logged-in no-sidebars page-node page-node- page-node-127836 node-type-landing-page front " >
-
-  
-  <!-- BEGIN inc/skip.php -->
-  <a class="anchor-link element-invisible element-focusable" href="#main-top">Skip to main content</a>
-  <!-- END inc/skip.php -->
-
-  
-  <!-- BEGIN inc/page-header.php -->
-<header class="page-header" role="banner">
-
-  <div class="high-level">
-    <div class="wrap">
-      <strong class="title"><a href="http://www.harvard.edu" class="logo ir">Harvard University</a></strong>
-      <span class="url in"><a href="http://www.harvard.edu">harvard.edu</a></span>
-    </div>
+      <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- <meta name="format-detection" content="telephone=no"> !-->
+    <meta http-equiv="cleartype" content="on">
+  <link type="text/css" rel="stylesheet" href="https://gsas.harvard.edu/sites/default/files/advagg_css/css__YZMmyCjxADNsxWJVyzxskiYBiPsGboww8DDJoAv1iVA__PqGVjSeXe3e-YM4xspxCavDlyydtEB28TRpZPTEwV5I__ifKp45LPqEhgGkikf2YJyv1UywiQbNx_j_-vYxA6ZUs.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://gsas.harvard.edu/sites/default/files/advagg_css/css__amIirjZUAFjwAOeWfbfud22qdGairypxNF2ev7JiwTE__9wkN_Hr9C-DkuNH6XZKKId5_B2Ji2bqC0hH59IVyuEY__ifKp45LPqEhgGkikf2YJyv1UywiQbNx_j_-vYxA6ZUs.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://gsas.harvard.edu/sites/default/files/advagg_css/css__UrpLwiv-VJLk_jClnjuT_az24bNZ8QDMEcnkw259I7w__BBsLS1irwGs2Omjo5xW42EkH9b_Zto6Lf2oC8x00Fto__ifKp45LPqEhgGkikf2YJyv1UywiQbNx_j_-vYxA6ZUs.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://gsas.harvard.edu/sites/default/files/advagg_css/css__jr1cxTiweEihJfzAung0LgCxVMNmqobKaTOVmeOw4kY__2_Q8Y9raXIoHt_62V2dkCnar4JtFfhjQ5ZJoQd7e-uA__ifKp45LPqEhgGkikf2YJyv1UywiQbNx_j_-vYxA6ZUs.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://gsas.harvard.edu/sites/default/files/advagg_css/css__83vOzBeO2Yfr4GSyhu6705-n_-L1Zd0EWy0LRu8Ygxo__q0DeN2kGhTD-qbCvyI4Fye5Odd8Aycqxysv7vB-Kbxo__ifKp45LPqEhgGkikf2YJyv1UywiQbNx_j_-vYxA6ZUs.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://gsas.harvard.edu/sites/default/files/advagg_css/css__jA249hWQd5FSz76IhlNyRl5Uh7aQkqscaHbaqxvigew__R9RDAsF6RVarTuTqIZoj7_aaKoYfVT0PRxeGqSyF79o__ifKp45LPqEhgGkikf2YJyv1UywiQbNx_j_-vYxA6ZUs.css" media="print" />
+  <![if gt IE 8]>
+  <link rel="stylesheet" type="text/css" href="/sites/all/themes/gsas/dist/css/print.css" />
+  <![endif]>
+  <script src="https://gsas.harvard.edu/sites/default/files/advagg_js/js__0Hzgl3oWjCFX332BGDII0ywgl1HaELsGWJm7cOienwo__zJp5szNMiUjnry5PfcwQqrLwL4zPqyZmpKvX95UxNZs__ifKp45LPqEhgGkikf2YJyv1UywiQbNx_j_-vYxA6ZUs.js"></script>
+<script src="https://gsas.harvard.edu/sites/default/files/advagg_js/js__MeIyryUyCmUbG095X1l5zVDWDbMA4WWFOawIJtR1cqI__3EwQE7T29n8R9mKfi57jfyYHTu7y0duyNrSlmH351nU__ifKp45LPqEhgGkikf2YJyv1UywiQbNx_j_-vYxA6ZUs.js"></script>
+<script src="https://gsas.harvard.edu/sites/default/files/advagg_js/js__fBP0XuuaSb6PNQi8KeXwvBTI8bpEvCoZ-MyLX-qkiL4__QcaGFEAbXG259ddjHyTzqHNhxb42SaQ5OBZBMr7_9BA__ifKp45LPqEhgGkikf2YJyv1UywiQbNx_j_-vYxA6ZUs.js"></script>
+<script src="https://gsas.harvard.edu/sites/default/files/advagg_js/js__lXfr5W4dNBFCXhts2scDQTu1Yan_8rlMNeUgrXRItcw__1OkSfYTWLGCRVhS3ea09eqMcphxU-TIoWQW8kYQHTqU__ifKp45LPqEhgGkikf2YJyv1UywiQbNx_j_-vYxA6ZUs.js"></script>
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create", "UA-9704293-1", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<script src="https://gsas.harvard.edu/sites/default/files/advagg_js/js__eCamf0Pk90dWD1_z4yesqfCGVbPhtNDjgoe4Mrw_O0M__znsz7fsgZe7-6A0Q8w7lilkr3g6S4XTjq3batR-65UQ__ifKp45LPqEhgGkikf2YJyv1UywiQbNx_j_-vYxA6ZUs.js"></script>
+<script src="https://gsas.harvard.edu/sites/default/files/advagg_js/js__EYsM05Z1H6M6qOuXCO1ItqLy1SZCP1kfzwLu8vKYLHE__g6n16phznzlbpmoEZjQiC48UibZEw2vlzAubUbaMJfk__ifKp45LPqEhgGkikf2YJyv1UywiQbNx_j_-vYxA6ZUs.js"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"gsas","theme_token":"A5SuKLbSXC3mEm1RmTN2TozHUQYlNP_qcSDVa5QENco","jquery_version":"1.7","css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/themes\/base\/jquery.ui.core.css":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/themes\/base\/jquery.ui.theme.css":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/themes\/base\/jquery.ui.button.css":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/themes\/base\/jquery.ui.resizable.css":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/themes\/base\/jquery.ui.dialog.css":1,"sites\/all\/modules\/contrib\/ckeditor_tabber\/ckeditor_tabber.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/contrib\/scald\/modules\/fields\/mee\/css\/editor-global.css":1,"modules\/node\/node.css":1,"sites\/all\/modules\/contrib\/scald_file\/scald_file.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/typogrify\/typogrify.css":1,"sites\/all\/modules\/contrib\/forward\/forward.css":1,"sites\/all\/modules\/contrib\/ds\/layouts\/ds_2col_fluid\/ds_2col_fluid.css":1,"sites\/all\/modules\/contrib\/addressfield\/addressfield.css":1,"sites\/all\/libraries\/superfish\/css\/superfish.css":1,"sites\/all\/themes\/gsas\/system.menus.css":1,"sites\/all\/themes\/gsas\/dist\/css\/style.css":1,"sites\/all\/themes\/gsas\/dist\/css\/layout.css":1,"sites\/all\/themes\/gsas\/dist\/css\/component.css":1,"sites\/all\/themes\/gsas\/dist\/css\/skin.css":1,"sites\/all\/themes\/gsas\/dist\/css\/toolbox.css":1,"sites\/all\/themes\/gsas\/dist\/css\/print.css":1},"js":{"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery\/1.7\/jquery.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/jquery.ui.core.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/jquery.ui.widget.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/jquery.ui.button.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/jquery.ui.mouse.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/jquery.ui.draggable.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/jquery.ui.position.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/jquery.ui.resizable.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/jquery.ui.dialog.js":1,"misc\/ajax.js":1,"sites\/all\/modules\/contrib\/jquery_update\/js\/jquery_update.js":1,"sites\/all\/modules\/contrib\/ckeditor_tabber\/semantic-tabs.js":1,"sites\/all\/modules\/custom\/gsas_random_profile\/gsas_random_profile.js":1,"sites\/all\/modules\/custom\/responsive_video\/js\/responsive_video.js":1,"sites\/all\/modules\/contrib\/linkit\/js\/linkit.js":1,"sites\/all\/modules\/contrib\/scald_file\/scald_file.js":1,"sites\/all\/modules\/contrib\/scald\/modules\/providers\/scald_image\/scald_image.js":1,"sites\/all\/themes\/gsas\/js\/contrib-plugins\/jquery.selectBox\/jquery.selectBox.min.js":1,"sites\/all\/modules\/contrib\/field_group\/field_group.js":1,"sites\/all\/modules\/contrib\/google_analytics\/googleanalytics.js":1,"misc\/progress.js":1,"sites\/all\/modules\/contrib\/linkit\/editors\/ckeditor\/linkitDialog.js":1,"sites\/all\/modules\/contrib\/ctools\/js\/jump-menu.js":1,"sites\/all\/libraries\/superfish\/jquery.hoverIntent.minified.js":1,"sites\/all\/libraries\/superfish\/supposition.js":1,"sites\/all\/libraries\/superfish\/superfish.js":1,"sites\/all\/libraries\/superfish\/supersubs.js":1,"sites\/all\/modules\/contrib\/superfish\/superfish.js":1,"sites\/all\/themes\/gsas\/dist\/js\/theme.js":1}},"scaldFile":{"path":"sites\/all\/modules\/contrib\/scald_file\/scald_file.css"},"linkit":{"autocompletePath":"https:\/\/gsas.harvard.edu\/linkit\/autocomplete\/___profile___?s=","dashboardPath":"\/linkit\/dashboard\/","currentInstance":{}},"better_exposed_filters":{"views":{"programs_of_studay":{"displays":{"block_1":{"filters":[]},"block":{"filters":[]}}},"slideshows":{"displays":{"block":{"filters":[]}}},"news":{"displays":{"block_1":{"filters":[]}}},"events":{"displays":{"block_1":{"filters":{"tid":{"required":false}}}}},"profiles":{"displays":{"block":{"filters":[]}}}}},"urlIsAjaxTrusted":{"\/events\/coffee-hour-professor-karine-gibbs":true,"\/?option=com_content\u0026task=view\u0026id=279\u0026Itemid=288":true,"\/admissions\/request-information":true},"field_group":{"div":"teaser"},"gsas":{"profile_content":["\u003Cdiv  class=\u0022ds-2col-fluid node node-profile view-mode-quote clearfix\u0022\u003E\n\n  \n      \u003Cdiv class=\u0022group-left\u0022\u003E\n      \u003Cdiv class=\u0022field field-name-field-banner-image\u0022\u003E\u003C!-- scald=13:profile_footer --\u003E\u003Cimg src=\u0022https:\/\/gsas.harvard.edu\/sites\/default\/files\/styles\/profile_footer\/public\/thumbnails\/image\/jim%20yong%20kim_FINE-edit_0.jpg?itok=sIYY_KgH\u0022 width=\u0022850\u0022 height=\u0022510\u0022 alt=\u0022Jim Yong Kim \u0022 title=\u0022Jim Yong Kim \u0022 \/\u003E\u003C!-- END scald=13 --\u003E\u003C\/div\u003E    \u003C\/div\u003E\n  \n      \u003Cdiv class=\u0022group-right\u0022\u003E\n      \u003Cdiv class=\u0022field field-name-field-teaser-quote\u0022\u003E\u003Cp\u003EStudying social theory exposed me to how people try to understand what is happening in the world. Ethnography and participant observation gave us a method by which to dig deeply into the worlds of...\u003C\/p\u003E\u003C\/div\u003E\u003Cdiv class=\u0022field field-name-title\u0022\u003E\u003Ch2\u003EJim Yong Kim\u003C\/h2\u003E\u003C\/div\u003E\u003Cdiv class=\u0022field field-name-field-professional-title\u0022\u003EPresident, World Bank Group\u003C\/div\u003E\u003Cdiv class=\u0022field field-name-field-degree\u0022\u003EMD \u201991, PhD \u201993\u003C\/div\u003E\u003Cdiv class=\u0022field field-name-node-link\u0022\u003E\u003Cp class=\u0022button-clear\u0022\u003E\u003Ca href=\u0022\/profiles\/jim-yong-kim\u0022 class=\u0022\u0022\u003EFull Profile\u003C\/a\u003E\u003C\/p\u003E\u003C\/div\u003E    \u003C\/div\u003E\n  \n\u003C\/div\u003E\n\n","\u003Cdiv  class=\u0022ds-2col-fluid node node-profile view-mode-quote clearfix\u0022\u003E\n\n  \n      \u003Cdiv class=\u0022group-left\u0022\u003E\n      \u003Cdiv class=\u0022field field-name-field-banner-image\u0022\u003E\u003C!-- scald=32:profile_footer --\u003E\u003Cimg src=\u0022https:\/\/gsas.harvard.edu\/sites\/default\/files\/styles\/profile_footer\/public\/thumbnails\/image\/Jun%20Song.jpg?itok=4hUsINlu\u0022 width=\u0022850\u0022 height=\u0022510\u0022 alt=\u0022Jun Song\u0022 title=\u0022Jun Song\u0022 \/\u003E\u003C!-- END scald=32 --\u003E\u003C\/div\u003E    \u003C\/div\u003E\n  \n      \u003Cdiv class=\u0022group-right\u0022\u003E\n      \u003Cdiv class=\u0022field field-name-field-teaser-quote\u0022\u003E\u003Cp\u003EHBX is indeed a great complement to my graduate study, because now I can combine the knowledge I gained with my analytical research skills to solve complex business problems.\u003C\/p\u003E\n\u003C\/div\u003E\u003Cdiv class=\u0022field field-name-title\u0022\u003E\u003Ch2\u003EJun Song\u003C\/h2\u003E\u003C\/div\u003E\u003Cdiv class=\u0022field field-name-field-professional-title\u0022\u003EPhD Candidate, Applied Physics; Participant, HBX CORe\u003C\/div\u003E\u003Cdiv class=\u0022field field-name-field-degree\u0022\u003EPhD\u003C\/div\u003E\u003Cdiv class=\u0022field field-name-node-link\u0022\u003E\u003Cp class=\u0022button-clear\u0022\u003E\u003Ca href=\u0022\/profiles\/jun-song\u0022 class=\u0022\u0022\u003EFull Profile\u003C\/a\u003E\u003C\/p\u003E\u003C\/div\u003E    \u003C\/div\u003E\n  \n\u003C\/div\u003E\n\n","\u003Cdiv  class=\u0022ds-2col-fluid node node-profile view-mode-quote clearfix\u0022\u003E\n\n  \n      \u003Cdiv class=\u0022group-left\u0022\u003E\n      \u003Cdiv class=\u0022field field-name-field-banner-image\u0022\u003E\u003C!-- scald=1890:profile_footer --\u003E\u003Cimg src=\u0022https:\/\/gsas.harvard.edu\/sites\/default\/files\/styles\/profile_footer\/public\/thumbnails\/image\/RebeccaPerry1.jpg?itok=ZFI1OA3f\u0022 width=\u0022850\u0022 height=\u0022510\u0022 alt=\u0022Rebecca Perry\u0022 title=\u0022Rebecca Perry\u0022 \/\u003E\u003C!-- END scald=1890 --\u003E\u003C\/div\u003E    \u003C\/div\u003E\n  \n      \u003Cdiv class=\u0022group-right\u0022\u003E\n      \u003Cdiv class=\u0022field field-name-field-teaser-quote\u0022\u003E\u003Cp\u003EMy PhD\u00a0research has helped me to not be afraid of taking on problems that no one knows how to solve yet....\u003C\/p\u003E\n\u003C\/div\u003E\u003Cdiv class=\u0022field field-name-title\u0022\u003E\u003Ch2\u003ERebecca Perry\u003C\/h2\u003E\u003C\/div\u003E\u003Cdiv class=\u0022field field-name-field-professional-title\u0022\u003ESoftware Engineer, Wayfair\u003C\/div\u003E\u003Cdiv class=\u0022field field-name-field-degree\u0022\u003ESM \u201912, PhD \u201915\u003C\/div\u003E\u003Cdiv class=\u0022field field-name-node-link\u0022\u003E\u003Cp class=\u0022button-clear\u0022\u003E\u003Ca href=\u0022\/profiles\/rebecca-perry\u0022 class=\u0022\u0022\u003EFull Profile\u003C\/a\u003E\u003C\/p\u003E\u003C\/div\u003E    \u003C\/div\u003E\n  \n\u003C\/div\u003E\n\n","\u003Cdiv  class=\u0022ds-2col-fluid node node-profile view-mode-quote clearfix\u0022\u003E\n\n  \n      \u003Cdiv class=\u0022group-left\u0022\u003E\n      \u003Cdiv class=\u0022field field-name-field-banner-image\u0022\u003E\u003C!-- scald=1937:profile_footer --\u003E\u003Cimg src=\u0022https:\/\/gsas.harvard.edu\/sites\/default\/files\/styles\/profile_footer\/public\/thumbnails\/image\/GSAS%20Senan%20Ebrahim_05.jpg?itok=QL700d3n\u0022 width=\u0022850\u0022 height=\u0022510\u0022 alt=\u0022Senan Ebrahim\u0022 title=\u0022Senan Ebrahim\u0022 \/\u003E\u003C!-- END scald=1937 --\u003E\u003C\/div\u003E    \u003C\/div\u003E\n  \n      \u003Cdiv class=\u0022group-right\u0022\u003E\n      \u003Cdiv class=\u0022field field-name-field-teaser-quote\u0022\u003E\u003Cp\u003EIt\u2019s great being a mentor and teaching undergraduates, but I\u2019ve also picked up a great deal of new knowledge from them along the way.\u003C\/p\u003E\n\u003C\/div\u003E\u003Cdiv class=\u0022field field-name-title\u0022\u003E\u003Ch2\u003ESenan Ebrahim\u003C\/h2\u003E\u003C\/div\u003E\u003Cdiv class=\u0022field field-name-field-professional-title\u0022\u003EMD\/PhD Student in Neuroscience\u003C\/div\u003E\u003Cdiv class=\u0022field field-name-node-link\u0022\u003E\u003Cp class=\u0022button-clear\u0022\u003E\u003Ca href=\u0022\/profiles\/senan-ebrahim\u0022 class=\u0022\u0022\u003EFull Profile\u003C\/a\u003E\u003C\/p\u003E\u003C\/div\u003E    \u003C\/div\u003E\n  \n\u003C\/div\u003E\n\n","\u003Cdiv  class=\u0022ds-2col-fluid node node-profile view-mode-quote clearfix\u0022\u003E\n\n  \n      \u003Cdiv class=\u0022group-left\u0022\u003E\n      \u003Cdiv class=\u0022field field-name-field-banner-image\u0022\u003E\u003C!-- scald=1939:profile_footer --\u003E\u003Cimg src=\u0022https:\/\/gsas.harvard.edu\/sites\/default\/files\/styles\/profile_footer\/public\/thumbnails\/image\/Andrea%20Tokranov.jpg?itok=WHrlW_y4\u0022 width=\u0022850\u0022 height=\u0022510\u0022 alt=\u0022Andrea Tokranov standing outdoors\u0022 title=\u0022Andrea Tokranov\u0022 \/\u003E\u003C!-- END scald=1939 --\u003E\u003C\/div\u003E    \u003C\/div\u003E\n  \n      \u003Cdiv class=\u0022group-right\u0022\u003E\n      \u003Cdiv class=\u0022field field-name-field-teaser-quote\u0022\u003E\u003Cp\u003EThe rewarding part of this work is being able to help communities.\u003C\/p\u003E\n\u003C\/div\u003E\u003Cdiv class=\u0022field field-name-title\u0022\u003E\u003Ch2\u003EAndrea Tokranov\u003C\/h2\u003E\u003C\/div\u003E\u003Cdiv class=\u0022field field-name-field-professional-title\u0022\u003EPhD Candidate\u003C\/div\u003E\u003Cdiv class=\u0022field field-name-node-link\u0022\u003E\u003Cp class=\u0022button-clear\u0022\u003E\u003Ca href=\u0022\/profiles\/andrea-tokranov\u0022 class=\u0022\u0022\u003EFull Profile\u003C\/a\u003E\u003C\/p\u003E\u003C\/div\u003E    \u003C\/div\u003E\n  \n\u003C\/div\u003E\n\n"]},"ckeditor_tabber":{"elements":"dl.ckeditor-tabber"},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"superfish":[{"id":"2","sf":{"delay":"400","animation":{"opacity":"show","height":"show"},"speed":"\u0027fast\u0027","autoArrows":false,"dropShadows":false,"disableHI":false},"plugins":{"supposition":true,"bgiframe":false,"supersubs":{"minWidth":"12","maxWidth":"27","extraWidth":1}}},{"id":"1","sf":{"delay":"400","animation":{"opacity":"show","height":"show"},"speed":"\u0027fast\u0027","autoArrows":false,"dropShadows":false,"disableHI":false},"plugins":{"supposition":true,"bgiframe":false,"supersubs":{"minWidth":"12","maxWidth":"27","extraWidth":1}}}]});</script>
+      <!--[if lt IE 9]>
+    <script src="/sites/all/themes/zen/js/html5-respond.js"></script>
+    <![endif]-->
+  </head>
+<body class="html front not-logged-in one-sidebar sidebar-second page-node page-node- page-node-1 node-type-page" >
+      <p id="skip-link">
+      <a href="#main-menu" class="element-invisible element-focusable">Jump to navigation</a>
+    </p>
+      <div id="page" class="clearfix">
+  <header id="header" role="banner">
+    <div class="wrapper">
+      <div id="header-content">
+                  <a href="/" title="Home" rel="home" id="logo"><img src="https://gsas.harvard.edu/sites/all/themes/gsas/logo.png" alt="Harvard University - The Graduate School of Arts and Sciences" id="bitmap-logo" /><img src="/sites/all/themes/gsas/logo.svg" id="svg-logo" alt="Harvard University - The Graduate School of Arts and Sciences" /></a>
+                          <hgroup id="name-and-slogan">
+                          <h1 id="site-name">
+                <a href="/" title="Home" rel="home"><span>Harvard University - The Graduate School of Arts and Sciences</span></a>
+              </h1>
+            
+                      </hgroup><!-- /#name-and-slogan -->
+                
+          <div class="header__region region region-header">
+    <div id="block-superfish-2" class="block block-superfish plain first odd">
+  <div class="block-inner">
+                <div class="content">
+      <ul id="superfish-2" class="menu sf-menu sf-menu-global-navigation sf-horizontal sf-style-none sf-total-items-5 sf-parent-items-1 sf-single-items-4 fouc"><li id="menu-1080-2" class="first odd sf-item-1 sf-depth-1 menu-item sf-no-children"><a href="/news" class="sf-depth-1">News</a></li><li id="menu-1081-2" class="middle even sf-item-2 sf-depth-1 menu-item sf-no-children"><a href="/events" class="sf-depth-1">Events</a></li><li id="menu-1082-2" class="middle odd sf-item-3 sf-depth-1 menu-item sf-total-children-4 sf-parent-children-0 sf-single-children-4 menuparent"><a href="/alumni-association" class="sf-depth-1 menuparent">Alumni Association</a><ul><li id="menu-1201-2" class="first odd sf-item-1 sf-depth-2 menu-item sf-no-children"><a href="/alumni-association/alumni-awards" class="sf-depth-2">Awards</a></li><li id="menu-1200-2" class="middle even sf-item-2 sf-depth-2 menu-item sf-no-children"><a href="/alumni-association/connect" class="sf-depth-2">Connect</a></li><li id="menu-1202-2" class="middle odd sf-item-3 sf-depth-2 menu-item sf-no-children"><a href="/alumni-association/alumni-council" class="sf-depth-2">Council</a></li><li id="menu-1989-2" class="last even sf-item-4 sf-depth-2 menu-item sf-no-children"><a href="/colloquy-magazine-archive" class="sf-depth-2">Magazine</a></li></ul></li><li id="menu-1083-2" class="middle even sf-item-4 sf-depth-1 menu-item sf-no-children"><a href="https://community.alumni.harvard.edu/give/16039782" class="sf-depth-1">Make a Gift</a></li><li id="menu-1391-2" class="last odd sf-item-5 sf-depth-1 menu-item sf-no-children"><a href="/about/contact" class="sf-depth-1">Contact</a></li></ul>    </div>
   </div>
-
-	<div class="top-level">
-    <div class="sticky-background"></div>
-		<div class="wrap">
-	  		<div class="title bk3-1of3">
-				<div class="in">
-		  			<strong><a href="/" class="logo ir ">Harvard College Admissions &amp; Financial Aid</a></strong>
-				</div>
-			</div>
-			<div class="header-toolbar right-align in bk4-2of3">
-	  			<ul class="header-toolbar-triggers row">
-					<li><a href="#search" data-target="search-global" class="search"><span class="icon-search"></span><span class="nodisplay">Search</span></a></li>
-					<li><a href="#global-menu" data-target="nav" class="menu"><span class="icon-menu"></span><span class="nodisplay">Menu</span></a></li>
-				</ul>
-	  			<div class="header-toolbar-window">
-		  			<div class="in">
-            			  <div class="region region-utility-links">
-    <nav id="block-menu-menu-utility-links" class="block block-menu" aria-labelledby="menu-utility-links" role="navigation">
-
-    <h2 class="element-invisible" id="menu-utility-links">Utility Links</h2>
+</div><!-- /.block -->
+<div id="block-views-programs-of-studay-block-1" class="block block-views audience-jump-menu plain last even">
+  <div class="block-inner">
+              <h2 class="block__title block-title">Info for</h2>
+            <div class="content">
+      <div class="view view-programs-of-studay view-id-programs_of_studay view-display-id-block_1 view-dom-id-dae53f04e1b469b20a6e4180cdf4bbf5">
+        
   
-  <div class="content">
-    <ul class="utility-links utility-links--primary"><li class="first leaf menu-level-1"><a href="http://my.harvard.edu" title="">my.harvard</a></li>
-<li class="leaf menu-level-1"><a href="/frequently-asked-questions" title="">FAQs</a></li>
-<li class="leaf menu-level-1"><a href="https://www.directory.harvard.edu/phonebook/" title="">Directory</a></li>
-<li class="last leaf menu-level-1"><a href="/college-events" title="">College Events</a></li>
-</ul><ul class="utility-links utility-links--secondary"><li class="utility-links__link--admitted-students"><a href="/admitted-students-login">Admitted Students</a></li></ul>  </div>
-</nav>
+  
+      <div class="view-content">
+      <form action="/events/coffee-hour-professor-karine-gibbs" method="post" id="ctools-jump-menu" accept-charset="UTF-8"><div><div class="container-inline"><div class="form-item form-type-select form-item-jump">
+ <select class="ctools-jump-menu-select ctools-jump-menu-change form-select" id="edit-jump" name="jump"><option value="" selected="selected">- Choose -</option><option value="656d405c884ed5d728042f32a83a92b3::/audiences/prospective-students">  
+          Prospective Students  </option><option value="add95b451e4d5d33853ef0147f3c7995::/audiences/students">  
+          Students  </option><option value="31d7280f57933ca2757fd65bf7375ade::/audiences/alumni">  
+          Alumni  </option><option value="52cedf09340f69ba73e470fd1aef6c21::/audiences/information-faculty">  
+          Faculty  </option></select>
+</div>
+<input class="ctools-jump-menu-button ctools-jump-menu-hide form-submit" type="submit" id="edit-go" name="op" value="Go" /></div><input type="hidden" name="form_build_id" value="form-NNGRQvSHIcibyP_T3RYwDYFFMN8yUbuPnnz7Cw6w61k" />
+<input type="hidden" name="form_id" value="ctools_jump_menu" />
+</div></form>    </div>
+  
+  
+  
+  
+  
+  
+</div>    </div>
   </div>
-            <div class="search-wrapper">
-              <form action="/search-results" method="get" id="search" class="search search-global">
-                <div class="search-wrap">
-                  <label for="searchtext">Search:</label>
-                  <div class="form-input-search">
-                    <input type="text" id="searchtext" name="searchtext" />
-                  </div>
-                  <div class="form-input-submit">
-                    <button type="submit" class="icon-search"><span class="element-invisible">Submit search</span></button>
-                  </div>
-                </div>
-              </form>
-            </div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-  <nav id="global-menu" class="global-nav nav" role="navigation" aria-labelledby="menu-primary-menu">
-    <div class="wrap">
-      <div class="in">
-          <div class="region region-header">
-    <div id="block-menu-menu-primary-menu" class="block block-menu" aria-labelledby="menu-primary-menu">
-
-    <h2 class="element-invisible" id="menu-primary-menu">Main menu</h2>
-  
-  <div class="content">
-    <ul class="menu"><li class="first leaf"><a href="/about" title="">About</a></li>
-<li class="leaf"><a href="/admissions" title="">Admissions</a></li>
-<li class="leaf"><a href="/financial-aid" title="">Financial Aid</a></li>
-<li class="leaf"><a href="/academics" title="">Academics</a></li>
-<li class="last leaf"><a href="/student-residentiallife" title="">Student &amp; Residential Life</a></li>
-</ul>  </div>
-</div>
+</div><!-- /.block -->
   </div>
-      </div>
-    </div>
-  </nav>
-
-</header>
-<!-- END inc/page-header.php -->
-
-  <div>
-    <div id="page-wrapper"><div id="page">
-
-      
-      
-      
-      <div id="main-wrapper"><div id="main" class="clearfix" role="main" tabindex="-1"><a name="main-top" id="main-top"><span class="element-invisible">Main content</span></a>
-
-        <div id="content" class="column"><div class="section">
-                    <a id="main-content"><span class="element-invisible">Main content</span></a>
-                                                    <div class="region region-content">
-    <div id="block-system-main" class="block block-system">
-
-    
-  <div class="content">
-      <div class="panel-panel panel-col-alert">
-    <div class="inside"><div class="panel-pane pane-entity-field pane-node-field-landing-page-alert page-title"  >
-  
-      
-  
-  <div class="pane-content">
-    <div class="field field-name-field-landing-page-alert field-type-entityreference field-label-hidden">
-    <div class="field-items">
-          <div class="field-item harvard-box even"><h2></h2>
-</div>
-      </div>
-</div>
+      </div><!-- /#header-content -->
+    </div><!-- /.wrapper -->
+  </header>
+  <div id="navigation">
+    <div class="wrapper">
+      <div class="navigation-content">
+                  <div class="region region-navigation">
+    <div id="block-system-main-menu" class="block block-system plain block-menu first odd" role="navigation">
+  <div class="block-inner">
+                <div class="content">
+      <ul class="menu"><li class="menu__item is-expanded first expanded"><a href="/programs-study" class="menu__link">Programs of Study</a><ul class="menu"><li class="menu__item is-leaf first leaf"><a href="/programs-study/degree-programs" class="menu__link">Degree Programs</a></li>
+<li class="menu__item is-leaf leaf"><a href="/programs-study/non-degree-programs" class="menu__link">Non-Degree Programs</a></li>
+<li class="menu__item is-leaf leaf"><a href="/programs-study/secondary-fields" class="menu__link">Secondary Fields</a></li>
+<li class="menu__item is-leaf last leaf"><a href="/joint-degrees" class="menu__link">Combined Degrees</a></li>
+</ul></li>
+<li class="menu__item is-expanded expanded"><a href="/admissions" class="menu__link">Admissions</a><ul class="menu"><li class="menu__item is-leaf first leaf"><a href="/admissions/apply" class="menu__link">Apply</a></li>
+<li class="menu__item is-leaf leaf"><a href="/admissions/tuition-fees" class="menu__link">Tuition &amp; Fees</a></li>
+<li class="menu__item is-leaf leaf"><a href="/admissions/frequently-asked-questions-master%E2%80%99s-and-phd-applicants" class="menu__link">FAQs</a></li>
+<li class="menu__item is-leaf leaf"><a href="/admissions/request-information" class="menu__link">Express Interest</a></li>
+<li class="menu__item is-leaf last leaf"><a href="/admissions/why-gsas" class="menu__link">Why GSAS?</a></li>
+</ul></li>
+<li class="menu__item is-expanded expanded"><a href="/financial-support" class="menu__link">Financial Support</a><ul class="menu"><li class="menu__item is-collapsed first collapsed"><a href="/financial-support/funding-aid" class="menu__link">Funding and Aid</a></li>
+<li class="menu__item is-collapsed collapsed"><a href="/financial-support/fellowships" class="menu__link">Fellowships</a></li>
+<li class="menu__item is-leaf leaf"><a href="/financial-support/financial-aid-policies" class="menu__link">Financial Aid Policies</a></li>
+<li class="menu__item is-leaf last leaf"><a href="/financial-support/faqs" class="menu__link">FAQs</a></li>
+</ul></li>
+<li class="menu__item is-expanded expanded"><a href="/academics" class="menu__link">Academics</a><ul class="menu"><li class="menu__item is-leaf first leaf"><a href="/academics/dissertations" class="menu__link">Dissertations</a></li>
+<li class="menu__item is-leaf leaf"><a href="/academics/teaching" class="menu__link">Teaching</a></li>
+<li class="menu__item is-collapsed collapsed"><a href="/academics/professional-development" class="menu__link">Professional Development</a></li>
+<li class="menu__item is-leaf leaf"><a href="/academics/policies-and-handbook" class="menu__link">Student Handbook</a></li>
+<li class="menu__item is-leaf leaf"><a href="/academics/commencement" class="menu__link">Commencement</a></li>
+<li class="menu__item is-leaf last leaf"><a href="/programs-of-study/divisions/harvard-integrated-life-sciences" class="menu__link">Harvard Integrated Life Sciences</a></li>
+</ul></li>
+<li class="menu__item is-expanded expanded"><a href="/student-life" class="menu__link">Student Life</a><ul class="menu"><li class="menu__item is-leaf first leaf"><a href="/student-life/resources" class="menu__link">Resources</a></li>
+<li class="menu__item is-collapsed collapsed"><a href="/student-life/advice-new-students" class="menu__link">New Students</a></li>
+<li class="menu__item is-leaf leaf"><a href="/student-life/housing-dining" class="menu__link">Housing</a></li>
+<li class="menu__item is-leaf leaf"><a href="/student-life/harvard-resources/cambridge-and-boston" class="menu__link">Cambridge &amp; Boston</a></li>
+<li class="menu__item is-leaf leaf"><a href="/student-life/student-alumni-profiles" class="menu__link">Student &amp; Alumni Profiles</a></li>
+<li class="menu__item is-leaf leaf"><a href="/student-life/januarygsas" class="menu__link">January@GSAS</a></li>
+<li class="menu__item is-leaf leaf"><a href="/student-life/harvard-resources/dudley-house" class="menu__link">Student Center</a></li>
+<li class="menu__item is-leaf last leaf"><a href="/student-life/harvard-resources/student-groups" class="menu__link">Student Groups</a></li>
+</ul></li>
+<li class="menu__item is-expanded expanded"><a href="/diversity-gsas" class="menu__link">Diversity</a><ul class="menu"><li class="menu__item is-leaf first leaf"><a href="/diversity/recruitment" class="menu__link">Recruitment Events</a></li>
+<li class="menu__item is-leaf leaf"><a href="/diversity/student-groups" class="menu__link">Student Groups</a></li>
+<li class="menu__item is-collapsed collapsed"><a href="/diversity/outreach-programs" class="menu__link">Outreach Programs</a></li>
+<li class="menu__item is-leaf last leaf"><a href="/diversity/fellow" class="menu__link">Diversity and Inclusion Fellow</a></li>
+</ul></li>
+<li class="menu__item is-expanded last expanded"><a href="/about" class="menu__link">About</a><ul class="menu"><li class="menu__item is-leaf first leaf"><a href="/about/deans-welcome" class="menu__link">Dean’s Welcome</a></li>
+<li class="menu__item is-leaf leaf"><a href="/about/history" class="menu__link">History</a></li>
+<li class="menu__item is-leaf leaf"><a href="/about/gsas-glance" class="menu__link">GSAS at a Glance</a></li>
+<li class="menu__item is-leaf leaf"><a href="/about/staff" class="menu__link">Staff</a></li>
+<li class="menu__item is-leaf last leaf"><a href="/about/contact" class="menu__link">Contact</a></li>
+</ul></li>
+</ul>    </div>
   </div>
+</div><!-- /.block -->
+<div id="block-superfish-1" class="block block-superfish plain even">
+  <div class="block-inner">
+                <div class="content">
+      <ul id="superfish-1" class="menu sf-menu sf-main-menu sf-horizontal sf-style-none sf-total-items-7 sf-parent-items-7 sf-single-items-0 fouc"><li id="menu-1074-1" class="first odd sf-item-1 sf-depth-1 sf-total-children-4 sf-parent-children-0 sf-single-children-4 menuparent"><a href="/programs-study" class="sf-depth-1 menuparent">Programs of Study</a><ul><li id="menu-1154-1" class="first odd sf-item-1 sf-depth-2 sf-no-children"><a href="/programs-study/degree-programs" class="sf-depth-2">Degree Programs</a></li><li id="menu-1153-1" class="middle even sf-item-2 sf-depth-2 sf-no-children"><a href="/programs-study/non-degree-programs" class="sf-depth-2">Non-Degree Programs</a></li><li id="menu-1156-1" class="middle odd sf-item-3 sf-depth-2 sf-no-children"><a href="/programs-study/secondary-fields" class="sf-depth-2">Secondary Fields</a></li><li id="menu-2128-1" class="last even sf-item-4 sf-depth-2 sf-no-children"><a href="/joint-degrees" class="sf-depth-2">Combined Degrees</a></li></ul></li><li id="menu-1075-1" class="middle even sf-item-2 sf-depth-1 sf-total-children-5 sf-parent-children-0 sf-single-children-5 menuparent"><a href="/admissions" class="sf-depth-1 menuparent">Admissions</a><ul><li id="menu-1161-1" class="first odd sf-item-1 sf-depth-2 sf-no-children"><a href="/admissions/apply" class="sf-depth-2">Apply</a></li><li id="menu-1163-1" class="middle even sf-item-2 sf-depth-2 sf-no-children"><a href="/admissions/tuition-fees" class="sf-depth-2">Tuition &amp; Fees</a></li><li id="menu-1164-1" class="middle odd sf-item-3 sf-depth-2 sf-no-children"><a href="/admissions/frequently-asked-questions-master%E2%80%99s-and-phd-applicants" class="sf-depth-2">FAQs</a></li><li id="menu-1165-1" class="middle even sf-item-4 sf-depth-2 sf-no-children"><a href="/admissions/request-information" class="sf-depth-2">Express Interest</a></li><li id="menu-1166-1" class="last odd sf-item-5 sf-depth-2 sf-no-children"><a href="/admissions/why-gsas" class="sf-depth-2">Why GSAS?</a></li></ul></li><li id="menu-1076-1" class="middle odd sf-item-3 sf-depth-1 sf-total-children-4 sf-parent-children-2 sf-single-children-2 menuparent"><a href="/financial-support" class="sf-depth-1 menuparent">Financial Support</a><ul><li id="menu-1167-1" class="first odd sf-item-1 sf-depth-2 sf-total-children-4 sf-parent-children-0 sf-single-children-4 menuparent"><a href="/financial-support/funding-aid" class="sf-depth-2 menuparent">Funding and Aid</a><ul><li id="menu-3840-1" class="first odd sf-item-1 sf-depth-3 sf-no-children"><a href="/financial-support/funding-and-aid/federal-student-aid" class="sf-depth-3">Federal Student Aid</a></li><li id="menu-3839-1" class="middle even sf-item-2 sf-depth-3 sf-no-children"><a href="/financial-support/funding-aid/consumer-information" class="sf-depth-3">Consumer Information</a></li><li id="menu-3841-1" class="middle odd sf-item-3 sf-depth-3 sf-no-children"><a href="/financial-support/funding-and-aid/other-sources-funding" class="sf-depth-3">Other Sources of Funding</a></li><li id="menu-3842-1" class="last even sf-item-4 sf-depth-3 sf-no-children"><a href="/financial-support/funding-and-aid/special-note-concerning-us-income-taxes" class="sf-depth-3">Special Note Concerning US Income Taxes</a></li></ul></li><li id="menu-1169-1" class="middle even sf-item-2 sf-depth-2 sf-total-children-3 sf-parent-children-0 sf-single-children-3 menuparent"><a href="/financial-support/fellowships" class="sf-depth-2 menuparent">Fellowships</a><ul><li id="menu-2081-1" class="first odd sf-item-1 sf-depth-3 sf-no-children"><a href="/financial-support/fellowships/dissertation-completion-fellowships" class="sf-depth-3">Dissertation Completion Fellowships</a></li><li id="menu-2080-1" class="middle even sf-item-2 sf-depth-3 sf-no-children"><a href="/financial-support/fellowships/fellowships-early-years" class="sf-depth-3">Fellowships for the Early Years</a></li><li id="menu-1168-1" class="last odd sf-item-3 sf-depth-3 sf-no-children"><a href="/financial-support/list-fellowships" class="sf-depth-3">Summer, Research, and Travel Fellowships</a></li></ul></li><li id="menu-3639-1" class="middle odd sf-item-3 sf-depth-2 sf-no-children"><a href="/financial-support/financial-aid-policies" class="sf-depth-2">Financial Aid Policies</a></li><li id="menu-2083-1" class="last even sf-item-4 sf-depth-2 sf-no-children"><a href="/financial-support/faqs" class="sf-depth-2">FAQs</a></li></ul></li><li id="menu-1077-1" class="middle even sf-item-4 sf-depth-1 sf-total-children-6 sf-parent-children-1 sf-single-children-5 menuparent"><a href="/academics" class="sf-depth-1 menuparent">Academics</a><ul><li id="menu-1174-1" class="first odd sf-item-1 sf-depth-2 sf-no-children"><a href="/academics/dissertations" class="sf-depth-2">Dissertations</a></li><li id="menu-1172-1" class="middle even sf-item-2 sf-depth-2 sf-no-children"><a href="/academics/teaching" class="sf-depth-2">Teaching</a></li><li id="menu-1176-1" class="middle odd sf-item-3 sf-depth-2 sf-total-children-5 sf-parent-children-0 sf-single-children-5 menuparent"><a href="/academics/professional-development" class="sf-depth-2 menuparent">Professional Development</a><ul><li id="menu-1921-1" class="first odd sf-item-1 sf-depth-3 sf-no-children"><a href="/academics/professional-development/harvard-horizons" class="sf-depth-3">Harvard Horizons</a></li><li id="menu-1171-1" class="middle even sf-item-2 sf-depth-3 sf-no-children"><a href="/academics/courses-registration" class="sf-depth-3">Graduate Seminars</a></li><li id="menu-1557-1" class="middle odd sf-item-3 sf-depth-3 sf-no-children"><a href="/academics/research/gsas-research-workshops" class="sf-depth-3">GSAS Research Workshops</a></li><li id="menu-1556-1" class="middle even sf-item-4 sf-depth-3 sf-no-children"><a href="/academics/research/graduate-consortia" class="sf-depth-3">Graduate Consortia</a></li><li id="menu-3544-1" class="last odd sf-item-5 sf-depth-3 sf-no-children"><a href="/center-writing-and-communicating-ideas" class="sf-depth-3">Center for Writing and Communicating Ideas</a></li></ul></li><li id="menu-1177-1" class="middle even sf-item-4 sf-depth-2 sf-no-children"><a href="/academics/policies-and-handbook" class="sf-depth-2">Student Handbook</a></li><li id="menu-1178-1" class="middle odd sf-item-5 sf-depth-2 sf-no-children"><a href="/academics/commencement" class="sf-depth-2">Commencement</a></li><li id="menu-1922-1" class="last even sf-item-6 sf-depth-2 sf-no-children"><a href="/programs-of-study/divisions/harvard-integrated-life-sciences" class="sf-depth-2">Harvard Integrated Life Sciences</a></li></ul></li><li id="menu-1078-1" class="middle odd sf-item-5 sf-depth-1 sf-total-children-8 sf-parent-children-1 sf-single-children-7 menuparent"><a href="/student-life" class="sf-depth-1 menuparent">Student Life</a><ul><li id="menu-1183-1" class="first odd sf-item-1 sf-depth-2 sf-no-children"><a href="/student-life/resources" class="sf-depth-2">Resources</a></li><li id="menu-1185-1" class="middle even sf-item-2 sf-depth-2 sf-total-children-2 sf-parent-children-0 sf-single-children-2 menuparent"><a href="/student-life/advice-new-students" class="sf-depth-2 menuparent">New Students</a><ul><li id="menu-2126-1" class="first odd sf-item-1 sf-depth-3 sf-no-children"><a href="/student-life/new-students/international-student-faq" class="sf-depth-3">International Student FAQ</a></li><li id="menu-2125-1" class="last even sf-item-2 sf-depth-3 sf-no-children"><a href="/student-life/new-students/faq-new-students" class="sf-depth-3">New Student FAQ</a></li></ul></li><li id="menu-1179-1" class="middle odd sf-item-3 sf-depth-2 sf-no-children"><a href="/student-life/housing-dining" class="sf-depth-2">Housing</a></li><li id="menu-1180-1" class="middle even sf-item-4 sf-depth-2 sf-no-children"><a href="/student-life/harvard-resources/cambridge-and-boston" class="sf-depth-2">Cambridge &amp; Boston</a></li><li id="menu-1184-1" class="middle odd sf-item-5 sf-depth-2 sf-no-children"><a href="/student-life/student-alumni-profiles" class="sf-depth-2">Student &amp; Alumni Profiles</a></li><li id="menu-1395-1" class="middle even sf-item-6 sf-depth-2 sf-no-children"><a href="/student-life/januarygsas" class="sf-depth-2">January@GSAS</a></li><li id="menu-2079-1" class="middle odd sf-item-7 sf-depth-2 sf-no-children"><a href="/student-life/harvard-resources/dudley-house" class="sf-depth-2">Student Center</a></li><li id="menu-2140-1" class="last even sf-item-8 sf-depth-2 sf-no-children"><a href="/student-life/harvard-resources/student-groups" class="sf-depth-2">Student Groups</a></li></ul></li><li id="menu-1079-1" class="middle even sf-item-6 sf-depth-1 sf-total-children-4 sf-parent-children-1 sf-single-children-3 menuparent"><a href="/diversity-gsas" class="sf-depth-1 menuparent">Diversity</a><ul><li id="menu-1192-1" class="first odd sf-item-1 sf-depth-2 sf-no-children"><a href="/diversity/recruitment" class="sf-depth-2">Recruitment Events</a></li><li id="menu-1976-1" class="middle even sf-item-2 sf-depth-2 sf-no-children"><a href="/diversity/student-groups" class="sf-depth-2">Student Groups</a></li><li id="menu-1975-1" class="middle odd sf-item-3 sf-depth-2 sf-total-children-2 sf-parent-children-0 sf-single-children-2 menuparent"><a href="/diversity/outreach-programs" class="sf-depth-2 menuparent">Outreach Programs</a><ul><li id="menu-1946-1" class="first odd sf-item-1 sf-depth-3 sf-no-children"><a href="/diversity/research-scholar-initiative" class="sf-depth-3">Research Scholar Initiative</a></li><li id="menu-1994-1" class="last even sf-item-2 sf-depth-3 sf-no-children"><a href="/diversity/outreach-programs/summer-research-opportunities-harvard" class="sf-depth-3">Summer Research Opportunities at Harvard</a></li></ul></li><li id="menu-3640-1" class="last even sf-item-4 sf-depth-2 sf-no-children"><a href="/diversity/fellow" class="sf-depth-2">Diversity and Inclusion Fellow</a></li></ul></li><li id="menu-241-1" class="last odd sf-item-7 sf-depth-1 sf-total-children-5 sf-parent-children-0 sf-single-children-5 menuparent"><a href="/about" class="sf-depth-1 menuparent">About</a><ul><li id="menu-1195-1" class="first odd sf-item-1 sf-depth-2 sf-no-children"><a href="/about/deans-welcome" class="sf-depth-2">Dean’s Welcome</a></li><li id="menu-1197-1" class="middle even sf-item-2 sf-depth-2 sf-no-children"><a href="/about/history" class="sf-depth-2">History</a></li><li id="menu-1196-1" class="middle odd sf-item-3 sf-depth-2 sf-no-children"><a href="/about/gsas-glance" class="sf-depth-2">GSAS at a Glance</a></li><li id="menu-1393-1" class="middle even sf-item-4 sf-depth-2 sf-no-children"><a href="/about/staff" class="sf-depth-2">Staff</a></li><li id="menu-1392-1" class="last odd sf-item-5 sf-depth-2 sf-no-children"><a href="/about/contact" class="sf-depth-2">Contact</a></li></ul></li></ul>    </div>
+  </div>
+</div><!-- /.block -->
+<div id="block-solr-search-block-solr-search-block" class="block block-solr-search-block last odd">
+  <div class="block-inner">
+                <div class="content">
+      <form action="/admissions/request-information" method="post" id="search-block-form" accept-charset="UTF-8"><div><div class="container-inline form-wrapper" id="edit-inline"><div class="form-item form-type-textfield form-item-solr-keyword">
+ <input type="text" id="edit-solr-keyword" name="solr_keyword" value="" size="60" maxlength="128" class="form-text" />
+</div>
+<div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="" value="Search" class="form-submit" /></div></div><input type="hidden" name="form_build_id" value="form-aLpEVzZJufXodPYHTrfrsF44T4jLWLp_Kdhjt1yzAiQ" />
+<input type="hidden" name="form_id" value="solr_search_box_form" />
+</div></form>    </div>
+  </div>
+</div><!-- /.block -->
+  </div>
+      </div><!-- /#navigation-content -->
+    </div><!-- /.wrapper -->
+  </div><!-- /#navigation -->
+  <div id="main">
+    <div class="wrapper">
+      <div id="banner">
+          <div class="region region-highlighted">
+    <div id="block-views-slideshows-block" class="block block-views plain first odd">
+  <div class="block-inner">
+                <div class="content">
+      <div class="view view-slideshows view-id-slideshows view-display-id-block view-dom-id-283954453252fe14ee16731b3ac24acd">
+        
+  
+  
+      <div class="view-content">
+          <ul class="slides">          <li class="views-row">  
+  <div class="views-field views-field-nothing">        <span class="field-content"><div class="slide-outer-wrapper">
+<div class="field field-name-field-image"><!-- scald=1958:large_banner --><img src="https://gsas.harvard.edu/sites/default/files/styles/large_banner/public/thumbnails/image/Becca%20Voelcker%2008.jpg?itok=I--nVPdr" width="1400" height="690" alt="Becca Voelcker standing outside Richards Hall" title="Becca Voelcker 08.jpg" /><!-- END scald=1958 --></div>
+<div class="slide-text-wrapper">
+     <div class="slide-text-gutter">
+          <div class="group-slide-text">
+               <div class="field field-name-field-link-type">FEATURE STORY</div>
+               <div class="field field-name-title"><h2>A Sense of Place</h2></div>
+               <div class="field field-name-field-caption"><p>How Becca Voelcker brings her love of cinema to her work as a GSAS resident advisor</p>
 
-  
-  </div>
-</div>
-  </div>
-<div class="panel-display panel-3col-33-stacked  clearfix" >
-      <div class="panel-panel panel-col-top">
-      <div class="inside"><div class="panel-pane pane-entity-field pane-node-field-carousel-items"  >
-  
-      
-  
-  <div class="pane-content">
-    <div class="field field-name-field-carousel-items field-type-field-collection field-label-hidden">
-    <div class="field-items">
-          <div class="field-item even"><div  id="flexslider-1" class="flexslider optionset-landing-page-carousel">
-  <ul class="slides"><li><div class="entity entity-field-collection-item field-collection-item-field-carousel-items clearfix" about="/field-collection/field-carousel-items/541" typeof="">
-  <div class="content">
-    <div class="carousel-container">
-      <div class="carousel-image">
-        <a href="https://news.harvard.edu/gazette/story/2017/11/altered-states-takes-harvard-student-down-research-rabbit-hole/"><div class="field field-name-field-image field-type-image field-label-hidden">
-    <div class="field-items">
-          <div class="field-item even"><img typeof="foaf:Image" src="https://college.harvard.edu/sites/default/files/_landing_carousel/altered_states_032.png" alt="Over winter break, Jensen Davis says, she will be back at Houghton to work on a paper she is writing about LSD’s therapeutic use in 1950s Hollywood. Jon Chase/Harvard Staff Photographer" /></div>
-      </div>
-</div>
-</a>              </div>
-      <div class="carousel-overlay">
-        <div class="carousel-fields">
-          <div class="slide-title">
-            <a href="https://news.harvard.edu/gazette/story/2017/11/altered-states-takes-harvard-student-down-research-rabbit-hole/"><div class="field field-name-field-title field-type-text field-label-hidden">
-    <div class="field-items">
-          <div class="field-item even">Turn on, tune in, geek out </div>
-      </div>
-</div>
-</a>          </div>
-          <div class="slide-description">
-            <div class="field field-name-field-body-text field-type-text-long field-label-hidden">
-    <div class="field-items">
-          <div class="field-item even">‘Altered States’ collection takes student down research rabbit hole.</div>
-      </div>
+<p><a class="button-clear" href="/news/stories/sense-place">Read More</a></p>
 </div>
           </div>
-        </div>
+          <div class="slide-text-extension"></div>
+     </div>
+</div>
+</div></span>  </div></li>
+          <li class="views-row">  
+  <div class="views-field views-field-nothing">        <span class="field-content"><div class="slide-outer-wrapper">
+<div class="field field-name-field-image"><!-- scald=1946:large_banner --><img src="https://gsas.harvard.edu/sites/default/files/styles/large_banner/public/thumbnails/image/102417_Houghton_018_0.jpg?itok=yBLq7bD_" width="1400" height="690" alt="An open book with hand-drawn symbols and illustrations. The pages are folded like an accordion." title="Indonesian Book" /><!-- END scald=1946 --></div>
+<div class="slide-text-wrapper">
+     <div class="slide-text-gutter">
+          <div class="group-slide-text">
+               <div class="field field-name-field-link-type">FEATURE STORY</div>
+               <div class="field field-name-title"><h2>A Cabinet of Wonders</h2></div>
+               <div class="field field-name-field-caption"><p>As Houghton Library turns 75, former and current GSAS students look back at the objects that inspired their research</p>
+
+<p><a class="button-clear" href="/news/stories/cabinet-wonders">Read More</a></p>
+
+<p>&nbsp;</p>
+</div>
+          </div>
+          <div class="slide-text-extension"></div>
+     </div>
+</div>
+</div></span>  </div></li>
+          <li class="views-row">  
+  <div class="views-field views-field-nothing">        <span class="field-content"><div class="slide-outer-wrapper">
+<div class="field field-name-field-image"><!-- scald=1964:large_banner --><img src="https://gsas.harvard.edu/sites/default/files/styles/large_banner/public/thumbnails/image/IMG_7226.JPG?itok=n58jpQ_y" width="1400" height="690" alt="Woman giving a presentation at January@GSAS" title="JanuaryatGSAS.JPG" /><!-- END scald=1964 --></div>
+<div class="slide-text-wrapper">
+     <div class="slide-text-gutter">
+          <div class="group-slide-text">
+               <div class="field field-name-field-link-type">JANUARY@GSAS</div>
+               <div class="field field-name-title"><h2>Try Something New This January!</h2></div>
+               <div class="field field-name-field-caption"><p><a href="/student-life/januarygsas">January@GSAS</a> is an annual two-week program that takes place between the fall and spring terms at Harvard.&nbsp; This is your chance to explore cross-disciplinary opportunities, get to know alumni, and kickstart your career. January@GSAS takes place between January 8 and January 19, 2018</p>
+
+<p><a class="button-clear" href="/student-life/januarygsas">See all opportunities</a></p>
+
+<p><a class="button-clear" href="https://gsc.fas.harvard.edu/januarygsas">GSC Mini Courses</a></p>
+
+<p><a class="button-clear" href="/events/business-applications-workshops">Business Applications Workshops</a></p>
+</div>
+          </div>
+          <div class="slide-text-extension"></div>
+     </div>
+</div>
+</div></span>  </div></li>
+      </ul>    </div>
+  
+  
+  
+  
+  
+  
+</div>    </div>
+  </div>
+</div><!-- /.block -->
+<div id="block-ds-extras-page-banner" class="block block-ds-extras plain last even">
+  <div class="block-inner">
+                <div class="content">
+      <div class="field field-name-banner"><div class="gray-banner"><div class="position-wrapper"><div class="gutter-wrapper"><div class="banner-text banner-column"><div class="wrapper"><h1>Home</h1></div></div></div></div></div></div>    </div>
+  </div>
+</div><!-- /.block -->
+  </div>
       </div>
+      <div id="main-content">
+        <div id="content" class="column" role="main">
+			<div class="wrapper">
+          <div class="utilities">
+      	          	              </div>
+          <a id="main-content"></a>
+                                <section class="region region-content">
+      <div id="block-block-19" class="block block-block plain first odd">
+  <div class="block-inner">
+                <div class="content">
+      <p>Brilliant?</p>
+
+<p>Passionate?</p>
+
+<p>Dedicated?</p>
+
+<p>Join us.</p>
     </div>
   </div>
-</div>
-</li>
-</ul></div>
-</div>
-      </div>
-</div>
-  </div>
+</div><!-- /.block -->
+
+
+<div  class="ds-1col node node-page view-mode-full clearfix">
 
   
-  </div>
-<div class="panel-separator"></div><div class="panel-pane pane-node-links link-wrapper"  >
-  
-      
-  
-  <div class="pane-content">
-      </div>
+  <div class="field field-name-body field-type-text-with-summary field-label-hidden" ><p>The Graduate School of Arts and Sciences (GSAS) at Harvard University&nbsp;is where scholarship and innovation meet, where ideas are challenged and theories developed, where new knowledge is created, and where scholars emerge.</p>
 
-  
-  </div>
-</div>
-    </div>
-  
-  <div class="center-wrapper">
-    <div class="container">
-            <div class="row">
-      <div class="college-page-title">
-        <div class="inside"><div class="panel-pane pane-entity-field pane-node-field-on-page-title"  >
-  
-      
-  
-  <div class="pane-content">
-    <div class="field field-name-field-on-page-title field-type-text field-label-hidden">
-    <div class="field-items">
-          <div class="field-item even">Home at Harvard</div>
-      </div>
-</div>
-  </div>
+<p>We actively recruit and cultivate a <a href="/diversity-gsas">diverse community of students</a> across <a href="/programs-study/degree-programs">56&nbsp;fields of study</a>. We also <a href="/financial-support">guarantee 5 years of funding</a> to all PhD candidates.</p>
+<!--<p>It uses a dictionary of over <strong>200 Latin words</strong>, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>-->
+</div></div>
 
-  
-  </div>
-</div>
-      </div>
-    </div>
-      
-            <div class="row">
-      <div class="harvard-grid-wrapper clearfix">
-        <div class="inside"><div class="panel-pane pane-entity-field pane-node-field-grid-items"  >
-  
-      
-  
-  <div class="pane-content">
-    <div class="field field-name-field-grid-items field-type-entityreference field-label-hidden">
-    <div class="field-items">
-          <div class="field-item instagram-social-feed even"><div class="fieldable-panels-pane">
-    <div class="field field-name-field-isf-last-photo field-type-instagram-social-feed-last-pic field-label-hidden">
-    <div class="field-items">
-          <div class="field-item even">
-<a href="https://www.instagram.com/deankhurana" target="_blank">
-  <div class="landing-page-recent-instagram">
-    <div class="field">
-      <div class="instagram-media ">
-        <img typeof="foaf:Image" class="instagram-photo" src="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/24175390_583419838663525_4202956847272951808_n.jpg" alt="Getting ready to be hypnotized at the CEB show at Science Center B, 7:00 pm on Saturday.">
-      </div>
-    </div>
-    <div class="field">
-      <div class="instagram-caption">
-        <div>Follow<br>@deankhurana<br> on Instagram</div>
-      </div>
-    </div>
-  </div>
-</a>
-</div>
-      </div>
-</div>
-</div>
-</div>
-          <div class="field-item landing-page-curated-text odd"><a href="https://registrar.fas.harvard.edu/faculty-staff/exams/schedule" class="grid-cover"><span class="element-invisible"><p>Harvard College<br />Final Exam Schedule</p>
-</span></a><div class="fieldable-panels-pane">
-    <div class="field field-name-field-body-text field-type-text-long field-label-hidden">
-    <div class="field-items">
-          <div class="field-item even"><p>Harvard College<br />Final Exam Schedule</p><br />
-</div>
-      </div>
-</div>
-</div>
-</div>
-          <div class="field-item landing-page-curated-photo even"><div class="fieldable-panels-pane">
-    <a href="https://news.harvard.edu/gazette/story/2017/11/harvard-science-labs-collaboration-safety-and-sustainability/"><div class="field field-name-field-image field-type-image field-label-hidden">
-    <div class="field-items">
-          <div class="field-item even"><img typeof="foaf:Image" src="https://college.harvard.edu/sites/default/files/_landing_page_curated_photo/092917_betley_170_922.jpg" alt=" Alex Su ’18 works in the Betley Lab, which participates in an expanded lab recycling program while consistently meeting its monthly goal through the Shut the Sash Competition. In addition, lab members reduce waste by composting in their kitchen. " /></div>
-      </div>
-</div>
-<div class="field field-name-field-body-text field-type-text-long field-label-hidden">
-    <div class="field-items">
-          <div class="field-item even"><p>Inside Harvard’s green labs</p><br />
-</div>
-      </div>
-</div>
-</a></div>
-</div>
-          <div class="field-item landing-page-curated-text odd"><a href="http://college.harvard.edu/about/mission-and-vision" class="grid-cover"><span class="element-invisible"><p>Learn the Mission,<br />Vision, and History<br />of Harvard College</p>
-</span></a><div class="fieldable-panels-pane">
-    <div class="field field-name-field-body-text field-type-text-long field-label-hidden">
-    <div class="field-items">
-          <div class="field-item even"><p>Learn the Mission,<br />Vision, and History<br />of Harvard College</p><br />
-</div>
-      </div>
-</div>
-</div>
-</div>
-          <div class="field-item landing-page-curated-logo even"><a href="https://www.facebook.com/HarvardRecreation" class="grid-cover"><span class="element-invisible"><p>Learn the Mission,<br />Vision, and History<br />of Harvard College</p>
-</span></a><div class="fieldable-panels-pane">
-    <div class="field field-name-field-image field-type-image field-label-hidden">
-    <div class="field-items">
-          <div class="field-item even"><img typeof="foaf:Image" src="https://college.harvard.edu/sites/default/files/_landing_page_curated_logo/facebook.png" alt="Facebook" /></div>
-      </div>
-</div>
-<h3></h3>
-<div class="field field-name-field-content field-type-text-long field-label-hidden">
-    <div class="field-items">
-          <div class="field-item even"><h3 class="gamma">Follow Harvard Recreation<br />on Facebook</h3><br />
-</div>
-      </div>
-</div>
-</div>
-</div>
-          <div class="field-item landing-page-curated-photo odd"><div class="fieldable-panels-pane">
-    <a href="https://news.harvard.edu/gazette/story/2017/11/4-harvard-undergrads-are-rhodes-scholars/"><div class="field field-name-field-image field-type-image field-label-hidden">
-    <div class="field-items">
-          <div class="field-item even"><img typeof="foaf:Image" src="https://college.harvard.edu/sites/default/files/_landing_page_curated_photo/rhodes_building_fullsizeoutput_23d.png" alt="  Harvard students Xavier Gonzalez, Tania Fabo, Alan Yang, and Samarth Gupta have been named Rhodes Scholars and will attend the University of Oxford in October. Among the 28 colleges that comprise Oxford is Merton College (pictured)." /></div>
-      </div>
-</div>
-<div class="field field-name-field-body-text field-type-text-long field-label-hidden">
-    <div class="field-items">
-          <div class="field-item even"><p>Rhodes Scholars had<br />help along the way</p><br />
-</div>
-      </div>
-</div>
-</a></div>
-</div>
-          <div class="field-item landing-page-recent-feed even"><a href="/art-study-center-open-hours-4" class="grid-cover"><span class="element-invisible">Art Study Center Open Hours 32 Quincy Street Cambridge MA Mon., Dec. 4, 2017, 1 – 4 p.m. Through the...</span></a><div class="fieldable-panels-pane">
-    <div class="field field-name-field-feed-to-show field-type-last-feed field-label-hidden">
-    <div class="field-items">
-          <div class="field-item even"><div id="node-229426" class="node node-college-events node-promoted clearfix" about="/art-study-center-open-hours-4" typeof="sioc:Item foaf:Document">
-
-  
-        <h2>Art Study Center Open Hours</h2>
-    <span property="dc:title" content="Art Study Center Open Hours" class="rdf-meta element-hidden"></span><span property="sioc:num_replies" content="0" datatype="xsd:integer" class="rdf-meta element-hidden"></span>
-      <div class="submitted">
-      <span property="dc:date dc:created" content="2017-11-11T12:20:01-05:00" datatype="xsd:dateTime" rel="sioc:has_creator">Submitted by <span class="username" xml:lang="" typeof="sioc:UserAccount" property="foaf:name" datatype="">Anonymous (not verified)</span> on Sat, 2017-11-11 12:20</span>    </div>
-  
-  <div class="content">
-    <div class="field field-name-body field-type-text-with-summary field-label-hidden">
-    <div class="field-items">
-          <div class="field-item even" property="content:encoded">32 Quincy Street Cambridge MA Mon., Dec. 4, 2017, 1 – 4 p.m. Through the...</div>
-      </div>
-</div>
-  </div>
-
-  
-  
-</div>
-</div>
-      </div>
-</div>
-<div class="field field-name-field-fpp-category field-type-text field-label-hidden">
-    <div class="field-items">
-          <div class="field-item even">EVENT</div>
-      </div>
-</div>
-</div>
-</div>
-          <div class="field-item landing-page-curated-video odd"><div class="fieldable-panels-pane">
-    <div class="field field-name-field-video-url field-type-url field-label-hidden">
-    <div class="field-items">
-          <div class="field-item even"><iframe class="youtube-player" type="text/html" width="640" height="360" src="//www.youtube.com/embed/V5iAgK4QPBo?wmode=transparent&rel=0" frameborder="0"></iframe></div>
-      </div>
-</div>
-<div class="field field-name-field-image field-type-image field-label-hidden">
-    <div class="field-items">
-          <div class="field-item even"><img typeof="foaf:Image" src="https://college.harvard.edu/sites/default/files/styles/grid_video_thumb/public/_landing_page_curated_video/discover.jpg?itok=uYr-W5xM" alt="Join our students, faculty, and alumni on an intellectual and creative journey to discover the Humanities at Harvard. Through dancing, playwriting, hip-hop, and literature, these personal stories illuminate the power of the arts and humanities to ignite, inspire, and transform." /></div>
-      </div>
-</div>
-<div class="field field-name-field-body-text field-type-text-long field-label-hidden">
-    <div class="field-items">
-          <div class="field-item even"><p>Discover the Humanities</p><br />
-</div>
-      </div>
-</div>
-</div>
-</div>
-      </div>
-</div>
-  </div>
-
-  
-  </div>
-</div>
-      </div>
-      </div>
-              <div class="panel-panel panel-col-middle harvard-middle-wrapper clearfix">
-        <div class="inside"><div class="panel-pane pane-entity-field pane-node-field-virtual-tour-image-field"  >
-  
-      
-  
-  <div class="pane-content">
-    <div class="field field-name-field-virtual-tour-image-field field-type-image field-label-hidden">
-    <div class="field-items">
-          <div class="field-item even"><a href="http://www.youvisit.com/tour/harvard"><img typeof="foaf:Image" src="https://college.harvard.edu/sites/default/files/default_images/gates_tour.png" alt="" /></a></div>
-      </div>
-</div>
-  </div>
-
-  
-  </div>
-<div class="panel-separator"></div><div class="panel-pane pane-entity-field pane-node-field-virtual-tour-image-text-fi"  >
-  
-      
-  
-  <div class="pane-content">
-    <div class="field field-name-field-virtual-tour-image-text-fi field-type-text field-label-hidden">
-    <div class="field-items">
-          <div class="field-item even">Explore Harvard</div>
-      </div>
-</div>
-  </div>
-
-  
-  </div>
-</div>
-      </div>
-          <div class="panel-panel panel-col-first">
-        <div class="inside"><div class="panel-pane pane-entity-field pane-node-field-landing-page-callout-image"  >
-  
-      
-  
-  <div class="pane-content">
-    <div class="field field-name-field-landing-page-callout-image field-type-image field-label-hidden">
-    <div class="field-items">
-          <div class="field-item even"><img typeof="foaf:Image" src="https://college.harvard.edu/sites/default/files/Messages_dean_homepage.jpg" alt="Dean Khurana" /></div>
-      </div>
-</div>
-  </div>
-
-  
-  </div>
-<div class="panel-separator"></div><div class="panel-pane pane-entity-field pane-node-field-landing-page-callout-title"  >
-  
-      
-  
-  <div class="pane-content">
-    <div class="field field-name-field-landing-page-callout-title field-type-text field-label-hidden">
-    <div class="field-items">
-          <h2 class="field-item even">Messages from Harvard College</h2>
-      </div>
-</div>
-  </div>
-
-  
-  </div>
-<div class="panel-separator"></div><div class="panel-pane pane-entity-field pane-node-field-landing-page-callout-body"  >
-  
-      
-  
-  <div class="pane-content">
-    <div class="field field-name-field-landing-page-callout-body field-type-text-long field-label-hidden">
-    <div class="field-items">
-          <div class="field-item even"><p>“We want to ensure we are providing students a deeply transformative experience – intellectually, socially and personally – that will prepare them for a life of service and leadership. Harvard College should and will set the standard for liberal arts and sciences education for the next hundred years. This is who we are. Our students leave here and exert ripples across the&nbsp;world.”</p>
-</div>
-      </div>
-</div>
-  </div>
-
-  
-  </div>
-<div class="panel-separator"></div><div class="panel-pane pane-entity-field pane-node-field-landing-page-callout-link iota"  >
-  
-      
-  
-  <div class="pane-content">
-    <div class="field field-name-field-landing-page-callout-link field-type-link-field field-label-hidden">
-    <div class="field-items">
-          <div class="field-item even"><a href="https://college.harvard.edu/about/dean-harvard-college/messages-dean">See all messages</a></div>
-      </div>
-</div>
-  </div>
-
-  
-  </div>
-</div>
-      </div>
-
-      <div class="panel-panel panel-col">
-        <div class="inside"><div class="panel-pane pane-views-panes pane-news-improved-panel-pane-1 news-improved" >
-  
-        <h2 class="module-title zeta"><span class="pane-title">News &amp; Announcements</span></h2>
-    
-  
-  <div class="pane-content">
-    <div class="view view-news-improved view-id-news_improved view-display-id-panel_pane_1 view-dom-id-7cc54be768c96325bc0e8a762470a753">
+  </section>
+                            	</div>
+		</div><!-- /#content -->
+                                  <aside class="sidebars">
+                          <section class="region region-sidebar-second column sidebar">
+	<div class="region-wrapper">
+    <div id="block-views-programs-of-studay-block" class="block block-views degree-program-jump-menu plain first odd">
+  <div class="block-inner">
+              <h2 class="block__title block-title">Browse Degree Programs</h2>
+            <div class="content">
+      <div class="view view-programs-of-studay view-id-programs_of_studay view-display-id-block view-dom-id-05415fce1eabf2b8c46e0de572db16f7">
         
   
   
       <div class="view-content">
-        <div class="views-row views-row-1 views-row-odd views-row-first">
-      
-  <div class="views-field views-field-nid">        <span class="field-content"><article class="news-item-beta row">
-    <div class="field field-name-field-image field-type-image field-label-hidden thumbnail">
-        <div class="field-items">
-            <div class="field-item even">
-                <img typeof="foaf:Image" src="https://college.harvard.edu/sites/default/files/styles/60x60/public/news/foodtrays_1_140.jpg?itok=U0xkgVob" alt="" />
-            </div>
-        </div>
-    </div>
-    <div class="in">
-        <h1 class="lambda" datatype="" property="title"><a href="https://news.harvard.edu/gazette/story/2017/11/students-package-unused-food-for-distribution-to-those-in-need/">Students package unused food for distribution to those in need</a></h1>
-        <p class="created_date iota">November 21, 2017 </p>
-        <div class="content news-item-body theta">
-            <div class="field field-name-body field-type-text-with-summary field-label-hidden">
-                <div class="field-items">
-                    <div property="encoded" class="field-item even"><p>
-
-
-Twice a week after dinner, a group of Harvard University student volunteers...</p></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</article></span>  </div>  </div>
-  <div class="views-row views-row-2 views-row-even">
-      
-  <div class="views-field views-field-nid">        <span class="field-content"><article class="news-item-beta row">
-    <div class="field field-name-field-image field-type-image field-label-hidden thumbnail">
-        <div class="field-items">
-            <div class="field-item even">
-                <img typeof="foaf:Image" src="https://college.harvard.edu/sites/default/files/styles/60x60/public/news/pchan_2_171112_pc-franklinhill_bos_cw_140.jpg?itok=ciOwMh0F" alt="" />
-            </div>
-        </div>
-    </div>
-    <div class="in">
-        <h1 class="lambda" datatype="" property="title"><a href="https://news.harvard.edu/gazette/story/2017/11/chan-gift-story/">Chan Zuckerberg Initiative boosts efforts to develop public service leaders</a></h1>
-        <p class="created_date iota">November 13, 2017 </p>
-        <div class="content news-item-body theta">
-            <div class="field field-name-body field-type-text-with-summary field-label-hidden">
-                <div class="field-items">
-                    <div property="encoded" class="field-item even"><p>
-Harvard College today announced a $12.1 million grant from the Chan Zuckerberg...</p></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</article></span>  </div>  </div>
-  <div class="views-row views-row-3 views-row-odd">
-      
-  <div class="views-field views-field-nid">        <span class="field-content"><article class="news-item-beta row">
-    <div class="field field-name-field-image field-type-image field-label-hidden thumbnail">
-        <div class="field-items">
-            <div class="field-item even">
-                <img typeof="foaf:Image" src="https://college.harvard.edu/sites/default/files/styles/60x60/public/news/elton140.jpg?itok=-_Kmpqa9" alt="" />
-            </div>
-        </div>
-    </div>
-    <div class="in">
-        <h1 class="lambda" datatype="" property="title"><a href="https://news.harvard.edu/gazette/story/2017/11/at-harvard-elton-john-receives-humanitarian-award/">At Harvard, Elton John receives Humanitarian Award</a></h1>
-        <p class="created_date iota">November 6, 2017 </p>
-        <div class="content news-item-body theta">
-            <div class="field field-name-body field-type-text-with-summary field-label-hidden">
-                <div class="field-items">
-                    <div property="encoded" class="field-item even"><p>
-His musical genius has earned him millions of fans, five Grammy Awards, and an...</p></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</article></span>  </div>  </div>
-  <div class="views-row views-row-4 views-row-even views-row-last">
-      
-  <div class="views-field views-field-nid">        <span class="field-content"><article class="news-item-beta row">
-    <div class="field field-name-field-image field-type-image field-label-hidden thumbnail">
-        <div class="field-items">
-            <div class="field-item even">
-                <img typeof="foaf:Image" src="https://college.harvard.edu/sites/default/files/styles/60x60/public/news/140_1434.jpg?itok=JO8ldARl" alt="" />
-            </div>
-        </div>
-    </div>
-    <div class="in">
-        <h1 class="lambda" datatype="" property="title"><a href="https://news.harvard.edu/gazette/story/2017/11/harvards-hidden-yard-randolph-courtyard-at-adams-house/">Harvard’s hidden yard: Randolph Courtyard at Adams House</a></h1>
-        <p class="created_date iota">November 6, 2017 </p>
-        <div class="content news-item-body theta">
-            <div class="field field-name-body field-type-text-with-summary field-label-hidden">
-                <div class="field-items">
-                    <div property="encoded" class="field-item even"><p>
-Tucked behind Adams House, Randolph Courtyard offers students an escape from...</p></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</article></span>  </div>  </div>
-
-    <a href="/about/news-announcements" class="kappa see-more is_front bk4-module-top icon-caret-right">See all</a>
-    </div>
-  
-  
-  
-  
-  
-  
-</div>  </div>
-
-  
-  </div>
+      <form action="/?option=com_content&amp;task=view&amp;id=279&amp;Itemid=288" method="post" id="ctools-jump-menu" accept-charset="UTF-8"><div><div class="container-inline"><div class="form-item form-type-select form-item-jump">
+ <select class="ctools-jump-menu-select ctools-jump-menu-change form-select" id="edit-jump" name="jump"><option value="" selected="selected">- Choose -</option><option value="be44ad02f14b417c9ac2f771e8794b2c::/programs-of-study/all/african-african-american-studies">  
+          African and African American Studies  </option><option value="bf7af9615468c353034f1957fa4cad83::/programs-of-study/all/american-studies">  
+          American Studies  </option><option value="404b3052dea5ce6e4fdeca016af80517::/programs-of-study/all/anthropology">  
+          Anthropology  </option><option value="cd5889f830bce39188d57d8f2473e839::/programs-of-study/all/applied-math">  
+          Applied Mathematics  </option><option value="92d03a1b37d6131e9c166f352a7d4130::/programs-of-study/all/applied-physics">  
+          Applied Physics  </option><option value="2fa16654e3a0eb2c2d2ad5a59a6bedf9::/programs-of-study/all/archaeology">  
+          Archaeology  </option><option value="a306a38589c898641989af1d9c69a97f::/programs-of-study/all/architecture-landscape-architecture-urban-planning">  
+          Architecture, Landscape Architecture, and Urban Planning  </option><option value="b86f5f0391e6a09ab6b2e3d027b96262::/programs-of-study/all/astronomy">  
+          Astronomy  </option><option value="cfeef7920205de3bfd5ae99c48bbf532::/programs-of-study/all/bioengineering">  
+          Bioengineering  </option><option value="b789e1e4e1ad77c370c6bf6c84e1d98c::/programs-of-study/all/bioinformatics-and-integrative-genomics">  
+          Bioinformatics and Integrative Genomics  </option><option value="98ecfed96f134253fc583467679cad63::/programs-of-study/all/biological-and-biomedical-sciences">  
+          Biological and Biomedical Sciences  </option><option value="8b1efcaee92e695ef409cc06745406bd::/programs-of-study/all/biological-sciences-dental-medicine">  
+          Biological Sciences in Dental Medicine  </option><option value="762be47243ffdcf137187982b5f812ae::/programs-of-study/all/biological-sciences-public-health">  
+          Biological Sciences in Public Health  </option><option value="6bfe4078d3bb064854b837d909ed2f43::/programs-of-study/all/biophysics">  
+          Biophysics  </option><option value="8963d1e0738bbee47a526f164bd88a8c::/programs-of-study/all/biostatistics">  
+          Biostatistics  </option><option value="568d3a2c1770117ee9df106686978301::/programs-of-study/all/business-economics">  
+          Business Economics  </option><option value="a230557216d79fde813718dd7127c953::/programs-of-study/all/celtic-languages-literature">  
+          Celtic Languages and Literatures  </option><option value="172857e690df5fffdacfea17e83fc0ae::/programs-of-study/all/chemical-biology">  
+          Chemical Biology  </option><option value="435b4952ef5aa1da6154ab32b1a69e64::/programs-of-study/all/chemical-physics">  
+          Chemical Physics  </option><option value="97d1273a7bffc48784fe336f081af160::/programs-of-study/all/chemistry-and-chemical-biology">  
+          Chemistry and Chemical Biology  </option><option value="0064d843d84411a5ce4717801bbc5f18::/programs-of-study/all/comparative-literature">  
+          Comparative Literature  </option><option value="d9cbefa2edfffed2d23ba22e2bab835a::/programs-of-study/all/computational-science-engineering">  
+          Computational Science and Engineering  </option><option value="398620bee82393f797e802247185d699::/programs-of-study/all/computer-science">  
+          Computer Science  </option><option value="357ece82d32e56520f1bd165be947d37::/programs-of-study/all/data-science">  
+          Data Science  </option><option value="17b46c1c291d00a44991f9b9d3c1e148::/programs-of-study/all/earth-planetary-sciences">  
+          Earth and Planetary Sciences  </option><option value="db19e66fb7f59a03a6dbe097420c372d::/programs-of-study/all/east-asian-languages-and-civilizations">  
+          East Asian Languages and Civilizations  </option><option value="8d4956a73c386601dee051f49661c9bf::/programs-of-study/all/economics">  
+          Economics  </option><option value="a0ec1f01ce049a70afeffc65e84c1f0f::/programs-of-study/all/education">  
+          Education  </option><option value="6c2160f68242c8fcd2fc056e34afa6d2::/programs-of-study/all/electrical-engineering">  
+          Electrical Engineering  </option><option value="75ec3db01615a3e841f9c1b3afd23a98::/programs-of-study/all/english">  
+          English  </option><option value="15de133298c616f1f588ba9d698ca0cb::/programs-of-study/all/environmental-science-engineering">  
+          Environmental Science and Engineering  </option><option value="1a0a67d7ddb24e44b651d1d48bc4c64f::/programs-of-study/all/film-visual-studies">  
+          Film and Visual Studies  </option><option value="705f38403fa3daae4479740811574ced::/programs-of-study/all/germanic-languages-literature">  
+          Germanic Languages and Literatures  </option><option value="e3dc441672ab3a8b4515fe83b1757cc7::/programs-of-study/all/government">  
+          Government  </option><option value="1d32400d074a13ae271fc5d10741fcc5::/programs-of-study/all/health-policy">  
+          Health Policy  </option><option value="f39c5cddb514007ac5eaaec5adbd6109::/programs-of-study/all/history">  
+          History  </option><option value="9a64aaf86091819a0082556d1d92fd50::/programs-of-study/all/history-art-architecture">  
+          History of Art and Architecture  </option><option value="9a492c9d8ea99852584d4472ce1d427f::/programs-of-study/all/history-science">  
+          History of Science  </option><option value="44d43da45dd1e07787e32e175c43a278::/programs-of-study/all/human-evolutionary-biology">  
+          Human Evolutionary Biology  </option><option value="857f34da072b47f60abda88e98d346c8::/programs-of-study/all/immunology">  
+          Immunology  </option><option value="1038e30c6c083f5285f277d185ee727a::/programs-of-study/all/inner-asian-altaic-studies">  
+          Inner Asian and Altaic Studies  </option><option value="1f7048b27a5fc24cd9b4bd628c8d4cb2::/programs-of-study/all/international-relations">  
+          International Relations  </option><option value="c8919a29f32e88d36e75d3b5284e0a59::/programs-of-study/all/linguistics">  
+          Linguistics  </option><option value="acb21494f4e340018a230244e9a320d3::/programs-of-study/all/materials-science-mechanical-engineering">  
+          Materials Science and Mechanical Engineering  </option><option value="0ca11ccacd7a1f89576959bf142aa820::/programs-of-study/all/mathematics">  
+          Mathematics  </option><option value="299fe4ed1fe2ba766c698ab90effdef5::/programs-of-study/all/middle-eastern-studies">  
+          Middle Eastern Studies  </option><option value="13d3e0cf8f7a2924cc67ce4296d0be46::/programs-of-study/all/molecular-and-cellular-biology">  
+          Molecular and Cellular Biology  </option><option value="f3825e66c98a8aeabb6a84549a6ae622::/programs-of-study/all/music">  
+          Music  </option><option value="7bdd57486690c7c124afc4cd667d9750::/programs-of-study/all/near-eastern-languages-and-civilizations">  
+          Near Eastern Languages and Civilizations  </option><option value="0513ae535616c218e5ca0f53235222da::/programs-of-study/all/neuroscience">  
+          Neuroscience  </option><option value="6d7cbc5673f12a920fa3ddca93ccbbf6::/programs-of-study/all/organismic-and-evolutionary-biology">  
+          Organismic and Evolutionary Biology  </option><option value="2586e0fdae31e0a385f48c56d6e62385::/programs-of-study/all/organizational-behavior">  
+          Organizational Behavior  </option><option value="200c4ebabec448a40dc3293a41a96329::/programs-of-study/all/philosophy">  
+          Philosophy  </option><option value="e234aab94ec9d39b11ac5d3250c892b4::/programs-of-study/all/physics">  
+          Physics  </option><option value="ec5803b6e27d451bc2c018f3f1513ff5::/programs-of-study/all/political-economy-government">  
+          Political Economy and Government  </option><option value="56631cd0d21245d79937a51490be137e::/programs-of-study/all/political-science">  
+          Political Science  </option><option value="53ce323b6a659b7e3c6d903b757f3667::/programs-of-study/all/population-health-sciences">  
+          Population Health Sciences  </option><option value="4148403930dc6b746acb06a6a033cc53::/programs-of-study/all/psychology">  
+          Psychology  </option><option value="eb4568964fd2c77774660872dd0b88be::/programs-of-study/all/public-policy">  
+          Public Policy  </option><option value="2746741aeb1abdfefd10879daf2d7e9c::/programs-of-study/all/regional-studies-east-asia">  
+          Regional Studies–East Asia  </option><option value="26bbb11a0702888d1fd9b8262e05272f::/programs-of-study/all/regional-studies-russia-eastern-europe-and-central-asia">  
+          Regional Studies–Russia, Eastern Europe, and Central Asia  </option><option value="8ca24067b899f9bd5e235624575be53a::/programs-of-study/all/religion">  
+          Religion  </option><option value="dd13ec49415a35179ab88605cd591482::/programs-of-study/all/romance-languages-and-literatures">  
+          Romance Languages and Literatures  </option><option value="9920865c5a1ebfd41ccdca4cdd6869e1::/programs-of-study/all/slavic-languages-and-literatures">  
+          Slavic Languages and Literatures  </option><option value="8e952301099b1d13d24c75b81e930102::/programs-of-study/all/social-policy">  
+          Social Policy  </option><option value="fa48f092dfc9bce63aa19011440bb953::/programs-of-study/all/sociology">  
+          Sociology  </option><option value="85bd4f1bfb60584decfdf242ef8bb2ad::/programs-of-study/all/south-asian-studies">  
+          South Asian Studies  </option><option value="b4c1047556f36380e3238cc5b0fb84eb::/programs-of-study/all/speech-and-hearing-bioscience-and-technology">  
+          Speech and Hearing Bioscience and Technology  </option><option value="3f4dc06509a4a5eb8aec8eb05e721e7a::/programs-of-study/all/statistics">  
+          Statistics  </option><option value="8fa63931d36494a0a66808c6a24b4da1::/programs-of-study/all/systems-biology">  
+          Systems Biology  </option><option value="c188f222d2b3bde7af84189178a345d9::/programs-of-study/all/classics">  
+          The Classics  </option><option value="92c6a8a098e676b2088ca49c95fd1b93::/programs-of-study/all/virology">  
+          Virology  </option></select>
 </div>
-      </div>
-
-      <div class="panel-panel panel-col-last">
-        <div class="inside"><div class="panel-pane pane-custom pane-1"  >
+<input class="ctools-jump-menu-button ctools-jump-menu-hide form-submit" type="submit" id="edit-go" name="op" value="Go" /></div><input type="hidden" name="form_build_id" value="form-LRB4CxGNp72GAX_fEyrchs2RQa32XVyHD10AAYn5rCU" />
+<input type="hidden" name="form_id" value="ctools_jump_menu" />
+</div></form>    </div>
   
-      
   
-  <div class="pane-content">
-    <p><a class="kappa see-more bk4-module-top icon-caret-right" href="https://college.harvard.edu/college-events">See&nbsp;all</a></p>
+  
+  
+  
+  
+</div>    </div>
   </div>
+</div><!-- /.block -->
+<div id="block-block-17" class="block block-block front-buttons plain last even">
+  <div class="block-inner">
+                <div class="content">
+      <p><a class="button-large" href="/admissions/why-gsas">Why GSAS?</a></p>
 
-  
-  </div>
-<div class="panel-separator"></div><div class="panel-pane pane-block pane-quicktabs-upcoming-events upcoming-events"  >
-  
-        <h2 class="pane-title">
-      Upcoming Events    </h2>
-    
-  
-  <div class="pane-content">
-    <div  id="quicktabs-upcoming_events" class="quicktabs-wrapper quicktabs-style-nostyle"><div class="item-list"><ul class="quicktabs-tabs quicktabs-style-nostyle"><li class="active first"><a href="/home-harvard?qt-upcoming_events=0#qt-upcoming_events" id="quicktabs-tab-upcoming_events-0" class="quicktabs-tab quicktabs-tab-view quicktabs-tab-view-upcoming-events-panel-pane-today active">Today</a></li>
-<li><a href="/home-harvard?qt-upcoming_events=1#qt-upcoming_events" id="quicktabs-tab-upcoming_events-1" class="quicktabs-tab quicktabs-tab-view quicktabs-tab-view-upcoming-events-panel-pane-tomorrow active">Tomorrow</a></li>
-<li class="last"><a href="/home-harvard?qt-upcoming_events=2#qt-upcoming_events" id="quicktabs-tab-upcoming_events-2" class="quicktabs-tab quicktabs-tab-view quicktabs-tab-view-upcoming-events-panel-pane-day-after-tomorrow active">Wednesday</a></li>
-</ul></div><div id="quicktabs-container-upcoming_events" class="quicktabs_main quicktabs-style-nostyle"><div  id="quicktabs-tabpage-upcoming_events-0" class="quicktabs-tabpage ">
-<div class="view view-upcoming-events view-id-upcoming_events view-display-id-panel_pane_today view-dom-id-fce64640a13fca53d1f569f57bbacc4c">
-        
-  
-  
-      <div class="view-content">
-        <div class="views-row views-row-1 views-row-odd views-row-first">
-    
-<article class="news-item-beta">
-	<h1 class="theta"><span class="field-content"><a href="/its-all-your-perspective-32">It&#039;s All in Your Perspective</a></span></h1>
-	<div class="iota"><div class="field-content">(All day)</div></div>
-</article>  </div>
-  <div class="views-row views-row-2 views-row-even">
-    
-<article class="news-item-beta">
-	<h1 class="theta"><span class="field-content"><a href="/jfks-harvardharvards-jfk-1">JFK&#039;s Harvard/Harvard&#039;s JFK</a></span></h1>
-	<div class="iota"><div class="field-content">(All day)</div></div>
-</article>  </div>
-  <div class="views-row views-row-3 views-row-odd">
-    
-<article class="news-item-beta">
-	<h1 class="theta"><span class="field-content"><a href="/morning-prayers-62">Morning Prayers</a></span></h1>
-	<div class="iota"><div class="field-content">8:45am</div></div>
-</article>  </div>
-  <div class="views-row views-row-4 views-row-even views-row-last">
-    
-<article class="news-item-beta">
-	<h1 class="theta"><span class="field-content"><a href="/altered-gazes-53">Altered Gazes</a></span></h1>
-	<div class="iota"><div class="field-content">9:00am</div></div>
-</article>  </div>
-    </div>
-  
-  
-  
-  
-      <div class="view-footer">
-      <div class="iota"><a href="https://college.harvard.edu/college-events">All events today</a></div>
-    </div>
-  
-  </div></div><div  id="quicktabs-tabpage-upcoming_events-1" class="quicktabs-tabpage quicktabs-hide">
-<div class="view view-upcoming-events view-id-upcoming_events view-display-id-panel_pane_tomorrow view-dom-id-dc2573793573be76a3a4838d13160f3f">
-        
-  
-  
-      <div class="view-content">
-        <div class="views-row views-row-1 views-row-odd views-row-first">
-    
-<article class="news-item-beta">
-	<h1 class="theta"><span class="field-content"><a href="/its-all-your-perspective-33">It&#039;s All in Your Perspective</a></span></h1>
-	<div class="iota"><div class="field-content"><span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2017-12-05T00:00:00-05:00">Tuesday, December 5, 2017 (All day)</span></div></div>
-</article>  </div>
-  <div class="views-row views-row-2 views-row-even">
-    
-<article class="news-item-beta">
-	<h1 class="theta"><span class="field-content"><a href="/jfks-harvardharvards-jfk-2">JFK&#039;s Harvard/Harvard&#039;s JFK</a></span></h1>
-	<div class="iota"><div class="field-content"><span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2017-12-05T00:00:00-05:00">Tuesday, December 5, 2017 (All day)</span></div></div>
-</article>  </div>
-  <div class="views-row views-row-3 views-row-odd">
-    
-<article class="news-item-beta">
-	<h1 class="theta"><span class="field-content"><a href="/score-boston-workshop-starting-specialty-food-business">SCORE Boston Workshop: Starting a Specialty Food Business</a></span></h1>
-	<div class="iota"><div class="field-content"><span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2017-12-05T08:30:00-05:00">Tuesday, December 5, 2017 - 8:30am</span></div></div>
-</article>  </div>
-  <div class="views-row views-row-4 views-row-even views-row-last">
-    
-<article class="news-item-beta">
-	<h1 class="theta"><span class="field-content"><a href="/morning-prayers-63">Morning Prayers</a></span></h1>
-	<div class="iota"><div class="field-content"><span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2017-12-05T08:45:00-05:00">Tuesday, December 5, 2017 - 8:45am</span></div></div>
-</article>  </div>
-    </div>
-  
-  
-  
-  
-  
-  </div></div><div  id="quicktabs-tabpage-upcoming_events-2" class="quicktabs-tabpage quicktabs-hide">
-<div class="view view-upcoming-events view-id-upcoming_events view-display-id-panel_pane_day_after_tomorrow view-dom-id-bc716107be20653d0238d416705c1599">
-        
-  
-  
-      <div class="view-content">
-        <div class="views-row views-row-1 views-row-odd views-row-first">
-    
-<article class="news-item-beta">
-	<h1 class="theta"><span class="field-content"><a href="/its-all-your-perspective-34">It&#039;s All in Your Perspective</a></span></h1>
-	<div class="iota"><div class="field-content"><span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2017-12-06T00:00:00-05:00">Wednesday, December 6, 2017 (All day)</span></div></div>
-</article>  </div>
-  <div class="views-row views-row-2 views-row-even">
-    
-<article class="news-item-beta">
-	<h1 class="theta"><span class="field-content"><a href="/jfks-harvardharvards-jfk-3">JFK&#039;s Harvard/Harvard&#039;s JFK</a></span></h1>
-	<div class="iota"><div class="field-content"><span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2017-12-06T00:00:00-05:00">Wednesday, December 6, 2017 (All day)</span></div></div>
-</article>  </div>
-  <div class="views-row views-row-3 views-row-odd">
-    
-<article class="news-item-beta">
-	<h1 class="theta"><span class="field-content"><a href="/morning-prayers-64">Morning Prayers</a></span></h1>
-	<div class="iota"><div class="field-content"><span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2017-12-06T08:45:00-05:00">Wednesday, December 6, 2017 - 8:45am</span></div></div>
-</article>  </div>
-  <div class="views-row views-row-4 views-row-even views-row-last">
-    
-<article class="news-item-beta">
-	<h1 class="theta"><span class="field-content"><a href="/altered-gazes-55">Altered Gazes</a></span></h1>
-	<div class="iota"><div class="field-content"><span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2017-12-06T09:00:00-05:00">Wednesday, December 6, 2017 - 9:00am</span></div></div>
-</article>  </div>
-    </div>
-  
-  
-  
-  
-  
-  </div></div></div></div>  </div>
-
-  
-  </div>
-</div>
-      </div>
+<p><a class="button-large" href="/admissions/apply">Apply</a></p>
     </div>
   </div>
-
-  </div>
-  </div>
-</div>
-  </div>
-                  </div></div> <!-- /.section, /#content -->
-
-        
-        
-      </div></div> <!-- /#main, /#main-wrapper -->
-
-    </div></div> <!-- /#page, /#page-wrapper -->
-
-      <div class="region region-footer">
-    <div id="block-panels-mini-footer-main" class="block block-panels-mini">
-
-    
-  <div class="content">
-    <div class="panel-display panel-2col clearfix" id="mini-panel-footer_main">
-  <div class="panel-panel panel-col-first">
-    <div class="inside"><nav class="panel-pane pane-block pane-menu-menu-quick-links"   aria-labelledby="menu-quick-links">
-  
-        <h2 class="pane-title" id="menu-quick-links">
-      College Quick Links    </h2>
-    
-  
-  <div class="pane-content">
-    <ul class="quick-links row"><li class="first leaf menu-level-1"><a href="https://apply.college.harvard.edu/status" title="">Applicant Login</a></li>
-<li class="leaf menu-level-1"><a href="/contact-us" title="">Contact Us</a></li>
-<li class="leaf menu-level-1"><a href="http://www.fas.harvard.edu/home/" title="">Faculty of Arts &amp; Sciences</a></li>
-<li class="leaf menu-level-1"><a href="http://www.harvard.edu" title="">Harvard.edu</a></li>
-<li class="leaf menu-level-1"><a href="http://map.harvard.edu/" title="">Maps &amp; Directions</a></li>
-<li class="last leaf menu-level-1"><a href="http://www.registrar.fas.harvard.edu/" title="">Registrar</a></li>
-</ul>  </div>
-
-  
-  </nav>
-</div>
-  </div>
-
-  <div class="panel-panel panel-col-last">
-    <div class="inside"><div class="panel-pane pane-harvard-icons"  >
-  
-      
-  
-  <div class="pane-content">
-    <div class="harvard_icons"><a href="https://twitter.com/Harvard" class="harvard-icons-twitter">twitter</a><a href="https://www.facebook.com/harvardadmissions" class="harvard-icons-facebook">facebook</a><a href="http://harvard.tumblr.com/" class="harvard-icons-tumblr">tumblr</a><a href="https://plus.google.com/+harvard" class="harvard-icons-googleplus">googleplus</a><a href="https://www.youtube.com/channel/UCo1uJtIiBzu2XuyWxy12wHw" class="harvard-icons-youtube">youtube</a><a href="/" class="harvard-icons-instagram">instagram</a></div>  </div>
-
-  
-  </div>
-</div>
-  </div>
-</div>
-  </div>
-</div>
-  </div>
-
-    <footer class="page-footer" role="contentinfo">
-      <div class="wrap">
-        <div class="in">
-          <p>Copyright © 2017 The President and Fellows of Harvard College | <a
-              href="http://www.harvard.edu/privacy-statement">Privacy</a> | <a
-              href="http://dmca.harvard.edu/pages/annual-copyright-disclosure">Copyright Disclosure</a> | <a
-              href="http://accessibility.harvard.edu/">Accessibility</a></p>
-        </div>
-      </div>
-    </footer>
-
-    <nav id="people-menu" class="nav people-nav">
-      <h2 class="element-invisible">Audience</h2>
-      <div class="wrap">
-        <p class="zeta in">For <i class="icon-caret-right"></i></p>
-          <div class="region region-audience-links">
-    <div id="block-harvard-site-harvard-audience-links" class="block block-harvard-site" aria-labelledby="harvard_audience_links" role="navigation">
-
-    <h2 class="element-invisible" id="harvard_audience_links">Audience links</h2>
-  
-  <div class="content">
-    <ul class="row in"><div class="split-left"><li class="first leaf menu-level-1"><a href="/alumni" title="">Alumni</a></li>
-<li class="leaf menu-level-1"><a href="/current-students-0" title="">Current Students</a></li>
-<li class="leaf menu-level-1"><a href="/faculty" title="">Faculty</a></li>
-</div><div class="split-right"><li class="leaf menu-level-1"><a href="/parents" title="">Parents &amp; Families</a></li>
-<li class="leaf menu-level-1"><a href="/prospective-students" title="">Prospective Students</a></li>
-<li class="leaf menu-level-1"><a href="/school-counselors" title="">School Counselors</a></li>
-<li class="last leaf menu-level-1"><a href="/informacion-en-espanol" title="">Información en Español</a></li>
-</div></ul>  </div>
-</div>
-  </div>
-      </div>
-    </nav>
-
-  </div> <!-- /.page-content -->
-
+</div><!-- /.block -->
 	</div>
-
-	<div id="modal-container">
-		<div class="modal-window">
-			<a href="#" class="modal-close icon-remove"></a>
-			<div class="modal-target"></div>
-		</div>
-	</div>
-
-	<script type="text/javascript" src="https://college.harvard.edu/sites/default/files/js/js_GYBYl8AzLDmfe244spzJEp50vgqokgOqv-fUYUo426U.js"></script>
+  </section>
+          </aside><!-- /.sidebars -->
+                
+          <div class="region region-full-width-content-bottom">
+    <div id="block-views-news-block-1" class="block block-views first odd">
+  <div class="block-inner">
+              <h2 class="block__title block-title"><a href="/news" class="block-title-link">News</a></h2>
+            <div class="content">
+      <div class="view view-news view-id-news view-display-id-block_1 view-dom-id-05677b3613ac330d1eaf22ae5b87cfee">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+    <div  class="ds-2col-fluid node node-story node-teaser view-mode-teaser group-one-column clearfix">
 
   
-<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"d5ee19a50a","applicationID":"56250227","transactionName":"YlwDMksDCEcAW0JeX1sWIAVNCwlaTkhXUFVqVAAIWAUDRj5WWVNVak8IA049FlUGXQ==","queueTime":0,"applicationTime":981,"atts":"ThsARAMZG0k=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+  
+      <div class="group-right">
+      <div class="group-story-header field-group-div"><div class="field field-name-field-date"><span class="date-display-single">November 21, 2017</span></div><div class="field field-name-field-story-tags">Professional Development</div></div><div class="field field-name-title"><a href="/news/stories/roadmap-professional-development-graduate-students">Roadmap to Professional Development for Graduate Students</a></div><div class="field field-name-body">by Cynthia Verba, Director of the Fellowships Office Professional development, broadly defined, refers to ways of enhancing career options. The process consists of two components, and both are important. One is to develop new skills that appear to... <a href="/news/stories/roadmap-professional-development-graduate-students" class="more-link">Read More</a></div>    </div>
+  
+</div>
+
+  </div>
+  <div class="views-row views-row-2 views-row-even">
+    <div  class="ds-2col-fluid node node-story node-teaser view-mode-teaser clearfix">
+
+  
+      <div class="group-left">
+      <div class="field field-name-field-main-image"><!-- scald=1961:teaser {"link":"node\/3017"} --><a href="/news/stories/investigate-how-planetary-life-begins"><img src="https://gsas.harvard.edu/sites/default/files/styles/teaser/public/thumbnails/image/Origins%20of%20Life%20Consortium%201%20for%20web.jpg?itok=1-GdvmXa" width="320" height="230" alt="Origins of Life Consortium students studying rocks" title="Origins of Life Consortium 1 for web.jpg" /></a><!-- END scald=1961 --></div>    </div>
+  
+      <div class="group-right">
+      <div class="group-story-header field-group-div"><div class="field field-name-field-date"><span class="date-display-single">November 21, 2017</span></div><div class="field field-name-field-story-tags">Science</div></div><div class="field field-name-title"><a href="/news/stories/investigate-how-planetary-life-begins">Investigate How Planetary Life Begins</a></div><div class="field field-name-body">Origins of Life Consortium looks to Earth and other planets The Origins of Life Consortium fosters an interdisciplinary approach across disciplines to answer questions related to the origin of life on Earth and the presence of life on other planets... <a href="/news/stories/investigate-how-planetary-life-begins" class="more-link">Read More</a></div>    </div>
+  
+</div>
+
+  </div>
+  <div class="views-row views-row-3 views-row-odd views-row-last">
+    <div  class="ds-2col-fluid node node-story node-teaser view-mode-teaser clearfix">
+
+  
+      <div class="group-left">
+      <div class="field field-name-field-main-image"><!-- scald=1958:teaser {"link":"node\/3013"} --><a href="/news/stories/sense-place"><img src="https://gsas.harvard.edu/sites/default/files/styles/teaser/public/thumbnails/image/Becca%20Voelcker%2008.jpg?itok=h23FLlFx" width="320" height="230" alt="Becca Voelcker standing outside Richards Hall" title="Becca Voelcker 08.jpg" /></a><!-- END scald=1958 --></div>    </div>
+  
+      <div class="group-right">
+      <div class="group-story-header field-group-div"><div class="field field-name-field-date"><span class="date-display-single">November 20, 2017</span></div><div class="field field-name-field-story-tags">Profile, Student Life</div></div><div class="field field-name-title"><a href="/news/stories/sense-place">A Sense of Place</a></div><div class="field field-name-body">Growing up, Becca Voelcker would drive with her parents 20 miles to the local cinema, which showed a foreign film once every month. “This was long before I knew what the word ‘director’ meant or what it was to make a film,”... <a href="/news/stories/sense-place" class="more-link">Read More</a></div>    </div>
+  
+</div>
+
+  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>    </div>
+  </div>
+</div><!-- /.block -->
+<div id="block-views-events-block-1" class="block block-views last even">
+  <div class="block-inner">
+              <h2 class="block__title block-title"><a href="/events" class="block-title-link">Events</a></h2>
+            <div class="content">
+      <div class="view view-events view-id-events view-display-id-block_1 view-dom-id-35922b8de7c78d636dc0b436659fe65b">
+        
+  
+  
+      <div class="view-content">
+        <div class="node-event view-mode-teaser-2">
+      
+  <div class="group-left">        <div class="field-name-event-date-square"><span class="month">Dec</span><span class="date">4</span></div>  </div>  
+          <div class="group-right"><div class="field field-name-title"><a href="https://gsas.harvard.edu/events/reading-period-writing-oasis">Reading Period Writing Oasis</a></div>    
+          <div class="field field-name-address"></div></div>    </div>
+  <div class="node-event view-mode-teaser-2">
+      
+  <div class="group-left">        <div class="field-name-event-date-square"><span class="month">Dec</span><span class="date">4</span></div>  </div>  
+          <div class="group-right"><div class="field field-name-title"><a href="https://gsas.harvard.edu/events/i-have-no-idea-hands-workshop-jorge-cham-communicating-your-research">&quot;I Have No Idea&quot; - A Hands-on Workshop with Jorge Cham on Communicating Your Research</a></div>    
+          <div class="field field-name-event-date-teaser-short">2:00 PM</div>    
+          <div class="field field-name-address">Cambridge, MA </div></div>    </div>
+  <div class="node-event view-mode-teaser-2">
+      
+  <div class="group-left">        <div class="field-name-event-date-square"><span class="month">Dec</span><span class="date">4</span></div>  </div>  
+          <div class="group-right"><div class="field field-name-title"><a href="https://gsas.harvard.edu/events/i-have-no-idea-interactive-lecture-jorge-cham-discovery-communicating-your-research">&quot;I Have No Idea&quot; - An Interactive Lecture with Jorge Cham on Discovery &amp; Communicating Your Research</a></div>    
+          <div class="field field-name-event-date-teaser-short">4:00 PM</div>    
+          <div class="field field-name-address">Cambridge, MA </div></div>    </div>
+  <div class="node-event view-mode-teaser-2">
+      
+  <div class="group-left">        <div class="field-name-event-date-square"><span class="month">Dec</span><span class="date">5</span></div>  </div>  
+          <div class="group-right"><div class="field field-name-title"><a href="https://gsas.harvard.edu/events/reading-period-writing-oasis">Reading Period Writing Oasis</a></div>    
+          <div class="field field-name-address"></div></div>    </div>
+  <div class="node-event view-mode-teaser-2">
+      
+  <div class="group-left">        <div class="field-name-event-date-square"><span class="month">Dec</span><span class="date">6</span></div>  </div>  
+          <div class="group-right"><div class="field field-name-title"><a href="https://gsas.harvard.edu/events/reading-period-writing-oasis">Reading Period Writing Oasis</a></div>    
+          <div class="field field-name-address"></div></div>    </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>    </div>
+  </div>
+</div><!-- /.block -->
+  </div>
+      </div><!-- /#main-content -->
+        <div class="region region-content-closure">
+    <div id="block-views-profiles-block" class="block block-views plain first last odd">
+  <div class="block-inner">
+                <div class="content">
+      <div class="view view-profiles view-id-profiles view-display-id-block view-dom-id-e230c40404ad54ad11452c5f9a58985d">
+        
+  
+  
+      <div class="view-content">
+        <div>
+    <div  class="ds-2col-fluid node node-profile node-teaser view-mode-teaser clearfix">
+
+  
+      <div class="group-left">
+      <div class="field field-name-field-main-image"><!-- scald=969:teaser {"link":"node\/236"} --><a href="/profiles/jim-yong-kim"><img src="https://gsas.harvard.edu/sites/default/files/styles/teaser/public/thumbnails/image/jim_yong_kim250.jpg?itok=sD8vAQOa" width="320" height="230" alt="Jim Yong Kim illustration" title="Jim Yong Kim illustration" /></a><!-- END scald=969 --></div>    </div>
+  
+      <div class="group-right">
+      <div class="group-profile-header field-group-div"><div class="field field-name-profile-tag"><span>Alumni Profile</span></div></div><div class="field field-name-title"><a href="/profiles/jim-yong-kim">Jim Yong Kim</a></div><div class="field field-name-body">Throughout his career, Jim Yong Kim, MD ’91, PhD ’93, has had one mission: to improve the experiences of populations throughout the world. Beginning as a graduate student, when he and fellow student Paul Famer, MD ’88, PhD ’...<a href="/profiles/jim-yong-kim" class="more-link">Read more</a></div>    </div>
+  
+</div>
+
+  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>    </div>
+  </div>
+</div><!-- /.block -->
+  </div>
+    </div><!-- /.wrapper -->        
+  </div><!-- /#main -->
+</div><!-- /#page -->
+<footer id="footer">
+  <div class="back-top-button" title="Back to the top"><a href="#top">Top</a></div>
+  <div class="wrapper">
+        <div class="region region-footer-content">
+    <div id="block-lunchbox-combined-social" class="block block-lunchbox plain first odd">
+  <div class="block-inner">
+              <h2 class="block__title block-title">Follow Us</h2>
+            <div class="content">
+      <div id="block-views-tweets-block" class="block block-views first odd">
+  <div class="block-inner">
+                <div class="content">
+      <div class="view view-tweets view-id-tweets view-display-id-block view-dom-id-b0898db2a75ed5f9c115ded8e6d99e4e">
+        
+  
+  
+      <div class="view-content">
+      <div class="item-list social-box">    <ul>          <li class="views-row views-row-1 views-row-odd views-row-first views-row-last">  
+          <p class="twitter-message">Throwback to early fall *sigh*! Randolph Courtyard at Adams House <a href="https://t.co/mYXObsX9l3">https://t.co/mYXObsX9l3</a> <a href="https://t.co/KqEJeyby8y">https://t.co/KqEJeyby8y</a></p>    
+          <p class="post-date">Dec 3</p>  </li>
+      </ul></div>    </div>
+  
+  
+  
+      
+<div class="more-link">
+  <a href="/tweets-raw">
+    more  </a>
+</div>
+  
+  
+  
+</div><p class="social-link"><a href="https://twitter.com/HarvardGSAS" class="secondary-button-link" target="_blank"><span class="twitter"></span>@HarvardGSAS</a></p>    </div>
+  </div>
+</div><!-- /.block -->
+<div id="block-lunchbox-facebook" class="block block-lunchbox even">
+  <div class="block-inner">
+                <div class="content">
+      <div class="facebook-wrapper"><div class="facebook-content social-box"><p class="facebook-message">Many Harvard libraries have extended hours during reading week, including Lamont Library, which will be open 24 hours. But seriously, don&#039;t fall asleep in the stacks. <a ... <a href="https://www.facebook.com/HarvardGSAS" class="read-more">Read More</a></p><p class="post-date">Dec 3</p></div></div><p class="social-link"><a href="https://www.facebook.com/HarvardGSAS" class="secondary-button-link" target="_blank"><span class="facebook"></span>Harvard GSAS on Facebook</a></p>    </div>
+  </div>
+</div><!-- /.block -->
+    </div>
+  </div>
+</div><!-- /.block -->
+<div id="block-block-4" class="block block-block plain last even">
+  <div class="block-inner">
+              <h2 class="block__title block-title">Contact Us</h2>
+            <div class="content">
+      <h4>Harvard&nbsp;University</h4>
+
+<h3>Graduate School of Arts &amp; Sciences</h3>
+
+<p>Richard A. and Susan F. Smith Campus Center<br>
+1350 Massachusetts Avenue, Suite 350<br>
+Cambridge, MA 02138-3654</p>
+
+<p><a class="gmap-icon" href="https://www.google.com/maps/place/1350+Massachusetts+Ave,+Cambridge,+MA+02138/@42.3727139,-71.1210444,17z/data=!3m1!4b1!4m2!3m1!1s0x89e37742dc1c29a7:0xc3dbda7a42311d03" title="Harvard University - The Graduate School of Arts &amp; Sciences on Google Map">MAP IT</a></p>
+
+<p><span class="uppercase-label">TEL</span>617-495-5315<br><span class="uppercase-label">FAX</span>617-495-2928<br><span class="uppercase-label">EMAIL</span><a href="mailto:gsas@fas.harvard.edu">gsas@fas.harvard.edu</a></p>
+    </div>
+  </div>
+</div><!-- /.block -->
+  </div>
+    <div id="bottom-content">
+          </div><!-- /#bottom-content -->
+  </div><!-- /.wrapper -->
+</footer>
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"139497e614","applicationID":"99729287","transactionName":"ZVFaZRFYDEVZWhJfXFwbbUMKFk1fVl0DTh1CXEg=","queueTime":0,"applicationTime":13,"atts":"SRZZE1lCH0s=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
 </html>
