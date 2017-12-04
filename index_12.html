@@ -1,1148 +1,3048 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
-  "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr"
-  xmlns:content="http://purl.org/rss/1.0/modules/content/"
-  xmlns:dc="http://purl.org/dc/terms/"
-  xmlns:foaf="http://xmlns.com/foaf/0.1/"
-  xmlns:og="http://ogp.me/ns#"
-  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-  xmlns:sioc="http://rdfs.org/sioc/ns#"
-  xmlns:sioct="http://rdfs.org/sioc/types#"
-  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-  xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
-
-<head profile="http://www.w3.org/1999/xhtml/vocab">
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="shortcut icon" href="https://library.harvard.edu/sites/default/files/favicon_0.ico" type="image/vnd.microsoft.icon" />
-<link rel="alternate" type="application/rss+xml" title="Harvard Library RSS" href="https://library.harvard.edu/rss.xml" />
-  <title>Harvard Library</title>
-  <link type="text/css" rel="stylesheet" href="https://library.harvard.edu/sites/default/files/css/css_lQaZfjVpwP_oGNqdtWCSpJT1EMqXdMiU84ekLLxQnc4.css" media="all" />
-<link type="text/css" rel="stylesheet" href="https://library.harvard.edu/sites/default/files/css/css_YJo600u5DslEXHHEBzo7Whs7zYvH8oZK7MuO9r6-Ktg.css" media="screen" />
-<link type="text/css" rel="stylesheet" href="https://library.harvard.edu/sites/default/files/css/css_MVTXe3q3dEB7GlnMK9xkFRsZTbwKIvw_rvtz4hwibIE.css" media="all" />
-<link type="text/css" rel="stylesheet" href="https://library.harvard.edu/sites/default/files/css/css_uqr7kuPq_chIubbzmqez7kY2MGX2lA1OzNLMUgY4P5E.css" media="all" />
-<link type="text/css" rel="stylesheet" href="https://library.harvard.edu/sites/default/files/css/css_RniJDgl-vps8LOHNZO63na4FDdx-62EuL6dmKOgxlnI.css" media="screen, projection" />
-<link type="text/css" rel="stylesheet" href="https://library.harvard.edu/sites/default/files/css/css_7Sjzvf-3sUj6vQQA-E2fqvVhMxa3l6o30aFTkS63JC8.css" media="print" />
-
-<!--[if lte IE 7]>
-<link type="text/css" rel="stylesheet" href="https://library.harvard.edu/sites/all/themes/HarvardLibraryPortalTheme/css/ie7.css?p0f7bd" media="all" />
-<![endif]-->
-
-<!--[if lte IE 8]>
-<link type="text/css" rel="stylesheet" href="https://library.harvard.edu/sites/all/themes/HarvardLibraryPortalTheme/css/ie8.css?p0f7bd" media="all" />
-<![endif]-->
-  <script type="text/javascript" src="https://library.harvard.edu/sites/all/modules/jquery_update/replace/jquery/1.7/jquery.min.js?v=1.7.2"></script>
-<script type="text/javascript" src="https://library.harvard.edu/misc/jquery.once.js?v=1.2"></script>
-<script type="text/javascript" src="https://library.harvard.edu/misc/drupal.js?p0f7bd"></script>
-<script type="text/javascript" src="https://library.harvard.edu/sites/all/modules/tipsy/javascripts/jquery.tipsy.js?v=0.1.7"></script>
-<script type="text/javascript" src="https://library.harvard.edu/sites/all/modules/tipsy/javascripts/tipsy.js?v=0.1.7"></script>
-<script type="text/javascript" src="https://library.harvard.edu/sites/all/modules/google_cse/google_cse.js?p0f7bd"></script>
-<script type="text/javascript" src="https://library.harvard.edu/sites/all/modules/om_maximenu/js/om_maximenu.js?p0f7bd"></script>
-<script type="text/javascript" src="https://library.harvard.edu/sites/all/modules/megamenu/megamenu.js?p0f7bd"></script>
-<script type="text/javascript" src="https://library.harvard.edu/sites/all/modules/google_analytics/googleanalytics.js?p0f7bd"></script>
+<!DOCTYPE html>
+<!--[if IEMobile 7]><html class="iem7"  lang="en" dir="ltr"><![endif]-->
+<!--[if lte IE 6]><html class="lt-ie9 lt-ie8 lt-ie7"  lang="en" dir="ltr"><![endif]-->
+<!--[if (IE 7)&(!IEMobile)]><html class="lt-ie9 lt-ie8"  lang="en" dir="ltr"><![endif]-->
+<!--[if IE 8]><html class="lt-ie9"  lang="en" dir="ltr"><![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)]><!--><html  lang="en" dir="ltr"><!--<![endif]-->
+<head>
+<meta charset="utf-8" />
+<link rel="canonical" href="https://community.harvard.edu/home" />
+<link rel="shortlink" href="https://community.harvard.edu/home" />
+<meta name="twitter:title" content="Harvard in the Community" />
+<link rel="shortcut icon" href="https://community.harvard.edu/profiles/openscholar/themes/hwpi_modern/favicon.png" type="image/vnd.microsoft.icon" />
+<meta name="generator" content="OpenScholar for Drupal 7 (http://theopenscholar.org)" />
+<meta name="twitter:card" content="summary" />
+<link rel="dns-prefetch" href="//static.hwpi.harvard.edu" />
+<meta property="og:type" content="university" />
+<meta name="twitter:description" content="Harvard in the Community" />
+<meta property="og:title" content="Harvard in the Community" />
+<title>Harvard in the Community</title>
+<meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link type="text/css" rel="stylesheet" href="https://community.harvard.edu/files/css/css_xE-rWrJf-fncB6ztZfd2huxqgxu4WO-qwma6Xer30m4.css?m=1509985502" media="all" />
+<link type="text/css" rel="stylesheet" href="https://community.harvard.edu/files/css/css_raUrXnSCPh_IEA-481GCsCEM8LQ3bUwZWuWQLj9cJAg.css?m=1509985505" media="all" />
+<link type="text/css" rel="stylesheet" href="https://community.harvard.edu/files/css/css_NtdB4k36mtdYkIkKrJpzlU9f_S4AukxJDgK0iwAFjes.css?m=1508347916" media="all" />
+<link type="text/css" rel="stylesheet" href="https://community.harvard.edu/files/css/css__thkkvcN7J4_f-xljy5AxrVeRcG7pOsREsL-5QLoI78.css?m=1508803824" media="all" />
+<link type="text/css" rel="stylesheet" href="https://community.harvard.edu/files/css/css_EmvB8xDZghNl9CUOX77DDu9D-Xh5FmnVXxwDBwy45Zg.css?m=1510692059" media="screen" />
+<link type="text/css" rel="stylesheet" href="https://community.harvard.edu/files/css/css_dW-aNNrctRhQNc-KECjtQd0PxuW-h19IEum-TX2MeEk.css?m=1509985503" media="print" />
+<link type="text/css" rel="stylesheet" href="https://community.harvard.edu/files/css/css_uaIDKcYMUK5osSQXuirpr3ZleXtnnpBN-eiECm7N0M0.css?m=1508347916" media="all" />
+  <!--[if lte IE 8]>
 <script type="text/javascript">
-<!--//--><![CDATA[//><!--
-(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create", "UA-1707005-4", {"cookieDomain":"auto"});ga("require", "linkid", "linkid.js");ga("require", "displayfeatures");ga("set", "page", location.pathname + location.search + location.hash);ga("send", "pageview");
-//--><!]]>
+  var os_c = document.createElement;os_c('header');os_c('nav');os_c('section');os_c('article');os_c('aside');os_c('footer');os_c('hgroup');os_c('figure');
 </script>
-<script type="text/javascript">
-<!--//--><![CDATA[//><!--
-jQuery(document).ready(function(jQuery) {
-jQuery("#feat").carouFredSel({
-                circular: true,
-	        auto    :  false,               
-	        scroll         	: {
-		items	: "page"
-		
-	},
-                prev       : {            
-                                button  : "#feat_prev"
-                },
-                next       : { 
-                                button  : "#feat_next"
-                },
-                pagination           : "#feat_pag"
-});
-jQuery("#scrollalert").carouFredSel({
-              circular: false,
-	infinite: false,
-	auto 	: false,
-	scroll	: {
-		items	: "page"
-	},
-                prev       : {            
-                                button  : "#scrollalert_prev"
-                },
-                next       : { 
-                                button  : "#scrollalert_next"
-                },
-                pagination           : "#scrollalert_pag"
-});
-});
-//--><!]]>
-</script>
-<script type="text/javascript" src="https://library.harvard.edu/sites/all/themes/HarvardLibraryPortalTheme/js/utils.js?p0f7bd"></script>
-<script type="text/javascript" src="https://library.harvard.edu/sites/all/themes/HarvardLibraryPortalTheme/js/jcarouselcontent.js?p0f7bd"></script>
-<script type="text/javascript" src="https://library.harvard.edu/sites/all/themes/HarvardLibraryPortalTheme/js/jquery-ui-1.8.21.custom.min.js?p0f7bd"></script>
-<script type="text/javascript" src="https://library.harvard.edu/sites/all/themes/HarvardLibraryPortalTheme/js/jquery-ui-personalized-1.6rc6.js?p0f7bd"></script>
-<script type="text/javascript" src="https://library.harvard.edu/sites/all/themes/HarvardLibraryPortalTheme/js/jquery.mousewheel.js?p0f7bd"></script>
-<script type="text/javascript" src="https://library.harvard.edu/sites/all/themes/HarvardLibraryPortalTheme/js/jquery.vaccordion.js?p0f7bd"></script>
-<script type="text/javascript" src="https://library.harvard.edu/sites/all/themes/HarvardLibraryPortalTheme/js/jquery.easing.1.3.js?p0f7bd"></script>
-<script type="text/javascript" src="https://library.harvard.edu/sites/all/themes/HarvardLibraryPortalTheme/js/jquery.youtubeaccordion.js?p0f7bd"></script>
-<script type="text/javascript" src="https://library.harvard.edu/sites/all/themes/HarvardLibraryPortalTheme/js/youtubeplaylist.js?p0f7bd"></script>
-<script type="text/javascript" src="https://library.harvard.edu/sites/all/themes/HarvardLibraryPortalTheme/js/uservoice.js?p0f7bd"></script>
-<script type="text/javascript" src="https://library.harvard.edu/sites/all/themes/HarvardLibraryPortalTheme/js/alertsscroll.js?p0f7bd"></script>
-<script type="text/javascript" src="https://library.harvard.edu/sites/all/themes/HarvardLibraryPortalTheme/js/allutilmethods.js?p0f7bd"></script>
-<script type="text/javascript" src="https://library.harvard.edu/sites/all/themes/HarvardLibraryPortalTheme/js/expandcollapesUtility.js?p0f7bd"></script>
-<script type="text/javascript" src="https://library.harvard.edu/sites/all/themes/HarvardLibraryPortalTheme/js/faq-exp.js?p0f7bd"></script>
-<script type="text/javascript" src="https://library.harvard.edu/sites/all/themes/HarvardLibraryPortalTheme/js/fn-accordion.js?p0f7bd"></script>
-<script type="text/javascript" src="https://library.harvard.edu/sites/all/themes/HarvardLibraryPortalTheme/js/libraryutils.js?p0f7bd"></script>
-<script type="text/javascript" src="https://library.harvard.edu/sites/all/themes/HarvardLibraryPortalTheme/js/customnicemenus.js?p0f7bd"></script>
-<script type="text/javascript" src="https://library.harvard.edu/sites/all/themes/HarvardLibraryPortalTheme/js/customanchorscroll.js?p0f7bd"></script>
-<script type="text/javascript" src="https://library.harvard.edu/sites/all/themes/HarvardLibraryPortalTheme/js/customdirectory.js?p0f7bd"></script>
-<script type="text/javascript" src="https://library.harvard.edu/sites/all/themes/HarvardLibraryPortalTheme/js/customMegaMenu.js?p0f7bd"></script>
-<script type="text/javascript">
-<!--//--><![CDATA[//><!--
-jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"HarvardLibraryPortalTheme","theme_token":"01gyE76us_nKcWh-33rz0J41jnw6WRcz3CI4DEauKTY","js":{"sites\/all\/modules\/jquery_update\/replace\/jquery\/1.7\/jquery.min.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/tipsy\/javascripts\/jquery.tipsy.js":1,"sites\/all\/modules\/tipsy\/javascripts\/tipsy.js":1,"sites\/all\/modules\/google_cse\/google_cse.js":1,"sites\/all\/modules\/om_maximenu\/js\/om_maximenu.js":1,"sites\/all\/modules\/megamenu\/megamenu.js":1,"sites\/all\/modules\/google_analytics\/googleanalytics.js":1,"0":1,"1":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/js\/utils.js":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/js\/jcarouselcontent.js":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/js\/jquery-ui-1.8.21.custom.min.js":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/js\/jquery-ui-personalized-1.6rc6.js":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/js\/jquery.mousewheel.js":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/js\/jquery.vaccordion.js":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/js\/jquery.easing.1.3.js":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/js\/jquery.youtubeaccordion.js":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/js\/youtubeplaylist.js":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/js\/uservoice.js":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/js\/alertsscroll.js":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/js\/allutilmethods.js":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/js\/expandcollapesUtility.js":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/js\/faq-exp.js":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/js\/fn-accordion.js":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/js\/libraryutils.js":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/js\/customnicemenus.js":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/js\/customanchorscroll.js":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/js\/customdirectory.js":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/js\/customMegaMenu.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/modules\/tipsy\/stylesheets\/tipsy.css":1,"modules\/book\/book.css":1,"sites\/all\/modules\/calendar\/css\/calendar_multiday.css":1,"modules\/comment\/comment.css":1,"sites\/all\/modules\/date\/date_api\/date.css":1,"sites\/all\/modules\/date\/date_popup\/themes\/datepicker.1.7.css":1,"sites\/all\/modules\/date\/date_repeat_field\/date_repeat_field.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/google_cse\/google_cse.css":1,"modules\/node\/node.css":1,"sites\/all\/modules\/om_maximenu\/css\/om_maximenu.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/megamenu\/megamenu.css":1,"sites\/all\/modules\/megamenu\/megamenu-skins.css":1,"sites\/all\/modules\/panels\/css\/panels.css":1,"sites\/all\/modules\/tagclouds\/tagclouds.css":1,"sites\/all\/modules\/content_type_extras\/css\/content_type_extras.css":1,"public:\/\/ctools\/css\/1b2acf3f75e728af95ba6217d982b1b7.css":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/css\/reset.css":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/css\/style.css":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/css\/topnav.css":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/css\/ui-lightness\/jquery-ui-1.8.21.custom.css":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/system.menus.css":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/system.messages.css":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/system.theme.css":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/node.css":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/search.css":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/user.css":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/css\/print.css":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/css\/ie7.css":1,"sites\/all\/themes\/HarvardLibraryPortalTheme\/css\/ie8.css":1}},"googleCSE":{"cx":"002386710524587861402:bhhhefxf6ki","language":"","resultsWidth":600,"domain":"www.google.com"},"megamenu":{"timeout":"0","sizewait":"0","hoverwait":"0"},"tipsy":{"custom_selectors":[{"selector":".tipsy","options":{"fade":1,"gravity":"w","delayIn":0,"delayOut":0,"trigger":"hover","opacity":"0.8","offset":0,"html":0,"tooltip_content":{"source":"attribute","selector":"title"}}}]},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip","trackUrlFragments":1},"better_exposed_filters":{"views":{"featured_resource_home_page":{"displays":{"default":{"filters":[]}}},"research_links_view":{"displays":{"default":{"filters":[]}}},"feature_events_view":{"displays":{"default":{"filters":[]}}},"featured_content_view_slider":{"displays":{"default":{"filters":[]}}}}},"urlIsAjaxTrusted":{"\/search\/google":true}});
-//--><!]]>
-</script>
+  <![endif]-->
 </head>
-<body class="html front not-logged-in no-sidebars page-node" >
+<body class="html front not-logged-in no-sidebars page-home og-context og-context-node og-context-node-1033026 navbar-on">
   <div id="skip-link">
-    <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+    <a href="#main-content" class="element-invisible element-focusable" tabindex="1">Skip to main content</a>
   </div>
-    <div class="layout-frontpage clearfix">
-  <div class="outerwrapper"> 
-	<div class="wrapper"> 
-	<div id="header-Box">
-    <div class="column column-main column-alpha myacctellusholder">
-    <div class="panel-pane pane-custom pane-10"  >
-  
-      
-  
-  <div class="pane-content">
-    <!--<a id="telluswhatyouthink" href="https://library.harvard.edu/user-feedback-and-known-issues" title="We welcome your feedback">We welcome your feedback on the BETA Harvard Library website.</a>-->
-<div class="myacctellusholdersub">
+    <div id="page_wrap" class="page_wrap">
+<!--REGION TO HOUSE RESPONSIVE MENU. OTHER CONTENT CAN'T BE PLACED HERE-->
+<div class="responive-menu-container clearfix">
+  <ul class="mobile-buttons num-links-3"><li class="link-count-mobi-main first"><a href="#"  data-target="#block-os-primary-menu"><span aria-hidden="true" class="icon-menu"></span></a></li><li class="link-count-mobi-util"><a href="#"  data-target="#block-os-quick-links, #block-os-secondary-menu, #header .os-custom-menu"><span aria-hidden="true" class="icon-plus"></span><span class="move">Utility Menu</span></a></li><li class="link-count-mobi-search last"><a href="#"  data-target="#block-os-search-db-site-search, #block-boxes-solr-search-box"><span aria-hidden="true" class="icon-search3"></span><span class="move">Search</span></a></li></ul></div>
 
-		<ul id='hlp_links'>
-		
-	    	
-			<li id='hlp_hollis'><a href='http://nrs.harvard.edu/urn-3:hul.ois:bannerhollis+'  
-				alt='HOLLIS plus' title='Search books, articles and more' target="_self" onclick="ga('send', 'event', 'Omnibar', 'HOLLIS+');">
-				
-				HOLLIS+</a></li>
-	    	
-			<li id='hlp_classic'><a href='http://nrs.harvard.edu/urn-3:hul.ois:bannerhc'  
-				title='Library catalog' target="_self" onclick="ga('send', 'event', 'Omnibar', 'HOLLIS Classic');">
-				
-				HOLLIS Classic</a></li>
-	    	
-			<li id='hlp_jrnals'><a href='http://nrs.harvard.edu/urn-3:hul.ois:bannerjournals'  
-				title='Find articles and journals' target="_self" onclick="ga('send', 'event', 'Omnibar', 'Journals');">
-				
-				Journals</a></li>
-	    	
-			<li id='hlp_dbs'><a href='http://nrs.harvard.edu/urn-3:hul.ois:bannerdatabases'  
-				title='JSTOR, PubMed, PsycINFO, etc.' target="_self" onclick="ga('send', 'event', 'Omnibar', 'Databases');">
-				
-				Databases</a></li>
-	    	
-			<li id='hlp_libs'><a href='http://nrs.harvard.edu/urn-3:hul.ois:bannerfindlib'  
-				title='Libraries / Hours' target="_self" onclick="ga('send', 'event', 'Omnibar', 'Libraries Hours');">
-				
-				Libraries / Hours</a></li>
-	    	
-			<li id='hlp_myaccounts'><a href='http://nrs.harvard.edu/urn-3:hul.ois:banneraccounts'  
-				title='Renew books or check your library accounts' target="_self" onclick="ga('send', 'event', 'Omnibar', 'Accounts');">
-				
-				All My Accounts</a></li>
-	    	
-			<li id='hlp_askus'>
-<img src='/sites/all/themes/HarvardLibraryPortalTheme/images/qmark_fff.png' alt='' />
-<a href='http://nrs.harvard.edu/urn-3:hul.ois:dsref'  title='Fast answers from Harvard librarians' target="_self" onclick="ga('send', 'event', 'Omnibar', 'Ask Us');">Ask Us</a></li>
-		</ul>
-
-
-    <!-- Ask Us Button Starts -->
-	<!-- <div class="askusbutton">
-		<a href="http://asklib.hcl.harvard.edu/" title="Ask Us?" target="_blank" onclick="ga('send', 'event', 'Banner button', 'Ask Us');"><img alt="Ask Us?" border="0" class="tellusbuttonstyle" height="22" src="https://library.harvard.edu/sites/default/files/images/ask-us.gif" title="Ask Us?" width="85" /> </a></div> -->
-	<!-- Ask Us Button Ends -->
-	
-    <!-- Divider Starts -->
-	<!-- <div class="myacctellusdivider">
-		&nbsp;</div> -->
-	<!--Divider Ends -->
-
-
-
-    <!-- Search Site Starts -->
-	<div class="searchsite">
-		<!-- <input class="searchsiteinput" type="text" name="Search this Site" value="Search this Site" /> --><form class="search-form" action="/search/google" method="post" id="search-form" accept-charset="UTF-8"><div><div class="container-inline form-wrapper" id="edit-basic"><div class="form-item form-type-textfield form-item-keys">
-  <label for="edit-keys">Enter your keywords </label>
- <input type="text" id="edit-keys" name="keys" value="" size="40" maxlength="255" class="form-text" />
-</div>
-<input type="submit" id="edit-submit" name="op" value="Search" class="form-submit" /></div><input type="hidden" name="form_build_id" value="form-PfItv0LcKZH1x0N0druZ-rkJfrpUWw62-XrdoMyGIck" />
-<input type="hidden" name="form_id" value="search_form" />
-</div></form>	</div>
-	<!-- <div class="sitesearch">
-		Search this site
-	</div> -->
-	<!--Search Site Ends -->
-	<!-- Go Button Starts -->
-		<!--<div class="gobutton">
-		<input class="gobuttonstyle" title="Go" type="button" /></div> -->
-	<!-- Go Button Ends -->
-    
-
-
-</div>  </div>
-
-  
-  </div>
-  </div>
-  <div class="header">
-    <div class="column logo column-first column-alpha">
-    <div class="panel-pane pane-page-logo"  >
-  
-      
-  
-  <div class="pane-content">
-    <a href="/" rel="home" id="logo" title="Home"><img src="https://library.harvard.edu/sites/all/themes/HarvardLibraryPortalTheme/logo.png" alt="Home" /></a>  </div>
-
-  
-  </div>
-  </div>
-  
-    <div class="column topnav column-second column-alpha">
-  <div id="nav">
-  	<div id="menu">
- 
-    <div class="panel-pane pane-custom pane-5"  id="main-faux" >
-  
-      
-  
-  <div class="pane-content">
-    <nav class="hrmenu" id="hrmenu">
-    <ul>
-        <li aria-controls="sfdrop" aria-expanded="false">
-            <a href="#"><span>&nbsp;</span>Search &amp; Find</a>
-            <div id="sfdrop" class="hrsub" aria-hidden="true">
-                <div class="hrsub-inner">
-                    <div>
-                        <h2>Catalogs</h2>
-                        <ul>
-                            <li>
-                                <a href="http://hollis.harvard.edu" onclick="ga('send', 'event', 'MainMenu','Search &amp; Find menu', 'HOLLIS+');">
-                                    HOLLIS+</a>
-                            </li>
-                            <li>
-                                <a href="http://hollisclassic.harvard.edu/" onclick="ga('send', 'event', 'MainMenu', 'Search &amp; Find menu', 'HOLLIS Classic');">
-                                    HOLLIS Classic</a>
-                            </li>
-                            <li>
-                                <a href="http://nrs.harvard.edu/urn-3:hul.eresource:oasisxxx" onclick="ga('send', 'event', 'MainMenu', 'Search &amp; Find menu', 'OASIS');">
-                                    OASIS</a>
-                            </li>
-                            <li>
-                                <a href="http://nrs.harvard.edu/urn-3:hul.ois:images" onclick="ga('send', 'event', 'MainMenu', 'Search &amp; Find menu','VIA');">
-                                    HOLLIS Images</a>
-                            </li>
-                            <li>
-                                <a href="http://nrs.harvard.edu/urn-3:hul.eresource:hgeodesy" onclick="ga('send', 'event', 'MainMenu', 'Search &amp; Find menu', 'HGL');">
-                                    HGL (Geodata)</a>
-                            </li>
-                            <li>
-                                <a href="http://nrs.harvard.edu/urn-3:hul.eresource:dashrepo" onclick="ga('send', 'event', 'MainMenu', 'Search &amp; Find menu', 'DASH');">
-                                    DASH</a>
-                            </li>
-                            <li>
-                                <a href="http://www.worldcat.org/advancedsearch" onclick="ga('send', 'event', 'MainMenu', 'Search &amp; Find menu', 'WorldCat');">
-                                    WorldCat</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h2>Databases &amp;<br>
-                            E-Resources</h2>
-                        <ul>
-                            <li>
-                                <a href="/search-find" onclick="ga('send', 'event', 'MainMenu', 'Search &amp; Find menu', 'Search &amp; Find');">
-                                    Search &amp; Find (Major databases)</a>
-                            </li>
-                            <li>
-                                <a href="http://e-research.lib.harvard.edu/V?func=find-db-1" onclick="ga('send', 'event', 'MainMenu', 'Search &amp; Find menu', 'All Databases');">
-                                    All Databases</a>
-                            </li>
-                            <li>
-                                <a href="http://sfx.hul.harvard.edu/sfx_local/az/" onclick="ga('send', 'event', 'MainMenu', 'Search &amp; Find menu', 'E-Journals');">
-                                    E-Journals</a>
-                            </li>
-                            <li>
-                                <a href="http://nrs.harvard.edu/urn-3:hul.ois:articlestab" onclick="ga('send', 'event', 'MainMenu', 'Search &amp; Find menu', 'Articles in HOLLIS+');">
-                                    Articles in HOLLIS+</a>
-                            </li>
-                            <li>
-                                <a href="http://nrs.harvard.edu/urn-3:hul.eresource:ebscoasp" onclick="ga('send', 'event', 'MainMenu', 'Search &amp; Find menu', 'Academic Search Premier');">
-                                    Academic Search Premier</a>
-                            </li>
-                            <li>
-                                <a href="http://nrs.harvard.edu/urn-3:hul.eresource:jstorage" onclick="ga('send', 'event', 'MainMenu', 'Search &amp; Find menu', 'JSTOR');">
-                                    JSTOR</a>
-                            </li>
-                            <li>
-                                <a href="http://nrs.harvard.edu/urn-3:hul.eresource:pubmedxx" onclick="ga('send', 'event', 'MainMenu', 'Search &amp; Find menu', 'PubMed');">
-                                    PubMed</a>
-                            </li>
-                            <li>
-                                <a href="/image-repositories" onclick="ga('send', 'event', 'MainMenu', 'Search &amp; Find menu', 'Image Repositories');">
-                                    Image Repositories</a>
-                            </li>
-                            <li>
-                                <a href="http://nrs.harvard.edu/urn-3:hul.eresource:scicitin" onclick="ga('send', 'event', 'MainMenu', 'Search &amp; Find menu', 'Web of Science');">
-                                    Web of Science</a>
-                            </li>
-                            <li>
-                                <a href="http://nrs.harvard.edu/urn-3:hul.eresource:gscholar" onclick="ga('send', 'event', 'MainMenu', 'Search &amp; Find menu', 'Google Scholar');">
-                                    Google Scholar</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h2>Get It Services</h2>
-                        <ul>
-                            <li>
-                                <a href="http://nrs.harvard.edu/urn-3:hul.eother:BD" onclick="ga('send', 'event', 'MainMenu', 'Search &amp; Find menu', 'Borrow Direct');">
-                                    Borrow Direct</a>
-                            </li>
-                            <li>
-                                <a href="http://nrs.harvard.edu/urn-3:hul.eresource:illhulha" onclick="ga('send', 'event', 'MainMenu', 'Search &amp; Find menu', 'Scan &amp; Deliver');">
-                                    Scan &amp; Deliver</a>
-                            </li>
-                            <li>
-                                <a href="http://nrs.harvard.edu/urn-3:hul.eresource:illhulha" onclick="ga('send', 'event', 'MainMenu', 'Search &amp; Find menu', 'Interlibrary Loan');">
-                                    Interlibrary Loan</a>
-                            </li>
-                            <li>
-                                <a href="/get-it-services" onclick="ga('send', 'event', 'MainMenu', 'Search &amp; Find menu', 'About Get It Services');">
-                                    About Get It Services</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- /hrsub-inner -->
-            </div>
-            <!-- /hrsub -->
-        </li>
-        <li aria-controls="rsdrop" aria-expanded="false">
-            <a href="#"><span>&nbsp;</span>Research Support</a>
-            <div id="rsdrop" class="hrsub" aria-hidden="true">
-                <div class="hrsub-inner">
-                    <div>
-                        <h2>Research Tools</h2>
-                        <ul>
-                            <li>
-                                <a href="/endnote" onclick="ga('send', 'event', 'MainMenu', 'Research Support menu', 'EndNote');">
-                                    EndNote</a>
-                            </li>
-                            <li>
-                                <a href="http://guides.library.harvard.edu/cite/zotero" onclick="ga('send', 'event', 'MainMenu', 'Research Support menu', 'Zotero');">
-                                    Zotero</a>
-                            </li>
-                            <li>
-                                <a href="http://nrs.harvard.edu/urn-3:hul.eresource:refworks" onclick="ga('send', 'event', 'MainMenu', 'Research Support menu', 'RefWorks');">
-                                    RefWorks</a>
-                            </li>
-                            <li>
-                                <a href="/harvard-library-proxy-bookmarklet" onclick="ga('send', 'event', 'MainMenu', 'Research Support menu', Bookmarklet);">
-                                    Harvard Library Bookmarklet</a>
-                            </li>
-                            <li>
-                                <a href="/harvard-libx" onclick="ga('send', 'event', 'MainMenu', 'Research Support menu', 'LibX');">
-                                    Harvard LibX</a>
-                            </li>
-                            <li>
-                                <a href="http://nrs.harvard.edu/urn-3:hul.ois:journals" onclick="ga('send', 'event', 'MainMenu', 'Research Support menu', 'Journals Search');">
-                                    Journals Search</a>
-                            </li>
-                            <li>
-                                <a href="http://nrs.harvard.edu/urn-3:HUL.OIS:dmptool" onclick="ga('send', 'event', 'MainMenu', 'Research Support menu', 'DMPTool');" title="Data Management Tool">
-                                    DMPTool</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h2>Research Help</h2>
-                        <ul>
-                            <li>
-                                <a href="http://guides.library.harvard.edu/" onclick="ga('send', 'event', 'MainMenu', 'Research Support menu', 'Research Guides');">
-                                    Research Guides</a>
-                            </li>
-                            <li>
-                                <a href="http://learn.library.harvard.edu/");">
-                                    Digital Learning Launchpad</a>
-                            </li>
-                            <li>
-                                <a href="http://asklib.hcl.harvard.edu/" onclick="ga('send', 'event', 'MainMenu', 'Research Support menu', 'Ask a Librarian');">
-                                    Ask a Librarian</a>
-                            </li>
-                            <li>
-                                <a href="http://asklib.hcl.harvard.edu/HLRFAQ" onclick="ga('send', 'event', 'MainMenu', 'Research Support menu', 'Research FAQs');">
-                                    Research FAQs</a>
-                            </li>
-                            <li>
-                                <a href="/request-research-appointment" onclick="ga('send', 'event', 'MainMenu', 'Research Support menu', 'Request a Research Appointment');">
-                                    Request a Research Appointment</a>
-                            </li>
-                            <li>
-                                <a href="/staff-directory" onclick="ga('send', 'event', 'MainMenu', 'Research Support menu', 'Staff Directory');">
-                                    Staff Directory</a>
-                            </li>
-                            <li>
-                                <a href="http://guides.library.harvard.edu/dmp" onclick="ga('send', 'event', 'MainMenu', 'Research Support menu', 'Data Management');">
-                                    Data Management</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h2>Contribute Your Research</h2>
-                        <ul>
-                            <li>
-                                <a href="https://dash.harvard.edu/" onclick="ga('send', 'event', 'MainMenu', 'Research Support menu', 'DASH');">
-                                    DASH</a>
-                            </li>
-                            <li>
-                                <a href="http://nrs.harvard.edu/urn-3:hul.eresource:harvmitd" onclick="ga('send', 'event', 'MainMenu', 'Research Support menu', 'IQSS Dataverse');">
-                                    IQSS Dataverse</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- /hrsub-inner -->
-            </div>
-            <!-- /hrsub -->
-        </li>
-        <li aria-controls="ladrop" aria-expanded="false">
-            <a href="#"><span>&nbsp;</span>Libraries &amp; Archives</a>
-            <div id="ladrop" class="hrsub" aria-hidden="true">
-                <div class="hrsub-inner">
-                    <div>
-                        <h2>Locations &amp; Hours</h2>
-                        <ul>
-                            <li>
-                                <a href="/find-library" onclick="ga('send', 'event', 'MainMenu', 'Libraries &amp; Archives menu', 'Find a Library');">
-                                    Find a Library</a>
-                            </li>
-                            <li>
-                                <a href="/all-library-hours" onclick="ga('send', 'event', 'MainMenu', 'Libraries &amp; Archives menu', 'All Library Hours by Week');">
-                                    All Library Hours by Week</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h2>Archives &amp; Special Collections</h2>
-                        <ul>
-                            <li>
-                                <a href="/using-collections" onclick="ga('send', 'event', 'MainMenu', 'Libraries &amp; Archives menu', 'Using the Collections');">
-                                    Using the Collections</a>
-                            </li>
-                            <li>
-                                <a href="/digital-collections" onclick="ga('send', 'event', 'MainMenu', 'Libraries &amp; Archives menu', 'Digital Collections');">
-                                    Digital Collections</a>
-                            </li>
-                            <li>
-                                <a href="/online-exhibitions" onclick="ga('send', 'event', 'MainMenu', 'Libraries &amp; Archives menu', 'Online Exhibitions');">
-                                    Online Exhibitions</a>
-                            </li>
-                            <li>
-                                <a href="/university-records-management" onclick="ga('send', 'event', 'MainMenu', 'Libraries &amp; Archives menu', 'University Records Management');">
-                                    University Records Management</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- /hrsub-inner -->
-            </div>
-            <!-- /hrsub -->
-        </li>
-        <li aria-controls="audrop" aria-expanded="false">
-            <a href="#"><span>&nbsp;</span>About Us</a>
-            <div id="audrop" class="hrsub" aria-hidden="true">
-                <div class="hrsub-inner">
-                    <div>
-                        <h2>Mission &amp; Governance</h2>
-                        <ul>
-                            <li>
-                                <a href="/objectives-priorities" onclick="ga('send', 'event', 'MainMenu', 'About Us menu', 'Mission &amp; Objectives');">
-                                    Mission &amp; Objectives</a>
-                            </li>
-                            <li>
-                                <a href="/sarah-thomas" onclick="ga('send', 'event', 'MainMenu', 'About Us menu', 'Vice President Sarah Thomas');">
-                                    Vice President Sarah Thomas</a>
-                            </li>
-                            <li>
-                                <a href="/governance" onclick="ga('send', 'event', 'MainMenu', 'About Us menu', 'Governance');">
-                                    Governance</a>
-                            </li>
-                            <li>
-                                <a href="https://provost.harvard.edu/" onclick="ga('send', 'event', 'MainMenu', 'About Us menu', 'Provost');">
-                                    Office of the Provost</a>
-                            </li>
-                        </ul>
-                        <h2>News &amp; Events</h2>
-                        <ul>
-                            <li>
-                                <a href="/blog/harvard-library" onclick="ga('send', 'event', 'MainMenu', 'About Us menu', 'Blog');">
-                                    Blog</a>
-                            </li>
-                            <li>
-                                <a href="/library-calendar" onclick="ga('send', 'event', 'MainMenu', 'About Us menu', 'Calendar');">
-                                    Calendar</a>
-                            </li>
-                            <li>
-                                <a href="/exhibitions-and-events" onclick="ga('send', 'event', 'MainMenu', 'About Us menu', 'Exhibitions &amp; Events');">
-                                    Exhibitions &amp; Events</a>
-                            </li>
-                            <li>
-                                <a href="/social-media" onclick="ga('send', 'event', 'MainMenu', 'About Us menu', 'Social Media');">
-                                    Social Media</a>
-                            </li>
-                            <li>
-                                <a href="/submit-your-library-event" onclick="ga('send', 'event', 'MainMenu', 'About Us menu', 'Submit an Event');">
-                                    Submit an Event</a>
-                            </li>
-                            <li>
-                                <a href="/newsroom" onclick="ga('send', 'event', 'MainMenu', 'About Us menu', 'Newsroom');">
-                                    Newsroom</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h2>Staff &amp; Departments</h2>
-                        <ul>
-                            <li>
-                                <a href="/staff-directory" onclick="ga('send', 'event', 'MainMenu', 'About Us menu', 'Staff Directory');">
-                                    Staff Directory</a>
-                            </li>
-                            <li>
-                                <a href="/staff-section" onclick="ga('send', 'event', 'MainMenu', 'About Us menu', 'Resources for Staff');">
-                                    Resources for Staff</a>
-                            </li>
-                            <li>
-                                <a href="/access-services" onclick="ga('send', 'event', 'MainMenu', 'About Us menu', 'Access Services');">
-                                    Access Services</a>
-                            </li>
-                            <li>
-                                <a href="/service-directory" onclick="ga('send', 'event', 'MainMenu', 'About Us menu', 'Information &amp; Technical Services');">
-                                    Information &amp; Technical Services</a>
-                            </li>
-                            <li>
-                                <a href="/lts" onclick="ga('send', 'event', 'MainMenu', 'About Us menu', 'Library Technology Services');">
-                                    Library Technology Services</a>
-                            </li>
-                            <li>
-                                <a href="/preservation-services" onclick="ga('send', 'event', 'MainMenu', 'About Us menu', 'Preservation Services');">
-                                    Preservation Services</a>
-                            </li>
-                        </ul>
-                        <h2>Programs &amp; Initiatives</h2>
-                        <ul>
-                            <li>
-                                <a href="/osc" onclick="ga('send', 'event', 'MainMenu', 'About Us menu', 'Office for Scholarly Communication');">
-                                    Office for Scholarly Communication</a>
-                            </li>
-                            <li>
-                                <a href="http://projects.iq.harvard.edu/harvardlibraryux" onclick="ga('send', 'event', 'MainMenu', 'About Us menu', 'User Research Center');">
-                                    User Research Center</a>
-                            </li>
-                             <li>
-                                <a href="/techloan">
-                                    Technology Lending Program</a>
-                            </li>
-                            <li>
-                                <a href="/harvard-purdue-data" onclick="ga('send', 'event', 'MainMenu', 'About Us menu', 'Data Management Symposium');">
-                                    Data Management Symposium</a>
-                            </li>
-                            <li>
-                                <a href="/ivies_plus_RTL" onclick="ga('send', 'event', 'MainMenu', 'About Us menu', 'Ivy Plus');">
-                                    Ivy Plus</a>
-                            </li>
-                            <li>
-                                <a href="/pfellows" onclick="ga('send', 'event', 'MainMenu', 'About Us menu', 'Pforzheimer Fellows');">
-                                    Pforzheimer Fellows</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h2>Giving to the Library</h2>
-                        <ul>
-                            <li>
-                                <a href="/giving-library" onclick="ga('send', 'event', 'MainMenu', 'About Us menu', 'About [Giving to the Library]');">
-                                    About</a>
-                            </li>
-                            <li>
-                                <a href="http://alumni.harvard.edu/ways-to-give/planned-giving" onclick="ga('send', 'event', 'MainMenu', 'About Us menu', 'Planned Giving');">
-                                    Planned Giving</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- /hrsub-inner -->
-            </div>
-            <!-- /hrsub -->
-        </li>
-        <li aria-controls="hlpdrop" aria-expanded="false">
-            <a href="#"><span>&nbsp;</span>Help</a>
-            <div id="hlpdrop" class="hrsub" aria-hidden="true">
-                <div class="hrsub-inner">
-                    <div>
-                        <h2>Find Answers</h2>
-                        <ul>
-                            <li>
-                                <a href="/frequently-asked-questions" onclick="ga('send', 'event', 'MainMenu', 'Help menu', 'Frequently Asked Questions');">
-                                    Frequently Asked Questions</a>
-                            </li>
-                            <li>
-                                <a href="/support-users-disabilities" onclick="ga('send', 'event', 'MainMenu', 'Help menu', 'Support for Users with Disabilities');">
-                                    Support for Users with Disabilities</a>
-                            </li>
-                            <li>
-                                <a href="/e-resources-copyright-and-licensing-restrictions" onclick="ga('send', 'event', 'MainMenu', 'Help menu', 'E-Resources: Copyright &amp; Licensing Restrictions');">
-                                    E-Resources: Copyright &amp; Licensing
-                                    Restrictions</a>
-                            </li>
-                            <li>
-                                <a href="/e-advisories" onclick="ga('send', 'event', 'MainMenu', 'Help menu', 'System Advisories');">
-                                    System Advisories</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h2>Contact Us</h2>
-                        <ul>
-                            <li>
-                                <a href="http://nrs.harvard.edu/urn-3:hul.ois:dsref" onclick="ga('send', 'event', 'MainMenu', 'Help menu', 'Ask a Librarian');">
-                                    Ask a Librarian</a>
-                            </li>
-                            <li>
-                                <a href="/report-problem" onclick="ga('send', 'event', 'MainMenu', 'Help menu', 'Report a Problem or Provide Feedback');">
-                                    Report a Problem or Provide Feedback</a>
-                            </li>
-                            <li>
-                                <a href="/share-story" onclick="ga('send', 'event', 'MainMenu', 'Help menu', 'Share a Story');">
-                                    Share a Story</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- /hrsub-inner -->
-            </div>
-            <!-- /hrsub -->
-        </li>
-    </ul>
-</nav>  </div>
-
-  
-  </div>
-  </div>
-   </div>
-		</div>
-		 		 </div>
-						</div>
- <div class="divider"> &nbsp; </div> 
- <div class="homecontentarea" id="main-content">
-    <div class="column homeleftcol column-third column-alpha">
-    <div class="panel-pane pane-custom pane-8"  >
-  
-      
-  
-  <div class="pane-content">
-    <div class="harvardcatalogs">
-    <div class="harvardcatalogsInner">
-        <h1>HOLLIS+</h1>
-        <p>Search for books, articles, media, and more</p>
-        <div id="homePageSingleSearchBox">
-            <form id="simple" name="searchPrimoForm" aria-label="Search form" method="get" target="_self" action="http://hollis.harvard.edu/primo_library/libweb/action/dlSearch.do" enctype="application/x-www-form-urlencoded; charset=utf-8" onsubmit="singleSearchPrimo()">
-                <input type="hidden" name="institution" value="HVD">
-                <input type="hidden" name="vid" value="HVD">
-                <input type="hidden" name="tab" value="everything">
-                <input type="hidden" name="search_scope" value="everything">
-                <input type="hidden" name="mode" value="Basic">
-                <input type="hidden" name="onCampus" value="false">
-                <input type="hidden" name="displayMode" value="full">
-                <input type="hidden" name="highlight" value="true">
-                <input type="hidden" name="query" id="primoQuery">
-                <input type="search" id="primoQueryTemp" aria-label="Enter search terms">
-                <!-- Which PNX Display fields to highlight the results -->
-                <input type="hidden" name="displayField" value="all">
-                <input type="hidden" name="pcAvailabiltyMode" value="true">
-                <input type="hidden" name="bulkSize" value="30">
-                <!-- Search Button  -->
-                <input id="singleSearch" onclick="singleSearchPrimo()" type="button" value="Search" aria-label="Search">
-            </form>
-        </div>
-        <div id="homePageAdvSearch"><a href="http://hollis.harvard.edu/primo_library/libweb/action/search.do?mode=Advanced&ct=AdvancedSearch&dscnt=0&vid=HVD" onclick="ga('send', 'event', 'homePage', 'Advanced Search');">Advanced Search</a></div>
-        <div id="homePageUseSF">For a list of major databases, use <a href="search-find" onclick="ga('send', 'event', 'homePage', 'use Search & Find');">Search & Find</a></div>
-    </div>
-</div>  </div>
-
-  
-  </div>
-<div class="panel-separator"></div><div class="panel-pane pane-views pane-featured-content-view-slider"  >
-  
-      
-  
-  <div class="pane-content">
-    <div class="view view-featured-content-view-slider view-id-featured_content_view_slider view-display-id-default view-dom-id-2dacbd763c7654b144fd9a9f744fbc2b">
-        
-  
-  
-      <div class="view-content">
-       <div class="homeleftcoldividerboldblack">&nbsp;</div>
-             <div class="univrightcol-featfull">
-                        <div class="headabt">
-						                             <div class="univrightcoldivider"> &nbsp; </div>
-                        </div>
-                        
-                       <div class="featpagination" id="feat_pag"></div>
-                      </div>
-                      <div class="featcarouselholder">
-                        <div class="featprevcr">
-                            <a class="prev" id="feat_prev" href="#"><span>prev</span></a>
-                        </div>
-                         <div class="featnextcr">
-                         <a class="next" id="feat_next" href="#"><span>next</span></a> 
-            			</div>
-                         <div class="image_carouselfeat">
-                            <div id="feat">                	
-          						  								  <div class="views-row views-row-1 views-row-odd views-row-first homefeatcarouselholdcontent">
-								      
-          <p><a href="https://news.harvard.edu/gazette/story/2017/10/lights-camera-cabot/ "><img typeof="foaf:Image" src="https://library.harvard.edu/sites/default/files/lightscameracabot_200x140.jpg" width="200" height="140" alt="" /></a></p>    
-          <h2>Lights, Camera, Cabot</h2>    
-          <p>At Cabot Library, multimedia studios provide students the opportunity to turn their ideas into everything from podcasts to films.</p>    
-          <p class="field-content"><a class="cardetails" href ="https://news.harvard.edu/gazette/story/2017/10/lights-camera-cabot/">Detail</a></p>  								  </div>
-																  <div class="views-row views-row-2 views-row-even homefeatcarouselholdcontent">
-								      
-          <p><a href="https://news.harvard.edu/gazette/story/2017/10/harvard-digitizes-450000-documents-from-its-colonial-north-american-project/ "><img typeof="foaf:Image" src="https://library.harvard.edu/sites/default/files/scrollthroughcna_200x140.jpg" width="200" height="140" alt="Lock of hair sent by Elizabeth Lincoln to Samuel Norton, ca. 1780" /></a></p>    
-          <h2>Scroll Through Colonial Life</h2>    
-          <p>The Library's vast collection from the Colonial era, from love letters to receipts, is being digitized for public view.</p>    
-          <p class="field-content"><a class="cardetails" href ="https://news.harvard.edu/gazette/story/2017/10/harvard-digitizes-450000-documents-from-its-colonial-north-american-project/">Detail</a></p>  								  </div>
-																  <div class="views-row views-row-3 views-row-odd homefeatcarouselholdcontent">
-								      
-          <p><a href="https://today.law.harvard.edu/santos-receives-2017-great-negotiator-award-hls/ "><img typeof="foaf:Image" src="https://library.harvard.edu/sites/default/files/santos_200x140.jpg" width="200" height="140" alt="At Widener Library, Juan Manuel Santos presented a copy of the Colombian peace resolution to Douglas W. Elmendorf and Sarah Thomas." /></a></p>    
-          <h2>Colombian President Gifts Copy of Peace Agreement to Harvard Library</h2>    
-          <p>President Juan Manuel Santos received the 2017 Great Negotiator Award at Harvard Law School. </p>    
-          <p class="field-content"><a class="cardetails" href ="https://today.law.harvard.edu/santos-receives-2017-great-negotiator-award-hls/">Detail</a></p>  								  </div>
-																  <div class="views-row views-row-4 views-row-even homefeatcarouselholdcontent">
-								      
-          <p><a href="https://www.pri.org/stories/2017-07-27/team-women-are-unearthing-forgotten-legacy-harvard-s-women-computers "><img typeof="foaf:Image" src="https://library.harvard.edu/sites/default/files/womencomputerspri3_200x140.jpg" width="200" height="140" alt="Wolbach staff" /></a></p>    
-          <h2>Unearthing a Forgotten Legacy</h2>    
-          <p>More than 40 years before women gained the right to vote, women labored in the Harvard College Observatory as “computers.”</p>    
-          <p class="field-content"><a class="cardetails" href ="https://www.pri.org/stories/2017-07-27/team-women-are-unearthing-forgotten-legacy-harvard-s-women-computers">Detail</a></p>  								  </div>
-																  <div class="views-row views-row-5 views-row-odd homefeatcarouselholdcontent">
-								      
-          <p><a href="http://news.harvard.edu/gazette/story/2017/07/harvard-class-reveals-hidden-wonders-of-feminism/ "><img typeof="foaf:Image" src="https://library.harvard.edu/sites/default/files/gloriasteinem.jpg" width="200" height="140" alt="Gloria Steinem at a microphone" /></a></p>    
-          <h2>Fresh Thinking on History of Feminism</h2>    
-          <p>Class, timeline explore lesser-known narratives in movement’s rise.</p>    
-          <p class="field-content"><a class="cardetails" href ="http://news.harvard.edu/gazette/story/2017/07/harvard-class-reveals-hidden-wonders-of-feminism/">Detail</a></p>  								  </div>
-																  <div class="views-row views-row-6 views-row-even views-row-last homefeatcarouselholdcontent">
-								      
-          <p><a href="https://www.nytimes.com/2017/05/11/us/harvard-kennedy-audio.html "><img typeof="foaf:Image" src="https://library.harvard.edu/sites/default/files/jfk_1939.png" width="200" height="140" alt="John F. Kennedy in his junior year at Harvard in 1939" /></a></p>    
-          <h2>1937 Recording of John F. Kennedy at Harvard Captures a Politician in the Making</h2>    
-          <p>The forceful voice of the 20-year-old Harvard student punches through the crackling audio.</p>    
-          <p class="field-content"><a class="cardetails" href ="https://www.nytimes.com/2017/05/11/us/harvard-kennedy-audio.html">Detail</a></p>  								  </div>
-								                                
-            				</div>
-                          </div>                       
-        		</div>    </div>
-  
-  
-  
-  
-  
-  
-</div>  </div>
-
-  
-  </div>
-  </div>
-  
-    <div class="column homerightcol column-fourth column-alpha">
-   
-    <div class="panel-pane pane-pane-messages"  >
-  
-      
-  
-  <div class="pane-content">
-      <div class="tabs"></div>
-  </div>
-
-  
-  </div>
-<div class="panel-separator"></div><div class="panel-pane pane-custom pane-3"  >
-  
-      
-  
-  <div class="pane-content">
-    <div class="homerightcolcontainer">
-	  <ul class="homeres">
-		<li>
-			<a href="find-library" onclick="ga('send', 'event', 'Resource_icons', 'Library Hours');">
-			<img width="45" height="52" border="0" alt="" src="/sites/all/themes/HarvardLibraryPortalTheme/images/clock.png">
-			Library Hours
-			</a>
-		</li>
-		<li>
-			<a href="harvard-library-proxy-bookmarklet" onclick="ga('send', 'event', 'Resource_icons', 'Bookmarklet');">
-			<img width="45" height="52" border="0" alt="" src="/sites/all/themes/HarvardLibraryPortalTheme/images/unlock-alt.png"> 
-			Library Bookmarklet
-			</a>
-		</li>
-		<li>
-			<a href="staff-directory" onclick="ga('send', 'event', 'Resource_icons', 'Staff Directory');">
-			<img width="53" height="52" border="0" alt="" src="/sites/all/themes/HarvardLibraryPortalTheme/images/fi-torsos-female-male.png">
-			Staff Directory
-			</a>
-		</li>
-		<li>
-			<a href="http://nrs.harvard.edu/urn-3:hul.ois:portal_resguides" onclick="ga('send', 'event', 'Resource_icons', 'Research Guides');"> 
-			<img width="43" height="52" border="0" alt="" src="/sites/all/themes/HarvardLibraryPortalTheme/images/compass.png">
-			Research Guides
-			</a>
-		</li>
-		<li>
-			<a href="alumni-resources" onclick="ga('send', 'event', 'Resource_icons', 'Alumni');">
-			<img width="53" height="52" border="0" alt="" src="/sites/all/themes/HarvardLibraryPortalTheme/images/grad_cap.png">
-			Resources for Alumni
-			</a>
-		</li>
-		<li>
-			<a href="library-calendar" onclick="ga('send', 'event', 'Resource_icons', 'Events');">
-			<img width="53" height="52" border="0" alt="" src="/sites/all/themes/HarvardLibraryPortalTheme/images/home-calendar.gif">
-			Events
-			</a>
-		</li>
-	  </ul>
-</div>  </div>
-
-  
-  </div>
-<div class="panel-separator"></div><div class="panel-pane pane-views pane-featured-resource-home-page"  id="homePageFeaturedResource" >
-  
-      
-  
-  <div class="pane-content">
-    <div class="view view-featured-resource-home-page view-id-featured_resource_home_page view-display-id-default view-dom-id-54a73b8316ed89359bbec9f770c937c2">
-            <div class="view-header">
-      <div class="homerightcolcontainer">
-	<div class="homerightcolblackdvd">&nbsp;</div>
-	<h2>Featured resource</h2>
-	<div class="homerightcoldot"> &nbsp; </div>    </div>
-  
-  
-  
-      <div class="view-content">
-        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
-      
-  <div class="views-field views-field-field-image">        <div class="field-content"><a href="http://nrs.harvard.edu/urn-3:hul.eresource:musicaltheatersongs"><img typeof="foaf:Image" src="https://library.harvard.edu/sites/default/files/featured_resource/MTS_Feature-Resource-Ad_R2.jpg" width="220" height="220" alt="" /></a></div>  </div>  
-  <div class="views-field views-field-body">        <div class="field-content"><p><a href="http://nrs.harvard.edu/urn-3:hul.eresource:musicaltheatersongs">Musical Theater Songs</a></p></div>  </div>  </div>
-    </div>
-  
-  
-  
-  
-      <div class="view-footer">
-      </div>    </div>
-  
-  
-</div>  </div>
-
-  
-  </div>
-<div class="panel-separator"></div><div class="panel-pane pane-views pane-research-links-view"  >
-  
-      
-  
-  <div class="pane-content">
-    <div class="view view-research-links-view view-id-research_links_view view-display-id-default sqbullet view-dom-id-157d11cd1220c0e11547e7a12fdc176b">
-        
-  
-  
-      <div class="view-content">
-      <div class="homerightcolcontainer">
-	<div class="homerightcolblackdvd">&nbsp;</div>
-	<h2>CONTACT US</h2>
-	<div class="homerightcoldot"> &nbsp; </div>
-		<ul class="sqbullet">
-		  
-	  <li>
-			  
-          <a class="https://library.harvard.edu/request-research-appointment" href="https://library.harvard.edu/request-research-appointment">Request a Research Appointment </a>    
-          <br>
-<span class="subtext">  	  </li>
-	 
-    	  
-	  <li>
-			  
-          <a class="https://library.harvard.edu/purchase-request-form" href="https://library.harvard.edu/purchase-request-form">Request a Purchase</a>    
-          <br>
-<span class="subtext">  	  </li>
-	 
-    	  
-	  <li>
-			  
-          <a class="https://library.harvard.edu/report-problem" href="https://library.harvard.edu/report-problem">Report a Problem</a>    
-          <br>
-<span class="subtext">  	  </li>
-	 
-    	  
-	  <li>
-			  
-          <a class="https://library.harvard.edu/share-story" href="https://library.harvard.edu/share-story">Share a Story</a>    
-          <br>
-<span class="subtext">  	  </li>
-	 
-    	</ul>
-  
-</div>
-    </div>
-  
-  
-  
-  
-  
-  
-</div>  </div>
-
-  
-  </div>
-<div class="panel-separator"></div><div class="panel-pane pane-views pane-feature-events-view"  >
-  
-      
-  
-  <div class="pane-content">
-    <div class="view view-feature-events-view view-id-feature_events_view view-display-id-default sqbullet view-dom-id-b2a5338cc8e32a6b91b67d38977e290a">
-        
-  
-  
-      <div class="view-empty">
-      <div class="homerightcoldotspc"> &nbsp;</div>
-<p class="home-seemore-calendar">
-    <a title="More Library Events and Exhibitions" href="/news-and-events">More Library Events and Exhibitions</a>
-</p>
-<p class="home-seemore-calendar">
-    <a title="Library Calendar" href="/library-calendar">Library Calendar</a></p>
-<p class="home-seemore-calendar">
-    <a title="Library Blog" href="/blog/harvard-library">Library Blog</a></p>
-<div class="homerightcoldotspc"> &nbsp;</div>    </div>
-  
-  
-  
-  
-  
-  
-</div>  </div>
-
-  
-  </div>
-  </div>
-  
-		 		 </div>
-<div id="footer-Box" class="footer">
-    <div class="column footcol column-first column-beta">
-    <div class="panel-pane pane-custom pane-1"  >
-  
-      
-  
-  <div class="pane-content">
-    <div class="footcol">
-	<dl>
-		<dt>
-			<a href="/feedback">Contact Us</a></dt>
-			<dd>617-495-3650 | General</dd>
-			<dd>617-495-4166 | Privileges</dd>
-			<dd>617-495-2461 | Archives</dd>
-		<dd>
-			<a href="/staff-directory">Staff Directory</a>
-		</dd>
-		<dd>
-			<a href="/feedback">Provide Feedback</a>
-		</dd>
-	</dl>
-	
-	<dl class="footicons">
-		<dd class="foottwitter">
-			<a href="https://twitter.com/HarvardLibrary"><img alt="Twitter" border="0" height="22" src="/sites/all/themes/HarvardLibraryPortalTheme/images/twitterbutton-footer.gif" width="24" /></a></dd>
-		<dd class="footyoutube">
-			<a href="https://www.youtube.com/channel/UCLv7Gzc3VTO6ggFlXY0sOyw"><img alt="Youtube" border="0" height="22" src="/sites/all/themes/HarvardLibraryPortalTheme/images/youtubebutton-footer.gif" width="24" /></a></dd>
-	</dl>
-</div>
-<p>&nbsp;</p>  </div>
-
-  
-  </div>
-  </div>
-  
-    <div class="column footcol column-second column-beta">
-    <div class="panel-pane pane-custom pane-6"  >
-  
-      
-  
-  <div class="pane-content">
-    <div class="footcol">
-	<dl>
-		<dt>
-			<a href="search-find">Search &amp; Find</a></dt>
-	</dl>
-</div>
-<p>&nbsp;</p>  </div>
-
-  
-  </div>
-  </div>
-  
-    <div class="column footcol column-third column-beta">
-    <div class="panel-pane pane-custom pane-9"  >
-  
-      
-  
-  <div class="pane-content">
-    <div class="footcol">
-	<dl>
-		<dt>Research Support</dt>
-		<dd><a href="http://guides.library.harvard.edu/">Research Guides</a></dd>
-                <dd><a href="http://nrs.harvard.edu/urn-3:hul.ois:dsref">Ask Us</a></dd>
-	</dl>
-</div>
-
-<p>&nbsp;</p>  </div>
-
-  
-  </div>
-  </div>
-  
-    <div class="column footcol column-four column-beta">
-    <div class="panel-pane pane-custom pane-4"  >
-  
-      
-  
-  <div class="pane-content">
-    <div class="footcol">
-	<dl>
-		<dt>Libraries &amp; Archives</dt>
-		<dd><a href="find-library">Find a Library</a></dd>
-	</dl>
-</div>
-
-<p>&nbsp;</p>  </div>
-
-  
-  </div>
-  </div>
-  
-    <div class="column footcol column-five column-beta">
-    <div class="panel-pane pane-custom pane-2"  >
-  
-      
-  
-  <div class="pane-content">
-    <div class="footcol">
-	<dl>
-		<dt>About Us</dt>
-		<dd><a href="objectives-priorities">Mission &amp; Objectives</a></dd>
-		<dd><a href="exhibitions-and-events">Exhibitions &amp; Events</a></dd>
-		<dd><a href="giving-library">Giving to the Library</a></dd>
-	</dl>
-</div>
-
-<p>&nbsp;</p>  </div>
-
-  
-  </div>
-  </div>
-  
-    <div class="column footcol column-six column-beta">
-    <div class="panel-pane pane-custom pane-7"  >
-  
-      
-  
-  <div class="pane-content">
-    <div class="footcol">
-	<dl><dt>Help</dt>
-		<dd><a href="http://nrs.harvard.edu/urn-3:hul.ois:dsref" target="_blank">Ask Us</a></dd>
-		<dd><a href="report-problem">Report a Problem</a></dd>
-		<dd><a href="frequently-asked-questions">Frequently Asked Questions</a></dd>
-		<!--<dd class="stafflog">
-			<a href="#" title=""><img alt="Staff Login" border="0" height="22" src="/sites/all/themes/HarvardLibraryPortalTheme/images/staff-login.gif" title="Staff 
-                        Login" width="90" /></a></dd>--></dl></div>
-
-<p> </p>  </div>
-
-  
-  </div>
-  </div>
-  		</div>
+<!--FLEXIBLE ADMIN HEADER FOR USE BY SELECT GROUPS USING OS-->
+	<div id="branding_header">
+		<div  class="branding-container clearfix">
+		  <div class="branding-left"><a href="http://www.harvard.edu" ><img src="https://community.harvard.edu/profiles/openscholar/themes/hwpi_basetheme/images/harvard-logo.png" width="235" height="32" alt="Harvard Logo" /></a></div><div class="branding-right"><a href="http://www.harvard.edu" >HARVARD.EDU</a></div>		</div>
 	</div>
-<div id="lower-footer-Box">
-    <div class="column footeraddress column-main column-gamma1">
-	  <div class="footeraddress-box">
-    	<div class="panel-pane pane-custom pane-11"  >
+
+<div id="page" class="container page header-main header-right content-top content-left content-right content-bottom footer">
+	<div id="page-wrapper">
+
+		
+					<!--header regions beg-->
+			<header id="header" class="clearfix" role="banner">
+			 <div id="header-container">
+				 <div id="header-panels" class="at-panel gpanel panel-display three-col clearfix">
+					  					  <div class="region region-header-second"><div class="region-inner clearfix"><div id="block-boxes-1505328739" class="block block-boxes block-boxes-os_boxes_html header-logo no-title"  module="boxes" delta="1505328739"><div class="block-inner clearfix">  
   
+  <div class="block-content content"><div id='boxes-box-1505328739' class='boxes-box'><div class="boxes-box-content"><a href="https://hwpi.harvard.edu/comm" title=""><img height="111" width="400" style="width: 400px; height: 111px;" alt="Harvard in the Community" title="Harvard in the Community" class="media-element file-default file-os-files-medium" src="//static.hwpi.harvard.edu/files/styles/os_files_medium/public/comm/files/harvard_inthe_community_rgb-400.png?m=1505328969&amp;itok=H0fTGXJQ" /></a></div></div></div>
+  </div></div></div></div>					  					  <div class="region region-header-third"><div class="region-inner clearfix"><div id="block-boxes-1505403206" class="block block-boxes block-boxes-os_boxes_html signup no-title"  module="boxes" delta="1505403206"><div class="block-inner clearfix">  
+  
+  <div class="block-content content"><div id='boxes-box-1505403206' class='boxes-box'><div class="boxes-box-content"><p>
+	<a href="https://hwpi.harvard.edu/comm/newsletter" title="">Stay updated on news &amp; events</a>
+</p>
+</div></div></div>
+  </div></div><div id="block-boxes-1503078734" class="block block-boxes block-boxes-os_boxes_media no-title"  module="boxes" delta="1503078734"><div class="block-inner clearfix">  
+  
+  <div class="block-content content"><div id='boxes-box-1503078734' class='boxes-box'><div class="boxes-box-content"><div id="file-882571" class="file file-html file-html-embed">
+
+          <h2 class="element-invisible"><a href="">1a999a828aff8a8659722cf3eb28e635</a></h2>
       
   
-  <div class="pane-content">
-    Logo Footer
-<div class="footerlogo">
-	<a href="/"><img alt="Harvard University" border="0" height="56" width="230" src="/sites/all/themes/HarvardLibraryPortalTheme/images/logo-footer.gif"  /> </a></div>
-<!-- Footer Logo Starts --><!-- Address Starts -->
-<div class="footaddress">
-	<p><a href="http://www.harvard.edu">Harvard University</a></p>
-	<p>Cambridge, MA 02138</p>
-	<p>617.495.1000 | <a href="https://library.harvard.edu/feedback">Feedback</a></p>
+  <div class="content">
+    <div class="file-info"></div><div class="field field-name-field-html-code field-type-text-long field-label-hidden view-mode-full"><div class="field-items"><div class="field-item even"><script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Open+Sans:400,400italic,700,700italic:latin', 'Lato:300,400,500,600,700:latin', 'Oswald:300,400,500,600,700:latin', 'Montserrat:300,400,500,600,700:latin' ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })(); </script></div></div></div>  </div>
+
+  
 </div>
-<div style="float:left; padding: 7px 0 0 50px">
-	<img alt="Member, ACRL Diversity Alliance" border="0" src="/sites/all/themes/HarvardLibraryPortalTheme/images/diversity-alliance.png" height="56" />
-</div>  </div>
+</div></div></div>
+  </div></div></div></div>					  				 </div>
+			  </div>
+		  </header>
+      <!--header regions end-->
+		
+				  <!--main menu region beg-->
+		  <div id="menu-bar" class="nav region-menu-bar clearfix"><nav id="block-os-primary-menu" class="block block-os no-title menu-wrapper menu-bar-wrapper clearfix"  module="os" delta="primary-menu">  
+  
+  <ul class="nice-menu nice-menu-down nice-menu-primary-menu" id="nice-menu-primary-menu"><li class="menu-109266 menuparent  menu-path-node-1033531  first   odd  "><a href="https://community.harvard.edu/about"  title="">About</a><span class="open-submenu"></span><ul><li class="menu-132566 menu-path-node-1045931  first   odd  "><a href="https://community.harvard.edu/our-team" >Our Team</a></li><li class="menu-132568 menu-path-node-1062801   even   last "><a href="https://community.harvard.edu/newsletter" >Newsletter</a></li></ul></li><li class="menu-109262 menu-path-node-1033521   even  "><a href="https://community.harvard.edu/events"  title="">Events</a></li><li class="menu-134294 menu-path-https--newsharvardedu-gazette-section-campus-n-community-in-the-community-   odd  "><a href="https://news.harvard.edu/gazette/section/campus-n-community/in-the-community/" >News</a></li><li class="menu-109260 menuparent  menu-path-node-1033516   even  "><a href="https://community.harvard.edu/initiatives"  title="">Initiatives</a><span class="open-submenu"></span><ul><li class="menu-124248 menu-path-node-1035811  first   odd  "><a href="https://community.harvard.edu/arts-culture" >Arts &amp; Culture</a></li><li class="menu-124251 menu-path-node-1035781   even  "><a href="https://community.harvard.edu/community-initiatives"  title="">Community Initiatives</a></li><li class="menu-124254 menu-path-node-1035816   odd  "><a href="https://community.harvard.edu/community-partnerships" >Community Partnerships</a></li><li class="menu-124256 menu-path-node-1035786   even  "><a href="https://community.harvard.edu/economic-impact" >Economic Impact</a></li><li class="menu-124259 menu-path-node-1035801   odd  "><a href="https://community.harvard.edu/education"  title="">Education Initiatives</a></li><li class="menu-124261 menu-path-node-1035791   even  "><a href="https://community.harvard.edu/housing"  title="">Housing Initiatives</a></li><li class="menu-124265 menu-path-node-1035806   odd   last "><a href="https://community.harvard.edu/sustainability" >Sustainability</a></li></ul></li><li class="menu-141547 menu-path-node-1071866   odd   last "><a href="https://community.harvard.edu/reports" >Reports</a></li></ul>
 
+  </nav></div>		  <!--main menu region end-->
+		
+    
+		<div id="columns" class="clearfix">
+			<div class="hg-container">
+				<div id="content-column" role="main">
+					<div class="content-inner">
+					  
+													              <a name="main-content"></a>
+														
+															<!--front panel regions beg-->
+								<div id="content-panels" class="at-panel gpanel panel-display content clearfix">
+									<div class="region region-content-top"><div class="region-inner clearfix"><div id="block-boxes-1504880661" class="block block-boxes block-boxes-os_boxes_media no-title"  module="boxes" delta="1504880661"><div class="block-inner clearfix">  
   
-  </div>
-<div class="panel-separator"></div><div class="panel-pane pane-block pane-hp-connect-hp-connect-login"  >
-  
+  <div class="block-content content"><div id='boxes-box-1504880661' class='boxes-box'><div class="boxes-box-content"><div id="file-894866" class="file file-html file-html-embed">
+
+          <h2 class="element-invisible"><a href="">ee0908485ab93a0367e441459c919356</a></h2>
       
   
-  <div class="pane-content">
-    <a href="http://access.harvard.edu/access/servlet/access?__hulaccess_gateway=portal&amp;__hulaccess_url=https%3A%2F%2Flibrary.harvard.edu%2Fhp%2Fregister%2Fcreate%3Fdestination%3Dnode">Staff Login</a>  </div>
-
-  
-  </div>
-      </div>  
-  </div>
-  
-    <div class="column copyrightsline column-main column-gamma2">
-  	<div class="copyrightsline-box">
-	    <div class="panel-pane pane-custom pane-12"  >
-  
-      
-  
-  <div class="pane-content">
-    <div class="copyrightsline">
-    <ul class="clearfix">
-        <li class="first"><a class="first" href="http://www.trademark.harvard.edu/trademark_protection/notice.php" target="_blank">Trademark Notice</a></li>
-        <li><a href="http://www.harvard.edu/reporting-copyright-infringements" target="_blank">Report a Copyright Infringement</a></li>
-        <li><a href="privacy-statement">Privacy Statement</a></li>
-        <li><a href="/support-users-disabilities">Accessibility</a></li>
-        <li><a href="sitemap">Sitemap</a></li>
-        <li><a href="http://provost.harvard.edu/">Office of the Provost</a></li>
-        <li class="last"><a href="http://www.harvard.edu"><span class="last">Harvard University</span></a></li>
-    </ul>
-    <p>Copyright 2017&nbsp;The President and Fellows of Harvard College</p>
+  <div class="content">
+    <div class="file-info"></div><div class="field field-name-field-html-code field-type-text-long field-label-hidden view-mode-full"><div class="field-items"><div class="field-item even"><div id="video_container">
+	<video autoplay loop muted>
+		<source src="https://hwpi.harvard.edu/files/comm/files/community_loop_-_short.mp4" type="video/mp4">
+	</video><div class="os-poster"><img src="https://hwpi.harvard.edu/files/comm/files/poster.jpg?m=1507664421"></div><div class="os-video_overlay"></div>
+	<div class="content">
+		
+	</div>
 </div>
-<p>&nbsp;</p>  </div>
+<div class="videotext">
+
+</div>
+<style>
+#video_container {
+	position: relative;
+	overflow: hidden;
+        width:100%;
+}
+#video_container video{
+        width:100%;
+
+}
+
+#video_container .content {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+</style>
+<script>
+$(function() {
+	
+	// IE detect
+	function iedetect(v) {
+
+	    var r = RegExp('msie' + (!isNaN(v) ? ('\\s' + v) : ''), 'i');
+		return r.test(navigator.userAgent);
+			
+	}
+
+	// For mobile screens, just show an image called 'poster.jpg'. Mobile
+	// screens don't support autoplaying videos, or for IE.
+	if(screen.width < 800 || iedetect(8) || iedetect(7) || 'ontouchstart' in window) {
+	
+		(adjSize = function() { // Create function called adjSize
+			
+			$width = $(window).width(); // Width of the screen
+			$height = $(window).height(); // Height of the screen
+			
+			// Resize image accordingly
+			$('#container').css({
+				'background-image' : 'url(poster.jpg)', 
+				'background-size' : 'cover', 
+				'width' : $width+'px', 
+				'height' : $height+'px'
+			});
+			
+			// Hide video
+			$('video').hide();
+			
+		})(); // Run instantly
+		
+		// Run on resize too
+		$(window).resize(adjSize);
+	}
+	else {
+
+		// Wait until the video meta data has loaded
+		$('#container video').on('loadedmetadata', function() {
+			
+			var $width, $height, // Width and height of screen
+				$vidwidth = this.videoWidth, // Width of video (actual width)
+				$vidheight = this.videoHeight, // Height of video (actual height)
+				$aspectRatio = $vidwidth / $vidheight; // The ratio the video's height and width are in
+						
+			(adjSize = function() { // Create function called adjSize
+							
+				$width = $(window).width(); // Width of the screen
+				$height = $(window).height(); // Height of the screen
+							
+				$boxRatio = $width / $height; // The ratio the screen is in
+							
+				$adjRatio = $aspectRatio / $boxRatio; // The ratio of the video divided by the screen size
+							
+				// Set the container to be the width and height of the screen
+				$('#container').css({'width' : $width+'px', 'height' : $height+'px'}); 
+							
+				if($boxRatio < $aspectRatio) { // If the screen ratio is less than the aspect ratio..
+					// Set the width of the video to the screen size multiplied by $adjRatio
+					$vid = $('#container video').css({'width' : $width*$adjRatio+'px'}); 
+				} else {
+					// Else just set the video to the width of the screen/container
+					$vid = $('#container video').css({'width' : $width+'px'});
+				}
+								 
+			})(); // Run function immediately
+						
+			// Run function also on window resize.
+			$(window).resize(adjSize);
+						
+		});
+	}
+	
+});
+</script></div></div></div>  </div>
 
   
-  </div>
+</div>
+</div></div></div>
+  </div></div><div id="block-boxes-1504882522" class="block block-boxes block-boxes-os_boxes_html videotext no-title"  module="boxes" delta="1504882522"><div class="block-inner clearfix">  
+  
+  <div class="block-content content"><div id='boxes-box-1504882522' class='boxes-box'><div class="boxes-box-content"><h2 style="font-weight:normal; text-align:center">
+	Connecting Harvard and The Community
+</h2>
+
+<h3 style="text-align:center">
+	<a class="os-button" href="#initiatives">Learn more about Harvard's Local Impact</a>
+</h3>
+</div></div></div>
+  </div></div></div></div>									<div class="region region-content-first"><div class="region-inner clearfix"><section id="block-boxes-1502300989" class="block block-boxes block-boxes-os_boxes_columns iconcol"  module="boxes" delta="1502300989"><div class="block-inner clearfix">  
+      <h2 class="block-title">Community Engagement Spotlight</h2>
+  
+  <div class="block-content content"><div id='boxes-box-1502300989' class='boxes-box'><div class="boxes-box-content"><!-- Three column 3x33 Gpanel -->
+  <div class="at-panel gpanel panel-display three-3x33 clearfix">
+        <div class="region region-three-33-first"><div class="region-inner clearfix"><div id="block-boxes-1502300881" class="block block-boxes block-boxes-os_boxes_html no-title"  module="boxes" delta="1502300881"><div class="block-inner clearfix">  
+  
+  <div class="block-content content"><div id='boxes-box-1502300881' class='boxes-box'><div class="boxes-box-content"><div style="text-align:center">
+	<a href="https://community.harvard.edu/housing" title="Housing Icon"><img height="128" width="128" alt="Housing Icon" title="Housing Icon" class="media-element file-default file-os-files-small" src="//static.hwpi.harvard.edu/files/styles/os_files_small/public/comm/files/housing_icon.png?m=1508178253&amp;itok=ZdZ9KgT2" /></a>
+</div>
+
+<h2 style="text-align:center">
+	<a href="https://community.harvard.edu/housing" title="">Housing</a>
+</h2>
+
+<p style="text-align:center">
+	<a href="/housing" title="">Through nearly 200 unique projects, Harvard helped finance more than 7,000 units of affordable housing in 30 neighborhoods across Boston and Cambridge.</a>
+</p>
+</div></div></div>
+  </div></div></div></div>    <div class="region region-three-33-second"><div class="region-inner clearfix"><div id="block-boxes-1502300963" class="block block-boxes block-boxes-os_boxes_html no-title"  module="boxes" delta="1502300963"><div class="block-inner clearfix">  
+  
+  <div class="block-content content"><div id='boxes-box-1502300963' class='boxes-box'><div class="boxes-box-content"><div style="text-align:center">
+	<a href="https://community.harvard.edu/sustainability" title="Sustainable Icon"><img height="128" width="128" alt="Sustainable Icon" title="Sustainable Icon" class="media-element file-default file-os-files-small" src="//static.hwpi.harvard.edu/files/styles/os_files_small/public/comm/files/sustainability_icon_01.png?m=1508178361&amp;itok=zZSLqRFq" /></a>
+</div>
+
+<h2 style="text-align:center">
+	<a href="https://community.harvard.edu/sustainability" title="">Sustainability</a>
+</h2>
+
+<p style="text-align:center">
+	<a href="https://community.harvard.edu/sustainability" title="">As a partner in helping the region address climate change, Harvard achieved its goal to reduce greenhouse gas emissions 30% from 2006–2016.</a>
+</p>
+</div></div></div>
+  </div></div></div></div>    <div class="region region-three-33-third"><div class="region-inner clearfix"><div id="block-boxes-1502300923" class="block block-boxes block-boxes-os_boxes_html no-title"  module="boxes" delta="1502300923"><div class="block-inner clearfix">  
+  
+  <div class="block-content content"><div id='boxes-box-1502300923' class='boxes-box'><div class="boxes-box-content"><div style="text-align:center">
+	<a href="https://community.harvard.edu/education" title="Education Icon"><img height="128" width="128" alt="Education Icon" title="Education Icon" class="media-element file-default file-os-files-small" src="//static.hwpi.harvard.edu/files/styles/os_files_small/public/comm/files/education_icon.png?m=1508178311&amp;itok=I-Xg80d-" /></a>
+</div>
+
+<h2 style="text-align:center">
+	<a href="https://community.harvard.edu/education" title="">Education</a>
+</h2>
+
+<p style="text-align:center">
+	<a href="https://community.harvard.edu/education" title="">Harvard’s Project Teach program seeks to develop a college-going identity among all Cambridge Public School 7th graders and Boston Public School 7th graders who attend a school in Allston-Brighton.</a>
+</p>
+</div></div></div>
+  </div></div></div></div>      </div>
+</div></div></div>
+  </div></section></div></div>									<div class="region region-content-second"><div class="region-inner clearfix"><section id="block-boxes-1502307879" class="block block-boxes block-boxes-os_sv_list_box events"  module="boxes" delta="1502307879"><div class="block-inner clearfix">  
+      <h2 class="block-title">Upcoming Public Events at Harvard</h2>
+  
+  <div class="block-content content"><div id='boxes-box-1502307879' class='boxes-box'><div class="boxes-box-content"><div id='box-1502307879-page' data-page='0' data-delta='1502307879' class='os-sv-list os_sv_list_box sv-list-event sv-list-view-sidebar_teaser sv-list-layout-list sv-grid-3'><article id="node-1094516" class="node node-event article event-start clearfix" role="article" target="_top">
+  
+      <div class="event-start">
+      <span class="event-year">2017</span>
+      <span class="event-start-month">Dec</span>
+      <span class="event-start-day">04</span>
     </div>
+  
+  <div class="event-content">
+          <header class="node-header">
+                  <h1 class="node-title" rel="nofollow">
+            <a href="https://community.harvard.edu/event/monarchs-and-milkweed-story-coevolution-cultural-history-and-conservation" rel="bookmark" title="On Mon Dec 4" target="_top">Of Monarchs and Milkweed: A Story of Coevolution, Cultural History, and Conservation</a>
+          </h1>
+              </header>
+      
+      
+    <div class="node-content">
+      <div id="export-to-google-calendar-dialog-confirm"></div><div class="field field-name-field-date field-type-datetime field-label-hidden view-mode-sidebar_teaser"><div class="field-items"><div class="field-item even"><span class="date-display-single"> <span class="date-display-start">7:00pm</span> to <span class="date-display-end">8:30pm</span> </span><p></p></div></div></div>    </div>
+  
+      
+      </div>
+  
+  </article>
+<article id="node-1094451" class="node node-event article event-start clearfix" role="article" target="_top">
+  
+      <div class="event-start">
+      <span class="event-year">2017</span>
+      <span class="event-start-month">Dec</span>
+      <span class="event-start-day">06</span>
+    </div>
+  
+  <div class="event-content">
+          <header class="node-header">
+                  <h1 class="node-title" rel="nofollow">
+            <a href="https://community.harvard.edu/event/stone-silicone" rel="bookmark" title="On Wed Dec 6" target="_top">From Stone to Silicone</a>
+          </h1>
+              </header>
+      
+      
+    <div class="node-content">
+      <div id="export-to-google-calendar-dialog-confirm"></div><div class="field field-name-field-date field-type-datetime field-label-hidden view-mode-sidebar_teaser"><div class="field-items"><div class="field-item even"><span class="date-display-single">(All day)</span><p></p></div></div></div>    </div>
+  
+      
+      </div>
+  
+  </article>
+<article id="node-1094456" class="node node-event article event-start clearfix" role="article" target="_top">
+  
+      <div class="event-start">
+      <span class="event-year">2017</span>
+      <span class="event-start-month">Dec</span>
+      <span class="event-start-day">06</span>
+    </div>
+  
+  <div class="event-content">
+          <header class="node-header">
+                  <h1 class="node-title" rel="nofollow">
+            <a href="https://community.harvard.edu/event/social-justice-action-how-we-change-world" rel="bookmark" title="On Wed Dec 6" target="_top">Social Justice Action: How We Change the World</a>
+          </h1>
+              </header>
+      
+      
+    <div class="node-content">
+      <div id="export-to-google-calendar-dialog-confirm"></div><div class="field field-name-field-date field-type-datetime field-label-hidden view-mode-sidebar_teaser"><div class="field-items"><div class="field-item even"><span class="date-display-single">4:00pm</span><p></p></div></div></div>    </div>
+  
+      
+      </div>
+  
+  </article>
+</div></div></div></div>
+  </div></section><div id="block-boxes-1507139197" class="block block-boxes block-boxes-os_boxes_html darkbutton no-title"  module="boxes" delta="1507139197"><div class="block-inner clearfix">  
+  
+  <div class="block-content content"><div id='boxes-box-1507139197' class='boxes-box'><div class="boxes-box-content"><h3 style="text-align:center">
+	<a class="os-button" href="https://hwpi.harvard.edu/comm/events" title="">View All Upcoming Events</a>
+</h3>
+</div></div></div>
+  </div></div></div></div>									<div class="region region-content-bottom"><div class="region-inner clearfix"><div id="block-boxes-1506700385" class="block block-boxes block-boxes-os_boxes_html no-title"  module="boxes" delta="1506700385"><div class="block-inner clearfix">  
+  
+  <div class="block-content content"><div id='boxes-box-1506700385' class='boxes-box'><div class="boxes-box-content"><a name="initiatives" id="initiatives"></a></div></div></div>
+  </div></div><section id="block-boxes-1502297132" class="block block-boxes block-boxes-os_boxes_columns cards"  module="boxes" delta="1502297132"><div class="block-inner clearfix">  
+      <h2 class="block-title">Explore Harvard&#039;s Local Impact</h2>
+  
+  <div class="block-content content"><div id='boxes-box-1502297132' class='boxes-box'><div class="boxes-box-content"><!-- Four column Gpanel -->
+  <div class="at-panel gpanel panel-display four-4x25 clearfix">
+    <div class="panel-row row-1 clearfix">
+      <div class="region region-four-first"><div class="region-inner clearfix"><div id="block-boxes-1502296902" class="block block-boxes block-boxes-os_boxes_html no-title"  module="boxes" delta="1502296902"><div class="block-inner clearfix">  
+  
+  <div class="block-content content"><div id='boxes-box-1502296902' class='boxes-box'><div class="boxes-box-content"><div>
+	<div style="text-align:center">
+		<a href="https://hwpi.harvard.edu/comm/arts-culture" title=""><img height="293" width="440" alt="Arts &amp; Culture" title="Arts &amp; Culture" class="media-element file-default  file-os-files-large" src="//static.hwpi.harvard.edu/files/styles/os_files_large/public/comm/files/arts_icon_small.png?m=1507047844&amp;itok=B0m6k_TM" /></a>
+	</div>
+
+	<h2>
+		<a href="https://hwpi.harvard.edu/comm/arts-culture" title="">Arts &amp; Culture</a>
+	</h2>
+
+	<p>
+		<a href="https://hwpi.harvard.edu/comm/arts-culture" title="">Curating arts and culture opportunities for neighbors in Boston, Cambridge, and across Massachusetts.</a>
+	</p>
+</div>
+
+
+</div></div></div>
+  </div></div></div></div>      <div class="region region-four-second"><div class="region-inner clearfix"><div id="block-boxes-1502296931" class="block block-boxes block-boxes-os_boxes_html no-title"  module="boxes" delta="1502296931"><div class="block-inner clearfix">  
+  
+  <div class="block-content content"><div id='boxes-box-1502296931' class='boxes-box'><div class="boxes-box-content"><div style="text-align:center">
+	<a href="/community-initiatives" title="Community Initiatives"><img height="292" width="438" alt="Community Initiatives" title="Community Initiatives" class="media-element file-default file-os-files-large" src="//static.hwpi.harvard.edu/files/styles/os_files_large/public/comm/files/community_initiatives.jpg?m=1508186057&amp;itok=Yu77Iov3" /></a>
+</div>
+
+<h2>
+	<a href="/community-initiatives" title="">Community Initiatives</a>
+</h2>
+
+<p>
+	<a href="/community-initiatives" title="">Bringing Harvard's mission of teaching, research, and learning to the local community.</a>
+</p>
+</div></div></div>
+  </div></div></div></div>    </div>
+    <div class="panel-row row-2 clearfix">
+      <div class="region region-four-third"><div class="region-inner clearfix"><div id="block-boxes-1502296967" class="block block-boxes block-boxes-os_boxes_html no-title"  module="boxes" delta="1502296967"><div class="block-inner clearfix">  
+  
+  <div class="block-content content"><div id='boxes-box-1502296967' class='boxes-box'><div class="boxes-box-content"><div style="text-align:center">
+	<a href="https://hwpi.harvard.edu/comm/community-partnerships" title=""><img height="292" width="438" alt="Community Partnerships" title="Community Partnerships" class="media-element file-default file-os-files-large" src="//static.hwpi.harvard.edu/files/styles/os_files_large/public/comm/files/comm_partnerships_icon.png?m=1507048712&amp;itok=bhH6MOfA" /></a>
+</div>
+
+<h2>
+	<a href="/comm/community-partnerships" title="">Community Partnerships</a>
+</h2>
+
+<p>
+	<a href="/comm/community-partnerships" title="">Partnering with local organizations to address community needs.</a>
+</p>
+</div></div></div>
+  </div></div></div></div>      <div class="region region-four-fourth"><div class="region-inner clearfix"><div id="block-boxes-1502297020" class="block block-boxes block-boxes-os_boxes_html no-title"  module="boxes" delta="1502297020"><div class="block-inner clearfix">  
+  
+  <div class="block-content content"><div id='boxes-box-1502297020' class='boxes-box'><div class="boxes-box-content"><div style="text-align:center">
+	<a href="https://hwpi.harvard.edu/comm/economic-impact" title=""><img height="293" width="440" alt="Economic Impact" title="Economic Impact" class="media-element file-default file-os-files-large" src="//static.hwpi.harvard.edu/files/styles/os_files_large/public/comm/files/economic_impact_icon_small.png?m=1507049686&amp;itok=NkEK_Qtl" /></a>
+</div>
+
+<h2>
+	<a href="https://hwpi.harvard.edu/comm/economic-impact" title="">Economic Impact</a>
+</h2>
+
+<p>
+	<a href="https://hwpi.harvard.edu/comm/economic-impact" title="">Supporting the regional economy by providing jobs, generating purchasing, and attracting companies.</a>
+</p>
+</div></div></div>
+  </div></div></div></div>    </div>
   </div>
+</div></div></div>
+  </div></section><div id="block-boxes-1502297171" class="block block-boxes block-boxes-os_boxes_columns cards no-title"  module="boxes" delta="1502297171"><div class="block-inner clearfix">  
+  
+  <div class="block-content content"><div id='boxes-box-1502297171' class='boxes-box'><div class="boxes-box-content"><!-- Four column Gpanel -->
+  <div class="at-panel gpanel panel-display four-4x25 clearfix">
+    <div class="panel-row row-1 clearfix">
+      <div class="region region-four-first"><div class="region-inner clearfix"><div id="block-boxes-1502297043" class="block block-boxes block-boxes-os_boxes_html no-title"  module="boxes" delta="1502297043"><div class="block-inner clearfix">  
+  
+  <div class="block-content content"><div id='boxes-box-1502297043' class='boxes-box'><div class="boxes-box-content"><div style="text-align:center">
+	<a href="https://hwpi.harvard.edu/comm/education" title=""><img height="292" width="438" alt="Project Teach Visit" title="Project Teach Visit" class="media-element file-default file-os-files-large" src="//static.hwpi.harvard.edu/files/styles/os_files_large/public/comm/files/edu_icon_small.png?m=1507049155&amp;itok=SHpCFaNS" /></a>
+</div>
+
+<h2>
+	<a href="https://hwpi.harvard.edu/comm/education" title="">Education Initiatives</a>
+</h2>
+
+<p>
+	<a href="https://hwpi.harvard.edu/comm/education" title="">Advancing educational opportunities for students, teachers, and life-long learners.</a>
+</p>
+</div></div></div>
+  </div></div></div></div>      <div class="region region-four-second"><div class="region-inner clearfix"><div id="block-boxes-1502297072" class="block block-boxes block-boxes-os_boxes_html no-title"  module="boxes" delta="1502297072"><div class="block-inner clearfix">  
+  
+  <div class="block-content content"><div id='boxes-box-1502297072' class='boxes-box'><div class="boxes-box-content"><div>
+	<a href="https://community.harvard.edu/housing" title="Housing Impact"><img height="292" width="438" alt="Housing Impact" title="Housing Impact" class="media-element file-default file-os-files-large" src="//static.hwpi.harvard.edu/files/styles/os_files_large/public/comm/files/housing.jpg?m=1507824411&amp;itok=Er_4nYhW" /></a>
+</div>
+
+<h2>
+	<a href="https://hwpi.harvard.edu/comm/housing" title="">Housing Initiatives</a>
+</h2>
+
+<p>
+	<a href="https://hwpi.harvard.edu/comm/housing" title="">Working with Cambridge and Boston to address local housing needs.</a>
+</p>
+</div></div></div>
+  </div></div></div></div>    </div>
+    <div class="panel-row row-2 clearfix">
+      <div class="region region-four-third"><div class="region-inner clearfix"><div id="block-boxes-1502297094" class="block block-boxes block-boxes-os_boxes_html no-title"  module="boxes" delta="1502297094"><div class="block-inner clearfix">  
+  
+  <div class="block-content content"><div id='boxes-box-1502297094' class='boxes-box'><div class="boxes-box-content"><div style="text-align:center">
+	<a href="https://hwpi.harvard.edu/comm/sustainability" title=""><img height="293" width="440" alt="Solar Panels" title="Solar Panels" class="media-element file-default file-os-files-large" src="//static.hwpi.harvard.edu/files/styles/os_files_large/public/comm/files/sustainability_icon.png?m=1507048216&amp;itok=yucOTOyo" /></a>
+</div>
+
+<h2>
+	<a href="https://hwpi.harvard.edu/comm/sustainability" title="">Sustainability</a>
+</h2>
+
+<p>
+	<a href="https://hwpi.harvard.edu/comm/sustainability" title="">Modeling the pathway to a healthier, carbon-free future that enhances the well-being of people and the planet.</a>
+</p>
+</div></div></div>
+  </div></div></div></div>      <div class="region region-four-fourth"><div class="region-inner clearfix"><div id="block-boxes-1506624053" class="block block-boxes block-boxes-os_boxes_html no-title"  module="boxes" delta="1506624053"><div class="block-inner clearfix">  
+  
+  <div class="block-content content"><div id='boxes-box-1506624053' class='boxes-box'><div class="boxes-box-content"><div style="text-align:center">
+	<a href="/comm/reports" title=""><img height="293" width="442" alt="Reports and Publications" title="Reports and Publications" class="media-element file-default file-os-files-large" src="//static.hwpi.harvard.edu/files/styles/os_files_large/public/comm/files/reports_header_icon.png?m=1507047683&amp;itok=TpmbB7tq" /></a>
+</div>
+
+<h2>
+	<a href="/comm/reports" title="">Reports &amp; Publications</a>
+</h2>
+
+<p>
+	<a href="/comm/reports" title="Highlighting the ways that the University and its alumni are connected to the regional economy and engaged in Massachusetts.">Highlighting the ways that Harvard and its alumni are connected to the regional economy and engaged throughout Massachusetts.</a>
+</p>
+
+<p>
+	 
+</p>
+</div></div></div>
+  </div></div></div></div>    </div>
   </div>
+</div></div></div>
+  </div></div></div></div>								</div>
+								<!--front panel regions end-->
+													
+											</div>
+				</div>
+
+				
+				
+			</div>
+		</div>
+		<!--footer region beg-->
+		<footer id="footer" class="clearfix" role="contentinfo">
+		<!-- Three column 3x33 Gpanel -->
+		
+			<div class="at-panel gpanel panel-display footer clearfix">
+												<div class="region region-footer"><div class="region-inner clearfix"><div id="block-boxes-1504103430" class="block block-boxes block-boxes-os_boxes_columns no-title"  module="boxes" delta="1504103430"><div class="block-inner clearfix">  
+  
+  <div class="block-content content"><div id='boxes-box-1504103430' class='boxes-box'><div class="boxes-box-content"><!-- Three column 3x33 Gpanel -->
+  <div class="at-panel gpanel panel-display three-3x33 clearfix">
+        <div class="region region-three-33-first"><div class="region-inner clearfix"><div id="block-boxes-1504103292" class="block block-boxes block-boxes-os_boxes_html no-title"  module="boxes" delta="1504103292"><div class="block-inner clearfix">  
+  
+  <div class="block-content content"><div id='boxes-box-1504103292' class='boxes-box'><div class="boxes-box-content"><h6>
+	<img height="47" width="262" alt="HPAC" class="media-element file-default file-os-files-medium" src="//static.hwpi.harvard.edu/files/styles/os_files_medium/public/comm/files/logo_footer.png?m=1502288871&amp;itok=ZIVm4fFh" title="" /><br />114 Mount Auburn Street<br />6th Floor<br />Cambridge, MA 02138<br />T (617) 495-1585 | F (617) 495-0754 
+</h6>
+</div></div></div>
+  </div></div></div></div>    <div class="region region-three-33-second"><div class="region-inner clearfix"><div id="block-boxes-1504102752" class="block block-boxes block-boxes-os_boxes_html no-title"  module="boxes" delta="1504102752"><div class="block-inner clearfix">  
+  
+  <div class="block-content content"><div id='boxes-box-1504102752' class='boxes-box'><div class="boxes-box-content"><h6>
+	Connect with @HarvardLocal
+</h6>
+
+<p>
+	<a href="https://twitter.com/HarvardLocal" title=""><img height="32" width="32" alt="twit icon" class="media-element file-default file-os-files-small" src="//static.hwpi.harvard.edu/files/styles/os_files_small/public/comm/files/twitter_icon_1.png?m=1508174651&amp;itok=NC0fTDTR" title="" /></a><a href="https://www.instagram.com/harvardlocal" title=""><img height="32" width="32" alt="insta icon" class="media-element file-default file-os-files-small" src="//static.hwpi.harvard.edu/files/styles/os_files_small/public/comm/files/insta_icon.png?m=1508172195&amp;itok=kA0auiMP" title="" /></a><a href="mailto:community@harvard.edu"><img height="32" width="32" alt="mail icon" class="media-element file-default file-os-files-small" src="//static.hwpi.harvard.edu/files/styles/os_files_small/public/comm/files/mail_icon.png?m=1508172270&amp;itok=d0YpX5mb" title="" /></a><br /> 
+</p>
+
+<p>
+	 
+</p>
+</div></div></div>
+  </div></div></div></div>    <div class="region region-three-33-third"><div class="region-inner clearfix"><section id="block-boxes-solr-search-box" class="block block-boxes block-boxes-os_search_solr_search_box"  module="boxes" delta="solr_search_box"><div class="block-inner clearfix">  
+      <h2 class="block-title"> </h2>
+  
+  <div class="block-content content"><div id='boxes-box-solr_search_box' class='boxes-box'><div class="boxes-box-content"><form class="search-block-form" action="/" method="post" id="search-block-form" accept-charset="UTF-8"><div><div class="container-inline">
+  <div class="form-item form-type-textfield form-item-search-block-form">
+  <label class="element-invisible" for="edit-search-block-form--2">Search </label>
+ <input title="Enter the terms you wish to search for." type="search" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128" class="form-text" />
+</div>
+<div class="form-actions form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="Search" class="form-submit" /></div><input type="hidden" name="form_build_id" value="form-VRHivkz1Y5Ir3AnR2n6_D4nZN5ofsqLGD_1eH0rP6Dk" />
+<input type="hidden" name="form_id" value="os_solr_search_box___solr_search_box" />
+</div></div></form></div></div></div>
+  </div></section></div></div>      </div>
+</div></div></div>
+  </div></div></div></div>								<div class="region region-footer-bottom"><div class="region-inner clearfix"><div id="block-boxes-1503066801" class="block block-boxes block-boxes-os_boxes_media no-title"  module="boxes" delta="1503066801"><div class="block-inner clearfix">  
+  
+  <div class="block-content content"><div id='boxes-box-1503066801' class='boxes-box'><div class="boxes-box-content"><div id="file-882221" class="file file-html file-html-embed">
+
+          <h2 class="element-invisible"><a href="">9337a4e6baf62ce8f826deeca18ea398</a></h2>
+      
+  
+  <div class="content">
+    <div class="file-info"></div><div class="field field-name-field-html-code field-type-text-long field-label-hidden view-mode-full"><div class="field-items"><div class="field-item even"><style>
+.front .iconcol h2 a,
+.front .iconcol p a {
+    text-decoration: none !important;
+    color: #424242;
+}
+div#block-boxes-1504103430 {
+    color: #fff;
+}
+.search-results article {
+    margin: 10px 5px 0 5px!important;
+}
+.search-results .event-start {
+    margin: 25px 25px 0 25px;
+}
+.sustainability .region.region-content-bottom {
+    background-color: #fff!important;
+}
+.events article {
+    margin: 10px 5px 0 5px!important;
+}
+.landing.arts .cards .boxes-box .boxes-box-content .boxes-box-content div {
+    background-color: #fff;
+    min-height: 190px;
+}
+.landing #content-panels h2.block-title, .not-front #content-panels h2.block-title, .cards h2.block-title {
+    color: #000;
+    background-image: url(https://chge.hsph.harvard.edu/files/chge/files/titlebot.png?m=1493830200);
+    background-repeat: no-repeat;
+    background-size: 120px 1px;
+    background-position: center bottom;
+    padding-bottom: 30px!important;
+    letter-spacing: .5px!important;
+    margin-bottom: 30px!important;
+    font-size: 30px;
+    font-weight: 400!important;
+    font-family: "Lato",sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: normal;
+    max-width: 768px;
+    margin: auto;
+}
+.page-calendar #content-column .content-inner {
+    padding: 0 25px;
+}
+section#block-boxes-solr-search-box {
+    margin-top: 5px;
+}
+.inversed img {
+    -webkit-filter: invert(70%);
+    filter: invert(70%);
+}
+.front .region.region-content-second {
+    border-top: 1px solid #ccc!important;
+    display: block;
+}
+@media (min-width:1009px){
+.page-node-1035816.landing h1#page-title {
+    margin: -130px 20px 100px 20px;
+ }
+}
+section#block-boxes-os-events-upcoming .block-content {
+    padding: 0 25px;
+}
+.sidebar h1.node-title {
+    font-size: 16px!important;
+    line-height: normal!important;
+}
+section#block-boxes-1507666318 {
+    max-width: 768px;
+}
+.not-front #content-panels .eventscol .region h2.block-title {
+    background-image: none;
+    padding: 0;
+    margin: 0!important;
+    font-size: 22px;
+    text-align: left;
+}
+.os-poster{
+display:none;
+}
+.ipad .videotext {
+    margin-top: -270px;
+    padding-bottom: 55px;
+    margin-bottom: 90px!important;
+}
+.ipad .os-poster{
+display:block!important;
+}
+.ipad #video_container {
+    max-height: 400px;
+    background-image: url("https://hwpi.harvard.edu/files/comm/files/poster.jpg?m=1507664421")!important;
+    background-repeat: no-repeat!important;
+    background-size: 100%!important;
+}
+
+#video_container {
+max-height:400px
+}
+.landing .region-content-second .block .block-inner a.os-button {
+    color: #89959F;
+}
+.landing.reports h1#page-title {
+    font-size: 75px;
+    /*margin: -155px 20px 100px 20px;*/
+    margin: -92px 20px 85px 20px;
+    line-height: 85px;
+    color: #fff;
+    text-shadow: 1px 1px 2px #000;
+    margin-bottom: 80px;
+    max-width: 680px;
+}
+.front .region.region-content-second {
+    padding-bottom: 45px;
+}
+section#block-boxes-1502307879 h2.block-title{
+    color: #000;
+    background-image: url(https://chge.hsph.harvard.edu/files/chge/files/titlebot.png?m=1493830200);
+    background-repeat: no-repeat;
+    background-size: 120px 1px;
+    background-position: center bottom;
+    padding-bottom: 20px!important;
+    letter-spacing: .5px!important;
+    margin-bottom: 30px!important;
+    font-size: 30px;
+    font-weight: 400!important;
+    font-family: "Lato",sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+}
+}
+.region.region-content-second a.os-button {
+    color: #000!important;
+}
+.region.region-content-bottom .region-inner {
+    padding: 0!important;
+}
+#footer {
+    background: none #2A3451;
+    color: #A9A9A9;
+    font-family: Open Sans,sans-serif!important;
+}
+.landing #footer {
+    padding: 0 0 50px 0;
+}
+.landing .region-content-second .node-event .field-name-field-event-location {
+    color: #666;
+    font-size: 16px;
+    line-height: 24px;
+}
+.events article .field.field-name-body.field-type-text-with-summary.field-label-hidden.view-mode-teaser {
+    font-size: 16px;
+    line-height: 24px;
+}
+.events .region-content-first {
+    padding: 45px 0px;
+}
+.events section#block-boxes-1507666318 .region-two-50-first {
+    margin-top: 51px;
+}
+.landing a.more-link {
+    margin-top: 25px!important;
+}
+div#boxes-box-1507139197 h3 a.os-button {
+	border-color: #1e1e1e;
+	color: #1e1e1e;
+}
+
+section#block-boxes-1503662185 h3 span {
+    background-image: url(https://hwpi.harvard.edu/files/comm/files/arrow.png?m=1507044757);
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: center left;
+    margin-left: 0;
+}
+.inthenews .block-inner{
+max-width:1170px;
+margin:auto!important;
+}
+.inthenews {
+    width: 100%!important;
+    background-color: #f4f4f4;
+    max-width: 100%!important;
+    margin-top: -50px!important;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    margin-bottom: 35px!important;
+}
+.events .two-66-33 > .region-two-66-33-second {
+    width: 28%;
+}
+
+#content-panels .eventscol .region.region-two-66-33-second h2.block-title {
+    font-size: 18px!important;
+    padding-bottom: 15px!important;
+    margin-bottom: 20px!important;
+    text-align: left;
+    background-position: left bottom;
+    background-size: 50px 1px;
+}
+.events .two-66-33 > .region-two-66-33-first {
+    width: 72%;
+}
+.events .block-boxes-os_boxes_columns .region {
+    margin: 0;
+}
+.eventscol .region.region-two-66-33-second {
+    background-color: #E7E6E4;
+    margin-top: 35px;
+}
+
+.eventscol .region.region-two-66-33-second .region-inner {
+    padding:25px;;
+}
+.introtext {
+    background-color: #fff;
+    margin: auto!important;
+    max-width: 768px;
+}
+/*
+.events .events .event-start {
+    margin: 25px 0 0 25px;
+}
+*/
+.events h1#page-title {
+    font-size: 85px;
+    letter-spacing: -.8px;
+    line-height: 105px;
+    color: #fff;
+    text-shadow: 1px 1px 2px #000;
+    margin-top: 120px;
+    margin-bottom: 150px;
+    margin-left: auto!important;
+    max-width: 350px;
+    margin-right: auto!important;
+    display: flex!important;
+}
+.eventscol {
+    max-width: 1170px;
+    margin: auto;
+    width: 98%;
+}
+/*
+div#block-boxes-1506370471 {
+    background-color: #fff;
+    margin: 35px 35px 0 35px;
+}
+div#boxes-box-1506370471 {
+    color: #000;
+     padding:35px;
+}
+*/
+.onecol {
+    margin: auto;
+    width: 98%;
+    max-width: 768px;
+}
+.not-front h3 a.os-button {
+    color: #89959F;
+    text-transform: uppercase;
+    text-decoration: none!important;
+    font-size: 16px;
+    font-weight: 300;
+    border: 2px solid #89959F;
+    padding: 10px 25px;
+    border-radius: 3px;
+    background-color: #fff;
+}
+.cards h2[style] {
+    text-align: left!important;
+}
+.landing .region.region-content-second h2.block-title {
+    color: #fff!important;
+}
+.node-type-person #content-column .node-person .pic-bio {
+    border-top: 0;
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+figure[style] {
+    width: 100%!important;
+}
+.sidebar .feed_item a.title {
+    font-size: 20px;
+    margin-top: 0!important;
+    display: inline-block;
+    padding-bottom: 0px!important;
+    margin-bottom: 10px!important;
+    line-height: 24px;
+}
+.sidebar .item-list li {
+    border-bottom: 1px dotted #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.sidebar .feed_item {
+    border-bottom: 1px dotted #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.more-link {
+    padding-right: 0;
+}
+.more-link:after {
+    display: none;
+}
+.node-type-person #content-column .node-person h2.block-title {
+    background: transparent;
+    color: #666;
+    font-size: 24px;
+    line-height: 16px;
+    padding: 20px 0;
+    font-weight: 300;
+    text-transform: none;
+    letter-spacing: 0;
+}
+.node-type-person section#main-content {
+    width: 100%;
+    max-width: 1170px;
+    margin: auto;
+}
+div#block-boxes-1506347564
+div#block-boxes-1506370471{
+ width:980px !important;
+}
+div#block-boxes-1506347564 p,
+div#block-boxes-1506370471 p {
+    font-size: 22px;
+    line-height: 36px;
+}
+.landing.reports .region.region-content-top .region-inner,
+.events .region.region-content-top .region-inner {
+    max-width: 1200px;
+    margin: auto;
+    padding: 25px 0!important;
+    width: 100%;
+}
+section#block-boxes-solr-search-box h2 {
+    display: none;
+}
+.front .events {
+    max-width: 1440px !important;
+    margin: 0 auto !important;
+    width: 100%!important;
+}
+.front .events article {
+    margin: 0;
+}
+.sidebar span.date {
+    font-size: 16px;
+}
+.page-news div#page {
+    background-image: url(https://hwpi.harvard.edu/files/comm/files/newshero.jpg?m=1506352552);
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+.sidebar .description {
+    margin: 5px 0;
+    line-height: normal!important;
+    font-size: 16px !important;
+    color: #666 !important;
+}
+.sidebar a.title {
+    font-size: 20px;
+    margin-top: 25px!important;
+    display: inline-block;
+    padding-bottom: 0px!important;
+    margin-bottom: 10px!important;
+    line-height: 24px;
+}
+h1.node-title {
+    font-size: 24px;
+}
+.field .field-label {
+    font-weight: 300!important;
+}
+#columns a.node-readmore{
+display:none;
+}
+.page-news .view .node-teaser {
+    padding: 35px;
+}
+.landing .region-content-second .events span.date-display-single {
+    color: #666;
+}
+.landing .region.region-content-second .events .field-name-field-event-location h2 {
+    display: none;
+}
+#columns .events a.node-readmore {
+    display: none;
+}
+.landing #content-panels .events h2.block-title {
+    color: #fff!important;
+}
+
+.landing .region-content-second .events.block .block-inner a {
+    color: #000;
+}
+.landing .region.region-content-second .events {
+    color: #000;
+}
+
+ul.nice-menu ul {
+    top: 2.2em !important;
+}
+
+.cards .boxes-box-content h2 {
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: transparent;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    padding-top: 15px;
+    font-weight: 400!important;
+    background-image: url(https://chge.hsph.harvard.edu/files/chge/files/titlebot.png?m=1493830200);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    padding-bottom: 10px;
+    background-size: 50px 1px;
+    margin-bottom: 20px;
+    line-height: 28px;
+    letter-spacing: -.5px;
+}
+#columns .cards p a {
+    text-decoration: none!important;
+    color: #000;
+}
+div#boxes-box-1505403206 {
+    padding-top: 10px;
+}
+.region-header-third {
+    width: 210px;
+    margin-left: -210px;
+    text-align: right;
+}
+.region-header-third p a {
+    color: #a51c30!important;
+}
+.region-header-third p {
+    text-align: left;
+    line-height: 20px;
+    font-size: 20px;
+    border-left: 2px solid #a51c30;
+    padding-left: 15px;
+    font-weight: bold;
+}
+#menu-bar nav, #menu-bar #block-os-primary-menu {
+    padding-left: 95px;
+}
+#menu-bar ul.nice-menu ul li a {
+    color: #fff!important;
+}
+#menu-bar ul.nice-menu ul li {
+font-size:18px!important;
+}
+.not-front section#block-boxes-1503662185 .block-inner{
+padding-left:0;
+}
+#menu-bar ul.nice-menu a.active, #menu-bar ul.nice-menu a:hover {
+    color: #FFF!important;
+}
+.events .view .date-nav-wrapper .date-heading h3,
+.page-news  .view .date-nav-wrapper .date-heading h3 {
+    font-size: 1em;
+}
+.events .region.region-sidebar-second.sidebar,
+.page-news .region.region-sidebar-second.sidebar {
+    top: 224px;
+    position: relative;
+margin-bottom:224px;
+}
+.page-news div#content-panels {
+    margin-top: -100px;
+}
+.events div#content-panels {
+  background-color: #fff;
+}
+.events #columns,
+.page-news #columns {
+    margin-top: 90px;
+}
+.events .breadcrumb,
+.page-news .breadcrumb {
+    display: none;
+}
+
+.page-news h1#page-title {
+    font-size: 85px;
+    letter-spacing: -.8px;
+    line-height: 105px;
+    color: #fff;
+    text-shadow: 1px 1px 2px #000;
+    margin-bottom: 75px;
+    margin-left: 35px;
+}
+.events .event-content {
+    padding: 25px 25px 25px 35px;
+}
+.events .event-start {
+    margin: 25px 25px 0 25px;
+}
+.events article,
+.page-news article,
+.page-browse-events .search-results article {
+    background-color: #fff;
+}
+.page-browse-events .search-results article .event-content {
+    padding: 25px 25px 25px 35px;
+}
+/*
+.events div#page {
+    background-image: url(https://hwpi.harvard.edu/files/comm/files/hero-homepage.jpg?m=1505752810);
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+*/
+.events div#columns {
+  background-image: url(https://hwpi.harvard.edu/files/comm/files/events-hero.jpg?m=1507753983);
+ /*background-image: url(https://hwpi.harvard.edu/files/comm/files/hero-homepage.jpg?m=1505752810);*/
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100%;
+  display: block;
+  margin-top: 0;
+}
+
+div#boxes-box-1505403206 a {
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #000;
+}
+.front .region.region-content-bottom {
+    padding: 35px 0;
+}
+div#boxes-box-1505328739 img {
+    width: 250px!important;
+    height: auto!important;
+}
+.event-start .event-start {
+    background: url(https://hwpi.harvard.edu/files/comm/files/event-shield2.png?m=1505408427) no-repeat scroll 0 0 transparent;
+}
+.front .events span.date-display-single{
+color:#000;
+}
+.front .events a {
+    color: #000 !important;
+}
+.front .region.region-content-first {
+
+    background-color: #f4f4f4;
+    margin-top: -65px!important;
+    padding-top: 45px;
+    background-image: url(https://s3.amazonaws.com/thumbnails.thecrimson.com/photos/2017/04/11/221114_1322355.jpg.1500x1000_q95_crop-smart_upscale.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-blend-mode: soft-light;
+margin-left:auto;
+margin-right:auto;
+}
+#menu-bar {
+    border-top: 3px solid #f5f5f5;
+}
+.cards .boxes-box-content h2 a,
+.cards .boxes-box-content h2 a{
+text-decoration:none!important;
+color:#000!important
+}
+.cards .block-boxes:hover{
+    background-color: #f3f3f1;
+}
+.cards .block-boxes:hover h2{
+    background-color: #f3f3f1!important;
+}
+.cards {
+    width: 97%;
+    max-width: 1200px!important;
+    margin: auto;
+}
+.cards .boxes-box-content p {
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333;
+}
+
+
+.front .events .field-name-field-event-location{
+color: #fff !important;
+}
+.front .events article{
+border: none !important;
+}
+.cards .block-boxes {
+    background-color: transparent;
+    padding-bottom: 20px;
+}
+#menu-bar ul.nice-menu .menuparent.over > a, #menu-bar ul.nice-menu .menuparent a:hover, #menu-bar ul.nice-menu .menuparent a.active {
+    background-color: #bac5c6;
+}
+.front .content-left.content-right.content-bottom .region-content-second .region-inner {
+    padding: 0;
+}
+.landingcol .block-boxes .boxes-box {
+    box-shadow: 1px 0.5px 2px #000;
+    color: #fff;
+    background: none repeat scroll 0 0 rgba(255,255,255,0.85);
+    max-height: 450px;
+}
+#columns .landingcol p {
+    padding: 0 25px!important;
+    color: #000;
+    font-size: 18px;
+}
+.landing .events {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.front .region-content-second .landingcol a.os-button {
+    padding: 1px 20px;
+    background-color: #fff;
+    color: #666;
+    border: 1px solid #999;
+    border-radius: 3px;
+}
+.front .boxes-box-content.os-sv-list-pager-processed article {
+    border-bottom: 1px dotted #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+section#block-boxes-1502307879 h2.block-title{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 52px;
+    margin-bottom: 35px;
+}
+section#block-boxes-1502307879 {
+    width: 98%;
+    max-width: 1200px;
+    margin: 45px auto;
+}
+
+
+div#block-boxes-1502297171 {
+    margin-top: -25px;
+}
+.landingcol h2.block-title{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 32px!important;
+    line-height: 52px!important;
+    margin-bottom: 35px;
+color:#fff;
+}
+
+.front .landingcol {
+    width: 98%;
+    max-width: 1170px;
+    margin: auto;
+}
+.front .region.region-content-second {
+    background-color: #fff;
+    padding: 25px 0;
+}
+.iconcol h2.block-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 52px;
+    margin-bottom: 35px;
+}
+.iconcol {
+    width: 98%;
+    margin: auto;
+    padding: 0;
+    max-width: 1170px;
+}
+.videotext p {
+    padding: 0 35px;
+}
+h3 a.os-button {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none!important;
+    font-size: 16px;
+    font-weight: 300;
+    border: 2px solid #fff;
+    padding: 10px 25px;
+    border-radius: 3px;
+}
+.videotext .boxes-box-content h2 {
+    color: #fff;
+    font-weight: 300!important;
+    padding-top: 35px;
+    font-size: 46px;
+    line-height: 56px;
+}
+.videotext {
+    text-align: center;
+    color: #fff;
+    width: 98%;
+    max-width: 768px!important;
+    margin-top: -270px;
+    background: none repeat scroll 0 0 rgba(30,30,30,0.62);
+    padding-bottom: 55px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 130px!important;
+}
+div#block-boxes-1504880661 .block-inner {
+    margin-top: 0;
+}
+.front div#columns {
+    width: 100%;
+    margin-top: 0;
+}
+.landing section#block-boxes-1503070489 {
+    max-width: 2000px!important;
+}
+.landing.arts .region.region-content-second .region-inner {
+    max-width: 2000px!important;
+}
+div#boxes-box-1503070489 h1 {
+    font-weight: 300!important;
+}
+section#block-boxes-1503662185 .block-inner {
+    padding-left: 55px;
+}
+.landing .region-content-second .block .block-inner .block-inner {
+    padding: 0;
+}
+#footer .footer-login {
+    box-shadow: none;
+    color: #ccc;
+    font-weight: 400;
+    padding: 8px 11px 0 18px;
+    text-decoration: none;
+    text-shadow: none;
+    border-left: none;
+}
+#footer .footer-login:after{
+display:none;
+}
+
+#columns .landingcol p {
+    padding: 0 25px!important;
+    color: #000;
+}
+
+.landingcol p:first-of-type {
+    padding: 0!important;
+}
+.landingcol .boxes-box-content h2.block-title {
+    font-size: 16px;
+    font-weight: 400!important;
+    margin-bottom: 0;
+}
+.landingcol .boxes-box img {
+    padding: 0;
+    width: 100%!important;
+height:auto!important;
+}
+.bannerpage .landingcol h2.block-title {
+    text-align: left;
+    text-transform: uppercase;
+font-size:20px;
+margin-bottom:10px;
+}
+.landingcol.secondrow .block-boxes .boxes-box {
+    background-color: #1395BA;
+}
+.landingcol.thirdrow .block-boxes .boxes-box {
+    background-color: #0D3C55;
+}
+.secondrow, .thirdrow {
+    margin-top: -65px!important;
+}
+
+.landingcol h2 a {
+    color: #fff;
+    text-decoration: none!important;
+    border-bottom: 1px dotted #ccc;
+}
+.landingcol h2 {
+    padding: 25px 25px 0 25px;
+
+}
+.landingcol a.os-button {
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: none;
+    background-color: #81ab5b;
+    padding: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none!important;
+    display: inline-block;
+}
+.landingcol a.os-button:hover {
+    background-color: #03425D;
+}
+.landing .region-content-second .block .block {
+    background: none;
+}
+a.title {
+    font-size: 24px;
+    margin-top: 25px!important;
+    display: inline-block;
+    padding-bottom: 0px!important;
+    margin-bottom: 10px!important;
+}
+.event-content .node-header h1.node-title {
+    margin-bottom: 0;
+    font-size: 24px;
+line-height:normal;
+}
+.landing .region-content-second .block .block-inner .description {
+    color: #fff!important;
+}
+.landing .region-content-second .block .block-inner a {
+    color: #fff;
+}
+.landing .region-content-second .block .block-inner {
+    padding: 45px;
+}
+.hpfeaturecol .block-boxes {
+    background-color: #fff;
+    box-shadow: 1px 0.5px 2px #ccc;
+}
+#layout_16_9_below .slide-copy {
+    height: 190px;
+}
+
+.slide-copy {
+    -moz-box-sizing: border-box;
+    background: #fff;
+    clear: both;
+    color: #000;
+    padding: 2% 3%;
+}
+.hpfeaturecol.featured h2.block-title {
+    padding-top: 50px!important;
+    margin-top: 20px!important;
+    color: #293352!important;
+    text-shadow: none!important;
+    font-weight: 300;
+}
+.hpfeaturecol .block-boxes-os_slideshow_box p {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.hpfeaturecol .block-boxes-os_slideshow_box h2 {
+    margin-bottom: 20px!important;
+    line-height: 28px!important;
+    background-color: #fff!important;
+    margin-top: -35px;
+    display: block!important;
+    border-top: 6px solid #901C2E;
+    position: relative;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    letter-spacing: -.5px;
+    font-weight: 400!important;
+    background-image: url(https://chge.hsph.harvard.edu/files/chge/files/titlebot.png?m=1493830200);
+    background-repeat: no-repeat;
+    background-position: 20px bottom;
+    padding-bottom: 10px;
+    background-size: 50px 1px;
+}
+
+.hpfeaturecol h2.block-title {
+    color: #666;
+    font-size: 26px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    text-align: center!important;
+    line-height: normal;
+}
+.landing .region.region-content-first {
+    background-color: #EFEEEB;
+}
+section#block-boxes-1503070489 {
+    padding-top: 25px;
+}
+.landing section#block-boxes-1503662185 .item-list li a {
+    color: #fff;
+}
+
+section#block-boxes-1503070940 {
+    background-color: #90B1DA;
+    padding: 45px 0;
+}
+
+.landing .content-left.content-right.content-bottom .region-content-first .region-inner, 
+.landing  .content-left.content-right.content-bottom .region-content-second .region-inner, 
+.landing .content-left.content-right .region-content-first .region-inner, 
+.landing .content-left.content-bottom .region-content-first .region-inner, 
+.landing .content-right.content-bottom .region-content-second .region-inner {
+    padding-right: 0;
+}
+
+section#block-boxes-1503070940 .block-inner {
+    max-width: 980px;
+    margin: auto;
+    width: 90%;
+}
+.landing .block-boxes-os_boxes_columns {
+max-width:1170px;
+    width: 98%;
+    margin: auto;
+}
+.landing .region.region-content-bottom .region-inner {
+    max-width: 100%!important;
+}
+section#block-boxes-1503070395,
+section#block-boxes-1503070569 {
+    padding: 0 35px;
+}
+.landing .content-left.content-right.content-bottom .region-content-second .region-inner, .content-left.content-right .region-content-second .region-inner{
+padding-left:0px;
+}
+section#block-boxes-1503070489,
+.landing .region-content-second .block {
+    background-image: url(https://hwpi.harvard.edu/files/comm/files/bgk2.png?m=1504132010);
+}
+.landing.sustainability .region.region-content-second {
+    background-color: #666;
+    background-image: url(https://hwpi.harvard.edu/files/comm/files/skyline.jpg?m=1504131503);
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    color: #fff;
+    padding: 35px 0;
+}
+body.page-node-revisions ul.action-links a, input.form-submit, a.button, .ui-dialog.ap-settings-form button, .ui-dialog.ap-settings-form input[type="button"], .ui-dialog.ap-settings-form input[type="submit"], a#edit-cancel, a.form-cancel {
+    cursor: pointer;
+    padding: 5px 12px;
+    margin-bottom: 1em;
+ 
+    color: #fff;
+    text-align: center;
+    font-weight: normal;
+    font-size: 1.077em;
+    font-family: "Lucida Grande",Verdana,sans-serif;
+    border: 1px solid #293352;
+    border-bottom: 1px solid #293352;
+    border-left-color: #293352;
+    border-right-color: #293352;
+    background: #293352;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    padding: 8px 15px;
+    float: right;
+}
+.form-type-select .form-select {
+    background: #FFF;
+    min-width: 100%;
+    padding: 10px;
+    font-size: 16px;
+
+}
+#columns a.node-readmore {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -.5px;
+}
+.landing #content-panels .region-content-second .region.region-two-66-33-second h2.block-title, .landing #content-panels .region-content-second .region.region-two-66-33-first h2.block-title {
+    font-size: 18px!important;
+    padding-bottom: 0!important;
+    background-image: none;
+    text-align: left;
+}
+.event-start .event-start span {
+    color: #666;
+}
+.landing .region-content-second a.more-link,
+.landing .region-content-first a.more-link {
+color: #000;
+    text-transform: uppercase;
+    text-decoration: none!important;
+    font-size: 16px;
+    font-weight: 300;
+    border: 2px solid #89959F;
+    padding: 5px 15px;
+    border-radius: 3px;
+    background-color: #fff;
+
+}
+.landing .region-content-second a.more-link:after,
+.landing .region-content-first a.more-link:after {
+    background:none;
+}
+.landing h1#page-title {
+    font-size: 85px;
+    margin: -1500px 20px 100px 20px;
+    letter-spacing: -.8px;
+    line-height: 105px;
+    color: #fff;
+    text-shadow: 1px 1px 2px #000;
+    margin-bottom: 150px;
+}
+
+.landing .region.region-content-top,
+.events .region.region-content-top {
+    background: #bac5c6;
+    display: block!important;
+    top: 0px;
+    position: relative;
+    margin-bottom: -25px;
+}
+#boxes-box-site_info, #boxes-box-site_info a {
+    font-family: "Lato",sans-serif;
+    font-size: 32px;
+    letter-spacing: -.8px;
+}
+#header-container .block-boxes-os_boxes_site_info {
+    min-height: 100px;
+
+}
+.og-context-node-1033026 .region.region-content-first{
+    background: #fff !important;
+}
+@media(min-width: 769px){
+.landing .slider {
+    padding: 0px 80px;
+}
+.landing .slider .boxes-box-content h2:nth-child(2) {
+    font-size: 32px;
+    line-height: 44px;
+    font-weight: 300 !important;
+}
+.landing .slider .boxes-box-content h2:nth-child(1) {
+    font-size: 30px;
+    font-weight: 400!important;
+    font-family: "Lato",sans-serif;
+    color: #FA6546;
+    margin-bottom:40px;
+}
+.landing .slider .boxes-box-content h2:nth-child(1) {
+    font-size: 30px;
+    font-weight: 400!important;
+    font-family: "Lato",sans-serif;
+    color: #FA6546;
+}
+.landing .slider .os-button{
+   background-color: #FA6546;
+    border-color: #FA6546;
+    border: 1px solid transparent;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    padding: 10px 20px 11px;
+    user-select: none;
+    color: #FFF;
+}
+.landing .slider .os-button a:hover{
+   background-color: #E33E1E;
+}
+.landing .slider .os-button a:visited{
+  color: #FFF;
+ }
+}
+.landing div#block-os-pages-main-content h2 {
+    font-weight: 300;
+    line-height: 38px;
+}
+div#boxes-box-1503070940 iframe {
+    width: 100%;
+}
+.tweet-authorphoto {
+    display: none;
+}
+.boxes-box-content h2 {
+    color: #424242;
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 26px;
+    font-family: "Montserrat",sans-serif;
+    font-weight: bold!important;
+}
+div#block-boxes-1502998080 img {
+    padding: 0;
+    width: 80px;
+}
+.content-left.content-right .region-content-first .region-inner, .front .content-left.content-bottom .region-content-first .region-inner, .front .content-right.content-bottom .region-content-second .region-inner, .front .content-left.content-right.content-bottom .region-content-second .region-inner {
+    border-right: 0!important;
+}
+.landing .region.region-content-first {
+    padding: 45px 0;
+}
+.front .content-left.content-right.content-bottom #content-panels .region-content-first, .front .content-left.content-right.content-bottom #content-panels .region-content-second, .front .content-left.content-right.content-bottom #content-panels .region-content-bottom {
+    width: 100%;
+}
+#header-container, #menu-bar nav, #menu-bar #block-os-primary-menu {
+    width: 90%!important;
+}
+
+div#boxes-box-1502812550 img {
+    width: 200px;
+    margin-top: 5px;
+}
+#header-container .block-boxes-os_boxes_site_info .block-inner {
+    display: block;
+    vertical-align: middle;
+    padding-top: 25px;
+}
+div#boxes-box-1502998118 {
+    max-width: 768px;
+    margin: auto;
+}
+section#block-boxes-1503071565 .block-content {
+    margin-top: -20px!important;
+}
+.content-left.content-right .region-content-first .region-inner, .front .content-left.content-bottom .region-content-first .region-inner, .front .content-right.content-bottom .region-content-second .region-inner, .front .content-left.content-right.content-bottom .region-content-second .region-inner {
+    border-right: 0;
+}
+.landing .region-content-second span.date-display-single  {
+    color: #fff;
+}
+.landing .region-content-second .event-content a {
+    color: #fff;
+}
+
+.landing #content-panels .region-content-second h2.block-title, .not-front #content-panels h2.block-title, .front. events h2.block-title {
+    background-image: url(https://hwpi.harvard.edu/files/comm/files/titlebot_wh.jpg?m=1503083540);
+    background-repeat: no-repeat;
+    background-size: 180px 1px;
+    background-position: center bottom;
+    padding-bottom: 30px!important;
+    letter-spacing: .5px!important;
+    margin-bottom: 30px!important;
+    font-size: 30px;
+    font-weight: 400!important;
+    font-family: "Lato",sans-serif;
+    color: #fff;
+}
+.landing .region.region-content-second {
+    background-color: #666;
+    background-image: url(https://s3.amazonaws.com/thumbnails.thecrimson.com/photos/2017/04/11/221114_1322355.jpg.1500x1000_q95_crop-smart_upscale.jpg);
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+   color: #fff;
+padding:35px 0;
+}
+.landing.education .region.region-content-second {
+    background-color: #666;
+    background-image: url(https://hwpi.harvard.edu/files/comm/files/bgbanner1.jpg?m=1504129586);
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+   color: #fff;
+padding:35px 0;
+}
+.landing .region.region-content-second  h2 {
+color:#fff;
+}
+h1.node-title {
+    font-weight: 400!important;
+    font-family: "Lato",sans-serif;
+}
+.not-front #content-column {
+    font-size: 18px;
+    line-height: 30px;
+    color: #444;
+
+}
+
+#footer h2.block-title {
+    color: #000;
+    background-image: url(https://chge.hsph.harvard.edu/files/chge/files/titlebot.png?m=1493830200);
+    background-repeat: no-repeat;
+    background-size: 180px 1px;
+    background-position: center bottom;
+    padding-bottom: 30px!important;
+    letter-spacing: .5px!important;
+    margin-bottom: 30px!important;
+    font-size: 30px;
+    font-weight: 400!important;
+    font-family: "Lato",sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 65px!important;
+}
+
+body, .ui-dialog * {
+    font-family: "Open Sans",sans-serif;
+}
+.node-title, .page-search .title a, #content-column .block.block-boxes-os_boxes_manual_list .links.inline a, .more-link, .page-search #content-column p, .not-front #content-column p, .links a, #footer ul.menu a, .view-os-events .views-field-colorbox {
+    font-family: "Open Sans",sans-serif;
+}
+.landing header#main-content-header {
+    text-align: center;
+}
+.events #page-title {
+    font-family: "Montserrat",sans-serif;
+    font-weight: 600!important;
+    text-transform: uppercase;
+    border: 2px solid #fff;
+    display: inline-block!important;
+    text-align: center!important;
+    padding: 10px 20px;
+}
+.landing #page-title {
+    font-family: "Montserrat",sans-serif;
+    font-weight: 600!important;
+    text-transform: uppercase;
+    border: 2px solid #fff;
+    display: inline-block!important;
+    text-align: center!important;
+    padding: 10px 20px;
+}
+.page-news #page-title {
+    font-family: "Montserrat",sans-serif;
+    font-weight: 600!important;
+    text-transform: uppercase;
+    border: 2px solid #fff;
+    display: inline-block!important;
+    text-align: center!important;
+    padding: 10px 20px;
+}
+.landing .region.region-footer-bottom {
+    background-color: #1D1D1D;
+    width: 100%;
+    color: #fff;
+}
+.landing .region.region-footer {
+    background-color: #293352;
+    color: #fff;
+    padding: 45px 0;
+}
+.landing .region.region-footer .region-inner {
+    max-width: 1170px;
+    margin: auto;
+}
+.landing .region.region-footer-first .region-inner,
+.landing .region.region-footer-bottom .region-inner {
+    max-width: 1170px;
+    margin: auto;
+}
+.landing #footer .gpanel{
+width:100%;
+}
+.landing .footer.footer-right .region-footer, 
+.landing .footer-left.footer .region-footer {
+    width: 100%;
+    padding-bottom:50px;
+}
+.landing #footer .block-inner{
+padding:0!important;
+}
+.landing #footer {
+    background: none #fff;
+    top: 140px;
+    position: relative;
+    color: #000;
+}
+
+.landing .footer.footer-right .region-footer-third, .footer-left.footer .region-footer-first {
+    width: 100%;
+}
+.tweet-media_url {
+    display: none;
+}
+#box-1502998167-page, .front #box-1502307879-page {
+    display: grid;
+    display: -ms-grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    -ms-grid-columns: repeat(auto-fit, minmax(170px, 1fr));
+    grid-gap: 0;
+max-width: 1200px;
+    margin: auto;
+}
+
+.landing .region.region-content-top .region-inner,
+.events .region.region-content-top .region-inner {
+    max-width: 980px;
+    margin: -20px auto auto;
+    padding: 45px 0!important;
+}
+.landing .breadcrumb {
+    display: none;
+}
+.landing .content-inner {
+   top: 200px;
+}
+.landing.about div#columns {
+    background-image: url(https://hwpi.harvard.edu/files/comm/files/about-landing.jpg?m=1504124147);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100%;
+    display: block;
+    margin-top: 0;
+}
+.landing.initiatives div#columns {
+    background-image: url(https://hwpi.harvard.edu/files/comm/files/initiatives-landing.jpg?m=1504126005);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100%;
+    display: block;
+    margin-top: 0;
+}
+.landing.team div#columns {
+    background-image: url(https://hwpi.harvard.edu/files/comm/files/our-team-landing.jpg?m=1507655378);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100%;
+    display: block;
+    margin-top: 0;
+}
+.landing.arts div#columns {
+    background-image: url(https://hwpi.harvard.edu/files/comm/files/arts-landing.jpg?m=1504730962);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100%;
+    display: block;
+    margin-top: 0;
+}
+.landing.community-benefits div#columns {
+    background-image: url(https://hwpi.harvard.edu/files/comm/files/community-benefits-landing.jpg?m=1507646349);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100%;
+    display: block;
+    margin-top: 0;
+}
+.landing.community-partnerships div#columns {
+    background-image: url(https://hwpi.harvard.edu/files/comm/files/community-partnerships-landing.jpg?m=1504728115);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100%;
+    display: block;
+    margin-top: 0;
+}
+.landing.economic div#columns {
+    background-image: url(https://hwpi.harvard.edu/files/comm/files/economic-landing.jpg?m=1504729023);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100%;
+    display: block;
+    margin-top: 0;
+}
+.landing.education div#columns {
+    background-image: url(https://hwpi.harvard.edu/files/comm/files/education-landing.jpg?m=1504878575);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100%;
+    display: block;
+    margin-top: 0;
+}
+.landing.housing div#columns {
+    background-image: url(https://hwpi.harvard.edu/files/comm/files/housing-landing.jpg?m=1507837795);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100%;
+    display: block;
+    margin-top: 0;
+}
+.landing.sustainability div#columns {
+    background-image: url(https://hwpi.harvard.edu/files/comm/files/sustainability-landing.jpg?m=1504879195);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100%;
+    display: block;
+    margin-top: 0;
+}
+
+.landing.newsletter div#columns {
+    background-image: url(https://hwpi.harvard.edu/files/comm/files/newsletter-landing.jpg?m=1507149317);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100%;
+    display: block;
+    margin-top: 0;
+}
+
+.landing.reports div#columns {
+    background-image: url(https://hwpi.harvard.edu/files/comm/files/reports-landing.jpg?m=1507754520);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100%;
+    display: block;
+    margin-top: 0;
+}
+
+#header {
+    background: #fff;
+}
+#branding_header .branding-container{
+display:none;
+}
+.landing .content-left.content-bottom #content-panels .region-content-first, 
+.landing .content-left.content-bottom #content-panels .region-content-bottom, 
+.landing .content-left.content-right #content-panels .region-content-first, 
+.landing .content-left.content-right #content-panels .region-content-second, 
+.landing .content-right.content-bottom #content-panels .region-content-second, 
+.landing .content-right.content-bottom #content-panels .region-content-bottom {
+    width: 100%;
+}
+
+.landing .region.region-content-bottom .region-inner, .landing .region.region-content-first .region-inner, .landing .region.region-content-second .region-inner, .landing .region.region-content-bottom .region-inner {
+    max-width: 1170px!important;
+    margin: 0 auto!important;
+    width: 100%;
+}
+.section-nav .menu-depth-1 > a {
+    text-transform: none;
+  
+}
+.section-nav .menu-depth-1 > a {
+    background-color: #89959F !important;
+}
+#boxes-box-os_pages_section_nav, .section-nav ul.menu li a {
+    border-color: transparent;
+    font-weight: bold;
+    color: #444;
+    font-size: 16px;
+    line-height: normal;
+}
+.section-nav ul.menu li {
+    list-style: none;
+    background-color: transparent;
+    text-align: left;
+}
+.sidebar .region-inner .block-content {
+    padding: 0;
+}
+.not-front.one-sidebar #columns {
+    width: 100%;
+    max-width: 1170px;
+}
+#search-block-form .container-inline .form-item .form-text {
+    background-color: #8F182A;
+    color: #fff;
+    font-family: Open Sans,sans-serif!important;
+    padding-left: 12px!important;
+}
+#search-block-form .container-inline .form-item .form-text {
+    border-color: #8F182A;
+}
+#search-block-form .container-inline .form-item .form-text {
+    background-color: #8F182A;
+}
+.block-os-search-solr {
+    max-width: 395px;
+    margin-top: -52px;
+}
+.not-front .region.region-content-bottom {
+    background-color: #E7E6E4;
+    padding: 35px 0;
+}
+.ui-tabs ul.ui-tabs-nav li.ui-tabs-active {
+    background: #89959F !important;
+}
+.ui-tabs .ui-tabs-panel {
+    padding: 35px;
+}
+.ui-tabs .ui-tabs-panel {
+    background-image: none;
+    border: none;
+    border-top: 0;
+    margin-top: 0;
+    background-color: #fff;
+}
+.not-front.no-sidebars .breadcrumb,.not-front.no-sidebars #main-content-header {
+    margin: 0 auto;
+    max-width: 1170px;
+    font-family: Open Sans,sans-serif!important;
+}
+
+.not-front .region.region-content-bottom .region-inner {
+    max-width: 100%!important;
+    margin: 0 auto!important;
+}
+.not-front.page-node #content-column .content-inner {
+    padding: 10px 0;
+}
+.not-front #columns{
+width:100%;
+}
+
+div#boxes-box-1419266737 li {
+    margin-bottom: 20px;
+}
+.not-front #layout_16_9_side .slide-copy h2 {
+    text-shadow: 0 1px 0 rgba(37,37,37,0.75);
+    color: #fff;
+    font-family: "Oswald",sans-serif!important;
+    font-size: 36px;
+}
+.front .block-boxes-os_taxonomy_fbt.navigation ul li  a{
+    cursor: pointer;
+    font-family: "Whitney SSm A","Whitney SSm B",sans-serif;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration: none;
+    text-transform: uppercase;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    color: #fff;
+    background: #455365;
+    position: relative;
+    text-align: left;
+    font-size: 16px;
+    margin: 0;
+    border: 1px solid #9facbd!important;
+    display: block;
+    padding: 12px 20px 12px 34px;
+    letter-spacing: 1px;
+    transition: 300ms all;
+}
+.front .block-boxes-os_taxonomy_fbt.navigation ul li {
+    border: 7px solid #455365;
+    margin-bottom: 5px;
+    list-style: none;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    transition: 300ms all;
+    display: inline-block;
+}
+.front .block-boxes-os_taxonomy_fbt.navigation ul {
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+}
+#layout_3_1_overlay .slide-copy h2, #layout_3_1_overlay .slide-copy h2 a {
+    margin-bottom: 0;
+    font-size: 50px;
+    font-weight: bold!important;
+    line-height: 50px;
+    letter-spacing: -.8px;
+    color: #fff;
+}
+div#boxes-box-1419266035 p {
+    margin-bottom: 45px;
+}
+#footer a {
+    color: #ccc;
+}
+
+.sidebar {
+    background-color: #E7E6E4;
+}
+.events .sidebar .region-inner .block-content,
+.page-news .sidebar .region-inner .block-content {
+padding:0 35px;
+}
+.sidebar .region-inner .block-content {
+padding:0;
+}
+
+.sidebar {
+    font-family: Open Sans,sans-serif;
+}
+ .sidebar .block h2.block-title {
+    background: none repeat scroll 0 0 #89959F;
+    color: #FFFFFF;
+    font-size: 24px;
+    line-height: 16px;
+    padding: 20px 25px;
+    font-weight: 300;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+div#block-boxes-1419266035 h2 a {
+    color: #fff;
+}
+div#block-boxes-1419266035 {
+    margin-top: 25px;
+}
+.branding img {
+    margin-left: -30px;
+    width: 250px!important;
+    height: auto!important;
+}
+div#boxes-box-1499797491 p a {
+    font-size: 16px;
+    letter-spacing: -.8px!important;
+    font-family: Open Sans, sans-serif;
+    color: #fff;
+}
+div#boxes-box-1419266035 h2 {
+    font-size: 50px!important;
+    font-weight: normal!important;
+    color: #fff;
+}
+#columns a.node-readmore {
+    border-bottom: none;
+    font-size: 20px;
+    font-weight: normal;
+    float: none;
+    padding-right: 11px;
+    position: relative;
+}
+#columns a.node-readmore:after {
+    background: none;
+}
+
+
+h1#page-title {
+    font-size: 65px;
+    margin: 0 0 20px;
+    font-weight: 500;
+    letter-spacing: -.8px;
+    line-height: 65px;
+}
+div#branding_footer {
+    background-color: #000;
+    padding-top: 45px;
+    font-family: Open Sans,sans-serif!important;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+}
+div#branding_header {
+    background-color: #A51C30;
+}
+
+div#block-boxes-1418239820 {
+    margin-top: -40px;
+}
+#menu-bar {
+    background: #fff;
+    padding: 0;
+}
+
+
+div#boxes-box-1419266035 h2 {
+    font-size: 50px!important;
+    font-weight: normal!important;
+}
+.content-left.content-right .region-content-first .region-inner, .front .content-left.content-bottom .region-content-first .region-inner, .front .content-right.content-bottom .region-content-second .region-inner, .front .content-left.content-right.content-bottom .region-content-second .region-inner {
+    border-right: 1px solid #ccc;
+}
+.credits .boxes-box-content li {
+    font-size: 16px!important;
+    line-height: 22px;
+    margin-bottom: 20px;
+}
+.intro p {
+    font-size: 24px;
+    line-height: 32px;
+}
+.intro {
+    margin-top: 55px;
+border-bottom:4px solid #cacaca;
+    background-color: #fff;
+}
+.intro .block-inner{
+padding:35px;
+}
+#layout_3_1_overlay .slide img {
+    width: 100%;
+}
+
+#menu-bar ul.nice-menu a {
+    font-family: "Lato",sans-serif;
+    font-size: 20px;
+    letter-spacing: -.5px;
+    font-weight: 500;
+}
+
+
+#menu-bar ul.nice-menu a {
+    font-family: "Open Sans",sans-serif;
+    font-size: 20px;
+    color: #215990!important;
+    padding: 8px 23px!important;
+    letter-spacing: -.5px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.front #content-column .block, .node-person .block-inner, .comment-wrapper {
+    border-top: none;
+}
+
+#page-title{
+    font-family: "Montserrat",sans-serif;
+    font-weight: 600!important;
+}
+
+body {
+    font-size: 20px;
+    line-height: 28px;
+    min-height: inherit;
+}
+html, body {
+    background: #EFEEEB;
+}
+
+.branding {
+    width: 100%!important;
+}
+.logo img{
+width:400px;
+}
+.region-header-second .block:first-child p:last-child {
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.region-header-second .block:first-child p:last-child a, .region-header-second .block:first-child p:last-child a:visited {
+    color: #ccc;
+}
+.branding-left, .branding-right {
+    display: none;
+}
+.branding p {
+    display: inline;
+}
+.branding {
+    left: 0;
+    position: absolute;
+    top: -28px;
+    width: 100%;
+}
+@media (max-width:1200px){
+.videotext {
+    margin-top: -240px;
+    padding-bottom: 55px;
+    margin-bottom: 90px!important;
+}
+}
+@media (max-width: 1008px) {
+.page-browse-events #main-content-header {
+    margin-top: -350px;
+    margin-bottom: -80px;
+}
+.cards .media-element[style] {
+    display: block !important;
+    float: none !important;
+    max-width: 100% !important;
+    width: 200px!important;
+    height: auto!important;
+}
+.landing div#columns {
+    background-size: 150%!important;
+}
+.region.region-content-top .region-inner {
+    margin-bottom: -50px!important;
+}
+.landing .region.region-content-top, .events .region.region-content-top {
+    background: #bac5c6;
+    display: block!important;
+    top: -48px;
+    position: relative;
+    margin-bottom: -25px;
+}
+.landing.reports h1#page-title{
+    margin: -155px 20px 100px 20px;
+}
+.page-browse-events div#content-column .content-inner,
+.node-type-event div#content-column .content-inner,
+.sidebar-second div#content-column .content-inner {
+    padding: 0 25px!important;
+}
+.os-poster{
+display:block;
+}
+.ipad .os-poster{
+display:block!important;
+}
+video{
+display:none;
+}
+
+div#boxes-box-1507063992 .boxes-box-content {
+    padding: 25px;
+}
+div#boxes-box-1504102752 a {
+    float: left;
+    margin-right: 15px;
+}
+h3 a.os-button {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none!important;
+    font-size: 14px;
+    font-weight: 300;
+    border: 2px solid #fff;
+    padding: 5px 15px;
+    border-radius: 3px;
+}
+.front .content-left.content-right.content-bottom .region-content-bottom .region-inner, .content-left.content-right.content-bottom .region-content-second .region-inner, .content-left.content-right .region-content-second .region-inner, .front .content-left.content-bottom .region-content-bottom .region-inner, .front .content-right.content-bottom .region-content-bottom .region-inner {
+    padding-left: 0;
+}
+.not-front h3 a.os-button {
+    color: #89959F;
+    text-transform: uppercase;
+    text-decoration: none!important;
+    font-size: 12px;
+    font-weight: 300;
+    border: 2px solid #89959F;
+    padding: 5px 10px;
+    border-radius: 3px;
+    background-color: #fff;
+}
+li.link-count-mobi-search.last {
+    display: none;
+}
+#menu-bar ul.nice-menu a {
+
+    color: #fff!important;
+
+}
+.landing.about div#columns{
+background-size: auto 600px;
+}
+div#boxes-box-1504103430 .region {
+    width: 90%;
+    margin: auto!important;
+}
+
+
+.block-os-search-solr {
+    margin-top: 0;
+}
+#box-1502998167-page, .front #box-1502307879-page {
+    display: block;
+}
+.landing .region-content-second .block .block-inner {
+    padding: 45px 0;
+}
+.landing .region.region-content-first .region-inner,
+.landing .region.region-content-second .region-inner,
+.landing .region.region-content-bottom .region-inner,
+.landing .region.region-content-top .region-inner,
+.events .region.region-content-top .region-inner {
+    width: 98%;
+}
+
+
+.landing .region.region-content-top .region-inner,
+.events .region.region-content-top .region-inner {
+    margin: -120px auto auto auto;
+}
+.hg-container {
+    -moz-box-sizing: border-box;
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 0 0!important;
+}
+.landing h1#page-title {
+    font-size: 65px;
+    line-height: 95px;
+    color: #fff;
+    text-shadow: 1px 1px 2px #000;
+    margin-bottom: 280px;
+    max-width: 600px;
+    width: 95%;
+}
+.cards .boxes-box-content h2 {
+    line-height: 22px;
+    letter-spacing: -.8px;
+    font-size: 14px;
+}
+#box-1502998167-page, .front #box-1502307879-page {
+    display: block;
+}
+.videotext {
+    margin-top: -150px;
+    padding-bottom: 20px;
+    margin-bottom: 50px!important;
+}
+div#boxes-box-1504882522 p {
+    font-size: 16px;
+    line-height: normal;
+}
+.videotext .boxes-box-content h2 {
+    color: #fff;
+    font-weight: 300!important;
+    padding-top: 35px;
+    font-size: 26px;
+    line-height: 46px;
+}
+.region-header-second .block:first-child img {
+    margin-left: 0;
+    position: relative;
+    z-index: 2;
+    width: 300px!important;
+}
+.region-header-second .block:first-child p:last-child {
+    display: none;
+}
+}
+@media (max-width:768px){
+section#block-boxes-1502307879 h2.block-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: normal;
+
+}
+.field.field-name-field-date.field-type-datetime.field-label-hidden.view-mode-sidebar_teaser {
+    margin-left: 70px;
+}
+.events .event-content {
+    padding: 0 25px 25px 35px;
+}
+div#boxes-box-1507139197 h3 a.os-button {
+    border-color: #1e1e1e;
+    color: #1e1e1e;
+    display: block;
+    margin-top: 35px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.event-content .node-header h1.node-title {
+    margin-bottom: 0;
+    font-size: 18px;
+    line-height: normal;
+}
+.landing #content-panels h2.block-title, .not-front #content-panels h2.block-title {
+    margin-bottom: 30px!important;
+}
+.landing h1#page-title{
+top:55px;
+}
+.landing div#columns {
+    background-size: 200%!important;
+}
+.landing #content-panels h2.block-title, .not-front #content-panels h2.block-title, .cards h2.block-title {
+    color: #000;
+    background-image: url(https://chge.hsph.harvard.edu/files/chge/files/titlebot.png?m=1493830200);
+    background-repeat: no-repeat;
+    background-size: 120px 1px;
+    background-position: center bottom;
+    padding-bottom: 30px!important;
+    letter-spacing: .5px!important;
+    margin-bottom: 0px!important;
+    font-size: 22px;
+    font-weight: 400!important;
+    font-family: "Lato",sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: normal;
+}
+.sidebar .node-event .field-name-field-date {
+    margin-bottom: 7px;
+    margin-left: 70px;
+}
+.sidebar .event-content .node-header h1.node-title {
+    margin-bottom: 0;
+    font-size: 22px!important;
+}
+.node-event .node-content, .node-event .clearfix, #content .node-event .event-content .node-content .field-name-field-event-location {
+    margin-left: 0!important;
+}
+.cards .boxes-box {
+    padding: 0 25px;
+}
+.events h1#page-title {
+  font-size: 35px!important;
+  line-height: normal;
+  max-width: 400px!important;
+  width: 76%;
+  position: relative;
+  margin-top:32px;
+  margin-left: 20px !important;
+  margin-right: 20px !important;
+}
+.events .region-content-top .block-boxes-os_boxes_html p {
+    font-size: 1em !important;
+    padding: 25px;
+ }
+.events .region.region-content-first .eventscol .block-inner > h2.block-title {
+    padding-top: 45px;
+ }
+h1#page-title {
+    font-size: 45px;
+    margin: 0 0 20px;
+    font-weight: 500;
+    letter-spacing: -.8px;
+    line-height: 45px;
+}
+.one-sidebar.sidebar-second #content-column .content-inner {
+    width: 90%!important;
+}
+.cards .boxes-box {
+    padding: 0 25px;
+}
+.not-front h3 a.os-button {
+    color: #89959F;
+    text-transform: uppercase;
+    text-decoration: none!important;
+    font-size: 12px;
+    font-weight: 300;
+    border: 2px solid #89959F;
+    padding: 5px 10px;
+    border-radius: 3px;
+    background-color: #fff;
+    display: block;
+    text-align: center;
+}
+.landing .region.region-content-top, .events .region.region-content-top {
+    background: #bac5c6;
+    display: block!important;
+    top: 0;
+    position: relative;
+    margin-bottom: -25px;
+}
+.ipad .videotext {
+    margin-top: -240px;
+}
+.ipad #video_container {
+    max-height: 400px;
+    background-image: none!important;
+    background-repeat: no-repeat!important;
+    background-size: 100%!important;
+}
+.videotext .boxes-box-content h2 {
+    color: #fff;
+    font-weight: 300!important;
+    padding-top: 35px;
+    font-size: 26px;
+    line-height: 36px;
+    margin-top: 30px;
+}
+.landing.reports {
+    padding-left: 15px !important;
+}
+.landing.reports h1#page-title {
+    font-size: 75px;
+    margin: -155px 20px 100px 20px;
+    line-height: normal;
+}
+.iconcol h2.block-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 32px;
+    margin-bottom: 0;
+}
+.iconcol .block-inner .block-inner {
+    padding: 0;
+}
+.iconcol .block-inner {
+    padding: 0 85px;
+}
+.cards .boxes-box-content {
+    padding: 0;
+}
+.events .event-start {
+    padding-top: 1px;
+}
+.landing div#block-os-pages-main-content .block-inner {
+    padding: 25px;
+}
+.landing .region.region-content-second .block-inner {
+    padding: 25px!important;
+}
+.cards .boxes-box-content h2 {
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: transparent;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    padding-top: 15px;
+    font-weight: 400!important;
+    background-image: url(https://chge.hsph.harvard.edu/files/chge/files/titlebot.png?m=1493830200);
+    background-repeat: no-repeat;
+    background-position: center bottom!important;
+    padding-bottom: 10px;
+    background-size: 50px 1px;
+    margin-bottom: 20px;
+    line-height: 28px;
+    letter-spacing: -.5px;
+    text-align: center;
+}
+.cards .boxes-box-content h2 {
+    line-height: 22px;
+    letter-spacing: -.8px;
+    font-size: 24px;
+}
+.region-header-second h3, .region-header-second img {
+    padding-left: 0;
+}
+h2 {
+    font-size: 1em;
+}
+.landing .content-inner {
+    top: 80px;
+}
+div#block-views-os-events-block-1,
+section#block-boxes-1503662185,
+#block-boxes-1506360789,
+#block-boxes-1506360861 {
+    width: 92%!important;
+    margin: auto;
+}
+.landing h1#page-title{
+    font-size: 35px!important;
+    line-height: normal;
+    max-width: 400px!important;
+    width: 76%;
+    position: relative;
+}
+.events h1#page-title{
+    font-size: 35px!important;
+    line-height: normal;
+    max-width: 400px!important;
+    width: 76%;
+    position: relative;
+    margin-top: 32px; 
+    display: block !important;
+}
+section#block-boxes-1507728371 h2 {
+    padding-left: 15px !important;
+}
+div#boxes-box-1506370471 p,
+div#boxes-box-1506347564 p{
+    font-size: 1em;
+    padding: 25px;
+}
+.events #block-boxes-1503339562 a.more-link {
+    margin-right: 25px;
+}
+}
+@media (max-width: 600px) {
+h3 a.os-button {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none!important;
+    font-size: 9px;
+    font-weight: bold;
+    border: 1px solid #fff;
+    padding: 5px 15px;
+    border-radius: 3px;
+}
+.iconcol img {
+    width: 80px;
+}
+.front .region.region-content-first {
+
+    padding-top: 15px;
+}
+.videotext {
+    margin-top: -115px;
+    padding-bottom: 0;
+    margin-bottom: 60px!important;
+}
+.videotext .boxes-box-content h2 {
+    color: #fff;
+    font-weight: 300!important;
+    padding-top: 25px;
+    font-size: 20px;
+    line-height: 26px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+.front div#columns {
+    margin-top: 0!important;
+}
+.region-header-second .block:first-child img, .branding img {
+    min-width: 300px;
+}
+}
+@media (max-width: 520px) {
+.landing h1#page-title {
+    font-size: 25px!important;
+    line-height: normal;
+ 
+}
+body {
+    font-size: 14px;
+    line-height: 18px;
+    min-height: inherit;
+}
+.videotext .boxes-box-content h2 {
+    color: #fff;
+    font-weight: 300!important;
+    padding-top: 25px;
+    font-size: 20px;
+    line-height: 26px;
+    margin-top: 40px;
+    margin-bottom: 5px;
+}
+.region-header-second .block:first-child img, .branding img {
+    min-width: 230px;
+}
+.header-logo {
+margin-bottom:30px;
+}
+.iconcol .block-inner {
+    padding: 0 25px;
+}
+div#block-boxes-1507139197 {
+    margin-top: -65px;
+}
+.front .region.region-content-bottom {
+    padding: 0;
+}
+.cards .boxes-box-content h2 {
+    line-height: 22px;
+    letter-spacing: -.8px;
+    font-size: 18px;
+.landing #content-panels h2.block-title, .not-front #content-panels h2.block-title, .cards h2.block-title {
+    color: #000;
+    background-image: url(https://chge.hsph.harvard.edu/files/chge/files/titlebot.png?m=1493830200);
+    background-repeat: no-repeat;
+    background-size: 60px 1px;
+    background-position: center bottom;
+    padding-bottom: 10px!important;
+    letter-spacing: .5px!important;
+    margin-bottom: 0!important;
+    font-size: 20px;
+    font-weight: 600!important;
+    font-family: "Lato",sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+}
+.front .region.region-content-first {
+    margin-bottom: -95px!important;
+}
+.boxes-box-content h2 {
+    color: #424242;
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: normal;
+    font-family: "Montserrat",sans-serif;
+    font-weight: bold!important;
+.front .region.region-content-second {
+    background-color: #fff;
+    padding: 0;
+}
+.node-event .node-header {
+    margin: -97px 0 10px 70px !important;
+}
+body {
+    font-size: 16px;
+    line-height: 22px;
+}
+.event-content .node-header h1.node-title {
+    margin-bottom: 0;
+    font-size: 18px;
+}
+.events .event-start {
+    margin: 0 15px 0 25px;
+}
+section#block-boxes-1502307879 h2.block-title {
+    color: #000;
+    background-image: url(https://chge.hsph.harvard.edu/files/chge/files/titlebot.png?m=1493830200);
+    background-repeat: no-repeat;
+    background-size: 60px 1px;
+    background-position: center bottom;
+    padding-bottom: 5px!important;
+    letter-spacing: .5px!important;
+    margin-bottom: 10px!important;
+    font-size: 18px!important;
+    font-weight: 400!important;
+    font-family: "Lato",sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+}
+.iconcol h2.block-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 32px;
+    margin-bottom: 0;
+}
+.iconcol .block-inner .block-inner {
+    padding: 0;
+}
+.iconcol .block-inner {
+    padding: 0 35px;
+}
+.cards .boxes-box {
+    padding: 15px;
+}
+.region-header-second .block:first-child img {
+    min-width: 200px;
+}
+}
+@media (max-width: 420px) {
+.landing h1#page-title {
+    font-size: 25px!important;
+    line-height: normal;
+ 
+}
+.videotext .boxes-box-content h2 {
+    color: #fff;
+    font-weight: 300!important;
+    padding-top: 35px;
+    font-size: 16px;
+    line-height: normal;
+    margin-top: 15px;
+    margin-bottom: 0;
+    width: 98%;
+}
+.front div#columns {
+    margin-top: 0!important;
+}
+.videotext {
+    margin-top: -95px;
+    padding-bottom: 0;
+    margin-bottom: 50px!important;
+}
+div#boxes-box-1505328739 img {
+    width: 180px!important;
+    height: auto!important;
+}
+.region-header-second .block:first-child img {
+    min-width: 160px;
+}
+}
+@media (max-width:400px){
+.landing h1#page-title {
+    font-size: 25px!important;
+    line-height: normal;
+}
+.videotext .boxes-box-content h2{
+padding-top:15px;
+}
+}
+</style></div></div></div>  </div>
+
+  
+</div>
+</div></div></div>
+  </div></div><div id="block-boxes-1504814775" class="block block-boxes block-boxes-os_boxes_media no-title"  module="boxes" delta="1504814775"><div class="block-inner clearfix">  
+  
+  <div class="block-content content"><div id='boxes-box-1504814775' class='boxes-box'><div class="boxes-box-content"><div id="file-894631" class="file file-html file-html-embed">
+
+          <h2 class="element-invisible"><a href="">0ac8162ccb88704604875e803db6317d</a></h2>
+      
+  
+  <div class="content">
+    <div class="file-info"></div><div class="field field-name-field-html-code field-type-text-long field-label-hidden view-mode-full"><div class="field-items"><div class="field-item even"><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+/* Thanks to CSS Tricks for pointing out this bit of jQuery
+http://css-tricks.com/equal-height-blocks-in-rows/
+It's been modified into a function called at page load and then each time the page is resized. One large modification was to remove the set height before each new calculation. */
+
+equalheight = function(container){
+
+var currentTallest = 0,
+     currentRowStart = 0,
+     rowDivs = new Array(),
+     $el,
+     topPosition = 0;
+ $(container).each(function() {
+
+   $el = $(this);
+   $($el).height('auto')
+   topPostion = $el.position().top;
+
+   if (currentRowStart != topPostion) {
+     for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+       rowDivs[currentDiv].height(currentTallest);
+     }
+     rowDivs.length = 0; // empty the array
+     currentRowStart = topPostion;
+     currentTallest = $el.height();
+     rowDivs.push($el);
+   } else {
+     rowDivs.push($el);
+     currentTallest = (currentTallest < $el.height()) ? ($el.height()) : (currentTallest);
+  }
+   for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+     rowDivs[currentDiv].height(currentTallest);
+   }
+ });
+}
+
+$(window).load(function() {
+  equalheight('.landingcol .boxes-box-content');
+  equalheight('.hpcol3 .boxes-box');
+ equalheight('.cards .block-boxes-os_boxes_html');
+
+
+
+});
+
+
+$(window).resize(function(){
+  equalheight('.landingcol .boxes-box-content');
+  equalheight('.hpcol3 .boxes-box');
+equalheight('.cards .block-boxes-os_boxes_html');
+});
+
+</script></div></div></div>  </div>
+
+  
+</div>
+</div></div></div>
+  </div></div><div id="block-boxes-1508873210" class="block block-boxes block-boxes-os_boxes_media no-title"  module="boxes" delta="1508873210"><div class="block-inner clearfix">  
+  
+  <div class="block-content content"><div id='boxes-box-1508873210' class='boxes-box'><div class="boxes-box-content"><div id="file-920181" class="file file-html file-html-embed">
+
+          <h2 class="element-invisible"><a href="">0ffe5b3668d7f763cf3ea72dffd4c7da</a></h2>
+      
+  
+  <div class="content">
+    <div class="file-info"></div><div class="field field-name-field-html-code field-type-text-long field-label-hidden view-mode-full"><div class="field-items"><div class="field-item even"><script type="text/javascript">
+
+//Time on Page Tracking
+setTimeout("_gaq.push(['_trackEvent', '30 Seconds on Page', 'Read']);", 30000);
+setTimeout("_gaq.push(['_trackEvent', '60 Seconds on Page', 'Read']);", 60000);
+
+//Advanced Scroll Tracking
+
+//function cScrollEvent() {
+// ... give time for script to load, then type.
+//jQuery( document ).ready(function($) {
+var runned = false;
+var fty = $(document).height() * .5;
+var rfty = Math.round(fty);
+console.log(rfty);
+
+$( window ).scroll( function() {
+if ( $( document ).scrollTop() >= rfty && runned == false ) {
+_gaq.push(['_trackEvent', 'Scrolled 50%', 'Scroll']);
+runned = true;
+  }
+  });
+</script></div></div></div>  </div>
+
+  
+</div>
+</div></div></div>
+  </div></div></div></div>			</div>
+
+		<!--footer region end-->
+    <div id="powerby-login">
+  	<a href="/user?destination=home%3Fadmin_panel%3D1%26login%3D1"  class="footer-login">Admin Login</a>  	<div id="powered-by"><a href="https://theopenscholar.org">OpenScholar</a></div>
+    </div>
+  </footer>
   </div>
+</div><!--page area ends-->
+
+<div id="extradiv"></div>
+
+  <!--FLEXIBLE ADMIN FOOTER FOR USE BY SELECT GROUPS USING OS-->
+  <div id="branding_footer">
+		<div class="branding-container">
+	    <div class="copyright"><span class="harvard-copyright">Copyright &copy; 2017 The President and Fellows of Harvard College</span>  | <a href="http://accessibility.harvard.edu/" >Accessibility</a> | <a href="http://www.harvard.edu/reporting-copyright-infringements" >Report Copyright Infringement</a></div>		</div>
   </div>
-  </body>
+
+</div><!-- /page_wrap -->
+
+  <script src="//static.hwpi.harvard.edu/profiles/openscholar/libraries/respondjs/respond.min.js?ozi166"></script>
+<script src="//static.hwpi.harvard.edu/files/js/js_cgjO1cR9EpO0BVXdJ1WoW_zBsTf5LchFQGc-6A90gGk.js?m=1508348027"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"hwpi_modern","theme_token":"D-864pdGPNnCfdafWrSHdr9i3YRO61Ckv8TvvYYx59c","jquery_version":"1.8"},"colorbox":{"opacity":"0.85","current":"{current} of {total}","previous":"\u00ab Prev","next":"Next \u00bb","close":"Close","maxWidth":"98%","maxHeight":"98%","fixed":true,"mobiledetect":true,"mobiledevicewidth":"480px"},"jcarousel":{"ajaxPath":"https:\/\/community.harvard.edu\/jcarousel\/ajax\/views"},"urlIsAjaxTrusted":{"\/":true,"https:\/\/community.harvard.edu\/search\/site":true},"spaces":{"id":"1033026","path":"Harvard in the Community"},"os_ga":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|docx?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xlsx?|xml|z|zip","trackNavigation":1},"nice_menus_options":{"delay":800,"speed":"slow"},"ogContext":{"groupType":"node","gid":"1033026"},"password":{"strengthTitle":"Password compliance:"},"type":"setting"});</script>
+<script src="//static.hwpi.harvard.edu/files/js/js_ycycPwKbvTuCC_P8XJ74_ESTrPxrV_A_I-qCsZr2vnw.js?m=1509985617"></script>
+<script src="//static.hwpi.harvard.edu/files/js/js_lFGFSfb6zopeHCEuZ_QstjIfdJH0AL8TRkWWOeDs62M.js?m=1509985644"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script src="//static.hwpi.harvard.edu/files/js/js_w7hIF_ITvd4BdANi0WAZ7A4c8QuekqxL3X3X-C6JIfA.js?m=1509985645"></script>
+<script>window.CKEDITOR_BASEPATH = '/profiles/openscholar/libraries/ckeditor/'</script>
+<script>var _gaq = _gaq || [];_gaq.push(["_setAccount", "UA-17689007-1"]);_gaq.push(["_trackPageview"]);_gaq.push(['_setCustomVar',1,'Site homepage','https://community.harvard.edu/',3]);_gaq.push(["_setAccount", "UA-2923555-10"]);_gaq.push(["_trackPageview"]);(function() {var ga = document.createElement("script");ga.type = "text/javascript";ga.async = true;ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga, s);})();var addthis_config = {data_ga_social: true, data_ga_property: "UA-2923555-10"};</script>
+<script src="//static.hwpi.harvard.edu/files/js/js_LiusrpwJT3Sg0H0ZmGojUVryUYFnHLCv1UjzLbWcgsw.js?m=1508348027"></script>
+<script src="//static.hwpi.harvard.edu/files/js/js_DWKKUd8IeQ67FVDRJbW9zcKO5MT87ZGMbV32ROSOQBU.js?m=1508348028"></script>
+<script src="//static.hwpi.harvard.edu/files/js/js_fTAkW2arPREh1qTGQbXWb_xZppoVtMkhnSAAKQlcZ-k.js?m=1509985617"></script>
+</body>
 </html>
