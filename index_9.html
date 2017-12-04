@@ -1,1084 +1,1145 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-  <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7599756/7295372/css/fonts.css" />
-    <meta charset="utf-8" />
-<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
-<meta name="MobileOptimized" content="width" />
-<meta name="HandheldFriendly" content="true" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="viewport" content="width=device-width" />
-<meta content="ie=edge, chrome=1" http-equiv="x-ua-compatible" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
-<meta http-equiv="ImageToolbar" content="false" />
-<link rel="shortcut icon" href="/core/misc/favicon.ico" type="image/vnd.microsoft.icon" />
-<link rel="canonical" href="/home-page" />
-<link rel="shortlink" href="/node/150486" />
-<link rel="revision" href="/home-page" />
-<script src="/sites/default/files/google_tag/google_tag.script.js?p0f7bt"></script>
-
-    <title>Harvard Kennedy School | Harvard Kennedy School</title>
-    <link rel="stylesheet" href="/sites/default/files/css/css_6lcN0KPAuvaj2v0LpWWEXjTeoRwpYt9otIfU7JtCEBY.css?p0f7bt" media="all" />
-<link rel="stylesheet" href="/sites/default/files/css/css_oXVojTp_CYU_6cCXoeLFfMiQ2PFUuL7JVHsAcZNV0a4.css?p0f7bt" media="all" />
-
-    
-<!--[if lte IE 8]>
-<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
-<![endif]-->
-
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="shortcut icon" sizes="48x48" href="/favicon.ico">
-    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-    <link rel="manifest" href="/manifest.json">
-          <meta name=“google-site-verification” content="H-fdz1H59lstWjCRm_GRQ1l-eRZsKLl5tfqPkvsNVOg" />
-              <script type="text/javascript" src="/modules/contrib/seckit/js/seckit.document_write.js"></script>
-        <link type="text/css" rel="stylesheet" id="seckit-clickjacking-no-body" media="all" href="/modules/contrib/seckit/css/seckit.no_body.css" />
-        <!-- stop SecKit protection -->
-        <noscript>
-        <link type="text/css" rel="stylesheet" id="seckit-clickjacking-noscript-tag" media="all" href="/modules/contrib/seckit/css/seckit.noscript_tag.css" />
-        <div id="seckit-noscript-tag">
-          Sorry, you need to enable JavaScript to visit this website.
-        </div>
-        </noscript></head>
-  <body class="lang-en no_sidebars path-frontpage node--type-homepage">
-  <a href="#main-content" class="visually-hidden focusable skip-link">
-    Skip to main content
-  </a>
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRBVPKQ" height="0" width="0"></iframe></noscript>
-  <div class="off-canvas-wrapper">
-  <div class="inner-wrap off-canvas-wrapper-inner" id="inner-wrap" data-off-canvas-wrapper>
-
-    <!-- off-canvas title bar for 'small' screen -->
-    <div class="title-bar" data-responsive-toggle="widemenu" data-hide-for="large">
-      <div class="title-bar-left">
-        <a href="/" title="Harvard Kennedy School"><img src="/themes/harvardkennedy/images/logo.svg" alt="Harvard Kennedy School" class="logo"></a>
-      </div>
-      <div class="title-bar-right">
-        <button class="menu-icon" type="button" data-open="offCanvasRight"></button>
-      </div>
-    </div>
-
-    <!-- off-canvas right menu -->
-    <div class="off-canvas position-right" id="offCanvasRight" data-off-canvas data-position="right">
-       <div class="screen__small">  <div>
-    <section id="block-mainsitelogo" class="columns large-3 xlarge-4 block-mainsitelogo">
-  
-  
-    
-
-  <div >
-          <a href="/">    <div class="field-wrapper field field--name-field-logo-svg field--type-file field--label-hidden field__items">
-                <div class="field__item">
-                 
-      <img src="/sites/default/files/logos/logo_0.svg" alt="Harvard Kennedy School" class="logo">
-            </div>
-          </div>
-</a>
-      </div>
-
-  </section>
-<nav role="navigation" aria-labelledby="block-harvardkennedy-main-menu-menu" id="block-harvardkennedy-main-menu" class="columns large-9 xlarge-8 block-harvardkennedy-main-menu">
-            
-  <h2 class="block-title visually-hidden" id="block-harvardkennedy-main-menu-menu">Main navigation</h2>
-  
-
-        
-
-  
-     
-              <!-- main menu -->
-        <ul class="dropdown menu horizontal main--menu" data-dropdown-menu="data-responsive-menu">
-       
-                        <li class="menu-item menu-item--expanded is-dropdown-submenu-parent">
-              <a href="/educational-programs" target="" data-drupal-link-system-path="node/104091">Educational Programs</a>
-                      
-     
-              <ul class="menu is-dropdown-submenu">
-       
-                        <li class="menu-item menu-item--collapsed">
-              <a href="/masters-programs" data-drupal-link-system-path="node/102565">Master&#039;s Programs</a>
-              </li>
-                        <li class="menu-item menu-item--collapsed">
-              <a href="/executive-education" data-drupal-link-system-path="node/102567">Executive Education</a>
-              </li>
-                        <li class="menu-item menu-item--collapsed">
-              <a href="/doctoral-programs" data-drupal-link-system-path="node/155736">Doctoral Programs</a>
-              </li>
-                        <li class="menu-item menu-item--collapsed">
-              <a href="/courses" data-drupal-link-system-path="courses">Courses</a>
-              </li>
-                        <li class="menu-item menu-item--collapsed">
-              <a href="/educational-programs/academic-calendars-policies" data-drupal-link-system-path="node/151596">Academic Calendars &amp; Policies</a>
-              </li>
-        </ul>
-
-  
-              </li>
-                        <li class="menu-item menu-item--expanded is-dropdown-submenu-parent">
-              <a href="/admissions-financial-aid" target="" data-drupal-link-system-path="node/150506">Admissions &amp; Aid</a>
-                      
-     
-              <ul class="menu is-dropdown-submenu">
-       
-                        <li class="menu-item menu-item--collapsed">
-              <a href="/admissions-aid/masters-program-admissions" target="" data-drupal-link-system-path="node/159656">Master&#039;s Program Admissions</a>
-              </li>
-                        <li class="menu-item">
-              <a href="https://www.hks.harvard.edu/educational-programs/executive-education/admissions-fees" target="">Executive Education Admissions</a>
-              </li>
-                        <li class="menu-item menu-item--collapsed">
-              <a href="/admissions-aid/doctoral-program-admissions" data-drupal-link-system-path="node/159716">Doctoral Program Admissions</a>
-              </li>
-                        <li class="menu-item menu-item--collapsed">
-              <a href="/admissions-aid/funding-your-education" data-drupal-link-system-path="node/159436">Funding Your Education</a>
-              </li>
-        </ul>
-
-  
-              </li>
-                        <li class="menu-item menu-item--expanded is-dropdown-submenu-parent">
-              <a href="/research-insights" data-drupal-link-system-path="node/104161">Research &amp; Insights</a>
-                      
-     
-              <ul class="menu is-dropdown-submenu">
-       
-                        <li class="menu-item menu-item--collapsed">
-              <a href="/research-insights/research-publications" target="" title="Publications at HKS" data-drupal-link-system-path="node/217966">Publications</a>
-              </li>
-                        <li class="menu-item menu-item--collapsed">
-              <a href="/research-insights/policy-topics" data-drupal-link-system-path="node/151091">Policy Topics</a>
-              </li>
-                        <li class="menu-item menu-item--collapsed">
-              <a href="/research-insights/library-knowledge-services" data-drupal-link-system-path="node/151071">Library &amp; Knowledge Services</a>
-              </li>
-        </ul>
-
-  
-              </li>
-                        <li class="menu-item menu-item--expanded is-dropdown-submenu-parent">
-              <a href="/centers-initiatives" target="" data-drupal-link-system-path="node/150511">Centers &amp; Initiatives</a>
-                      
-     
-              <ul class="menu is-dropdown-submenu">
-       
-                        <li class="menu-item">
-              <a href="http://ash.harvard.edu/" target="_blank" title="Ash Center for Democratic Governance and Innovation">Ash Center for Democratic Governance and Innovation</a>
-              </li>
-                        <li class="menu-item">
-              <a href="http://www.belfercenter.org/" target="_blank" title="Belfer Center for Science and International Affairs">Belfer Center for Science and International Affairs</a>
-              </li>
-                        <li class="menu-item">
-              <a href="http://carrcenter.hks.harvard.edu/" target="_self" title="Carr Center for Human Rights Policy">Carr Center for Human Rights Policy</a>
-              </li>
-                        <li class="menu-item">
-              <a href="/centers/cid" target="" title="Center for International Development" data-drupal-link-system-path="node/154611">Center for International Development</a>
-              </li>
-                        <li class="menu-item">
-              <a href="http://cpl.hks.harvard.edu" target="" title="Center for Public Leadership">Center for Public Leadership</a>
-              </li>
-                        <li class="menu-item">
-              <a href="http://iop.harvard.edu/" target="_blank" title="Institute of Politics">Institute of Politics</a>
-              </li>
-                        <li class="menu-item">
-              <a href="/centers/wiener" target="" title="Malcolm Wiener Center for Social Policy" data-drupal-link-system-path="node/151141">Malcolm Wiener Center for Social Policy</a>
-              </li>
-                        <li class="menu-item">
-              <a href="/centers/mrcbg" target="" data-drupal-link-system-path="node/151716">Mossavar-Rahmani Center for Business &amp; Government</a>
-              </li>
-                        <li class="menu-item">
-              <a href="https://shorensteincenter.org/" target="_blank" title="Shorenstein Center on Media, Politics and Public Policy">Shorenstein Center on Media, Politics and Public Policy</a>
-              </li>
-                        <li class="menu-item">
-              <a href="/centers/taubman" target="" title="Taubman Center for State and Local Government" data-drupal-link-system-path="node/155806">Taubman Center for State and Local Government</a>
-              </li>
-                        <li class="menu-item">
-              <a href="https://wappp.hks.harvard.edu/" target="">The Women and Public Policy Program</a>
-              </li>
-                        <li class="menu-item">
-              <a href="/centers-initiatives#initiatives" target="" data-drupal-link-system-path="node/150511">All Initiatives</a>
-              </li>
-        </ul>
-
-  
-              </li>
-                        <li class="menu-item menu-item--expanded is-dropdown-submenu-parent">
-              <span class="nolink hamburguer is-active" target="" data-drupal-link-system-path="&lt;front&gt;">More</span>
-                      
-     
-              <ul class="menu is-dropdown-submenu">
-       
-                        <li class="menu-item menu-item--collapsed">
-              <a href="/more/about-us" data-drupal-link-system-path="node/151061">About Us</a>
-              </li>
-                        <li class="menu-item">
-              <a href="/news-announcements" target="" title="News &amp; Announcements from HKS" data-drupal-link-system-path="news-announcements">News &amp; Announcements</a>
-              </li>
-                        <li class="menu-item menu-item--collapsed">
-              <a href="/events/week" data-drupal-link-system-path="events/week">Events</a>
-              </li>
-                        <li class="menu-item menu-item--collapsed">
-              <a href="/more/student-life" data-drupal-link-system-path="node/159321">Student Life</a>
-              </li>
-                        <li class="menu-item menu-item--collapsed">
-              <a href="/more/alumni" data-drupal-link-system-path="node/156001">Alumni</a>
-              </li>
-                        <li class="menu-item menu-item--collapsed">
-              <a href="/faculty-directory" target="" data-drupal-link-system-path="faculty-directory">Faculty</a>
-              </li>
-                        <li class="menu-item menu-item--collapsed">
-              <a href="/more/employers" data-drupal-link-system-path="node/151766">Employers</a>
-              </li>
-                        <li class="menu-item">
-              <a href="http://campaign.hks.harvard.edu" target="">Campaign for HKS</a>
-              </li>
-                        <li class="menu-item menu-item--collapsed">
-              <a href="/more/giving" data-drupal-link-system-path="node/213131">Giving</a>
-              </li>
-                        <li class="menu-item">
-              <a href="/contact-us" target="" data-drupal-link-system-path="node/151611">Contact Us</a>
-              </li>
-        </ul>
-
-  
-              </li>
-        </ul>
-
-  
-
-
-  </nav>
-<section class="views-exposed-form search--bar--expand block-exposedformacquia-searchpage-2" data-drupal-selector="views-exposed-form-acquia-search-page" id="block-exposedformacquia-searchpage-2">
-  
-  
-    
-
-  
-          <form action="/search" method="get" id="views-exposed-form-acquia-search-page" accept-charset="UTF-8">
-  <div class="js-form-item form-item js-form-type-textfield form-item-search js-form-item-search">
-      <label for="edit-search">Search</label>
-        <input data-drupal-selector="edit-search" type="text" id="edit-search" name="search" value="" size="30" maxlength="128" class="form-text" />
-
-        </div>
-<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions"><input class="success button radius js-form-submit form-submit" data-drupal-selector="edit-submit-acquia-search" type="submit" id="edit-submit-acquia-search" value="Search" />
-</div>
-
-
-</form>
-
-    
-    
-  </section>
-
-  </div>
-</div>
-    </div>
-    <!-- end off-canvas right menu -->
-    <!-- main menu large screen -->
-    <!-- standard alert -->
-        <div class="alert--wrapper">
-          <div>
-    <section class="views-element-container block-views-block-news-listing-block-2" id="block-views-block-news-listing-block-2">
-  
-  
-    
-
-  
-          <div><div class="js-view-dom-id-44720a82fb74d89cd0f475a1719bf8ac7d2501e7079c171dfbe7efeff4680ff7">
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-
-  
-  
-</div>
-</div>
-
-    
-    
-  </section>
-<section class="views-element-container block-views-block-news-listing-block-1" id="block-views-block-news-listing-block-1">
-  
-  
-    
-
-  
-          <div><div class="js-view-dom-id-7a884654307298e7b834fb32dbb5660a16174c5f6f11a8287d0419a0b6364cd3">
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-  
-
-  
-  
-
-  
-  
-</div>
-</div>
-
-    
-    
-  </section>
-
-  </div>
-
-    </div>
-            <!-- headers -->
-        <div class="header-banner__large" style="background-image:url('/sites/default/files/large-hero-images/Vanderwarker%20pdv_4434%20fixed%5B1%5D.jpg');">
-        <div class="media--container">
-     <div data-sticky-container>
-         <div id="widemenu" class="title-bar sticky" data-sticky data-top-anchor="stickystart:top" data-btm-anchor="endsticky:bottom" data-options="marginTop:0;" style="width:100%">
-          <div class="row">
-           <div>
-              <div>
-    <section id="block-mainsitelogo" class="columns large-3 xlarge-4 block-mainsitelogo">
-  
-  
-    
-
-  <div >
-          <a href="/">    <div class="field-wrapper field field--name-field-logo-svg field--type-file field--label-hidden field__items">
-                <div class="field__item">
-                 
-      <img src="/sites/default/files/logos/logo_0.svg" alt="Harvard Kennedy School" class="logo">
-            </div>
-          </div>
-</a>
-      </div>
-
-  </section>
-<nav role="navigation" aria-labelledby="block-harvardkennedy-main-menu-menu" id="block-harvardkennedy-main-menu" class="columns large-9 xlarge-8 block-harvardkennedy-main-menu">
-            
-  <h2 class="block-title visually-hidden" id="block-harvardkennedy-main-menu-menu">Main navigation</h2>
-  
-
-        
-
-  
-     
-              <!-- main menu -->
-        <ul class="dropdown menu horizontal main--menu" data-dropdown-menu="data-responsive-menu">
-       
-                        <li class="menu-item menu-item--expanded is-dropdown-submenu-parent">
-              <a href="/educational-programs" target="" data-drupal-link-system-path="node/104091">Educational Programs</a>
-                      
-     
-              <ul class="menu is-dropdown-submenu">
-       
-                        <li class="menu-item menu-item--collapsed">
-              <a href="/masters-programs" data-drupal-link-system-path="node/102565">Master&#039;s Programs</a>
-              </li>
-                        <li class="menu-item menu-item--collapsed">
-              <a href="/executive-education" data-drupal-link-system-path="node/102567">Executive Education</a>
-              </li>
-                        <li class="menu-item menu-item--collapsed">
-              <a href="/doctoral-programs" data-drupal-link-system-path="node/155736">Doctoral Programs</a>
-              </li>
-                        <li class="menu-item menu-item--collapsed">
-              <a href="/courses" data-drupal-link-system-path="courses">Courses</a>
-              </li>
-                        <li class="menu-item menu-item--collapsed">
-              <a href="/educational-programs/academic-calendars-policies" data-drupal-link-system-path="node/151596">Academic Calendars &amp; Policies</a>
-              </li>
-        </ul>
-
-  
-              </li>
-                        <li class="menu-item menu-item--expanded is-dropdown-submenu-parent">
-              <a href="/admissions-financial-aid" target="" data-drupal-link-system-path="node/150506">Admissions &amp; Aid</a>
-                      
-     
-              <ul class="menu is-dropdown-submenu">
-       
-                        <li class="menu-item menu-item--collapsed">
-              <a href="/admissions-aid/masters-program-admissions" target="" data-drupal-link-system-path="node/159656">Master&#039;s Program Admissions</a>
-              </li>
-                        <li class="menu-item">
-              <a href="https://www.hks.harvard.edu/educational-programs/executive-education/admissions-fees" target="">Executive Education Admissions</a>
-              </li>
-                        <li class="menu-item menu-item--collapsed">
-              <a href="/admissions-aid/doctoral-program-admissions" data-drupal-link-system-path="node/159716">Doctoral Program Admissions</a>
-              </li>
-                        <li class="menu-item menu-item--collapsed">
-              <a href="/admissions-aid/funding-your-education" data-drupal-link-system-path="node/159436">Funding Your Education</a>
-              </li>
-        </ul>
-
-  
-              </li>
-                        <li class="menu-item menu-item--expanded is-dropdown-submenu-parent">
-              <a href="/research-insights" data-drupal-link-system-path="node/104161">Research &amp; Insights</a>
-                      
-     
-              <ul class="menu is-dropdown-submenu">
-       
-                        <li class="menu-item menu-item--collapsed">
-              <a href="/research-insights/research-publications" target="" title="Publications at HKS" data-drupal-link-system-path="node/217966">Publications</a>
-              </li>
-                        <li class="menu-item menu-item--collapsed">
-              <a href="/research-insights/policy-topics" data-drupal-link-system-path="node/151091">Policy Topics</a>
-              </li>
-                        <li class="menu-item menu-item--collapsed">
-              <a href="/research-insights/library-knowledge-services" data-drupal-link-system-path="node/151071">Library &amp; Knowledge Services</a>
-              </li>
-        </ul>
-
-  
-              </li>
-                        <li class="menu-item menu-item--expanded is-dropdown-submenu-parent">
-              <a href="/centers-initiatives" target="" data-drupal-link-system-path="node/150511">Centers &amp; Initiatives</a>
-                      
-     
-              <ul class="menu is-dropdown-submenu">
-       
-                        <li class="menu-item">
-              <a href="http://ash.harvard.edu/" target="_blank" title="Ash Center for Democratic Governance and Innovation">Ash Center for Democratic Governance and Innovation</a>
-              </li>
-                        <li class="menu-item">
-              <a href="http://www.belfercenter.org/" target="_blank" title="Belfer Center for Science and International Affairs">Belfer Center for Science and International Affairs</a>
-              </li>
-                        <li class="menu-item">
-              <a href="http://carrcenter.hks.harvard.edu/" target="_self" title="Carr Center for Human Rights Policy">Carr Center for Human Rights Policy</a>
-              </li>
-                        <li class="menu-item">
-              <a href="/centers/cid" target="" title="Center for International Development" data-drupal-link-system-path="node/154611">Center for International Development</a>
-              </li>
-                        <li class="menu-item">
-              <a href="http://cpl.hks.harvard.edu" target="" title="Center for Public Leadership">Center for Public Leadership</a>
-              </li>
-                        <li class="menu-item">
-              <a href="http://iop.harvard.edu/" target="_blank" title="Institute of Politics">Institute of Politics</a>
-              </li>
-                        <li class="menu-item">
-              <a href="/centers/wiener" target="" title="Malcolm Wiener Center for Social Policy" data-drupal-link-system-path="node/151141">Malcolm Wiener Center for Social Policy</a>
-              </li>
-                        <li class="menu-item">
-              <a href="/centers/mrcbg" target="" data-drupal-link-system-path="node/151716">Mossavar-Rahmani Center for Business &amp; Government</a>
-              </li>
-                        <li class="menu-item">
-              <a href="https://shorensteincenter.org/" target="_blank" title="Shorenstein Center on Media, Politics and Public Policy">Shorenstein Center on Media, Politics and Public Policy</a>
-              </li>
-                        <li class="menu-item">
-              <a href="/centers/taubman" target="" title="Taubman Center for State and Local Government" data-drupal-link-system-path="node/155806">Taubman Center for State and Local Government</a>
-              </li>
-                        <li class="menu-item">
-              <a href="https://wappp.hks.harvard.edu/" target="">The Women and Public Policy Program</a>
-              </li>
-                        <li class="menu-item">
-              <a href="/centers-initiatives#initiatives" target="" data-drupal-link-system-path="node/150511">All Initiatives</a>
-              </li>
-        </ul>
-
-  
-              </li>
-                        <li class="menu-item menu-item--expanded is-dropdown-submenu-parent">
-              <span class="nolink hamburguer is-active" target="" data-drupal-link-system-path="&lt;front&gt;">More</span>
-                      
-     
-              <ul class="menu is-dropdown-submenu">
-       
-                        <li class="menu-item menu-item--collapsed">
-              <a href="/more/about-us" data-drupal-link-system-path="node/151061">About Us</a>
-              </li>
-                        <li class="menu-item">
-              <a href="/news-announcements" target="" title="News &amp; Announcements from HKS" data-drupal-link-system-path="news-announcements">News &amp; Announcements</a>
-              </li>
-                        <li class="menu-item menu-item--collapsed">
-              <a href="/events/week" data-drupal-link-system-path="events/week">Events</a>
-              </li>
-                        <li class="menu-item menu-item--collapsed">
-              <a href="/more/student-life" data-drupal-link-system-path="node/159321">Student Life</a>
-              </li>
-                        <li class="menu-item menu-item--collapsed">
-              <a href="/more/alumni" data-drupal-link-system-path="node/156001">Alumni</a>
-              </li>
-                        <li class="menu-item menu-item--collapsed">
-              <a href="/faculty-directory" target="" data-drupal-link-system-path="faculty-directory">Faculty</a>
-              </li>
-                        <li class="menu-item menu-item--collapsed">
-              <a href="/more/employers" data-drupal-link-system-path="node/151766">Employers</a>
-              </li>
-                        <li class="menu-item">
-              <a href="http://campaign.hks.harvard.edu" target="">Campaign for HKS</a>
-              </li>
-                        <li class="menu-item menu-item--collapsed">
-              <a href="/more/giving" data-drupal-link-system-path="node/213131">Giving</a>
-              </li>
-                        <li class="menu-item">
-              <a href="/contact-us" target="" data-drupal-link-system-path="node/151611">Contact Us</a>
-              </li>
-        </ul>
-
-  
-              </li>
-        </ul>
-
-  
-
-
-  </nav>
-<section class="views-exposed-form search--bar--expand block-exposedformacquia-searchpage-2" data-drupal-selector="views-exposed-form-acquia-search-page" id="block-exposedformacquia-searchpage-2">
-  
-  
-    
-
-  
-          <form action="/search" method="get" id="views-exposed-form-acquia-search-page" accept-charset="UTF-8">
-  <div class="js-form-item form-item js-form-type-textfield form-item-search js-form-item-search">
-      <label for="edit-search">Search</label>
-        <input data-drupal-selector="edit-search" type="text" id="edit-search" name="search" value="" size="30" maxlength="128" class="form-text" />
-
-        </div>
-<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions"><input class="success button radius js-form-submit form-submit" data-drupal-selector="edit-submit-acquia-search" type="submit" id="edit-submit-acquia-search" value="Search" />
-</div>
-
-
-</form>
-
-    
-    
-  </section>
-
-  </div>
-
-          </div>
-         </div>
-        </div>
-      </div><!-- /.sticky-container -->
-      <div class="row">
-        <div class="border--lines__large"></div>
-        <div class="header--content header--content__alt">
-          <div class="columns large-8">
-            <h1 class="page-title">Harvard Kennedy School</h1>
-            <h1>builds connections</h1>
-                          <div class="cta_button">
-                <a class="button primary" href="/announcements/expanded-campus-offers-more-space-students-and-allows-greater-collaboration-and">Read more</a>
-              </div>
-                       </div>
-           <div class="columns large-4">
-             <h5>The new expanded campus offers more space for students and allows for greater collaboration and active learning.</h5>
-                              <a href="/">ASK WHAT YOU CAN DO</a>
-                        </div>
-           <div class="arrow__bottom"><a href="#"><span class="icon-icons_arrow-down"></span></a></div>
-        </div>
-      </div>
-   </div>
-
- </div><!-- end header banner -->
-    <!-- end headers -->
-    <div class="off-canvas-content" data-off-canvas-content>
-
-      <div class="row">
-                              </div>
-
-      
-      
-
-        <main id="main" role="main">
-                      <div class="region-highlighted panel callout"></div>                    <a id="main-content"></a>
-          <section>
-            <div id="stickystart">  <div>
-    <section id="block-harvardkennedy-content" class="block-harvardkennedy-content">
-  
-  
-    
-
-  
-          <article id="node-150486"  data-history-node-id="150486" role="article" about="/home-page">
-
-  
-    
-
-  
-    <div class="view-mode-full">
-        <div class="item--slider field-wrapper field field--name-field-related-topics field--type-entity-reference field--label-hidden field__items">
-                <div class="field__item">
-        <div class="columns">
-  <a href="/research-insights/policy-topics/democracy/making-democracy-work" rel="bookmark">
-    <article id="node-231591"  data-history-node-id="231591" role="article" about="/research-insights/policy-topics/democracy/making-democracy-work">
-          <div class="featured--bgimage" style="background-image:url('/sites/default/files/2017-11/Making%20democracy%20work%20banner%20final%20R1.png');">
-            <div class="footer">
-          
-                                    <h2 class="featured-title">
-                <span class="field-wrapper">Making Democracy Work</span>
-
-              </h2>
-              <p class="featured-subtitle">            Diagnosing the challenge and prescribing ways to address it.
-      </p>
-                                
-          
-        </div>
-      </div>
-    </article>
-  </a>
-</div>
-
-            </div>
-                  <div class="field__item">
-        <div class="columns">
-  <a href="/research-insights/policy-topics/business-regulation" rel="bookmark">
-    <article id="node-150476"  data-history-node-id="150476" role="article" about="/research-insights/policy-topics/business-regulation">
-          <div class="featured--bgimage" style="background-image:url('/sites/default/files/2017-05/1%20banner%20TOPIC%20Buiness%20and%20Regulation.jpg');">
-            <div class="footer">
-          
-                                    <h2 class="featured-title">
-                <span class="field-wrapper">Business &amp; Regulation</span>
-
-              </h2>
-              <p class="featured-subtitle">            Jason Furman says GOP tax plan makes wild claims.
-      </p>
-                                
-          
-        </div>
-      </div>
-    </article>
-  </a>
-</div>
-
-            </div>
-                  <div class="field__item">
-        <div class="columns">
-  <a href="/research-insights/policy-topics/advocacy-social-movements" rel="bookmark">
-    <article id="node-214136"  data-history-node-id="214136" role="article" about="/research-insights/policy-topics/advocacy-social-movements">
-          <div class="featured--bgimage" style="background-image:url('/sites/default/files/Topic%20Pages/Advocacy%20Social%20Movements/1_advocacy_header_iStock458065927.jpg');">
-            <div class="footer">
-          
-                                    <h2 class="featured-title">
-                <span class="field-wrapper">Advocacy &amp; Social Movements</span>
-
-              </h2>
-              <p class="featured-subtitle">            Tim McCarthy on the fight against modern slavery.
-      </p>
-                                
-          
-        </div>
-      </div>
-    </article>
-  </a>
-</div>
-
-            </div>
-                  <div class="field__item">
-        <div class="columns">
-  <a href="/research-insights/policy-topics/gender-race-identity" rel="bookmark">
-    <article id="node-150471"  data-history-node-id="150471" role="article" about="/research-insights/policy-topics/gender-race-identity">
-          <div class="featured--bgimage" style="background-image:url('/sites/default/files/2017-11/cohen_war_gender_110917_1024.jpg');">
-            <div class="footer">
-          
-                                    <h2 class="featured-title">
-                <span class="field-wrapper">Gender, Race &amp; Identity</span>
-
-              </h2>
-              <p class="featured-subtitle">            Asking better questions about sex and violence.
-      </p>
-                                
-          
-        </div>
-      </div>
-    </article>
-  </a>
-</div>
-
-            </div>
-                  <div class="field__item">
-        <div class="columns">
-  <a href="/research-insights/policy-topics/poverty-inequality-opportunity" rel="bookmark">
-    <article id="node-214171"  data-history-node-id="214171" role="article" about="/research-insights/policy-topics/poverty-inequality-opportunity">
-          <div class="featured--bgimage" style="background-image:url('/sites/default/files/Topic%20Pages/Poverty%2C%20Inequality/1_poverty_hands_istock614211908.jpg');">
-            <div class="footer">
-          
-                                    <h2 class="featured-title">
-                <span class="field-wrapper">Poverty, Inequality &amp; Opportunity</span>
-
-              </h2>
-              <p class="featured-subtitle">            HKS celebrates Mary Jo Bane&#039;s career fighting inequality.
-      </p>
-                                
-          
-        </div>
-      </div>
-    </article>
-  </a>
-</div>
-
-            </div>
-                  <div class="field__item">
-        <div class="columns">
-  <a href="/research-insights/policy-topics/science-technology-data" rel="bookmark">
-    <article id="node-214186"  data-history-node-id="214186" role="article" about="/research-insights/policy-topics/science-technology-data">
-          <div class="featured--bgimage" style="background-image:url('/sites/default/files/2017-08/1%20Lead_Science-Technology-Data2.jpg');">
-            <div class="footer">
-          
-                                    <h2 class="featured-title">
-                <span class="field-wrapper">Science, Technology &amp; Data</span>
-
-              </h2>
-              <p class="featured-subtitle">            How public policy schools can lead in the digital age.
-      </p>
-                                
-          
-        </div>
-      </div>
-    </article>
-  </a>
-</div>
-
-            </div>
-          </div>
-    <div class="more-link field-wrapper field field--name-field-view-more-policy-topics- field--type-link field--label-hidden field__items">
-                <div class="field__item">
-        <a href="/research-insights/policy-topics">View More Policy Topics</a>
-            </div>
-          </div>
-    <h5 class="row field-wrapper field field--name-field-ask-now-section-title field--type-string field--label-hidden field__items">
-                <div class="columns small-12 strong border field__item">
-        Discover Programs that fit your career goals
-            </div>
-          </h5>
-    <div class="row row__center navigation--card--wrapper field-wrapper field field--name-field-ask-now-content-references field--type-entity-reference field--label-hidden field__items">
-                <div class="columns medium-4 navigation--card__alt field__item">
-        <article id="node-102565"  data-history-node-id="102565" role="article" about="/masters-programs">
-  
-      <h2 class="node-title">
-              <a href="/masters-programs" rel="bookmark"><span class="field-wrapper">Master&#039;s Programs</span>
-</a>
-          </h2>
-    
-
-  
-    <div class="view-mode-education_card">
-        <div class="body field field--name-body field--type-text-with-summary field--label-hidden field__items">
-                <div class="field__item">
-        Rigorous one- and two-year programs lead to master's degrees in public policy or public administration.
-            </div>
-          </div>
-
-    <div class="button__bottom">
-              <a href="/masters-programs" class="button primary"><span class="field-wrapper">Master&#039;s Programs</span>
-</a>
-          </div>
-  </div>
-
-  
-  
-  
-</article>
-
-            </div>
-                  <div class="columns medium-4 navigation--card__alt field__item">
-        <article id="node-102567"  data-history-node-id="102567" role="article" about="/executive-education">
-  
-      <h2 class="node-title">
-              <a href="/executive-education" rel="bookmark"><span class="field-wrapper">Executive Education</span>
-</a>
-          </h2>
-    
-
-  
-    <div class="view-mode-education_card">
-        <div class="body field field--name-body field--type-text-with-summary field--label-hidden field__items">
-                <div class="field__item">
-        Open enrollment and custom programs help senior leaders expand their global perspectives and leadership strategies in their role.
-            </div>
-          </div>
-
-    <div class="button__bottom">
-              <a href="/executive-education" class="button primary"><span class="field-wrapper">Executive Education</span>
-</a>
-          </div>
-  </div>
-
-  
-  
-  
-</article>
-
-            </div>
-                  <div class="columns medium-4 navigation--card__alt field__item">
-        <article id="node-155736"  data-history-node-id="155736" role="article" about="/doctoral-programs">
-  
-      <h2 class="node-title">
-              <a href="/doctoral-programs" rel="bookmark"><span class="field-wrapper">Doctoral Programs</span>
-</a>
-          </h2>
-    
-
-  
-    <div class="view-mode-education_card">
-        <div class="body field field--name-body field--type-text-with-summary field--label-hidden field__items">
-                <div class="field__item">
-        Full-time programs are available for candidates pursuing PhDs in public, social, and health policy, and political economy and government.
-            </div>
-          </div>
-
-    <div class="button__bottom">
-              <a href="/doctoral-programs" class="button primary"><span class="field-wrapper">Doctoral Programs</span>
-</a>
-          </div>
-  </div>
-
-  
-  
-  
-</article>
-
-            </div>
-          </div>
-
-<div  class="row">
-      
-<div  class="columns small-12 medium-8">
-          <h5 class="field-wrapper field field--name-field-ask-when-title field--type-string field--label-hidden field__items">
-                <div class="border strong field__item">
-        Events
-            </div>
-          </h5>
-
-<div  class="row">
-      
-<div  class="columns small-12 medium-6">
-                  <article id="node-232211" class="featured">
-      <div class="view-mode-featured">
-    <a href="/events/rwandan-women-rising-lessons-global-stability" rel="bookmark">    <div class="field-wrapper field field--name-field-teaser-image field--type-image field--label-hidden field__items">
-                <div class="field__item">
-          <img src="/sites/default/files/2017-11/Rwandan_women_in_a_traditional_fashion.jpg" width="640" height="360" alt="Rwandan Women" typeof="foaf:Image" />
-
-
-            </div>
-          </div>
-</a>
-  </div>
-  
-      <h2 class="node-title">
-      <a href="/events/rwandan-women-rising-lessons-global-stability" rel="bookmark"><span class="field-wrapper">Rwandan Women Rising: Lessons for Global Stability</span>
-</a>
-    </h2>
-    
-  
-  
-  
-</article>
-
-      
-  </div>
-<div  class="columns small-12 medium-6">
-          <div class="field-wrapper field field--name-field-latest-events field--type-viewsreference field--label-hidden field__items">
-                <div class="field__item">
-        <div class="views-element-container"><div class="js-view-dom-id-aebefd058f9084ff263cac8cb855eb6c22655d5ba25a03a92b57bb636dc762d0">
-  
-  
-  
-
-  
-  
-  
-
-      <div class="events--listing">
-    <div class="views-field views-field-field-event-date"><div class="field-content">Monday, December 4, 2017 | 11:30AM</div></div><div class="views-field views-field-title"><span class="field-content"><a href="/events/fall-2017-freecycle-monday-12417" hreflang="en">Fall 2017 FreeCycle Monday 12/4/17!</a></span></div>
-  </div>
-    <div class="events--listing">
-    <div class="views-field views-field-field-event-date"><div class="field-content">Monday, December 4, 2017 | 12:00PM</div></div><div class="views-field views-field-title"><span class="field-content"><a href="/events/mitigation-versus-solar-geoengineering-role-risk-aversion-and-time-preferences" hreflang="en">Mitigation Versus Solar Geoengineering: Role of Risk Aversion and Time Preferences</a></span></div>
-  </div>
-    <div class="events--listing">
-    <div class="views-field views-field-field-event-date"><div class="field-content">Monday, December 4, 2017 | 12:00PM</div></div><div class="views-field views-field-title"><span class="field-content"><a href="/events/inequality-seminar-anthony-chen-forgotten-origins-race-conscious-affirmative-action-college" hreflang="en">Inequality Seminar: Anthony Chen - The Forgotten Origins of Race-Conscious Affirmative Action in College Admissions</a></span></div>
-  </div>
-    <div class="events--listing">
-    <div class="views-field views-field-field-event-date"><div class="field-content">Monday, December 4, 2017 | 12:15PM</div></div><div class="views-field views-field-title"><span class="field-content"><a href="/events/french-view-gulf-crisis-and-perspectives-middle-east-ambassador-bertrand-besancenot" hreflang="en">&quot;The French View on the Gulf Crisis and Perspectives in the Middle East,&quot;  with Ambassador Bertrand Besancenot</a></span></div>
-  </div>
-
-  
-  
-
-  
-  <div class="more-link"><a href="/events/week">View All</a></div>
-
-
-  
-  
-</div>
-</div>
-
-            </div>
-          </div>
-
-  </div>
-  </div>
-  </div>
-<div  class="columns small-12 medium-4">
-          <h5 class="field-wrapper field field--name-field-ask-who-title field--type-string field--label-hidden field__items">
-                <div class="strong border field__item">
-        Featured News
-            </div>
-          </h5>
-    <div class="field-wrapper field field--name-field-content-reference field--type-entity-reference field--label-hidden field__items">
-            <a href="/research-insights/policy-topics/cities-communities/new-orleans-mayor-elect-latoya-cantrell-played" rel="bookmark">
-	<article id="node-231926"  data-history-node-id="231926" role="article" about="/research-insights/policy-topics/cities-communities/new-orleans-mayor-elect-latoya-cantrell-played" class="callout__alt">
-	        <div class="callout--bgimage" style="background-image:url('/sites/default/files/medium-hero-images/Homepage_Broadmoor.jpg');"></div>
-     	    <h6 class="h6__alt"></h6>
-	    <h3 class="node-title">
-	      <span class="field-wrapper">New Orleans mayor-elect LaToya Cantrell played leading role in Broadmoor Project</span>
-
-	    </h3>
-	</article>
-</a>
-
-
-
-          </div>
-
-  </div>
-  </div>
-  </div>
-
-  
-  
-  
-</article>
-
-    
-    
-  </section>
-
-  </div>
-</div>
-          </section>
-        </main>
-                             <div class="footer--wrapper">
-        <footer class="row">
-                      <div id="footer-first" class="small-12 large-5 columns">
-              <a href="/" title="Harvard Kennedy School"><img src="/themes/harvardkennedy/images/logo-black.svg" alt="Harvard Kennedy School" class="logo__footer"></a>
-                <div>
-    <section id="block-footercontent" class="block-footercontent">
-  
-  
-    
-
-  
-              <div class="body field field--name-body field--type-text-with-summary field--label-hidden field__items">
-                <div class="field__item">
-        <p>79 John F. Kennedy Street<br />
-Cambridge, MA 02138<br />
-617-495-1100</p>
-
-            </div>
-          </div>
-
-    
-    
-  </section>
-
-  </div>
-
-            </div>
-                                <div id="footer-middle" class="small-12 large-4 columns">
-                <div>
-    <nav role="navigation" aria-labelledby="block-harvardkennedy-footer-menu" id="block-harvardkennedy-footer" class="block-harvardkennedy-footer">
-            
-  <h2 class="block-title visually-hidden" id="block-harvardkennedy-footer-menu">Footer menu</h2>
-  
-
-        
-              <div class="split__horizontal">
-        <ul class="footer">
-              <li>
-        <a href="/masters-programs" target="" data-drupal-link-system-path="node/102565">Master&#039;s Programs</a>
-              </li>
-          <li>
-        <a href="/executive-education" data-drupal-link-system-path="node/102567">Executive Education</a>
-              </li>
-          <li>
-        <a href="/doctoral-programs" target="" data-drupal-link-system-path="node/155736">Doctoral Programs</a>
-              </li>
-          <li>
-        <a href="/admissions-aid/masters-program-admissions/admissions-events" target="" data-drupal-link-system-path="node/159441">Admissions Events</a>
-              </li>
-          <li>
-        <a href="https://community.alumni.harvard.edu/give/16039598" target="_blank">Give Now</a>
-              </li>
-          <li>
-        <a href="/alumni" target="">Alumni</a>
-              </li>
-          <li>
-        <a href="http://www.harvard.edu/staff" target="_blank">Harvard Directory</a>
-              </li>
-          <li>
-        <a href="/contact-us" target="" title="Contact Us" data-drupal-link-system-path="node/151611">Contact Us</a>
-              </li>
-        </ul>
-    </div>
-  
-
-
-  </nav>
-
-  </div>
-
-            </div>
-                                <div id="footer-last" class="small-12 large-3 columns">
-                <div>
-    <section id="block-socialicons" class="block-socialicons">
-  
-  
-    
-
-  
-              <div class="body field field--name-body field--type-text-with-summary field--label-hidden field__items">
-                <div class="field__item">
-        <ul class="menu social--icons"><li class="facebook"><a href="https://www.facebook.com/harvardkennedyschool/" target="_blank">Facebook</a></li>
-	<li class="twitter"><a href="https://twitter.com/kennedy_school" target="_blank">Twitter</a></li>
-	<li class="linkedin"><a href="https://www.linkedin.com/school/441164" target="_blank">LinkedIn</a></li>
-	<li class="youtube"><a href="https://www.youtube.com/user/HarvardKennedySchool" target="_blank">Youtube</a></li>
-</ul><ul class="footer"><li><a href="/more/about-us/policies/privacy-statement">Privacy</a></li>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+
+		<title>Harvard Law School</title>
+
+		<meta charset="utf-8">
+	<meta name="author" content="Harvard Law School">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta http-equiv="cleartype" content="on">
+	<link rel="pingback" href="http://hls.harvard.edu/xmlrpc.php">
+
+		<link rel="shortcut icon" href="http://hls.harvard.edu/content/themes/tribe-hls/images/favicon.ico">
+
+	<link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7734954/688768/css/fonts.css" />	<noscript><p class="noscript"><span class="badge">Your browser does not support JavaScript</span></p></noscript>
+	<link rel='dns-prefetch' href='//platform.twitter.com' />
+<link rel='dns-prefetch' href='//maxcdn.bootstrapcdn.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Harvard Law School &raquo; HLS Home Page Comments Feed" href="http://hls.harvard.edu/hls-home-page/feed/" />
+<link rel='stylesheet' id='tribe_events-widget-calendar-pro-style-css'  href='http://hls.harvard.edu/content/plugins/events-calendar-pro/src/resources/css/widget-calendar-full.css?ver=4.4.18' type='text/css' media='all' />
+<link rel='stylesheet' id='tribe_events--widget-calendar-pro-override-style-css'  href='http://hls.harvard.edu/content/plugins/events-calendar-pro/src/resources/css/widget-calendar-full.css?ver=4.4.18' type='text/css' media='all' />
+<link rel='stylesheet' id='tribe_events-widget-calendar-pro-override-style-css'  href='http://hls.harvard.edu/content/plugins/events-calendar-pro/src/resources/css/widget-calendar-full.css?ver=4.4.18' type='text/css' media='all' />
+<link rel='stylesheet' id='sb_instagram_styles-css'  href='http://hls.harvard.edu/content/plugins/instagram-feed/css/sb-instagram.min.css?ver=1.5' type='text/css' media='all' />
+<link rel='stylesheet' id='sb-font-awesome-css'  href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='tribe-events-calendar-pro-style-css'  href='http://hls.harvard.edu/content/plugins/events-calendar-pro/src/resources/css/tribe-events-pro-full.min.css?ver=4.4.18' type='text/css' media='all' />
+<link rel='stylesheet' id='tribe-events-calendar-pro-mobile-style-css'  href='http://hls.harvard.edu/content/plugins/events-calendar-pro/src/resources/css/tribe-events-pro-full-mobile.min.css?ver=4.4.18' type='text/css' media='only screen and (max-width: 768px)' />
+<link rel='stylesheet' id='tribe-hls-css-css'  href='http://hls.harvard.edu/content/themes/tribe-hls/css/master.min.css?ver=cb0493c73d0ce3170a28b2af53d5630b433b6477' type='text/css' media='all' />
+<script type='text/javascript' src='http://hls.harvard.edu/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='http://hls.harvard.edu/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var TribeMiniCalendar = {"ajaxurl":"http:\/\/hls.harvard.edu\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://hls.harvard.edu/content/plugins/events-calendar-pro/src/resources/js/widget-calendar.js?ver=4.4.18'></script>
+<script type='text/javascript' src='http://hls.harvard.edu/content/themes/tribe-hls/js/modernizr.js?ver=cb0493c73d0ce3170a28b2af53d5630b433b6477'></script>
+<script type='text/javascript' src='http://hls.harvard.edu/content/themes/tribe-hls/js/modernizr.js?ver=cb0493c73d0ce3170a28b2af53d5630b433b6477'></script>
+<link rel='https://api.w.org/' href='http://hls.harvard.edu/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://hls.harvard.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://hls.harvard.edu/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.8.3" />
+<link rel="canonical" href="http://hls.harvard.edu/" />
+<link rel='shortlink' href='http://hls.harvard.edu/' />
+<link rel="alternate" type="application/json+oembed" href="http://hls.harvard.edu/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fhls.harvard.edu%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://hls.harvard.edu/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fhls.harvard.edu%2F&#038;format=xml" />
+<!-- Stream WordPress user activity plugin v3.2.2 -->
+<meta name="tec-api-version" content="v1"><meta name="tec-api-origin" content="http://hls.harvard.edu"><link rel="https://theeventscalendar.com/" href="http://hls.harvard.edu/wp-json/tribe/events/v1/" />
+<meta property="og:title" content="Harvard Law School" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://hls.harvard.edu/" />
+<meta property="og:image" content="http://hls.harvard.edu/content/themes/tribe-hls/images/fb_default.png" />
+<meta property="og:site_name" content="Harvard Law School" />
+					<meta property="fb:admins" content="100003626885213" />
+					<meta property="fb:admins" content="597992915" />
+					<meta property="fb:admins" content="516473677" />
+					<meta property="fb:admins" content="1004310530" />
+					<meta property="fb:admins" content="100003375652635" />
+	<meta property="og:description" name="description"  content="Harvard Law School is one of the preeminent centers of legal education in the world. Led by a diverse and dedicated group of faculty and legal scholars, HLS provides unmatched opportunities to study law and related disciplines in a rigorous and collaborative environment." />
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Harvard Law School" />
+<meta name="twitter:url" content="http://hls.harvard.edu/" />
+<meta name="twitter:image" content="http://hls.harvard.edu/content/themes/tribe-hls/images/fb_default.png" />
+<meta name="twitter:description" content="Harvard Law School is one of the preeminent centers of legal education in the world. Led by a diverse and dedicated group of faculty and legal scholars, HLS provides unmatched opportunities to study law and related disciplines in a rigorous and collaborative environment." />
+<meta name="twitter:site" content="@Harvard_Law" />
+
+		
+</head>
+
+
+<body class="home page-template page-template-page-templates page-template-home-page page-template-page-templateshome-page-php page page-id-57602 tribe-no-js tribe-theme-tribe-hls no-banner has-hero has-large-hero-image page-hls-home-page" itemscope itemtype="http://schema.org/WebPage">
+			<script>
+			window.dataLayer = window.dataLayer || [];
+		</script>
+			<!-- Google Tag Manager -->
+	<!-- HLS Container - Place this just after the open body tag "<body>" - Trionia 6/23/2014-->
+	<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NDW5Q2" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NDW5Q2');</script>
+	<!-- End Google Tag Manager -->
+	
+	<div id="site-wrap" class="site-wrap">
+		<header role="banner" itemscope itemtype="http://schema.org/WPHeader">
+			<nav class="navbar hidden-small hidden-very-small">
+				<div class="row">
+					<span class="resources-for"><i class="icon icon-users"></i> Resources For:</span>
+					<ul class="navbar-nav audience-nav">
+						<li id="menu-item-57614" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-57614"><a href="http://hls.harvard.edu/students/">Students</a></li>
+<li id="menu-item-57615" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-57615"><a href="http://hls.harvard.edu/alumni/">Alumni</a></li>
+<li id="menu-item-57617" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-57617"><a href="http://hls.harvard.edu/faculty/">Faculty</a></li>
+<li id="menu-item-57618" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-57618"><a href="http://hls.harvard.edu/staff/">Staff</a></li>
+					</ul>
+					<div class="pull-right">
+						<ul class="navbar-nav icon-nav top-right">
+							<li class="events-menu"><a href="http://hls.harvard.edu/calendar/"><i class="icon icon-calendar"></i> Events</a></li>
+							<li class="about-menu"><a href="http://hls.harvard.edu/about/"><i class="icon icon-shield-outline"></i> About HLS</a></li>
+
+						</ul>
+						
+		<form class="navbar-form pull-right visible-large visible-very-large" action="http://hls.harvard.edu">
+			<fieldset>
+				<input type="search" class="" placeholder="Search" type="text" name="s">
+				<button type="submit" value="Search" alt="Search" class=""><i class="icon icon-search"></i></button>
+			</fieldset>
+		</form>
+
+		
+					</div>
+				</div>
+							</nav>
+			<div class="site-header-inner">
+				<div class="nav-bg"></div>
+				<div class="row m-nav-bar">
+
+
+					<div class="g-column small-6 large-3">
+						<div id="branding" class="site-name" itemscope itemprop="author headline" itemtype="http://schema.org/EducationalOrganization">
+							<a class="logo" href="http://hls.harvard.edu" rel="home" itemprop="url"></a>
+						</div>
+					</div>
+
+					<div class="g-column small-6 visible-medium">
+						
+		<form class="header-search-form" action="http://hls.harvard.edu">
+			<fieldset>
+				<input type="search" class="form-element" placeholder="Search" type="text" name="s">
+				<button type="submit" value="Search" alt="Search" class="visuallyhidden"><i class="icon icon-search"></i></button>
+			</fieldset>
+		</form>
+
+							</div>
+
+					<div class="g-column small-12 large-9 hidden-small hidden-very-small">
+						<div class="main-nav-wrap">
+	<nav class="main-nav" role="navigation" aria-label="Main Navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+		<h3 class="visuallyhidden">Menu</h3>
+		<ul class="pull-right">
+			<li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children main-nav-item"><a href="http://hls.harvard.edu/admissions/" id="menu-57607">Admissions</a><div class="topic-subnav">
+
+						<div class="row">
+
+							<div class="topic-subnav-wrap">
+
+								<div class="g-column small-12 medium-4">
+									<div class="subnav-quote">
+										<h1><a href="http://hls.harvard.edu/admissions/">We search the world for you.<span class="overview-nav-item">Admissions Overview <i class="icon icon-arrow-long-right"></i></span>
+</a></h1>
+									</div>
+								</div>
+								<div class="vertical-divider hidden-small"></div>
+
+								<div class="g-column subnav-col small-12 medium-8">
+<ul  class="sub-menu">
+	<li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="http://hls.harvard.edu/dept/jdadmissions/" id="menu-57610"><i class="icon icon-angle-right"></i> J.D. Admissions</a></li>
+	<li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="http://hls.harvard.edu/dept/graduate-program/" id="menu-57612"><i class="icon icon-angle-right"></i> Graduate Admissions</a></li>
+	<li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="http://hls.harvard.edu/dept/academics/degree-programs/special-programs/" id="menu-57613"><i class="icon icon-angle-right"></i> Special Programs</a></li>
 </ul>
-            </div>
-          </div>
 
-    
-    
-  </section>
 
-  </div>
+								</div>
 
-            </div>
-                  </footer>
-       </div>
-            <div class="bottom-bar panel" id="endsticky">
-        <div class="row">
-          <div class="large-12 columns copyright">
-          Copyright &copy; 2017 The President and Fellows of <a href="http://www.harvard.edu/" target="_blank">Harvard College</a>.
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+							</div>
+
+						</div>
+
+					</div>
+			</li>
+<li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children main-nav-item"><a href="http://hls.harvard.edu/academics-clinical/" id="menu-57616">Academics &#038; Clinical</a><div class="topic-subnav">
+
+						<div class="row">
+
+							<div class="topic-subnav-wrap">
+
+								<div class="g-column small-12 medium-4">
+									<div class="subnav-quote">
+										<h1><a href="http://hls.harvard.edu/academics-clinical/">Where theory meets practice: curricular depth and experiential learning.<span class="overview-nav-item">Academics & Clinical Overview <i class="icon icon-arrow-long-right"></i></span>
+</a></h1>
+									</div>
+								</div>
+								<div class="vertical-divider hidden-small"></div>
+
+								<div class="g-column subnav-col small-12 medium-8">
+<ul  class="sub-menu">
+	<li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="http://hls.harvard.edu/dept/academics/academic-calendar/" id="menu-57619"><i class="icon icon-angle-right"></i> Academic Calendar</a></li>
+	<li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="http://hls.harvard.edu/dept/academics/degree-programs/" id="menu-57620"><i class="icon icon-angle-right"></i> Degree Programs</a></li>
+	<li class=" menu-item menu-item-type-custom menu-item-object-custom"><a href="http://hls.harvard.edu/academics/curriculum/catalog/index.html" id="menu-57623"><i class="icon icon-angle-right"></i> Course Catalog</a></li>
+	<li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="http://hls.harvard.edu/dept/academics/" id="menu-60171"><i class="icon icon-angle-right"></i> Courses and Academic Programs</a></li>
+	<li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="http://hls.harvard.edu/dept/academics/handbook/" id="menu-60172"><i class="icon icon-angle-right"></i> Handbook of Academic Policies</a></li>
+	<li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="http://hls.harvard.edu/dept/clinical/" id="menu-57624"><i class="icon icon-angle-right"></i> Clinical and Pro Bono Programs</a></li>
+	<li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="http://hls.harvard.edu/dept/ils/" id="menu-58145"><i class="icon icon-angle-right"></i> International Legal Studies</a></li>
+	<li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="http://hls.harvard.edu/dept/registrar/" id="menu-57625"><i class="icon icon-angle-right"></i> Office of the Registrar</a></li>
+	<li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="http://hls.harvard.edu/dept/academics/continuing-and-executive-education/" id="menu-70203"><i class="icon icon-angle-right"></i> Continuing and Executive Education</a></li>
+</ul>
+
+
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+			</li>
+<li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children main-nav-item"><a href="http://hls.harvard.edu/faculty-research/" id="menu-57628">Faculty &#038; Research</a><div class="topic-subnav">
+
+						<div class="row">
+
+							<div class="topic-subnav-wrap">
+
+								<div class="g-column small-12 medium-4">
+									<div class="subnav-quote">
+										<h1><a href="http://hls.harvard.edu/faculty-research/">Dedicated to excellence in teaching, scholarship, and interdisciplinary exploration.<span class="overview-nav-item">Faculty & Research Overview <i class="icon icon-arrow-long-right"></i></span>
+</a></h1>
+									</div>
+								</div>
+								<div class="vertical-divider hidden-small"></div>
+
+								<div class="g-column subnav-col small-12 medium-8">
+<ul  class="sub-menu">
+	<li class=" menu-item menu-item-type-custom menu-item-object-custom"><a href="http://hls.harvard.edu/faculty/directory" id="menu-57629"><i class="icon icon-angle-right"></i> Faculty Directory</a></li>
+	<li class=" menu-item menu-item-type-custom menu-item-object-custom"><a href="https://hls.harvard.edu/faculty/bibliography" id="menu-148822"><i class="icon icon-angle-right"></i> Faculty Bibliography</a></li>
+	<li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="http://hls.harvard.edu/dept/oaa/visiting-faculty-appointments/" id="menu-70193"><i class="icon icon-angle-right"></i> Visiting Faculty Appointments</a></li>
+	<li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="http://hls.harvard.edu/dept/academics/fellowships/" id="menu-70195"><i class="icon icon-angle-right"></i> Fellowships</a></li>
+	<li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="http://hls.harvard.edu/faculty-research/research-programs-and-centers/" id="menu-57631"><i class="icon icon-angle-right"></i> Research Programs</a></li>
+	<li class=" menu-item menu-item-type-custom menu-item-object-custom"><a href="http://today.law.harvard.edu/theme/faculty-scholarship/" id="menu-57634"><i class="icon icon-angle-right"></i> Faculty in the News</a></li>
+</ul>
+
+
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+			</li>
+<li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children main-nav-item"><a href="http://hls.harvard.edu/careers/" id="menu-57641">Careers</a><div class="topic-subnav">
+
+						<div class="row">
+
+							<div class="topic-subnav-wrap">
+
+								<div class="g-column small-12 medium-4">
+									<div class="subnav-quote">
+										<h1><a href="http://hls.harvard.edu/careers/">Unrivaled access to opportunities and support for career goals.<span class="overview-nav-item">Careers Overview <i class="icon icon-arrow-long-right"></i></span>
+</a></h1>
+									</div>
+								</div>
+								<div class="vertical-divider hidden-small"></div>
+
+								<div class="g-column subnav-col small-12 medium-8">
+<ul  class="sub-menu">
+	<li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="http://hls.harvard.edu/dept/ocs/" id="menu-57642"><i class="icon icon-angle-right"></i> Private Sector Career Services (OCS)</a></li>
+	<li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="http://hls.harvard.edu/dept/opia/" id="menu-57643"><i class="icon icon-angle-right"></i> Public Sector Career Services (OPIA)</a></li>
+	<li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="http://hls.harvard.edu/dept/ocs/employers/" id="menu-57644"><i class="icon icon-angle-right"></i> For Private Sector Employers</a></li>
+	<li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="http://hls.harvard.edu/dept/opia/information-for-employers/" id="menu-57645"><i class="icon icon-angle-right"></i> For Public Sector Employers</a></li>
+	<li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="http://hls.harvard.edu/dept/1l-career-advising/" id="menu-63218"><i class="icon icon-angle-right"></i> 1L Career Advising</a></li>
+	<li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="http://hls.harvard.edu/dept/ocs/jd-students/career-exploration/judicial-clerkships/" id="menu-63222"><i class="icon icon-angle-right"></i> Judicial Clerkships</a></li>
+	<li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="http://hls.harvard.edu/dept/psvf/" id="menu-57646"><i class="icon icon-angle-right"></i> Public Service Venture Fund</a></li>
+</ul>
+
+
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+			</li>
+<li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children main-nav-item"><a href="http://hls.harvard.edu/library/" id="menu-57635">Library</a><div class="topic-subnav">
+
+						<div class="row">
+
+							<div class="topic-subnav-wrap">
+
+								<div class="g-column small-12 medium-4">
+									<div class="subnav-quote">
+										<h1><a href="http://hls.harvard.edu/library/">Treasures collected from around the world, for the world.<span class="overview-nav-item">Library Overview <i class="icon icon-arrow-long-right"></i></span>
+</a></h1>
+									</div>
+								</div>
+								<div class="vertical-divider hidden-small"></div>
+
+								<div class="g-column subnav-col small-12 medium-8">
+<ul  class="sub-menu">
+	<li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="http://hls.harvard.edu/library/research/" id="menu-50243"><i class="icon icon-angle-right"></i> Research</a></li>
+	<li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="http://hls.harvard.edu/library/for-students/" id="menu-50238"><i class="icon icon-angle-right"></i> For Students</a></li>
+	<li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="http://hls.harvard.edu/library/for-faculty/" id="menu-50240"><i class="icon icon-angle-right"></i> For Faculty</a></li>
+	<li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="http://hls.harvard.edu/library/forms-and-services/" id="menu-50242"><i class="icon icon-angle-right"></i> Forms and Services</a></li>
+	<li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="http://hls.harvard.edu/library/empirical-research-services/" id="menu-57640"><i class="icon icon-angle-right"></i> Empirical Research</a></li>
+	<li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="http://hls.harvard.edu/dept/tlc/" id="menu-50202"><i class="icon icon-angle-right"></i> Teaching, Learning, &#038; Curriculum Solutions (TLC)</a></li>
+	<li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="http://hls.harvard.edu/library/digital-collections-and-exhibitions/" id="menu-57636"><i class="icon icon-angle-right"></i> Digital Collections</a></li>
+	<li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="http://hls.harvard.edu/library/historical-special-collections/" id="menu-57637"><i class="icon icon-angle-right"></i> Historical &#038; Special Collections</a></li>
+	<li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="http://hls.harvard.edu/library/about-the-library/" id="menu-57638"><i class="icon icon-angle-right"></i> About the Library</a></li>
+</ul>
+
+
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+			</li>
+<li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children main-nav-item"><a href="http://today.law.harvard.edu/" id="menu-57660">News</a><div class="topic-subnav">
+
+						<div class="row">
+
+							<div class="topic-subnav-wrap">
+
+								<div class="g-column small-12 medium-4">
+									<div class="subnav-quote">
+										<h1><a href="http://today.law.harvard.edu/">Latest information from Harvard Law School’s news publications and multimedia channels.<span class="overview-nav-item">News Overview <i class="icon icon-arrow-long-right"></i></span>
+</a></h1>
+									</div>
+								</div>
+								<div class="vertical-divider hidden-small"></div>
+
+								<div class="g-column subnav-col small-12 medium-8">
+<ul  class="sub-menu">
+	<li class=" menu-item menu-item-type-custom menu-item-object-custom"><a href="http://today.law.harvard.edu/" id="menu-57647"><i class="icon icon-angle-right"></i> Harvard Law Today</a></li>
+	<li class=" menu-item menu-item-type-custom menu-item-object-custom"><a href="http://200.hls.harvard.edu/" id="menu-152053"><i class="icon icon-angle-right"></i> HLS Bicentennial</a></li>
+	<li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="http://hls.harvard.edu/dept/communications/" id="menu-57648"><i class="icon icon-angle-right"></i> Office of Communications</a></li>
+	<li class=" menu-item menu-item-type-post_type menu-item-object-page"><a href="http://hls.harvard.edu/dept/communications/media-relations/" id="menu-57650"><i class="icon icon-angle-right"></i> Media Relations</a></li>
+	<li class=" menu-item menu-item-type-custom menu-item-object-custom"><a href="http://today.law.harvard.edu/bulletin/issue/" id="menu-57651"><i class="icon icon-angle-right"></i> Harvard Law Bulletin</a></li>
+	<li class=" menu-item menu-item-type-custom menu-item-object-custom"><a href="http://www.youtube.com/user/HarvardLawSchool" id="menu-57653"><i class="icon icon-angle-right"></i> Harvard Law YouTube</a></li>
+	<li class=" menu-item menu-item-type-custom menu-item-object-custom"><a href="http://twitter.com/harvard_law" id="menu-57655"><i class="icon icon-angle-right"></i> Harvard Law Twitter</a></li>
+	<li class=" menu-item menu-item-type-custom menu-item-object-custom"><a href="http://today.law.harvard.edu/news-at-law/" id="menu-57656"><i class="icon icon-angle-right"></i> News@Law</a></li>
+	<li class=" menu-item menu-item-type-custom menu-item-object-custom"><a href="http://today.law.harvard.edu/photography-and-multimedia/" id="menu-57658"><i class="icon icon-angle-right"></i> Photography and Multimedia</a></li>
+</ul>
+
+
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+			</li>
+		</ul>
+	</nav><!-- nav -->
+</div>					</div>
+
+					<button id="toggle-mobile-nav" class="mobile-nav-toggle visible-small visible-very-small">
+						<div class="bars">
+							<div class="bar"></div>
+							<div class="bar"></div>
+							<div class="bar"></div>
+						</div>
+						<span class="button-text">Menu</span>
+					</button>
+
+					<aside class="header-mobile-nav">
+	<div class="mobile-nav-content">
+				<ul class="icon-nav">
+			<li class="events-menu"><a href="http://hls.harvard.edu/calendar/"><i class="icon icon-calendar"></i> Events</a></li>
+			<li class="about-menu"><a href="http://hls.harvard.edu/about/"><i class="icon icon-shield-outline"></i> About HLS</a></li>
+		</ul>
+		
+		<form class="mobile-search-form" action="http://hls.harvard.edu">
+			<fieldset>
+				<input type="search" class="" placeholder="Search" type="text" name="s">
+				<button type="submit" value="Search" alt="Search" class="visuallyhidden"><i class="icon icon-search"></i></button>
+			</fieldset>
+		</form>
+
+		
+		<div class="mobile-nav-heading">Explore resources for &hellip;</div>
+
+		<ul id="menu-top-links-1" class="mobile-nav-list i-am-a"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-57614"><a href="http://hls.harvard.edu/students/">Students</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-57615"><a href="http://hls.harvard.edu/alumni/">Alumni</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-57617"><a href="http://hls.harvard.edu/faculty/">Faculty</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-57618"><a href="http://hls.harvard.edu/staff/">Staff</a></li>
+</ul>		<ul id="menu-main-navigation-1" class="mobile-nav-list mobile-topical-nav"><li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children mobile-menu-item"><a href="http://hls.harvard.edu/admissions/" class="accordion-toggle">Admissions<i class="icon icon-angle-down"></i></a><ul class="mobile-nav-accordion"><li><a class="overview-link" href="http://hls.harvard.edu/admissions/">Admissions <i class="icon icon-arrow-long-right"></i></a></li>	<li class=""><a href="http://hls.harvard.edu/dept/jdadmissions/">J.D. Admissions</a></li>
+	<li class=""><a href="http://hls.harvard.edu/dept/graduate-program/">Graduate Admissions</a></li>
+	<li class=""><a href="http://hls.harvard.edu/dept/academics/degree-programs/special-programs/">Special Programs</a></li>
+</ul></li>
+<li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children mobile-menu-item"><a href="http://hls.harvard.edu/academics-clinical/" class="accordion-toggle">Academics &#038; Clinical<i class="icon icon-angle-down"></i></a><ul class="mobile-nav-accordion"><li><a class="overview-link" href="http://hls.harvard.edu/academics-clinical/">Academics &#038; Clinical <i class="icon icon-arrow-long-right"></i></a></li>	<li class=""><a href="http://hls.harvard.edu/dept/academics/academic-calendar/">Academic Calendar</a></li>
+	<li class=""><a href="http://hls.harvard.edu/dept/academics/degree-programs/">Degree Programs</a></li>
+	<li class=""><a href="http://hls.harvard.edu/academics/curriculum/catalog/index.html">Course Catalog</a></li>
+	<li class=""><a href="http://hls.harvard.edu/dept/academics/">Courses and Academic Programs</a></li>
+	<li class=""><a href="http://hls.harvard.edu/dept/academics/handbook/">Handbook of Academic Policies</a></li>
+	<li class=""><a href="http://hls.harvard.edu/dept/clinical/">Clinical and Pro Bono Programs</a></li>
+	<li class=""><a href="http://hls.harvard.edu/dept/ils/">International Legal Studies</a></li>
+	<li class=""><a href="http://hls.harvard.edu/dept/registrar/">Office of the Registrar</a></li>
+	<li class=""><a href="http://hls.harvard.edu/dept/academics/continuing-and-executive-education/">Continuing and Executive Education</a></li>
+</ul></li>
+<li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children mobile-menu-item"><a href="http://hls.harvard.edu/faculty-research/" class="accordion-toggle">Faculty &#038; Research<i class="icon icon-angle-down"></i></a><ul class="mobile-nav-accordion"><li><a class="overview-link" href="http://hls.harvard.edu/faculty-research/">Faculty &#038; Research <i class="icon icon-arrow-long-right"></i></a></li>	<li class=""><a href="http://hls.harvard.edu/faculty/directory">Faculty Directory</a></li>
+	<li class=""><a href="https://hls.harvard.edu/faculty/bibliography">Faculty Bibliography</a></li>
+	<li class=""><a href="http://hls.harvard.edu/dept/oaa/visiting-faculty-appointments/">Visiting Faculty Appointments</a></li>
+	<li class=""><a href="http://hls.harvard.edu/dept/academics/fellowships/">Fellowships</a></li>
+	<li class=""><a href="http://hls.harvard.edu/faculty-research/research-programs-and-centers/">Research Programs</a></li>
+	<li class=""><a href="http://today.law.harvard.edu/theme/faculty-scholarship/">Faculty in the News</a></li>
+</ul></li>
+<li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children mobile-menu-item"><a href="http://hls.harvard.edu/careers/" class="accordion-toggle">Careers<i class="icon icon-angle-down"></i></a><ul class="mobile-nav-accordion"><li><a class="overview-link" href="http://hls.harvard.edu/careers/">Careers <i class="icon icon-arrow-long-right"></i></a></li>	<li class=""><a href="http://hls.harvard.edu/dept/ocs/">Private Sector Career Services (OCS)</a></li>
+	<li class=""><a href="http://hls.harvard.edu/dept/opia/">Public Sector Career Services (OPIA)</a></li>
+	<li class=""><a href="http://hls.harvard.edu/dept/ocs/employers/">For Private Sector Employers</a></li>
+	<li class=""><a href="http://hls.harvard.edu/dept/opia/information-for-employers/">For Public Sector Employers</a></li>
+	<li class=""><a href="http://hls.harvard.edu/dept/1l-career-advising/">1L Career Advising</a></li>
+	<li class=""><a href="http://hls.harvard.edu/dept/ocs/jd-students/career-exploration/judicial-clerkships/">Judicial Clerkships</a></li>
+	<li class=""><a href="http://hls.harvard.edu/dept/psvf/">Public Service Venture Fund</a></li>
+</ul></li>
+<li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children mobile-menu-item"><a href="http://hls.harvard.edu/library/" class="accordion-toggle">Library<i class="icon icon-angle-down"></i></a><ul class="mobile-nav-accordion"><li><a class="overview-link" href="http://hls.harvard.edu/library/">Library <i class="icon icon-arrow-long-right"></i></a></li>	<li class=""><a href="http://hls.harvard.edu/library/research/">Research</a></li>
+	<li class=""><a href="http://hls.harvard.edu/library/for-students/">For Students</a></li>
+	<li class=""><a href="http://hls.harvard.edu/library/for-faculty/">For Faculty</a></li>
+	<li class=""><a href="http://hls.harvard.edu/library/forms-and-services/">Forms and Services</a></li>
+	<li class=""><a href="http://hls.harvard.edu/library/empirical-research-services/">Empirical Research</a></li>
+	<li class=""><a href="http://hls.harvard.edu/dept/tlc/">Teaching, Learning, &#038; Curriculum Solutions (TLC)</a></li>
+	<li class=""><a href="http://hls.harvard.edu/library/digital-collections-and-exhibitions/">Digital Collections</a></li>
+	<li class=""><a href="http://hls.harvard.edu/library/historical-special-collections/">Historical &#038; Special Collections</a></li>
+	<li class=""><a href="http://hls.harvard.edu/library/about-the-library/">About the Library</a></li>
+</ul></li>
+<li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children mobile-menu-item"><a href="http://today.law.harvard.edu/" class="accordion-toggle">News<i class="icon icon-angle-down"></i></a><ul class="mobile-nav-accordion"><li><a class="overview-link" href="http://today.law.harvard.edu/">News <i class="icon icon-arrow-long-right"></i></a></li>	<li class=""><a href="http://today.law.harvard.edu/">Harvard Law Today</a></li>
+	<li class=""><a href="http://200.hls.harvard.edu/">HLS Bicentennial</a></li>
+	<li class=""><a href="http://hls.harvard.edu/dept/communications/">Office of Communications</a></li>
+	<li class=""><a href="http://hls.harvard.edu/dept/communications/media-relations/">Media Relations</a></li>
+	<li class=""><a href="http://today.law.harvard.edu/bulletin/issue/">Harvard Law Bulletin</a></li>
+	<li class=""><a href="http://www.youtube.com/user/HarvardLawSchool">Harvard Law YouTube</a></li>
+	<li class=""><a href="http://twitter.com/harvard_law">Harvard Law Twitter</a></li>
+	<li class=""><a href="http://today.law.harvard.edu/news-at-law/">News@Law</a></li>
+	<li class=""><a href="http://today.law.harvard.edu/photography-and-multimedia/">Photography and Multimedia</a></li>
+</ul></li>
+</ul>
+
+	</div>
+
+</aside>
+				</div>
+
+			</div>
+
+		</header><!-- header -->
+		
+			<div class="news-cycle-wrap top-banner-fade">
+						<nav class="news-cycle-nav news-cycle-nav-desktop style-C">
+			<span class="cycle-prev"><i class="icon icon-angle-up"></i></span>
+			<ul class="news-cycle-pager"></ul>
+			<span class="cycle-next"><i class="icon icon-angle-down"></i></span>
+		</nav>
+				<div class="cycle-slideshow news-cycle style-C"
+			data-cycle-fx=fade
+		    data-cycle-timeout=0
+		    data-cycle-slides="> div"
+		    data-cycle-pager=".news-cycle-pager"
+			data-cycle-prev=".news-cycle-nav .cycle-prev"
+			data-cycle-next=".news-cycle-nav .cycle-next"
+			data-cycle-auto-height="container"
+			data-cycle-swipe="true"
+		    >
+		
+			
+
+		    <div class="news-slide"
+		        data-cycle-pager-template="<li class='home-news-slider-pager' data-title='Shaping Legal Thought' data-index='1'><a href=#><span class=bullet><span></span></span><span class=lead><span>Shaping Legal Thought</span></span></a></li>"
+		        >
+			    <div class="news-slide-img has-overlay" style="background-image: url('http://hls.harvard.edu/content/uploads/2017/11/10_10_13_Campus_Shots_BKraft073.op_-700x525.jpg'); background-position: top center;"
+			         data-large="http://hls.harvard.edu/content/uploads/2017/11/10_10_13_Campus_Shots_BKraft073.op_-2000x1333.jpg">
+				    					    <div class="image-credit-overlay image-credit-overlay-none">
+						    <p><strong>Credit:</strong> Brooks Kraft</p>
+					    </div>
+				    			    </div>
+			    <div class="news-slide-content-wrap">
+				    <div class="row">
+					    <div
+						    class="large-8 g-column news-slide-content  content-block text-left">
+						    							    <h2 class="news-slide-title"><a
+									    href="https://today.law.harvard.edu/harvard-law-review-releases-special-bicentennial-edition/">Harvard Law Review publishes special bicentennial issue</a></h2>
+							    <p class="see-more-link"><a href="https://today.law.harvard.edu/harvard-law-review-releases-special-bicentennial-edition/">Read More <i
+										    class="icon icon-arrow-long-right icon-bump"></i></a></p>
+						    					    </div>
+				    </div>
+			    </div>
+		    </div>
+
+		
+			
+
+		    <div class="news-slide"
+		        data-cycle-pager-template="<li class='home-news-slider-pager' data-title='Oyez! Oyez! Oyez!' data-index='2'><a href=#><span class=bullet><span></span></span><span class=lead><span>Oyez! Oyez! Oyez!</span></span></a></li>"
+		        >
+			    <div class="news-slide-img has-overlay" style="background-image: url('http://hls.harvard.edu/content/uploads/2017/11/11.14.17MootCourt348_MStewart-web-700x525.jpg'); background-position: center center;"
+			         data-large="http://hls.harvard.edu/content/uploads/2017/11/11.14.17MootCourt348_MStewart-web-2000x1333.jpg">
+				    					    <div class="image-credit-overlay image-credit-overlay-none">
+						    <p><strong>Credit:</strong> Martha Stewart</p>
+					    </div>
+				    			    </div>
+			    <div class="news-slide-content-wrap">
+				    <div class="row">
+					    <div
+						    class="large-8 g-column news-slide-content  content-block text-left">
+						    							    <h2 class="news-slide-title"><a
+									    href="https://today.law.harvard.edu/looking-back-ames-moot-court-competition/">May it please the Court: The Ames experience today and through the years</a></h2>
+							    <p class="see-more-link"><a href="https://today.law.harvard.edu/looking-back-ames-moot-court-competition/">Read More <i
+										    class="icon icon-arrow-long-right icon-bump"></i></a></p>
+						    					    </div>
+				    </div>
+			    </div>
+		    </div>
+
+		
+			
+
+		    <div class="news-slide"
+		        data-cycle-pager-template="<li class='home-news-slider-pager' data-title='Honoring HLS Service Members' data-index='3'><a href=#><span class=bullet><span></span></span><span class=lead><span>Honoring HLS Service Members</span></span></a></li>"
+		        >
+			    <div class="news-slide-img has-overlay" style="background-image: url('http://hls.harvard.edu/content/uploads/2017/11/HLS_veterans_2017-spotlight3-700x525.jpg'); background-position: top center;"
+			         data-large="http://hls.harvard.edu/content/uploads/2017/11/HLS_veterans_2017-spotlight3-2000x1333.jpg">
+				    					    <div class="image-credit-overlay image-credit-overlay-none">
+						    <p><strong>Credit:</strong> Photos by Heratch Photography</p>
+					    </div>
+				    			    </div>
+			    <div class="news-slide-content-wrap">
+				    <div class="row">
+					    <div
+						    class="large-6 g-column news-slide-content  content-block text-right">
+						    							    <h2 class="news-slide-title"><a
+									    href="https://today.law.harvard.edu/veterans-service-belief-law/">Veterans of service, with a belief in the law</a></h2>
+							    <p class="see-more-link"><a href="https://today.law.harvard.edu/veterans-service-belief-law/">Read More <i
+										    class="icon icon-arrow-long-right icon-bump"></i></a></p>
+						    					    </div>
+				    </div>
+			    </div>
+		    </div>
+
+		
+			
+
+		    <div class="news-slide"
+		        data-cycle-pager-template="<li class='home-news-slider-pager' data-title='A Bicentennial Celebration' data-index='4'><a href=#><span class=bullet><span></span></span><span class=lead><span>A Bicentennial Celebration</span></span></a></li>"
+		        >
+			    <div class="news-slide-img has-overlay" style="background-image: url('http://hls.harvard.edu/content/uploads/2017/11/2017_10_27_HLS-200-_Friday_166_TRinaldo-web-700x525.jpg'); background-position: center center;"
+			         data-large="http://hls.harvard.edu/content/uploads/2017/11/2017_10_27_HLS-200-_Friday_166_TRinaldo-web-2000x1335.jpg">
+				    					    <div class="image-credit-overlay image-credit-overlay-none">
+						    <p><strong>Credit:</strong> Tony Rinaldo</p>
+					    </div>
+				    			    </div>
+			    <div class="news-slide-content-wrap">
+				    <div class="row">
+					    <div
+						    class="large-8 g-column news-slide-content  content-block text-left">
+						    							    <h2 class="news-slide-title"><a
+									    href="https://today.law.harvard.edu/hls-world-harvard-law-schools-bicentennial-summit/">A summit for the ages: HLS in the World</a></h2>
+							    <p class="see-more-link"><a href="https://today.law.harvard.edu/hls-world-harvard-law-schools-bicentennial-summit/">Read More <i
+										    class="icon icon-arrow-long-right icon-bump"></i></a></p>
+						    					    </div>
+				    </div>
+			    </div>
+		    </div>
+
+		
+		</div>
+		<nav class="news-cycle-nav news-cycle-nav-mobile style-C">
+			<ul class="news-cycle-pager"></ul>
+		</nav>
+	</div>
+
+	<main class="page-content site-main full-width" role="main" itemprop="mainContentOfPage">
+
+		
+
+			<div class="content-wrap">
+
+					<div id="panels-wrapper" class="panel-collection">
+		
+	<section
+		class="panel panel-count-1		panel-type-content-feed panel-even"
+				>
+
+		<div class="panel-content-feed default">
+
+	<div class="panel-heading">
+						<h2 class="panel-title-small">
+					<span class="link-follows">
+						Latest HLS News					</span><!-- .link-follows -->
+					<span class="panel-see-more see-more-link see-more-inline"><a title="View All" href=" http://today.law.harvard.edu/ ">View All</span></a>				</h2>
+					</div><!-- .panel-heading -->
+
+	<div class="content-feed-wrap clearfix">
+					<div class="content-feed-list collapse only-three">
+										<div class="list-item of-item g-column large-4 list-item-1 clearfix" data-match-height="cf-outer">
+							<div class="list-item-wrap clearfix">
+
+																<h3 class="feed-item-title l-headline feed-item-title-rss_item"><a href="http://today.law.harvard.edu/risk-assessment-tools-criminal-justice-reform-qa-chris-bavitz/">Risk assessment tools for criminal justice reform: A Q&amp;A with Chris Bavitz</a></h3>
+								
+																	<div class="cf-image cf-image-small alignright">
+										<img src="http://today.law.harvard.edu/wp-content/uploads/2015/04/Bavitz_Christopher_OP14_MStewart-e1429202627950-200x300.jpg" alt="Risk assessment tools for criminal justice reform: A Q&amp;A with Chris Bavitz">
+									</div>
+								
+																<div class="item-excerpt context-body"><p>Managing Director of the Cyberlaw Clinic Professor Chris Bavitz discusses some of the concerns and opportunities of risk assessment tools for criminal justice reform efforts, and the Berkman Klein Center&#039;s work on Ethics and Governance of AI initiative in partnership with the MIT Media Lab.</p>
 </div>
+																<p class="see-more-link"><a  href="http://today.law.harvard.edu/risk-assessment-tools-criminal-justice-reform-qa-chris-bavitz/">Continue Reading</a></p>
+							</div>
+						</div>
+						<div class="of-wrapper mobile-collapse-row"><div class="of"><div class="group-2" data-match-height="cf-outer">						<div class="list-item of-item g-column medium-6 large-4 list-item-2 has-image clearfix" data-match-height="cf">
+							<div class="list-item-wrap clearfix">
 
-  
-  <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/150486","currentPathIsAdmin":false,"isFront":true,"currentLanguage":"en"},"pluralDelimiter":"\u0003","field_group":{"html_element":{"mode":"default","context":"view","settings":{"id":"","classes":"columns small-12 medium-6","element":"div","show_label":false,"label_element":"h3","attributes":"","effect":"none","speed":"fast","label":"Column1"}}},"ajaxTrustedUrl":{"\/search":true},"user":{"uid":0,"permissionsHash":"f804d68eaa9d50546e5c33fc64ab8270307ecfa6added14a69115c191585e345"}}</script>
-<script src="/sites/default/files/js/js_EtA_Of8UG3gnrOh08Ed8Iunc3H2lHQ5iLoqlDhBG5GE.js"></script>
+																<h3 class="feed-item-title m-headline feed-item-title-rss_item"><a href="http://today.law.harvard.edu/harvard-law-student-wins-national-writing-competition/">Harvard Law student wins national writing competition</a></h3>
+								
+																	<div class="cf-image cf-image-small alignright">
+										<img src="http://today.law.harvard.edu/wp-content/uploads/2017/11/harvard-law-student-wins-10000-national-championship-writing-competition-225x300.jpg" alt="Harvard Law student wins national writing competition">
+									</div>
+								
+																<div class="item-excerpt context-body"><p>Sarah Benzidi LL.M. ’17 has been named the national winner of the inaugural NYBSA/ACCTM National Championship Alternative Dispute Resolution Law Student Writing Competition. Benzidi received her award and $10,000 prize at a ceremony in New York on Oct. 26.</p>
+</div>
+																<p class="see-more-link"><a  href="http://today.law.harvard.edu/harvard-law-student-wins-national-writing-competition/">Continue Reading</a></p>
+							</div>
+						</div>
+												<div class="list-item of-item g-column medium-6 large-4 list-item-3 has-image clearfix" data-match-height="cf">
+							<div class="list-item-wrap clearfix">
 
-  <script>
-    (function ($) {
-      $(document).foundation();
-    })(jQuery);
-  </script>
-  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"4bc1518bdc","applicationID":"65819292","transactionName":"MlNSYRNZV0NWUkwMVwsZcVYVUVZeGEFZAl06VVFWCV0=","queueTime":0,"applicationTime":24,"atts":"HhRRF1tDRE0=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+																<h3 class="feed-item-title m-headline feed-item-title-rss_item"><a href="http://today.law.harvard.edu/julian-spearchief-morris-first-indigenous-student-head-harvard-law-schools-legal-aid-bureau/">Julian SpearChief-Morris is the first indigenous student to head Harvard Law School’s Legal Aid Bureau</a></h3>
+								
+																	<div class="cf-image cf-image-small alignright">
+										<img src="http://today.law.harvard.edu/wp-content/uploads/2017/11/102617_spearchief_046_605-300x200.jpg" alt="Julian SpearChief-Morris is the first indigenous student to head Harvard Law School’s Legal Aid Bureau">
+									</div>
+								
+																<div class="item-excerpt context-body"><p>Julian SpearChief-Morris ’17 is the first indigenous student to lead the Harvard Legal Aid Bureau, marking his place in the storied history of the bureau which was founded in 1913 to provide legal services to low-income clients in the Boston area.</p>
+</div>
+																<p class="see-more-link"><a  href="http://today.law.harvard.edu/julian-spearchief-morris-first-indigenous-student-head-harvard-law-schools-legal-aid-bureau/">Continue Reading</a></p>
+							</div>
+						</div>
+						</div><!-- .group-2 --></div></div><!-- .of-wrapper -->			</div><!-- .content-feed-list -->
+			</div><!-- .content-feed-wrap -->
+
+</div><!-- .panel-content-feed -->
+
+	</section>
+
+
+	<section
+		class="panel panel-count-3		panel-type-hover-highlight panel-even"
+				>
+
+		<div class="panel-content panel-hover-highlight">
+
+	
+	
+		<ul class="hover-highlight-list row clearfix">
+
+							<li class="hover-highlight-item g-column large-4">
+					<div class="hh-item-wrap hh-light-text" data-match-height="hh">
+
+													<div class="hh-item-img"
+							     style="background-image:url('http://hls.harvard.edu/content/uploads/2008/07/bk.HLS_.20130920.2529-e1470689960259-400x300.jpeg');"></div>
+																				<div class="hh-item-content hh-color">
+														<div class="hh-item-intro-wrap">
+								<div class="hh-item-intro">
+
+																			<h3 class="hh-item-title m-headline">Apply to HLS</h3>
+									
+																			<h4 class="hh-item-subtitle h5">Learn more about the application process and timeline</h4>
+									
+								</div>
+							</div>
+							<div class="hh-item-details">
+																	<h3 class="hh-item-title m-headline">Apply to HLS</h3>
+								
+																	<h4 class="hh-item-subtitle h5">Learn more about the application process and timeline</h4>
+																
+																	<a class="see-more-link"
+									   href="http://hls.harvard.edu/admissions/">Continue Reading										<i class="icon icon-arrow-long-right"></i></a>
+								
+							</div>
+							<!-- .item-details -->
+
+															<a class="full-size-link"
+								   href="http://hls.harvard.edu/admissions/"><span
+										class="screen-reader-text">Continue Reading</span></a>
+							
+						</div>
+					</div>
+
+				</li>
+
+							<li class="hover-highlight-item g-column large-4">
+					<div class="hh-item-wrap hh-light-text" data-match-height="hh">
+
+													<div class="hh-item-img"
+							     style="background-image:url('http://hls.harvard.edu/content/uploads/2008/07/course_catalog_landing_image-400x300.jpg');"></div>
+																				<div class="hh-item-content hh-color">
+														<div class="hh-item-intro-wrap">
+								<div class="hh-item-intro">
+
+																			<h3 class="hh-item-title m-headline">HLS Degree Programs</h3>
+									
+																			<h4 class="hh-item-subtitle h5">Learn about the J.D., Graduate and Special Programs offered at HLS</h4>
+									
+								</div>
+							</div>
+							<div class="hh-item-details">
+																	<h3 class="hh-item-title m-headline">HLS Degree Programs</h3>
+								
+																	<h4 class="hh-item-subtitle h5">Learn about the J.D., Graduate and Special Programs offered at HLS</h4>
+																
+																	<a class="see-more-link"
+									   href="https://hls.harvard.edu/academics-clinical/">Continue Reading										<i class="icon icon-arrow-long-right"></i></a>
+								
+							</div>
+							<!-- .item-details -->
+
+															<a class="full-size-link"
+								   href="https://hls.harvard.edu/academics-clinical/"><span
+										class="screen-reader-text">Continue Reading</span></a>
+							
+						</div>
+					</div>
+
+				</li>
+
+							<li class="hover-highlight-item g-column large-4">
+					<div class="hh-item-wrap hh-light-text" data-match-height="hh">
+
+													<div class="hh-item-img"
+							     style="background-image:url('http://hls.harvard.edu/content/uploads/2017/05/HLS200Banners_KWright_IMG_9564-web-400x300.jpg');"></div>
+																				<div class="hh-item-content hh-color">
+														<div class="hh-item-intro-wrap">
+								<div class="hh-item-intro">
+
+																			<h3 class="hh-item-title m-headline">HLS Bicentennial</h3>
+									
+																			<h4 class="hh-item-subtitle h5">Moved to Question, Prepared to Reason, Called to Act</h4>
+									
+								</div>
+							</div>
+							<div class="hh-item-details">
+																	<h3 class="hh-item-title m-headline">HLS Bicentennial</h3>
+								
+																	<h4 class="hh-item-subtitle h5">Moved to Question, Prepared to Reason, Called to Act</h4>
+																
+																	<a class="see-more-link"
+									   href="http://200.hls.harvard.edu/">Explore the HLS Bicentennial Website										<i class="icon icon-arrow-long-right"></i></a>
+								
+							</div>
+							<!-- .item-details -->
+
+															<a class="full-size-link"
+								   href="http://200.hls.harvard.edu/"><span
+										class="screen-reader-text">Explore the HLS Bicentennial Website</span></a>
+							
+						</div>
+					</div>
+
+				</li>
+
+			
+		</ul>
+
+	
+</div><!-- .panel-group-highlight -->
+
+	</section>
+
+
+	<section
+		class="panel panel-count-4		panel-type-card-feed panel-odd"
+				>
+
+		<div class="panel-card-feed">
+
+	<div class="panel-heading">
+					<h2 class="panel-title-small g-column">Recent Scholarship by HLS Faculty</h2>
+			</div><!-- .panel-heading -->
+
+	<div class="card-feed-wrap clearfix">
+					<div class="card-feed-list collapse">
+				 <div class="card-feed-cards-wrap card-feed-column">												<div class="card-feed-item">
+							<div class="card-feed-item-content" data-match-height="card-feed-card">
+																<h3 class="feed-item-title s-headline feed-item-title-post"><a class="" href="http://scholarship.law.wm.edu/cgi/viewcontent.cgi?article=1817&#038;context=wmborj">The Coverage / Protection Distinction in the Law of Freedom of Speech &#8211; An Essay on Meta-Doctrine in Constitutional Law</a></h3>
+
+																									<div class="item-excerpt context-body"></div>
+																<div class="feed-item-meta"><a href="http://hls.harvard.edu/faculty/directory/10906/Tushnet">Mark Tushnet</a></div>								<p class="see-more-link"><a href="http://scholarship.law.wm.edu/cgi/viewcontent.cgi?article=1817&#038;context=wmborj">Continue Reading</a></p>
+								<a href="http://scholarship.law.wm.edu/cgi/viewcontent.cgi?article=1817&#038;context=wmborj" class="full-size-link" aria-hidden="true"></a>
+							</div>
+						</div>
+						
+						
+																		<div class="card-feed-item">
+							<div class="card-feed-item-content" data-match-height="card-feed-card">
+																<h3 class="feed-item-title s-headline feed-item-title-post"><a class="" href="http://chicagounbound.uchicago.edu/cgi/viewcontent.cgi?article=5995&#038;context=uclrev">The Unbearable Rightness of Auer</a></h3>
+
+																									<div class="item-excerpt context-body"></div>
+																<div class="feed-item-meta"><a href="http://hls.harvard.edu/faculty/directory/10871/Sunstein">Cass R. Sunstein</a> & <a href="http://hls.harvard.edu/faculty/directory/10919/Vermeule">Adrian Vermeule</a></div>								<p class="see-more-link"><a href="http://chicagounbound.uchicago.edu/cgi/viewcontent.cgi?article=5995&#038;context=uclrev">Continue Reading</a></p>
+								<a href="http://chicagounbound.uchicago.edu/cgi/viewcontent.cgi?article=5995&#038;context=uclrev" class="full-size-link" aria-hidden="true"></a>
+							</div>
+						</div>
+						
+						
+																		<div class="card-feed-item">
+							<div class="card-feed-item-content" data-match-height="card-feed-card">
+																<h3 class="feed-item-title s-headline feed-item-title-post"><a class="" href="http://www.law.harvard.edu/programs/olin_center/papers/pdf/Kaplow_885.pdf">A Distribution-Neutral Perspective on Tax Expenditure Limitations</a></h3>
+
+																									<div class="item-excerpt context-body"></div>
+																<div class="feed-item-meta"><a href="http://hls.harvard.edu/faculty/directory/10453/Kaplow">Louis Kaplow</a></div>								<p class="see-more-link"><a href="http://www.law.harvard.edu/programs/olin_center/papers/pdf/Kaplow_885.pdf">Continue Reading</a></p>
+								<a href="http://www.law.harvard.edu/programs/olin_center/papers/pdf/Kaplow_885.pdf" class="full-size-link" aria-hidden="true"></a>
+							</div>
+						</div>
+						
+						
+																		<div class="card-feed-item">
+							<div class="card-feed-item-content" data-match-height="card-feed-card">
+																<h3 class="feed-item-title s-headline feed-item-title-post"><a class="" href="https://ssrn.com/abstract=2945693">Getting from Here to There: The Transition Tax Issue</a></h3>
+
+																									<div class="item-excerpt context-body"></div>
+																<div class="feed-item-meta"><a href="http://hls.harvard.edu/faculty/directory/10794/Shay">Stephen E. Shay</a> (with J. Clifton Fleming & Robert J. Peroni)</div>								<p class="see-more-link"><a href="https://ssrn.com/abstract=2945693">Continue Reading</a></p>
+								<a href="https://ssrn.com/abstract=2945693" class="full-size-link" aria-hidden="true"></a>
+							</div>
+						</div>
+						
+												</div> <!-- end .card-feed-cards-wrap -->
+						
+						<div class="card-feed-rail card-feed-column"><div class="card-feed-rail-content widget widget_rss"><h4 class="widget-title">More</h4><div class="card-feed-rail-items">												<div class="card-feed-rail-item clearfix">
+															<h3 class="feed-item-title feed-item-title-post"><a class="" href="http://chicagounbound.uchicago.edu/cgi/viewcontent.cgi?article=5988&#038;context=uclrev">Arguing in Good Faith about the Constitution: Ideology, Methodology, and Reflective Equilibrium</a></h3>
+														<div class="rss-date"><a href="http://hls.harvard.edu/faculty/directory/10247/Fallon">Richard H. Fallon, Jr.</a></div>
+						</div>
+
+						
+						
+																		<div class="card-feed-rail-item clearfix">
+															<h3 class="feed-item-title feed-item-title-post"><a class="" href="https://doi.org/10.1093/aler/ahx009">(Mis)perceptions of Law in Consumer Markets</a></h3>
+														<div class="rss-date"><a href="http://hls.harvard.edu/faculty/directory/10042/Bar-Gill">Oren Bar-Gill</a> (with Kevin E. Davis)</div>
+						</div>
+
+						
+						
+																		<div class="card-feed-rail-item clearfix">
+															<h3 class="feed-item-title feed-item-title-post"><a class="" href="https://doi.org/10.1093/medlaw/fwx013">Medical Tourism, Medical Migration, and Global Justice: Implications for Biosecurity in a Globalized World</a></h3>
+														<div class="rss-date"><a href="http://hls.harvard.edu/faculty/directory/10176/Cohen">I. Glenn Cohen</a></div>
+						</div>
+
+						
+						
+																		<div class="card-feed-rail-item clearfix">
+															<h3 class="feed-item-title feed-item-title-post"><a class="" href="http://columbialawreview.org/content/taxation-of-corporations-and-shareholders-a-discussion-of-dean-schizers-recent-proposal/">Taxation of Corporations and Shareholders: A Discussion of Dean Schizer’s Recent Proposal</a></h3>
+														<div class="rss-date"><a href="http://hls.harvard.edu/faculty/directory/11400/Brennan/courses">Thomas J. Brennan</a></div>
+						</div>
+
+						
+						
+																		<div class="card-feed-rail-item clearfix">
+															<h3 class="feed-item-title feed-item-title-post"><a class="" href="https://hbr.org/2017/05/the-debate-on-corporate-tax-reform-just-started-for-real">The Debate on Corporate Tax Reform Just Started for Real</a></h3>
+														<div class="rss-date"><a href="http://hls.harvard.edu/faculty/directory/10211/Desai">Mihir A. Desai</a></div>
+						</div>
+
+						
+						
+																		<div class="card-feed-rail-item clearfix">
+															<h3 class="feed-item-title feed-item-title-post"><a class="" href="https://ssrn.com/abstract=2957670">Personhood Seeking New Life with Republican Control</a></h3>
+														<div class="rss-date"><a href="http://hls.harvard.edu/faculty/directory/10176/Cohen">I. Glenn Cohen</a> (with Jonathan F. Will & Eli Y. Adashi)</div>
+						</div>
+
+						
+						
+																		<div class="card-feed-rail-item clearfix">
+															<h3 class="feed-item-title feed-item-title-post"><a class="" href="http://rdcu.be/uZFj">Who Will Vote Quadratically? Voter Turnout and Votes Cast Under Quadratic Voting</a></h3>
+														<div class="rss-date"><a href="http://hls.harvard.edu/faculty/directory/10453/Kaplow">Louis Kaplow</a> (with Scott Duke Kominers)</div>
+						</div>
+
+						
+						
+																		<div class="card-feed-rail-item clearfix">
+															<h3 class="feed-item-title feed-item-title-post"><a class="" href="http://scholarship.law.upenn.edu/cgi/viewcontent.cgi?article=9578&#038;context=penn_law_review">On Mandatory Labeling, With Special Reference to Genetically Modified Foods</a></h3>
+														<div class="rss-date"><a href="http://hls.harvard.edu/faculty/directory/10871/Sunstein">Cass R. Sunstein</a></div>
+						</div>
+
+						
+						
+																		<div class="card-feed-rail-item clearfix">
+															<h3 class="feed-item-title feed-item-title-post"><a class="" href="https://www.fdli.org/wp-content/uploads/2017/06/1-Making-the-Case-for-a-National-Food-Strategy.pdf">Making the Case for a National Food Strategy in the United States</a></h3>
+														<div class="rss-date"><a href="http://hls.harvard.edu/faculty/directory/11185/BroadLeib">Emily M. Broad Leib</a> (with Laurie J. Beyranevand)</div>
+						</div>
+
+						
+						
+																		<div class="card-feed-rail-item clearfix">
+															<h3 class="feed-item-title feed-item-title-post"><a class="" href="http://id.lib.harvard.edu/aleph/014931105/catalog">Traveling for Assisted Suicide</a></h3>
+														<div class="rss-date"><a href="http://hls.harvard.edu/faculty/directory/10176/Cohen">I. Glenn Cohen</a></div>
+						</div>
+
+						
+						
+																		<div class="card-feed-rail-item clearfix">
+															<h3 class="feed-item-title feed-item-title-post"><a class="" href="http://scholars.law.unlv.edu/cgi/viewcontent.cgi?article=1004&#038;context=nljforum">A Left of Liberal Interpretation of Trump&#8217;s &#8216;Big&#8217; Win, Part One: Neoliberalism</a></h3>
+														<div class="rss-date"><a href="http://hls.harvard.edu/faculty/directory/10469/Kennedy">Duncan Kennedy</a></div>
+						</div>
+
+						
+						
+																		<div class="card-feed-rail-item clearfix">
+															<h3 class="feed-item-title feed-item-title-post"><a class="" href="http://www.virginialawreview.org/sites/virginialawreview.org/files/Renan_Online.pdf">The Law Presidents Make</a></h3>
+														<div class="rss-date"><a href="http://hls.harvard.edu/faculty/directory/11495/Renan">Daphna Renan</a></div>
+						</div>
+
+						
+						
+																		<div class="card-feed-rail-item clearfix">
+															<h3 class="feed-item-title feed-item-title-post"><a class="" href="http://dx.doi.org/10.1561/108.00000013">Financial Markets and the Political Center of Gravity</a></h3>
+														<div class="rss-date"><a href="http://hls.harvard.edu/faculty/directory/10725/Roe">Mark J. Roe</a></div>
+						</div>
+
+						
+						
+																		<div class="card-feed-rail-item clearfix">
+															<h3 class="feed-item-title feed-item-title-post"><a class="" href="http://www.thehastingscenter.org/irb_article/public-engagement-notice-comment-rulemaking-common-rule/">Public Engagement, Notice-and-Comment Rulemaking, and the Common Rule</a></h3>
+														<div class="rss-date"><a href="http://hls.harvard.edu/faculty/directory/10176/Cohen">I. Glenn Cohen</a> (with Holly Fernandez Lynch & Barbara E. Bierer)</div>
+						</div>
+
+						
+						
+																		<div class="card-feed-rail-item clearfix">
+															<h3 class="feed-item-title feed-item-title-post"><a class="" href="https://ssrn.com/abstract=2896949">&#8216;Don&#8217;t Tell Me What I Can&#8217;t Do!&#8217; On the Intrinsic Value of Control</a></h3>
+														<div class="rss-date"><a href="http://hls.harvard.edu/faculty/directory/10871/Sunstein">Cass R. Sunstein</a></div>
+						</div>
+
+						
+						
+																		<div class="card-feed-rail-item clearfix">
+															<h3 class="feed-item-title feed-item-title-post"><a class="" href="http://www.chronicle.com/article/The-College-Sex-Bureaucracy/238805?key=u3dI3dQRSKsxDuUp14YxCUuSPcEKw7rhYxc_7JMlZV3Jr6ylz71QIuEMeJ63l-25M1h0UDBJVDV6amhvUEV5SzZYOEpHZGVXdkN2eHJSc0h0ZEVTNTU2UWdmVQ">The College Sex Bureaucracy</a></h3>
+														<div class="rss-date"><a href="http://hls.harvard.edu/faculty/directory/10302/Gersen">Jacob Gersen</a> & <a href="http://hls.harvard.edu/faculty/directory/10869/SukGersen">Jeannie Suk Gersen</a></div>
+						</div>
+
+						
+												</div> <!-- end .card-feed-rail-items-->
+						<a title="View All" class="see-more-link" href=" http://hlsscholar.wpengine.com/ ">View All</a>							</div> <!-- end .card-feed-rail-content-->
+						</div> <!-- end .card-feed-rail-->
+									</div><!-- .card-feed-list -->
+			</div><!-- .card-feed-wrap -->
+
+</div><!-- .panel-card-feed -->
+
+	</section>
+
+	</div>
+	
+			</div>
+
+					<div class="content-wrap">
+
+	<section class="widget-mosaic panel row">
+
+		<div class="g-column panel-heading">
+			<h1 class="panel-title-small"></h1>
+		</div>
+
+		<div class="wm-news-feed g-column large-4">
+			<div class="widget widget_rss content-block" role="widget" data-match-height="mosaic-outer"><h2 class="widget-title"><a class='rsswidget' href='http://today.law.harvard.edu/tag/newsatlaw/feed/'><img style='border:0' width='14' height='14' src='http://hls.harvard.edu/wp-includes/images/rss.png' alt='RSS' /></a> <span class='rsswidget-title'>HLS in the News</span></h2><ul><li><a class='rsswidget' href='https://www.wsj.com/articles/electricity-prices-plummet-as-gas-wind-gain-traction-and-demand-stalls-1512043200'>Electricity Prices Plummet as Gas, Wind Gain Traction and Demand Stalls</a> <span class="rss-date">December 1, 2017</span> <cite class='rss-source'>The Wall Street Journal</cite></li><li><a class='rsswidget' href='https://www.nytimes.com/2017/11/30/opinion/impeachment-donald-trump.html?_r=0'>Time to Talk Impeachment</a> <span class="rss-date">December 1, 2017</span> <cite class='rss-source'>The New York Times</cite></li><li><a class='rsswidget' href='https://www.bloomberg.com/view/articles/2017-11-30/best-movie-awards-of-2017-behavioral-economics'>Best Movie Awards of 2017 (Behavioral Economics)</a> <span class="rss-date">December 1, 2017</span> <cite class='rss-source'>Bloomberg</cite></li><li><a class='rsswidget' href='https://www.bloomberg.com/view/articles/2017-12-01/how-the-flynn-charges-box-in-trump'>How the Flynn Charges Box In Trump</a> <span class="rss-date">December 1, 2017</span> <cite class='rss-source'>Bloomberg</cite></li><li><a class='rsswidget' href='http://www.thecrimson.com/article/2017/12/1/students-criticize-tax-plan/'>Students Criticize Proposed Elimination of Loan Deductions</a> <span class="rss-date">December 1, 2017</span> <cite class='rss-source'>The Harvard Crimson</cite></li><li><a class='rsswidget' href='https://www.economist.com/news/united-states/21731880-carpenter-v-united-states-shows-they-are-unsure-about-how-do-so-supreme-courts'>The Supreme Court’s justices want to enhance privacy protections for a digital age</a> <span class="rss-date">December 1, 2017</span> <cite class='rss-source'>The Economist</cite></li><li><a class='rsswidget' href='https://www.americaninno.com/boston/boston-startup/this-harvard-law-startup-wants-to-be-the-google-for-legal-contracts/'>This Harvard Law Startup Wants to Be the “Google for Legal Contracts”</a> <span class="rss-date">December 1, 2017</span> <cite class='rss-source'>BostInno</cite></li><li><a class='rsswidget' href='http://www.dailynews.com/2017/11/30/for-california-attorney-general-suing-trump-again-and-again-is-a-team-sport/'>For California attorney general, suing Trump again and again is a team sport</a> <span class="rss-date">December 1, 2017</span> <cite class='rss-source'>Los Angeles Daily News </cite></li></ul><p class="see-more-link" ><a href="http://today.law.harvard.edu/news-at-law/">View More &raquo;</a></p></div>		</div>
+
+		<div class="g-column large-8">
+
+						
+								
+									<figure class="wm-video has-video wm-media">
+
+					
+					<div class="fluid-video-wrapper"><div class="oembed"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd"><br />
+<html><body><iframe width="500" height="281" src="https://www.youtube.com/embed/_EeU6Lo_i7I?feature=oembed&rel=0&showinfo=0&theme=light&enablejsapi=1" frameborder="0" gesture="media" allowfullscreen title="Embedded object: HLS in the World | A Conversation with Six Justices of the U.S. Supreme Court - YouTube" id="mosaic-video"></iframe></body></html>
+</div>
+</div>
+					<figcaption class="wm-video-caption">
+													<a href="https://today.law.harvard.edu/rise-hls-conversation-six-justices-u-s-supreme-court/">
+								<h2 class="caption-title">HLS in the World | A Conversation with Six Justices of the U.S. Supreme Court</h2>
+							</a>
+												<a class="play-button"><span class="screen-reader-text">Play Video</span></a>
+
+						<div class="context-body">
+							<p>Six members of the Supreme Court of the United States — all HLS alumni — joined Harvard University President Drew Faust and Harvard Law School Dean John F. Manning on Oct. 26 to open the bicentennial summit, commemorating Harvard Law School's 200th anniversary. Chief Justice John G. Roberts Jr. ’79; Associate Justices Anthony M. Kennedy ’61,  Stephen G. Breyer ’64, Elena Kagan ’86 and Neil M. Gorsuch ’91; and Associate Justice (retired) David H. Souter ’66 shared memories, advice and more than a few priceless anecdotes. </p>
+						</div>
+
+					</figcaption>
+					</figure>
+
+				
+			
+			<div class="of-wrapper mobile-collapse-column" data-of-start="480" data-match-height="mosaic-outer">
+				<div class="of">
+					<div class="wm-widgets">
+	<aside class="widget of-item widget_twitter_timeline" role="widget"><div class="internal_widget_wrapper" data-match-height="widget"><h3 class="widget-title" style="text-transform:none; color: black;">Follow Us on Twitter</h3><a class="twitter-timeline" data-chrome="nofooter" data-height="500" data-width="400" data-dnt="true" href="https://twitter.com/Harvard_Law">Tweets by Harvard_Law</a></div></aside><aside class="widget of-item widget_instagram_feed" role="widget"><div class="internal_widget_wrapper" data-match-height="widget"><h3 class="widget-title" style="text-transform:none; color: black;">Follow Us on Instagram</h3><div id="sb_instagram" class="sbi sbi_col_1" style="max-width: 640px; width:100%; padding-bottom: 10px; " data-id="182120985" data-num="1" data-res="auto" data-cols="1" data-options='{&quot;sortby&quot;: &quot;none&quot;, &quot;showbio&quot;: &quot;true&quot;, &quot;headercolor&quot;: &quot;&quot;, &quot;imagepadding&quot;: &quot;5&quot;}'><div class="sb_instagram_header" style="padding: 10px; padding-bottom: 0;"></div><div id="sbi_images" style="padding: 5px;"><div class="sbi_loader fa-spin"></div></div><div id="sbi_load"><div class="sbi_follow_btn"><a href="https://instagram.com/" style="" target="_blank"><i class="fa fa-instagram"></i>Follow HLS on Instagram</a></div></div></div></div></aside></div>				</div><!-- .of -->
+			</div>
+
+		</div><!-- .of-wrapper -->
+
+	</section><!-- .widget-mosaic -->
+
+</div><!-- .content-wrap -->		
+
+		
+	</main><!-- main -->
+
+
+		<footer role="contentinfo" itemscope itemtype="http://schema.org/WPFooter" class="site-footer">
+			
+			<div class="footer-branding">
+				<a class="fb-logo" href="http://hls.harvard.edu" rel="home" itemprop="url"></a>
+			</div><!-- .footer-branding -->
+			
+			
+				<nav class="footer-navigation" role="navigation">
+					<ul class="footer-main-menu">
+						<li id="menu-item-57649" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-57649"><a href="http://hls.harvard.edu/about/">About</a>
+<ul  class="sub-menu">
+	<li id="menu-item-57652" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-57652"><a href="http://hls.harvard.edu/about/campus-map-and-directions/">Map and Directions</a></li>
+	<li id="menu-item-57657" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-57657"><a href="http://hls.harvard.edu/about/accessibility-statement/">Accessibility</a></li>
+	<li id="menu-item-57662" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-57662"><a href="http://hls.harvard.edu/dept/communications/media-relations/">Media Relations</a></li>
+	<li id="menu-item-57661" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-57661"><a href="http://200.hls.harvard.edu/">HLS Bicentennial</a></li>
+</ul>
+</li>
+<li id="menu-item-57663" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-57663"><a href="http://hls.harvard.edu/admissions/">Apply</a>
+<ul  class="sub-menu">
+	<li id="menu-item-57664" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-57664"><a href="http://hls.harvard.edu/dept/jdadmissions/">J.D.</a></li>
+	<li id="menu-item-57758" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-57758"><a href="http://hls.harvard.edu/dept/graduate-program/llm-admissions/">LL.M.</a></li>
+	<li id="menu-item-57666" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-57666"><a href="http://hls.harvard.edu/dept/graduate-program/sjd-admissions/">S.J.D.</a></li>
+	<li id="menu-item-57667" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-57667"><a href="http://hls.harvard.edu/dept/academics/degree-programs/special-programs/">Special Programs</a></li>
+</ul>
+</li>
+<li id="menu-item-57668" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-57668"><a href="http://hls.harvard.edu/academics-clinical/">Academics</a>
+<ul  class="sub-menu">
+	<li id="menu-item-57670" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-57670"><a href="http://hls.harvard.edu/dept/academics/academic-calendar/">Academic Calendar</a></li>
+	<li id="menu-item-57671" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-57671"><a href="http://hls.harvard.edu/academics/curriculum/catalog/index.html">Course Catalog</a></li>
+	<li id="menu-item-57672" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-57672"><a href="http://hls.harvard.edu/dept/academics/curriculum/">Curriculum</a></li>
+	<li id="menu-item-57673" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-57673"><a href="https://helios.law.harvard.edu/Login">Helios</a></li>
+</ul>
+</li>
+<li id="menu-item-57701" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-57701"><a href="http://hls.harvard.edu/alumni/">Alumni</a>
+<ul  class="sub-menu">
+	<li id="menu-item-141687" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-141687"><a href="http://hls.harvard.edu/dept/alumni/giving-to-hls/">Giving to HLS</a></li>
+	<li id="menu-item-57709" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-57709"><a href="http://hls.harvard.edu/dept/alumni/hls-connect/">HLS Connect</a></li>
+	<li id="menu-item-57712" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-57712"><a href="http://hls.harvard.edu/dept/alumni/harvard-law-school-association/">HLSA</a></li>
+	<li id="menu-item-57713" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-57713"><a href="http://hls.harvard.edu/dept/alumni/reunions/">Reunions</a></li>
+</ul>
+</li>
+<li id="menu-item-89516" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-89516"><a href="http://hls.harvard.edu/about/department-directory/">Administration</a>
+<ul  class="sub-menu">
+	<li id="menu-item-89514" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89514"><a href="http://hls.harvard.edu/about/deans-welcome/">Dean&#8217;s Welcome</a></li>
+	<li id="menu-item-57677" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-57677"><a href="http://hls.harvard.edu/about/department-directory/">Department Directory</a></li>
+	<li id="menu-item-57678" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-57678"><a href="http://hls.harvard.edu/dept/hr/">Human Resources</a></li>
+	<li id="menu-item-57958" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-57958"><a href="http://hls.harvard.edu/about/aba-standard-509-required-disclosures/">ABA Standard 509</a></li>
+</ul>
+</li>
+<li id="menu-item-57679" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-57679"><a href="http://hls.harvard.edu/about/campus-map-and-directions/">Campus</a>
+<ul  class="sub-menu">
+	<li id="menu-item-57680" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-57680"><a href="http://hls.harvard.edu/dept/dos/">Student Services</a></li>
+	<li id="menu-item-57681" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-57681"><a href="http://hls.harvard.edu/dept/dos/student-orgs/">Student Organizations</a></li>
+	<li id="menu-item-57682" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-57682"><a href="http://hls.harvard.edu/dept/facilities/sustainability/">Sustainability</a></li>
+	<li id="menu-item-57683" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-57683"><a href="http://hls.harvard.edu/calendar/">HLS Calendar of Events</a></li>
+</ul>
+</li>
+<li id="menu-item-57685" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-57685"><a href="http://hls.harvard.edu/dept/communications/publications/">Publications</a>
+<ul  class="sub-menu">
+	<li id="menu-item-57687" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-57687"><a href="https://hls.harvard.edu/faculty/bibliography">Faculty Publications</a></li>
+	<li id="menu-item-57688" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-57688"><a href="http://hls.harvard.edu/dept/dos/student-journals/">Student Journals</a></li>
+	<li id="menu-item-57689" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-57689"><a href="http://today.law.harvard.edu">Harvard Law Today</a></li>
+	<li id="menu-item-57690" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-57690"><a href="http://casestudies.law.harvard.edu">HLS Case Studies</a></li>
+</ul>
+</li>
+<li id="menu-item-57691" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-57691"><a href="http://hls.harvard.edu/about/">General</a>
+<ul  class="sub-menu">
+	<li id="menu-item-57692" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-57692"><a href="http://harvard.edu">Harvard University</a></li>
+	<li id="menu-item-57697" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-57697"><a href="http://hls.harvard.edu/dept/hr/jobs-at-hls/">Jobs at HLS</a></li>
+	<li id="menu-item-57948" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-57948"><a href="http://hls.harvard.edu/about/title-ix-information/">Title IX Information</a></li>
+	<li id="menu-item-57699" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-57699"><a href="http://hls.harvard.edu/about/emergency-information/">Emergency Information</a></li>
+</ul>
+</li>
+					</ul>
+				</nav>
+				
+				<div class="footer-bottom">
+					
+					<div class="inner">
+						
+						<ul class="footer-social-menu">
+							<li id="menu-item-72434" class="facebook-icon menu-item menu-item-type-custom menu-item-object-custom menu-item-72434"><a href="https://www.facebook.com/harvardlaw">Facebook</a></li>
+<li id="menu-item-72435" class="twitter-icon menu-item menu-item-type-custom menu-item-object-custom menu-item-72435"><a href="https://twitter.com/harvard_law">Twitter</a></li>
+<li id="menu-item-41145" class="instagram-icon menu-item menu-item-type-custom menu-item-object-custom menu-item-41145"><a href="https://instagram.com/harvardlaw/">Instagram</a></li>
+<li id="menu-item-72436" class="youtube-icon menu-item menu-item-type-custom menu-item-object-custom menu-item-72436"><a href="http://www.youtube.com/user/HarvardLawSchool">YouTube</a></li>
+<li id="menu-item-72437" class="rss-icon menu-item menu-item-type-custom menu-item-object-custom menu-item-72437"><a href="http://today.law.harvard.edu/feed/">News RSS Feed</a></li>
+						</ul>
+						
+						
+						
+						<ul class="footer-bottom-menu">
+							<li id="menu-item-57717" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-57717"><a href="http://hls.harvard.edu/about/privacy-statement/">Privacy Statement</a></li>
+<li id="menu-item-57718" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-57718"><a href="http://trademark.harvard.edu/pages/trademark-notice">Trademark Notice</a></li>
+<li id="menu-item-57719" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-57719"><a href="http://hls.harvard.edu/about/contact-us/">Contact Us</a></li>
+						</ul>
+						
+						
+						<div class="credits" itemscope itemtype="http://schema.org/Organization">
+							&copy; 2017 <span itemprop="name">The President and Fellows of Harvard College.</span>
+						</div><!-- .credits -->
+						
+					</div><!-- .inner -->
+				</div><!-- .footer-bottom -->
+				
+				
+
+		</footer><!-- footer -->
+	</div><!-- #site-wrap -->
+
+			<script>
+		( function ( body ) {
+			'use strict';
+			body.className = body.className.replace( /\btribe-no-js\b/, 'tribe-js' );
+		} )( document.body );
+		</script>
+				<script>
+		( function ( body ) {
+			'use strict';
+			body.className = body.className.replace( /\btribe-no-js\b/, 'tribe-js' );
+		} )( document.body );
+		</script>
+		<script type='text/javascript'> /* <![CDATA[ */var tribe_l10n_datatables = {"aria":{"sort_ascending":": activate to sort column ascending","sort_descending":": activate to sort column descending"},"length_menu":"Show _MENU_ entries","empty_table":"No data available in table","info":"Showing _START_ to _END_ of _TOTAL_ entries","info_empty":"Showing 0 to 0 of 0 entries","info_filtered":"(filtered from _MAX_ total entries)","zero_records":"No matching records found","search":"Search:","all_selected_text":"All items on this page were selected. ","select_all_link":"Select all pages","clear_selection":"Clear Selection.","pagination":{"all":"All","next":"Next","previous":"Previous"},"select":{"rows":{"0":"","_":": Selected %d rows","1":": Selected 1 row"}},"datepicker":{"dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["January","February","March","April","May","June","July","August","September","October","November","December"],"nextText":"Next","prevText":"Prev","currentText":"Today","closeText":"Done"}};/* ]]> */ </script><script type='text/javascript'>
+/* <![CDATA[ */
+var sb_instagram_js_options = {"sb_instagram_at":"182120985.3a81a9f.4837484830324709b50c9d4f6db042ef"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://hls.harvard.edu/content/plugins/instagram-feed/js/sb-instagram.min.js?ver=1.5'></script>
+<script type='text/javascript' src='http://hls.harvard.edu/content/plugins/visualizer/js/lib/clipboardjs/clipboard.min.js?ver=3.0.2'></script>
+<script type='text/javascript' src='http://hls.harvard.edu/content/plugins/tribe-alerts/assets/js/jquery.cookie.js?ver=1.4.0'></script>
+<script type='text/javascript' src='http://hls.harvard.edu/content/plugins/tribe-alerts/assets/js/alerts.js?ver=1.0'></script>
+<script type='text/javascript' src='//platform.twitter.com/widgets.js?ver=4.8.3'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var harvard_js_config = {"template_url":"http:\/\/hls.harvard.edu\/content\/themes\/tribe-hls\/","script_debug":"0","tribe_events":{"list_view_url":"http:\/\/hls.harvard.edu\/calendar\/list\/"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://hls.harvard.edu/content/themes/tribe-hls/js/dist/master.min.js?ver=cb0493c73d0ce3170a28b2af53d5630b433b6477'></script>
+<script type='text/javascript'>
+window.lodash = _.noConflict();
+</script>
+<script type='text/javascript' src='http://hls.harvard.edu/wp-includes/js/comment-reply.min.js?ver=4.8.3'></script>
+<script type='text/javascript' src='http://hls.harvard.edu/wp-includes/js/wp-embed.min.js?ver=4.8.3'></script>
+
+<!-- Hand crafted by Modern Tribe, Inc. (http://tri.be) -->
+
+
+</body>
 </html>
